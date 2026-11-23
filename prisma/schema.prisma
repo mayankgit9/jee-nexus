@@ -1,26 +1,64 @@
-// JEE NEXUS — Prisma schema (SQLite for local/dev runtime)
-// A mirrored PostgreSQL DDL with Row Level Security lives in supabase/migrations/
+// JEE NEXUS — Prisma schema (PostgreSQL / Supabase production runtime)
+// Mirrors supabase/migrations/*.sql exactly: snake_case tables/columns via
+// @map, native enums for type/difficulty/verification/role, Json for jsonb
+// columns, double precision for marks/answers, timestamptz for timestamps.
+// SQLite dev runtime is retired — CI and production both run PostgreSQL.
+// NEVER run `prisma db push` against the Supabase URL (see scripts/db_push.sh).
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+// ----------------------------- Enums (PG native types) ---------------------
+
+enum QuestionType {
+  mcq_single
+  mcq_multi
+  numerical
+
+  @@map("question_type")
+}
+
+enum Difficulty {
+  easy
+  medium
+  hard
+
+  @@map("difficulty")
+}
+
+enum VerificationStatus {
+  imported
+  needs_review
+  verified
+  rejected
+
+  @@map("verification_status")
+}
+
+enum AppRole {
+  student
+  admin
+
+  @@map("app_role")
 }
 
 // ----------------------------- Users & auth -----------------------------
 
 model User {
-  id             String          @id @default(cuid())
-  email          String          @unique
-  passwordHash   String
-  name           String?
-  role           String          @default("student") // student | admin
-  preferences    String? // JSON: { theme, defaultSubject, ... }
-  createdAt      DateTime        @default(now())
-  updatedAt      DateTime        @updatedAt
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  name         String?
+  role         AppRole  @default(student)
+  preferences  Json?
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt    DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
 
   sessions       Session[]
   attempts       Attempt[]
@@ -28,151 +66,168 @@ model User {
   reports        Report[]
   examAttempts   ExamAttempt[]
   passwordResets PasswordReset[]
+
+  @@map("app_users")
 }
 
 model Session {
   id        String   @id @default(cuid())
   token     String   @unique
-  userId    String
+  userId    String   @map("user_id")
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  expiresAt DateTime
-  createdAt DateTime @default(now())
+  expiresAt DateTime @map("expires_at") @db.Timestamptz(6)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
   @@index([userId])
+  @@map("app_sessions")
 }
 
 model PasswordReset {
   id        String    @id @default(cuid())
-  userId    String
+  userId    String    @map("user_id")
   user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   token     String    @unique
-  expiresAt DateTime
-  usedAt    DateTime?
-  createdAt DateTime  @default(now())
+  expiresAt DateTime  @map("expires_at") @db.Timestamptz(6)
+  usedAt    DateTime? @map("used_at") @db.Timestamptz(6)
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@map("password_resets")
 }
 
 // ----------------------------- Taxonomy -----------------------------
 
 model Subject {
-  id       String     @id @default(cuid())
-  key      String     @unique // physics | chemistry | mathematics
+  id       String  @id @default(cuid())
+  key      String  @unique // physics | chemistry | mathematics
   name     String
   icon     String? // lucide icon key
-  colorKey String? // mint | gold | violet
-  order    Int        @default(0)
+  colorKey String? @map("color_key") // mint | gold | violet
+  order    Int     @default(0) @map("sort_order")
 
-  chapters Chapter[]
+  chapters  Chapter[]
   questions Question[]
+
+  @@map("subjects")
 }
 
 model Chapter {
-  id        String   @id @default(cuid())
-  subjectId String
-  subject   Subject  @relation(fields: [subjectId], references: [id], onDelete: Cascade)
-  key       String   @unique // physics:current-electricity ...
+  id        String  @id @default(cuid())
+  subjectId String  @map("subject_id")
+  subject   Subject @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  key       String  @unique // physics:current-electricity ...
   name      String
   unit      String? // Mechanics | Organic Chemistry ...
-  order     Int      @default(0)
+  order     Int     @default(0) @map("sort_order")
 
   questions Question[]
 
   @@index([subjectId])
+  @@map("chapters")
 }
 
 // ----------------------------- Questions -----------------------------
 
 model Question {
-  id                     String          @id @default(cuid())
-  publicId               String          @unique // JEM-2023-PHY-004 style slug
-  subjectId              String
-  subject                Subject         @relation(fields: [subjectId], references: [id])
-  chapterId              String
-  chapter                Chapter         @relation(fields: [chapterId], references: [id])
-  subtopic               String?
-  type                   String // mcq_single | mcq_multi | numerical
-  text                   String // LaTeX via $...$ / $$...$$
-  correctOptions         String? // JSON array of option indices e.g. "[0,2]"
-  numericalAnswer        String? // exact decimal string for numerical type
-  numericalTolerance     String? // allowed absolute tolerance
-  difficulty             String // easy | medium | hard
-  sourceExam             String          @default("JEE Main")
-  sourceYear             Int?
-  sourceDate             String? // examination date if known
-  sourceShift            String? // e.g. "Shift 1"
-  sourceQuestionNumber   Int?
-  sourceReference        String? // citation for the sourced question
-  verificationStatus     String          @default("imported") // imported | needs_review | verified | rejected
-  tags                   String? // JSON array of topic tags
-  contentHash            String          @unique // normalized duplicate detection
-  createdAt              DateTime        @default(now())
-  updatedAt              DateTime        @updatedAt
+  id                   String            @id @default(cuid())
+  publicId             String            @unique @map("public_id") // JEM-2023-PHY-004 style slug
+  subjectId            String            @map("subject_id")
+  subject              Subject           @relation(fields: [subjectId], references: [id])
+  chapterId            String            @map("chapter_id")
+  chapter              Chapter           @relation(fields: [chapterId], references: [id])
+  subtopic             String?
+  type                 QuestionType
+  text                 String // LaTeX via $...$ / $$...$$
+  correctOptions       Json?             @map("correct_options") // [0,2]
+  numericalAnswer      Float?            @map("numerical_answer") @db.DoublePrecision
+  numericalTolerance   Float?            @map("numerical_tolerance") @db.DoublePrecision
+  difficulty           Difficulty        @default(medium)
+  sourceExam           String            @default("JEE Main") @map("source_exam")
+  sourceYear           Int?              @map("source_year")
+  sourceDate           String?           @map("source_date") // examination date if known
+  sourceShift          String?           @map("source_shift") // e.g. "Shift 1"
+  sourceQuestionNumber Int?              @map("source_question_number")
+  sourceReference      String?           @map("source_reference") // citation for the sourced question
+  verificationStatus   VerificationStatus @default(imported) @map("verification_status")
+  tags                 Json              @default("[]")
+  contentHash          String            @unique @map("content_hash") // normalized duplicate detection
+  createdAt            DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime          @updatedAt @map("updated_at") @db.Timestamptz(6)
 
-  options         QuestionOption[]
-  images          QuestionImage[]
-  solution        Solution?
+  options          QuestionOption[]
+  images           QuestionImage[]
+  solution         Solution?
   practiceAttempts Attempt[]
-  bookmarks       Bookmark[]
-  reports         Report[]
-  examQuestions   ExamQuestion[]
+  bookmarks        Bookmark[]
+  reports          Report[]
+  examQuestions    ExamQuestion[]
 
   @@index([subjectId, chapterId])
   @@index([sourceYear, subjectId])
   @@index([verificationStatus])
   @@index([type])
+  @@map("questions")
 }
 
 model QuestionOption {
   id         String   @id @default(cuid())
-  questionId String
+  questionId String   @map("question_id")
   question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
   idx        Int
   text       String
-  isCorrect  Boolean  @default(false)
+  isCorrect  Boolean  @default(false) @map("is_correct")
 
   @@unique([questionId, idx])
+  @@map("question_options")
 }
 
 model QuestionImage {
   id                  String   @id @default(cuid())
-  questionId          String
+  questionId          String   @map("question_id")
   question            Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
   kind                String   @default("question") // question | solution
   url                 String // e.g. /diagrams/planet-density.svg
-  altText             String
+  altText             String   @map("alt_text")
   caption             String?
   attribution         String? // provenance line displayed under the image
-  isOriginalExamImage Boolean  @default(false)
-  order               Int      @default(0)
+  isOriginalExamImage Boolean  @default(false) @map("is_original_exam_image")
+  order               Int      @default(0) @map("sort_order")
+
+  @@map("question_images")
 }
 
 model Solution {
   id                String    @id @default(cuid())
-  questionId        String    @unique
+  questionId        String    @unique @map("question_id")
   question          Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  keyConcept        String? // one-paragraph concept recap
-  formulas          String? // JSON array of formula strings (LaTeX)
+  keyConcept        String?   @map("key_concept") // one-paragraph concept recap
+  formulas          Json      @default("[]") // array of formula strings (LaTeX)
   body              String // full step-by-step derivation (markdown-lite + LaTeX)
-  commonMistakes    String?
-  alternativeMethod String?
+  commonMistakes    String?   @map("common_mistakes")
+  alternativeMethod String?   @map("alternative_method")
   verification      String? // final sanity check
-  isAiGenerated     Boolean   @default(true) // shown to users until expert-verified
-  verifiedAt        DateTime?
-  sourceReferences  String? // JSON array of source citations
+  isAiGenerated     Boolean   @default(true) @map("is_ai_generated") // shown to users until expert-verified
+  verifiedAt        DateTime? @map("verified_at") @db.Timestamptz(6)
+  sourceReferences  Json      @default("[]") @map("source_references") // array of source citations
   version           Int       @default(1)
-  createdAt         DateTime  @default(now())
-  updatedAt         DateTime  @updatedAt
+  createdAt         DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt         DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@map("solutions")
 }
 
 // ----------------------------- Exams / CBT -----------------------------
 
 model ExamPattern {
-  id             String @id @default(cuid())
-  key            String @unique // jee-main-2025 | jee-main-2023 | custom
-  name           String
-  description    String?
-  durationMinutes Int
-  config         String // JSON: sections[] + marking scheme
-  exams          Exam[]
+  id              String @id @default(cuid())
+  key             String @unique // jee-main-2025 | jee-main-2023 | custom
+  name            String
+  description     String?
+  durationMinutes Int    @map("duration_minutes")
+  config          Json // sections[] + marking scheme
+
+  exams Exam[]
+
+  @@map("exam_patterns")
 }
 
 model Exam {
@@ -180,130 +235,140 @@ model Exam {
   title       String
   description String?
   kind        String // full_length | subject | chapter | custom | pyq_year
-  patternId   String
+  patternId   String      @map("pattern_id")
   pattern     ExamPattern @relation(fields: [patternId], references: [id])
-  subjectKey  String? // for subject/chapter tests
+  subjectKey  String?     @map("subject_key") // for subject/chapter tests
   year        Int? // for pyq_year tests
-  config      String? // JSON generation config (filters, counts, seed)
-  createdById String?
-  isPublished Boolean     @default(true)
-  createdAt   DateTime    @default(now())
+  config      Json? // generation config (filters, counts, seed)
+  createdById String?     @map("created_by_id")
+  isPublished Boolean     @default(true) @map("is_published")
+  createdAt   DateTime    @default(now()) @map("created_at") @db.Timestamptz(6)
 
   examQuestions ExamQuestion[]
   attempts      ExamAttempt[]
 
   @@index([kind])
+  @@map("exams")
 }
 
 model ExamQuestion {
   id           String   @id @default(cuid())
-  examId       String
+  examId       String   @map("exam_id")
   exam         Exam     @relation(fields: [examId], references: [id], onDelete: Cascade)
-  questionId   String
+  questionId   String   @map("question_id")
   question     Question @relation(fields: [questionId], references: [id])
-  order        Int
+  order        Int      @map("sort_order")
   section      String // physics | chemistry | mathematics
-  sectionOrder Int
+  sectionOrder Int      @map("section_order")
+  answers      ExamAttemptAnswer[]
 
   @@unique([examId, order])
   @@index([examId, section])
+  @@map("exam_questions")
 }
 
 model ExamAttempt {
-  id               String             @id @default(cuid())
-  userId           String
-  user             User               @relation(fields: [userId], references: [id], onDelete: Cascade)
-  examId           String
-  exam             Exam               @relation(fields: [examId], references: [id], onDelete: Cascade)
-  startedAt        DateTime           @default(now())
-  endsAt           DateTime // server-authoritative deadline
-  submittedAt      DateTime?
-  status           String             @default("in_progress") // in_progress | submitted | expired
-  totalMarks       Float?
-  maxMarks         Float?
-  timeSpentSeconds Int?
-  createdAt        DateTime           @default(now())
+  id               String          @id @default(cuid())
+  userId           String          @map("user_id")
+  user             User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examId           String          @map("exam_id")
+  exam             Exam            @relation(fields: [examId], references: [id], onDelete: Cascade)
+  startedAt        DateTime        @default(now()) @map("started_at") @db.Timestamptz(6)
+  endsAt           DateTime        @map("ends_at") @db.Timestamptz(6) // server-authoritative deadline
+  submittedAt      DateTime?       @map("submitted_at") @db.Timestamptz(6)
+  status           String          @default("in_progress") // in_progress | submitted | expired
+  totalMarks       Float?          @map("total_marks") @db.DoublePrecision
+  maxMarks         Float?          @map("max_marks") @db.DoublePrecision
+  timeSpentSeconds Int?            @map("time_spent_seconds")
+  createdAt        DateTime        @default(now()) @map("created_at") @db.Timestamptz(6)
 
-  answers          ExamAttemptAnswer[]
+  answers ExamAttemptAnswer[]
 
   @@index([userId, startedAt])
+  @@map("exam_attempts")
 }
 
 model ExamAttemptAnswer {
   id              String      @id @default(cuid())
-  examAttemptId   String
+  examAttemptId   String      @map("exam_attempt_id")
   examAttempt     ExamAttempt @relation(fields: [examAttemptId], references: [id], onDelete: Cascade)
-  examQuestionId  String
-  selectedOptions String? // JSON array of indices
-  numericalValue  String?
-  isCorrect       Boolean?
-  marksAwarded    Float?
+  examQuestionId  String      @map("exam_question_id")
+  examQuestion    ExamQuestion @relation(fields: [examQuestionId], references: [id], onDelete: Cascade)
+  selectedOptions Json?       @map("selected_options") // array of indices
+  numericalValue  String?     @map("numerical_value")
+  isCorrect       Boolean?    @map("is_correct")
+  marksAwarded    Float?      @map("marks_awarded") @db.DoublePrecision
   visited         Boolean     @default(false)
-  markedForReview Boolean     @default(false)
-  timeSpentSeconds Int        @default(0)
-  updatedAt       DateTime    @updatedAt
+  markedForReview Boolean     @default(false) @map("marked_for_review")
+  timeSpentSeconds Int        @default(0) @map("time_spent_seconds")
+  updatedAt       DateTime    @updatedAt @map("updated_at") @db.Timestamptz(6)
 
   @@unique([examAttemptId, examQuestionId])
+  @@map("exam_attempt_answers")
 }
 
 // ----------------------------- Practice & engagement -----------------------------
 
 model Attempt {
-  id                String   @id @default(cuid())
-  userId            String
-  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  questionId        String
-  question          Question @relation(fields: [questionId], references: [id])
-  selectedOptions   String? // JSON array of indices
-  numericalValue    String?
-  isCorrect         Boolean?
-  timeSpentSeconds  Int      @default(0)
-  createdAt         DateTime @default(now())
+  id               String    @id @default(cuid())
+  userId           String    @map("user_id")
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId       String    @map("question_id")
+  question         Question  @relation(fields: [questionId], references: [id])
+  selectedOptions  Json?     @map("selected_options") // array of indices
+  numericalValue   String?   @map("numerical_value")
+  isCorrect        Boolean?  @map("is_correct")
+  timeSpentSeconds Int       @default(0) @map("time_spent_seconds")
+  createdAt        DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
 
   @@index([userId, createdAt])
   @@index([userId, questionId])
+  @@map("attempts")
 }
 
 model Bookmark {
   id         String   @id @default(cuid())
-  userId     String
+  userId     String   @map("user_id")
   user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  questionId String
+  questionId String   @map("question_id")
   question   Question @relation(fields: [questionId], references: [id])
-  createdAt  DateTime @default(now())
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
   @@unique([userId, questionId])
+  @@map("bookmarks")
 }
 
 model Report {
   id         String    @id @default(cuid())
-  userId     String
+  userId     String    @map("user_id")
   user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  questionId String
+  questionId String    @map("question_id")
   question   Question  @relation(fields: [questionId], references: [id])
   reason     String // incorrect_answer | incorrect_solution | missing_diagram | typo | copyright | other
   details    String?
   status     String    @default("open") // open | resolved | dismissed
   resolution String?
-  createdAt  DateTime  @default(now())
-  resolvedAt DateTime?
+  createdAt  DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  resolvedAt DateTime? @map("resolved_at") @db.Timestamptz(6)
 
   @@index([status])
   @@index([questionId])
+  @@map("reports")
 }
 
 model ImportJob {
-  id             String   @id @default(cuid())
-  adminId        String
-  fileName       String
-  sourceFormat   String // json | csv
-  totalRows      Int      @default(0)
-  inserted       Int      @default(0)
-  skippedDuplicate Int    @default(0)
-  rejected       Int      @default(0)
-  errors         String? // JSON array of row-level errors
-  status         String   @default("completed") // running | completed | failed
-  createdAt      DateTime @default(now())
+  id              String   @id @default(cuid())
+  adminId         String   @map("admin_id")
+  fileName        String   @map("file_name")
+  sourceFormat    String   @map("source_format") // json | csv
+  totalRows       Int      @default(0) @map("total_rows")
+  inserted        Int      @default(0)
+  skippedDuplicate Int     @default(0) @map("skipped_duplicate")
+  rejected        Int      @default(0)
+  errors          Json? // array of row-level errors
+  status          String   @default("completed") // running | completed | failed
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
   @@index([createdAt])
+  @@map("import_jobs")
 }
