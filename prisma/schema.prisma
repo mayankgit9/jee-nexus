@@ -9,6 +9,17 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// Cloudflare Workers runtime client (deployed app): pure-JS query compiler +
+// pg-worker driver adapter through Hyperdrive. Local dev and CI keep using
+// the node client above — same schema, two runtimes.
+generator clientWorker {
+  provider             = "prisma-client"
+  output               = "../src/generated/worker"
+  runtime              = "cloudflare"
+  moduleFormat         = "esm"
+  generatedFileExtension = "ts"
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")

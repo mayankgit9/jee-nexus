@@ -125,7 +125,9 @@
     <div class="phase"><span class="badge b-done">DONE</span><div><h3>CBT examination mode</h3><p>NTA-style runner — question palette, mark for review, save &amp; next, server-authoritative timer with auto-submit, partial marking as data, results + question-wise review. 48/48 automated tests.</p></div></div>
     <div class="phase"><span class="badge b-done">DONE</span><div><h3>Admin dashboard + import pipeline</h3><p>Validation with per-row errors, contentHash duplicate detection, verification workflow, reports queue — all server-side role guarded.</p></div></div>
     <div class="phase"><span class="badge b-done">DONE</span><div><h3>Supabase production database + CI</h3><p>18-table PostgreSQL 17.6 schema with Row Level Security live on Supabase; GitHub Actions CI running lint, unit and all three E2E suites — green.</p></div></div>
-    <div class="phase"><span class="badge b-live">NOW</span><div><h3>Question bank expansion</h3><p>Importing verified PYQ batches across 2019–2026 through the admin pipeline — the platform is ready, the bank is growing.</p></div></div>
+    <div class="phase"><span class="badge b-done">DONE</span><div><h3>Production cutover — app runs on live PostgreSQL</h3><p>Dedicated jee_app database role, Prisma on native Postgres types (enums, jsonb, timestamptz), 70/70 E2E green against the live database, CI on Postgres 17 containers.</p></div></div>
+    <div class="phase"><span class="badge b-done">DONE</span><div><h3>Question bank batch 2 + Playwright browser suite</h3><p>12 new PYQs (2024–2025) with independently verified answers; 12 scripted browser tests covering auth, practice, PYQ, the full CBT lifecycle and mobile — wired into CI.</p></div></div>
+    <div class="phase"><span class="badge b-live">NOW</span><div><h3>Question bank expansion + Cloudflare app deploy</h3><p>Importing verified PYQ batches across 2019–2026 through the admin pipeline; the Workers deployment is scaffolded and awaits a Hyperdrive-enabled API token.</p></div></div>
   </div>
 </div></section>
 

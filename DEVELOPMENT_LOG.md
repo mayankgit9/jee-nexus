@@ -5,6 +5,82 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-23 — M11 · Question bank batch 2 + Playwright browser suite + Cloudflare deploy scaffolding
+
+### Implemented
+- **Question bank batch 2** (`data/questions/batch2_*.json`, `scripts/gen_batch2.py`):
+  12 new PYQ-labelled questions (4 physics / 4 chemistry / 4 mathematics) across chapters
+  batch 1 didn't touch, years 2024–2025 (extends the PYQ year grid), all three types
+  (6 numerical, 5 mcq_single, 1 mcq_multi), full solutions (concept / formulas / steps /
+  mistakes / verification). **Every answer independently verified** by
+  `scripts/verify_seed_batch2.py` — **154/154 checks**: numeric recomputation, exhaustive
+  binomial expansion, derivative-sign scans, oxidation-state algebra, plus structural
+  validation (taxonomy keys, option ranges, type cardinality, publicId uniqueness,
+  contentHash non-collision with batch 1, honest isAiGenerated labelling).
+- **Imported through the REAL pipeline**: `scripts/import_batch2.py` signs in as the
+  whitelisted admin and POSTs to `/api/admin/import` (12/12 inserted, 0 rejected),
+  then PATCHes each question imported → needs_review (honest editorial state — never
+  auto-verified). Live DB now serves 28 questions; PYQ year grid shows 2024 (7) and
+  2025 (6) with real counts.
+- **E2E/browser test data cleaned from production**: targeted SQL cleanup of TEST-IMP-*,
+  IMP-*, E2E-* users/exams/import-jobs, then pw-* accounts after the browser runs —
+  live DB back to exactly 1 admin user + 28 seed questions.
+- **Playwright browser suite** (`tests/browser/*.spec.ts`, `playwright.config.ts`):
+  12 tests — auth (signup → sign out → login), practice (answer → graded → solution →
+  session summary), PYQ (year grid, year → subject → detail, chapter filter),
+  **CBT full lifecycle** (custom test → palette 5-state legend → timer → answer →
+  mark-for-review → NTA submit dialog cancel/confirm → result screen) and **CBT resume**
+  (autosave lands, reload, re-entry restores the saved answer), plus mobile-viewport
+  smoke (burger nav, no horizontal overflow). CI gained a `browser-e2e` job (Postgres 17
+  service + migrations + seed + dev server + Chromium).
+- **Cloudflare Workers deployment scaffolding** (deploy blocked on token scope — see below):
+  dual-runtime Prisma (schema keeps `prisma-client-js` for node AND a `prisma-client`
+  cloudflare-runtime generator at `src/generated/worker` — pure-JS query compiler, no
+  native engine); `src/lib/db.ts` now constructs the Hyperdrive-backed worker client
+  via `getCloudflareContext({ async: false })` on Workers and falls back to the node
+  client everywhere else (single sync code path — no route changes);
+  `wrangler.jsonc` + `open-next.config.ts` + `scripts/deploy_app_cloudflare.sh`
+  (with a REFUSED guard until the Hyperdrive binding is wired).
+
+### Bugs found & fixed during verification
+- Browser-test races (all caught by running the suite against the real UI):
+  - the practice filter panel's "Revision mode" checkbox matches a naive option-label
+    locator before the session API resolves — wait for the question-card header first;
+  - Radix controls wrapped in `<label>` double-toggle when clicked directly — click the
+    label, not the control;
+  - the header user button ("R Resume …") matches a loose `/resume/` pattern — scope
+    re-entry locators to the exam card;
+  - the fresh-DB empty-state hint contains the words "Create a custom test" — assert the
+    dialog by heading role;
+  - mid-exam reload can abort the in-flight autosave POST — arm the response listener
+    before the interaction and await it.
+- CI-only failure reproduced from logs (strict-mode violation invisible locally because
+  the live DB had a default exam, hiding the empty-state hint).
+
+### Tests executed
+- `scripts/verify_seed_batch2.py`: **154/154**.
+- API E2E re-run after the dual-runtime db.ts refactor: **23/23** (node fallback path
+  unchanged), tsc + eslint clean, `next build` green with the worker client bundled.
+- Playwright suite: **12/12** locally against the live Postgres-backed dev server;
+  CI `browser-e2e` job pushed (11/12 on the first CI run → strict-mode fix pushed).
+
+### Deployment status
+- Live DB: 28 verified-answer seed questions, PYQ years 2021–2025 populated.
+- GitHub: incremental pushes throughout; CI: lint + unit + pg-parity + api-e2e green,
+  browser-e2e fix pushed.
+- Landing roadmap updated.
+
+### Remaining (honest)
+- **Cloudflare app deploy is blocked on the API token scope**: `CF_PAT` has Pages:Edit
+  only; Hyperdrive config creation returns 10001 (Workers/Hyperdrive write denied —
+  reads work). The one-command path once a token with Hyperdrive:Edit + Workers:Edit
+  exists: create the Hyperdrive config (command in the deploy script), paste its id into
+  `wrangler.jsonc`, run `bash scripts/deploy_app_cloudflare.sh`. The db.ts worker path
+  and wrangler config are already in place but NOT yet exercised against a real
+  deployment — treat them as untested until then.
+- Question bank depth: 28 of the 2019–2026 target.
+- CI browser-e2e confirmation of the strict-mode fix pending.
+
 ## 2026-11-23 — M10 · Supabase production cutover — app runs on live PostgreSQL
 
 ### Implemented
