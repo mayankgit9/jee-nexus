@@ -297,7 +297,7 @@ function QuestionsTab() {
 
   const setStatusFor = async (id: string, newStatus: string) => {
     try {
-      await api('/api/admin/questions', { id, verificationStatus: newStatus })
+      await api('/api/admin/questions', { id, verificationStatus: newStatus }, 'PATCH')
       toast({ title: `Marked ${newStatus.replace('_', ' ')}` })
       reload()
     } catch (e) {
@@ -406,7 +406,7 @@ function ReportsTab() {
 
   const act = async (id: string, action: 'resolved' | 'dismissed') => {
     try {
-      await api('/api/admin/reports', { id, action })
+      await api('/api/admin/reports', { id, action }, 'PATCH')
       toast({ title: action === 'resolved' ? 'Report resolved — question flagged for re-review' : 'Report dismissed' })
       reload()
     } catch (e) {
