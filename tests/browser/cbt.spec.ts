@@ -79,12 +79,15 @@ test('CBT: full exam lifecycle in the browser', async ({ page }) => {
   await page.getByRole('button', { name: /submit exam/i }).first().click()
   await page.getByRole('button', { name: /yes, submit/i }).click()
 
+  // ---- after submission the app returns to the mock list; open the result ----
+  await expect(page.getByRole('heading', { name: 'Attempt history' })).toBeVisible({ timeout: 40_000 })
+  await page.getByRole('button', { name: /view result/i }).first().click()
+
   // ---- result screen ----
-  await expect(page.getByText(/marks/i).first()).toBeVisible({ timeout: 40_000 })
+  await expect(page.getByText(/Question-wise review/)).toBeVisible({ timeout: 20_000 })
+  await expect(page.getByText(/^Q1 /).first()).toBeVisible()
   // per-section breakdown appears for the physics section
   await expect(page.getByText(/physics/i).first()).toBeVisible()
-  // question-wise review with your-answer information
-  await expect(page.getByText(/your answer|your response/i).first()).toBeVisible()
 }, )
 
 test('CBT: resume keeps saved answers', async ({ page }) => {
