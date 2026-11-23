@@ -27,9 +27,10 @@ def check(name, cond, extra=""):
 
 # --- auth flow ---
 import os
+import time
 if os.path.exists(JAR):
     os.remove(JAR)
-email = "e2e-runner@jee-nexus.dev"
+email = f"e2e-{int(time.time())}@jee-nexus.dev"
 r = call("POST", "/api/auth/signup", {"email": email, "password": "e2e-test-pass-123", "name": "E2E"})
 check("signup returns user", "user" in r and r["user"]["email"] == email)
 

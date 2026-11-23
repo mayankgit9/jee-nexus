@@ -59,8 +59,9 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Record attempt for logged-in users (any submit, including skipped = no selection)
-    if (user) {
+    // Record attempt for logged-in users ONLY when an actual answer was submitted
+    // (browse-mode solution reveals pass no answer and must not pollute history)
+    if (user && submittedSomething) {
       await db.attempt.create({
         data: {
           userId: user.id,
