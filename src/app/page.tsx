@@ -3,7 +3,7 @@
 // JEE NEXUS — application shell (hash-routed SPA)
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, Moon, Sun, Menu, X, ClipboardList } from 'lucide-react'
+import { Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, Moon, Sun, Menu, X, ClipboardList, ShieldCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { HomeView } from '@/components/views/HomeView'
 import { PracticeView } from '@/components/views/PracticeView'
@@ -12,6 +12,7 @@ import { PerformanceView } from '@/components/views/PerformanceView'
 import { BookmarksView } from '@/components/views/BookmarksView'
 import { ProfileView } from '@/components/views/ProfileView'
 import { MockView } from '@/components/views/MockView'
+import { AdminView } from '@/components/views/AdminView'
 import type { SessionUser, SubjectKey } from '@/lib/types'
 import { useHashRoute, useApi, navigate } from '@/lib/client'
 import { cn } from '@/lib/utils'
@@ -30,7 +31,9 @@ const NAV = [
   { view: 'mock', label: 'Mock Tests', icon: ClipboardList },
   { view: 'performance', label: 'Performance', icon: BarChart3 },
   { view: 'bookmarks', label: 'Bookmarks', icon: BookMarked },
-]
+] as const
+
+const ADMIN_NAV = { view: 'admin', label: 'Admin', icon: ShieldCheck }
 
 export default function App() {
   const route = useHashRoute()
@@ -101,6 +104,19 @@ export default function App() {
                 {n.label}
               </button>
             ))}
+            {user?.role === 'admin' && (
+              <button
+                type="button"
+                onClick={() => navigate('/admin')}
+                className={cn(
+                  'flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm transition-colors',
+                  view === 'admin' ? 'bg-primary/12 font-semibold text-primary' : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                )}
+              >
+                <ShieldCheck className="h-4 w-4" />
+                {ADMIN_NAV.label}
+              </button>
+            )}
           </nav>
 
           <div className="flex items-center gap-1.5">
@@ -153,6 +169,18 @@ export default function App() {
                     <n.icon className="h-4 w-4" /> {n.label}
                   </button>
                 ))}
+                {user?.role === 'admin' && (
+                  <button
+                    type="button"
+                    onClick={() => navigate('/admin')}
+                    className={cn(
+                      'flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm',
+                      view === 'admin' ? 'bg-primary/12 font-semibold text-primary' : 'text-muted-foreground'
+                    )}
+                  >
+                    <ShieldCheck className="h-4 w-4" /> {ADMIN_NAV.label}
+                  </button>
+                )}
               </div>
             </motion.nav>
           )}
@@ -186,6 +214,13 @@ export default function App() {
             {view === 'bookmarks' && <BookmarksView loggedIn={!!user} onRequireAuth={() => navigate('/login')} />}
             {(view === 'login' || view === 'profile') && <ProfileView user={user} onUserChange={setUser} />}
             {view === 'mock' && <MockView loggedIn={!!user} onRequireAuth={() => navigate('/login')} />}
+            {view === 'admin' && <AdminView isAdmin={user?.role === 'admin'} />}            
+            {view !== 'home' && view !== 'practice' && view !== 'pyq' && view !== 'mock' && view !== 'performance' && view !== 'bookmarks' && view !== 'login' && view !== 'profile' && view !== 'admin' && (
+              <div className="mx-auto max-w-lg rounded-2xl border border-dashed border-border p-10 text-center">
+                <h2 className="text-lg font-semibold">Page not found</h2>
+                <Button variant="outline" className="mt-4" onClick={() => navigate('/home')}>Go home</Button>
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
       </main>
