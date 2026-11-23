@@ -7,6 +7,9 @@
     "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
     "start": "NODE_ENV=production bun .next/standalone/server.js 2>&1 | tee server.log",
     "lint": "eslint .",
+    "test:marking": "tsx scripts/test_marking.ts",
+    "test:pg": "tsx scripts/test_pg_runtime.ts",
+    "test:browser": "playwright test --project=desktop",
     "db:push": "bash scripts/db_push.sh",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
@@ -84,6 +87,7 @@
     "zustand": "^5.0.6"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@tailwindcss/postcss": "^4",
     "@types/react": "^19",
     "@types/react-dom": "^19",

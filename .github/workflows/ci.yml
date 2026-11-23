@@ -114,3 +114,53 @@ jobs:
         run: python3 scripts/e2e_exam_test.py
       - name: Admin E2E
         run: python3 scripts/e2e_admin_test.py
+
+  browser-e2e:
+    # Playwright browser suite against the real UI (Postgres-backed dev server)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: jee_nexus_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/jee_nexus_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - name: Install psql client
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
+      - name: Apply migrations (same files as production)
+        run: |
+          for f in supabase/migrations/*.sql; do
+            echo "applying $f"
+            psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f "$f"
+          done
+      - name: Generate Prisma client + seed
+        run: |
+          bunx prisma generate
+          bunx tsx scripts/seed.ts
+      - name: Install Playwright Chromium
+        run: bunx playwright install chromium --with-deps
+      - name: Start dev server
+        run: |
+          bun run dev &
+          for i in $(seq 1 60); do
+            curl -sS -m 2 -o /dev/null http://localhost:3000/ && break
+            sleep 2
+          done
+          curl -sS -m 5 -o /dev/null http://localhost:3000/
+        env:
+          ADMIN_EMAILS: admin@jee-nexus.dev
+      - name: Browser E2E (Playwright)
+        run: bunx playwright test --project=desktop
