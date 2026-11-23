@@ -1,0 +1,112 @@
+// JEE NEXUS — exam generation service
+// Generates exams from the question bank per pattern + filters; deterministic by seed.
+import { db } from '@/lib/db'
+import { JEE_MAIN_2025_PATTERN } from '@/lib/exam'
+import type { ExamPatternConfig, SubjectKey } from '@/lib/types'
+import { createHash } from 'crypto'
+
+function mulberry32(seed: number) {
+  return function () {
+    let t = (seed += 0x6d2b79f5)
+    t = Math.imul(t ^ (t >>> 15), t | 1)
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61)
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+export async function ensureDefaultPatterns(): Promise<void> {
+  const existing = await db.examPattern.findFirst({ where: { key: 'jee-main-2025' } })
+  if (!existing) {
+    await db.examPattern.create({
+      data: {
+        key: 'jee-main-2025',
+        name: 'JEE Main 2025 pattern',
+        description: '75 questions · 180 minutes · +4/-1 MCQ & numerical · partial marking for multiple-correct',
+        durationMinutes: 180,
+        config: JSON.stringify(JEE_MAIN_2025_PATTERN),
+      },
+    })
+  }
+}
+
+export interface GenerateExamInput {
+  title: string
+  kind: 'full_length' | 'subject' | 'chapter' | 'custom'
+  patternKey?: string
+  subjectKey?: SubjectKey
+  chapterKey?: string
+  year?: number
+  durationMinutes?: number
+  questionsPerSubject?: number
+  seed?: number
+}
+
+/** Generates an Exam from the live question bank (never fabricates questions). */
+export async function generateExam(input: GenerateExamInput): Promise<{ examId: string; warnings: string[] }> {
+  const warnings: string[] = []
+  const pattern =
+    (await db.examPattern.findUnique({ where: { key: input.patternKey ?? 'jee-main-2025' } })) ??
+    (await db.examPattern.findUnique({ where: { key: 'jee-main-2025' } }))
+  if (!pattern) throw new Error('Exam pattern missing')
+
+  const config = JSON.parse(pattern.config) as ExamPatternConfig
+  const seed = input.seed ?? Date.now()
+  const rand = mulberry32(seed)
+
+  const sectionKeys: SubjectKey[] = input.subjectKey
+    ? [input.subjectKey]
+    : config.sections.map((s) => s.key as SubjectKey)
+
+  const perSubject = input.questionsPerSubject ?? config.sections[0]?.questionCount ?? 25
+  const durationMinutes =
+    input.durationMinutes ?? (sectionKeys.length === 1 ? Math.round(pattern.durationMinutes / 3) : pattern.durationMinutes)
+
+  const exam = await db.exam.create({
+    data: {
+      title: input.title,
+      description: `Auto-generated from the verified question bank (seed ${seed}).`,
+      kind: input.kind,
+      patternId: pattern.id,
+      subjectKey: input.subjectKey ?? null,
+      year: input.year ?? null,
+      config: JSON.stringify({ ...input, seed, perSubject, durationMinutes }),
+      isPublished: true,
+    },
+  })
+
+  let order = 0
+  for (let s = 0; s < sectionKeys.length; s++) {
+    const sk = sectionKeys[s]
+    const where = {
+      subject: { key: sk },
+      verificationStatus: { not: 'rejected' as const },
+      ...(input.chapterKey ? { chapter: { key: input.chapterKey } } : {}),
+      ...(input.year ? { sourceYear: input.year } : {}),
+    }
+    const pool = await db.question.findMany({ where, select: { id: true }, take: 300 })
+    const shuffled = pool.map((q) => ({ q, r: rand() })).sort((a, b) => a.r - b.r)
+    const chosen = shuffled.slice(0, perSubject).map((x) => x.q.id)
+    if (chosen.length < perSubject) {
+      warnings.push(
+        `${sk}: only ${chosen.length} questions available (wanted ${perSubject}) — exam shortened honestly.`
+      )
+    }
+    for (const qid of chosen) {
+      await db.examQuestion.create({
+        data: { examId: exam.id, questionId: qid, order: order++, section: sk, sectionOrder: s },
+      })
+    }
+  }
+
+  const total = await db.examQuestion.count({ where: { examId: exam.id } })
+  if (total === 0) {
+    await db.exam.delete({ where: { id: exam.id } })
+    throw new Error('No questions available for this exam configuration')
+  }
+  return { examId: exam.id, warnings }
+}
+
+/** Compute a stable key so "default" exams aren't regenerated on every request */
+export function stableExamKey(input: GenerateExamInput): string {
+  return createHash('sha1').update(JSON.stringify(input)).digest('hex').slice(0, 12)
+}

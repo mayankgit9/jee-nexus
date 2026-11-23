@@ -239,6 +239,7 @@ model ExamAttemptAnswer {
   isCorrect       Boolean?
   marksAwarded    Float?
   visited         Boolean     @default(false)
+  markedForReview Boolean     @default(false)
   timeSpentSeconds Int        @default(0)
   updatedAt       DateTime    @updatedAt
 
