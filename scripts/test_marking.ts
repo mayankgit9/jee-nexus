@@ -6,7 +6,7 @@ let fail = 0
 function check(name: string, got: unknown, expected: unknown) {
   const ok = JSON.stringify(got) === JSON.stringify(expected)
   console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}`, ok ? '' : `got=${JSON.stringify(got)} want=${JSON.stringify(expected)}`)
-  ok ? pass++ : fail++
+  if (ok) { pass += 1 } else { fail += 1 }
 }
 
 const single = { correct: 4, incorrect: -1 }
