@@ -5,6 +5,48 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-23 — M9 · Supabase production database + CI + docs
+
+### Implemented
+- **Production PostgreSQL migration** (`supabase/migrations/0001_init.sql`): 18 tables mirroring
+  the Prisma schema with native PG types (enums for question_type/difficulty/verification_status/
+  app_role, numeric answers, jsonb), all hot-path indexes, CHECK constraints.
+- **Row Level Security** — enabled on all 18 tables:
+  - anon: read-only on public reference data (subjects, chapters, non-rejected questions,
+    published exams, exam patterns)
+  - answers/solutions/user tables: NO anon policies (service-role only)
+  - per-user authorization enforced server-side in the API layer
+- **Applied live** via Supabase management API SQL endpoint (`scripts/apply_migration.py`,
+  `scripts/supabase_sql.py`) to project `kwavmbowgvgphaccrqlc` (PostgreSQL 17.6, ap-south-1).
+- **GitHub Actions CI** (`.github/workflows/ci.yml`): lint + marking unit tests + all three E2E
+  suites against a seeded SQLite dev DB — **passing on GitHub**.
+- `CONTRIBUTING.md` (ground rules incl. push-often policy), `.env.example` (gitignore exception
+  fixed — `.env*` was swallowing it).
+- DB password reset attempted via API (endpoint not permitted for this PAT — credentials remain
+  dashboard-managed; anon/service keys stashed in `.secrets/` for future wiring).
+
+### Tests executed
+- Migration: 8/8 chunks applied, then live verification — 18 tables present, RLS enabled on 18,
+  5 policies created.
+- **RLS boundary proven with data**: anon key reads `subjects` → rows; anon reads `app_users` →
+  empty; service_role reads `app_users` → rows.
+- CI run on GitHub: success (lint, unit, api-e2e, exam-e2e, admin-e2e).
+
+### Deployment status
+- Supabase: schema + RLS LIVE on PostgreSQL 17.6.
+- GitHub: CI green.
+- Landing: roadmap updated.
+
+### Remaining (honest)
+- App still runs on the sandbox SQLite runtime — switching DATABASE_URL to the Supabase pooler
+  requires the DB password (dashboard) and Prisma postgres provider swap; schema parity is ready.
+- Question bank depth: 16 seeded PYQs vs the 2019–2026 target — import pipeline is ready for
+  bulk verified batches.
+- Playwright browser suite: browser verification done manually via agent-browser; scripted
+  Playwright specs pending.
+
+---
+
 ## 2026-11-23 — M8 · Admin dashboard + import pipeline
 
 ### Implemented
