@@ -61,8 +61,11 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 - `scripts/verify_seed_batch2.py`: **154/154**.
 - API E2E re-run after the dual-runtime db.ts refactor: **23/23** (node fallback path
   unchanged), tsc + eslint clean, `next build` green with the worker client bundled.
-- Playwright suite: **12/12** locally against the live Postgres-backed dev server;
-  CI `browser-e2e` job pushed (11/12 on the first CI run → strict-mode fix pushed).
+- Playwright suite: **12/12** locally against the live Postgres-backed dev server.
+- **CI on GitHub fully green** (all five jobs): lint, unit, pg-parity (29 checks),
+  api-e2e (70 tests), browser-e2e (12 Playwright tests) — including two CI-only
+  flake classes found and fixed along the way (fresh-DB empty-state hint text;
+  random-question-dependent "your answer" chip).
 
 ### Deployment status
 - Live DB: 28 verified-answer seed questions, PYQ years 2021–2025 populated.
@@ -79,7 +82,6 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
   and wrangler config are already in place but NOT yet exercised against a real
   deployment — treat them as untested until then.
 - Question bank depth: 28 of the 2019–2026 target.
-- CI browser-e2e confirmation of the strict-mode fix pending.
 
 ## 2026-11-23 — M10 · Supabase production cutover — app runs on live PostgreSQL
 
