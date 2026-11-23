@@ -3,7 +3,7 @@
 // JEE NEXUS — application shell (hash-routed SPA)
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, Moon, Sun, Menu, X } from 'lucide-react'
+import { Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, Moon, Sun, Menu, X, ClipboardList } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { HomeView } from '@/components/views/HomeView'
 import { PracticeView } from '@/components/views/PracticeView'
@@ -11,6 +11,7 @@ import { PyqView } from '@/components/views/PyqView'
 import { PerformanceView } from '@/components/views/PerformanceView'
 import { BookmarksView } from '@/components/views/BookmarksView'
 import { ProfileView } from '@/components/views/ProfileView'
+import { MockView } from '@/components/views/MockView'
 import type { SessionUser, SubjectKey } from '@/lib/types'
 import { useHashRoute, useApi, navigate } from '@/lib/client'
 import { cn } from '@/lib/utils'
@@ -26,6 +27,7 @@ const NAV = [
   { view: 'home', label: 'Home', icon: Home },
   { view: 'practice', label: 'Practice', icon: Dice5 },
   { view: 'pyq', label: 'PYQ Library', icon: Library },
+  { view: 'mock', label: 'Mock Tests', icon: ClipboardList },
   { view: 'performance', label: 'Performance', icon: BarChart3 },
   { view: 'bookmarks', label: 'Bookmarks', icon: BookMarked },
 ]
@@ -183,15 +185,7 @@ export default function App() {
             {view === 'performance' && <PerformanceView onRequireAuth={() => navigate('/login')} />}
             {view === 'bookmarks' && <BookmarksView loggedIn={!!user} onRequireAuth={() => navigate('/login')} />}
             {(view === 'login' || view === 'profile') && <ProfileView user={user} onUserChange={setUser} />}
-            {view === 'mock' && (
-              <div className="mx-auto max-w-lg rounded-2xl border border-dashed border-border p-10 text-center">
-                <h2 className="text-lg font-semibold">CBT Mock Tests — under construction</h2>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  The NTA-style examination interface (question palette, server-authoritative timer, mark for review,
-                  auto-submit, results and review) is the next milestone. Track progress on the live site.
-                </p>
-              </div>
-            )}
+            {view === 'mock' && <MockView loggedIn={!!user} onRequireAuth={() => navigate('/login')} />}
           </motion.div>
         </AnimatePresence>
       </main>
