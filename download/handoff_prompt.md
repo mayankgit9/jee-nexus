@@ -1,5 +1,7 @@
 # JEE NEXUS — Continuation Prompt (paste into a fresh session)
 
+> **Before use: fill in the `CREDENTIALS` section below with your own API keys, then paste the whole prompt.**
+
 You are continuing development of **JEE NEXUS**, a premium free JEE Main PYQ practice + CBT (computer-based test) platform, built in `/home/z/my-project` (Next.js App Router + TypeScript + Tailwind + shadcn/ui + Prisma + KaTeX/mhchem). Live landing: https://jee-nexus-5wd.pages.dev · GitHub: `mayankgit9/jee-nexus` · Supabase project: `kwavmbowgvgphaccrqlc` (PostgreSQL 17.6, ap-south-1).
 
 Read `DEVELOPMENT_LOG.md` and `README.md` first — they are the honest source of truth for everything already done (M1–M9: foundation, auth, question engine, practice/PYQ/analytics UI, CBT exam engine, admin dashboard + import pipeline, Supabase schema + RLS + CI — all complete, 70/70 E2E passing).
@@ -11,24 +13,44 @@ Read `DEVELOPMENT_LOG.md` and `README.md` first — they are the honest source o
 - App currently runs on **sandbox SQLite** (`DATABASE_URL=file:/home/z/my-project/db/custom.db` in `.env`). Supabase Postgres schema + RLS are applied live but the app is NOT yet wired to them.
 - Git `main` up to date, last commit `e4fd478`. CI green on GitHub (lint + unit + 3 E2E suites).
 
-## Credentials — load them, never print them
+## CREDENTIALS — FILL THESE IN YOURSELF (replace every `<...>` placeholder)
 
-All API keys and tokens already exist in this sandbox. NEVER echo, commit, or paste their values anywhere (chat, code, logs). Load them at runtime:
+> **Project owner:** fill the table below with your real keys before pasting this prompt.
+> **Executing agent:** your FIRST action is to write these values into the gitignored files
+> `.secrets/supabase_db.env` and `.secrets/tokens.env` exactly as shown in the block below —
+> then NEVER echo, print, commit, or copy them into any code file, log, or reply.
+
+| # | Variable | Value — replace placeholder | Where to get it |
+| --- | --- | --- | --- |
+| 1 | `SUPABASE_URL` | `https://kwavmbowgvgphaccrqlc.supabase.co` | Fixed — project ref is known |
+| 2 | `SUPABASE_ANON_KEY` | `<PASTE_YOUR_SUPABASE_ANON_KEY>` | Supabase dashboard → Project Settings → API → `anon` public key |
+| 3 | `SUPABASE_SERVICE_ROLE_KEY` | `<PASTE_YOUR_SUPABASE_SERVICE_ROLE_KEY>` | Same page → `service_role` secret key |
+| 4 | `SUPABASE_DB_PASSWORD` | `<PASTE_YOUR_SUPABASE_DB_PASSWORD>` | Supabase dashboard → Project Settings → Database → connection string / reset password |
+| 5 | `CLOUDFLARE_API_TOKEN` | `<PASTE_YOUR_CLOUDFLARE_API_TOKEN>` | Cloudflare dash → My Profile → API Tokens → Create Token (Cloudflare Pages: Edit) |
+| 6 | `CLOUDFLARE_ACCOUNT_ID` | `<PASTE_YOUR_CLOUDFLARE_ACCOUNT_ID>` | Cloudflare dash → Workers & Pages → Account ID (32-char hex) |
+| 7 | `GITHUB_TOKEN` | `<PASTE_YOUR_GITHUB_PAT>` *(optional)* | github.com/settings/tokens → fine-grained PAT with read/write on `jee-nexus` — only if push auth is missing |
+
+The Supabase DB pooler URL is assembled as:
+`postgresql://postgres:<SUPABASE_DB_PASSWORD>@aws-0-ap-south-1.pooler.supabase.com:6543/postgres`
+
+Executing agent's first action (write from the filled table, never display values back):
 
 ```bash
 cd /home/z/my-project
+# 1) .secrets/supabase_db.env
+#    SUPABASE_URL=https://kwavmbowgvgphaccrqlc.supabase.co
+#    SUPABASE_ANON_KEY=<filled>
+#    SUPABASE_SERVICE_ROLE_KEY=<filled>
+#    SUPABASE_DB_URL=postgresql://postgres:<filled>@aws-0-ap-south-1.pooler.supabase.com:6543/postgres
+# 2) .secrets/tokens.env
+#    CLOUDFLARE_API_TOKEN=<filled>
+#    CLOUDFLARE_ACCOUNT_ID=<filled>
+#    GITHUB_TOKEN=<filled if provided>
+# 3) Load without printing:
 set -a; source .secrets/supabase_db.env; source .secrets/tokens.env; set +a
 ```
 
-What lives where (variable names only):
-
-| File | Contains | Used for |
-| --- | --- | --- |
-| `.secrets/supabase_db.env` | Supabase DB connection string (pooler `aws-0-ap-south-1.pooler.supabase.com:6543`), `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` | Production DB cutover, RLS/API verification |
-| `.secrets/tokens.env` | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, GitHub/Cloudflare deploy tokens | Landing deploys, git push, Pages deploy |
-| `.env` | `DATABASE_URL` (SQLite), `ADMIN_EMAILS` | Local dev runtime (already loaded by Next.js) |
-
-If a needed secret (e.g. the Supabase DB **password** for the pooler URL) is missing, use the Supabase management API via `scripts/supabase_sql.py` / `scripts/apply_migration.py`, or state plainly that it must come from the dashboard (https://supabase.com/dashboard/project/kwavmbowgvgphaccrqlc/settings/api) — do not guess or fabricate one. `.env` and `.secrets/` are gitignored; keep it that way.
+`.env` and `.secrets/` are gitignored — keep it that way. If a needed key is still missing, state plainly that it must come from the dashboard (https://supabase.com/dashboard/project/kwavmbowgvgphaccrqlc/settings/api) and pause that step — do not guess or fabricate one.
 
 ## Process rules (non-negotiable)
 
@@ -41,7 +63,7 @@ If a needed secret (e.g. the Supabase DB **password** for the pooler URL) is mis
 
 ### Task 1 — Supabase production cutover (highest priority)
 Wire the app to the live Supabase Postgres:
-1. `set -a; source .secrets/supabase_db.env; set +a`, then switch `prisma/schema.prisma` provider `sqlite → postgresql` and point `DATABASE_URL` at the Supabase pooler string (port 6543, pgbouncer mode; add `?pgbouncer=true&connection_limit=1` or equivalent if needed).
+1. Store the filled-in Supabase credentials from the CREDENTIALS section into `.secrets/supabase_db.env` (gitignored) and load them (`set -a; source .secrets/supabase_db.env; set +a`). Then switch `prisma/schema.prisma` provider `sqlite → postgresql` and point `DATABASE_URL` at the assembled Supabase pooler string (port 6543, pgbouncer mode; add `?pgbouncer=true&connection_limit=1` or equivalent if needed).
 2. Run Prisma against the live DB (`prisma db push` or `migrate deploy` — the 18 tables + RLS already exist from `supabase/migrations/0001_init.sql`, so use introspection/migrate baseline to avoid clobbering RLS).
 3. Seed the taxonomy + existing 16 verified questions into Postgres (adapt `scripts/seed.ts`).
 4. Re-run the full regression against Postgres: `scripts/e2e_api_test.py` (23), `scripts/e2e_exam_test.py` (23), `scripts/e2e_admin_test.py` (24) — all must pass. Fix any SQLite↔Postgres incompatibilities (jsonb, enums, numeric tolerance queries).
@@ -63,7 +85,7 @@ Convert the manual agent-browser verification into scripted Playwright specs:
 ### Task 4 — Cloudflare production app deployment
 The app currently only runs in the sandbox preview; only the landing is on Cloudflare Pages:
 1. Make the Next.js app deployable to Cloudflare Pages (`@cloudflare/next-on-pages` or the Pages adapter that fits the current setup; static-export any pure-client routes, keep API routes working or move them to Pages Functions).
-2. Deploy using credentials from `.secrets/tokens.env` (see `scripts/deploy_landing.sh` for the existing pattern) — new project or same Pages project with app route.
+2. Deploy using `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` stored in `.secrets/tokens.env` (see `scripts/deploy_landing.sh` for the existing pattern) — new project or same Pages project with app route.
 3. Verify the deployed URL end-to-end (signup, one practice question, one full CBT attempt).
 4. Update the landing roadmap (https://jee-nexus-5wd.pages.dev) and `DEVELOPMENT_LOG.md` with an honest M10 entry: what was implemented, what was tested, what remains.
 
