@@ -22,24 +22,82 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - run: bun install --frozen-lockfile
       - name: Marking engine unit tests
         run: bunx tsx scripts/test_marking.ts
 
-  api-e2e:
+  pg-parity:
+    # Prisma client vs live DDL compatibility, exercised on real PostgreSQL
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: jee_nexus_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/jee_nexus_test
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - run: bun install --frozen-lockfile
-      - name: Push dev schema
-        run: bun run db:push
+      - name: Install psql client
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
+      - name: Apply migrations (same files as production)
+        run: |
+          for f in supabase/migrations/*.sql; do
+            echo "applying $f"
+            psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f "$f"
+          done
+      - name: Prisma client generate
+        run: bunx prisma generate
+      - name: Prisma↔Postgres runtime parity tests
+        run: bunx tsx scripts/test_pg_runtime.ts
+
+  api-e2e:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
         env:
-          DATABASE_URL: file:/home/runner/work/jee-nexus/jee-nexus/db/custom.db
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: jee_nexus_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/jee_nexus_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - name: Install psql client
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
+      - name: Apply migrations (same files as production)
+        run: |
+          for f in supabase/migrations/*.sql; do
+            echo "applying $f"
+            psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f "$f"
+          done
+      - name: Generate Prisma client
+        run: bunx prisma generate
       - name: Seed dev data
         run: bunx tsx scripts/seed.ts
-        env:
-          DATABASE_URL: file:/home/runner/work/jee-nexus/jee-nexus/db/custom.db
       - name: Start dev server
         run: |
           bun run dev &
@@ -49,7 +107,6 @@ jobs:
           done
           curl -sS -m 5 -o /dev/null http://localhost:3000/
         env:
-          DATABASE_URL: file:/home/runner/work/jee-nexus/jee-nexus/db/custom.db
           ADMIN_EMAILS: admin@jee-nexus.dev
       - name: API E2E
         run: python3 scripts/e2e_api_test.py
