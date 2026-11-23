@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JEE NEXUS — JEE Main Practice & CBT Platform</title>
+<meta name="description" content="Premium free JEE Main previous-year-question practice with authentic diagrams, deeply detailed solutions and a true NTA-style computer based test experience." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<style>
+  :root{
+    --bg:#0b0e13; --bg2:#0e1219; --card:#121722; --card2:#151b28;
+    --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
+    --text:#e9eee7; --dim:#96a0a4; --dim2:#6b757c;
+    --mint:#3ddbb0; --mint-dim:rgba(61,219,176,.14);
+    --gold:#e8c35a; --violet:#a78bfa; --rose:#fb7185;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,14,19,.78);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;font-size:15px}
+  .brand small{color:var(--mint);letter-spacing:.3em;font-size:9px;font-weight:600}
+  .nav-links{display:flex;gap:22px;font-size:13.5px;color:var(--dim)}
+  .nav-links a:hover{color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:10px 18px;font-size:14px;font-weight:600;cursor:pointer;border:1px solid transparent;transition:.18s}
+  .btn-mint{background:var(--mint);color:#06251b}
+  .btn-mint:hover{transform:translateY(-1px);box-shadow:0 8px 28px -8px rgba(61,219,176,.55)}
+  .btn-ghost{border-color:var(--line2);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--mint);color:var(--mint)}
+  .hero{position:relative;padding:110px 0 90px;text-align:center;overflow:hidden}
+  .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(ellipse 70% 62% at 50% 38%,#000 30%,transparent 75%)}
+  .glow{position:absolute;width:640px;height:340px;left:50%;top:-120px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(61,219,176,.16),transparent);pointer-events:none}
+  .pill{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--mint);border:1px solid rgba(61,219,176,.3);background:var(--mint-dim);border-radius:999px;padding:6px 14px;margin-bottom:26px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--mint);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(61,219,176,.5)}50%{box-shadow:0 0 0 6px rgba(61,219,176,0)}}
+  h1{font-size:clamp(38px,6vw,64px);line-height:1.08;letter-spacing:-.02em;font-weight:800}
+  h1 .grad{background:linear-gradient(115deg,#eef4f0 15%,var(--mint) 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{max-width:640px;margin:22px auto 0;color:var(--dim);font-size:17px}
+  .cta{display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:70px}
+  .stat{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--card),var(--bg2));padding:20px}
+  .stat b{display:block;font-size:24px;letter-spacing:-.01em}
+  .stat span{font-size:12.5px;color:var(--dim2)}
+  section{padding:76px 0}
+  .eyebrow{font-size:12px;letter-spacing:.28em;color:var(--mint);font-weight:600;text-transform:uppercase}
+  h2{font-size:clamp(26px,4vw,36px);letter-spacing:-.015em;margin-top:10px;font-weight:750}
+  .lead{color:var(--dim);max-width:620px;margin-top:12px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+  .card{border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--card);transition:.2s}
+  .card:hover{border-color:rgba(61,219,176,.4);transform:translateY(-3px)}
+  .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px}
+  .card h3{font-size:16.5px;font-weight:650}
+  .card p{font-size:13.5px;color:var(--dim);margin-top:8px}
+  .phase{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:22px 24px;display:flex;gap:18px;align-items:flex-start}
+  .phase+.phase{margin-top:12px}
+  .badge{min-width:64px;text-align:center;border-radius:8px;font-size:11px;font-weight:700;padding:5px 0;letter-spacing:.06em}
+  .b-done{background:rgba(61,219,176,.15);color:var(--mint);border:1px solid rgba(61,219,176,.3)}
+  .b-live{background:rgba(232,195,90,.13);color:var(--gold);border:1px solid rgba(232,195,90,.3)}
+  .b-next{background:rgba(255,255,255,.05);color:var(--dim);border:1px solid var(--line2)}
+  .phase h3{font-size:15.5px}
+  .phase p{font-size:13px;color:var(--dim);margin-top:4px}
+  footer{border-top:1px solid var(--line);padding:36px 0;color:var(--dim2);font-size:13px}
+  .foot-in{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+  @media(max-width:860px){.cards{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+  @media(max-width:560px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav-in">
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="#3ddbb0" stroke-width="2"/><path d="M10 21V11h5.2a3.4 3.4 0 0 1 0 6.8H13" stroke="#3ddbb0" stroke-width="2.4" stroke-linecap="round"/><circle cx="22.5" cy="11" r="1.6" fill="#e8c35a"/><circle cx="22.5" cy="16" r="1.6" fill="#e8c35a"/><circle cx="22.5" cy="21" r="1.6" fill="#e8c35a"/></svg>
+    <span>JEE NEXUS<small>BETA · UNDER ACTIVE DEVELOPMENT</small></span>
+  </div>
+  <div class="nav-links">
+    <a href="#features">Features</a><a href="#roadmap">Roadmap</a><a href="https://github.com/mayankgit9/jee-nexus" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <a class="btn btn-mint" href="#cta">Open the app</a>
+</div></nav>
+
+<header class="hero"><div class="grid-bg"></div><div class="glow"></div><div class="wrap" style="position:relative">
+  <div class="pill"><span class="dot"></span> Built in the open · shipping continuously</div>
+  <h1>Practice JEE Main the way<br /><span class="grad">you'll actually write it.</span></h1>
+  <p class="sub">A premium, free platform for previous-year questions — with authentic exam diagrams, deeply detailed step-by-step solutions, and a true NTA-style computer based test experience.</p>
+  <div class="cta" id="cta">
+    <a class="btn btn-mint" href="https://github.com/mayankgit9/jee-nexus" target="_blank" rel="noopener">★ Star on GitHub</a>
+    <a class="btn btn-ghost" href="#roadmap">Development roadmap</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>2019–2026</b><span>PYQ coverage target</span></div>
+    <div class="stat"><b>3 Subjects</b><span>Physics · Chemistry · Maths</span></div>
+    <div class="stat"><b>3 Types</b><span>Single · Multi-correct · Numerical</span></div>
+    <div class="stat"><b>0 ₹</b><span>Free, forever</span></div>
+  </div>
+</div></header>
+
+<section id="features"><div class="wrap">
+  <div class="eyebrow">What's being built</div>
+  <h2>An exam platform, not a coaching brochure.</h2>
+  <p class="lead">Every feature is engineered around one goal: the most faithful JEE Main practice experience available for free.</p>
+  <div class="cards">
+    <div class="card"><div class="ic" style="background:rgba(61,219,176,.12)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ddbb0" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/><circle cx="12" cy="9" r="2.5"/><path d="M9 19c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5"/></svg></div><h3>Random Practice Engine</h3><p>Filter by subject, chapter, year, difficulty and question type. Smart avoidance of recently-attempted questions, with revision mode when you want repeats.</p></div>
+    <div class="card"><div class="ic" style="background:rgba(167,139,250,.12)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h12"/></svg></div><h3>Year-wise PYQ Library</h3><p>Browse 2019 → 2026 by year, subject, chapter and shift. Every question carries its original exam metadata and source attribution.</p></div>
+    <div class="card"><div class="ic" style="background:rgba(232,195,90,.12)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8c35a" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div><h3>Realistic CBT Mode</h3><p>Question palette, mark-for-review, save &amp; next, subject sections, server-authoritative timer with auto-submit — mirroring the NTA interface.</p></div>
+    <div class="card"><div class="ic" style="background:rgba(61,219,176,.12)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ddbb0" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/><path d="M8 12h8"/></svg></div><h3>Authentic Diagrams</h3><p>Physics circuits, graphs, organic chemistry structures and geometry figures rendered with real mathematical notation — clearly attributed, never fake.</p></div>
+    <div class="card"><div class="ic" style="background:rgba(167,139,250,.12)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg></div><h3>Deep Solution Engine</h3><p>Concept recap, formulas, full derivation with substitutions, alternative methods, common mistakes and final verification — far beyond an answer key.</p></div>
+    <div class="card"><div class="ic" style="background:rgba(232,195,90,.12)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8c35a" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-6 3 4 5-8"/></svg></div><h3>Performance Analytics</h3><p>Subject-wise accuracy, chapter strengths, time-per-question trends and mock score history with interactive charts. No fake percentiles — ever.</p></div>
+  </div>
+</div></section>
+
+<section id="roadmap" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow">Live development</div>
+  <h2>Shipped incrementally, updated on this page.</h2>
+  <p class="lead">This site is deployed from the JEE NEXUS repository and refreshes as milestones land. No inflated percentages — only what's actually working.</p>
+  <div style="margin-top:40px">
+    <div class="phase"><span class="badge b-done">DONE</span><div><h3>Foundation — design system, database schema, GitHub repo, Cloudflare Pages</h3><p>20-model normalized schema, premium dark identity, live deployment pipeline.</p></div></div>
+    <div class="phase"><span class="badge b-live">NOW</span><div><h3>Question engine &amp; seeded PYQ bank</h3><p>LaTeX + chemistry notation rendering, diagrams, three question types, verification workflow.</p></div></div>
+    <div class="phase"><span class="badge b-next">NEXT</span><div><h3>Practice · PYQ library · CBT exams</h3><p>Random practice with filters, year-wise browsing, NTA-style mock test interface.</p></div></div>
+    <div class="phase"><span class="badge b-next">THEN</span><div><h3>Analytics, accounts, admin import pipeline</h3><p>Auth with sync, performance dashboards, bulk question import with duplicate detection.</p></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap foot-in">
+  <div><b style="color:var(--text)">JEE NEXUS</b> — built in the open at <a href="https://github.com/mayankgit9/jee-nexus" target="_blank" rel="noopener" style="color:var(--mint)">github.com/mayankgit9/jee-nexus</a></div>
+  <div>Not affiliated with NTA. Questions are sourced &amp; attributed; solutions are original.</div>
+</div></footer>
+</body>
+</html>

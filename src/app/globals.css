@@ -1,0 +1,241 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  /* JEE NEXUS subject colors */
+  --color-subj-physics: var(--subj-physics);
+  --color-subj-chemistry: var(--subj-chemistry);
+  --color-subj-mathematics: var(--subj-mathematics);
+}
+
+/* JEE NEXUS — premium dark identity (original) */
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.13 0.012 240);
+  --foreground: oklch(0.93 0.008 120);
+  --card: oklch(0.17 0.014 240);
+  --card-foreground: oklch(0.93 0.008 120);
+  --popover: oklch(0.16 0.014 240);
+  --popover-foreground: oklch(0.93 0.008 120);
+  --primary: oklch(0.82 0.16 166);
+  --primary-foreground: oklch(0.15 0.02 166);
+  --secondary: oklch(0.22 0.016 240);
+  --secondary-foreground: oklch(0.93 0.008 120);
+  --muted: oklch(0.21 0.014 240);
+  --muted-foreground: oklch(0.62 0.012 120);
+  --accent: oklch(0.26 0.02 166);
+  --accent-foreground: oklch(0.95 0.01 120);
+  --destructive: oklch(0.62 0.21 25);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.72 0.13 166);
+  --chart-1: oklch(0.82 0.16 166);
+  --chart-2: oklch(0.8 0.15 85);
+  --chart-3: oklch(0.72 0.17 305);
+  --chart-4: oklch(0.75 0.13 230);
+  --chart-5: oklch(0.7 0.19 30);
+  --sidebar: oklch(0.15 0.013 240);
+  --sidebar-foreground: oklch(0.93 0.008 120);
+  --sidebar-primary: oklch(0.82 0.16 166);
+  --sidebar-primary-foreground: oklch(0.15 0.02 166);
+  --sidebar-accent: oklch(0.22 0.016 240);
+  --sidebar-accent-foreground: oklch(0.93 0.008 120);
+  --sidebar-border: oklch(1 0 0 / 9%);
+  --sidebar-ring: oklch(0.72 0.13 166);
+  --subj-physics: oklch(0.82 0.16 166);
+  --subj-chemistry: oklch(0.8 0.15 85);
+  --subj-mathematics: oklch(0.72 0.17 305);
+}
+
+.dark {
+  --background: oklch(0.13 0.012 240);
+  --foreground: oklch(0.93 0.008 120);
+  --card: oklch(0.17 0.014 240);
+  --card-foreground: oklch(0.93 0.008 120);
+  --popover: oklch(0.16 0.014 240);
+  --popover-foreground: oklch(0.93 0.008 120);
+  --primary: oklch(0.82 0.16 166);
+  --primary-foreground: oklch(0.15 0.02 166);
+  --secondary: oklch(0.22 0.016 240);
+  --secondary-foreground: oklch(0.93 0.008 120);
+  --muted: oklch(0.21 0.014 240);
+  --muted-foreground: oklch(0.62 0.012 120);
+  --accent: oklch(0.26 0.02 166);
+  --accent-foreground: oklch(0.95 0.01 120);
+  --destructive: oklch(0.62 0.21 25);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.72 0.13 166);
+  --chart-1: oklch(0.82 0.16 166);
+  --chart-2: oklch(0.8 0.15 85);
+  --chart-3: oklch(0.72 0.17 305);
+  --chart-4: oklch(0.75 0.13 230);
+  --chart-5: oklch(0.7 0.19 30);
+  --sidebar: oklch(0.15 0.013 240);
+  --sidebar-foreground: oklch(0.93 0.008 120);
+  --sidebar-primary: oklch(0.82 0.16 166);
+  --sidebar-primary-foreground: oklch(0.15 0.02 166);
+  --sidebar-accent: oklch(0.22 0.016 240);
+  --sidebar-accent-foreground: oklch(0.93 0.008 120);
+  --sidebar-border: oklch(1 0 0 / 9%);
+  --sidebar-ring: oklch(0.72 0.13 166);
+  --subj-physics: oklch(0.82 0.16 166);
+  --subj-chemistry: oklch(0.8 0.15 85);
+  --subj-mathematics: oklch(0.72 0.17 305);
+}
+
+/* Light mode (optional toggle) */
+.light {
+  --background: oklch(0.975 0.004 120);
+  --foreground: oklch(0.2 0.012 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.012 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.012 240);
+  --primary: oklch(0.62 0.13 166);
+  --primary-foreground: oklch(0.98 0.01 120);
+  --secondary: oklch(0.94 0.006 120);
+  --secondary-foreground: oklch(0.2 0.012 240);
+  --muted: oklch(0.945 0.006 120);
+  --muted-foreground: oklch(0.45 0.012 120);
+  --accent: oklch(0.92 0.02 166);
+  --accent-foreground: oklch(0.2 0.012 240);
+  --destructive: oklch(0.55 0.2 25);
+  --border: oklch(0.2 0.012 240 / 12%);
+  --input: oklch(0.2 0.012 240 / 16%);
+  --ring: oklch(0.62 0.13 166);
+  --chart-1: oklch(0.62 0.13 166);
+  --chart-2: oklch(0.68 0.13 85);
+  --chart-3: oklch(0.6 0.16 305);
+  --chart-4: oklch(0.6 0.12 230);
+  --chart-5: oklch(0.62 0.18 30);
+  --sidebar: oklch(0.96 0.005 120);
+  --sidebar-foreground: oklch(0.2 0.012 240);
+  --sidebar-primary: oklch(0.62 0.13 166);
+  --sidebar-primary-foreground: oklch(0.98 0.01 120);
+  --sidebar-accent: oklch(0.93 0.008 120);
+  --sidebar-accent-foreground: oklch(0.2 0.012 240);
+  --sidebar-border: oklch(0.2 0.012 240 / 12%);
+  --sidebar-ring: oklch(0.62 0.13 166);
+  --subj-physics: oklch(0.62 0.13 166);
+  --subj-chemistry: oklch(0.68 0.13 85);
+  --subj-mathematics: oklch(0.6 0.16 305);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(ellipse 60% 40% at 50% -10%, oklch(0.82 0.16 166 / 6%), transparent);
+  }
+}
+
+/* NEXUS utility flourishes */
+.nexus-grid-bg {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 2.5%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 2.5%) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.nexus-glow {
+  box-shadow: 0 0 0 1px oklch(0.82 0.16 166 / 22%), 0 8px 40px -12px oklch(0.82 0.16 166 / 28%);
+}
+
+.text-gradient-nexus {
+  background: linear-gradient(120deg, oklch(0.95 0.02 120), oklch(0.82 0.16 166) 55%, oklch(0.8 0.15 85));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.35 0.015 240);
+  border-radius: 8px;
+  border: 2px solid oklch(0.13 0.012 240);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.45 0.02 240);
+}
+
+/* KaTeX rendering */
+.katex {
+  font-size: 1.06em;
+}
+.katex-display {
+  margin: 0.75rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 2px;
+}
+
+/* Solution markdown-lite */
+.sol-body p {
+  margin: 0.5rem 0;
+  line-height: 1.75;
+}
+.sol-body ul {
+  margin: 0.5rem 0 0.5rem 1.25rem;
+  list-style: disc;
+}
+.sol-body li {
+  margin: 0.25rem 0;
+  line-height: 1.7;
+}
+.sol-body h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: oklch(0.93 0.008 120);
+}

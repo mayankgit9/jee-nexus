@@ -1,0 +1,308 @@
+// JEE NEXUS — Prisma schema (SQLite for local/dev runtime)
+// A mirrored PostgreSQL DDL with Row Level Security lives in supabase/migrations/
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ----------------------------- Users & auth -----------------------------
+
+model User {
+  id             String          @id @default(cuid())
+  email          String          @unique
+  passwordHash   String
+  name           String?
+  role           String          @default("student") // student | admin
+  preferences    String? // JSON: { theme, defaultSubject, ... }
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  sessions       Session[]
+  attempts       Attempt[]
+  bookmarks      Bookmark[]
+  reports        Report[]
+  examAttempts   ExamAttempt[]
+  passwordResets PasswordReset[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model PasswordReset {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+}
+
+// ----------------------------- Taxonomy -----------------------------
+
+model Subject {
+  id       String     @id @default(cuid())
+  key      String     @unique // physics | chemistry | mathematics
+  name     String
+  icon     String? // lucide icon key
+  colorKey String? // mint | gold | violet
+  order    Int        @default(0)
+
+  chapters Chapter[]
+  questions Question[]
+}
+
+model Chapter {
+  id        String   @id @default(cuid())
+  subjectId String
+  subject   Subject  @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  key       String   @unique // physics:current-electricity ...
+  name      String
+  unit      String? // Mechanics | Organic Chemistry ...
+  order     Int      @default(0)
+
+  questions Question[]
+
+  @@index([subjectId])
+}
+
+// ----------------------------- Questions -----------------------------
+
+model Question {
+  id                     String          @id @default(cuid())
+  publicId               String          @unique // JEM-2023-PHY-004 style slug
+  subjectId              String
+  subject                Subject         @relation(fields: [subjectId], references: [id])
+  chapterId              String
+  chapter                Chapter         @relation(fields: [chapterId], references: [id])
+  subtopic               String?
+  type                   String // mcq_single | mcq_multi | numerical
+  text                   String // LaTeX via $...$ / $$...$$
+  correctOptions         String? // JSON array of option indices e.g. "[0,2]"
+  numericalAnswer        String? // exact decimal string for numerical type
+  numericalTolerance     String? // allowed absolute tolerance
+  difficulty             String // easy | medium | hard
+  sourceExam             String          @default("JEE Main")
+  sourceYear             Int?
+  sourceDate             String? // examination date if known
+  sourceShift            String? // e.g. "Shift 1"
+  sourceQuestionNumber   Int?
+  sourceReference        String? // citation for the sourced question
+  verificationStatus     String          @default("imported") // imported | needs_review | verified | rejected
+  tags                   String? // JSON array of topic tags
+  contentHash            String          @unique // normalized duplicate detection
+  createdAt              DateTime        @default(now())
+  updatedAt              DateTime        @updatedAt
+
+  options         QuestionOption[]
+  images          QuestionImage[]
+  solution        Solution?
+  practiceAttempts Attempt[]
+  bookmarks       Bookmark[]
+  reports         Report[]
+  examQuestions   ExamQuestion[]
+
+  @@index([subjectId, chapterId])
+  @@index([sourceYear, subjectId])
+  @@index([verificationStatus])
+  @@index([type])
+}
+
+model QuestionOption {
+  id         String   @id @default(cuid())
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  idx        Int
+  text       String
+  isCorrect  Boolean  @default(false)
+
+  @@unique([questionId, idx])
+}
+
+model QuestionImage {
+  id                  String   @id @default(cuid())
+  questionId          String
+  question            Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  kind                String   @default("question") // question | solution
+  url                 String // e.g. /diagrams/planet-density.svg
+  altText             String
+  caption             String?
+  attribution         String? // provenance line displayed under the image
+  isOriginalExamImage Boolean  @default(false)
+  order               Int      @default(0)
+}
+
+model Solution {
+  id                String    @id @default(cuid())
+  questionId        String    @unique
+  question          Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  keyConcept        String? // one-paragraph concept recap
+  formulas          String? // JSON array of formula strings (LaTeX)
+  body              String // full step-by-step derivation (markdown-lite + LaTeX)
+  commonMistakes    String?
+  alternativeMethod String?
+  verification      String? // final sanity check
+  isAiGenerated     Boolean   @default(true) // shown to users until expert-verified
+  verifiedAt        DateTime?
+  sourceReferences  String? // JSON array of source citations
+  version           Int       @default(1)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+}
+
+// ----------------------------- Exams / CBT -----------------------------
+
+model ExamPattern {
+  id             String @id @default(cuid())
+  key            String @unique // jee-main-2025 | jee-main-2023 | custom
+  name           String
+  description    String?
+  durationMinutes Int
+  config         String // JSON: sections[] + marking scheme
+  exams          Exam[]
+}
+
+model Exam {
+  id          String      @id @default(cuid())
+  title       String
+  description String?
+  kind        String // full_length | subject | chapter | custom | pyq_year
+  patternId   String
+  pattern     ExamPattern @relation(fields: [patternId], references: [id])
+  subjectKey  String? // for subject/chapter tests
+  year        Int? // for pyq_year tests
+  config      String? // JSON generation config (filters, counts, seed)
+  createdById String?
+  isPublished Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+
+  examQuestions ExamQuestion[]
+  attempts      ExamAttempt[]
+
+  @@index([kind])
+}
+
+model ExamQuestion {
+  id           String   @id @default(cuid())
+  examId       String
+  exam         Exam     @relation(fields: [examId], references: [id], onDelete: Cascade)
+  questionId   String
+  question     Question @relation(fields: [questionId], references: [id])
+  order        Int
+  section      String // physics | chemistry | mathematics
+  sectionOrder Int
+
+  @@unique([examId, order])
+  @@index([examId, section])
+}
+
+model ExamAttempt {
+  id               String             @id @default(cuid())
+  userId           String
+  user             User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examId           String
+  exam             Exam               @relation(fields: [examId], references: [id], onDelete: Cascade)
+  startedAt        DateTime           @default(now())
+  endsAt           DateTime // server-authoritative deadline
+  submittedAt      DateTime?
+  status           String             @default("in_progress") // in_progress | submitted | expired
+  totalMarks       Float?
+  maxMarks         Float?
+  timeSpentSeconds Int?
+  createdAt        DateTime           @default(now())
+
+  answers          ExamAttemptAnswer[]
+
+  @@index([userId, startedAt])
+}
+
+model ExamAttemptAnswer {
+  id              String      @id @default(cuid())
+  examAttemptId   String
+  examAttempt     ExamAttempt @relation(fields: [examAttemptId], references: [id], onDelete: Cascade)
+  examQuestionId  String
+  selectedOptions String? // JSON array of indices
+  numericalValue  String?
+  isCorrect       Boolean?
+  marksAwarded    Float?
+  visited         Boolean     @default(false)
+  timeSpentSeconds Int        @default(0)
+  updatedAt       DateTime    @updatedAt
+
+  @@unique([examAttemptId, examQuestionId])
+}
+
+// ----------------------------- Practice & engagement -----------------------------
+
+model Attempt {
+  id                String   @id @default(cuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId        String
+  question          Question @relation(fields: [questionId], references: [id])
+  selectedOptions   String? // JSON array of indices
+  numericalValue    String?
+  isCorrect         Boolean?
+  timeSpentSeconds  Int      @default(0)
+  createdAt         DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([userId, questionId])
+}
+
+model Bookmark {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id])
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, questionId])
+}
+
+model Report {
+  id         String    @id @default(cuid())
+  userId     String
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question  @relation(fields: [questionId], references: [id])
+  reason     String // incorrect_answer | incorrect_solution | missing_diagram | typo | copyright | other
+  details    String?
+  status     String    @default("open") // open | resolved | dismissed
+  resolution String?
+  createdAt  DateTime  @default(now())
+  resolvedAt DateTime?
+
+  @@index([status])
+  @@index([questionId])
+}
+
+model ImportJob {
+  id             String   @id @default(cuid())
+  adminId        String
+  fileName       String
+  sourceFormat   String // json | csv
+  totalRows      Int      @default(0)
+  inserted       Int      @default(0)
+  skippedDuplicate Int    @default(0)
+  rejected       Int      @default(0)
+  errors         String? // JSON array of row-level errors
+  status         String   @default("completed") // running | completed | failed
+  createdAt      DateTime @default(now())
+
+  @@index([createdAt])
+}
