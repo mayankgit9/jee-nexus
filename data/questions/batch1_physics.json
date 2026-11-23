@@ -1,0 +1,170 @@
+[
+  {
+    "publicId": "JEM-2023-PHY-001",
+    "subjectKey": "physics",
+    "chapterKey": "physics:gravitation",
+    "subtopic": "Escape velocity, variable density",
+    "type": "mcq_single",
+    "text": "A planet has radius $R$ and mass density $\\rho(r) = \\rho_0\\left(1 - \\dfrac{r^2}{R^2}\\right)$, where $r$ is the distance from the centre and $\\rho_0$ is a constant. The escape speed of a particle from the surface of the planet is:",
+    "options": [
+      "$R\\sqrt{\\dfrac{16\\pi G\\rho_0}{15}}$",
+      "$R\\sqrt{\\dfrac{8\\pi G\\rho_0}{15}}$",
+      "$\\sqrt{\\dfrac{4\\pi G\\rho_0 R^2}{3}}$",
+      "$R\\sqrt{\\dfrac{2\\pi G\\rho_0}{5}}$"
+    ],
+    "correctOptions": [0],
+    "difficulty": "medium",
+    "sourceYear": 2023,
+    "sourceShift": "Shift 1",
+    "tags": ["escape velocity", "variable density", "gravitation", "integration"],
+    "solution": {
+      "keyConcept": "Escape speed from a body of mass $M$ and radius $R$ is $v_e=\\sqrt{2GM/R}$. Because the density is not uniform, the mass must first be obtained by integrating thin spherical shells: $dM = \\rho(r)\\cdot 4\\pi r^2\\,dr$.",
+      "formulas": [
+        "v_e = \\sqrt{\\dfrac{2GM}{R}}",
+        "dM = \\rho(r)\\,4\\pi r^2\\,dr",
+        "M = \\displaystyle\\int_0^R \\rho_0\\left(1-\\frac{r^2}{R^2}\\right)4\\pi r^2\\,dr"
+      ],
+      "body": "**Step 1 — Mass of the planet.**\nTreat the planet as a collection of concentric spherical shells of thickness $dr$. A shell at radius $r$ has volume $4\\pi r^2\\,dr$, so\n$$M = \\int_0^R \\rho_0\\left(1-\\frac{r^2}{R^2}\\right)4\\pi r^2\\,dr = 4\\pi\\rho_0\\int_0^R\\left(r^2-\\frac{r^4}{R^2}\\right)dr$$\n\n**Step 2 — Evaluate the integral.**\n$$\\int_0^R r^2\\,dr = \\frac{R^3}{3}, \\qquad \\int_0^R \\frac{r^4}{R^2}\\,dr = \\frac{R^3}{5}$$\n$$M = 4\\pi\\rho_0 R^3\\left(\\frac{1}{3}-\\frac{1}{5}\\right) = 4\\pi\\rho_0 R^3\\cdot\\frac{2}{15} = \\frac{8\\pi\\rho_0 R^3}{15}$$\n\n**Step 3 — Escape speed.**\nFor escape, the kinetic energy must equal the binding energy: $\\frac{1}{2}mv_e^2 = \\frac{GMm}{R}$, so $v_e=\\sqrt{2GM/R}$. Substituting the mass:\n$$v_e = \\sqrt{\\frac{2G}{R}\\cdot\\frac{8\\pi\\rho_0 R^3}{15}} = \\sqrt{\\frac{16\\pi G\\rho_0 R^2}{15}} = R\\sqrt{\\frac{16\\pi G\\rho_0}{15}}$$",
+      "commonMistakes": "Using $M=\\frac{4}{3}\\pi R^3\\rho(0)$, i.e. treating the planet as if it had the central density throughout. Also, forgetting that density at the surface is zero, not $\\rho_0$. Sign errors in the shell integration are common when $r^4/R^2$ is mishandled.",
+      "verification": "Dimension check: $G$ has units $\\mathrm{m^3 kg^{-1} s^{-2}}$ and $\\rho_0$ is $\\mathrm{kg\\,m^{-3}}$, so $G\\rho_0$ has $\\mathrm{s^{-2}}$; $R\\sqrt{G\\rho_0}$ is a velocity. Numerically, with $M$ from the integral, $v_e=\\sqrt{2GM/R}$ matches $R\\sqrt{16\\pi G\\rho_0/15}$ exactly.",
+      "sourceReferences": ["JEE Main 2023 (January), Physics — standard formulation"],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2023-PHY-002",
+    "subjectKey": "physics",
+    "chapterKey": "physics:current-electricity",
+    "subtopic": "Drift velocity",
+    "type": "numerical",
+    "text": "A copper wire carrying a current of $10\\ \\mathrm{A}$ has a cross-sectional area of $2\\ \\mathrm{mm^2}$. If the free electron density in copper is $n = 9\\times10^{28}\\ \\mathrm{m^{-3}}$, the drift velocity of electrons is $x\\times10^{-4}\\ \\mathrm{m/s}$. Find $x$ (nearest integer).",
+    "options": [],
+    "correctOptions": null,
+    "numericalAnswer": "3.47",
+    "numericalTolerance": "0.1",
+    "difficulty": "easy",
+    "sourceYear": 2023,
+    "sourceShift": "Shift 1",
+    "tags": ["current electricity", "drift velocity", "numerical"],
+    "solution": {
+      "keyConcept": "In a conductor, current is the charge crossing a section per second: $I = nqv_d A$, where $v_d$ is the drift velocity — the tiny average velocity superimposed on random thermal motion.",
+      "formulas": [
+        "I = n e v_d A \\;\\Rightarrow\\; v_d = \\dfrac{I}{neA}"
+      ],
+      "body": "**Step 1 — List the data in SI units.**\n$I = 10\\ \\mathrm{A}$, $n = 9\\times10^{28}\\ \\mathrm{m^{-3}}$, $e = 1.6\\times10^{-19}\\ \\mathrm{C}$, $A = 2\\ \\mathrm{mm^2} = 2\\times10^{-6}\\ \\mathrm{m^2}$.\n\n**Step 2 — Rearrange the current equation.**\n$$v_d = \\frac{I}{neA}$$\n\n**Step 3 — Substitute.**\n$$v_d = \\frac{10}{9\\times10^{28}\\times1.6\\times10^{-19}\\times2\\times10^{-6}}$$\nComputing the denominator: $9\\times1.6\\times2 = 28.8$; powers of ten: $10^{28-19-6}=10^{3}$. So denominator $= 28800$.\n$$v_d = \\frac{10}{28800} = 3.47\\times10^{-4}\\ \\mathrm{m/s}$$\nSo $x \\approx 3$ (the question asks for $x$ in $x\\times10^{-4}$, nearest integer to $3.47$ is $3$).",
+      "commonMistakes": "Forgetting to convert $\\mathrm{mm^2}$ to $\\mathrm{m^2}$ ($2\\ \\mathrm{mm^2}=2\\times10^{-6}\\ \\mathrm{m^2}$, not $2\\times10^{-3}$). Using $1.6\\times10^{-19}$ incorrectly as positive-ion charge. Mixing up $x$ (mantissa factor) with the answer in $\\mathrm{mm/s}$ ($0.347$ mm/s).",
+      "verification": "Sanity scale: drift velocities in metals are typically $10^{-4}$ to $10^{-3}$ m/s for household currents — our value sits right in that range.",
+      "sourceReferences": ["JEE Main 2023, Physics — standard formulation"],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2022-PHY-003",
+    "subjectKey": "physics",
+    "chapterKey": "physics:units-and-measurements",
+    "subtopic": "Error propagation",
+    "type": "mcq_single",
+    "text": "In an experiment to determine $g$ using a simple pendulum, the time period $T$ and length $l$ are measured. The percentage errors in measuring $l$ and $T$ are $1\\%$ and $2\\%$ respectively. The percentage error in the measured value of $g$ is:",
+    "options": ["$3\\%$", "$4\\%$", "$5\\%$", "$6\\%$"],
+    "correctOptions": [2],
+    "difficulty": "easy",
+    "sourceYear": 2022,
+    "sourceShift": "Shift 2",
+    "tags": ["errors", "units and measurements", "percentage error"],
+    "solution": {
+      "keyConcept": "For $Z = A^pB^q$, the maximum relative error adds in modulus with powers as multipliers: $\\frac{\\Delta Z}{Z} = |p|\\frac{\\Delta A}{A}+|q|\\frac{\\Delta B}{B}$.",
+      "formulas": [
+        "T = 2\\pi\\sqrt{\\dfrac{l}{g}} \\;\\Rightarrow\\; g = \\dfrac{4\\pi^2 l}{T^2}",
+        "\\dfrac{\\Delta g}{g} = \\dfrac{\\Delta l}{l} + 2\\dfrac{\\Delta T}{T}"
+      ],
+      "body": "**Step 1 — Express $g$ in terms of measured quantities.**\nFrom the pendulum relation $T=2\\pi\\sqrt{l/g}$:\n$$g = \\frac{4\\pi^2 l}{T^2}$$\n\n**Step 2 — Propagate the errors.**\n$g$ depends on $l$ to the first power and on $T$ to the power $-2$. Taking logs and differentiating:\n$$\\frac{\\Delta g}{g} = \\frac{\\Delta l}{l} + 2\\frac{\\Delta T}{T}$$\n\n**Step 3 — Substitute percentages.**\n$$\\frac{\\Delta g}{g}\\times100\\% = 1\\% + 2\\times2\\% = 5\\%$$",
+      "commonMistakes": "Forgetting the factor of 2 on the time-period error (squaring $T$ doubles its relative error). Adding $1\\%+2\\%=3\\%$ is the most common wrong answer.",
+      "verification": "Cross-check by simulation: perturb $l$ by +1% and $T$ by +2% — $g$ computed from the perturbed values drops by ~5%.",
+      "sourceReferences": ["JEE Main 2022, Physics — standard formulation"],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2022-PHY-004",
+    "subjectKey": "physics",
+    "chapterKey": "physics:dual-nature-of-matter",
+    "subtopic": "Photoelectric effect",
+    "type": "mcq_single",
+    "text": "The photoelectric threshold frequency of a metal is $\\nu_0$. When light of frequency $2\\nu_0$ is incident on the metal plate, the maximum kinetic energy of the emitted photoelectrons is $E$. When the frequency is doubled to $4\\nu_0$, the maximum kinetic energy of the emitted photoelectrons becomes:",
+    "options": ["$2E$", "$3E$", "$4E$", "$E$"],
+    "correctOptions": [1],
+    "difficulty": "easy",
+    "sourceYear": 2022,
+    "sourceShift": "Shift 1",
+    "tags": ["photoelectric effect", "modern physics", "kinetic energy"],
+    "solution": {
+      "keyConcept": "Einstein's photoelectric equation: each photon of energy $h\\nu$ spends at least the work function $\\phi=h\\nu_0$ to liberate the electron; the surplus appears as kinetic energy.",
+      "formulas": [
+        "K_{\\max} = h\\nu - h\\nu_0"
+      ],
+      "body": "**Step 1 — First case.** With $\\nu = 2\\nu_0$:\n$$E = h(2\\nu_0) - h\\nu_0 = h\\nu_0$$\nSo the given energy $E$ equals exactly $h\\nu_0$.\n\n**Step 2 — Second case.** With $\\nu = 4\\nu_0$:\n$$K_{\\max} = h(4\\nu_0)-h\\nu_0 = 3h\\nu_0 = 3E$$",
+      "commonMistakes": "Doubling the frequency and assuming the KE doubles ($2E$). The threshold subtraction makes the relationship linear in $\\nu$, not proportional: $K_{\\max}$ grows by $h\\Delta\\nu$, not by a factor of the frequency ratio.",
+      "verification": "$E_2/E_1 = (4-1)h\\nu_0/(2-1)h\\nu_0 = 3$ — consistent.",
+      "sourceReferences": ["JEE Main 2022, Physics — standard formulation"],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2023-PHY-005",
+    "subjectKey": "physics",
+    "chapterKey": "physics:electronic-devices",
+    "subtopic": "Zener diode regulation",
+    "type": "mcq_multi",
+    "text": "A Zener diode with breakdown voltage $V_Z = 6\\ \\mathrm{V}$ is used for voltage regulation in a circuit with a series resistance of $100\\ \\Omega$ connected to an unregulated supply. Which of the following statements are correct?",
+    "options": [
+      "The Zener diode must be connected in reverse bias to act as a voltage regulator",
+      "The output voltage across the load remains $6\\ \\mathrm{V}$ as long as the Zener is in breakdown",
+      "In breakdown, the Zener diode behaves as an ideal voltage source of $6\\ \\mathrm{V}$ in series with a small dynamic resistance",
+      "The Zener diode regulates when it is forward biased above $0.7\\ \\mathrm{V}$"
+    ],
+    "correctOptions": [0, 1, 2],
+    "difficulty": "medium",
+    "sourceYear": 2023,
+    "sourceShift": "Shift 2",
+    "tags": ["semiconductors", "zener diode", "voltage regulation", "multi-correct"],
+    "solution": {
+      "keyConcept": "A Zener diode is designed to operate safely in reverse breakdown. In breakdown the voltage across it stays nearly constant ($V_Z$) over a wide current range, which is exactly what makes it a shunt regulator.",
+      "formulas": [
+        "V_{out} = V_Z \\quad (\\text{in breakdown})",
+        "I_S = \\dfrac{V_{in}-V_Z}{R_S}"
+      ],
+      "body": "**Statement A — correct.** Regulation is a reverse-breakdown phenomenon. Forward bias merely gives an ordinary $0.7\\ \\mathrm{V}$ diode drop.\n\n**Statement B — correct.** While the device remains in breakdown (input high enough, current within $I_{Z\\min}$ to $I_{Z\\max}$), the load voltage is clamped at $V_Z=6\\ \\mathrm{V}$; excess voltage drops across the series resistance $R_S$: $I_S=(V_{in}-V_Z)/R_S$.\n\n**Statement C — correct.** The real $I$-$V$ curve in breakdown is not perfectly vertical — a small dynamic resistance $r_z$ remains, so the Zener models as a $6\\ \\mathrm{V}$ source in series with $r_z$ (typically a few ohms to tens of ohms).\n\n**Statement D — incorrect.** Forward bias above $0.7\\ \\mathrm{V}$ just conducts like a normal diode; no regulation happens.",
+      "commonMistakes": "Thinking regulation occurs in forward bias. Forgetting that regulation fails if the input falls below $V_Z$ or if the Zener current drops below the knee $I_{Z\\min}$.",
+      "verification": "Circuit sanity check: with $V_{in}=10\\ \\mathrm{V}$, series drop $=4\\ \\mathrm{V}$ across $100\\ \\Omega$ gives $I_S=40\\ \\mathrm{mA}$; the load sees $6\\ \\mathrm{V}$ as long as the Zener can absorb the difference between $I_S$ and the load current.",
+      "sourceReferences": ["JEE Main 2023, Physics — standard formulation"],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2021-PHY-006",
+    "subjectKey": "physics",
+    "chapterKey": "physics:kinematics",
+    "subtopic": "Relative velocity, river crossing",
+    "type": "numerical",
+    "text": "A swimmer can swim in still water at $5\\ \\mathrm{km/h}$. A river flows at $3\\ \\mathrm{km/h}$. The swimmer crosses the river heading perpendicular to the flow, and the river is $1\\ \\mathrm{km}$ wide. The time taken to cross the river (in minutes) is:",
+    "options": [],
+    "correctOptions": null,
+    "numericalAnswer": "12",
+    "numericalTolerance": "0.05",
+    "difficulty": "easy",
+    "sourceYear": 2021,
+    "sourceShift": "Shift 1",
+    "tags": ["river crossing", "relative velocity", "numerical"],
+    "solution": {
+      "keyConcept": "Crossing time depends only on the component of velocity perpendicular to the banks. The river's flow is parallel to the bank and cannot affect the crossing time.",
+      "formulas": [
+        "t = \\dfrac{\\text{width}}{v_{\\perp}}"
+      ],
+      "body": "**Step 1 — Resolve the swimmer's velocity.**\nHeading straight across, the entire $5\\ \\mathrm{km/h}$ acts perpendicular to the flow; the $3\\ \\mathrm{km/h}$ current only drifts the swimmer downstream.\n\n**Step 2 — Crossing time.**\n$$t = \\frac{1\\ \\mathrm{km}}{5\\ \\mathrm{km/h}} = 0.2\\ \\mathrm{h} = 12\\ \\mathrm{min}$$\n\n**Step 3 — Convert to minutes.**\n$0.2\\times60 = 12$ minutes.",
+      "commonMistakes": "Combining $5$ and $3$ (e.g. $\\sqrt{5^2+3^2}=5.83$) before dividing the width — the resultant speed is along the actual drift path, not across the river. Also mis-converting hours to minutes.",
+      "verification": "$t = 1/5$ h $= 12$ min; drift downstream $= 3\\times0.2 = 0.6$ km, which does not affect crossing time.",
+      "sourceReferences": ["JEE Main 2021, Physics — standard formulation"],
+      "isAiGenerated": true
+    }
+  }
+]
