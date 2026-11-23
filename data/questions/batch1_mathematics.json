@@ -13,7 +13,11 @@
     "difficulty": "easy",
     "sourceYear": 2023,
     "sourceShift": "Shift 1",
-    "tags": ["complex numbers", "modulus argument", "numerical"],
+    "tags": [
+      "complex numbers",
+      "modulus argument",
+      "numerical"
+    ],
     "solution": {
       "keyConcept": "Rationalize the quotient by multiplying with the conjugate of the denominator; alternatively note $1-i=\\sqrt2\\,e^{-i\\pi/4}$ and $1+i=\\sqrt2\\,e^{i\\pi/4}$ so the quotient is $e^{i\\pi/2}=i$.",
       "formulas": [
@@ -21,8 +25,11 @@
       ],
       "body": "**Step 1 — Multiply by the conjugate.**\n$$\\frac{1+i}{1-i}\\times\\frac{1+i}{1+i} = \\frac{(1+i)^2}{(1-i)(1+i)}$$\n\n**Step 2 — Expand.**\nNumerator: $(1+i)^2 = 1+2i+i^2 = 2i$.\nDenominator: $(1-i)(1+i) = 1-i^2 = 2$.\n\n**Step 3 — Simplify.**\n$$\\frac{1+i}{1-i} = \\frac{2i}{2} = i = 0 + 1\\cdot i$$\nSo $x=0$, $y=1$.\n\n**Step 4 — Answer.**\n$$x+y = 0+1 = 1$$",
       "commonMistakes": "Sign slips expanding $(1+i)^2$ (it is $2i$, not $1+2i$). Reporting $x\\cdot y$ or the modulus instead of $x+y$.",
+      "alternativeMethod": null,
       "verification": "Polar route: $\\arg(1+i)=\\pi/4$, $\\arg(1-i)=-\\pi/4$, so the quotient has argument $\\pi/2$ and modulus $1$ — exactly $i$.",
-      "sourceReferences": ["JEE Main 2023, Mathematics — standard formulation"],
+      "sourceReferences": [
+        "JEE Main 2023, Mathematics — standard formulation"
+      ],
       "isAiGenerated": true
     }
   },
@@ -40,7 +47,11 @@
     "difficulty": "medium",
     "sourceYear": 2022,
     "sourceShift": "Shift 2",
-    "tags": ["definite integrals", "king property", "numerical"],
+    "tags": [
+      "definite integrals",
+      "king property",
+      "numerical"
+    ],
     "solution": {
       "keyConcept": "The 'king property': $\\int_a^b f(x)\\,dx = \\int_a^b f(a+b-x)\\,dx$. Under $x\\mapsto\\frac{\\pi}{2}-x$, $\\sin$ and $\\cos$ swap — adding the two forms makes the integral algebraic.",
       "formulas": [
@@ -49,8 +60,11 @@
       ],
       "body": "**Step 1 — Name the integral and apply the king property.**\nLet $I=\\displaystyle\\int_0^{\\pi/2}\\frac{\\sin x}{\\sin x+\\cos x}dx$. Substituting $x\\mapsto\\frac{\\pi}{2}-x$ (which maps the interval onto itself):\n$$I=\\int_0^{\\pi/2}\\frac{\\cos x}{\\cos x+\\sin x}\\,dx$$\n\n**Step 2 — Add the two expressions.**\n$$2I = \\int_0^{\\pi/2}\\frac{\\sin x+\\cos x}{\\sin x+\\cos x}\\,dx = \\int_0^{\\pi/2}1\\,dx = \\frac{\\pi}{2}$$\n\n**Step 3 — Conclude.**\n$$I = \\frac{\\pi}{4} \\approx 0.785$$",
       "commonMistakes": "Attempting a $t=\\tan(x/2)$ Weierstrass substitution — valid but long and error-prone. Forgetting that the king property preserves the limits (0 to $\\pi/2$ is self-symmetric).",
-      "verification": "Symmetry: the integrand satisfies $f(x)+f(\\pi/2-x)=1$, so the area under each half is exactly $\\pi/4$ by pairing — consistent with numeric quadrature $0.785398\\ldots$",
-      "sourceReferences": ["JEE Main 2022, Mathematics — standard formulation"],
+      "alternativeMethod": null,
+      "verification": "Symmetry: the integrand satisfies $f(x)+f(\\pi/2-x)=1$, so pairing gives exactly $\\pi/4$ — consistent with numeric quadrature $0.785398\\ldots$",
+      "sourceReferences": [
+        "JEE Main 2022, Mathematics — standard formulation"
+      ],
       "isAiGenerated": true
     }
   },
@@ -68,16 +82,24 @@
     "difficulty": "hard",
     "sourceYear": 2021,
     "sourceShift": "Shift 1",
-    "tags": ["permutations", "divisibility rule", "counting", "numerical"],
+    "tags": [
+      "permutations",
+      "divisibility rule",
+      "counting",
+      "numerical"
+    ],
     "solution": {
-      "keyConcept": "Divisibility by 11: alternating digit sum difference must be a multiple of 11. For $\\overline{abcd}$: $(a+c)-(b+d)\\in\\{0,\\pm11,\\pm22\\}$.",
+      "keyConcept": "Divisibility by 11: the alternating digit-sum difference must be a multiple of 11. For $\\overline{abcd}$: $(a+c)-(b+d)\\in\\{0,\\pm11,\\pm22\\}$.",
       "formulas": [
         "\\overline{abcd}\\ \\text{divisible by } 11 \\iff (a+c)-(b+d) \\equiv 0 \\pmod{11}"
       ],
-      "body": "**Step 1 — Set up the constraint.**\nLet the number be $\\overline{abcd}$ with distinct digits from $1$–$9$. The divisibility rule requires\n$$(a+c)-(b+d) = 0,\\ \\pm 11,\\ \\pm 22$$\nSince $a+c \\le 17$ and $b+d \\ge 3$, the difference lies in $[-14, 16]$; only $0$ and $\\pm11$ are attainable.\n\n**Step 2 — Count digit-pair splits.**\nWe need two disjoint pairs from $\{1,\\dots,9\\}$ with sums $s_a$ and $s_b$ such that $s_a-s_b\\in\\{0,\\pm11\\}$.\n\nCounting pairs $\{x,y\\}$ by their sum: there are $4$ pairs each for sums $5$–$13$ (pair-sum counts run $1,1,2,2,3,3,4,4,4,4,3,3,2,2,1,1$ for sums $3$–$17$).\n\n**Case difference $=0$ (equal sums):** both pairs share the same sum $s$. For each sum with $k(s)$ pairs we need two disjoint pairs: count $\\binom{k}{2}$ minus overlapping pairs. A careful count over sums $5$–$13$ gives $\\binom{4}{2}\\times2 = 12$ (sums 9,10) plus corrections for shared digits — the exhaustive count yields $\\mathbf{56}$ unordered pair-pair selections.\n\n**Case difference $=\\pm11$:** pairs $(s, s\\pm11)$: $(5,16),(6,17),(7,18)\\dots$ within range: $(5,16),(6,17)$ with $k=1,1$ each gives $1+1$; $(3,14)$: $1\\times2=2$; $(4,15)$: $2\\times2=4$; $(5,16)$: $4\\times1$; $(6,17)$: $4\\times1$; $(7,18)$ invalid. Total $\\mathbf{8}$ selections per sign consideration.\n\nValid pair-pair selections (difference $0$ or $\\pm11$) total $\\mathbf{72}$.\n\n**Step 3 — Arrange into numbers.**\nGiven a valid selection, the pair assigned to $(a,c)$ can go into positions $a,c$ in $2$ orders, similarly $2$ for $(b,d)$; and the pair-pairs can swap roles ($2$) when the difference is $0$ (already counted as distinct selections for $\\pm11$).\nEach unordered selection produces $2\\times2\\times2=8$ valid numbers after accounting for both assignments.\n$$72\\times\\tfrac{8}{2}\\times2 \\text{ (role assignments)} = 336$$\n\n**Step 4 — Result.**\n$$N = 336$$\n\n*(A full brute-force enumeration over all $\\,9P4=3024$ candidates confirms $336$.)*",
-      "commonMistakes": "Forgetting the $\\pm11$ cases and answering $224$ or similar. Double-counting role swaps for the difference-zero selections. Overlooking that digit $0$ is excluded here (digits $1$–$9$), which changes the pair-sum distribution.",
+      "body": "**Step 1 — Set up the constraint.**\nLet the number be $\\overline{abcd}$ with distinct digits from $1$–$9$. Divisibility by 11 requires the alternating-sum difference to be a multiple of 11:\n$$(a+c)-(b+d) \\in \\{0, \\pm 11, \\pm 22\\}$$\nSince $a+c\\le17$ and $b+d\\ge3$, the difference lies in $[-14,16]$, so only $0$ and $\\pm11$ are possible.\n\n**Step 2 — Count digit-pair selections.**\nChoose the unordered pair $P$ for positions $(a,c)$ and a disjoint pair $Q$ for $(b,d)$.\n\n**Case A — equal pair sums ($\\mathrm{sum}(P)=\\mathrm{sum}(Q)$).**\nPair-sum distribution over digits $1$–$9$: sums $3,4,16,17$ have 1 pair each; $5,6,14,15$ have 2; $7,8,12,13$ have 3; $9,10,11$ have 4.\nFor each sum $s$, count the ways to pick two disjoint pairs both summing to $s$; summing over $s=5$ to $15$ gives $1+1+3+3+6+6+6+3+3+1+1=\\mathbf{34}$ selections.\n\n**Case B — sums differing by 11.**\nPossible sum pairs $(s, s+11)$: $(3,14),(4,15),(5,16),(6,17)$.\n- $(3,14)$: $\\{1,2\\}$ with $\\{5,9\\}$ or $\\{6,8\\}$ — 2 selections\n- $(4,15)$: $\\{1,3\\}$ with $\\{6,9\\}$ or $\\{7,8\\}$ — 2 selections\n- $(5,16)$: $\\{7,9\\}$ with $\\{1,4\\}$ or $\\{2,3\\}$ — 2 selections\n- $(6,17)$: $\\{8,9\\}$ with $\\{1,5\\}$ or $\\{2,4\\}$ — 2 selections\nTotal: $\\mathbf{8}$ selections.\n\n**Step 3 — Arrange each selection into numbers.**\nEach selection yields $2\\times2\\times2=8$ numbers: 2 orderings within $(a,c)$, 2 within $(b,d)$, and 2 role assignments (which pair sits at $(a,c)$) — for Case B both role assignments are valid because $+11$ and $-11$ are both multiples of 11.\n\n**Step 4 — Total.**\n$$N = (34+8)\\times8 = 42\\times8 = \\mathbf{336}$$\n\n*(Every count above is confirmed by exhaustive enumeration of all $9P4=3024$ permutations: 272 numbers from Case A and 64 from Case B.)*",
+      "commonMistakes": "Forgetting the $\\pm11$ cases and answering only the equal-sum count scaled incorrectly. Double-counting role swaps for the difference-zero selections. Overlooking that digit $0$ is excluded here (digits $1$–$9$), which changes the pair-sum distribution.",
+      "alternativeMethod": null,
       "verification": "Brute force: iterate all permutations of 4 distinct digits from 1–9 and count those with $(a+c)-(b+d)\\equiv0\\pmod{11}$ — the count is exactly $336$.",
-      "sourceReferences": ["JEE Main 2021, Mathematics — standard formulation"],
+      "sourceReferences": [
+        "JEE Main 2021, Mathematics — standard formulation"
+      ],
       "isAiGenerated": true
     }
   },
@@ -88,12 +110,22 @@
     "subtopic": "Roots of unity",
     "type": "mcq_single",
     "text": "If $\\alpha$ and $\\beta$ are the roots of $x^2+x+1=0$, then $\\alpha^6+\\beta^6$ equals:",
-    "options": ["$-2$", "$0$", "$1$", "$2$"],
-    "correctOptions": [3],
+    "options": [
+      "$-2$",
+      "$0$",
+      "$1$",
+      "$2$"
+    ],
+    "correctOptions": [
+      3
+    ],
     "difficulty": "medium",
     "sourceYear": 2023,
     "sourceShift": "Shift 1",
-    "tags": ["cube roots of unity", "symmetric functions"],
+    "tags": [
+      "cube roots of unity",
+      "symmetric functions"
+    ],
     "solution": {
       "keyConcept": "The roots of $x^2+x+1=0$ are the primitive cube roots of unity $\\omega$ and $\\omega^2$, satisfying $\\omega^3=1$ and $1+\\omega+\\omega^2=0$.",
       "formulas": [
@@ -101,9 +133,12 @@
         "\\alpha^6 = (\\alpha^3)^2"
       ],
       "body": "**Step 1 — Identify the roots.**\nDiscriminant: $1-4=-3$, so $\\alpha=\\dfrac{-1+i\\sqrt3}{2}=\\omega$ and $\\beta=\\dfrac{-1-i\\sqrt3}{2}=\\omega^2$.\n\n**Step 2 — Use periodicity.**\nSince $\\omega^3=1$:\n$$\\alpha^6=(\\omega^3)^2=1, \\qquad \\beta^6=(\\omega^2)^6=\\omega^{12}=(\\omega^3)^4=1$$\n\n**Step 3 — Sum.**\n$$\\alpha^6+\\beta^6 = 1+1 = 2$$",
-      "commonMistakes": "Using $\\alpha\\beta=1$ and $\\alpha+\\beta=-1$ with a recurrence but mis-applying it ($\\alpha^6+\\beta^6$ via $S_n=-S_{n-1}-S_{n-2}$ gives $S_6=2$, not $-2$). Sign errors assuming $\\omega^3=-1$.",
+      "commonMistakes": "Using the recurrence $S_n=-S_{n-1}-S_{n-2}$ but mis-applying it ($S_6=2$, not $-2$). Sign errors assuming $\\omega^3=-1$.",
+      "alternativeMethod": null,
       "verification": "Recurrence check: $S_1=-1$, $S_2=-S_1-S_0=-(-1)-2=-1$, $S_3=-S_2-S_1=2$, $S_4=-S_3-S_2=-1$, $S_5=-S_4-S_3=-1$, $S_6=-S_5-S_4=2$ — consistent.",
-      "sourceReferences": ["JEE Main 2023, Mathematics — standard formulation"],
+      "sourceReferences": [
+        "JEE Main 2023, Mathematics — standard formulation"
+      ],
       "isAiGenerated": true
     }
   },
@@ -114,21 +149,35 @@
     "subtopic": "System of equations consistency",
     "type": "mcq_single",
     "text": "The system $x + 2y = 3$, $2x + ky = 6$ has infinitely many solutions when:",
-    "options": ["$k = 4$", "$k = 2$", "$k = 0$", "no value of $k$"],
-    "correctOptions": [0],
+    "options": [
+      "$k = 4$",
+      "$k = 2$",
+      "$k = 0$",
+      "no value of $k$"
+    ],
+    "correctOptions": [
+      0
+    ],
     "difficulty": "medium",
     "sourceYear": 2022,
     "sourceShift": "Shift 2",
-    "tags": ["linear systems", "consistency", "determinants"],
+    "tags": [
+      "linear systems",
+      "consistency",
+      "determinants"
+    ],
     "solution": {
       "keyConcept": "A $2\\times2$ system has infinitely many solutions iff the equations are proportional: same ratios $a_1/a_2=b_1/b_2=c_1/c_2$ (coincident lines).",
       "formulas": [
         "\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}=\\dfrac{c_1}{c_2}"
       ],
       "body": "**Step 1 — Check proportionality.**\nFor infinitely many solutions the two equations must represent the same line:\n$$\\frac{1}{2} = \\frac{2}{k} = \\frac{3}{6}$$\n\n**Step 2 — Solve the equality.**\nFrom $\\frac{1}{2}=\\frac{3}{6}$: holds ($\\frac{3}{6}=\\frac{1}{2}$). From $\\frac{1}{2}=\\frac{2}{k}$: $k=4$.\n\n**Step 3 — Verify.**\nWith $k=4$: $2x+4y=6 \\iff x+2y=3$ — the two equations are identical, so every point on the line $x+2y=3$ is a solution: infinitely many.",
-      "commonMistakes": "Setting only the determinant to zero ($k=4$ from $1\\cdot k-2\\cdot2=0$ gives the same value here, but forgetting to check the numerator consistency — if the constants were not proportional, $k=4$ would give NO solution instead of infinitely many).",
+      "commonMistakes": "Setting only the determinant to zero and forgetting to check the numerator consistency — if the constants were not proportional, $k=4$ would give NO solution instead of infinitely many.",
+      "alternativeMethod": null,
       "verification": "Determinant test: $\\Delta=1\\cdot k-2\\cdot2=k-4=0\\Rightarrow k=4$; and $\\Delta_x=3k-12=0$, $\\Delta_y=6-6=0$ at $k=4$: all three determinants vanish — infinite solutions confirmed.",
-      "sourceReferences": ["JEE Main 2022, Mathematics — standard formulation"],
+      "sourceReferences": [
+        "JEE Main 2022, Mathematics — standard formulation"
+      ],
       "isAiGenerated": true
     }
   }
