@@ -1,16 +1,12 @@
 // JEE NEXUS — question serialization + selection services
 import { createHash } from 'crypto'
 import { db } from '@/lib/db'
-import type { Prisma } from '@prisma/client'
+import type { Prisma, Difficulty, QuestionType } from '@prisma/client'
 import type { PublicQuestion, QuestionSolution } from '@/lib/types'
 
-function safeJson<T>(raw: string | null | undefined, fallback: T): T {
-  if (!raw) return fallback
-  try {
-    return JSON.parse(raw) as T
-  } catch {
-    return fallback
-  }
+/** Json columns (jsonb) already arrive parsed — coerce safely to string[] */
+function asStringArray(v: Prisma.JsonValue | null | undefined): string[] {
+  return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
 }
 
 type QuestionWithRelations = Prisma.QuestionGetPayload<{
@@ -44,7 +40,7 @@ export function toPublicQuestion(q: QuestionWithRelations): PublicQuestion {
     sourceShift: q.sourceShift ?? undefined,
     sourceQuestionNumber: q.sourceQuestionNumber ?? undefined,
     verificationStatus: q.verificationStatus as PublicQuestion['verificationStatus'],
-    tags: safeJson<string[]>(q.tags, []),
+    tags: asStringArray(q.tags),
     images: [...q.images]
       .filter((i) => i.kind === 'question')
       .sort((a, b) => a.order - b.order)
@@ -66,13 +62,13 @@ type SolutionWithImages = Prisma.SolutionGetPayload<{
 export function toPublicSolution(s: SolutionWithImages): QuestionSolution {
   return {
     keyConcept: s.keyConcept ?? undefined,
-    formulas: safeJson<string[]>(s.formulas, []),
+    formulas: asStringArray(s.formulas),
     body: s.body,
     commonMistakes: s.commonMistakes ?? undefined,
     alternativeMethod: s.alternativeMethod ?? undefined,
     verification: s.verification ?? undefined,
     isAiGenerated: s.isAiGenerated,
-    sourceReferences: safeJson<string[]>(s.sourceReferences, []),
+    sourceReferences: asStringArray(s.sourceReferences),
     solutionImages: s.question.images
       .filter((i) => i.kind === 'solution')
       .map((i) => ({ url: i.url, altText: i.altText, caption: i.caption ?? undefined })),
@@ -118,8 +114,8 @@ export async function selectRandomQuestions(f: RandomFilters): Promise<PublicQue
   if (f.subject && f.subject !== 'all') where.subject = { key: f.subject }
   if (f.chapterKeys?.length) where.chapter = { key: { in: f.chapterKeys } }
   if (f.years?.length) where.sourceYear = { in: f.years }
-  if (f.difficulties?.length) where.difficulty = { in: f.difficulties }
-  if (f.types?.length) where.type = { in: f.types }
+  if (f.difficulties?.length) where.difficulty = { in: f.difficulties as Difficulty[] }
+  if (f.types?.length) where.type = { in: f.types as QuestionType[] }
 
   if (f.excludeQuestionIds?.length) {
     where.id = { notIn: f.excludeQuestionIds }
@@ -136,7 +132,10 @@ export async function selectRandomQuestions(f: RandomFilters): Promise<PublicQue
     })
     const attemptedIds = recentAttempts.map((a) => a.questionId)
     const merged = [...new Set([...(f.excludeQuestionIds ?? []), ...attemptedIds])]
-    if (merged.length) where.id = where.id ? { ...where.id, notIn: merged } : { notIn: merged }
+    if (merged.length) {
+      const existing = (where.id ?? {}) as { notIn?: string[] }
+      where.id = { notIn: [...(existing.notIn ?? []), ...merged] }
+    }
   }
 
   // Candidate pool (bounded), then Fisher–Yates sample in JS.

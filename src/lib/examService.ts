@@ -4,6 +4,7 @@ import { db } from '@/lib/db'
 import { JEE_MAIN_2025_PATTERN } from '@/lib/exam'
 import type { ExamPatternConfig, SubjectKey } from '@/lib/types'
 import { createHash } from 'crypto'
+import type { Prisma } from '@prisma/client'
 
 function mulberry32(seed: number) {
   return function () {
@@ -23,7 +24,7 @@ export async function ensureDefaultPatterns(): Promise<void> {
         name: 'JEE Main 2025 pattern',
         description: '75 questions · 180 minutes · +4/-1 MCQ & numerical · partial marking for multiple-correct',
         durationMinutes: 180,
-        config: JSON.stringify(JEE_MAIN_2025_PATTERN),
+        config: JEE_MAIN_2025_PATTERN as unknown as Prisma.InputJsonValue,
       },
     })
   }
@@ -49,7 +50,7 @@ export async function generateExam(input: GenerateExamInput): Promise<{ examId: 
     (await db.examPattern.findUnique({ where: { key: 'jee-main-2025' } }))
   if (!pattern) throw new Error('Exam pattern missing')
 
-  const config = JSON.parse(pattern.config) as ExamPatternConfig
+  const config = pattern.config as unknown as ExamPatternConfig
   const seed = input.seed ?? Date.now()
   const rand = mulberry32(seed)
 
@@ -69,7 +70,7 @@ export async function generateExam(input: GenerateExamInput): Promise<{ examId: 
       patternId: pattern.id,
       subjectKey: input.subjectKey ?? null,
       year: input.year ?? null,
-      config: JSON.stringify({ ...input, seed, perSubject, durationMinutes }),
+      config: { ...input, seed, perSubject, durationMinutes } as unknown as Prisma.InputJsonValue,
       isPublished: true,
     },
   })

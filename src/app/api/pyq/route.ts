@@ -3,6 +3,7 @@ import { db } from '@/lib/db'
 import { getSessionUser, jsonError } from '@/lib/auth'
 import { toPublicQuestion } from '@/lib/questions'
 import { Prisma } from '@prisma/client'
+import type { Difficulty, QuestionType } from '@prisma/client'
 
 /**
  * PYQ library:
@@ -103,9 +104,9 @@ export async function GET(req: NextRequest) {
     const shift = sp.get('shift')
     if (shift) where.sourceShift = shift
     const difficulty = sp.get('difficulty')
-    if (difficulty) where.difficulty = difficulty
+    if (difficulty) where.difficulty = difficulty as Difficulty
     const type = sp.get('type')
-    if (type) where.type = type
+    if (type) where.type = type as QuestionType
 
     const page = Math.max(1, Number(sp.get('page') ?? 1))
     const pageSize = 10

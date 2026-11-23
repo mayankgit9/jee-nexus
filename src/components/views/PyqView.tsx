@@ -87,7 +87,7 @@ export function PyqView({ yearParam, subjectParam, chapterParam, loggedIn, onReq
         {yearsData.data && (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {ALL_YEARS.map((y) => {
-              const d = yearsData.data.years.find((x) => x.year === y)
+              const d = yearsData.data?.years.find((x) => x.year === y)
               const total = d?.total ?? 0
               return (
                 <motion.div key={y} whileHover={total > 0 ? { y: -3 } : undefined}>

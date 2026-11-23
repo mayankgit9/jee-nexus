@@ -83,7 +83,7 @@ export function MockView({ loggedIn, onRequireAuth }: { loggedIn: boolean; onReq
 }
 
 function ExamListView({ list, history, loggedIn, onStart, onOpenResult, onRequireAuth }: {
-  list: { data: { exams: ExamListItem[] } | null; loading: boolean; error: string | null }
+  list: { data: { exams: ExamListItem[] } | null; loading: boolean; error: string | null; reload: () => void }
   history: { data: { attempts: AttemptListItem[] } | null; loading: boolean }
   loggedIn: boolean
   onStart: (examId: string) => void

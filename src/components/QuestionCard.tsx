@@ -128,11 +128,11 @@ export function SolutionView({ solution, result }: { solution: QuestionSolution;
         </div>
       )}
 
-      {solution.formulas.length > 0 && (
+      {(solution.formulas ?? []).length > 0 && (
         <div className="mb-4 rounded-lg border border-violet-400/20 bg-violet-400/[0.06] p-3.5">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-violet-300/90">Formulas used</p>
           <ul className="space-y-1.5">
-            {solution.formulas.map((f, i) => (
+            {(solution.formulas ?? []).map((f, i) => (
               <li key={i} className="border-l-2 border-violet-400/40 pl-3 text-sm">
                 <MathText text={`$${f}$`} />
               </li>
@@ -190,9 +190,9 @@ export function SolutionView({ solution, result }: { solution: QuestionSolution;
         </div>
       )}
 
-      {solution.sourceReferences.length > 0 && (
+      {(solution.sourceReferences ?? []).length > 0 && (
         <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground/70">
-          References: {solution.sourceReferences.join(' · ')}
+          References: {(solution.sourceReferences ?? []).join(' · ')}
         </p>
       )}
     </motion.div>

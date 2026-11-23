@@ -1,5 +1,7 @@
 // Test Supabase pooler connectivity as the jee_app role.
+/// <reference types="bun-types" />
 // Prints ONLY outcomes — never credentials.
+export {}
 const url = `postgresql://${encodeURIComponent(process.env.APP_USER!)}:${encodeURIComponent(process.env.APP_PASS!)}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?sslmode=require`;
 try {
   const sql = new Bun.SQL(url);

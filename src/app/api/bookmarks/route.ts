@@ -21,7 +21,7 @@ export async function GET() {
       bookmarks: bookmarks.map((b) => ({
         id: b.id,
         createdAt: b.createdAt,
-        question: toPublicQuestion(b.question),
+        question: toPublicQuestion({ ...b.question, bookmarks: [] }),
       })),
     })
   } catch (err) {

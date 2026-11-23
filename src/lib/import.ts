@@ -1,6 +1,8 @@
 // JEE NEXUS — question import pipeline: validation + duplicate detection
 import { db } from '@/lib/db'
 import { computeContentHash } from '@/lib/questions'
+import { Prisma } from '@prisma/client'
+import type { QuestionType, Difficulty } from '@prisma/client'
 
 export interface ImportQuestionInput {
   publicId?: string
@@ -170,12 +172,12 @@ export async function importQuestions(
           subjectId: subjects.get(q.subjectKey!)!,
           chapterId: chapters.get(q.chapterKey!)!,
           subtopic: q.subtopic ?? null,
-          type: q.type!,
+          type: q.type! as QuestionType,
           text: q.text!,
-          correctOptions: q.type === 'numerical' ? null : JSON.stringify(q.correctOptions),
-          numericalAnswer: q.type === 'numerical' ? String(q.numericalAnswer) : null,
-          numericalTolerance: q.type === 'numerical' && q.numericalTolerance != null && String(q.numericalTolerance) !== '' ? String(q.numericalTolerance) : null,
-          difficulty: q.difficulty ?? 'medium',
+          correctOptions: q.type === 'numerical' ? Prisma.DbNull : (q.correctOptions ?? []),
+          numericalAnswer: q.type === 'numerical' ? Number(q.numericalAnswer) : null,
+          numericalTolerance: q.type === 'numerical' && q.numericalTolerance != null && String(q.numericalTolerance) !== '' ? Number(q.numericalTolerance) : null,
+          difficulty: (q.difficulty ?? 'medium') as Difficulty,
           sourceExam: q.sourceExam ?? 'JEE Main',
           sourceYear: q.sourceYear ? Number(q.sourceYear) : null,
           sourceDate: q.sourceDate ?? null,
@@ -183,7 +185,7 @@ export async function importQuestions(
           sourceQuestionNumber: q.sourceQuestionNumber ? Number(q.sourceQuestionNumber) : null,
           sourceReference: q.sourceReference ?? null,
           verificationStatus: 'imported', // NEVER auto-verified
-          tags: JSON.stringify(q.tags ?? []),
+          tags: q.tags ?? [],
           contentHash: hash,
           options: {
             create: options.map((o, idx) => ({
@@ -197,13 +199,13 @@ export async function importQuestions(
                 solution: {
                   create: {
                     keyConcept: q.solution.keyConcept ?? null,
-                    formulas: JSON.stringify(q.solution.formulas ?? []),
+                    formulas: q.solution.formulas ?? [],
                     body: q.solution.body!,
                     commonMistakes: q.solution.commonMistakes ?? null,
                     alternativeMethod: q.solution.alternativeMethod ?? null,
                     verification: q.solution.verification ?? null,
                     isAiGenerated: q.solution.isAiGenerated ?? true,
-                    sourceReferences: JSON.stringify(q.solution.sourceReferences ?? []),
+                    sourceReferences: q.solution.sourceReferences ?? [],
                   },
                 },
               }
@@ -238,7 +240,7 @@ export async function importQuestions(
       inserted,
       skippedDuplicate,
       rejected,
-      errors: errors.length ? JSON.stringify(errors.slice(0, 200)) : null,
+      errors: errors.length ? (errors.slice(0, 200) as unknown as Prisma.InputJsonValue) : Prisma.DbNull,
       status: 'completed',
     },
   })

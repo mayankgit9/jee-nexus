@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
     if (!attempt || attempt.userId !== user.id) throw new HttpError(404, 'Attempt not found')
     if (attempt.status === 'submitted') throw new HttpError(409, 'Already submitted')
 
-    const pattern = JSON.parse(attempt.exam.pattern.config) as ExamPatternConfig
+    const pattern = attempt.exam.pattern.config as unknown as ExamPatternConfig
     const byExamQuestionId = new Map(attempt.answers.map((a) => [a.examQuestionId, a]))
 
     const now = Date.now()
@@ -46,9 +46,9 @@ export async function POST(req: NextRequest) {
     for (const eq of attempt.exam.examQuestions) {
       const q = eq.question
       const ans = byExamQuestionId.get(eq.id)
-      const selected = ans?.selectedOptions ? (JSON.parse(ans.selectedOptions) as number[]) : []
+      const selected = Array.isArray(ans?.selectedOptions) ? (ans.selectedOptions as number[]) : []
       const numericalValue = ans?.numericalValue ?? null
-      const correctOptions = q.correctOptions ? (JSON.parse(q.correctOptions) as number[]) : null
+      const correctOptions = Array.isArray(q.correctOptions) ? (q.correctOptions as number[]) : null
 
       const marking =
         q.type === 'mcq_single' ? pattern.marking.mcqSingle
@@ -62,8 +62,8 @@ export async function POST(req: NextRequest) {
         selected.length ? selected : null,
         numericalValue,
         correctOptions,
-        q.numericalAnswer ? Number(q.numericalAnswer) : null,
-        q.numericalTolerance ? Number(q.numericalTolerance) : null,
+        q.numericalAnswer ?? null,
+        q.numericalTolerance ?? 0.01,
         pattern
       )
       total += graded.marks

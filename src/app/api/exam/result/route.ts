@@ -92,7 +92,7 @@ export async function GET(req: NextRequest) {
           numericalTolerance: q.numericalTolerance,
         },
         yourAnswer: {
-          selectedOptions: ans?.selectedOptions ? JSON.parse(ans.selectedOptions) : [],
+          selectedOptions: Array.isArray(ans?.selectedOptions) ? (ans.selectedOptions as number[]) : [],
           numericalValue: ans?.numericalValue ?? null,
           isCorrect: ans?.isCorrect ?? null,
           marksAwarded: ans?.marksAwarded ?? 0,

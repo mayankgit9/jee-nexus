@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Custom tests may override duration via their config; pattern duration is the fallback
-    const examConfig = exam.config ? (JSON.parse(exam.config) as { durationMinutes?: number }) : {}
+    const examConfig = (exam.config ?? {}) as { durationMinutes?: number }
     const durationMinutes = Math.min(240, Math.max(5, examConfig.durationMinutes ?? exam.pattern.durationMinutes))
     const endsAt = new Date(Date.now() + durationMinutes * 60 * 1000)
     const attempt = await db.examAttempt.create({
@@ -58,14 +58,14 @@ function formatAttempt(
   attempt: {
     id: string
     endsAt: Date
-    answers: { examQuestionId: string; selectedOptions: string | null; numericalValue: string | null; visited: boolean; markedForReview: boolean }[]
+    answers: { examQuestionId: string; selectedOptions: unknown; numericalValue: string | null; visited: boolean; markedForReview: boolean }[]
   }
 ) {
-  const pattern = JSON.parse(exam.pattern.config)
+  const pattern = exam.pattern.config as Record<string, unknown>
   const savedAnswers: Record<string, { selectedOptions?: number[]; numericalValue?: string; visited: boolean; markedForReview?: boolean }> = {}
   for (const a of attempt.answers) {
     savedAnswers[a.examQuestionId] = {
-      selectedOptions: a.selectedOptions ? JSON.parse(a.selectedOptions) : undefined,
+      selectedOptions: Array.isArray(a.selectedOptions) ? (a.selectedOptions as number[]) : undefined,
       numericalValue: a.numericalValue ?? undefined,
       visited: a.visited,
       markedForReview: a.markedForReview,

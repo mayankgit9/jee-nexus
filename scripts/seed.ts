@@ -1,6 +1,7 @@
 // JEE NEXUS — database seeder (development seed, clearly labelled)
 // Usage: bunx tsx scripts/seed.ts
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient, Prisma } from '@prisma/client'
+import type { QuestionType, Difficulty } from '@prisma/client'
 import { createHash } from 'crypto'
 import { readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
@@ -92,17 +93,17 @@ async function seedQuestions() {
           subjectId: subject.id,
           chapterId: chapter.id,
           subtopic: q.subtopic,
-          type: q.type,
+          type: q.type as QuestionType,
           text: q.text,
-          correctOptions: q.correctOptions ? JSON.stringify(q.correctOptions) : null,
-          numericalAnswer: q.numericalAnswer,
-          numericalTolerance: q.numericalTolerance,
-          difficulty: q.difficulty,
+          correctOptions: q.correctOptions ?? Prisma.DbNull,
+          numericalAnswer: q.numericalAnswer != null && q.numericalAnswer !== '' ? Number(q.numericalAnswer) : null,
+          numericalTolerance: q.numericalTolerance != null && q.numericalTolerance !== '' ? Number(q.numericalTolerance) : null,
+          difficulty: q.difficulty as Difficulty,
           sourceExam: 'JEE Main',
           sourceYear: q.sourceYear,
           sourceShift: q.sourceShift,
           verificationStatus: 'needs_review', // seed data is never auto-verified
-          tags: JSON.stringify(q.tags),
+          tags: q.tags ?? [],
           contentHash: hash,
           options: {
             create: (q.options || []).map((text, idx) => ({
@@ -114,13 +115,13 @@ async function seedQuestions() {
           solution: {
             create: {
               keyConcept: q.solution.keyConcept,
-              formulas: JSON.stringify(q.solution.formulas),
+              formulas: q.solution.formulas ?? [],
               body: q.solution.body,
               commonMistakes: q.solution.commonMistakes,
               alternativeMethod: q.solution.alternativeMethod,
               verification: q.solution.verification,
               isAiGenerated: q.solution.isAiGenerated,
-              sourceReferences: JSON.stringify(q.solution.sourceReferences),
+              sourceReferences: q.solution.sourceReferences ?? [],
             },
           },
         },

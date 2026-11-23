@@ -84,7 +84,7 @@ async function main() {
   ok('enum transition update', upd.verificationStatus === 'verified')
 
   // 5. tags null-write then restore (Json null handling)
-  await db.question.update({ where: { id: '_parity_q1' }, data: { correctOptions: null } })
+  await db.question.update({ where: { id: '_parity_q1' }, data: { correctOptions: Prisma.DbNull } })
   const nulled = await db.question.findUnique({ where: { id: '_parity_q1' } })
   ok('jsonb set null', nulled?.correctOptions === null)
   await db.question.update({ where: { id: '_parity_q1' }, data: { correctOptions: [1] } })
@@ -184,7 +184,7 @@ async function main() {
     },
   })
   const pa = await db.attempt.create({
-    data: { userId: user.id, questionId: q2.id, selectedOptions: null, numericalValue: '12.01', isCorrect: true },
+    data: { userId: user.id, questionId: q2.id, selectedOptions: Prisma.DbNull, numericalValue: '12.01', isCorrect: true },
   })
   ok('practice attempt null jsonb + float answer', pa.isCorrect === true && pa.selectedOptions === null)
 

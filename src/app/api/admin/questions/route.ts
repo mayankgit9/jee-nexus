@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server'
 import { db } from '@/lib/db'
 import { requireAdmin, jsonError, HttpError } from '@/lib/auth'
-import type { Prisma } from '@prisma/client'
+import type { Prisma, VerificationStatus } from '@prisma/client'
 
 /**
  * GET /api/admin/questions — list with filters + pagination (admin only).
@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
 
     const where: Prisma.QuestionWhereInput = {}
     if (status && ['imported', 'needs_review', 'verified', 'rejected'].includes(status)) {
-      where.verificationStatus = status
+      where.verificationStatus = status as VerificationStatus
     }
     if (subject && ['physics', 'chemistry', 'mathematics'].includes(subject)) {
       where.subject = { key: subject }
@@ -61,7 +61,7 @@ export async function GET(req: NextRequest) {
         text: q.text.slice(0, 300),
         fullText: q.text,
         options: q.options.map((o) => ({ idx: o.idx, text: o.text, isCorrect: o.isCorrect })),
-        correctOptions: q.correctOptions ? JSON.parse(q.correctOptions) : null,
+        correctOptions: Array.isArray(q.correctOptions) ? (q.correctOptions as number[]) : null,
         numericalAnswer: q.numericalAnswer,
         numericalTolerance: q.numericalTolerance,
         difficulty: q.difficulty,
@@ -98,7 +98,7 @@ export async function PATCH(req: NextRequest) {
     if (body.verificationStatus !== undefined) {
       const s = String(body.verificationStatus)
       if (!EDITABLE_STATUSES.includes(s)) throw new HttpError(400, 'Invalid verificationStatus')
-      data.verificationStatus = s
+      data.verificationStatus = s as VerificationStatus
       // Verifying a solution stamps the verification time and clears the AI flag requirement
       if (s === 'verified') {
         await db.solution.updateMany({ where: { questionId: id }, data: { verifiedAt: new Date() } })
@@ -134,7 +134,7 @@ export async function PATCH(req: NextRequest) {
       const correct = [...new Set(body.correctOptions as number[])]
       if (question.type === 'mcq_single' && correct.length !== 1) throw new HttpError(400, 'mcq_single needs exactly one correct option')
       if (question.type === 'mcq_multi' && correct.length < 2) throw new HttpError(400, 'mcq_multi needs at least two correct options')
-      data.correctOptions = JSON.stringify(correct)
+      data.correctOptions = correct
       // sync option flags
       await db.questionOption.updateMany({ where: { questionId: id }, data: { isCorrect: false } })
       for (const c of correct) {
@@ -144,7 +144,7 @@ export async function PATCH(req: NextRequest) {
     if (body.numericalAnswer !== undefined) {
       const v = String(body.numericalAnswer)
       if (v !== '' && isNaN(Number(v))) throw new HttpError(400, 'numericalAnswer must be numeric')
-      data.numericalAnswer = v === '' ? null : v
+      data.numericalAnswer = v === '' ? null : Number(v)
     }
 
     // Solution upsert
@@ -156,12 +156,12 @@ export async function PATCH(req: NextRequest) {
       if (!s.body || s.body.trim().length < 20) throw new HttpError(400, 'Solution body too short')
       const payload = {
         keyConcept: s.keyConcept ?? null,
-        formulas: JSON.stringify(s.formulas ?? []),
+        formulas: s.formulas ?? [],
         body: s.body,
         commonMistakes: s.commonMistakes ?? null,
         alternativeMethod: s.alternativeMethod ?? null,
         verification: s.verification ?? null,
-        sourceReferences: JSON.stringify(s.sourceReferences ?? []),
+        sourceReferences: s.sourceReferences ?? [],
       }
       const existing = await db.solution.findUnique({ where: { questionId: id } })
       if (existing) {

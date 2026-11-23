@@ -88,7 +88,12 @@ export function useApi<T>(path: string | null, deps: unknown[] = []) {
       alive = false
     }
   }, [path, nonce, ...deps])
-  return { data, error, loading, reload: () => setNonce((n) => n + 1) }
+  return { data, error, loading, reload: () => setNonce((n) => n + 1) } as {
+    data: T | null
+    error: string | null
+    loading: boolean
+    reload: () => void
+  }
 }
 
 // ---------- misc ----------

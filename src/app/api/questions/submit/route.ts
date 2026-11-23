@@ -2,6 +2,7 @@ import { NextRequest } from 'next/server'
 import { db } from '@/lib/db'
 import { getSessionUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 import { toPublicSolution } from '@/lib/questions'
+import { Prisma } from '@prisma/client'
 
 function isCorrectMcqSingle(selected: number[], correct: number[]): boolean {
   return selected.length === 1 && correct.length === 1 && selected[0] === correct[0]
@@ -53,7 +54,7 @@ export async function POST(req: NextRequest) {
       if (selected.length > 0) {
         submittedSomething = true
         selectedOptions = selected
-        const correct = question.correctOptions ? (JSON.parse(question.correctOptions) as number[]) : []
+        const correct = Array.isArray(question.correctOptions) ? (question.correctOptions as number[]) : []
         isCorrect =
           question.type === 'mcq_single' ? isCorrectMcqSingle(selected, correct) : isCorrectMcqMulti(selected, correct)
       }
@@ -66,7 +67,7 @@ export async function POST(req: NextRequest) {
         data: {
           userId: user.id,
           questionId: question.id,
-          selectedOptions: selectedOptions ? JSON.stringify(selectedOptions) : null,
+          selectedOptions: selectedOptions ?? Prisma.DbNull,
           numericalValue,
           isCorrect: submittedSomething ? isCorrect : null,
           timeSpentSeconds,
@@ -77,7 +78,7 @@ export async function POST(req: NextRequest) {
     return Response.json({
       result: {
         isCorrect: submittedSomething ? isCorrect : null,
-        correctOptions: question.correctOptions ? JSON.parse(question.correctOptions) : undefined,
+        correctOptions: Array.isArray(question.correctOptions) ? (question.correctOptions as number[]) : undefined,
         numericalAnswer: question.numericalAnswer ? Number(question.numericalAnswer) : undefined,
         numericalTolerance: question.numericalTolerance ? Number(question.numericalTolerance) : undefined,
         solution: question.solution ? toPublicSolution(question.solution) : null,

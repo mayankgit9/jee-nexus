@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
     await db.examAttemptAnswer.upsert({
       where: { examAttemptId_examQuestionId: { examAttemptId: attemptId, examQuestionId } },
       update: {
-        ...(selected !== null && { selectedOptions: selected.length ? JSON.stringify(selected) : null }),
+        ...(selected !== null && { selectedOptions: selected.length ? selected : null }),
         ...(numerical !== null && { numericalValue: numerical === '' ? null : numerical }),
         ...(markedForReview !== undefined && { markedForReview }),
         ...(timeDelta > 0 && { timeSpentSeconds: { increment: timeDelta } }),
@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
       create: {
         examAttemptId: attemptId,
         examQuestionId,
-        selectedOptions: selected?.length ? JSON.stringify(selected) : null,
+        selectedOptions: selected?.length ? selected : null,
         numericalValue: numerical || null,
         visited,
         markedForReview: markedForReview ?? false,
