@@ -5,6 +5,63 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-23 — M6 · CBT examination engine
+
+### Incident note
+Sandbox recycle lost the first (uncommitted) CBT implementation. **Process changed: every file is
+committed and pushed the moment it is written** (`scripts/push.sh` helper). No batch commits since.
+
+### Implemented
+- **Marking engine as data** (`src/lib/exam.ts`): JEE Main 2025 rules — single-correct +4/−1,
+  multiple-correct partial (+4 all / +3 / +2 / +1, 0 on any wrong option), numerical +4/−1 with
+  tolerance. Driven by `ExamPattern.config`, never hardcoded at call sites.
+- **Exam generation** (`src/lib/examService.ts`): deterministic seeded selection from the live bank,
+  honest shortfall warnings ("only N questions available — exam shortened honestly"), default
+  pattern bootstrap.
+- **5 exam APIs**: list/generate · start (resume-in-progress, custom duration honored,
+  no answer leakage) · answer (autosave with server-authoritative deadline + 30s grace,
+  visited/mark-for-review/time tracking) · submit (server-side grading, expired-late handling,
+  double-submit rejection) · result (score, per-section stats, question-wise review with solutions,
+  attempt history).
+- **NTA-style runner UI** (`ExamRunner.tsx`): section tabs, question palette with 5-state legend
+  (answered / not answered / marked / answered+marked / not visited), timer with low-time pulse,
+  Save & Next / Mark for Review & Next / Clear Response / Previous, NTA submit-confirmation dialog,
+  auto-submit at zero (server authoritative on grading), mobile palette via details disclosure.
+- **Result screen** (`ResultScreen.tsx`): score hero, per-section breakdown, question-wise review
+  with correct/your-answer highlighting, expandable detailed solutions.
+- **Mock hub** (`MockView.tsx`): exam list with re-attempt, custom test builder
+  (subject / count / duration), attempt history with score navigation.
+- Schema: `ExamAttemptAnswer.markedForReview` persisted (survives resume).
+
+### Bugs found & fixed during verification
+- Array-vs-number comparison in partial marking (`right === correct.length` always false) —
+  caught by unit tests, would have mis-graded multiple-correct questions.
+- Custom test duration ignored at start (used pattern's 180min instead of configured) —
+  caught by browser test timer read (179:57); fixed + verified 5.0-minute deadline.
+- Stale Prisma client after schema push required dev-server restart (documented).
+
+### Tests executed
+- `scripts/test_marking.ts`: **25/25** marking unit tests (partial marking edge cases, tolerance,
+  duplicates, empty/garbage inputs, negative answers, no-partial mode).
+- `scripts/e2e_exam_test.py`: **23/23** CBT API E2E (generation → start → answer × 3 types →
+  resume with state restoration → submit/grade → double-submit rejection → result review →
+  history → anonymous 401).
+- `scripts/e2e_api_test.py`: **23/23** regression pass.
+- Browser (agent-browser): signup → create custom physics test → runner renders (palette/timer/
+  KaTeX options) → answer + mark-for-review → NTA submit dialog summary → submit → history shows
+  −1/24 → result screen with per-section stats → solutions expand in review. 0 console errors.
+- Duration override: fresh 5-minute custom exam verified 5.0-minute deadline.
+
+### Deployment status
+- GitHub: every component pushed immediately (7 incremental commits).
+- Landing: https://jee-nexus-5wd.pages.dev — roadmap updated.
+
+### Next
+- M8: admin dashboard + import pipeline (CSV/JSON validation, dedup, verification workflow)
+- M9: Supabase Postgres migrations + RLS, CI, Playwright suite
+
+---
+
 ## 2026-11-23 — M4/M5/M7 · Interactive application (practice, PYQ library, analytics)
 
 ### Implemented
@@ -116,7 +173,7 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 | Year-wise PYQ library (browse, filters, chapter analysis) | ✅ |
 | Bookmarks & attempt history | ✅ |
 | Analytics dashboard (charts, weak/strong chapters) | ✅ |
-| CBT examination mode | ⏳ (placeholder live) |
+| CBT examination mode | ✅ |
 | Admin dashboard + import pipeline | ⏳ |
 | Supabase Postgres + RLS production sync | 🔄 (project ACTIVE, migrations pending) |
 | Cloudflare production app deployment | ⏳ (landing live; app runs in sandbox preview) |
