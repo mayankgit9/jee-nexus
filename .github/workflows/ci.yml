@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - run: bun run lint
+
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - name: Marking engine unit tests
+        run: bunx tsx scripts/test_marking.ts
+
+  api-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - name: Push dev schema
+        run: bun run db:push
+        env:
+          DATABASE_URL: file:/home/runner/work/jee-nexus/jee-nexus/db/custom.db
+      - name: Seed dev data
+        run: bunx tsx scripts/seed.ts
+        env:
+          DATABASE_URL: file:/home/runner/work/jee-nexus/jee-nexus/db/custom.db
+      - name: Start dev server
+        run: |
+          bun run dev &
+          for i in $(seq 1 60); do
+            curl -sS -m 2 -o /dev/null http://localhost:3000/ && break
+            sleep 2
+          done
+          curl -sS -m 5 -o /dev/null http://localhost:3000/
+        env:
+          DATABASE_URL: file:/home/runner/work/jee-nexus/jee-nexus/db/custom.db
+          ADMIN_EMAILS: admin@jee-nexus.dev
+      - name: API E2E
+        run: python3 scripts/e2e_api_test.py
+      - name: CBT E2E
+        run: python3 scripts/e2e_exam_test.py
+      - name: Admin E2E
+        run: python3 scripts/e2e_admin_test.py
