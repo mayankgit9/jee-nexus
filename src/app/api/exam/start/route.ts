@@ -24,7 +24,10 @@ export async function POST(req: NextRequest) {
       return Response.json(formatAttempt(exam, existing))
     }
 
-    const endsAt = new Date(Date.now() + exam.pattern.durationMinutes * 60 * 1000)
+    // Custom tests may override duration via their config; pattern duration is the fallback
+    const examConfig = exam.config ? (JSON.parse(exam.config) as { durationMinutes?: number }) : {}
+    const durationMinutes = Math.min(240, Math.max(5, examConfig.durationMinutes ?? exam.pattern.durationMinutes))
+    const endsAt = new Date(Date.now() + durationMinutes * 60 * 1000)
     const attempt = await db.examAttempt.create({
       data: { userId: user.id, examId: exam.id, endsAt, status: 'in_progress' },
       include: { answers: true },
