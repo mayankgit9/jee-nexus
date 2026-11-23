@@ -1,0 +1,151 @@
+[
+  {
+    "publicId": "JEM-2019-MAT-010",
+    "subjectKey": "mathematics",
+    "chapterKey": "mathematics:sets-relations-functions",
+    "subtopic": "Counting one-one functions",
+    "type": "numerical",
+    "text": "The number of one-one functions that can be defined from a set $A$ containing $3$ elements into a set $B$ containing $5$ elements is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "medium",
+    "sourceYear": 2019,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "functions",
+      "injections",
+      "counting",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "A one-one (injective) function must send the 3 distinct elements of $A$ to 3 distinct images in $B$: an ordered selection of 3 out of 5, i.e. the arrangement ${}^{5}P_{3}$.",
+      "formulas": [
+        "\\text{injections from } A \\text{ (} m \\text{ elements) to } B \\text{ (} n \\text{ elements)} = {}^{n}P_{m} = \\dfrac{n!}{(n-m)!}"
+      ],
+      "body": "**Step 1 — Fix the images one element at a time.**\nThe first element of $A$ has $5$ possible images; the second must avoid the first image ($4$ left); the third must avoid both ($3$ left).\n\n**Step 2 — Multiply (multiplication principle).**\n$$5 \\times 4 \\times 3 = 60$$",
+      "commonMistakes": "Answering $\\binom{5}{3} = 10$ — that counts the sets of images, ignoring which element maps where. Answering $5^3 = 125$ — that allows repeated images, i.e. all functions, not injective ones.",
+      "alternativeMethod": null,
+      "verification": "Formula check: ${}^{5}P_{3} = \\dfrac{5!}{2!} = \\dfrac{120}{2} = 60$, and the total count of all functions $5^3 = 125$ correctly exceeds it. ✓",
+      "sourceReferences": [
+        "JEE Main 2019, Mathematics — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "60",
+    "numericalTolerance": "0.001"
+  },
+  {
+    "publicId": "JEM-2019-MAT-011",
+    "subjectKey": "mathematics",
+    "chapterKey": "mathematics:mathematical-reasoning",
+    "subtopic": "Statement logic basics",
+    "type": "mcq_multi",
+    "text": "Which of the following statements are true?",
+    "options": [
+      "The contrapositive of the statement $p \\rightarrow q$ is $\\sim q \\rightarrow \\sim p$",
+      "The disjunction $p \\lor q$ is true only when both $p$ and $q$ are true",
+      "'$\\sqrt{2}$ is an irrational number' is a statement (proposition) in logic",
+      "The negation of a true statement is always a true statement"
+    ],
+    "correctOptions": [
+      0,
+      2
+    ],
+    "difficulty": "medium",
+    "sourceYear": 2019,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "propositions",
+      "contrapositive",
+      "multi-correct"
+    ],
+    "solution": {
+      "keyConcept": "The contrapositive of $p \\rightarrow q$ is $\\sim q \\rightarrow \\sim p$ (logically equivalent to the original). A disjunction is true when at least one component is true. A proposition is a declarative sentence with a definite truth value. Negation flips the truth value.",
+      "formulas": [
+        "p \\rightarrow q \\equiv \\sim q \\rightarrow \\sim p, \\qquad p \\lor q \\text{ is true iff at least one of } p, q \\text{ is true}"
+      ],
+      "body": "**Step 1 — Option A (contrapositive).**\nBy definition the contrapositive of $p \\rightarrow q$ is $\\sim q \\rightarrow \\sim p$. ✔ True.\n\n**Step 2 — Option B (disjunction).**\n$F \\lor T$ is true with only one component true — 'only when both are true' describes the conjunction $p \\land q$, not the disjunction. ✘ False.\n\n**Step 3 — Option C (proposition).**\n'$\\sqrt{2}$ is irrational' is a declarative sentence with a definite truth value (true), so it is a proposition. ✔ True.\n\n**Step 4 — Option D (negation).**\nThe negation of a true statement is false, not true. ✘ False.",
+      "commonMistakes": "Confusing the contrapositive with the converse ($q \\rightarrow p$). Reading 'only when both' as 'when both' — the word only makes option B the definition of conjunction.",
+      "alternativeMethod": null,
+      "verification": "Truth-table check of A: the columns of $p \\rightarrow q$ and $\\sim q \\rightarrow \\sim p$ agree on all four rows. For B, the row $p = F, q = T$ gives $F \\lor T = T$ — a direct counterexample to 'only when both'. ✓",
+      "sourceReferences": [
+        "JEE Main 2019, Mathematics — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2020-MAT-012",
+    "subjectKey": "mathematics",
+    "chapterKey": "mathematics:probability",
+    "subtopic": "Card drawn — spade or ace",
+    "type": "mcq_single",
+    "text": "One card is drawn at random from a well-shuffled standard deck of $52$ cards. The probability that the card drawn is either a spade or an ace is:",
+    "options": [
+      "$\\dfrac{4}{13}$",
+      "$\\dfrac{17}{52}$",
+      "$\\dfrac{1}{26}$",
+      "$\\dfrac{1}{2}$"
+    ],
+    "correctOptions": [
+      0
+    ],
+    "difficulty": "medium",
+    "sourceYear": 2020,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "probability",
+      "inclusion-exclusion",
+      "playing cards",
+      "mcq"
+    ],
+    "solution": {
+      "keyConcept": "Use the addition rule with inclusion-exclusion: $P(S \\cup A) = P(S) + P(A) - P(S \\cap A)$. The ace of spades lies in both events and must not be counted twice.",
+      "formulas": [
+        "P(S \\cup A) = P(S) + P(A) - P(S \\cap A)"
+      ],
+      "body": "**Step 1 — Count the events.**\nSpades: $13$ cards. Aces: $4$ cards. Ace of spades: $1$ card (counted in both).\n\n**Step 2 — Inclusion-exclusion.**\n$$|S \\cup A| = 13 + 4 - 1 = 16$$\n\n**Step 3 — Probability.**\n$$P(S \\cup A) = \\frac{16}{52} = \\frac{4}{13}$$",
+      "commonMistakes": "Adding to $13 + 4 = 17$ (giving $17/52$) — the ace of spades gets counted twice. Counting the ace of spades as four aces inside the spades.",
+      "alternativeMethod": null,
+      "verification": "Direct recount: $12$ non-ace spades $+$ ace of spades $+$ $3$ other aces $= 16$ favourable cards, and $16/52 = 4/13$. ✓",
+      "sourceReferences": [
+        "JEE Main 2020, Mathematics — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2026-MAT-013",
+    "subjectKey": "mathematics",
+    "chapterKey": "mathematics:vectors",
+    "subtopic": "Magnitude of the sum of orthogonal vectors",
+    "type": "numerical",
+    "text": "If $|\\vec{a}| = 3$, $|\\vec{b}| = 4$ and $\\vec{a} \\perp \\vec{b}$, then $|\\vec{a} + \\vec{b}|$ equals:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "easy",
+    "sourceYear": 2026,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "vectors",
+      "orthogonality",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "The squared magnitude of a sum expands with the dot product: $|\\vec{a}+\\vec{b}|^2 = |\\vec{a}|^2 + |\\vec{b}|^2 + 2\\,\\vec{a}\\cdot\\vec{b}$. Orthogonality kills the cross term, leaving Pythagoras.",
+      "formulas": [
+        "|\\vec{a}+\\vec{b}|^2 = |\\vec{a}|^2 + |\\vec{b}|^2 + 2\\,\\vec{a}\\cdot\\vec{b}"
+      ],
+      "body": "**Step 1 — Expand the squared magnitude.**\nWith $\\vec{a} \\cdot \\vec{b} = 0$:\n$$|\\vec{a}+\\vec{b}|^2 = 3^2 + 4^2 + 0 = 25$$\n\n**Step 2 — Take the positive square root.**\n$$|\\vec{a}+\\vec{b}| = 5$$",
+      "commonMistakes": "Adding the magnitudes directly ($3 + 4 = 7$) — valid only for parallel vectors. Forgetting the square root and answering $25$.",
+      "alternativeMethod": null,
+      "verification": "Concrete instance: $\\vec{a} = 3\\hat{i}$ and $\\vec{b} = 4\\hat{j}$ give $\\vec{a}+\\vec{b} = 3\\hat{i}+4\\hat{j}$ with magnitude $\\sqrt{9+16} = 5$ — the classic 3-4-5 triple. ✓",
+      "sourceReferences": [
+        "JEE Main 2026, Mathematics — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "5",
+    "numericalTolerance": "0.001"
+  }
+]

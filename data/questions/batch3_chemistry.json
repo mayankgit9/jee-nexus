@@ -1,0 +1,148 @@
+[
+  {
+    "publicId": "JEM-2019-CHEM-010",
+    "subjectKey": "chemistry",
+    "chapterKey": "chemistry:some-basic-concepts",
+    "subtopic": "Molarity and number of moles",
+    "type": "numerical",
+    "text": "The number of moles of solute present in $250\\,\\mathrm{mL}$ of a $0.2\\,\\mathrm{M}$ solution is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "easy",
+    "sourceYear": 2019,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "molarity",
+      "concentration terms",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "Molarity is moles of solute per litre of solution: $M = n/V_{(\\mathrm{L})}$. Convert the volume to litres before substituting.",
+      "formulas": [
+        "n = M \\times V_{(\\mathrm{L})}"
+      ],
+      "body": "**Step 1 — Convert the volume.**\n$$250\\,\\mathrm{mL} = 0.250\\,\\mathrm{L}$$\n\n**Step 2 — Moles of solute.**\n$$n = 0.2\\ \\mathrm{mol\\,L^{-1}} \\times 0.250\\ \\mathrm{L} = 0.05\\ \\mathrm{mol}$$",
+      "commonMistakes": "Multiplying by $250$ instead of $0.250$ (getting $50$ mol — an absurd amount for a beaker). Confusing molarity with molality (moles per kilogram of solvent).",
+      "alternativeMethod": null,
+      "verification": "Magnitude check: a quarter of a litre of a fifth-molar solution contains $0.25 \\times 0.2 = 0.05$ mol — both factors are simple fractions. ✓",
+      "sourceReferences": [
+        "JEE Main 2019, Chemistry — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "0.05",
+    "numericalTolerance": "0.001"
+  },
+  {
+    "publicId": "JEM-2020-CHEM-011",
+    "subjectKey": "chemistry",
+    "chapterKey": "chemistry:periodic-table",
+    "subtopic": "Atomic radius across a period",
+    "type": "mcq_single",
+    "text": "Which of the following third-period elements has the largest atomic radius?",
+    "options": [
+      "$\\mathrm{Na}$",
+      "$\\mathrm{Mg}$",
+      "$\\mathrm{Al}$",
+      "$\\mathrm{Si}$"
+    ],
+    "correctOptions": [
+      0
+    ],
+    "difficulty": "easy",
+    "sourceYear": 2020,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "periodic trends",
+      "atomic radius",
+      "mcq"
+    ],
+    "solution": {
+      "keyConcept": "Across a period, electrons enter the same shell while the nuclear charge increases, so the effective nuclear pull on the outermost electron rises and the radius contracts steadily from left to right.",
+      "formulas": [
+        "\\text{radius decreases across a period as } Z_{\\mathrm{eff}} \\text{ increases}"
+      ],
+      "body": "**Step 1 — Locate the elements.**\nNa, Mg, Al and Si are consecutive third-period elements (groups 1, 2, 13, 14).\n\n**Step 2 — Apply the left-to-right contraction.**\n$Z_{\\mathrm{eff}}$ increases from Na to Si with no new shell to offset it, so\n$$r_{\\mathrm{Na}} > r_{\\mathrm{Mg}} > r_{\\mathrm{Al}} > r_{\\mathrm{Si}}$$\n\n**Step 3 — Conclusion.**\nSodium has the largest atomic radius.",
+      "commonMistakes": "Picking Si on the reasoning 'heavier atom = bigger atom' — mass grows across a period but radius shrinks. Assuming the group-2 element must be the largest because metals are 'big'.",
+      "alternativeMethod": null,
+      "verification": "Experimental covalent radii confirm the ordering: Na $\\approx 186$ pm, Mg $\\approx 160$ pm, Al $\\approx 143$ pm, Si $\\approx 118$ pm — strictly decreasing. ✓",
+      "sourceReferences": [
+        "JEE Main 2020, Chemistry — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2026-CHEM-012",
+    "subjectKey": "chemistry",
+    "chapterKey": "chemistry:states-of-matter",
+    "subtopic": "Charles's law volume scaling",
+    "type": "numerical",
+    "text": "A given mass of a gas occupies $3.0\\,\\mathrm{L}$ at $27^{\\circ}\\mathrm{C}$, at constant pressure. The volume (in $\\mathrm{L}$) it occupies at $327^{\\circ}\\mathrm{C}$ is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "easy",
+    "sourceYear": 2026,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "charles's law",
+      "gas laws",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "At constant pressure, Charles's law gives $V \\propto T$, where $T$ is the absolute (kelvin) temperature. Always convert to kelvin before taking ratios.",
+      "formulas": [
+        "\\dfrac{V_1}{T_1} = \\dfrac{V_2}{T_2} \\quad (T \\text{ in kelvin})"
+      ],
+      "body": "**Step 1 — Convert to kelvin.**\n$T_1 = 27 + 273 = 300\\,\\mathrm{K}$ and $T_2 = 327 + 273 = 600\\,\\mathrm{K}$.\n\n**Step 2 — Apply Charles's law.**\n$$V_2 = V_1 \\cdot \\frac{T_2}{T_1} = 3.0 \\times \\frac{600}{300} = 6.0\\,\\mathrm{L}$$",
+      "commonMistakes": "Using the Celsius ratio $327/27$, which gives $36.3\\,\\mathrm{L}$ — the kelvin scale is mandatory. Treating $27^{\\circ}\\mathrm{C} \\to 327^{\\circ}\\mathrm{C}$ as a doubling of temperature (it is a $12.1\\times$ rise in Celsius but a clean $2\\times$ in kelvin).",
+      "alternativeMethod": null,
+      "verification": "Symmetry check: the kelvin temperature doubles ($300 \\to 600$) and the volume doubles ($3.0 \\to 6.0$), consistent with $V \\propto T$. ✓",
+      "sourceReferences": [
+        "JEE Main 2026, Chemistry — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "6",
+    "numericalTolerance": "0.01"
+  },
+  {
+    "publicId": "JEM-2026-CHEM-013",
+    "subjectKey": "chemistry",
+    "chapterKey": "chemistry:aldehydes-ketones",
+    "subtopic": "Distinguishing aldehydes from ketones",
+    "type": "mcq_single",
+    "text": "Which of the following reagents can be used to distinguish an aldehyde from a ketone?",
+    "options": [
+      "Tollens' reagent (ammoniacal silver nitrate)",
+      "2,4-dinitrophenylhydrazine (2,4-DNP)",
+      "Sodium hydrogensulphite ($\\mathrm{NaHSO_3}$)",
+      "Hydroxylamine ($\\mathrm{NH_2OH}$)"
+    ],
+    "correctOptions": [
+      0
+    ],
+    "difficulty": "medium",
+    "sourceYear": 2026,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "carbonyl compounds",
+      "qualitative tests",
+      "mcq"
+    ],
+    "solution": {
+      "keyConcept": "A distinguishing reagent must react with one class and not the other. Tollens' reagent is a mild oxidant: aldehydes reduce $\\mathrm{Ag^+}$ to a silver mirror while ketones do not respond. 2,4-DNP, $\\mathrm{NaHSO_3}$ and $\\mathrm{NH_2OH}$ are nucleophilic-addition reagents that attack the carbonyl group of both aldehydes and ketones.",
+      "formulas": [
+        "\\mathrm{RCHO} + 2\\,\\mathrm{Ag(NH_3)_2^+} \\rightarrow \\mathrm{RCOO^-} + 2\\,\\mathrm{Ag}\\!\\downarrow"
+      ],
+      "body": "**Step 1 — What must a distinguishing test do?**\nReact positively with aldehydes and negatively with ketones (or vice versa).\n\n**Step 2 — Test each reagent.**\n- Tollens': aldehydes give a silver mirror; ketones give no reaction. ✔ distinguishes.\n- 2,4-DNP: orange-yellow precipitate with both. ✘\n- $\\mathrm{NaHSO_3}$: crystalline addition product with both. ✘\n- $\\mathrm{NH_2OH}$: oximes form with both. ✘",
+      "commonMistakes": "Choosing 2,4-DNP — it is the classic carbonyl detector but cannot tell an aldehyde from a ketone. Assuming $\\mathrm{NaHSO_3}$ is aldehyde-specific — many methyl ketones also form the bisulphite adduct.",
+      "alternativeMethod": null,
+      "verification": "Cross-check: the Tollens' test is an oxidation ($\\mathrm{Ag^+ \\to Ag}$), and aldehydes are the only class here that is readily oxidised — consistent with it being the sole distinguishing reagent among the four. ✓",
+      "sourceReferences": [
+        "JEE Main 2026, Chemistry — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  }
+]

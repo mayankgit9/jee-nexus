@@ -1,0 +1,149 @@
+[
+  {
+    "publicId": "JEM-2019-PHY-011",
+    "subjectKey": "physics",
+    "chapterKey": "physics:laws-of-motion",
+    "subtopic": "Apparent weight in an accelerating lift",
+    "type": "numerical",
+    "text": "A man of mass $80\\,\\mathrm{kg}$ stands in a lift that is accelerating vertically upward at $2\\,\\mathrm{m\\,s^{-2}}$. Taking $g = 9.8\\,\\mathrm{m\\,s^{-2}}$, the apparent weight of the man (the normal reaction from the floor, in $\\mathrm{N}$) is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "easy",
+    "sourceYear": 2019,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "newton's laws",
+      "apparent weight",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "In an accelerating lift the floor must both support the man and accelerate him: $N - mg = ma$, so the apparent weight is $N = m(g+a)$.",
+      "formulas": [
+        "N - mg = ma \\;\\Rightarrow\\; N = m(g+a)"
+      ],
+      "body": "**Step 1 — Newton's second law on the man.**\nTaking up as positive, the forces are the normal reaction $N$ (up) and the weight $mg$ (down), and the acceleration is $a$ (up):\n$$N - mg = ma$$\n\n**Step 2 — Solve for $N$.**\n$$N = m(g + a) = 80 \\times (9.8 + 2) = 80 \\times 11.8$$\n\n**Step 3 — Evaluate.**\n$$N = 944\\,\\mathrm{N}$$",
+      "commonMistakes": "Using $N = m(g-a)$ — that is the formula for a lift accelerating downward (it gives $624\\,\\mathrm{N}$). Quoting the rest weight $mg = 784\\,\\mathrm{N}$ and ignoring the acceleration.",
+      "alternativeMethod": null,
+      "verification": "Plausibility: accelerating upward must feel heavier — $944 > 784 = mg$. At rest ($a = 0$) the formula returns exactly $mg$. ✓",
+      "sourceReferences": [
+        "JEE Main 2019, Physics — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "944",
+    "numericalTolerance": "0.5"
+  },
+  {
+    "publicId": "JEM-2020-PHY-012",
+    "subjectKey": "physics",
+    "chapterKey": "physics:work-energy-power",
+    "subtopic": "Kinetic energy versus speed",
+    "type": "mcq_single",
+    "text": "A body moving with speed $v$ has kinetic energy $K$. If its speed is doubled, its kinetic energy becomes:",
+    "options": [
+      "$2K$",
+      "$4K$",
+      "$\\dfrac{K}{2}$",
+      "$\\sqrt{2}\\,K$"
+    ],
+    "correctOptions": [
+      1
+    ],
+    "difficulty": "easy",
+    "sourceYear": 2020,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "kinetic energy",
+      "proportionality",
+      "mcq"
+    ],
+    "solution": {
+      "keyConcept": "Kinetic energy is proportional to the square of the speed: $K = \\tfrac12 mv^2$. With $m$ fixed, $v \\to 2v$ multiplies $K$ by $2^2 = 4$.",
+      "formulas": [
+        "K = \\tfrac{1}{2}mv^2 \\;\\Rightarrow\\; \\frac{K_2}{K_1} = \\left(\\frac{v_2}{v_1}\\right)^2"
+      ],
+      "body": "**Step 1 — Write the ratio.**\n$$\\frac{K_2}{K_1} = \\frac{\\tfrac12 m(2v)^2}{\\tfrac12 mv^2} = \\frac{4v^2}{v^2}$$\n\n**Step 2 — Conclude.**\n$$K_2 = 4K$$",
+      "commonMistakes": "Answering $2K$ — forgetting that $v$ enters squared. Halving the energy when unsure about the direction of the change.",
+      "alternativeMethod": null,
+      "verification": "Work-energy cross-check: to double the speed, the net work $W = \\Delta K = 4K - K = 3K$ must supply three times the original kinetic energy — a large but correct demand. ✓",
+      "sourceReferences": [
+        "JEE Main 2020, Physics — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2020-PHY-013",
+    "subjectKey": "physics",
+    "chapterKey": "physics:waves",
+    "subtopic": "Harmonics of a stretched string",
+    "type": "numerical",
+    "text": "The fundamental frequency of a stretched string fixed at both ends is $100\\,\\mathrm{Hz}$. The frequency of its second overtone (in $\\mathrm{Hz}$) is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "easy",
+    "sourceYear": 2020,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "standing waves",
+      "overtones",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "A string fixed at both ends supports harmonics $f_n = nf_1$ with $n = 1, 2, 3, \\dots$. The second overtone is the third harmonic ($n = 3$) — the fundamental itself is not counted as an overtone.",
+      "formulas": [
+        "f_n = n f_1 \\quad (\\text{string fixed at both ends})"
+      ],
+      "body": "**Step 1 — Count overtones.**\nFirst overtone $= 2f_1$ (second harmonic), second overtone $= 3f_1$ (third harmonic).\n\n**Step 2 — Substitute.**\n$$f_3 = 3 \\times 100 = 300\\,\\mathrm{Hz}$$",
+      "commonMistakes": "Reporting $200\\,\\mathrm{Hz}$ — treating the first overtone as the second, or the fundamental as the first overtone. Confusing overtone numbering with the harmonic index.",
+      "alternativeMethod": null,
+      "verification": "Wavelength check: the third harmonic has $\\lambda_3 = 2L/3$, so $f_3 = v/\\lambda_3 = 3v/2L = 3f_1$ — consistent. ✓",
+      "sourceReferences": [
+        "JEE Main 2020, Physics — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "300",
+    "numericalTolerance": "0.001"
+  },
+  {
+    "publicId": "JEM-2026-PHY-014",
+    "subjectKey": "physics",
+    "chapterKey": "physics:magnetic-effects-of-current",
+    "subtopic": "Charged particle in a uniform magnetic field",
+    "type": "mcq_multi",
+    "text": "A charged particle enters a uniform magnetic field with its velocity perpendicular to the field. Which of the following statements are correct?",
+    "options": [
+      "The path of the particle inside the field is circular",
+      "The speed of the particle remains constant",
+      "The magnetic force does positive work on the particle",
+      "The kinetic energy of the particle keeps increasing"
+    ],
+    "correctOptions": [
+      0,
+      1
+    ],
+    "difficulty": "medium",
+    "sourceYear": 2026,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "lorentz force",
+      "circular motion",
+      "multi-correct"
+    ],
+    "solution": {
+      "keyConcept": "The magnetic part of the Lorentz force is $\\vec{F} = q\\,\\vec{v} \\times \\vec{B}$ — always perpendicular to $\\vec{v}$. A force perpendicular to the velocity changes only the direction of motion, never the magnitude: the work done is identically zero.",
+      "formulas": [
+        "\\vec{F} = q\\,\\vec{v} \\times \\vec{B}, \\qquad W = \\vec{F}\\cdot\\vec{v} = 0"
+      ],
+      "body": "**Step 1 — Direction of the force.**\nWith $\\vec{v} \\perp \\vec{B}$, the magnitude is $|\\vec{F}| = qvB$ and $\\vec{F} \\perp \\vec{v}$ at every instant (even as $\\vec{v}$ continuously turns).\n\n**Step 2 — Work and energy.**\n$$W = \\int (\\vec{F}\\cdot\\vec{v})\\,dt = 0$$\nso the speed and the kinetic energy stay constant: statement B is correct, C and D are wrong.\n\n**Step 3 — Shape of the path.**\nA constant-magnitude force always perpendicular to the velocity is precisely uniform circular motion: $qvB = \\dfrac{mv^2}{r}$, giving radius $r = \\dfrac{mv}{qB}$. Statement A is correct.",
+      "commonMistakes": "Assuming that any force must do work and change the speed. Claiming the path is helical — that happens only when $\\vec{v}$ has a component along $\\vec{B}$; here $\\vec{v} \\perp \\vec{B}$ is given.",
+      "alternativeMethod": null,
+      "verification": "Orthogonality identity: $(\\vec{v} \\times \\vec{B})\\cdot\\vec{v} = 0$ for any vectors, so the power delivered is exactly zero at every instant. ✓",
+      "sourceReferences": [
+        "JEE Main 2026, Physics — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  }
+]

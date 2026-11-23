@@ -5,6 +5,45 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-23 — M13 · Question bank batch 3 — authored & verified (import pending DB access)
+
+### Implemented
+- **Coverage analysis tool** (`scripts/coverage_analysis.py`): chapter and year
+  coverage across all batches against the 65-chapter taxonomy — now drives batch
+  planning instead of ad-hoc greps.
+- **Batch 3** (`data/questions/batch3_*.json`, `scripts/gen_batch3.py`): 12 new
+  questions (4 physics / 4 chemistry / 4 mathematics) on 12 chapters untouched by
+  batches 1-2 (physics: laws-of-motion, work-energy-power, waves,
+  magnetic-effects-of-current; chemistry: some-basic-concepts, periodic-table,
+  states-of-matter, aldehydes-ketones; mathematics: sets-relations-functions,
+  mathematical-reasoning, probability, vectors). Year labels 2019 / 2020 / 2026 —
+  **the PYQ year grid is now complete 2019–2026**. Types: 6 numerical, 4 mcq_single,
+  2 mcq_multi. Same honesty policy as batches 1-2: standard formulations, labelled
+  isAiGenerated, imported → needs_review (never auto-verified).
+- **Independent verification** (`scripts/verify_seed_batch3.py`): **181/181 checks** —
+  numeric recomputation, brute-force enumeration (injective maps, 52-card deck,
+  truth tables), reference atomic-radii data, the (v×B)·v = 0 work identity, plus
+  structural validation: fresh chapters (not in batch 1/2), publicId uniqueness,
+  content-hash non-collision, type cardinality, solution completeness.
+- **`scripts/import_batch3.py`**: the one-command import through the real admin
+  pipeline (login → POST /api/admin/import → PATCH needs_review), credentials
+  overridable via ADMIN_EMAIL / ADMIN_PASSWORD.
+
+### Tests executed
+- `scripts/verify_seed_batch3.py`: **181/181**.
+
+### Deployment status
+- Repo: batch3 JSONs + tooling committed. **Live DB import NOT run** — blocked on
+  the lost jee_app credentials (same blocker as M12). Once the DATABASE_URL env is
+  restored and the dev server runs against live Supabase:
+  `python3 scripts/import_batch3.py` (expects the whitelisted admin account;
+  override via ADMIN_EMAIL/ADMIN_PASSWORD if the DB was re-seeded).
+
+### Remaining (honest)
+- Import batch3 into the live DB (40 questions authored offline, 28 live).
+- Same blockers as M12: jee_app password (DATABASE_URL secret for the Workers
+  deploy + local dev), GH_PAT (2 local commits awaiting push).
+
 ## 2026-11-23 — M12 · Full app deployed to Cloudflare Workers (live)
 
 ### Implemented
