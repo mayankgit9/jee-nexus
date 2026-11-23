@@ -1,0 +1,144 @@
+[
+  {
+    "publicId": "JEM-2024-PHY-007",
+    "subjectKey": "physics",
+    "chapterKey": "physics:kinetic-theory",
+    "subtopic": "rms speed and temperature",
+    "type": "numerical",
+    "text": "The rms speed of the molecules of an ideal gas at $27^\\circ\\mathrm{C}$ is $v$. If the temperature is raised to $927^\\circ\\mathrm{C}$, the rms speed becomes $n\\,v$. The value of $n$ is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "easy",
+    "sourceYear": 2024,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "kinetic theory",
+      "rms speed",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "The rms speed scales with the square root of the absolute temperature: $v_{\\mathrm{rms}} = \\sqrt{3RT/M}$. Convert to kelvin before taking the ratio.",
+      "formulas": [
+        "v_{\\mathrm{rms}} = \\sqrt{\\dfrac{3RT}{M}} \\;\\Rightarrow\\; \\dfrac{v_2}{v_1} = \\sqrt{\\dfrac{T_2}{T_1}}"
+      ],
+      "body": "**Step 1 — Convert the temperatures to kelvin.**\n$T_1 = 27 + 273 = 300\\,\\mathrm{K}$, $T_2 = 927 + 273 = 1200\\,\\mathrm{K}$.\n\n**Step 2 — Ratio of rms speeds.**\n$$\\frac{v_2}{v_1} = \\sqrt{\\frac{T_2}{T_1}} = \\sqrt{\\frac{1200}{300}} = \\sqrt{4} = 2$$\n\n**Step 3 — Conclude.**\n$$v_2 = 2\\,v \\;\\Rightarrow\\; n = 2$$",
+      "commonMistakes": "Using $\\sqrt{(927+273)/27}$ with one temperature left in °C. Assuming speed doubles when temperature quadruples in *Celsius* — the kelvin scale is what enters the formula.",
+      "alternativeMethod": null,
+      "verification": "Absolute-temperature check: $1200\\,\\mathrm{K}/300\\,\\mathrm{K} = 4$ exactly, and $\\sqrt{4} = 2$ — clean.",
+      "sourceReferences": [
+        "JEE Main 2024, Physics — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "2",
+    "numericalTolerance": "0.001"
+  },
+  {
+    "publicId": "JEM-2024-PHY-008",
+    "subjectKey": "physics",
+    "chapterKey": "physics:oscillations",
+    "subtopic": "Energy distribution in SHM",
+    "type": "mcq_single",
+    "text": "A particle executes simple harmonic motion with amplitude $A$. The kinetic energy of the particle equals its potential energy at a displacement from the mean position equal to:",
+    "options": [
+      "$A/2$",
+      "$A/\\sqrt{2}$",
+      "$A\\sqrt{3}/2$",
+      "$2A/3$"
+    ],
+    "correctOptions": [
+      1
+    ],
+    "difficulty": "medium",
+    "sourceYear": 2024,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "shm",
+      "energy",
+      "mcq"
+    ],
+    "solution": {
+      "keyConcept": "In SHM, $KE = \\tfrac{1}{2}m\\omega^2(A^2 - x^2)$ and $PE = \\tfrac{1}{2}m\\omega^2x^2$. Equating the two fixes the displacement at $A/\\sqrt2$, independent of $m$ and $\\omega$.",
+      "formulas": [
+        "KE = \\tfrac{1}{2}m\\omega^2(A^2 - x^2), \\quad PE = \\tfrac{1}{2}m\\omega^2x^2"
+      ],
+      "body": "**Step 1 — Set the energies equal.**\n$$\\tfrac{1}{2}m\\omega^2(A^2 - x^2) = \\tfrac{1}{2}m\\omega^2x^2$$\n\n**Step 2 — Solve for $x$.**\n$$A^2 - x^2 = x^2 \\;\\Rightarrow\\; 2x^2 = A^2 \\;\\Rightarrow\\; x = \\frac{A}{\\sqrt{2}} \\approx 0.707\\,A$$\n\n**Step 3 — Interpretation.**\nAt this displacement each form holds exactly half of the total energy $\\tfrac{1}{2}m\\omega^2A^2$.",
+      "commonMistakes": "Choosing $x = A/2$, where $PE$ is only a quarter of the total. Assuming $KE = PE$ at the extreme $x = A$, where $KE$ is in fact zero.",
+      "alternativeMethod": null,
+      "verification": "Check: at $x = A/\\sqrt2$, $PE = \\tfrac12 m\\omega^2 \\cdot A^2/2 = \\tfrac14 m\\omega^2A^2$ and $KE = \\tfrac12 m\\omega^2(A^2 - A^2/2) = \\tfrac14 m\\omega^2A^2$ — equal, and together they sum to the total $\\tfrac12 m\\omega^2A^2$. ✓",
+      "sourceReferences": [
+        "JEE Main 2024, Physics — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2025-PHY-009",
+    "subjectKey": "physics",
+    "chapterKey": "physics:electrostatics",
+    "subtopic": "Energy stored in a capacitor",
+    "type": "numerical",
+    "text": "A $2\\,\\mu\\mathrm{F}$ capacitor is charged to a potential difference of $100\\,\\mathrm{V}$. The energy stored in the capacitor is $x\\,\\mathrm{mJ}$. The value of $x$ is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "easy",
+    "sourceYear": 2025,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "capacitance",
+      "energy",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "The energy stored in a capacitor is $U = \\tfrac{1}{2}CV^2$ (equivalently $\\tfrac{1}{2}QV$ or $Q^2/2C$).",
+      "formulas": [
+        "U = \\tfrac{1}{2}CV^2"
+      ],
+      "body": "**Step 1 — Substitute in SI units.**\n$$U = \\tfrac{1}{2} \\times 2\\times10^{-6}\\,\\mathrm{F} \\times (100\\,\\mathrm{V})^2 = \\tfrac{1}{2} \\times 2\\times10^{-6} \\times 10^4$$\n\n**Step 2 — Evaluate.**\n$$U = 10^{-2}\\,\\mathrm{J} = 10\\,\\mathrm{mJ}$$\n\n**Step 3 — Read off $x$.**\n$$x = 10$$",
+      "commonMistakes": "Forgetting the factor $\\tfrac12$ (getting $20\\,\\mathrm{mJ}$). Using $\\mu\\mathrm{F}$ directly without converting to farads.",
+      "alternativeMethod": null,
+      "verification": "Cross-check with the charge route: $Q = CV = 2\\times10^{-6} \\times 100 = 2\\times10^{-4}\\,\\mathrm{C}$, so $U = QV/2 = 2\\times10^{-4} \\times 100/2 = 10^{-2}\\,\\mathrm{J}$. ✓",
+      "sourceReferences": [
+        "JEE Main 2025, Physics — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "10",
+    "numericalTolerance": "0.01"
+  },
+  {
+    "publicId": "JEM-2025-PHY-010",
+    "subjectKey": "physics",
+    "chapterKey": "physics:rotational-motion",
+    "subtopic": "Rolling without slipping — energy split",
+    "type": "numerical",
+    "text": "A solid sphere rolls without slipping. The fraction of its total kinetic energy that is rotational is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "hard",
+    "sourceYear": 2025,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "rolling motion",
+      "moment of inertia",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "For rolling without slipping, $v = \\omega R$, so the kinetic energy splits between translation ($\\tfrac12 mv^2$) and rotation ($\\tfrac12 I\\omega^2$). For a solid sphere $I = \\tfrac25 mR^2$.",
+      "formulas": [
+        "KE_{\\mathrm{rot}} = \\tfrac{1}{2}I\\omega^2 = \\tfrac{1}{2}\\cdot\\tfrac{2}{5}mR^2\\cdot\\dfrac{v^2}{R^2} = \\tfrac{1}{5}mv^2",
+        "\\dfrac{KE_{\\mathrm{rot}}}{KE_{\\mathrm{total}}} = \\dfrac{I/mR^2}{1 + I/mR^2}"
+      ],
+      "body": "**Step 1 — Rotational KE.**\nWith $\\omega = v/R$ and $I = \\tfrac25 mR^2$:\n$$KE_{\\mathrm{rot}} = \\tfrac12 \\cdot \\tfrac25 mR^2 \\cdot \\frac{v^2}{R^2} = \\tfrac15 mv^2$$\n\n**Step 2 — Total KE.**\n$$KE_{\\mathrm{total}} = \\tfrac12 mv^2 + \\tfrac15 mv^2 = \\tfrac{7}{10}mv^2$$\n\n**Step 3 — Fraction.**\n$$\\frac{KE_{\\mathrm{rot}}}{KE_{\\mathrm{total}}} = \\frac{\\tfrac15}{\\tfrac{7}{10}} = \\frac{2}{7} \\approx 0.286$$",
+      "commonMistakes": "Reporting the *translational* fraction $5/7$ instead. Using the moment of inertia about the contact point ($\\tfrac75 mR^2$) for the rotational energy — that double-counts the translation.",
+      "alternativeMethod": null,
+      "verification": "Sanity: the fraction must be less than $\\tfrac12$ (a sphere is not too 'heavy' at the rim); $2/7 \\approx 0.286$ fits. For a ring ($I = mR^2$) the same formula gives $1/2$, as expected.",
+      "sourceReferences": [
+        "JEE Main 2025, Physics — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "0.286",
+    "numericalTolerance": "0.005"
+  }
+]

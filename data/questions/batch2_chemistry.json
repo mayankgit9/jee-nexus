@@ -1,0 +1,148 @@
+[
+  {
+    "publicId": "JEM-2024-CHEM-006",
+    "subjectKey": "chemistry",
+    "chapterKey": "chemistry:atomic-structure",
+    "subtopic": "Radial nodes in orbitals",
+    "type": "numerical",
+    "text": "The number of radial nodes in a $4s$ orbital is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "easy",
+    "sourceYear": 2024,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "orbitals",
+      "nodes",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "A node is a surface where the wavefunction is zero. The number of radial (spherical) nodes is $n - l - 1$; the number of angular nodes is $l$.",
+      "formulas": [
+        "\\text{radial nodes} = n - l - 1"
+      ],
+      "body": "**Step 1 — Identify the quantum numbers.**\nFor a $4s$ orbital: $n = 4$, $l = 0$.\n\n**Step 2 — Apply the formula.**\n$$\\text{radial nodes} = n - l - 1 = 4 - 0 - 1 = 3$$",
+      "commonMistakes": "Using $n - l$ (missing the $-1$) and getting $4$. Confusing radial with angular nodes ($l = 0$ here, so there are no angular nodes).",
+      "alternativeMethod": null,
+      "verification": "Consistency: total nodes $= n - 1 = 3$; with $l = 0$ all of them are radial. ✓",
+      "sourceReferences": [
+        "JEE Main 2024, Chemistry — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "3",
+    "numericalTolerance": "0.001"
+  },
+  {
+    "publicId": "JEM-2024-CHEM-007",
+    "subjectKey": "chemistry",
+    "chapterKey": "chemistry:equilibrium",
+    "subtopic": "pH of a strong acid",
+    "type": "mcq_single",
+    "text": "The pH of a $0.001\\,\\mathrm{M}$ aqueous HCl solution at $25^\\circ\\mathrm{C}$ is:",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "11"
+    ],
+    "correctOptions": [
+      1
+    ],
+    "difficulty": "easy",
+    "sourceYear": 2024,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "ph",
+      "strong acid",
+      "mcq"
+    ],
+    "solution": {
+      "keyConcept": "HCl is a strong acid and dissociates completely, so $[\\mathrm{H^+}] = 10^{-3}\\,\\mathrm{M}$ and $\\mathrm{pH} = -\\log_{10}[\\mathrm{H^+}]$.",
+      "formulas": [
+        "\\mathrm{pH} = -\\log_{10}[\\mathrm{H^+}]"
+      ],
+      "body": "**Step 1 — Hydrogen-ion concentration.**\n$$[\\mathrm{H^+}] = 0.001\\,\\mathrm{M} = 10^{-3}\\,\\mathrm{M}$$\n\n**Step 2 — pH.**\n$$\\mathrm{pH} = -\\log_{10}(10^{-3}) = 3$$",
+      "commonMistakes": "Reporting $11$ (the pOH) — at $25^\\circ\\mathrm{C}$, $\\mathrm{pH} + \\mathrm{pOH} = 14$ catches this. Misreading $0.001$ as $10^{-2}$ and answering $2$.",
+      "alternativeMethod": null,
+      "verification": "pOH check: $\\mathrm{pOH} = 11$, and $3 + 11 = 14$ at $25^\\circ\\mathrm{C}$. ✓",
+      "sourceReferences": [
+        "JEE Main 2024, Chemistry — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2025-CHEM-008",
+    "subjectKey": "chemistry",
+    "chapterKey": "chemistry:thermodynamics",
+    "subtopic": "Isothermal reversible expansion work",
+    "type": "numerical",
+    "text": "Two moles of an ideal gas expand isothermally and reversibly from $10\\,\\mathrm{L}$ to $20\\,\\mathrm{L}$ at $300\\,\\mathrm{K}$. The work done by the gas is $x\\,\\mathrm{kJ}$ ($R = 8.314\\,\\mathrm{J\\,mol^{-1}K^{-1}}$). The value of $x$ is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "medium",
+    "sourceYear": 2025,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "thermodynamics",
+      "isothermal work",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "For an isothermal reversible expansion of an ideal gas the work done by the gas is $w_{\\mathrm{by}} = nRT\\ln(V_2/V_1)$ — internal energy is constant, so $q = w_{\\mathrm{by}}$.",
+      "formulas": [
+        "w_{\\mathrm{by}} = nRT\\,\\ln\\dfrac{V_2}{V_1}"
+      ],
+      "body": "**Step 1 — Substitute.**\n$$w_{\\mathrm{by}} = 2 \\times 8.314 \\times 300 \\times \\ln\\!\\left(\\frac{20}{10}\\right)$$\n\n**Step 2 — Evaluate.**\n$$w_{\\mathrm{by}} = 4988.4 \\times \\ln 2 = 4988.4 \\times 0.6931 = 3457\\,\\mathrm{J} \\approx 3.46\\,\\mathrm{kJ}$$\n\n**Step 3 — Read off $x$.**\n$$x \\approx 3.46$$",
+      "commonMistakes": "Sign confusion: the work done *on* the gas is $-3.46\\,\\mathrm{kJ}$; the question asks for the work done *by* the gas. Using $\\log_{10}$ instead of $\\ln$ (that gives $1.50\\,\\mathrm{kJ}$).",
+      "alternativeMethod": null,
+      "verification": "First-law check: $\\Delta U = 0$ for an isothermal ideal-gas change, so $q = w_{\\mathrm{by}} = 3.46\\,\\mathrm{kJ}$ of heat absorbed. ✓",
+      "sourceReferences": [
+        "JEE Main 2025, Chemistry — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "3.46",
+    "numericalTolerance": "0.02"
+  },
+  {
+    "publicId": "JEM-2025-CHEM-009",
+    "subjectKey": "chemistry",
+    "chapterKey": "chemistry:redox-reactions",
+    "subtopic": "Oxidation state bookkeeping",
+    "type": "mcq_multi",
+    "text": "Which of the following statements about oxidation states are correct?",
+    "options": [
+      "Chromium is in the $+6$ oxidation state in $\\mathrm{Cr_2O_7^{2-}}$",
+      "Manganese is in the $+6$ oxidation state in $\\mathrm{KMnO_4}$",
+      "The two sulphur atoms in $\\mathrm{Na_2S_2O_3}$ have different oxidation states",
+      "Oxygen is in the $-2$ oxidation state in $\\mathrm{OF_2}$"
+    ],
+    "correctOptions": [
+      0,
+      2
+    ],
+    "difficulty": "medium",
+    "sourceYear": 2025,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "oxidation state",
+      "multi-correct"
+    ],
+    "solution": {
+      "keyConcept": "Assign oxidation states by algebra: set the known ones ($\\mathrm{O} = -2$ except in peroxides and fluorides; $\\mathrm{F} = -1$ always; $\\mathrm{K}, \\mathrm{Na} = +1$) and solve for the unknown so the sum equals the species charge.",
+      "formulas": [
+        "\\text{(sum of oxidation states)} = \\text{(charge on the species)}"
+      ],
+      "body": "**Step 1 — Dichromate (option A).**\n$2x + 7(-2) = -2 \\Rightarrow 2x = 12 \\Rightarrow x = +6$. ✔ A is correct.\n\n**Step 2 — Permanganate (option B).**\n$+1 + x + 4(-2) = 0 \\Rightarrow x = +7$, not $+6$. ✘ B is wrong.\n\n**Step 3 — Thiosulphate (option C).**\n$2(+1) + 2x + 3(-2) = 0 \\Rightarrow$ average $x = +2$. But the ion is $[\\mathrm{S{-}SO_3}]^{2-}$: the central (sulphate-like) S is $+6$ and the terminal (sulphane-like) S is $-2$ — two different oxidation states averaging $+2$. ✔ C is correct.\n\n**Step 4 — Oxygen difluoride (option D).**\nFluorine is *always* $-1$: $x + 2(-1) = 0 \\Rightarrow x = +2$ for O, not $-2$. ✘ D is wrong.",
+      "commonMistakes": "Applying 'oxygen is always $-2$' to $\\mathrm{OF_2}$ — fluorine is more electronegative and takes priority. Assuming both S atoms in thiosulphate must share the average value $+2$.",
+      "alternativeMethod": null,
+      "verification": "Cross-check C: the S–S bond is nonpolar (same element), so the electron pair is shared equally — the terminal S keeps its $-2$-like character while the S bonded to three O's counts as $+6$. Average $+2$ matches the algebra. ✓",
+      "sourceReferences": [
+        "JEE Main 2025, Chemistry — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  }
+]

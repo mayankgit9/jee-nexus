@@ -1,0 +1,148 @@
+[
+  {
+    "publicId": "JEM-2024-MAT-006",
+    "subjectKey": "mathematics",
+    "chapterKey": "mathematics:sequences-series",
+    "subtopic": "Term from partial sums",
+    "type": "numerical",
+    "text": "If the sum of the first $n$ terms of a series is $S_n = 3n^2 + 2n$, then the $10$th term of the series is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "medium",
+    "sourceYear": 2024,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "sequences",
+      "partial sums",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "The $n$th term is the difference of consecutive partial sums: $a_n = S_n - S_{n-1}$ (with $a_1 = S_1$).",
+      "formulas": [
+        "a_n = S_n - S_{n-1}"
+      ],
+      "body": "**Step 1 — Write the difference.**\n$$a_n = S_n - S_{n-1} = \\left(3n^2 + 2n\\right) - \\left(3(n-1)^2 + 2(n-1)\\right)$$\n\n**Step 2 — Simplify.**\n$$= 3\\left[n^2 - (n-1)^2\\right] + 2 = 3(2n - 1) + 2 = 6n - 1$$\n\n**Step 3 — Evaluate at $n = 10$.**\n$$a_{10} = 6(10) - 1 = 59$$",
+      "commonMistakes": "Plugging $n = 10$ into $S_n$ itself ($S_{10} = 320$ — that is a sum, not a term). Off-by-one in $S_{n-1}$ (using $S_{n+1}$).",
+      "alternativeMethod": null,
+      "verification": "Consistency: $a_1 = 6(1) - 1 = 5$ and $S_1 = 3 + 2 = 5$ ✓. Also $a_{10} = S_{10} - S_9 = 320 - 261 = 59$ directly. ✓",
+      "sourceReferences": [
+        "JEE Main 2024, Mathematics — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "59",
+    "numericalTolerance": "0.001"
+  },
+  {
+    "publicId": "JEM-2024-MAT-007",
+    "subjectKey": "mathematics",
+    "chapterKey": "mathematics:coordinate-geometry",
+    "subtopic": "Point-to-line distance",
+    "type": "mcq_single",
+    "text": "The distance of the point $(3, -4)$ from the line $3x + 4y + 5 = 0$ is:",
+    "options": [
+      "$\\dfrac{2}{5}$",
+      "$\\dfrac{1}{5}$",
+      "$\\dfrac{3}{5}$",
+      "$2$"
+    ],
+    "correctOptions": [
+      0
+    ],
+    "difficulty": "easy",
+    "sourceYear": 2024,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "straight lines",
+      "distance formula",
+      "mcq"
+    ],
+    "solution": {
+      "keyConcept": "The perpendicular distance from $(x_1, y_1)$ to $ax + by + c = 0$ is $|ax_1 + by_1 + c| / \\sqrt{a^2 + b^2}$.",
+      "formulas": [
+        "d = \\dfrac{|ax_1 + by_1 + c|}{\\sqrt{a^2 + b^2}}"
+      ],
+      "body": "**Step 1 — Substitute the point into the line expression.**\n$$3(3) + 4(-4) + 5 = 9 - 16 + 5 = -2$$\n\n**Step 2 — Apply the formula.**\n$$d = \\frac{|{-2}|}{\\sqrt{3^2 + 4^2}} = \\frac{2}{\\sqrt{25}} = \\frac{2}{5}$$",
+      "commonMistakes": "Dropping the absolute value (reporting $-2/5$). Arithmetic slips in $9 - 16 + 5$ (it is $-2$, not $-12$ or $2$).",
+      "alternativeMethod": null,
+      "verification": "Magnitude check: the numerator $|{-2}| = 2$ and the denominator $\\sqrt{25} = 5$ are both exact — the distance is exactly $0.4$. ✓",
+      "sourceReferences": [
+        "JEE Main 2024, Mathematics — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  },
+  {
+    "publicId": "JEM-2025-MAT-008",
+    "subjectKey": "mathematics",
+    "chapterKey": "mathematics:binomial-theorem",
+    "subtopic": "Term independent of x",
+    "type": "numerical",
+    "text": "The term independent of $x$ in the expansion of $\\left(x + \\dfrac{1}{x^2}\\right)^{9}$ is:",
+    "options": [],
+    "correctOptions": null,
+    "difficulty": "medium",
+    "sourceYear": 2025,
+    "sourceShift": "Shift 1",
+    "tags": [
+      "binomial expansion",
+      "general term",
+      "numerical"
+    ],
+    "solution": {
+      "keyConcept": "The general term of $(a + b)^n$ is $\\binom{n}{k}a^{n-k}b^k$. Collect the power of $x$ and set its exponent to zero.",
+      "formulas": [
+        "T_{k+1} = \\binom{9}{k}\\, x^{\\,9-k}\\, \\left(x^{-2}\\right)^{k} = \\binom{9}{k} x^{\\,9-3k}"
+      ],
+      "body": "**Step 1 — General term.**\n$$T_{k+1} = \\binom{9}{k}\\, x^{9-k}\\cdot x^{-2k} = \\binom{9}{k}\\, x^{\\,9-3k}$$\n\n**Step 2 — Impose independence of $x$.**\n$$9 - 3k = 0 \\;\\Rightarrow\\; k = 3$$\n\n**Step 3 — Evaluate the coefficient.**\n$$\\binom{9}{3} = \\frac{9 \\cdot 8 \\cdot 7}{3!} = 84$$",
+      "commonMistakes": "Solving $9 - k - 2k$ incorrectly (getting $k = 9/2$ — a non-integer means you slipped; here $9-3k = 0$ has the clean root $k = 3$). Computing $\\binom{9}{3}$ as $9!/(3!)$ without the $6!$ in the denominator.",
+      "alternativeMethod": null,
+      "verification": "Alternative count: expanding fully, the exponents of $x$ run $9, 6, 3, 0, \\dots, -18$ in steps of $3$ — the exponent $0$ occurs exactly once, at $k = 3$. ✓",
+      "sourceReferences": [
+        "JEE Main 2025, Mathematics — standard formulation"
+      ],
+      "isAiGenerated": true
+    },
+    "numericalAnswer": "84",
+    "numericalTolerance": "0.001"
+  },
+  {
+    "publicId": "JEM-2025-MAT-009",
+    "subjectKey": "mathematics",
+    "chapterKey": "mathematics:application-of-derivatives",
+    "subtopic": "Existence of local extrema",
+    "type": "mcq_single",
+    "text": "The function $f(x) = x^3 - 3x^2 + 3x$ has:",
+    "options": [
+      "a local maximum at $x = 1$",
+      "a local minimum at $x = 1$",
+      "both a local maximum and a local minimum",
+      "no local extremum"
+    ],
+    "correctOptions": [
+      3
+    ],
+    "difficulty": "medium",
+    "sourceYear": 2025,
+    "sourceShift": "Shift 2",
+    "tags": [
+      "extrema",
+      "first derivative test",
+      "mcq"
+    ],
+    "solution": {
+      "keyConcept": "A local extremum requires the derivative to change sign at a critical point. Here $f'(x) = 3(x-1)^2$ vanishes at $x = 1$ but keeps the same sign on both sides.",
+      "formulas": [
+        "f'(x) = 3(x-1)^2 \\ge 0 \\quad \\forall x \\in \\mathbb{R}"
+      ],
+      "body": "**Step 1 — Differentiate and factor.**\n$$f'(x) = 3x^2 - 6x + 3 = 3(x - 1)^2 \\ge 0$$\n\n**Step 2 — First-derivative test.**\n$f'(x) > 0$ on both sides of $x = 1$ (e.g. $f'(0.9) = f'(1.1) = 0.03 > 0$). The derivative does not change sign, so $x = 1$ is a point of inflection with a horizontal tangent, not an extremum.\n\n**Step 3 — Deeper structure.**\n$$f(x) = x^3 - 3x^2 + 3x = (x-1)^3 + 1$$\nwhich is a strictly increasing cube shifted to $(1, 1)$ — monotonic on all of $\\mathbb{R}$.",
+      "commonMistakes": "Concluding '$f'(1) = 0$, therefore it is a max or min' — a zero derivative alone is not sufficient. Deciding between max/min from $f''(1) = 0$ being inconclusive and then guessing.",
+      "alternativeMethod": null,
+      "verification": "Monotonicity check: for $a < b$, $(a-1)^3 < (b-1)^3$, so $f(a) < f(b)$ — $f$ is strictly increasing everywhere, which rules out any local extremum. ✓",
+      "sourceReferences": [
+        "JEE Main 2025, Mathematics — standard formulation"
+      ],
+      "isAiGenerated": true
+    }
+  }
+]
