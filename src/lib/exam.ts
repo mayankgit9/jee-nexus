@@ -32,15 +32,15 @@ export function gradeMcqMulti(selected: number[], correct: number[], marking: { 
   const right = sel.filter((s) => correct.includes(s))
 
   if (!marking.partial) {
-    const all = wrong.length === 0 && right === correct.length
+    const all = wrong.length === 0 && right.length === correct.length
     return { isCorrect: all, marks: all ? marking.correct : 0, attempted: true }
   }
   // Partial marking (JEE 2025 style): any wrong option -> 0
-  if (wrong.length > 0 || right === 0) return { isCorrect: false, marks: 0, attempted: true }
-  if (right === correct.length) return { isCorrect: true, marks: 4, attempted: true }
+  if (wrong.length > 0 || right.length === 0) return { isCorrect: false, marks: 0, attempted: true }
+  if (right.length === correct.length) return { isCorrect: true, marks: 4, attempted: true }
   // partial credit: chose k of n correct, none wrong
   const n = correct.length
-  const k = right
+  const k = right.length
   const marks = n === 4 ? (k === 3 ? 3 : k === 2 ? 2 : 1) : n === 3 ? (k === 2 ? 2 : 1) : 1
   return { isCorrect: false, marks, attempted: true }
 }
