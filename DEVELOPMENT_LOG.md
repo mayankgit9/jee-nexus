@@ -5,6 +5,52 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-23 — M8 · Admin dashboard + import pipeline
+
+### Implemented
+- **Import pipeline** (`src/lib/import.ts`): row-level validation (subject/chapter keys, option
+  counts, correct-option ranges, mcq_single/mcq_multi cardinality, numerical answer+tolerance,
+  solution minimums, image url/altText), contentHash duplicate detection (cross-batch + in-batch),
+  publicId collision handling, ImportJob tracking with row-level errors.
+  Imported questions enter as `imported` — **never auto-verified**.
+- **Admin APIs** (all `requireAdmin`, server-side role checks):
+  - `POST /api/admin/import` — bulk import (max 500/batch, rate-limited)
+  - `GET/PATCH /api/admin/questions` — filtered list + edit (text, difficulty, options,
+    correctOptions, numericalAnswer, solution upsert with version increment) + verify/reject
+    transitions (verify stamps solution.verifiedAt)
+  - `GET/PATCH /api/admin/reports` — open report queue; resolve flags verified questions back
+    to needs_review
+  - `GET /api/admin/stats` — pipeline counts, subject/year distribution, totals, import job history
+- **Admin dashboard UI** (`AdminView.tsx`): Overview (pipeline badges, subject/year splits, import
+  jobs), Import tab (file upload / paste JSON / load example / per-row error report), Questions tab
+  (search + status filter + pagination + expandable rows with options + Verify/Needs-review/Reject),
+  Reports tab (resolve/dismiss). Admin nav item renders only for admin role.
+- Admin bootstrap: first user OR `ADMIN_EMAILS` whitelist (env).
+
+### Bugs found & fixed during verification
+- `api()` client helper hardcoded POST for bodies — admin PATCH actions returned 405; helper now
+  accepts an explicit method. Caught by browser network trace.
+- E2E harness bugs (cookie leak in anonymous check, wrong import-job row, non-idempotent signup,
+  always-zero fail counter) — fixed in the test scripts themselves.
+
+### Tests executed
+- `scripts/e2e_admin_test.py`: **24/24** — role bootstrap, student 403 / anonymous 401 access
+  control, mixed-batch import (2 valid / 3 invalid with reasons), duplicate re-import detection,
+  verification workflow, edit persistence, report lifecycle, stats + job tracking.
+- Full regression: API 23/23, CBT 23/23 — **70/70 total**.
+- Browser: admin dashboard renders (pipeline overview), example import inserts (1/1) and appears
+  in question list, Verify click persists to DB (network-traced PATCH 200).
+
+### Deployment status
+- GitHub: incremental pushes throughout.
+- Landing: roadmap updated → https://jee-nexus-5wd.pages.dev
+
+### Next
+- M9: Supabase PostgreSQL migrations + RLS, CI workflow, CONTRIBUTING
+- Question bank expansion (verified batches)
+
+---
+
 ## 2026-11-23 — M6 · CBT examination engine
 
 ### Incident note
