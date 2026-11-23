@@ -209,7 +209,7 @@ export function ExamRunner({ data, onFinish }: { data: StartResponse; onFinish: 
             </div>
             <div className="text-[15px] leading-relaxed"><MathText text={q.text} /></div>
             {q.images.map((img, i) => (
-              // eslint-disable-next-line @next/next/no-img-element
+               
               <img key={i} src={img.url} alt={img.altText} className="mx-auto my-4 max-h-[380px] rounded-lg border border-border p-2" loading="lazy" />
             ))}
 
