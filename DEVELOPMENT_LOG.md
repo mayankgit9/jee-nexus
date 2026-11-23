@@ -5,6 +5,60 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-23 — M12 · Full app deployed to Cloudflare Workers (live)
+
+### Implemented
+- **Sandbox recovery**: this session started from an M7-era filesystem snapshot —
+  restored the repo from origin/main (38 commits: all of M10 + M11 intact; local-only
+  commit preserved on branch `backup-local-0e9b1ac` after `git cherry` showed its
+  content superseded upstream). Lost with the snapshot: `.secrets/` (jee_app DB
+  password, GH_PAT, Supabase management PAT) and the Postgres-era `.env`.
+- **Production deploy LIVE** — https://jee-nexus-app.jee-nexus.workers.dev :
+  - New user-provided account-scoped CF token (replaces the Pages-only CF_PAT):
+    claimed `jee-nexus.workers.dev` (the account had never created a subdomain),
+    uploaded the OpenNext worker `jee-nexus-app` with ASSETS + ADMIN_EMAILS bindings.
+  - **db.ts dual-source DB path on Workers**: HYPERDRIVE binding if bound, else the
+    DATABASE_URL secret over direct TCP (pg-worker adapter / cloudflare:sockets,
+    Supabase session pooler). An unconfigured DB no longer crashes the isolate — the
+    worker boots, UI/static routes serve, DB routes fail per-request until the secret
+    or binding is added. Verified live: `/` 200 with the app shell, CSS/logo assets
+    200, `/api/taxonomy` clean JSON 500.
+  - **Deploy hardening (all found live)**: `bunx cloudflare` is not a binary — the
+    OpenNext CLI is `opennextjs-cloudflare`; `source` without `set -a` doesn't export
+    the token (curl worked because the shell expanded `$VAR` in-arg; wrangler, a child
+    process, saw nothing); with this token scope wrangler's post-deploy status read
+    (`GET /workers/workers/{name}`) returns 10007 even though the upload succeeded —
+    the deploy script now judges success by the "Uploaded" marker and force-enables
+    the workers.dev route via `POST .../scripts/{name}/subdomain` (the route ships
+    disabled; the URL 404s with error 1042 until enabled). `workers_dev: true` added
+    to wrangler.jsonc; `.open-next/` gitignored.
+  - Landing page: nav + hero CTA link to the live app, test counter 70→82, roadmap
+    updated; redeployed to Pages. README: hosting row + production-deployment section.
+
+### Tests executed
+- `tsc --noEmit` clean for src/ + scripts (pre-existing errors remain only in the
+  `examples/` and `skills/` scaffold dirs, out of app scope); eslint 0 errors
+  (7 warnings, all unused-disable directives in the generated worker client).
+- OpenNext build green (all 20 API routes dynamic — no build-time DB access).
+- Live smoke: `/` 200, static assets 200, `/api/taxonomy` JSON 500 as expected
+  (no DB secret yet). GitHub CI could not run on these changes — no push (below).
+
+### Deployment status
+- App live at https://jee-nexus-app.jee-nexus.workers.dev (UI + static assets).
+- Landing (Pages) links to it.
+
+### Remaining (honest)
+- **DB wiring needs the jee_app password** — it existed only in `.secrets/supabase_db.env`
+  (gitignored by design) and was lost with the sandbox snapshot. One step once provided:
+  `bunx wrangler secret put DATABASE_URL --name jee-nexus-app` with the session-pooler
+  URL (or reset via the Supabase dashboard, then `ALTER ROLE jee_app ... PASSWORD`).
+  DB-backed routes return 500 until then. Hyperdrive remains unavailable: the token
+  lacks Hyperdrive:Edit (create returns 10001) — the direct-TCP fallback is deployed
+  instead, so Hyperdrive is now purely an optimization, not a blocker.
+- **GH_PAT lost** — commits from this session are local-only until
+  `.secrets/tokens.env` is recreated (push.sh now says so instead of failing silently).
+- Question bank depth: 28 of the 2019–2026 target.
+
 ## 2026-11-23 — M11 · Question bank batch 2 + Playwright browser suite + Cloudflare deploy scaffolding
 
 ### Implemented

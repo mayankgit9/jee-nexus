@@ -25,7 +25,7 @@ JEE NEXUS exists to give JEE Main aspirants the most faithful free practice expe
 | API | Next.js route handlers (server-side, session-guarded) |
 | Database | Prisma ORM — PostgreSQL (Supabase) in production and CI, connected as a dedicated `jee_app` role through the transaction pooler |
 | Auth | Email + password with scrypt hashing, httpOnly session cookies, role-based server-side guards |
-| Hosting | Cloudflare Pages — https://jee-nexus-5wd.pages.dev |
+| Hosting | Cloudflare Workers (app) — https://jee-nexus-app.jee-nexus.workers.dev · Cloudflare Pages (landing) — https://jee-nexus-5wd.pages.dev |
 
 ### Repository layout
 
@@ -63,6 +63,19 @@ Notes:
 - The schema is PostgreSQL-native (enums, jsonb, double precision, timestamptz). There is no SQLite fallback anymore — CI runs the same migrations on a Postgres 17 service container.
 - **Never** run `bun run db:push` against the Supabase URL — `scripts/db_push.sh` refuses it; the live schema is managed via `supabase/migrations/*.sql` through the SQL endpoint.
 - Production migrations: `python3 scripts/supabase_sql.py supabase/migrations/<file>.sql` (runs as the table owner).
+
+## Production deployment
+
+- **Landing (Cloudflare Pages):** `bash scripts/deploy_landing.sh`
+- **App (Cloudflare Workers via OpenNext):** `bash scripts/deploy_app_cloudflare.sh`
+  - Builds `.open-next/` and deploys the worker (`jee-nexus-app`) + static assets.
+    Prisma is dual-runtime: the node client for dev/CI, a pure-JS query-compiler
+    client (`src/generated/worker`, gitignored) bundled for Workers.
+  - DB access on Workers: the `DATABASE_URL` secret (Supabase **session** pooler as
+    `jee_app`) over direct TCP, or the optional HYPERDRIVE binding for pooling/cache
+    (needs a token with Hyperdrive:Edit) — see `wrangler.jsonc` and the deploy script.
+  - Token needs Workers Scripts:Edit; the workers.dev route is force-enabled by the
+    deploy script after upload.
 
 ## License & attribution
 

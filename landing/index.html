@@ -81,7 +81,7 @@
   <div class="nav-links">
     <a href="#features">Features</a><a href="#roadmap">Roadmap</a><a href="https://github.com/mayankgit9/jee-nexus" target="_blank" rel="noopener">GitHub</a>
   </div>
-  <a class="btn btn-mint" href="#cta">Open the app</a>
+  <a class="btn btn-mint" href="https://jee-nexus-app.jee-nexus.workers.dev" target="_blank" rel="noopener">Open the app</a>
 </div></nav>
 
 <header class="hero"><div class="grid-bg"></div><div class="glow"></div><div class="wrap" style="position:relative">
@@ -89,13 +89,13 @@
   <h1>Practice JEE Main the way<br /><span class="grad">you'll actually write it.</span></h1>
   <p class="sub">A premium, free platform for previous-year questions — with authentic exam diagrams, deeply detailed step-by-step solutions, and a true NTA-style computer based test experience.</p>
   <div class="cta" id="cta">
-    <a class="btn btn-mint" href="https://github.com/mayankgit9/jee-nexus" target="_blank" rel="noopener">★ Star on GitHub</a>
-    <a class="btn btn-ghost" href="#roadmap">Development roadmap</a>
+    <a class="btn btn-mint" href="https://jee-nexus-app.jee-nexus.workers.dev" target="_blank" rel="noopener">Open the app →</a>
+    <a class="btn btn-ghost" href="https://github.com/mayankgit9/jee-nexus" target="_blank" rel="noopener">★ Star on GitHub</a>
   </div>
   <div class="stats">
     <div class="stat"><b>2019–2026</b><span>PYQ coverage target</span></div>
     <div class="stat"><b>3 Subjects</b><span>Physics · Chemistry · Maths</span></div>
-    <div class="stat"><b>70/70</b><span>Automated tests passing</span></div>
+    <div class="stat"><b>82/82</b><span>Automated tests passing</span></div>
     <div class="stat"><b>0 ₹</b><span>Free, forever</span></div>
   </div>
 </div></header>
@@ -127,7 +127,8 @@
     <div class="phase"><span class="badge b-done">DONE</span><div><h3>Supabase production database + CI</h3><p>18-table PostgreSQL 17.6 schema with Row Level Security live on Supabase; GitHub Actions CI running lint, unit and all three E2E suites — green.</p></div></div>
     <div class="phase"><span class="badge b-done">DONE</span><div><h3>Production cutover — app runs on live PostgreSQL</h3><p>Dedicated jee_app database role, Prisma on native Postgres types (enums, jsonb, timestamptz), 70/70 E2E green against the live database, CI on Postgres 17 containers.</p></div></div>
     <div class="phase"><span class="badge b-done">DONE</span><div><h3>Question bank batch 2 + Playwright browser suite</h3><p>12 new PYQs (2024–2025) with independently verified answers; 12 scripted browser tests covering auth, practice, PYQ, the full CBT lifecycle and mobile — wired into CI.</p></div></div>
-    <div class="phase"><span class="badge b-live">NOW</span><div><h3>Question bank expansion + Cloudflare app deploy</h3><p>Importing verified PYQ batches across 2019–2026 through the admin pipeline; the Workers deployment is scaffolded and awaits a Hyperdrive-enabled API token.</p></div></div>
+    <div class="phase"><span class="badge b-done">DONE</span><div><h3>Full app deployed to Cloudflare Workers</h3><p>The complete Next.js app is live at jee-nexus-app.jee-nexus.workers.dev via OpenNext, with a pure-JS Prisma query compiler for the Workers runtime. One database secret remains to be wired.</p></div></div>
+    <div class="phase"><span class="badge b-live">NOW</span><div><h3>Question bank expansion 2019–2026</h3><p>Importing verified PYQ batches through the admin pipeline; Hyperdrive connection pooling to be added once a Hyperdrive-scoped token is available.</p></div></div>
   </div>
 </div></section>
 
