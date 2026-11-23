@@ -23,7 +23,8 @@ test('CBT: full exam lifecycle in the browser', async ({ page }) => {
   // ---- create a small custom test (5 min, physics) ----
   await page.goto('/#/mock')
   await page.getByRole('button', { name: /create custom test/i }).click()
-  await expect(page.getByText('Create a custom test')).toBeVisible()
+  // the dialog opens (role-scoped: the empty-state hint also mentions the words)
+  await expect(page.getByRole('heading', { name: 'Create a custom test' })).toBeVisible()
   await page.locator('#ct-title').fill('PW Test — physics 2q')
   await page.getByRole('button', { name: 'Physics', exact: true }).click()
   await page.locator('#ct-count').fill('2')
