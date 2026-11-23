@@ -5,6 +5,67 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-23 — M10 · Supabase production cutover — app runs on live PostgreSQL
+
+### Implemented
+- **DB access recovery**: the stashed `postgres` password was invalid (auth failed on both
+  pooler modes; the management password-reset endpoint does not exist for this PAT —
+  confirms the M9 finding). `postgres` cannot self-alter (privileged role). Path taken:
+  **dedicated `jee_app` login role** (`supabase/migrations/0003_app_role.sql`) — created via
+  the SQL endpoint (postgres has CREATEROLE), password set by `scripts/create_app_role.sh`
+  (random 48-hex, stored only in `.secrets/supabase_db.env`, gitignored). Grants: full DML
+  on public schema + permissive RLS policies scoped to `jee_app` + default privileges for
+  future tables. The app never connects as `postgres` — same trust model as service_role.
+- **Prisma schema rewritten for PostgreSQL** with exact parity to the live DDL:
+  `@@map`/`@map` to snake_case tables/columns (18 tables), native enums
+  (`question_type`, `difficulty`, `verification_status`, `app_role` — enums needed `@@map`
+  too, caught by runtime test), `Json` for all jsonb columns, `@db.DoublePrecision` for
+  marks/numerical answers (migration 0002 converts the 5 `numeric` columns),
+  `@db.Timestamptz(6)` everywhere.
+- **App code adapted to native types** (29 JSON.parse/stringify sites removed — jsonb now
+  arrives parsed; Float coercions for numerical answers; enum casts). Frontend contract
+  unchanged: the API layer already shipped parsed arrays.
+- **Diamond-FK cascade fix** (migration 0004): `exam_attempt_answers → exam_questions` edge
+  made CASCADE — exam deletion previously hit order-dependent RESTRICT failures.
+- **`db:push` production guard** (`scripts/db_push.sh`): refuses any supabase/pooler URL;
+  live schema is managed exclusively via `supabase/migrations/*.sql` + SQL endpoint.
+- **CI on PostgreSQL 17** service containers: applies the real migration files via psql,
+  plus a new `pg-parity` job (Prisma client vs live DDL: enums, jsonb roundtrips, Float,
+  timestamptz, upserts, P2002/P2003 mapping, cascade/restrict semantics — 29 checks),
+  then the existing three E2E suites against the migrated+seeded DB.
+- Seeded the live database: 3 subjects, 65 chapters, 16 questions (+36 options, 16 solutions).
+
+### Bugs found & fixed during verification
+- Prisma enum values emitted with Prisma-side names (`public."QuestionType"`) — enums need
+  `@@map("question_type")`; caught by the parity test.
+- Two unmapped columns (`isCorrect` → `is_correct` on attempts/exam answers) — caught by
+  parity test (P2022).
+- `prisma db execute` hangs through the Supabase **transaction** pooler on multi-statement
+  scripts — session pooler (5432) executes fine but jee_app must not own tables anyway;
+  CI therefore applies migrations with psql, production via the SQL endpoint.
+- Stale exported `DATABASE_URL` in the dev shell shadowed `.env` (P1012) — unset before
+  every prisma/dev-server invocation.
+
+### Tests executed
+- `scripts/test_pg_runtime.ts`: **29/29** against the live Supabase PostgreSQL as jee_app.
+- Full regression against the live DB through the dev server: API E2E **23/23**,
+  CBT E2E **23/23**, Admin E2E **24/24** — **70/70**.
+- `tsc --noEmit` clean for src/ + scripts (also fixed 5 pre-existing type errors);
+  `eslint` clean.
+- CI pushed with the new workflow (Postgres 17 services, psql migrations, pg-parity job).
+
+### Deployment status
+- App: dev runtime on live Supabase PostgreSQL (kwavmbowgvgphaccrqlc, ap-south-1) via
+  transaction pooler as jee_app. SQLite runtime retired.
+- GitHub: incremental pushes throughout.
+
+### Remaining (honest)
+- CI run on GitHub needs confirmation (pushed with the new workflow; locally verified
+  migrations are idempotent + suites green against the same DDL).
+- Cloudflare production deployment of the app itself (only the landing is live).
+- Playwright scripted browser suite still pending.
+- Question bank depth: 16 seeded PYQs vs the 2019–2026 target.
+
 ## 2026-11-23 — M9 · Supabase production database + CI + docs
 
 ### Implemented

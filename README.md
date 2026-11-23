@@ -23,22 +23,22 @@ JEE NEXUS exists to give JEE Main aspirants the most faithful free practice expe
 | Frontend | Next.js (App Router) + React + TypeScript + Tailwind CSS + shadcn/ui + Framer Motion |
 | Math & chemistry notation | KaTeX (+ mhchem for chemical equations) |
 | API | Next.js route handlers (server-side, session-guarded) |
-| Database | Prisma ORM — SQLite in the dev runtime, PostgreSQL (Supabase) in production |
+| Database | Prisma ORM — PostgreSQL (Supabase) in production and CI, connected as a dedicated `jee_app` role through the transaction pooler |
 | Auth | Email + password with scrypt hashing, httpOnly session cookies, role-based server-side guards |
 | Hosting | Cloudflare Pages — https://jee-nexus-5wd.pages.dev |
 
 ### Repository layout
 
 ```
-prisma/            Prisma schema (20 normalized models)
-supabase/           PostgreSQL migrations + Row Level Security (production DB)
+prisma/            Prisma schema (PostgreSQL: native enums, jsonb, timestamptz, @map parity)
+supabase/           PostgreSQL migrations + Row Level Security (production DB, applied via SQL endpoint)
 src/app/            Next.js app routes
 src/app/api/        Server-side API route handlers
 src/lib/            Domain types, auth, services, exam marking engine
 src/components/     UI components (shadcn/ui + custom)
 data/questions/     Question seed data (JSON, verified)
 landing/            Static public landing page (deployed to Cloudflare Pages)
-scripts/            Operational scripts (account checks, deployment, seeding)
+scripts/            Operational scripts (seeding, E2E, migrations, deployment)
 ```
 
 ## Data integrity policy
@@ -52,10 +52,17 @@ scripts/            Operational scripts (account checks, deployment, seeding)
 
 ```bash
 bun install
-cp .env.example .env        # fill in values
-bun run db:push             # sync Prisma schema
+cp .env.example .env        # point DATABASE_URL at PostgreSQL (local or Supabase)
+for f in supabase/migrations/*.sql; do psql "$DATABASE_URL" -f "$f"; done   # apply schema
+bunx prisma generate        # build the Prisma client from the schema
+bunx tsx scripts/seed.ts    # seed taxonomy + verified question batches
 bun run dev                 # start dev server on :3000
 ```
+
+Notes:
+- The schema is PostgreSQL-native (enums, jsonb, double precision, timestamptz). There is no SQLite fallback anymore — CI runs the same migrations on a Postgres 17 service container.
+- **Never** run `bun run db:push` against the Supabase URL — `scripts/db_push.sh` refuses it; the live schema is managed via `supabase/migrations/*.sql` through the SQL endpoint.
+- Production migrations: `python3 scripts/supabase_sql.py supabase/migrations/<file>.sql` (runs as the table owner).
 
 ## License & attribution
 
