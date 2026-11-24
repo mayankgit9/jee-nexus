@@ -1,0 +1,759 @@
+[
+ {
+  "publicId": "PYQ-2020-KYxZdnmX",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $α$ for which \n\n$4α\\int\\limits _{-1}^{2}e^{-α|x|}dx=5$, is:",
+  "options": [
+   "$\\log _{e}2$",
+   "$\\log _{e}\\sqrt{2}$",
+   "$\\log _{e}\\left (\\frac{4}{3}\\right )$",
+   "$\\log _{e}\\left (\\frac{3}{2}\\right )$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 20,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$4α\\int\\limits _{-1}^{2}e^{-α|x|}dx=5$\n\n$\\Rightarrow$ $4α\\int\\limits _{-1}^{0}e^{αx}dx+4α\\int\\limits _{0}^{2}e^{-αx}dx$ = 5\n\n$\\Rightarrow$ $4α\\left [\\frac{e^{αx}}{α}\\right ]_{-1}^{0}+4α\\left [\\frac{e^{-αx}}{-α}\\right ]_{0}^{2}$ = 5\n\n$\\Rightarrow$ $4e^{-2α}+4e^{-α}-3$ = 0\n\nLet $e^{-α} = t$\n\n$\\therefore$ $4t^{2} + 4t - 3 = 0$\n\n$\\Rightarrow$ t = $\\frac{1}{2}$\n\n$\\therefore$ $e^{-α} =$ $\\frac{1}{2}$\n\n$\\Rightarrow$ $α$ = $\\log _{e}2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-mfec6lSy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of ordered pairs (r, k) for which \n$6.^{35}C_{r}$\n $= (k^{2} - 3). ^{36}C_{r + 1}$, where k is an integer, is :",
+  "options": [
+   "6",
+   "3",
+   "2",
+   "4"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$6.^{35}C_{r}$\n $= (k^{2} - 3). ^{36}C_{r + 1}$\n\n$\\Rightarrow$ $6.^{35}C_{r}$\n $= (k^{2} - 3)$.$\\frac{36}{r+1}^{35}C_{r}$\n\n$\\Rightarrow$ $k^{2} - 3 =$ $\\frac{r+1}{6}$\n\nPossible values of r for integral values of k, are\n\nr = 5, 35\n\nnumber of ordered pairs are 4\n\n(5, 2), (5, –2), (35, 3), (35, –3)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-Qc54t3Qr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The coefficient of $x^{7}$\n in the expression \n\n$(1 + x)^{10} + x(1 + x)^{9}$\n $+ x^{2}(1 + x)^{8}$\n $+ ......+ x^{10}$ is:",
+  "options": [
+   "120",
+   "330",
+   "420",
+   "210"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(1 + x)^{10} + x(1 + x)^{9}$\n $+ x^{2}(1 + x)^{8}$\n $+ ......+ x^{10}$\n\nThis is a G.P where\n\nFirst term, $a = (1 + x)^{10}$\n\ncommon ratio, r = $\\frac{x}{1+x}$\n\nNumber of terms = 11\n\nSum of G.P\n\n= $\\frac{(1+x)^{10}\\left (1-\\left (\\frac{x}{1+x}\\right )^{11}\\right )}{1-\\frac{x}{1+x}}$\n\n$=  (1 + x)^{11}$\n $– x^{11}$\n\nSo Coefficient of $x^{7}$\n is $^{11}C_{7} = 330$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-4x6CObgJ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a_{1}$\n, $a_{2}$\n, $a_{3}$\n,....... be a G.P. such that \n$a_{1}$\n < 0, $a_{1}$\n + $a_{2}$\n = 4 and $a_{3}$\n + $a_{4}$\n = 16. \nIf $\\sum\\limits _{i=1}^{9}a_{i}=4λ$, then $λ$ is\nequal to:",
+  "options": [
+   "171",
+   "-171",
+   "-513",
+   "$\\frac{511}{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$a_{1}$\n + $a_{2}$\n = 4\n\n$\\Rightarrow$ $a_{1}$\n + $a_{1}$r\n = 4 ...(1)\n\n$a_{3}$\n + $a_{4}$\n = 16\n\n$\\Rightarrow$ $a_{1}r^{2}$\n + $a_{1}r^{3}$\n = 16 ...(2)\n\nDoing (1) $\\div$ (2), we get\n\nr = $\\pm$ 2\n\nIf r = 2, then $a_{1} =$ $\\frac{4}{3}$\n\nIf r = -2, then $a_{1} = -4$\n\nGiven $a_{1}$\n < 0\n\n$\\therefore$ $a_{1} = -4$\n\n$\\therefore$  $\\sum\\limits _{i=1}^{9}a_{i}$ = $\\frac{a\\left (r^{9}-1\\right )}{r-1}$ = 4$λ$\n\n$\\Rightarrow$ $\\frac{-4\\left ((-2)^{9}-1\\right )}{-2-1}$ = 4$λ$\n\n$\\Rightarrow$ $λ$ = -171",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-ev69psbe",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) of the region\n\n{(x, y) $\\in$ $R^{2} | 4x^{2}$ $\\leq$ y $\\leq$ 8x + 12} is :",
+  "options": [
+   "$\\frac{125}{3}$",
+   "$\\frac{128}{3}$",
+   "$\\frac{127}{3}$",
+   "$\\frac{124}{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For point of intersection\n $4x^{2}$\n = 8x + 12\n\n$\\Rightarrow$ $x^{2} - 2x - 3 = 0$\n\n$\\Rightarrow$ x = –1, 3 \n\n[IMG]\n\n\nRequired area = area of the shaded region\n\n= $\\int\\limits _{-1}^{3}\\left (8x+12-4x^{2}\\right )dx$\n\n= $4\\left [2.\\frac{x^{2}}{2}+3x-\\frac{x^{3}}{3}\\right ]_{-1}^{3}$\n\n= (36 + 36 – 36) – (4 – 12 + $\\frac{4}{3}$)\n\n= $\\frac{128}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-7th-january-evening-slot/ev69psbeho98LVk3LE7k9k2k5fjbh1k-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 7th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-HFYRDICg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{a}$\n, $\\vec{b}$\n and $\\vec{c}$\n be three unit vectors such that\n\n$\\vec{a}+⃗{b}+\\vec{c}=\\vec{0}$. If $λ=\\vec{a}.⃗{b}+⃗{b}.\\vec{c}+\\vec{c}.\\vec{a}$ and\n\n$\\vec{d}=\\vec{a}\\times ⃗{b}+⃗{b}\\times \\vec{c}+\\vec{c}\\times \\vec{a}$, then the ordered pair, $\\left (λ,\\vec{d}\\right )$ is equal to :",
+  "options": [
+   "$\\left (\\frac{3}{2},3\\vec{a}\\times \\vec{c}\\right )$",
+   "$\\left (-\\frac{3}{2},3\\vec{c}\\times \\vec{b}\\right )$",
+   "$\\left (-\\frac{3}{2},3\\vec{a}\\times \\vec{b}\\right )$",
+   "$\\left (\\frac{3}{2},3\\vec{b}\\times \\vec{c}\\right )$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\vec{a}+⃗{b}+\\vec{c}=\\vec{0}$\n\n$\\Rightarrow$ $\\left |\\vec{a}+\\vec{b}+\\vec{c}\\right |^{2}$ = 0\n\n$\\Rightarrow$ $\\left |\\vec{a}\\right |^{2}$ + $\\left |\\vec{b}\\right |^{2}$ + $\\left |\\vec{c}\\right |^{2}$ + \n$2\\left (\\vec{a}.\\vec{b}\\right )$ + $2\\left (\\vec{b}.\\vec{c}\\right )$ + $2\\left (\\vec{c}.\\vec{a}\\right )$ = 0\n\n$\\Rightarrow$ 3 + $2\\left (\\vec{a}.\\vec{b}+\\vec{b}.\\vec{c}+\\vec{c}.\\vec{a}\\right )$ = 0\n\n$\\Rightarrow$ 3 + 2$λ$ = 0\n\n$\\Rightarrow$ $λ$ = $-\\frac{3}{2}$\n\n$\\vec{d}=\\vec{a}\\times ⃗{b}+⃗{b}\\times \\vec{c}+\\vec{c}\\times \\vec{a}$\n\n= $\\vec{a}\\times \\vec{b}+\\vec{b}\\times \\left (-\\vec{a}-\\vec{b}\\right )+\\left (-\\vec{a}-\\vec{b}\\right )\\times \\vec{a}$\n\n= $\\vec{a}\\times \\vec{b}-\\vec{b}\\times \\vec{a}+$ $\\vec{b}\\times \\vec{b}-\\vec{a}\\times \\vec{a}-\\vec{b}\\times \\vec{a}$\n\n= $\\vec{a}\\times \\vec{b}+\\vec{a}\\times \\vec{b}+\\vec{a}\\times \\vec{b}$\n\n= $3\\left (\\vec{a}\\times \\vec{b}\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-jDnLrPSQ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α$ and $β$ be the roots of the equation $x^{2}$\n - x - 1 = 0. \nIf $p_{k}$\n = $(α)^{k}+(β)^{k}$\n, k $\\geq$ 1, then which one\nof the following statements is not true?",
+  "options": [
+   "$(p_{1} + p_{2} + p_{3} + p_{4} + p_{5}) = 26$",
+   "$p_{5} = 11$",
+   "$p_{3} = p_{5} – p_{4}$",
+   "$p_{5} = p_{2}$ · $p_{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x^{2}$\n - x - 1 = 0\n\n$\\therefore$ $α^{2}$\n - $α$ - 1 = 0\n\n$\\Rightarrow$ $α^{2}$ = $α$ + 1\n\n$\\therefore$ $α^{3}$ = $α^{2}$ + $α$\n\n= $α$ + 1 + $α$\n\n= 2$α$ + 1\n\nNow $α^{4}$ = 2$α^{2}$ + $α$\n\n= 2($α$ + 1) + $α$\n\n= 3$α$ + 2\n\nNow $α^{5}$ = 3$α^{2}$ + 2$α$\n\n= 3($α$ + 1) + 2$α$\n\n= 5$α$ + 3\n\nGiven $p_{k}$\n = $(α)^{k}+(β)^{k}$\n\n$\\therefore$ $p_{5} =$ $(α)^{5}+(β)^{5}$\n\n= 5$α$ + 3 + 5$β$ + 3\n\n= 5($α$ + $β$) + 6\n\n= 5(1) + 6 [As $α$ + $β$ = 1]\n\n= 11\n\nNow $p_{2}$ · $p_{3}$\n\n= ($α^{2}$ + $β^{2}$).($α^{3}$ + $β^{3}$)\n\n= ( $α$ + 1 + $β$ + 1)(2$α$ + 1 + 2$β$ + 1)\n\n= ( $α$ + $β$ + 2)(2($α$ + $β$) + 2)\n\n= (1 + 2)(2 + 2) = 12\n\n$\\therefore$ $p_{5}$ $\\neq$ $p_{2}$ ·$p_{3}$\n\nSo option (D) is wrong.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-nXpEQlCF",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution curve of the differential equation,\n\n$\\left (y^{2}-x\\right )\\frac{dy}{dx}=1$, satisfying y(0) =\n1. This curve intersects the x-axis at a point whose abscissa is :",
+  "options": [
+   "2 + e",
+   "-e",
+   "2",
+   "2 - e"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (y^{2}-x\\right )\\frac{dy}{dx}=1$\n\n$\\Rightarrow$ $\\frac{dx}{dy}$ $+ x = y^{2}$\n\nI.F = $e^{\\int dy}$ $= e^{y}$\n\nSolution is given by\n\n$xe^{y} =$ $\\int y^{2}e^{y}dy$\n\n$\\Rightarrow$ $xe^{y} = (y^{2} – 2y + 2)e^{y} + C$\n\ny(0) = 1 means x = 0, y = 1\n\n$\\therefore$ C = -e\n\n$\\therefore$ $xe^{y} = (y^{2} – 2y + 2)e^{y} - e$\n\nput y = 0\n\n$\\therefore$ x = 0 – 0 + 2 – e\n\n$\\Rightarrow$ x = 2 - e",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-KozcYkC6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The locus of the mid-points of the perpendiculars drawn from points on the line, x = 2y to the line\nx = y is :",
+  "options": [
+   "3x - 2y = 0",
+   "7x - 5y = 0",
+   "2x - 3y = 0",
+   "5x - 7y = 0"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nSlope of line y = x is 1\n\nLine AB is perpendicular to line y = x so\n\nSlope of AB = -1\n\nAlso slope of AB = $\\frac{α-β}{2α-β}$\n\n$\\therefore$ $\\frac{α-β}{2α-β}$ = -1\n\n$\\Rightarrow$ 3$α$ = 2$β$\n\nh = $\\frac{2α+β}{2}$\n\n$\\Rightarrow$ 2h = $\\frac{4α+2β}{2}$ = $\\frac{4α+3α}{2}$ = $\\frac{7α}{2}$\n\nAlso k = $\\frac{α+β}{2}$\n\n$\\Rightarrow$ 2k = $\\frac{5α}{2}$\n\nSo $\\frac{h}{k}=\\frac{7}{5}$\n\n$\\Rightarrow$ 5h = 7k \n\n$\\Rightarrow$ 5x = 7y",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-7th-january-evening-slot/KozcYkC6ueHANPacpT7k9k2k5fmtcf6-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 7th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-jKg7va9m",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be a function of x satisfying \n\n$y\\sqrt{1-x^{2}}=k-x\\sqrt{1-y^{2}}$ where k is a constant and\n\n$y\\left (\\frac{1}{2}\\right )=-\\frac{1}{4}$. Then $\\frac{dy}{dx}$ at x = $\\frac{1}{2}$, is equal to :",
+  "options": [
+   "$\\frac{2}{\\sqrt{5}}$",
+   "$-\\frac{\\sqrt{5}}{2}$",
+   "$\\frac{\\sqrt{5}}{2}$",
+   "$-\\frac{\\sqrt{5}}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$y\\sqrt{1-x^{2}}=k-x\\sqrt{1-y^{2}}$ ....(1)\n\nOn differentiating both side of eq. (1) w.r.t. x we\nget,\n\n$\\frac{dy}{dx}\\sqrt{1-x^{2}}-y\\frac{2x}{2\\sqrt{1-x^{2}}}$\n\n= 0 - $\\sqrt{1-y^{2}}+\\frac{xy}{\\sqrt{1-y^{2}}}\\frac{dy}{dx}$\n\nPut x = $\\frac{1}{2}$ and y = $-\\frac{1}{4}$, we get\n\n$\\frac{dy}{dx}\\frac{\\sqrt{3}}{2}-\\left (-\\frac{1}{4}\\right )\\frac{\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}}$\n\n= $-\\frac{\\sqrt{15}}{4}+\\frac{-\\frac{1}{8}}{\\frac{\\sqrt{15}}{4}}.\\frac{dy}{dx}$\n\n$\\therefore$ $\\frac{dy}{dx}=-\\frac{\\sqrt{5}}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-jCA7Iy7z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $θ_{1}$\n and $θ_{2}$\n be respectively the smallest and the largest values of $θ$ in (0, 2$π$) - {$π$} which satisfy\nthe equation,\n\n$2\\cot ^{2}θ$ - $\\frac{5}{\\sin θ}$ + 4 = 0, then\n\n$\\int\\limits _{θ_{1}}^{θ_{2}}\\cos ^{2}3θdθ$ is equal to :",
+  "options": [
+   "$\\frac{π}{9}$",
+   "$\\frac{2π}{3}$",
+   "$\\frac{π}{3}$",
+   "$\\frac{π}{3}+\\frac{1}{6}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2\\cot ^{2}θ$ - $\\frac{5}{\\sin θ}$ + 4 = 0\n\n$\\Rightarrow$ $2\\frac{\\cos ^{2}θ}{\\sin ^{2}θ}-\\frac{5}{\\sin θ}+4$ = 0\n\n$\\Rightarrow$ $2\\sin ^{2}$\n$θ$ – 5sin$θ$ + 2 = 0\n \n\n$\\Rightarrow$ (2sin$θ$ – 1)(sin$θ$ – 2) = 0\n\n$\\therefore$ sin$θ$ = $\\frac{1}{2}$ [ sin$θ$ = 2 not possible]\n\n$\\therefore$ $θ_{1}$ = $\\frac{π}{6}$ and $θ_{2}$ = $\\frac{5π}{6}$ as $θ_{1}$ $<$ $θ_{2}$\n\n$\\therefore$ I = $\\int\\limits _{\\frac{π}{6}}^{\\frac{5π}{6}}\\cos ^{2}3θdθ$\n\n= $\\int\\limits _{\\frac{π}{6}}^{\\frac{5π}{6}}\\frac{1+\\cos 6θ}{2}dθ$\n\n= $\\frac{1}{2}\\left [θ+\\frac{\\sin 6θ}{2}\\right ]_{\\frac{π}{6}}^{\\frac{5π}{6}}$\n\n= $\\frac{π}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-n1yDVpjI",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{3+i\\sin θ}{4-i\\cos θ}$, $θ$ $\\in$ [0, 2$π$], is a real number, then an argument of \nsin$θ$ + icos$θ$ is :",
+  "options": [
+   "$π-\\tan ^{-1}\\left (\\frac{3}{4}\\right )$",
+   "$-\\tan ^{-1}\\left (\\frac{3}{4}\\right )$",
+   "$\\tan ^{-1}\\left (\\frac{4}{3}\\right )$",
+   "$π-\\tan ^{-1}\\left (\\frac{4}{3}\\right )$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let z = $\\frac{3+i\\sin θ}{4-i\\cos θ}$\n\n= $\\frac{3+i\\sin θ}{4-i\\cos θ}\\times \\frac{(4+i\\cos θ)}{(4+i\\cos θ)}$\n\n= $\\frac{(12-\\sin θ\\cos θ)+i(4\\sin θ+3\\cos θ)}{16+\\cos ^{2}θ}$\n\nAs Z is purely real\n\n$\\therefore$ 4sin$θ$ + 3cos$θ$ = 0\n\n$\\Rightarrow$ tan $θ$ = $-\\frac{3}{4}$\n\n$\\therefore$ $θ$ lies in the $2^{nd}$ quadrant then \n\narg(sinθ + icosθ) = $π$ + $\\tan ^{-1}\\left (\\frac{\\cos θ}{\\sin θ}\\right )$\n\n= $π-\\tan ^{-1}\\left (\\frac{4}{3}\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-mmwaTQKi",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let ƒ(x) be a polynomial of degree 5 such that x = ±1 are its critical points.\n\nIf $\\lim _{x\\to 0}\\left (2+\\frac{f(x)}{x^{3}}\\right )=4$, then which one of the following is not true?",
+  "options": [
+   "ƒ(1) - 4ƒ(-1) = 4.",
+   "x = 1 is a point of minima and x = -1 is a point of maxima of ƒ.",
+   "x = 1 is a point of maxima and x = -1 is a point of minimum of ƒ.",
+   "ƒ is an odd function."
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "let $f(x) = ax^{5} + bx^{4} + cx^{3} + dx^{2} + ex + f$\n\nGiven $\\lim _{x\\to 0}\\left (2+\\frac{f(x)}{x^{3}}\\right )=4$\n\n$\\Rightarrow$ $\\lim _{x\\to 0}\\left (2+\\frac{ax^{5}+bx^{4}+cx^{3}+dx^{2}+ex+f}{x^{3}}\\right )$ = 4\n\nAs this limit exists so d = e = f = 0\n\n$\\therefore$ $f(x) = ax^{5} + bx^{4} + cx^{3}$\n\n$\\lim _{x\\to 0}\\left (2+\\frac{ax^{5}+bx^{4}+cx^{3}}{x^{3}}\\right )$ = 4\n\n$\\Rightarrow$ 2 + c = 4\n\n$\\Rightarrow$ c = 2\n\n$\\therefore$ $f(x) = ax^{5} + bx^{4} + 2x^{3}$\n\n$\\Rightarrow$ $f'(x) = 5ax^{4} + 4bx^{3} + 6x^{2}$\n\nAs x = ±1 are its critical points so f'(x) = 0 at x = ±1.\n\nf'(1) = 5a + 4b + 6 = 0 ....(1)\n\nand f'(-1) = 5a - 4b + 6 = 0 .....(2)\n\nSolving (1) and (2),\n\na = $-\\frac{6}{5}$ and b = 0\n\n$\\therefore$ f(x) = $-\\frac{6}{5}x^{5}+2x^{3}$\n\nSo $f'(x) = -6x^{4} +  6x^{2} = 6x^{2}(1 + x)(1 - x)$\n\n Sign scheme for f'(x)\n\n\n[IMG]\n\n\nIt is clear that maxima at x = 1 and minima at x\n= –1.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-7th-january-evening-slot/mmwaTQKip2yYQJU89z7k9k2k5fo9w02-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 7th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-mW5EIn2E",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let X = {n $\\in$ N : 1 $\\leq$ n $\\leq$ 50}. If\n\nA = {n $\\in$ X: n is a multiple of 2} and\n\nB = {n $\\in$ X: n is a multiple of 7}, then the number of elements in the smallest subset of X\ncontaining both A and B is $________$.",
+  "options": [],
+  "correctOptions": [],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "X = {1, 2, 3, 4, …, 50}\n\nA = {2, 4, 6, 8, …, 50} = 25 elements\n\nB = {7, 14, 21, 28, 35, 42, 49} = 7 elements\n\nHere n(A$\\cup$B) = n(A) + n(B) – n(A$\\cap$B)\n\n= 25 + 7 – 3 = 29",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-RhDgRy3o",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the foot of the perpendicular drawn from the point (1, 0, 3) on a line passing through ($α$, 7, 1)\nis\n$\\left (\\frac{5}{3},\\frac{7}{3},\\frac{17}{3}\\right )$, then $α$ is equal $to______$.",
+  "options": [],
+  "correctOptions": [],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nDirection Ratio of PQ are\n\n= ($\\frac{5}{3}-1$, $\\frac{7}{3}-0$, $\\frac{17}{3}-3$)\n\n= (2, 7, 8)\n\nDirection ratio of line QA are\n\n= ($α-\\frac{5}{3}$, $7-\\frac{7}{3}$, 1 - $\\frac{17}{3}$)\n\n= (3$α$ – 5, 14, –14)\n\nPQ is perpendicular to line QA\n\n$\\therefore$ $PQ\\leftarrow .QA\\leftarrow$ = 0\n\n$\\Rightarrow$ 2(3$α$ – 5) + 7.14 + (–14).8 = 0\n\n$\\Rightarrow$ $α$ = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-7th-january-evening-slot/RhDgRy3oAgbUFBBEoo7k9k2k5fommlo-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 7th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-Q4MVJjbJ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of linear equations,\n\nx + y + z = 6\n\nx + 2y + 3z = 10\n\n3x + 2y + $λ$z = $μ$\n\nhas more than two solutions, then $μ$ - $λ^{2}$\n is equal to $______$.",
+  "options": [],
+  "correctOptions": [],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given system of equation more than\n2 solutions.\nHence system of equation has infinite many\nsolution.\n\n$\\therefore$ $\\Delta$ = $\\Delta_{1}$ = $\\Delta_{2}$ = $\\Delta_{3}$ = 0\n\n$\\Delta$ = $\\left |\\begin{array}{lll} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 3 & 2 & λ \\end{array}\\right |$ = 0\n\n$\\Rightarrow$ 1(2λ – 6) – 1(λ – 9) + 1(– 4) = 0\n\n$\\Rightarrow$ 2λ – 6 – λ + 9 – 4 = 0\n\n$\\Rightarrow$ λ = 1\n\n$\\Delta_{1}$ = $\\left |\\begin{array}{lll} 6 & 1 & 1 \\\\ 10 & 2 & 3 \\\\ μ & 2 & λ \\end{array}\\right |$ = 0\n\n 6(2λ – 6) – 1(10λ – 3μ) + 1(20 – 2μ) = 0\n\n$\\Rightarrow$ 12λ – 36 – 10λ + 3μ + 20 – 2μ = 0\n\n$\\Rightarrow$ 2λ + μ = 16\n\n$\\Rightarrow$ 2 + μ = 16\n\n$\\Rightarrow$ $μ$ = 14\n\n $\\therefore$ $μ$ - $λ^{2}$ = 14 - 1 = 13",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-Vv28WUTS",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the mean and variance of eight numbers 3, 7, 9, 12, 13, 20, x and y be 10 and 25 respectively,\nthen x.y is equal to $_______$.",
+  "options": [],
+  "correctOptions": [],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Mean = $\\frac{3+7+9+12+13+20+x+y}{8}$ = 10\n\n16 = x + y ....(1)\n\nVariance ($σ^{2}$) = 25\n\n$\\Rightarrow$ $\\frac{3^{2}+7^{2}+9^{2}+12^{2}+13^{2}+20^{2}+x^{2}+y^{2}}{8}$ - 100 = 25\n\n$\\Rightarrow$ $125 × 8 = 9 + 49 + 81 + 144 + 169 + 400 + x^{2}$\n $+ y^{2} - 800$\n\n$\\Rightarrow$ $x^{2}$\n $+ y^{2} = 148$\n\nWe know, $(x + y)^{2}$\n $= x^{2}$\n $+ y^{2}$\n + 2xy\n\n$\\Rightarrow$ 256 = 148 + 2xy\n\n$\\Rightarrow$ x.y = 54",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-LCqQPEx1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the function ƒ defined on $\\left (-\\frac{1}{3},\\frac{1}{3}\\right )$ by\n\nf(x) = $\\left \\{\\begin{array}{ll} \\frac{1}{x}\\log _{e}\\left (\\frac{1+3x}{1-2x}\\right ), & whenx\\neq 0 \\\\ k, & whenx=0 \\end{array} \\right.$\n\nis continuous, then\nk is equal $to_______$.",
+  "options": [],
+  "correctOptions": [],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-07 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 7th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 0}f(x)$\n\n= $\\lim _{x\\to 0}\\left (\\frac{\\ln (1+3x)}{x}-\\frac{\\ln (1-2x)}{x}\\right )$\n\n= $\\lim _{x\\to 0}\\left (3\\frac{\\ln (1+3x)}{3x}-(-2)\\frac{\\ln (1-2x)}{-2x}\\right )$\n\n= 3 + 2 = 5\n\nf(x) is continuous\n\n$\\therefore$ $\\lim _{x\\to 0}f(x)$ = f(0)\n\nSo f(0) = 5 = k",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 7th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
