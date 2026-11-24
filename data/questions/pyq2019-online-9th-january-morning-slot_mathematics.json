@@ -1,0 +1,963 @@
+[
+ {
+  "publicId": "PYQ-2019-CcpStCuU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider a class of 5 girls and 7 boys. The number of different teams consisting of 2 girls and 3 boys that can\nbe formed from this class, if there are two specific boys A and B, who refuse to be the members of the same\nteam, is :",
+  "options": [
+   "500",
+   "350",
+   "200",
+   "300"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "From 5 girls 2 girls can be selected \n\n$= ^{5}C_{2}$ ways\n\nFrom 7 boys 3 boys can be selected \n\n$= ^{7}C_{3}$ way\n\n$\\therefore$  Total number of ways we can select 2 girls and 3 boys \n\n$= ^{5}C_{2}$ $\\times$ $^{7}C_{3}$ ways \n\nWhen two boys A and B are chosen in a team then one more boy will be chosen from remaining 5 boys.\n\nSo, no of ways 3 boys can be chosen when A and B should must be chosen $= ^{5}C_{1}$ ways\n\n$\\therefore$  Total number of ways a team of 2 girl and 3 boys can be made where boy A and B must be in the team $= ^{5}C_{1}$ $\\times$ $^{5}C_{2}$ ways\n\n$\\therefore$  Required number of ways \n\n= Total number of ways $-$ when A and B are always included. \n\n$= ^{5}C_{2}$  $\\times$ $^{7}C_{3}$ $-$ $^{5}C_{1}$ $\\times$ $^{5}C_{2}$\n\n= 300",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-1dXMQ34G",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α$ and $β$ be two roots of the equation $x^{2} + 2x + 2 = 0$ , then $α^{15}$ + $β^{15}$ is equal to :",
+  "options": [
+   "-256",
+   "512",
+   "-512",
+   "256"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given equation, \n\n$x^{2} + 2x + 2 = 0$\n\n$\\therefore$  x = $\\frac{-2\\pm \\sqrt{4-4.1.2}}{2.1}$\n\nx = $-$ 1 $\\pm$ i\n\n$\\therefore$  $α$ = $-$ 1 + i\n\nand  $β$   = $-$ 1 $-$ i\n\nNote  :\n\nx + iy = r (cos$θ$ + isin$θ$)\n\n$\\therefore$  $(x + iy)^{n} = r^{n} ($cosn$θ$ + isinn$θ$)\n\n$\\therefore$  $-$ 1 + i = $\\sqrt{2}$ [cos$\\frac{3π}{4}$ + isin$\\frac{3π}{4}$ ] \n\n$\\Rightarrow$  ($-$ $1 + i)^{15} =$ $\\left (\\sqrt{2}\\right )^{15}$ [cos$\\left (\\frac{15.3π}{4}\\right )+i\\sin \\left (\\frac{15.3π}{4}\\right )$]\n\nAnd $-$1 $-$ i = $\\sqrt{2}$ $\\left [\\cos \\left (-\\frac{3π}{4}\\right )+i\\sin \\left (-\\frac{3π}{4}\\right )\\right ]$\n\n=  $\\sqrt{2}\\left [\\cos \\frac{3π}{4}-\\sin \\frac{3π}{4}\\right ]$\n\n$\\therefore$  ($-$1 $-$ $i)^{15} =$ $\\left (\\sqrt{2}\\right )^{15}\\left [\\cos \\left (\\frac{15.3π}{4}\\right )-i\\sin \\left (\\frac{15.3π}{4}\\right )\\right ]$\n\nNow \n\n$α^{15}$ + $β^{15}$\n\n=  ($-1 + i)^{15} + (-$ 1 $-$ $i)^{15}$\n\n=  $\\left (\\sqrt{2}\\right )^{15}$ $\\left [2\\cos \\left (\\frac{15.3π}{4}\\right )\\right ]$\n\n=  $\\left (\\sqrt{2}\\right )^{15}\\left [2\\cos \\left (11π+\\frac{π}{4}\\right )\\right ]$\n\n=  $\\left (\\sqrt{2}\\right )^{15}\\left [2\\left (-\\cos \\frac{π}{4}\\right )\\right ]$\n\n=  $\\left (\\sqrt{2}\\right )^{15}\\times 2\\times -\\frac{1}{\\sqrt{2}}$\n\n=  $-\\left (\\sqrt{2}\\right )^{14}.2$\n\n=  $-$ $2^{7}$  $\\times$   2\n\n=  $-$ $2^{8}$\n\n= $-$ 256",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-S2eHDIbr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\int\\limits _{0}^{π}|\\cos x|^{3}dx$ is :",
+  "options": [
+   "$\\frac{4}{3}$",
+   "$-$ $\\frac{4}{3}$",
+   "0",
+   "$\\frac{2}{3}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{0}^{π}|\\cos x|^{3}dx$\n\nThe period of $|\\cos x|$ = $\\frac{π}{2}$\n\n$\\therefore$  I = 2 $\\int\\limits _{0}^{\\frac{π}{2}}|\\cos x|^{3}dx$\n\nas in the range 0 to $\\frac{π}{2}$   $|\\cos x|$ is  positive. \n\nSo,     $|\\cos x|$ = $cosx$\n\n$\\therefore$  I = 2 $\\int\\limits _{0}^{\\frac{π}{2}}\\cos ^{3}xdx$\n\n= 2$\\int\\limits _{0}^{\\frac{π}{2}}\\left (\\frac{\\cos 3x+3\\cos x}{4}\\right )dx$\n\nI = $\\frac{1}{2}\\left [\\frac{\\sin 3x}{3}+3\\sin x\\right ]_{0}^{\\frac{π}{2}}$\n\nI = $\\frac{1}{2}\\left [\\frac{1}{3}\\left (\\frac{3π}{2}\\right )+3.\\sin \\frac{π}{2}\\right ]$\n\nI = $\\frac{1}{2}\\left [-\\frac{1}{3}+3\\right ]$\n\n= $\\frac{1}{2}\\left (\\frac{8}{3}\\right )$\n\n= $\\frac{4}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-Hj0hWZ3L",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_multi",
+  "text": "For $x^{2}$ $\\neq$ n$π$ + 1, n $\\in$ N  (the set of natural numbers), the integral \n\n$\\int x\\sqrt{\\frac{2\\sin (x^{2}-1)-\\sin 2(x^{2}-1)}{2\\sin (x^{2}-1)+\\sin 2(x^{2}-1)}}dx$ is equal to :\n\n(where c is a constant of integration)",
+  "options": [
+   "$\\log _{e}\\left |\\frac{1}{2}\\sec ^{2}\\left (x^{2}-1\\right )\\right |+c$",
+   "$\\frac{1}{2}\\log _{e}\\left |\\sec \\left (x^{2}-1\\right )\\right |+c$",
+   "$\\frac{1}{2}\\log _{e}\\left |\\sec ^{2}\\left (\\frac{x^{2}-1}{2}\\right )\\right |+c$",
+   "$\\log _{e}\\left |\\sec \\left (\\frac{x^{2}-1}{2}\\right )\\right |+c$"
+  ],
+  "correctOptions": [
+   2,
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Writing $θ=x^{2}-1$ and using $\\sin 2θ=2\\sin θ\\cos θ$:\n\n$\\dfrac{2\\sin θ-\\sin 2θ}{2\\sin θ+\\sin 2θ}=\\dfrac{2\\sin θ(1-\\cos θ)}{2\\sin θ(1+\\cos θ)}=\\dfrac{2\\sin ^{2}\\dfrac{θ}{2}}{2\\cos ^{2}\\dfrac{θ}{2}}=\\tan ^{2}\\dfrac{θ}{2}$\n\nSo, on an interval where $\\tan \\left (\\dfrac{x^{2}-1}{2}\\right )>0$, the integrand is $x\\tan \\left (\\dfrac{x^{2}-1}{2}\\right )$.\n\nWith $t=\\dfrac{x^{2}-1}{2}$, $dt=xdx$, and\n\n$\\int x\\tan \\left (\\dfrac{x^{2}-1}{2}\\right )dx=\\int \\tan tdt=\\log _{e}|\\sec t|+c=\\log _{e}\\left |\\sec \\left (\\dfrac{x^{2}-1}{2}\\right )\\right |+c$\n\nThis is option (D).\n\nSince $\\log _{e}\\left |\\sec ^{2}t\\right |=2\\log _{e}|\\sec t|$,\n\n$\\dfrac{1}{2}\\log _{e}\\left |\\sec ^{2}\\left (\\dfrac{x^{2}-1}{2}\\right )\\right |+c=\\log _{e}\\left |\\sec \\left (\\dfrac{x^{2}-1}{2}\\right )\\right |+c$\n\nso option (C) is the same antiderivative and is also correct.\n\nOptions (A) and (B) have derivatives $4x\\tan \\left (x^{2}-1\\right )$ and $x\\tan \\left (x^{2}-1\\right )$, which are not the integrand.\n\nHence, the correct options are (C) and (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-m9GFj6Xb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : R $\\to$ R be a function defined as \n\n$f(x)=\\left \\{\\begin{array}{lll} 5 & ; & x\\leq 1 \\\\ a+bx & ; & 1<x<3 \\\\ b+5x & ; & 3\\leq x<5 \\\\ 30 & ; & x\\geq 5 \\end{array} \\right.$ \n\nThen, f is",
+  "options": [
+   "continuous if a = 0 and b = 5",
+   "continuous if a = –5 and b = 10",
+   "continuous if a = 5 and b = 5",
+   "not continuous for any values of a and b"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Checking \n\nif f(x) is continuous at x = 1 : \n\n$f(1^{-}) = 5$\n\nf(1) = 5\n\n$f(1^{+}) = a + b$\n\nif f(x) is continuous at x = 1, \n\nthen\n\n$f(1^{-}) = f(1) = f(1^{+})$\n\n$\\Rightarrow$  5 = 5 = a + b\n\n$\\therefore$  a + b = 5 . . . . . . . .  (1)\n\nchecking if f(x) is continuous at x = 3 :\n\n$f(3^{-}) = a + 3b$\n\nf(3) = b + 15\n\n$f(3^{+}) = b + 15$\n\nif   f(x) = is continuous at x = 3\n\nthen, \n\n$f(3^{-}) = f(3) = f(3^{+})$\n\n$\\Rightarrow$  a + 3b = b + 15 = b + 15\n\n$\\Rightarrow$  a + 2b = 15 . . . . . (2)\n\nchecking if f(x) is continuous at x = 5 :\n\n$f(5^{-}) = b + 25$\n\nf(5) = 30\n\n$f(5^{+}) = 30$\n\nif f(x) is continuous at x = 5 then, \n\n$f(5^{-}) = f(5) = f(5^{+})$\n\n$\\Rightarrow$   b + 25 = 30 = 30\n\n$\\Rightarrow$   b = 5\n\nBy putting this value in equation (2),  we get,\n\na + 2(5) = 15\n\n$\\Rightarrow$  a = 5\n\nwhen a = 5 and b = 5 then equation (1)\n\na + b = 5 does not satisfy.\n\n$\\therefore$  f is not continuous for any value of a and b.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-IME5czDs",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "5 students of a class have an average height 150 cm and variance $18 cm^{2}. A$ new student, whose height is 156 cm, joined them. The variance (in $cm^{2})$ of the height of these six students is :",
+  "options": [
+   "16",
+   "22",
+   "20",
+   "18"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Average height of 5 students, \n\n$x–=\\frac{x_{1}+x_{2}+x_{3}+x_{4}+x_{5}}{5}=150$\n\n$\\Rightarrow \\quad \\sum\\limits _{i=1}^{5}x_{i}=750$\n\nWe know, \n\nVariance $(σ)=\\frac{\\sum x_{i}^{2}}{5}-(x–)^{2}$\n\ngiven that,\n\n$\\frac{\\sum x_{i}^{2}}{5}-(150)^{2}=18$\n\n$\\Rightarrow \\quad \\sum x_{i}^{2}=112590$\n\nHeight of new student, $x_{6}$ $=$ 156 cm\n\nNew average height  $(x–_{new})=\\frac{750+156}{6}=151$\n\nNew variance   $=\\frac{\\sum\\limits _{i=1}^{6}x_{i}^{2}}{6}-(x–_{new})^{2}$\n\n$=\\frac{112590+(156)^{2}}{6}-(151)^{2}$\n\n$=22821-22801$\n\n$=20$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-sIssaJfB",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If a, b, c be three distinct real numbers in G.P. and a + b + c = xb , then x cannot be",
+  "options": [
+   "2",
+   "-3",
+   "4",
+   "-2"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "a, b, c are in G.P.\n\nSo, b = ar\n\nand $c = ar^{2}$\n\ngiven   a + b + c = xb\n\n$\\Rightarrow$  $a + ar + ar^{2} = x(ar)$\n\n$\\Rightarrow$  $1 + r + r^{2} = xr$\n\n$\\Rightarrow$  x = 1 + r + $\\frac{1}{r}$\n\nlet sum of r + $\\frac{1}{r}$ = M\n\n$\\therefore$  $r^{2} + 1 = Mr$\n\n$\\Rightarrow$  $r^{2}$ $-$ Mr + 1 = 0\n\nthis quadratic equation will have\n\nreal solution when discriminant is $\\geq$ 0\n\n$\\therefore$  $b^{2}$ $-$ 4ac $\\geq$ 0\n\n$M^{2}$ $-$ 4.1.1 $\\geq$ 0\n\n$\\Rightarrow$  $M^{2}$ $\\geq$  4\n\nM $\\geq$ 2 or M $\\leq$ $-$ 2 \n\n$\\therefore$  M $\\in$ ($-$ $\\infty$, $-$ 2] $\\cup$ [2, $\\infty$)\n\nAs   x = 1 + r + $\\frac{1}{r}$\n\n= 1 + M\n\n$\\therefore$  x $\\in$ ($-$ $\\infty$, $-$ 1] $\\cup$ [3, $\\infty$)\n\n$\\therefore$  x can't be 0, 1, 2.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-hSlHFjRB",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the fractional part of the number $\\left \\{\\frac{2^{403}}{15}\\right \\}$ is $\\frac{k}{15}$, then k is equal to :",
+  "options": [
+   "8",
+   "14",
+   "6",
+   "1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{2^{403}}{15}$\n\n$=\\frac{2^{3}\\cdot 2^{400}}{15}$\n\n$=\\frac{8}{15}(16)^{100}$\n\n$=\\frac{8}{15}(15+1)^{100}$\n\n$=\\frac{8}{15}\\left ({}^{100}C_{0}+{}^{100}C_{1}15+{}^{100}C_{2}(15)^{2}+.....(15)^{100}\\right )$\n\n$=\\frac{8}{15}+8\\left ({}^{100}C_{1}+{}^{100}C_{2}(15)+.....+(15)^{99}\\right )$\n\n$=\\frac{8}{15}+8$ (integer)\n\n$\\therefore$  Fractional part $=\\frac{8}{15}$\n\nAccording to the question,\n\n$\\frac{k}{15}=\\frac{8}{15}$\n\n$\\Rightarrow$   K $=$ 8",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-sX1MfZeJ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{y\\to 0}\\frac{\\sqrt{1+\\sqrt{1+y^{4}}}-\\sqrt{2}}{y^{4}}$",
+  "options": [
+   "exists and equals $\\frac{1}{2\\sqrt{2}}$",
+   "exists and equals $\\frac{1}{4\\sqrt{2}}$",
+   "exists and equals $\\frac{1}{2\\sqrt{2}(1+\\sqrt{2})}$",
+   "does not exist"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{y\\to 0}\\frac{\\sqrt{1+\\sqrt{1+y^{4}}}-\\sqrt{2}}{y^{4}}$\n\nIf you put y = 0 at $\\frac{\\sqrt{1+\\sqrt{1+y^{4}}}-\\sqrt{2}}{y^{4}}$ it  is in $\\frac{0}{0}$ form. So we can use L' Hospital's Rule. \n\n= $\\lim _{y\\to 0}\\frac{\\frac{1}{2\\sqrt{1+\\sqrt{1+y4}}}\\times \\left (\\frac{1}{2\\sqrt{1+y4}}\\right )\\times 4y^{3}}{4y^{3}}$\n\n= $\\lim _{y\\to 0}\\frac{1}{2\\sqrt{1+\\sqrt{1+y^{4}}}}\\times \\frac{1}{2\\sqrt{1+y^{4}}}$\n\n= $\\frac{1}{4\\sqrt{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-ae6Mbgij",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Axis of a parabola lies along x-axis. If its vertex and focus are at distances 2 and 4 respectively from the\norigin, on the positive x-axis then which of the following points does not lie on it?",
+  "options": [
+   "(5, 2$\\sqrt{6}$)",
+   "(6, 4$\\sqrt{2}$)",
+   "(8, 6)",
+   "(4, -4)"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nSo the equation of the parabola, \n\n$(y-0)^{2}=4.a(x-2)$\n\n$\\Rightarrow$  $y^{2} = 4.2 (x$ $-$ 2)\n\n$\\Rightarrow$  $y^{2} = 8 (x$ $-$ 2)\n\nBy checking each options you can see. point (8, 6) does not lie on the parabola.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-january-morning-slot/ae6Mbgijd5ZpQ7Tgz9vBJ-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th January Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-QOeM4OKv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let\n\nA = $\\left \\{θ\\in \\left (-\\frac{π}{2},π\\right ):\\frac{3+2i\\sin θ}{1-2i\\sin θ}ispurelyimaginary\\right \\}$\n\n. Then the sum of the elements in A is :",
+  "options": [
+   "$\\frac{5π}{6}$",
+   "$π$",
+   "$\\frac{3π}{4}$",
+   "$\\frac{2π}{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given complex number,\n\n$\\frac{3+2i\\sin θ}{1-2i\\sin θ}$\n\n$=\\frac{(3+2i\\sin θ)(1+2i\\sin θ)}{1+4\\sin ^{2}θ}$\n\n$=\\frac{3+6i\\sin θ+2i\\sin θ-4\\sin ^{2}θ}{1+4\\sin ^{2}θ}$\n\n$=\\frac{\\left (3-4\\sin ^{2}θ\\right )+i(8\\sin θ)}{1+4\\sin ^{2}θ}$\n\nAs complex number is purely imaginary, So real part of this complex number is zero. \n\n$\\therefore$   $\\frac{3-4\\sin ^{2}θ}{1+4\\sin ^{2}θ}$  = 0\n\n$\\Rightarrow$   $3-4\\sin ^{2}θ=0$\n\n$\\Rightarrow$   $\\sin θ=\\pm \\frac{\\sqrt{3}}{2}$\n\nas   $θ$  $\\in$ $\\left (-\\frac{π}{2},π\\right )$\n\n$\\therefore$   $θ$ $=$ $-$ $\\frac{π}{3},\\frac{π}{3},\\frac{2π}{3}$\n\n$\\therefore$   Sum of those values of A is \n\n$=-\\frac{π}{3}+\\frac{π}{3}+\\frac{2π}{3}$\n\n$=\\frac{2π}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-1dHMda3z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $A=\\left [\\begin{array}{ll} \\cos θ & -\\sin θ \\\\ \\sin θ & \\cos θ \\end{array}\\right ]$, then the matrix $A^{–50}$ when $θ$ = $\\frac{π}{12}$,  is equal to :",
+  "options": [
+   "$\\left [\\begin{array}{ll} \\frac{\\sqrt{3}}{2} & -\\frac{1}{2} \\\\ \\frac{1}{2} & \\frac{\\sqrt{3}}{2} \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} \\frac{1}{2} & -\\frac{\\sqrt{3}}{2} \\\\ \\frac{\\sqrt{3}}{2} & \\frac{-1}{2} \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} \\frac{\\sqrt{3}}{2} & \\frac{1}{2} \\\\ -\\frac{1}{2} & \\frac{\\sqrt{3}}{2} \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} \\frac{1}{2} & \\frac{\\sqrt{3}}{2} \\\\ -\\frac{\\sqrt{3}}{2} & \\frac{1}{2} \\end{array}\\right ]$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(A^{-50}) = (A^{-1})^{50}$\n\nWe know, \n\n$A^{-1} =$ $\\frac{adjA}{|A|}$\n\n$|A|$ $= \\cos ^{2}θ$ $+ \\sin ^{2}θ$ = 1\n\ncofactor of A = $\\left [\\begin{array}{ll} \\cos θ & -\\sin θ \\\\ \\sin θ & \\cos θ \\end{array}\\right ]$\n\nAdjoint of A = Transpose of cofactor matrix\n\n$\\therefore$  Adj A = $\\left [\\begin{array}{ll} \\cos θ & \\sin θ \\\\ -\\sin θ & \\cos θ \\end{array}\\right ]$\n\n$\\therefore$  $A^{-1} =$ $\\left [\\begin{array}{ll} \\cos θ & \\sin θ \\\\ -\\sin θ & \\cos θ \\end{array}\\right ]$\n\n$\\therefore$  $(A^{-1})^{2} =$ $\\left [\\begin{array}{ll} \\cos θ & \\sin θ \\\\ -\\sin θ & \\cos θ \\end{array}\\right ]\\left [\\begin{array}{ll} \\cos θ & \\sin θ \\\\ -\\sin θ & \\cos θ \\end{array}\\right ]$\n\n= $\\left [\\begin{array}{ll} \\cos 2θ & \\sin 2θ \\\\ -\\sin 2θ & \\cos 2θ \\end{array}\\right ]$\n\nSimilarly, \n\n$(A^{-1})^{3} =$ $\\left [\\begin{array}{ll} \\cos 3θ & \\sin 3θ \\\\ -\\sin 3θ & \\cos 3θ \\end{array}\\right ]$\n\n:\n\n:\n\n:\n\n$(A^{-1})^{50} =$ $\\left [\\begin{array}{ll} \\cos 50θ & \\sin 50θ \\\\ -\\sin 50θ & \\cos 50θ \\end{array}\\right ]$\n\nwhen  $θ$ = $\\frac{π}{12}$ then\n\n$A^{-50}$ = $\\left [\\begin{array}{ll} \\cos \\frac{25π}{6} & \\sin \\frac{25π}{6} \\\\ -\\sin \\frac{25π}{6} & \\cos \\frac{25π}{6} \\end{array}\\right ]$\n\n= $\\left [\\begin{array}{ll} \\frac{\\sqrt{3}}{2} & \\frac{1}{2} \\\\ -\\frac{1}{2} & \\frac{\\sqrt{3}}{2} \\end{array}\\right ]$\n\nNote:\n\n$\\cos \\frac{25π}{6}=\\cos \\left (4π+\\frac{π}{6}\\right )=\\cos \\frac{π}{6}=\\frac{\\sqrt{3}}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-4oqPlOol",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If y = y(x) is the solution of the differential equation, \n\nx$\\frac{dy}{dx}$ $+ 2y = x^{2}$, satisfying y(1) = 1, then y($\\frac{1}{2}$) is equal\nto :",
+  "options": [
+   "$\\frac{7}{64}$",
+   "$\\frac{49}{16}$",
+   "$\\frac{1}{4}$",
+   "$\\frac{13}{16}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, \n\n$x\\frac{dy}{dx}+2y=x^{2}$\n\n$\\Rightarrow$  $\\frac{dy}{dx}+\\left (\\frac{2}{x}\\right )y=x$\n\nThis is a linear differential equation.\n\n$\\therefore$  I.F $=e^{\\int \\frac{2}{x}dx}$\n\n$=e^{2\\ln x}$\n\n$=x^{2}$\n\n$\\therefore$  Solution is, \n\n$y\\cdot x^{2}=\\int x\\cdot x^{2}dx$\n\n$\\Rightarrow$  $yx^{2}=\\frac{x^{4}}{4}+C$\n\ngiven  $y(1)=1$\n\n$\\therefore$  $1.1=\\frac{4}{4}+C$\n\n$\\Rightarrow$  $C=\\frac{3}{4}$\n\n$\\therefore$  Equation is \n\n$yx^{2}=\\frac{x^{4}}{4}+\\frac{3}{4}$\n\n$\\therefore$  $y\\left (\\frac{1}{2}\\right )$   means   $x=\\frac{1}{2}$\n\n$\\therefore$  $y\\cdot \\left (\\frac{1}{2}\\right )^{2}=\\frac{1}{4}\\times \\left (\\frac{1}{2}\\right )^{4}+\\frac{3}{4}$\n\n$\\Rightarrow$  $\\frac{y}{4}=\\frac{1}{64}+\\frac{3}{4}$\n\n$\\Rightarrow$   $\\frac{y}{4}=\\frac{1+48}{64}$\n\n$\\Rightarrow$  y = $\\frac{49}{16}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-c5COgvW6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $0<θ<\\frac{π}{2}$. If the eccentricity of the\n\n hyperbola $\\frac{x^{2}}{\\cos ^{2}θ}-\\frac{y^{2}}{\\sin ^{2}θ}$ = 1 is greater \n\nthan 2, then the length of\nits latus rectum lies in the interval :",
+  "options": [
+   "(3, $\\infty$)",
+   "$\\left (\\frac{3}{2},2\\right ]$",
+   "$\\left (1,\\frac{3}{2}\\right ]$",
+   "$(2,3]$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Here $a^{2}=\\cos ^{2}θ$ and $b^{2}=\\sin ^{2}θ$, so\n\n$e^{2}=1+\\dfrac{\\sin ^{2}θ}{\\cos ^{2}θ}=\\sec ^{2}θ$\n\n$e>2\\Rightarrow \\sec θ>2\\Rightarrow \\cos θ<\\dfrac{1}{2}\\Rightarrow \\dfrac{π}{3}<θ<\\dfrac{π}{2}$, since $0<θ<\\dfrac{π}{2}$.\n\nLength of the latus rectum:\n\n$L=\\dfrac{2b^{2}}{a}=\\dfrac{2\\sin ^{2}θ}{\\cos θ}=2\\tan θ\\sin θ$\n\nOn $\\left (\\dfrac{π}{3},\\dfrac{π}{2}\\right )$ both $\\tan θ$ and $\\sin θ$ are positive and increasing, so $L$ is increasing. As $θ\\to \\dfrac{π}{3}^{+}$, $L\\to 2\\cdot \\sqrt{3}\\cdot \\dfrac{\\sqrt{3}}{2}=3$, and as $θ\\to \\dfrac{π}{2}^{-}$, $L\\to \\infty$.\n\nSo $L\\in (3,\\infty )$.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-U1DtFitP",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The maximum volume (in cu.m) of the right circular cone having slant height 3 m is :",
+  "options": [
+   "2$\\sqrt{3}π$",
+   "3$\\sqrt{3}π$",
+   "6$π$",
+   "$\\frac{4}{3}π$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\therefore$   h = 3 cos$θ$\n\nr = 3 sin$θ$\n\nWe know volume of right circular cone, \n\nV = $\\frac{1}{3}πr^{2}h$\n\n= $\\frac{1}{3}π$(3 sin$θ)^{2} 3 \\cos θ$\n\n= 9 $π$ $\\sin ^{2}θ$ cos$θ$\n\nFor maximum or minimum value of volume, \n\n$\\frac{dv}{dθ}$ = 0\n\n$\\therefore$   (2sin$θ$ cos$θ$) cos$θ$ $+ 3\\sin ^{2}θ$ .($-$ sin$θ$) = 0\n\n$\\Rightarrow$  2 sin$θ$ $\\cos ^{2}θ$ $-$ $\\sin ^{3}θ$ = 0\n\n$\\Rightarrow$  2 sin$θ$(1 $-$ $\\sin ^{2}θ$) $-$ $\\sin ^{3}$ $θ$ = 0\n\n$\\Rightarrow$  2 sin$θ$ $-$ $2 \\sin ^{3}θ$ $-$ $\\sin ^{3}θ$ = 0\n\n$\\Rightarrow$  $3 \\sin ^{3}θ$ = 2 sin$θ$\n\n$\\Rightarrow$   $\\sin ^{2}θ$ = $\\frac{2}{3}$\n\n$\\Rightarrow$  sin$θ$ = $\\sqrt{\\frac{2}{3}}$\n\n$\\frac{d^{2}v}{dθ^{2}}$ = 2cos$θ$ $-$ 3(3sin$θ$ cos$θ$)\n\n= 2 cos$θ$ $-$ 9 sin$θ$ cos$θ$\n\n= 2 $\\times$ $\\frac{1}{\\sqrt{3}}$ $-$ 9 $\\times$ $\\frac{\\sqrt{2}}{\\sqrt{3}}$ $\\times$ $\\frac{1}{\\sqrt{3}}$\n\n= $\\frac{2}{\\sqrt{3}}-3\\sqrt{2}<0$\n\n$\\therefore$  Volume is maximum \n\nwhen sin$θ$ = $\\sqrt{\\frac{2}{3}}$\n\n$\\therefore$  Maximum volume is \n\n= 9 $π$ $\\left (\\sqrt{\\frac{2}{3}}\\right )^{2}\\times \\frac{1}{\\sqrt{3}}$\n\n= 9 $π$ $\\times$ $\\frac{2}{3}\\times \\frac{1}{\\sqrt{3}}$\n\n= $2\\sqrt{3}π$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-january-morning-slot/U1DtFitPjt3mM5fLmUIkD-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th January Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-zmr9GaOF",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\cos ^{-1}\\left (\\frac{2}{3x}\\right )+\\cos ^{-1}\\left (\\frac{3}{4x}\\right )=\\frac{π}{2}$ (x > $\\frac{3}{4}$), then x is equal to :",
+  "options": [
+   "$\\frac{\\sqrt{145}}{10}$",
+   "$\\frac{\\sqrt{145}}{11}$",
+   "$\\frac{\\sqrt{145}}{12}$",
+   "$\\frac{\\sqrt{146}}{12}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, \n\n$\\cos ^{-1}\\left (\\frac{2}{3x}\\right )+\\cos ^{-1}\\left (\\frac{3}{4x}\\right )=\\frac{π}{2}$\n\n$\\Rightarrow \\cos ^{-1}\\left (\\frac{2}{3x}\\right )=\\frac{π}{2}-\\cos ^{-1}\\left (\\frac{3}{4x}\\right )$\n\n$\\Rightarrow \\cos \\left (\\cos ^{-1}\\left (\\frac{2}{3x}\\right )\\right )=\\cos \\left [\\frac{π}{2}-\\cos ^{-1}\\left (\\frac{3}{4x}\\right )\\right ]$\n\n$\\Rightarrow \\frac{2}{3x}=\\sin \\left \\{\\cos ^{-1}\\left (\\frac{3}{4x}\\right )\\right \\}$\n\n$\\Rightarrow \\frac{2}{3x}=\\sin \\left \\{\\sin ^{-1}\\frac{\\sqrt{16x^{2}-9}}{4x}\\right \\}$\n\n$\\Rightarrow \\frac{2}{3x}=\\frac{16x^{2}-9}{4x}$\n\n$\\Rightarrow 64=9\\left (16x^{2}-9\\right )$\n\n$\\Rightarrow 16x^{2}-9=\\frac{64}{9}$\n\n$\\Rightarrow 16x^{2}=\\frac{64}{9}+9$\n\n$\\Rightarrow 16x^{2}=-\\frac{145}{9}$\n\n$\\Rightarrow x=\\pm \\frac{\\sqrt{145}}{4\\times 3}$\n\n$\\Rightarrow x=\\pm \\frac{\\sqrt{145}}{12}$\n\nas given that $x>\\frac{3}{4}$\n\n$\\therefore$  x $\\neq$ $-\\frac{\\sqrt{145}}{12}$\n\n$\\therefore$  x $=\\frac{\\sqrt{145}}{12}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-MpyEVVbw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The system of linear equations\n\n x + y + z = 2\n\n2x + 3y + 2z = 5 \n\n$2x + 3y + (a^{2} – 1) z = a + 1$ then",
+  "options": [
+   "has infinitely many solutions for a = 4",
+   "has a unique solution for |a| = $\\sqrt{3}$",
+   "is inconsistent when |a| = $\\sqrt{3}$",
+   "is inconsistent when a = 4"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$D=\\left |\\begin{array}{lll} 1 & 1 & 1 \\\\ 2 & 3 & 2 \\\\ 2 & 3 & α^{2}-1 \\end{array}\\right |$\n\nD = 3$a^{2}$ $-$ 3 $-$ 6 $-$ 2$a^{2}$ + 2 + 4 + 2$a^{2}$ $-$ 2 $-$ 4\n\nD = ($a^{2}$ $-$ 3)\n\nWhen D $\\neq$ 0 then system of equation has unique solution. \n\n$\\therefore$  3($a^{2}$ $-$ 3) $\\neq$ 0\n\n$\\Rightarrow$  $|a|$ $\\neq \\sqrt{3}$\n\nWhen $3(a^{2}-3)=0$\n\n$\\Rightarrow$  $|a|=\\sqrt{3}$ then D = 0\n\nIf D  = 0 then  two cases possible \n\n(1)  System of equation has infinite many solution. \n\n(2) System of equation has no solution and inconsistent. \n\nHere $D_{1} =$ $\\left |\\begin{array}{lll} 2 & 1 & 1 \\\\ 5 & 3 & 2 \\\\ a+1 & 3 & a^{2}-1 \\end{array}\\right |=a^{2}-a+1$\n\n$D_{2} =$ $\\left |\\begin{array}{lll} 1 & 2 & 1 \\\\ 2 & 5 & 2 \\\\ 2 & a+1 & a^{2}-1 \\end{array}\\right |=a^{2}-3$\n\n$D_{3}  =$  $\\left |\\begin{array}{lll} 1 & 1 & 2 \\\\ 2 & 3 & 5 \\\\ 2 & 3 & a+1 \\end{array}\\right |=a-4$\n\nSystem of equation will have infinite solution if $D_{1} = D_{2} = D_{3} = 0$.\n\nAnd system of equation will have no solution if at least one of $D_{1}, D_{2}, D_{3}$ is non zero.\n\nAt  $|a|=\\sqrt{3}$   we get  D = 0\n\nBut  $D_{1}  = 3$ $\\pm$ $\\sqrt{3}+1$ $\\neq$ 0\n\nand  $D_{3}  =$ $\\pm$ $\\sqrt{3}-4$ $\\neq$ 0\n\nSo, system of equations has no solution at $|a|=\\sqrt{3}$ then system is inconsistent",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-NehdCaCp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For any  $θ\\in \\left (\\frac{π}{4},\\frac{π}{2}\\right )$, the expression\n\n $3(\\cos θ-\\sin θ)^{4}+6(\\sin θ+\\cos θ)^{2}+4\\sin ^{6}θ$ \n\nequals :",
+  "options": [
+   "$13 – 4 \\cos ^{2}θ$ $+ 6\\sin ^{2}θ\\cos ^{2}θ$",
+   "$13 – 4 \\cos ^{6}θ$",
+   "$13 – 4 \\cos ^{2}θ$ $+ 6\\cos ^{4}θ$",
+   "$13 – 4 \\cos ^{4}θ$ $+ 2\\sin ^{2}θ\\cos ^{2}θ$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, \n\n3(sin$θ$ $-$ cos$θ)^{4} + 6(\\sin θ$ + cos$θ)^{2} + 4\\sin ^{6}θ$\n\n=  3[(sin$θ$ $-$ cos$θ)^{2}$]$^{2} + 6 (\\sin ^{2}θ$ $+ \\cos ^{2}θ$ + 2sin$θ$cos$θ) + 4\\sin ^{6}θ$\n\n=  3[$\\sin ^{2}θ$ $+ \\cos ^{2}θ$ $-$2sin$θ$cos$θ$]$^{2} + 6(1 + \\sin 2θ) + 4\\sin ^{6}θ$\n\n=  3(1 $-$ sin2$θ)^{2} + 6(1 + \\sin 2θ) + 4\\sin ^{6}θ$\n\n=  3 (1 $-$ 2 sin2$θ$ $+ \\sin ^{2}2θ$) + 6 + 6sin2$θ$ $+ 4\\sin ^{6}θ$\n\n=  3 $-$ 6sin2$θ$ $+ 3\\sin ^{2}2θ$ + 6 + 6sin2$θ$ $+ 4\\sin ^{6}θ$\n\n$=  9 + 3\\sin ^{2}2θ$ $+ 4 \\sin ^{6}θ$\n\n=  9 + 3(2sin$θ$cos$θ)^{2} + 4(1$ $-$ $\\cos ^{2}θ)^{3}$\n\n$= 9 + 12\\sin ^{2}θ$ $\\cos ^{2}θ$ + 4 (1 $-$ $\\cos ^{6}θ$ $-$ $3\\cos ^{2}θ$ $+ 3\\cos ^{4}θ$)\n\n$=  13 + 12\\cos ^{2}θ$(1 $-$ $\\cos ^{2}θ$) $-$ $4\\cos ^{6}θ$ $-$ $12\\cos ^{2}θ$ $+ 12 \\cos ^{4}θ$\n\n$= 13 + 12 \\cos ^{2}θ$ $-$ $12 \\cos ^{4}θ$ $-$ $4\\cos ^{6}θ$ $-$ $12 \\cos ^{2}θ$ $+ 12 \\cos ^{4}θ$\n\n= 13 $-$ $4 \\cos ^{6}θ$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-ZRBU7jlX",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For $x\\in R-\\{0,1\\}$, Let  $f_{1}(x) =$ $\\frac{1}{x}$, $f_{2} (x) = 1 – x$ \n\nand $f_{3} (x) =$ $\\frac{1}{1-x}$\n be three given\n\n functions. If a function, J(x) satisfies \n\n$(f_{2} o J o f_{1}) (x) = f_{3} (x)$  then J(x) is equal to :",
+  "options": [
+   "$f_{1} (x)$",
+   "$\\frac{1}{x}$ $f_{3} (x)$",
+   "$f_{2} (x)$",
+   "$f_{3} (x)$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, \n\n$f_{1}(x) =$ $\\frac{1}{x}$\n\n$f_{2}(x) = 1$ $-$ x\n\n$f_{3}(x) =$ $\\frac{1}{1-x}$\n\n$(f_{2}$ $\\cdot$ J $\\cdot$ $f_{1}) (x) = f_{3}(x)$\n\n$\\Rightarrow$   $f_{2} {J(f_{1}(x))} = f_{3}(x)$\n\n$\\Rightarrow$   $f_{2}{J (\\frac{1}{x}$)} = $\\frac{1}{1-x}$\n\n$\\Rightarrow$   1 $-$ J($\\frac{1}{x}$) = $\\frac{1}{1-x}$\n\n$\\Rightarrow$  J($\\frac{1}{x}$) = 1 $-$ $\\frac{1}{1-x}$\n\n$\\Rightarrow$   J ($\\frac{1}{x}$) = $\\frac{-x}{1-x}$ = $\\frac{x}{x-1}$\n\nPut x inplace of $\\frac{1}{x}$\n\n$\\therefore$   J(x) = $\\frac{\\frac{1}{x}}{\\frac{1}{x}-1}$\n\n= $\\frac{1}{1-x}=f_{3}(x)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-F5sELRdL",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $θ$ denotes the acute angle between the curves,  $y = 10 – x^{2}$ and $y = 2 + x^{2}$ at a point of their intersection, the |tan $θ$| is equal to :",
+  "options": [
+   "$\\frac{8}{15}$",
+   "$\\frac{4}{9}$",
+   "$\\frac{7}{17}$",
+   "$\\frac{8}{17}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nAngle between the curves is the acute angle between the tangents at the point of intersection. \n\ny = 10 $-$ $x^{2} ($for curve 1)\n\nand $y = 2 + x^{2} ($for curve 2)\n\n$\\therefore$  10 $-$ $x^{2} = 2 + x^{2}$\n\n$\\Rightarrow$  $2x^{2} = 8$\n\n$\\Rightarrow$  $x^{2} = 4$\n\n$\\Rightarrow$  x = 2, $-$ 2\n\n$\\therefore$  points of intersection (2, 6) and ($-$ 2, 6)\n\n$\\frac{dy}{dx}$ for curve 1 = $-$ 2x\n\n$\\therefore$  Slope$(m_{1})$ of curve 1 is = $-$ 2(2) = $-$ 4\n\n$\\frac{dy}{dx}$ for curve 2 = 2x\n\n$\\therefore$  slope $(m_{2})$ of curve 2 = 2 $\\times$ 2 = 4\n\n$\\therefore$  tan$θ$ = $\\left |\\frac{m_{1}-m_{2}}{1+m_{1}m_{2}}\\right |$\n\n= $\\left |\\frac{-4-4}{1+(-16)}\\right |$\n\n= $\\frac{8}{15}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-january-morning-slot/F5sELRdLShJaMlbMoRhND-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th January Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-uQTkAboy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) bounded by the parabola $y = x^{2} – 1$, the tangent at the point (2, 3) to it and the y-axis is :",
+  "options": [
+   "$\\frac{56}{3}$",
+   "$\\frac{32}{3}$",
+   "$\\frac{8}{3}$",
+   "$\\frac{14}{3}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nEquation of tangent at (2, 3) on the parabola $y = x^{2}$ $-$ 1 is \n\n$\\frac{y+3}{2}=2x-1$\n\n$\\Rightarrow$  y + 3 = 4x $-$ 2\n\n$\\Rightarrow$   y = 4x $-$ 5\n\nWhen x = 0 then for the tangent y = $-$ 5\n\n$\\therefore$  Tangent cuts y axis at (0, $-$ 5) point. \n\n$\\therefore$  Area of the bounded region is \n\n=  $\\int\\limits _{-5}^{3}\\frac{y+5}{4}dy-\\int\\limits _{-1}^{3}\\sqrt{y+1}dy$\n\n=  $\\frac{1}{4}\\left [\\frac{y^{2}}{2}+5y\\right ]_{-5}^{3}-\\left [\\frac{2}{3}\\times (y+1)^{\\frac{3}{2}}\\right ]_{-1}^{3}$\n\n$\\frac{1}{4}\\left [\\left (\\frac{9}{2}+15\\right )-\\left (\\frac{25}{2}-25\\right )\\right ]-\\frac{2}{3}(4)^{\\frac{3}{2}}$\n\n=  $\\frac{1}{4}\\left [\\frac{39}{2}+\\frac{25}{2}\\right ]-\\frac{2}{3}\\times 8$\n\n=  $\\frac{1}{4}\\times \\frac{64}{2}-\\frac{16}{3}$\n\n=  $8-\\frac{16}{3}$\n\n=  $\\frac{8}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-january-morning-slot/uQTkAboyY20GxQ1XzsGfr-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th January Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-kQCDkroR",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a_{1},a_{2},.......,a_{30}$ be an A.P.,\n\n$S=\\sum\\limits _{i=1}^{30}a_{i}$ and $T=\\sum\\limits _{i=1}^{15}a_{(2i-1)}$.\n\nIf $a_{5}$ = 27 and S - 2T = 75, then $a_{10}$ is equal to :",
+  "options": [
+   "47",
+   "42",
+   "52",
+   "57"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the common difference = d \n\nS = $\\sum\\limits _{i=1}^{30}a_{i}$\n\n=  $a_{1}$ + $a_{2}$ + . . . . . + $a_{30}$\n\n$\\therefore$  S = $\\frac{30}{2}[a_{1}+a_{30}]$\n\n= 15 [$a_{1}$ + $a_{1}$ + 29d]\n\n=  15 (2$a_{1}$ + 29d)\n\nT  =  $\\sum\\limits _{i=1}^{15}a_{(2i-1)}$\n\n=  $a_{1}$ + $a_{3}$ + . . . . . . + $a_{29}$\n\n=  $\\frac{15}{2}[a{}_{1}+a_{29}]$\n\n=  $\\frac{15}{2}[a{}_{1}+a_{1}+28d]$\n\n=  $\\frac{15}{2}[2a{}_{1}+28d]$\n\n=  15 ($a_{1}$  + 14d)\n\nGiven, \n\nS $-$ 2T = 75\n\n$\\Rightarrow$  15(2$a_{1}$ + 29d) $-$ 2 $\\times$ 15 ($a_{1}$ + 14d) = 75 \n\n$\\Rightarrow$  30$a_{1}$ + 15 $\\times$ 29d $-$ 30 $a_{1}$  $-$ 420d = 75\n\n$\\Rightarrow$  435d $-$ 420d = 75\n\n$\\Rightarrow$  15d = 75\n\n$\\Rightarrow$  d = 5\n\nGiven that, \n\n$a_{5}$  = 27\n\n$\\Rightarrow$  $a_{1}$  + 4d  = 27\n\n$\\Rightarrow$  $a_{1}$ + 20 = 27\n\n$\\Rightarrow$  $a_{1}$ = 7\n\n$\\therefore$  $a_{10}$  = $a_{1}$ + 9d\n\n= 7 + 45\n\n=  52",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

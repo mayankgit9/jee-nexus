@@ -148,17 +148,24 @@ def download_images(urls, qid, slug):
         if os.path.exists(dest) and os.path.getsize(dest) > 0:
             out.append(dest_rel)
             continue
-        try:
-            r = requests.get(url, headers=HEADERS, timeout=30)
-            r.raise_for_status()
-            if len(r.content) < 100:
-                raise ValueError("suspiciously small image")
-            with open(dest, "wb") as f:
-                f.write(r.content)
-            out.append(dest_rel)
+        ok_path = None
+        for attempt in range(3):
+            try:
+                r = requests.get(url, headers=HEADERS, timeout=30)
+                r.raise_for_status()
+                if len(r.content) < 100:
+                    raise ValueError("suspiciously small image")
+                with open(dest, "wb") as f:
+                    f.write(r.content)
+                ok_path = dest_rel
+                break
+            except Exception as e:
+                if attempt == 2:
+                    print(f"  IMG FAIL {qid} {url[:60]}: {e}", file=sys.stderr)
+                time.sleep(1.0 + attempt)
+        if ok_path:
+            out.append(ok_path)
             time.sleep(0.15)
-        except Exception as e:
-            print(f"  IMG FAIL {qid} {url[:60]}: {e}", file=sys.stderr)
     return out
 
 
@@ -262,8 +269,9 @@ def convert_paper(slug, batch_name=None):
                 "isAiGenerated": False,
             }
 
-        # download original exam images (question + explanation diagrams)
-        all_imgs = imgs1 + [u for u in imgs2 if u not in imgs1]
+        # download original exam images (question + explanation diagrams);
+        # keep duplicates in order so every [IMG] placeholder maps 1:1
+        all_imgs = imgs1 + imgs2
         if all_imgs:
             paths = download_images(all_imgs, qid, slug)
             stats["images"] += len(paths)
