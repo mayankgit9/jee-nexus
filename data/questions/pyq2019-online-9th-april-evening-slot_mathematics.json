@@ -1,0 +1,947 @@
+[
+ {
+  "publicId": "PYQ-2019-7eehTp46",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If f : R $\\to$ R is a differentiable function and\nf(2) = 6,\n then $\\lim _{x\\to 2}\\frac{\\int\\limits _{6}^{f(x)}2tdt}{(x-2)}$ is :-",
+  "options": [
+   "2f'(2)",
+   "24f'(2)",
+   "0",
+   "12f'(2)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 2}\\frac{\\int\\limits _{6}^{f(x)}2tdt}{(x-2)}$\n\nThis is $\\frac{0}{0}$ form  so we use L – Hospital Rule.\n\n= $\\lim _{x\\to 2}\\frac{2f(x).f^{'}(x)-0}{1}$\n\n= $2f(2).f^{'}(2)$\n\n= 12f'(2)\n\nNote :  Newton - Leibnitz rule of differentiation under integration\n\n$\\frac{d}{dx}\\int\\limits _{α(x)}^{β(x)}f(u)du$\n\n= $f(β(x))β^{'}(x)-f(α(x))α^{'}(x)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-HMsP8Zu8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of equations 2x + 3y – z = 0, x + ky\n– 2z = 0 and 2x – y + z = 0 has a non-trival solution\n(x, y, z), then $\\frac{x}{y}+\\frac{y}{z}+\\frac{z}{x}+k$\nis equal to :-",
+  "options": [
+   "-4",
+   "$\\frac{3}{4}$",
+   "$\\frac{1}{2}$",
+   "$-\\frac{1}{4}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given 2x + 3y – z = 0, \n\nx + ky – 2z = 0\n\n2x – y + z = 0\n\nFor non trivial solution\n\n$\\Delta =0\\Rightarrow \\left |\\begin{array}{lll} 2 & 3 & -1 \\\\ 1 & k & -2 \\\\ 2 & -1 & 1 \\end{array}\\right |=0$\n\n$\\Rightarrow k=\\frac{9}{2}$\n\n$\\therefore$ Equations are 2x + 3y – z = 0 ...(i)\n\n2x – y + z = 0 ...(ii)\n\n2x + 9y – 4z = 0 ...(iii)\n\nBy (i) – (ii) we get,\n\n4y - 2z = 0\n\n$\\Rightarrow$ 2y = z .......(iv)\n\n$\\Rightarrow$ $\\frac{y}{z}=\\frac{1}{2}$\n\nFrom equation (i) and (iv)\n\n2x + 3y - 2y = 0\n\n$\\Rightarrow$ 2x + y = 0\n\n$\\Rightarrow$ $\\frac{x}{y}=-\\frac{1}{2}$\n\n$\\Rightarrow$ $\\frac{x}{y}\\times \\frac{y}{z}=-\\frac{1}{2}\\times \\frac{1}{2}=-\\frac{1}{4}$\n\n$\\Rightarrow$ $\\frac{z}{x}=-4$\n\n$\\therefore$ $\\frac{x}{y}+\\frac{y}{z}+\\frac{z}{x}+k=\\frac{-1}{2}+\\frac{1}{2}-4+\\frac{9}{2}$ = $\\frac{1}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-dYLoLXwI",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the sum and product of the first three terms in\nan A.P. are 33 and 1155, respectively, then a value\nof its $11^{th}$ term is :-",
+  "options": [
+   "–25",
+   "–36",
+   "25",
+   "–35"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the three terms are a - d, a, a + d\n\nGiven a - d + a + a + d = 33\n\n$\\Rightarrow$ 3a = 33\n\n$\\Rightarrow$ a = 11\n\nAlso given,\n\n(a - d)a(a + d) = 1155\n\n$\\Rightarrow$ $(a^{2} - d^{2})a = 1155$\n\n$\\Rightarrow$ $(11^{2} - d^{2})11 = 1155$\n\n$\\Rightarrow$ $(11^{2} - d^{2}) = 105$\n\n$\\Rightarrow$ d = $\\pm$ 4\n\nWhen d = 4 and a = 11 then series is\n\n7, 11, 15, ....\n\n$\\therefore$ $T_{11} = a + 10d = 7 + 10\\times$ 4 = 47\n\nWhen d = -4 and a = 11 then series is\n\n15, 11, 7, ....\n\n$\\therefore$ $T_{11} = a + 10d = 15 + 10\\times$ -4 = -25",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-ufHaLBHc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of the integral $\\int\\limits _{0}^{1}x\\cot ^{-1}(1-x^{2}+x^{4})dx$ is :-",
+  "options": [
+   "$\\frac{π}{2}-\\frac{1}{2}\\log _{e}2$",
+   "$\\frac{π}{4}-\\log _{e}2$",
+   "$\\frac{π}{4}-\\frac{1}{2}\\log _{e}2$",
+   "$\\frac{π}{2}-\\log _{e}2$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "I = $\\int\\limits _{0}^{1}x\\cot ^{-1}(1-x^{2}+x^{4})dx$\n\nLet $x^{2} = t$\n\n$\\Rightarrow$ 2xdx = dt\n\nAt x = 0, t = 0\n\nAt x = 1, t = 1\n\nI = $\\frac{1}{2}\\int\\limits _{0}^{1}\\cot ^{-1}\\left (1-t+t^{2}\\right )dt$\n\n= $\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}\\left (\\frac{1}{1-t+t^{2}}\\right )dt$\n\n= $\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}\\left (\\frac{t+(1-t)}{1-t+t^{2}}\\right )dt$\n\n= $\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}\\left (\\frac{t+(1-t)}{1-t(1-t)}\\right )dt$\n\n= $\\frac{1}{2}\\int\\limits _{0}^{1}\\left [\\tan ^{-1}(1-t)+\\tan ^{-1}(t)\\right ]dt$\n\n= $\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}(t)dt+\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}(1-t)dt$\n\n= $\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}(t)dt+\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}(t)dt$\n\n[ As $\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}(1-t)dt$\n\n= $\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}[0+1-(1-t)]dt$\n\n= $\\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}(t)dt$ ]\n\n= $2\\times \\frac{1}{2}\\int\\limits _{0}^{1}\\tan ^{-1}(t)dt$\n\n= $\\int\\limits _{0}^{1}\\tan ^{-1}(t)dt$\n\nUsing integration by parts rule\n\n= $\\left [t.\\tan ^{-1}(t)\\right ]_{0}^{1}-\\int\\limits _{0}^{1}t.\\frac{1}{1+t^{2}}dt$\n\n= $\\frac{π}{4}-\\frac{1}{2}\\left [\\log \\left (1+t^{2}\\right )\\right ]_{0}^{1}$\n\n= $\\frac{π}{4}-\\frac{1}{2}\\log _{e}2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-G4svy42K",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of sin 10º sin30º sin50º sin70º is :-",
+  "options": [
+   "$\\frac{1}{36}$",
+   "$\\frac{1}{16}$",
+   "$\\frac{1}{32}$",
+   "$\\frac{1}{18}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "sin 10º sin30º sin50º sin70º\n\n= sin30º sin50º sin 10º sin70º\n\n= $\\frac{1}{2}$ [ sin50º sin 10º sin70º ]\n\n= $\\frac{1}{2}$ [ sin(60º - 10º)  sin 10º sin(60º + 10º) ]\n\n= $\\frac{1}{2}$ [ $\\frac{1}{4}\\sin$3(10º) ]\n\n= $\\frac{1}{2}$ [ $\\frac{1}{4}\\times \\frac{1}{2}$]\n\n= $\\frac{1}{16}$\n\nNote :\n\n $\\sin (60^{\\circ }-A)\\sin A\\sin (60^{\\circ }-A)=\\frac{1}{4}\\sin 3A$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-zgUc015y",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let z $\\in$ C be such that |z| < 1.\n\n If $ω=\\frac{5+3z}{5(1-z)}$, then :",
+  "options": [
+   "4Im( $ω$) > 5",
+   "5Im( $ω$) < 1",
+   "5Re( $ω$) > 4",
+   "5Re( $ω$) > 1"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$ω=\\frac{5+3z}{5(1-z)}$\n\n$\\Rightarrow$ $5ω(1-z)=5+3z$\n\n$\\Rightarrow$ $5ω-5ωz=5+3z$\n\n$\\Rightarrow$ $5ω-5=5ωz+3z$\n\n$\\Rightarrow$ $z(5ω+3)=5(ω-1)$\n\n$\\Rightarrow$ $z=\\frac{5(ω-1)}{3+5ω}$\n\n$\\Rightarrow$ $z=\\frac{5(ω-1)}{5\\left (ω+\\frac{3}{5}\\right )}$\n\n$\\Rightarrow$ $z=\\frac{(ω-1)}{\\left (ω+\\frac{3}{5}\\right )}$\n\nGiven |z|  1\n\nOther Method :\n\n$ω=\\frac{5+3z}{5(1-z)}$\n\n$\\Rightarrow$ $5ω(1-z)=5+3z$\n\n$\\Rightarrow$ $5ω-5ωz=5+3z$\n\n$\\Rightarrow$ $5ω-5=5ωz+3z$\n\n$\\Rightarrow$ $z(5ω+3)=5(ω-1)$\n\n$\\Rightarrow$ $z=\\frac{5(ω-1)}{3+5ω}$\n\nGiven |z|  1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-evening-slot/zgUc015yKq58iZfHNP18hoxe66ijvwujxie-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-99dcQh1k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\cos x\\frac{dy}{dx}-y\\sin x=6x$, (0 < x < $\\frac{π}{2}$)\n\nand $y\\left (\\frac{π}{3}\\right )$ = 0 then $y\\left (\\frac{π}{6}\\right )$ is equal to :-",
+  "options": [
+   "$-\\frac{π^{2}}{2}$",
+   "$-\\frac{π^{2}}{4\\sqrt{3}}$",
+   "$\\frac{π^{2}}{2\\sqrt{3}}$",
+   "$-\\frac{π^{2}}{2\\sqrt{3}}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cos x\\frac{dy}{dx}-y\\sin x=6x$\n\n$\\Rightarrow$ $\\frac{dy}{dx}-y\\tan x=6x.\\sec x$\n\nThis is a linear differential equation.\n\n$\\therefore$ I.F = $e^{\\int -\\tan xdx}$ = $|\\cos x|$\n\nAs 0 < x < $\\frac{π}{2}$, so I.F = $\\cos x$\n\nSo solution is\n\ny(I.F) = $\\int 6x.\\sec x(I.F)dx$\n\n$\\Rightarrow$ y cosx = $\\int 6x.\\sec x\\cos xdx$\n\n$\\Rightarrow$ y cosx = $6\\int xdx$\n\n$\\Rightarrow$ y cosx $= 3x^{2} + C$\n\nAs $y\\left (\\frac{π}{3}\\right )=0$\n\n$\\therefore$ $(0)\\times \\left (\\frac{1}{2}\\right )=\\frac{3π^{2}}{9}+C$\n\n$\\Rightarrow C=\\frac{-π^{2}}{3}$\n\n$\\Rightarrow y\\cos x=3x^{2}-\\frac{π^{2}}{3}$\n\nFor $y\\left (\\frac{π}{6}\\right )$\n\n$y\\frac{\\sqrt{3}}{2}=\\frac{3π^{2}}{36}-\\frac{π^{2}}{3}$\n\n$\\Rightarrow$ $\\frac{\\sqrt{3}y}{2}=\\frac{-3π^{2}}{12}$\n\n$\\Rightarrow y=\\frac{-π^{2}}{2\\sqrt{3}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-qWfD2NN5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the two lines x + (a – 1) y = 1 and\n$2x + a^{2}y = 1 (a\\in$R – {0, 1}) are perpendicular, then\nthe distance of their point of intersection from the\norigin is :",
+  "options": [
+   "$\\frac{2}{\\sqrt{5}}$",
+   "$\\frac{\\sqrt{2}}{5}$",
+   "$\\frac{2}{5}$",
+   "$\\sqrt{\\frac{2}{5}}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Line 1 : x + (a – 1) y = 1\n\nSlope of this line $(m_{1}) =$ $\\frac{-1}{a-1}$\n\nLine 2 : $2x + a^{2}y = 1$\n\nSlope of this line $(m_{2}) =$ $-\\frac{2}{a^{2}}$\n\nLine 1 and Line 2 are perpendicular to each other.\n\n$\\therefore$ $m_{1} m_{2} = -1$\n\n$\\Rightarrow$ $\\left (\\frac{-1}{a-1}\\right )\\left (-\\frac{2}{a^{2}}\\right )=-1$\n\n$\\Rightarrow$ $a^{3}-a^{2}+2=0$\n\n$\\Rightarrow$ $(a+1)\\left (a^{2}-2a+2\\right )$ = 0\n\n$\\therefore$ $a=-1$\n\nSo lines are\n\nLine 1 : x - 2y - 1 = 0\n\nLine 2 : 2x + y - 1 = 0\n\nSolving these equation we get point of intersection\n\nP$\\left (\\frac{3}{5},-\\frac{1}{5}\\right )$\n\nNow distance of P from origin\n\nOP = $\\sqrt{\\left (\\frac{3}{5}\\right )^{2}+\\left (-\\frac{1}{5}\\right )^{2}}$\n\n= $\\sqrt{\\frac{10}{25}}$\n\n= $\\sqrt{\\frac{2}{5}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-j6dKprjf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A water tank has the shape of an inverted right\ncircular cone, whose semi-vertical angle is\n$\\tan ^{-1}\\left (\\frac{1}{2}\\right )$. Water is poured into it at a constant\nrate of 5 cubic meter per minute. Then the rate\n(in m/min.), at which the level of water is rising\nat the instant when the depth of water in the tank\nis 10m; is :-",
+  "options": [
+   "$\\frac{1}{15π}$",
+   "$\\frac{1}{5π}$",
+   "$\\frac{1}{10π}$",
+   "$\\frac{2}{π}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nGiven $\\frac{dv}{dt}$ $= 5 m^{3}/\\min $\n\n and $θ$ = $\\tan ^{-1}\\left (\\frac{1}{2}\\right )$\n\n$\\Rightarrow$ tan $θ$ = $\\frac{1}{2}$ = $\\frac{r}{h}$\n\n$\\Rightarrow$ h = 2r\n\nVolume of the cone,\n\nv = $\\frac{1}{3}πr^{2}h$ = $\\frac{1}{3}π\\left (\\frac{h}{2}\\right )^{2}h$ = $\\frac{πh^{3}}{12}$\n\n$\\therefore$ $\\frac{dv}{dt}=\\frac{π}{12}\\left (3h^{2}\\right )\\frac{dh}{dt}$\n\n$\\Rightarrow$ 5 = $\\frac{π}{4}h^{2}\\frac{dh}{dt}$\n\n$\\Rightarrow$ 5 = $\\frac{π}{4}(10)^{2}\\frac{dh}{dt}$\n\n$\\Rightarrow$ $\\frac{dh}{dt}$ = $\\frac{1}{5π}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-evening-slot/j6dKprjfuC9iNtm3Qv18hoxe66ijvwuw2ce-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-SGw6KlnN",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The vertices B and C of a $\\Delta$ABC lie on the line, \n\n$\\frac{x+2}{3}=\\frac{y-1}{0}=\\frac{z}{4}$ such that BC = 5 units. \n\nThen the\narea (in sq. units) of this triangle, given that the\npoint A(1, –1, 2), is :",
+  "options": [
+   "6",
+   "$5\\sqrt{17}$",
+   "$\\sqrt{34}$",
+   "$2\\sqrt{34}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\nArea of  $\\Delta$ABC = $\\frac{1}{2}\\times BC\\times AD$\n\nGiven BC = 5 so we need perpendicular\ndistance of A from line BC.\n\nLet a point D on BC = (3$λ$ - 2, 1, 4$λ$)\n\nDirection ratio of AD\n\n3$λ$ - 3, 2, 4$λ$ - 2\n\n As AD perpendicular to the BC, so\n\nDR of AD. DR of BC = 0\n\n$(3λ-3)3+2(0)+(4λ-2)4=0$\n\n$9λ-9+16λ-8=0\\Rightarrow λ=\\frac{17}{25}$\n\nHence, $D=\\left (\\frac{1}{25},1,\\frac{68}{25}\\right )$\n\n$\\left |AD–\\right |=\\sqrt{\\left (\\frac{1}{25}-1\\right )^{2}+(2)^{2}+\\left (\\frac{68}{25}-2\\right )^{2}}$\n\n$\\Rightarrow \\sqrt{\\left (\\frac{-24}{25}\\right )^{2}+4+\\left (\\frac{18}{25}\\right )^{2}}$\n\n$\\Rightarrow \\sqrt{\\frac{(24)^{2}+4(25)^{2}+(18)^{2}}{25^{2}}}$\n\n$\\Rightarrow \\sqrt{\\frac{576+2500+324}{25^{2}}}$\n\n$\\Rightarrow \\sqrt{\\frac{3400}{25^{2}}}\\Rightarrow \\frac{\\sqrt{34}.10}{25}=\\frac{2\\sqrt{34}}{5}$\n\nArea of triangle = $\\frac{1}{2}\\times \\left |BC–\\right |\\times \\left |AD–\\right |$\n\n= $\\frac{1}{2}\\times 5\\times \\frac{2\\sqrt{34}}{5}=\\sqrt{34}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-evening-slot/SGw6KlnNG3CtzIgUGr18hoxe66ijvwv9w1o-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-K7MM9Pd6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The total number of matrices\n\n$A=⎛⎝⎜\\begin{array}{lll} 0 & 2y & 1 \\\\ 2x & y & -1 \\\\ 2x & -y & 1 \\end{array}⎞⎠⎟$\n\n(x, y $\\in$ R,x $\\neq$ y) for which $A^{T}A = 3I_{3}$ is :-",
+  "options": [
+   "3",
+   "4",
+   "2",
+   "6"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $A^{T}A = 3I_{3}$\n\n$\\Rightarrow$ $\\left [\\begin{array}{lll} 0 & 2x & 2x \\\\ 2y & y & -y \\\\ 1 & -1 & 1 \\end{array}\\right ]\\left [\\begin{array}{lll} 0 & 2y & 1 \\\\ 2x & y & -1 \\\\ 2x & -y & 1 \\end{array}\\right ]$\n\n = $3\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right ]$\n\n$\\Rightarrow$ $\\left [\\begin{array}{lll} 8x^{2} & 0 & 0 \\\\ 0 & 6y^{2} & 0 \\\\ 0 & 0 & 3 \\end{array}\\right ]$ = $\\left [\\begin{array}{lll} 3 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 3 \\end{array}\\right ]$\n\n$\\therefore$ $8x^{2} = 3, 6y^{2} = 3$\n\n$\\Rightarrow$ x = $\\pm \\sqrt{\\frac{3}{8}}$, y = $\\pm \\sqrt{\\frac{1}{2}}$\n\nTotal possible combination of x and y = 2 $\\times$ 2 = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-TCbtDz0R",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the function $f(x)=\\left \\{\\begin{array}{l} a|π-x|+1,x\\leq 5 \\\\ b|x-π|+3,x>5 \\end{array} \\right.$\n\nis\ncontinuous at x = 5, then the value of a – b is :-",
+  "options": [
+   "$\\frac{2}{π-5}$",
+   "$\\frac{2}{5-π}$",
+   "$\\frac{-2}{π+5}$",
+   "$\\frac{2}{π+5}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "As f(x) is continuous at x = 5 then\n\n$\\lim _{x\\to 5^{-}}f(x)=f(5)=\\lim _{x\\to 5^{+}}f(x)$\n\n$\\Rightarrow$ $\\lim _{h\\to 0}f(5-h)=f(5)=\\lim _{h\\to 0}f(5+h)$\n\n$\\Rightarrow$ $\\lim _{h\\to 0}(a|π-(5-h)|+1)=a|π-5|+1$\n\n = $\\lim _{h\\to 0}(b|5+h-π|+3)$\n\n$\\Rightarrow$ $a|π-5|+1$ = $a|π-5|+1$\n\n= $b|5-π|+3$\n\nNote : As $π$ = 3.14, then $π$ - 5 = 3.14 - 5 = -1.84 < 0\n\n$\\therefore$ $|π-5|$ = - ($π$ - 5) and $|5-π|$ = (5 - $π$)\n\n$\\Rightarrow$ $-a(π-5)+1$ = $-a(π-5)+1$ = $b(5-π)+3$\n\n$\\Rightarrow$ $-a(π-5)+1$ = $b(5-π)+3$\n\n$\\Rightarrow$ $(a-b)(5-π)=2$\n\n$\\Rightarrow$ $(a-b)=\\frac{2}{(5-π)}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-jhCiGFJp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $f(x)=[x]-\\left [\\frac{x}{4}\\right ]$ ,x $\\in$\n4\n, where [x] denotes the\ngreatest integer function, then",
+  "options": [
+   "Both $\\lim _{x\\to 4-}f(x)$ and $\\lim _{x\\to 4+}f(x)$ exist but are not\nequal",
+   "f is continuous at x = 4",
+   "$\\lim _{x\\to 4+}f(x)$ exists but $\\lim _{x\\to 4-}f(x)$ does not exist",
+   "$\\lim _{x\\to 4-}f(x)$ exists but $\\lim _{x\\to 4+}f(x)$ does not exist"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=[x]-\\left [\\frac{x}{4}\\right ]$\n\nHere check continuty at x = 4\n\nLHL = $\\lim _{x\\to 4^{-}}f(x)$\n\n= $\\lim _{x\\to 4^{-}}[x]-\\left [\\frac{x}{4}\\right ]$\n\n= $\\lim _{h\\to 0}[4-h]-\\left [\\frac{4-h}{4}\\right ]$\n\n= 3 - 0 = 3\n\nh $\\to$ 0 means h > 0 (very small positive value)\n\nSo 4 - h = 3.something (means less than 4)\n\n$\\therefore$ [4 - h] = [3.something] = 3\n\nand $\\left [\\frac{4-h}{4}\\right ]$ = [0.something] = 0\n\nRHL = $\\lim _{x\\to 4^{+}}f(x)$\n\n= $\\lim _{x\\to 4^{+}}[x]-\\left [\\frac{4}{x}\\right ]$\n\n= $\\lim _{h\\to 0}[4+h]-\\left [\\frac{4+h}{4}\\right ]$\n\n= 4 - 1 = 3\n\nHere [4 + h] = [4.something] = 4\n\nand $\\left [\\frac{4+h}{4}\\right ]$ = [1.something] = 1\n\nAnd f(4) = $[4]-\\left [\\frac{4}{4}\\right ]$ = 4 - 1 = 3\n\nAs LHL = RHL = f(4)\n\n$\\therefore$ f is continuous at x = 4.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-PYnBJilI",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\int e^{\\sec x}$ $(\\sec x\\tan xf(x)+\\sec x\\tan x+\\sec ^{2}x)dx$\n\n$= e^{$secx}f(x) + C then a possible choice of f(x) is :-",
+  "options": [
+   "x sec x + tan x + 1/2",
+   "sec x + xtan x - 1/2",
+   "sec x - tan x - 1/2",
+   "sec x + tan x + 1/2"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given\n\n$\\int e^{\\sec x}\\left (\\sec x\\tan xf(x)+(secxtanx+\\sec ^{2}x)\\right )$\n\n$=e^{\\sec x}f(x)+C$\n\nDifferentiating both sides with respect to x,\n\n$e^{\\sec x}.\\sec x\\tan xf(x)$ + $e^{\\sec x}\\left (\\sec x\\tan x+\\sec ^{2}x\\right )$\n\n= $e^{\\sec x}$. f'(x) + f(x)$e^{\\sec x}$.$\\sec x\\tan x$\n\n$\\Rightarrow$ $e^{\\sec x}\\left (\\sec x\\tan x+\\sec ^{2}x\\right )$ = $e^{\\sec x}$. f'(x)\n\n$\\Rightarrow$ f'(x) = $\\sec x\\tan x+\\sec ^{2}x$\n\n$\\therefore$ $f(x)=\\int \\left ((\\sec x\\tan x)+\\sec ^{2}x\\right )dx$\n\n$\\therefore$ $f(x)=\\sec x+\\tan x+C$\n\nFrom question we can not find the value of C. So we have to choose any random value of C where ($\\sec x+\\tan x$) present.\n\nOnly in option D, ($\\sec x+\\tan x$) term present. So only possible option is D.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-r4cRgmua",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If m is chosen in the quadratic equation \n\n$(m^{2} + 1)$\n$x^{2} – 3x + (m^{2} + 1)^{2} = 0$ \n\nsuch that the sum of its\nroots is greatest, then the absolute difference of\nthe cubes of its roots is :-",
+  "options": [
+   "$4\\sqrt{3}$",
+   "$8\\sqrt{3}$",
+   "$8\\sqrt{5}$",
+   "$10\\sqrt{5}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given quadratic equation \n\n$(m^{2} + 1)$\n$x^{2} – 3x + (m^{2} + 1)^{2} = 0$\n\nLet roots of the equation $α$ and $β$.\n\n$\\therefore$ Sum of roots = $α$ + $β$ = $\\frac{3}{m^{2}+1}$\n\nProduct of roots = $αβ$ $= m^{2} + 1$\n\n$\\frac{3}{m^{2}+1}$ is maximum when m = 0\n\nHence equation becomes $x^{2} – 3x + 1 = 0$\n\n$α+β=3$,    $αβ=1$    \n\n$|α-β|$ = $\\sqrt{(α+β)^{2}-4αβ}$ = $\\sqrt{(3)^{2}-4.1}$ = $\\sqrt{5}$\n\n$\\left |α^{3}-β^{3}\\right |=\\left |(α-β)(α^{2}+β^{2}+αβ)\\right |$\n\n= $\\sqrt{5}\\left |(α+β)^{2}-αβ\\right |$\n\n$=\\sqrt{5}(9-1)=8\\sqrt{5}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-bm95iHHu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two newspapers A and B are published in a city.\nIt is known that 25% of the city populations reads\nA and 20% reads B while 8% reads both A and\nB. Further, 30% of those who read A but not B\nlook into advertisements and 40% of those who\nread B but not A also look into advertisements,\nwhile 50% of those who read both A and B look\ninto advertisements. Then the percentage of the\npopulation who look into advertisement is :-",
+  "options": [
+   "13.5",
+   "13",
+   "12.8",
+   "13.9"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\nThe total population to be 100 (for simplicity's sake) and the percentages can be treated as actual numbers of people in this context.\n\nThe percentage of people who read newspaper A is given as 25. However, among these, there are people who read both newspapers A and B, given as 8. To find the number of people who read only newspaper A, we subtract the number of people who read both from the total number of people who read A. That is,\n\nn(A only) = 25 – 8 = 17\n\nSimilarly, the number of people who read only newspaper B is calculated as :\n\nn(B only) = 20 – 8 = 12\n\nNow, we are given the percentage of each of these groups that look into the advertisements:\n\n30% of those who read A but not B,\n40% of those who read B but not A,\n50% of those who read both A and B.\n\nTo find the total percentage of the population that looks into advertisements, we add up the contributions from each of these groups. We calculate each group's contribution by multiplying the size of the group by the percentage of that group that looks at advertisements :\n\n= $\\frac{30}{100}\\times 17$ (from A only) + $\\frac{40}{100}\\times 12$(from B only) + $\\frac{50}{100}\\times 8$(from both A and B)\n\n= 5.1 (from A only) + 4.8 (from B only) + 4 (from both A and B)\n\nAdding these up, we get\n\n= 13.9\n\nThis means that 13.9% of the total population looks into the advertisements.\n\nSo, the correct answer is :\n\nOption D : 13.9.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-evening-slot/bm95iHHu7AMPxaoEUQ18hoxe66ijvwvu5os-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-w8Zuk7uF",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The domain of the definition of the function \n\n$f(x)=\\frac{1}{4-x^{2}}+\\log _{10}(x^{3}-x)$ is",
+  "options": [
+   "(-1, 0) $\\cup$ (1, 2) $\\cup$ (2, $\\infty$)",
+   "(-2, -1) $\\cup$ (-1,0) $\\cup$ (2, $\\infty$)",
+   "(1, 2) $\\cup$ (2, $\\infty$)",
+   "(-1, 0) $\\cup$ (1,2) $\\cup$ (3, $\\infty$)"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $f(x)=\\frac{1}{4-x^{2}}+\\log _{10}(x^{3}-x)$\n\nLet $f_{1}(x) =$ $\\frac{1}{4-x^{2}}$ and $f_{2}(x) =$ $\\log _{10}(x^{3}-x)$\n\nHere in $f_{1}(x)$ denominator $\\neq$ 0\n\n$4 - x^{2}$ $\\neq$ 0\n\n$\\Rightarrow$ x $\\neq$ $\\pm$ 2 ...........(1)\n\nand $x^{3} - x > 0$\n\n$\\Rightarrow$ $x(x^{2} - 1) > 0$\n\n$\\Rightarrow$ x(x + 1)(x - 1) > 0\n\n\n[IMG]\n\n\nx $\\in$ (-1, 0) $\\cup$ (1, $\\infty$) ........(2)\n\nHence domain is intersection of (1) and (2)\n\nx $\\in$ (-1, 0) $\\cup$ (1, 2) $\\cup$ (2, $\\infty$)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-evening-slot/w8Zuk7uFMhknNRsWwF18hoxe66ijvww16jt-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-GqaYQGm3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The mean and the median of the following ten\nnumbers in increasing order 10, 22, 26, 29, 34, x,\n42, 67, 70, y are 42 and 35 respectively, then $\\frac{y}{x}$ is equal to",
+  "options": [
+   "$\\frac{7}{2}$",
+   "$\\frac{8}{3}$",
+   "$\\frac{9}{4}$",
+   "$\\frac{7}{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given ten numbers are 10, 22, 26, 29, 34, x,\n42, 67, 70, y.\n\nAs the numbers are in increasing order so \n\nMediun = $\\frac{34+x}{2}$ = 35\n\n$\\Rightarrow$ x = 36\n\nAlso given mean = 42\n\n$\\Rightarrow$ $\\frac{10+22+26+29+34+x+42+67+70+y}{10}$ = 42\n\n$\\Rightarrow$ $\\frac{300+x+y}{10}$ = 42\n\n$\\Rightarrow$ 300 + x + y = 420\n\n$\\Rightarrow$ 336 + y = 420\n\n$\\Rightarrow$ y = 84\n\n$\\therefore$ $\\frac{y}{x}=\\frac{84}{36}$ = $\\frac{7}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-TsupCJrG",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) of the region\n\nA = {(x, y) : $\\frac{y{}^{2}}{2}$ $\\leq$ x $\\leq$ y + 4} is :-",
+  "options": [
+   "30",
+   "18",
+   "$\\frac{53}{3}$",
+   "16"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$y^{2} = 2x ...........(1)$\n\nand x = y + 4 .............(2)\n\nSolving (1) and (2)\n\n$(x - 4)^{2} = 2x$\n\n$\\Rightarrow$ $x^{2} - 10x + 16 = 0$\n\n$\\Rightarrow$ x = 8, 2 and y = 4, -2\n\nIntegrating in y direction from A to B\n\nRequired area (A) = $\\int\\limits _{-2}^{4}\\left (y+4-\\frac{y^{2}}{2}\\right )dy$\n\n= $\\left [\\frac{y^{2}}{2}+4y-\\frac{y^{3}}{6}\\right ]_{-2}^{4}$\n\n= $\\left (\\frac{16}{2}+16-\\frac{64}{6}\\right )$ - $\\left (\\frac{4}{2}-8+\\frac{8}{6}\\right )$\n\n= 30 - 12 sq. unit\n\n= 18 sq. unit",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-evening-slot/TsupCJrGClDjxoGzUl18hoxe66ijvww5mu1-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-5UABRSZy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If a unit vector $\\vec{a}$ makes angles $π$/3 with $\\hat{i}$ , $π$/ 4\nwith $\\hat{j}$ and $θ\\in$(0, $π$) with $\\widehat{k}$, then a value of $θ$\nis :-",
+  "options": [
+   "$\\frac{5π}{6}$",
+   "$\\frac{5π}{12}$",
+   "$\\frac{2π}{3}$",
+   "$\\frac{π}{4}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A unit vector $\\vec{a}$ makes angles $π$/3 with $\\hat{i}$\n\n$\\therefore$ $α$ = $π$/3\n\n and $π$/ 4\nwith $\\hat{j}$ \n\n$\\therefore$ $β$ = $π$/ 4\n\nand $θ\\in$(0, $π$) with $\\widehat{k}$\n\n$\\therefore$ $γ$ = $θ$\n\nWe also know,\n\n$\\cos ^{2}α+\\cos ^{2}β+\\cos ^{2}γ$ = 1\n\n$\\Rightarrow$ $\\cos ^{2}\\frac{π}{3}+\\cos ^{2}\\frac{π}{4}+\\cos ^{2}θ$ = 1\n\n$\\Rightarrow$ $\\frac{1}{4}+\\frac{1}{2}+\\cos ^{2}θ$ = 1\n\n$\\Rightarrow$ $\\cos ^{2}θ$ = $\\frac{1}{4}$\n\n$\\Rightarrow$ $\\cos θ$ = $\\pm \\frac{1}{2}$\n\n$\\Rightarrow$ $θ$ = $\\frac{π}{3}$ or $\\frac{2π}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-ZOFJXZMI",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A rectangle is inscribed in a circle with a diameter\nlying along the line 3y = x + 7. If the two adjacent\nvertices of the rectangle are (–8, 5) and (6, 5), then\nthe area of the rectangle (in sq. units) is :",
+  "options": [
+   "72",
+   "84",
+   "56",
+   "98"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nDistance between point A and B is  = 14 unit\n\nAs y coordinate of point A(-8, 5) and B(6, 5) are same. So line AB is parallel to the x axis. \n\nPoint O is the center of the circle and OP is the perpendicular to the line AB. And P is the mid point of line AB.\n\n$\\therefore$ Point P = $\\left (\\frac{-8+6}{2},\\frac{5+5}{2}\\right )$ = (-1, 5)\n\nAs OP is perpendicular to the line AB and AB is parallel to the x axis then OP is parallel to the y axis. So x coordinate of line OP is constant.\n\n$\\therefore$ x coordinate of O  = -1\n\nAnd point O lies on the line 3y = x + 7\n\n$\\therefore$ 3y = -1 + 7\n\n$\\Rightarrow$ y = 2\n\n$\\therefore$ Center O = (-1, 2)\n\n$\\therefore$ OP = 3\n\nThen BC = 2OP = 6\n\n$\\therefore$ Area of rectangle = (AB)(BC)\n\n= 14 $\\times$ 6\n\n= 84",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-evening-slot/ZOFJXZMIfDQ8A2XV9I18hoxe66ijvww9skq-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]
