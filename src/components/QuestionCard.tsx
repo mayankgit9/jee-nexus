@@ -203,8 +203,10 @@ interface QuestionCardProps {
   question: PublicQuestion
   /** result injected when already submitted (e.g. review mode) */
   initialResult?: SubmittedResult | null
-  /** hide submit controls (browse mode) */
+  /** hide submit controls (review mode after answering) */
   readOnly?: boolean
+  /** show a secondary "Just show solution" button (library/bookmark browsing) */
+  allowReveal?: boolean
   onSubmit?: (result: SubmittedResult, timeSpentSeconds: number) => void
   loggedIn: boolean
   onRequireAuth?: () => void
@@ -213,7 +215,7 @@ interface QuestionCardProps {
 }
 
 export function QuestionCard({
-  question, initialResult, readOnly, onSubmit, loggedIn, onRequireAuth, index, total,
+  question, initialResult, readOnly, allowReveal, onSubmit, loggedIn, onRequireAuth, index, total,
 }: QuestionCardProps) {
   const [selected, setSelected] = useState<number[]>([])
   const [numerical, setNumerical] = useState('')
@@ -249,6 +251,21 @@ export function QuestionCard({
       onSubmit?.(r.result, timeSpentSeconds)
     } catch (e) {
       toast({ title: 'Submission failed', description: (e as Error).message, variant: 'destructive' })
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  /** Library browsing: fetch the solution WITHOUT grading or recording an
+   *  attempt (the submit endpoint treats an answer-less request as a reveal). */
+  const reveal = async () => {
+    if (submitting) return
+    setSubmitting(true)
+    try {
+      const r = await api<{ result: SubmittedResult }>('/api/questions/submit', { questionId: question.id })
+      setResult(r.result)
+    } catch (e) {
+      toast({ title: 'Could not load solution', description: (e as Error).message, variant: 'destructive' })
     } finally {
       setSubmitting(false)
     }
@@ -423,10 +440,15 @@ export function QuestionCard({
 
         {/* submit */}
         {!readOnly && !result && (
-          <div className="mt-5">
+          <div className="mt-5 flex flex-wrap items-center gap-3">
             <Button onClick={submit} disabled={!answered || submitting} className="min-w-[160px]">
               {submitting ? 'Checking…' : 'Submit answer'}
             </Button>
+            {allowReveal && (
+              <Button variant="ghost" onClick={reveal} disabled={submitting} className="text-muted-foreground">
+                Just show solution
+              </Button>
+            )}
           </div>
         )}
 

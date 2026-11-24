@@ -9,8 +9,8 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Skeleton } from '@/components/ui/skeleton'
 import { QuestionCard } from '@/components/QuestionCard'
-import { useApi, navigate, SUBJECT_COLORS, api } from '@/lib/client'
-import type { PublicQuestion, SubmittedResult } from '@/lib/types'
+import { useApi, navigate, SUBJECT_COLORS } from '@/lib/client'
+import type { PublicQuestion } from '@/lib/types'
 import { toast } from '@/hooks/use-toast'
 import { cn } from '@/lib/utils'
 
@@ -31,7 +31,6 @@ export function PyqView({ yearParam, subjectParam, chapterParam, loggedIn, onReq
 }) {
   const year = yearParam ? Number(yearParam) : null
   const [openedQuestion, setOpenedQuestion] = useState<PublicQuestion | null>(null)
-  const [result, setResult] = useState<SubmittedResult | null>(null)
 
   const yearsData = useApi<{ years: YearData[] }>(year == null ? '/api/pyq' : null)
   const breakdown = useApi<YearBreakdown>(year != null && !subjectParam ? `/api/pyq?year=${year}` : null)
@@ -42,27 +41,23 @@ export function PyqView({ yearParam, subjectParam, chapterParam, loggedIn, onReq
   const list = useApi<QuestionList>(listKey ? `${listKey}&page=${page}` : null, [page])
 
   const openQuestion = async (q: PublicQuestion) => {
+    // Attempt-first: open the card fresh so the student can try it before
+    // seeing the answer. "Just show solution" (allowReveal) covers readers
+    // who only want the reference-book experience — it fetches the solution
+    // without grading and without recording an attempt.
     setOpenedQuestion(q)
-    setResult(null)
-    try {
-      const r = await api<{ result: SubmittedResult }>('/api/questions/submit', { questionId: q.id })
-      setResult(r.result) // submit with no answer -> returns solution (browse mode)
-    } catch {
-      // ignore — solution just won't show
-    }
   }
 
   // ---------- single question browse ----------
   if (openedQuestion) {
     return (
       <div className="mx-auto max-w-3xl">
-        <Button variant="ghost" size="sm" onClick={() => { setOpenedQuestion(null); setResult(null) }} className="mb-4">
+        <Button variant="ghost" size="sm" onClick={() => setOpenedQuestion(null)} className="mb-4">
           <ArrowLeft className="mr-2 h-4 w-4" /> Back to list
         </Button>
         <QuestionCard
           question={openedQuestion}
-          initialResult={result}
-          readOnly
+          allowReveal
           loggedIn={loggedIn}
           onRequireAuth={onRequireAuth}
         />

@@ -13,6 +13,10 @@ import { cn } from '@/lib/utils'
 
 interface TaxonomySubject { key: SubjectKey; name: string; questionCount: number; chapters: { questionCount: number }[] }
 
+interface PyqOverview {
+  years: { year: number; total: number }[]
+}
+
 interface StatsData {
   stats: {
     totalAttempts: number; correct: number; accuracy: number; totalTimeSeconds: number
@@ -25,6 +29,7 @@ interface StatsData {
 
 export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonomy: TaxonomySubject[] | null }) {
   const stats = useApi<StatsData>(user ? '/api/stats' : null)
+  const pyq = useApi<PyqOverview>('/api/pyq')
   const st = stats.data?.stats ?? null
 
   const totalQuestions = taxonomy?.reduce((a, s) => a + s.questionCount, 0) ?? 0
@@ -36,7 +41,7 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs text-primary">
             <Flame className="h-3.5 w-3.5" />
-            {totalQuestions} verified-solution questions · growing daily
+            {totalQuestions.toLocaleString()} previous-year questions · growing daily
           </div>
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
             {user ? `Welcome back${user.name ? `, ${user.name.split(' ')[0]}` : ''}.` : 'Practice JEE Main.'}
@@ -156,19 +161,24 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
           <CardContent className="p-5">
             <h3 className="flex items-center gap-2 text-sm font-semibold"><Library className="h-4 w-4 text-primary" /> Year-wise PYQs</h3>
             <div className="mt-4 grid grid-cols-4 gap-2">
-              {[2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019].map((y) => (
+              {(pyq.data?.years ?? []).map((y) => (
                 <button
-                  key={y}
+                  key={y.year}
                   type="button"
-                  onClick={() => navigate(`/pyq/${y}`)}
-                  className="rounded-lg border border-border px-2 py-2.5 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/[0.06]"
+                  onClick={() => navigate(`/pyq/${y.year}`)}
+                  className="group rounded-lg border border-border px-2 py-2 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/[0.06]"
                 >
-                  {y}
+                  {y.year}
+                  <span className="ml-1.5 text-[11px] font-normal text-muted-foreground">{y.total}</span>
                 </button>
               ))}
+              {pyq.loading && [0, 1, 2, 3].map((i) => <Skeleton key={i} className="h-11" />)}
             </div>
+            {pyq.data && pyq.data.years.length === 0 && (
+              <p className="mt-4 text-sm text-muted-foreground">The question library is being imported — check back soon.</p>
+            )}
             <p className="mt-4 text-xs text-muted-foreground">
-              The library shows only years with imported, verified questions — never fabricated counts.
+              Every year listed has real imported questions — no fabricated counts, no placeholder years.
             </p>
           </CardContent>
         </Card>

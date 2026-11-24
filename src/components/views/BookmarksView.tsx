@@ -6,8 +6,8 @@ import { BookMarked, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { QuestionCard } from '@/components/QuestionCard'
-import type { PublicQuestion, SubmittedResult } from '@/lib/types'
-import { useApi, api, navigate } from '@/lib/client'
+import type { PublicQuestion } from '@/lib/types'
+import { useApi, navigate } from '@/lib/client'
 
 interface BookmarksData {
   bookmarks: { id: string; createdAt: string; question: PublicQuestion }[]
@@ -16,7 +16,6 @@ interface BookmarksData {
 export function BookmarksView({ loggedIn, onRequireAuth }: { loggedIn: boolean; onRequireAuth: () => void }) {
   const { data, loading, error, reload } = useApi<BookmarksData>(loggedIn ? '/api/bookmarks' : null)
   const [opened, setOpened] = useState<PublicQuestion | null>(null)
-  const [result, setResult] = useState<SubmittedResult | null>(null)
 
   if (!loggedIn) {
     return (
@@ -30,21 +29,18 @@ export function BookmarksView({ loggedIn, onRequireAuth }: { loggedIn: boolean; 
   }
 
   const open = async (q: PublicQuestion) => {
+    // Attempt-first (same as the PYQ library): the student can retry a
+    // bookmarked question; "Just show solution" reveals without grading.
     setOpened(q)
-    setResult(null)
-    try {
-      const r = await api<{ result: SubmittedResult }>('/api/questions/submit', { questionId: q.id })
-      setResult(r.result)
-    } catch { /* solution won't show */ }
   }
 
   if (opened) {
     return (
       <div className="mx-auto max-w-3xl">
-        <Button variant="ghost" size="sm" onClick={() => { setOpened(null); setResult(null); reload() }} className="mb-4">
+        <Button variant="ghost" size="sm" onClick={() => { setOpened(null); reload() }} className="mb-4">
           <ArrowLeft className="mr-2 h-4 w-4" /> Back to bookmarks
         </Button>
-        <QuestionCard question={opened} initialResult={result} readOnly loggedIn={loggedIn} onRequireAuth={onRequireAuth} />
+        <QuestionCard question={opened} allowReveal loggedIn={loggedIn} onRequireAuth={onRequireAuth} />
       </div>
     )
   }
