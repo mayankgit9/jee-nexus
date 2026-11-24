@@ -159,8 +159,11 @@ export function ExamRunner({ data, onFinish }: { data: StartResponse; onFinish: 
     if (pos < ids.length - 1) setCurrentId(ids[pos + 1])
   }
 
-  const mm = Math.max(0, Math.floor(remainingMs / 60000))
+  // NTA-style HH:MM:SS (180 minutes rendered as 2:59:58, not 179:58)
+  const hh = Math.max(0, Math.floor(remainingMs / 3600000))
+  const mm = Math.max(0, Math.floor((remainingMs % 3600000) / 60000))
   const ss = Math.max(0, Math.floor((remainingMs % 60000) / 1000))
+  const timeLabel = `${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}:${String(ss).padStart(2, '0')}`
   const lowTime = remainingMs < 5 * 60 * 1000
 
   const q = current.question
@@ -177,7 +180,7 @@ export function ExamRunner({ data, onFinish }: { data: StartResponse; onFinish: 
           <div className={cn('flex items-center gap-2 rounded-lg border px-3 py-1.5 font-mono text-sm font-bold',
             lowTime ? 'animate-pulse border-rose-400/50 bg-rose-400/10 text-rose-400' : 'border-primary/30 bg-primary/10 text-primary')}>
             <Timer className="h-4 w-4" />
-            {String(mm).padStart(2, '0')}:{String(ss).padStart(2, '0')}
+            {timeLabel}
           </div>
         </div>
       </header>
@@ -203,8 +206,8 @@ export function ExamRunner({ data, onFinish }: { data: StartResponse; onFinish: 
 
           {/* question card */}
           <ScrollArea className="flex-1 rounded-2xl border border-border bg-card p-5">
-            <div className="mb-3 flex items-center justify-between text-xs text-muted-foreground">
-              <span>Question {currentIndex + 1} of {questions.length}</span>
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
+              <span className="font-medium text-foreground">Question {currentIndex + 1} of {questions.length}</span>
               <span className="capitalize">{q.sourceShift ?? ''} {q.sourceYear ? `· ${q.sourceYear}` : ''} · {q.chapterName}</span>
             </div>
             <div className="text-[15px] leading-relaxed"><MathText text={q.text} /></div>
@@ -389,7 +392,7 @@ export function ExamRunner({ data, onFinish }: { data: StartResponse; onFinish: 
             <SummaryRow label="Marked for review" value={counts.marked} className="text-violet-400" />
             <SummaryRow label="Answered + marked" value={counts.answeredMarked} className="text-violet-400" />
             <SummaryRow label="Not visited" value={counts.notVisited} className="text-muted-foreground" />
-            <SummaryRow label="Time remaining" value={`${mm}:${String(ss).padStart(2, '0')}`} className="text-primary" />
+            <SummaryRow label="Time remaining" value={timeLabel} className="text-primary" />
           </div>
           <DialogFooter>
             <Button variant="ghost" onClick={() => setSubmitOpen(false)}>Continue exam</Button>
