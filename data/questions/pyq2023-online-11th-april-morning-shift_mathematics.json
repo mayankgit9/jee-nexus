@@ -1,0 +1,998 @@
+[
+ {
+  "publicId": "PYQ-2023-1lgutulh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let R be a rectangle given by the lines $x=0,x=2,y=0$ and $y=5$. Let A$(α,0)$ and B$(0,β),α\\in [0,2]$ and $β\\in [0,5]$, be such that the line segment AB divides the area of the rectangle R in the ratio 4 : 1. Then, the mid-point of AB lies on a :",
+  "options": [
+   "hyperbola",
+   "straight line",
+   "parabola",
+   "circle"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, $R$ be a rectangle formed by the lines $x=0$, $x=2,y=0$ and $y=5$\n\n\n[IMG]\n\n\nLet $PQRS$ be the rectangle such that\n\n$P(0,0),Q(2,0),R(2,5)\\text{and}S(0,5)$\n\n$PQ=SR=2$ units and $PS=QR=5$ units\n\n$\\therefore$ Area of rectangle $PQRS=(2\\times 5)\\mathrm{sq}$ units $=10\\mathrm{sq}$ units\n\nArea of $△PAB=\\frac{1}{5}\\times$ Area of rectangle\n\n$\\begin{array}{ll} \\dfrac{1}{2}\\times α\\times β & =\\dfrac{1}{5}\\times 10\\text{sq units} \\\\  \\\\ =2\\text{sq units} \\\\  \\\\ \\dfrac{1}{2}\\times α\\times β & =2 \\\\  \\\\ \\Rightarrow αβ & =4\\text{sq units}.........(i) \\end{array}$\n\nLet $M(h,k)$ be the mid-point of $AB$.\n\nHere, $h=\\frac{α}{2},k=\\frac{β}{2}$\n\nor $α=2h$ and $β=2k$\n\nOn substitute values of $α$ and $β$ in Eq. (i), we get\n\n$\\begin{array}{ll} (2h)(2k) & =4 \\\\  \\\\ \\Rightarrow hk & =1 \\\\  \\\\ \\therefore \\text{Locus of}M\\text{is}xy & =1\\text{, which is a hyperbola.} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-11th-april-morning-shift/1lgutulh7-0.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 11th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1lgutw8t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $S=\\{M=[a_{ij}],a_{ij}\\in \\{0,1,2\\},1\\leq i,j\\leq 2\\}$ be a sample space and $A=\\{M\\in S:M$ is invertible $\\}$ be an event. Then $P(A)$ is equal to :",
+  "options": [
+   "$\\frac{47}{81}$",
+   "$\\frac{49}{81}$",
+   "$\\frac{50}{81}$",
+   "$\\frac{16}{27}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, $S=\\{M=[a_{ij}],a_{ij}\\in \\{0,1,2\\},1\\leq i,j\\leq 2\\}$\n\nLet $M=\\left [\\begin{array}{ll} a & b \\\\ c & d \\end{array}\\right ]$, where $a,b,c,d\\in \\{0,1,2\\}$\n\n$n(s)=3^{4}=81$\n\nIf $A$ is invertible, then $|A|\\neq 0$\n\nNow, if $|A|=0$, then $|M|=0$\n\n$\\therefore ad-bc=0$ or $ad=bc$\n\nCase I : When $ad=bc=0$, then \n\nThere are five ways when $ad=0$ i.e., \n\n$(a,d)=(0,0),(0,1),(0,2),(1,0),(2,0)$\n\nSimilarly, there are again five ways, when $bc=0$\n\n$\\therefore$ There are total $5\\times 5=25$ ways, when $ad=bc=0$\n\nCase II : When $ad=bc=1$\n\nThere is only one way, when $ad=bc=1$\n\n$\\text{i.e.}a=b=c=d=1$\n\nCase III : When $ad=bc=2$\n\nThere are two ways, when $ad=2$, i.e.\n\n$(a,d)=(1,2)\\text{or}(2,1)$\n\nSimilarly, there are two ways\n\nwhen $bc=2$ i.e., $(b,c)=(1,2)$ or $(2,1)$\n\nCase IV : When $ad=bc=4$\n\nThere is only one way, when $ad=bc=4$\n\n$\\text{i.e.,}a=b=c=d=2$\n\n$\\therefore$ Total number of ways, when\n\n$\\begin{array}{l} |A|=0\\text{is}25+1+4+1=31 \\\\  \\\\ \\text{Hence,}P(A)=1-P(\\bar{A})=1-\\dfrac{31}{81}=\\dfrac{50}{81} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgutxkl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $x_{1},x_{2},\\ldots ,x_{100}$ be in an arithmetic progression, with $x_{1}=2$ and their mean equal to 200 . If $y_{i}=i(x_{i}-i),1\\leq i\\leq 100$, then the mean of $y_{1},y_{2},\\ldots ,y_{100}$ is :",
+  "options": [
+   "10051.50",
+   "10049.50",
+   "10100",
+   "10101.50"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, mean of $x_{1},x_{2}\\ldots \\ldots x_{100}=200$\n\nWhere, $x_{1},x_{2}\\ldots x_{100}$ are in AP with first term as 2.\n\n$\\begin{array}{ll} \\text{Mean} & =200 \\\\  \\\\ =\\dfrac{\\sum\\limits _{i=1}^{100}x_{i}}{100}=200 \\end{array}$\n\n$\\begin{array}{l} \\dfrac{100}{2}\\times [2\\times 2+99d]=20000 \\\\  \\\\ \\Rightarrow 4+99d=400 \\\\  \\\\ \\Rightarrow 99d=396 \\\\  \\\\ d=4 \\end{array}$\n\nAlso, \n\n$\\begin{array}{ll} y_{i} & =i(x_{i}-i) \\\\  \\\\ =i[2+(i-1)4-i] \\\\  \\\\ =i[3i-2] \\\\  \\\\ =3i^{2}-2i \\end{array}$\n\n$\\begin{array}{ll} \\text{Required mean} & =\\dfrac{\\sum\\limits _{i=1}^{100}y_{i}}{100} \\\\  \\\\ =\\dfrac{1}{100}\\left [\\sum\\limits _{i=1}^{100}\\left (3i^{2}-2i\\right )\\right ] \\\\  \\\\ =\\dfrac{1}{100}\\left [\\dfrac{3\\times 100\\times 101\\times 201}{6}-2\\times \\dfrac{100\\times 101}{2}\\right ] \\\\  \\\\ =\\dfrac{20301}{2}-101 \\\\  \\\\ =10049.50 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgutz71",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $w_{1}$ be the point obtained by the rotation of $z_{1}=5+4i$ about the origin through a right angle in the anticlockwise direction, and $w_{2}$ be the point obtained by the rotation of $z_{2}=3+5i$ about the origin through a right angle in the clockwise direction. Then the principal argument of $w_{1}-w_{2}$ is equal to :",
+  "options": [
+   "$-π+\\tan ^{-1}\\frac{8}{9}$",
+   "$-π+\\tan ^{-1}\\frac{33}{5}$",
+   "$π-\\tan ^{-1}\\frac{8}{9}$",
+   "$π-\\tan ^{-1}\\frac{33}{5}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve the problem, let's break it down step by step.\n\nStep 1 : Find $w_{1}$ \n\nGiven $z_{1}=5+4i$. \n\nWhen you rotate $z_{1}$ by $90^{\\circ }$ anticlockwise about the origin, the real part becomes negative of the imaginary part of $z_{1}$, and the imaginary part becomes the real part of $z_{1}$.\n\nTherefore, $w_{1}$ becomes :\n\n$w_{1}=-4+5i$\n\nStep 2 : Find $w_{2}$\n\nGiven $z_{2}=3+5i$.\n\nWhen you rotate $z_{2}$ by $90^{\\circ }$ clockwise about the origin, the real part becomes the imaginary part of $z_{2}$, and the imaginary part becomes negative of the real part of $z_{2}$.\n\nTherefore, $w_{2}$ becomes :\n\n$w_{2}=5-3i$\n\nStep 3 : Calculate $w_{1}-w_{2}$\n\n$w_{1}-w_{2}=(-4+5i)-(5-3i)$\n\n$w_{1}-w_{2}=-9+8i$\n\nStep 4 : Find the principal argument\n\nTo find the principal argument, we need to compute the tangent inverse of the ratio of the imaginary part to the real part. \n\nArgument = $\\tan ^{-1}\\left (\\frac{\\text{Imaginary part}}{\\text{Real part}}\\right )$ \n\nArgument = $\\tan ^{-1}\\left (\\frac{8}{-9}\\right )$ \n\nArgument = $-\\tan ^{-1}\\left (\\frac{8}{9}\\right )$ \n\nSince it's in the second quadrant, the principal argument is :\n\nArgument = $π+(-\\tan ^{-1}\\left (\\frac{8}{9}\\right ))$ \n\nArgument = $π-\\tan ^{-1}\\left (\\frac{8}{9}\\right )$ \n\nSo, the correct option is :\n\nOption C : $π-\\tan ^{-1}\\frac{8}{9}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguu2d0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $y=y(x)$ be a solution curve of the differential equation\n\n$\\left (1-x^{2}y^{2}\\right )dx=ydx+xdy$.\n\nIf the line $x=1$ intersects the curve $y=y(x)$ at $y=2$ and the line $x=2$ intersects the curve $y=y(x)$ at $y=α$, then a value of $α$ is :",
+  "options": [
+   "$\\frac{1+3e^{2}}{2(3e^{2}-1)}$",
+   "$\\frac{3e^{2}}{2(3e^{2}-1)}$",
+   "$\\frac{1-3e^{2}}{2(3e^{2}+1)}$",
+   "$\\frac{3e^{2}}{2(3e^{2}+1)}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since $y~dx+xdy=d(xy)$, the equation becomes\n\n$dx=\\dfrac{d(xy)}{1-(xy)^{2}}\\Rightarrow x=\\dfrac{1}{2}\\log _{e}\\left |\\dfrac{1+xy}{1-xy}\\right |+C$\n\nAt $x=1$, $y=2$ ($xy=2$): $1=\\dfrac{1}{2}\\log _{e}3+C$, so $C=1-\\dfrac{1}{2}\\log _{e}3$.\n\nAt $x=2$, $y=α$ ($xy=2α$):\n\n$2=\\dfrac{1}{2}\\log _{e}\\left |\\dfrac{1+2α}{1-2α}\\right |+1-\\dfrac{1}{2}\\log _{e}3\\Rightarrow \\left |\\dfrac{1+2α}{1-2α}\\right |=3e^{2}$\n\n$\\dfrac{1+2α}{1-2α}=-3e^{2}\\Rightarrow α=\\dfrac{1+3e^{2}}{2(3e^{2}-1)}$\n\n$\\dfrac{1+2α}{1-2α}=3e^{2}\\Rightarrow α=\\dfrac{3e^{2}-1}{2(3e^{2}+1)}$\n\nOnly the first value is among the options; it is also the one on the curve through $(1,2)$, where $xy>1$ keeps $\\dfrac{1+xy}{1-xy}$ negative.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguu4z5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of the integral $\\int\\limits _{-\\log _{e}2}^{\\log _{e}2}e^{x}\\left (\\log _{e}\\left (e^{x}+\\sqrt{1+e^{2x}}\\right )\\right )dx$ is equal to :",
+  "options": [
+   "$\\log _{e}\\left (\\frac{(2+\\sqrt{5})^{2}}{\\sqrt{1+\\sqrt{5}}}\\right )+\\frac{\\sqrt{5}}{2}$",
+   "$\\log _{e}\\left (\\frac{\\sqrt{2}(2+\\sqrt{5})^{2}}{\\sqrt{1+\\sqrt{5}}}\\right )-\\frac{\\sqrt{5}}{2}$",
+   "$\\log _{e}\\left (\\frac{2(2+\\sqrt{5})}{\\sqrt{1+\\sqrt{5}}}\\right )-\\frac{\\sqrt{5}}{2}$",
+   "$\\log _{e}\\left (\\frac{\\sqrt{2}(3-\\sqrt{5})^{2}}{\\sqrt{1+\\sqrt{5}}}\\right )+\\frac{\\sqrt{5}}{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{-\\log _{e}2}^{\\log _{e}2}e^{x}\\left (\\log _{e}\\left (e^{x}+\\sqrt{1+e^{2x}}\\right )\\right )dx$\n\nLet $e^{x}=t\\Rightarrow e^{x}dx=dt$\n\nWhen, $x\\to -\\log _{e}2$, then $t\\to \\frac{1}{2}$\n\nWhen, $x\\to \\log _{e}2$, then $t\\to 2$\n\n$I=\\int\\limits _{\\frac{1}{2}}^{2}\\left [\\log _{e}\\left (t+\\sqrt{1+t^{2}}\\right )\\right ]dt$ ...........(i)\n\nOn applying integration by part method in Eq. (i), we get\n\n$\\begin{array}{l} I=\\left [t\\log _{e}\\left (t+\\sqrt{1+t^{2}}\\right )\\right ]_{1/2}^{2}-\\int\\limits _{1/2}^{2}\\dfrac{t}{t+\\sqrt{1+t^{2}}}\\left (1+\\dfrac{2t}{2\\sqrt{1+t^{2}}}\\right )dt \\\\  \\\\ =2\\log _{e}(2+\\sqrt{5})-\\dfrac{1}{2}\\log _{e}\\left (\\dfrac{1+\\sqrt{5}}{2}\\right )-\\int\\limits _{1/2}^{2}\\dfrac{t}{\\sqrt{1+t^{2}}}dt \\end{array}$\n\n$=\\log _{e}\\left (\\frac{(2+\\sqrt{5})^{2}}{\\left (\\frac{1+\\sqrt{5}}{2}\\right )^{1/2}}\\right )-\\frac{1}{2}\\int\\limits _{1/2}^{2}\\frac{2t}{\\sqrt{1+t^{2}}}dt$ .............(ii)\n\nLet $I_{1}=\\int\\limits _{1/2}^{2}\\frac{2t}{\\sqrt{1+t^{2}}}dt$\n\nLet $1+t^{2}=w$\n\n$2tdt=dw$\n\nWhen, $t\\to \\frac{1}{2}$, then $w=\\frac{5}{4}$\n\nWhen, $t\\to 2$, then $w=5$\n\n$\\begin{array}{ll} I_{1} & =\\int\\limits _{5/4}^{5}\\dfrac{1}{\\sqrt{w}}dw \\\\  \\\\ =[2\\sqrt{w}]_{5/4}^{5} \\\\  \\\\ =2\\left [\\sqrt{5}-\\dfrac{\\sqrt{5}}{2}\\right ]=\\sqrt{5} \\end{array}$\n\nOn substitute value of $I_{1}$ in Eq. (ii), we get\n\n$I=\\log _{e}\\left (\\frac{\\sqrt{2}(2+\\sqrt{5})^{2}}{\\sqrt{1+\\sqrt{5}}}\\right )-\\frac{\\sqrt{5}}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguu6kr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let sets A and B have 5 elements each. Let the mean of the elements in sets A and B be 5 and 8 respectively and the variance of the elements in sets A and B be 12 and 20 respectively. A new set C of 10 elements is formed by subtracting 3 from each element of $\\mathrm{A}$ and adding 2 to each element of $\\mathrm{B}$. Then the sum of the mean and variance of the elements of $\\mathrm{C}$ is $___________$.",
+  "options": [
+   "36",
+   "40",
+   "38",
+   "32"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve this problem, let's break it down step by step :\n\nStep 1 : Determine the mean of set C\n\nThe mean of set A = $5$\n\nThe mean of set B = $8$\n\nAfter subtracting 3 from each element in set A, the new mean becomes $5-3=2$.\nAfter adding 2 to each element in set B, the new mean becomes $8+2=10$.\n\nWhen we combine both modified sets to form set C, the mean of set C is the weighted average of the means of these modified sets:\n\nMean of C = $\\frac{5\\times 2+5\\times 10}{10}=\\frac{10+50}{10}=6$\n\nStep 2 : Determine the variance of set C\n\nVariance is defined as the expectation of the squared deviation of a random variable from its mean. One property of variance is that, if you add (or subtract) a constant from each data point in a set, the variance of the set does not change.\n\nThus, the variance of the elements in set A remains $12$ even after subtracting 3 from each element, and the variance of the elements in set B remains $20$ even after adding 2 to each element.\n\nNow, when combining variances from two datasets into one :\n\nVariance of C \n\n= $\\frac{n_{1}\\times \\text{Variance of A}+n_{1}\\times (\\text{Mean of modified A}-\\text{Mean of C})^{2}+n_{2}\\times \\text{Variance of B}+n_{2}\\times (\\text{Mean of modified B}-\\text{Mean of C})^{2}}{n_{1}+n_{2}}$\n\nGiven :\n\n$n_{1}=n_{2}=5$\n\nVariance of A = $12$, Variance of B = $20$\n\nMean of modified A = $2$, Mean of modified B = $10$, Mean of C = $6$\n\nPlugging in the values, we get :\n\nVariance of C = $\\frac{5\\times 12+5\\times (2-6)^{2}+5\\times 20+5\\times (10-6)^{2}}{10}$\n\nVariance of C = $\\frac{60+80+100+80}{10}=\\frac{320}{10}=32$\n\nStep 3 : Sum of the mean and variance of set C\n\nSum = Mean of C + Variance of C = $6+32=38$\n\nSo, the correct answer is :\n\nOption C : 38.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguu8s7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For any vector $⃗{a}=a_{1}\\hat{i}+a_{2}\\hat{j}+a_{3}\\hat{k}$, with $10|a_{i}|<1,i=1,2,3$, consider the following statements :\n\n(A): $\\max \\{|a_{1}|,|a_{2}|,|a_{3}|\\}\\leq |⃗{a}|$\n\n(B) : $|⃗{a}|\\leq 3\\max \\{|a_{1}|,|a_{2}|,|a_{3}|\\}$",
+  "options": [
+   "Only (B) is true",
+   "Only (A) is true",
+   "Neither (A) nor (B) is true",
+   "Both (A) and (B) are true"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have,\n\n$\\begin{array}{l} 10|a_{i}|<1,i=1,2,3 \\\\  \\\\ \\text{Let}|a_{1}|\\geq |a_{2}|\\geq |a_{3}| \\\\  \\\\ |⃗{a}|=\\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}\\geq \\sqrt{a_{1}^{2}} \\\\  \\\\ \\therefore |⃗{a}|\\geq |a_{1}|\\text{or}\\max \\{|a_{1}|,|a_{2}|,|a_{3}|\\}\\text{.} \\end{array}$\n\nHence, (A) is true.\n\n$\\begin{array}{ll}  & |⃗{a}|=\\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}\\leq \\sqrt{a_{1}^{2}+a_{1}^{2}+a_{1}^{2}} \\\\  \\\\  & =\\sqrt{3}|a_{1}| \\\\  \\\\ \\therefore  & |⃗{a}|=\\sqrt{3}|a_{1}|<3|a_{1}| \\\\  \\\\ \\therefore  & |⃗{a}|<3\\max \\{|a_{1}|,|a_{2}|,|a_{3}|\\} \\end{array}$\n\nHence, (B) is also true.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguucig",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{A}$ be a $2\\times 2$ matrix with real entries such that $\\mathrm{A}^{'}=α\\mathrm{A}+\\mathrm{I}$, where $α\\in \\mathrm{ℝ}-\\{-1,1\\}$. If $\\det \\left (A^{2}-A\\right )=4$, then the sum of all possible values of $α$ is equal to :",
+  "options": [
+   "2",
+   "$\\frac{3}{2}$",
+   "0",
+   "$\\frac{5}{2}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Here $A^{'}$ denotes the transpose $A^{T}$, so $A^{T}=αA+I$.\n\nTaking the transpose of both sides, $A=αA^{T}+I=α(αA+I)+I$, so $(1-α^{2})A=(1+α)I$. Since $α\\neq \\pm 1$,\n\n$A=\\dfrac{1}{1-α}I=kI,k=\\dfrac{1}{1-α}.$\n\nThen $A^{2}-A=k(k-1)I$ with $k-1=\\dfrac{α}{1-α}$, and for a $2\\times 2$ matrix\n\n$\\det (A^{2}-A)=k^{2}(k-1)^{2}=\\dfrac{α^{2}}{(1-α)^{4}}=4\\Rightarrow \\dfrac{α}{(1-α)^{2}}=\\pm 2.$\n\nWith $+2$: $2(1-α)^{2}=α$, i.e. $2α^{2}-5α+2=0$, so $α=2$ or $α=\\dfrac{1}{2}$, both allowed.\n\nWith $-2$: $2(1-α)^{2}=-α$, i.e. $2α^{2}-3α+2=0$, whose discriminant $9-16<0$ gives no real $α$.\n\nThe sum of all possible values of $α$ is $2+\\dfrac{1}{2}=\\dfrac{5}{2}$.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguuf2h",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=\\left [x^{2}-x\\right ]+|-x+[x]|$, where $x\\in \\mathrm{ℝ}$ and $[t]$ denotes the greatest integer less than or equal to $t$. Then, $f$ is :",
+  "options": [
+   "continuous at $x=0$, but not continuous at $x=1$",
+   "continuous at $x=0$ and $x=1$",
+   "continuous at $x=1$, but not continuous at $x=0$",
+   "not continuous at $x=0$ and $x=1$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have,\n\n$\\begin{array}{ll} f(x) & =\\left [x^{2}-x\\right ]+|-x+[x]| \\\\  \\\\ \\qquad =[x(x-1)]+\\{x\\} \\end{array}$\n\n$f(x)=\\left \\{\\begin{array}{lll} x+1 & ; & -0.5<x<0 \\\\ 0 & ; & x=0 \\\\ -1+x & ; & 0<x<1 \\\\ 0 & ; & x=1 \\\\ x-1 & ; & 1<x<1.5 \\end{array} \\right.$\n\nAt $x=0$,\n\n$\\begin{array}{l} \\text{LHL}=\\lim _{x\\to 0^{-}}f(x)=1 \\\\  \\\\ \\text{RHL}\\lim _{x\\to 0^{+}}f(x)=-1 \\\\  \\\\ f(0)=0 \\end{array}$\n\n$\\therefore f(x)$ is not continuous at $x=0$\n\nAt $x=1$\n\n$\\begin{array}{ll} \\mathrm{LHL} & =\\lim _{x\\to 1^{-}}f(x)=-1+1=0 \\\\  \\\\ \\mathrm{RHL} & =\\lim _{x\\to 1^{+}}f(x)=1-1=0 \\\\  \\\\ f(1) & =0 \\end{array}$\n\n$\\therefore f(x)$ is continuous at $x=1$\n\nHence, $f(x)$ is continuous at $x=1$, but not continuous at $x=0$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguvb7i",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider ellipses $\\mathrm{E}_{k}:kx^{2}+k^{2}y^{2}=1,k=1,2,\\ldots ,20$. Let $\\mathrm{C}_{k}$ be the circle which touches the four chords joining the end points (one on minor axis and another on major axis) of the ellipse $\\mathrm{E}_{k}$. If $r_{k}$ is the radius of the circle $\\mathrm{C}_{k}$, then the value of $\\sum\\limits _{k=1}^{20}\\frac{1}{r_{k}^{2}}$ is :",
+  "options": [
+   "2870",
+   "3210",
+   "3320",
+   "3080"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, $E_{K}=Kx^{2}+K^{2}y^{2}=1,K=1,2,\\ldots 20$\n\n$\\Rightarrow \\frac{x^{2}}{\\frac{1}{K}}+\\frac{y^{2}}{\\frac{1}{K2}}=1$\n\n\n[IMG]\n\n\nEquation of $AB$ is $\\frac{x}{\\frac{1}{\\sqrt{K}}}+\\frac{y}{\\frac{1}{K}}=1$\n\n or $\\sqrt{K}x+Ky=1$\n\n$r_{K}$ is the radius of circle $C_{K}$,\n\nSo, $r_{K}=$ perpendicular distance from $(0,0)$ to $\\mathrm{AB}$\n\n$\\begin{array}{ll} r_{K} & =\\dfrac{|0+0-1|}{\\sqrt{(\\sqrt{K})^{2}+K^{2}}} \\\\  \\\\ =\\dfrac{1}{\\sqrt{K+K^{2}}} \\\\  \\\\ \\dfrac{1}{r_{K}^{2}} & =K+K^{2} \\end{array}$\n\n$\\begin{array}{ll} \\sum\\limits _{K=1}^{20}\\dfrac{1}{r_{K}^{2}} & =\\sum\\limits _{K=1}^{20}K+\\sum\\limits _{K=1}^{20}K^{2} \\\\  \\\\ =\\dfrac{20\\times 21}{2}+\\dfrac{20\\times 21\\times 41}{6} \\\\  \\\\ =210+2870=3080 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-11th-april-morning-shift/1lguvb7is-0.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 11th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1lguvhkp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Area of the region $\\left \\{(x,y):x^{2}+(y-2)^{2}\\leq 4,x^{2}\\geq 2y\\right \\}$ is",
+  "options": [
+   "$2π+\\frac{16}{3}$",
+   "$π-\\frac{8}{3}$",
+   "$π+\\frac{8}{3}$",
+   "$2π-\\frac{16}{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have,\n\n$x^{2}+(y-2)^{2}\\leq 2^{2}\\text{and}x^{2}\\geq 2y$\n\nOn solving the given equation of parabola and circle, we get\n\n$\\begin{array}{ll} 2y+(y-2)^{2} & =4 \\\\  \\\\ \\Rightarrow y=0\\text{or}2 \\end{array}$\n\nIf $y=0$, then $x=0$ and\n\nIf $y=2$, then $x=\\pm 2$\n\n$\\therefore$ The intersecting point of circle and parabola are $(0,0),(-2,2),(2,2)$\n\n\n[IMG]\n\n\n\n[IMG]\n\n\nArea of the shaded region = $=2\\times 2-\\frac{1}{4}\\cdot π\\cdot 2^{2}=4-π$\n\n$\\begin{array}{ll} \\text{Required area} & =2\\left [\\int\\limits _{0}^{2}\\dfrac{x^{2}}{2}dx-(4-π)\\right ] \\\\  \\\\ =2\\left [\\dfrac{x^{3}}{6}\\left |_{0}^{2}-4+π\\right ] \\\\  \\\\ =2\\left [\\dfrac{4}{3}+π-4\\right ] \\\\  \\\\ =2\\left [π-\\dfrac{8}{3}\\right ] \\\\  \\\\ =2π-\\dfrac{16}{3} \\end{array} \\right.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-11th-april-morning-shift/1lguvhkpl-0.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 11th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2023-online-11th-april-morning-shift/1lguvhkpl-1.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 11th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1lguvx5s",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $⃗{a}$ be a non-zero vector parallel to the line of intersection of the two planes described by $\\hat{i}+\\hat{j},\\hat{i}+\\hat{k}$ and $\\hat{i}-\\hat{j},\\hat{j}-\\hat{k}$. If $θ$ is the angle between the vector $⃗{a}$ and the vector $⃗{b}=2\\hat{i}-2\\hat{j}+\\hat{k}$ and $⃗{a}\\cdot ⃗{b}=6$, then the ordered pair $(θ,|⃗{a}\\times ⃗{b}|)$ is equal to :",
+  "options": [
+   "$\\left (\\frac{π}{3},3\\sqrt{6}\\right )$",
+   "$\\left (\\frac{π}{3},6\\right )$",
+   "$\\left (\\frac{π}{4},3\\sqrt{6}\\right )$",
+   "$\\left (\\frac{π}{4},6\\right )$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, $⃗{a}$ is non-zero vector parallel to the line of intersection of the two planes described by $\\hat{𝐢}+\\hat{𝐣},\\hat{𝐢}+\\hat{𝐤}$ and $\\hat{𝐢}-\\hat{𝐣},\\hat{𝐣}-\\hat{𝐤}$.\n\nLet $𝐧_{1}$ and $𝐧_{2}$ are the normal vector to the plane $\\hat{𝐢}+\\hat{𝐣},\\hat{𝐢}+\\hat{𝐤}$ and $\\hat{𝐢}-\\hat{𝐣},\\hat{𝐣}-\\hat{𝐤}$, respectively.\n\n$\\begin{array}{lllllll} n_{1}=\\left |\\begin{array}{lll} \\hat{𝐢} & \\hat{𝐣} & \\hat{𝐤} \\\\ 1 & 1 & 0 \\\\ 1 & 0 & 1 \\end{array}\\right |=\\hat{𝐢}-\\hat{𝐣}-\\hat{𝐤} \\\\  \\\\ n_{2}=\\left |\\begin{array}{lll} \\hat{𝐢} & \\hat{𝐣} & \\hat{𝐤} \\\\ 1 & -1 & 0 \\\\ 1 & 0 & -1 \\end{array}\\right |=\\hat{𝐢}+\\hat{𝐣}+\\hat{𝐤} \\\\  \\\\ ⃗{a}=λ(n_{1}\\times n_{2}) \\end{array}$\n\n[ $\\because 𝐚$ is parallel to line of intersection of both planes]\n\n$\\begin{array}{lllllll} =λ\\left |\\begin{array}{lll} \\hat{𝐢} & \\hat{𝐣} & \\hat{𝐤} \\\\ 1 & -1 & -1 \\\\ 1 & 1 & 1 \\end{array}\\right | \\\\  \\\\ =λ(-2\\hat{𝐣}+2\\hat{𝐤}) \\end{array}$\n\n$⃗{a}\\cdot ⃗{b}=6[Given]$\n\n$λ(0+4+2)=6$\n\n$λ=1$\n\n$\\begin{array}{ll} \\therefore ⃗{a} & =-2\\hat{𝐣}+2\\hat{𝐤} \\\\  \\\\ \\cos θ & =\\dfrac{⃗{a}\\cdot ⃗{b}}{|⃗{a}||⃗{b}|}=\\dfrac{6}{\\sqrt{4+4}\\sqrt{4+4+1}} \\\\  \\\\ \\qquad =\\dfrac{1}{\\sqrt{2}} \\end{array}$\n\n$\\therefore θ=\\frac{π}{4}$\n\n$\\begin{array}{llllllll} ⃗{a}\\times ⃗{b} & =\\left |\\begin{array}{lll} \\hat{𝐢} & \\hat{𝐣} & \\hat{𝐤} \\\\ 0 & -2 & 2 \\\\ 2 & -2 & 1 \\end{array}\\right | \\\\  \\\\ =2\\hat{𝐢}+4\\hat{𝐣}+4\\hat{𝐤} \\\\  \\\\ |⃗{a}\\times ⃗{b}| & =\\sqrt{4+16+16}=6 \\\\  \\\\ \\text{Hence,}(θ,|⃗{a}\\times ⃗{b}|) & =\\left (\\dfrac{π}{4},6\\right ) \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguw0e0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of triplets $(x,\\mathrm{y},\\mathrm{z})$, where $x,\\mathrm{y},\\mathrm{z}$ are distinct non negative integers satisfying $x+y+z=15$, is :",
+  "options": [
+   "136",
+   "80",
+   "92",
+   "114"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, $x+y+z=15$\n\n$\\begin{array}{ll} \\text{Total number of solutions} & ={}^{15+3-1}C_{3-1} \\\\  \\\\ ={}^{17}C_{2}=\\dfrac{17\\times 16}{1\\times 2}=136 \\end{array}$\n\nNow, we need to exclude the solutions where two of $(x,y,z)$ are the same.\n\n1) For the case $x=y\\neq z$ :\n\n$2x+z=15$\n\nThe solutions are :\n\n$x=0,z=15$\n\n$x=1,z=13$\n\n$x=2,z=11$\n\n$x=3,z=9$\n\n$x=4,z=7$\n\n$x=5,z=5$ (Not valid as all are the same)\n\n$x=6,z=3$\n\n$x=7,z=1$\n\nOut of these, 7 are valid.\n\nSimilarly, for the cases $y=z\\neq x$ and $z=x\\neq y$, there will be 7 valid solutions for each, so a total of $7\\times 3=21$ solutions where two of the variables are equal.\n\nExcluding these, we get :\n\n$136-21=115$\n\nThere is one solution in which $\\mathrm{x}=\\mathrm{y}=\\mathrm{z}$\n\nRequired answer $=136-21-1=114$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguw56u",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of integral solutions $x$ of $\\log _{\\left (x+\\frac{7}{2}\\right )}\\left (\\frac{x-7}{2x-3}\\right )^{2}\\geq 0$ is :",
+  "options": [
+   "8",
+   "7",
+   "5",
+   "6"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "logarithm"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The base needs $x+\\frac{7}{2}>0$ and $x+\\frac{7}{2}\\neq 1$, and the argument needs $\\left (\\frac{x-7}{2x-3}\\right )^{2}>0$. So $x>-\\frac{7}{2}$, $x\\neq -\\frac{5}{2}$, $x\\neq 7$ and $x\\neq \\frac{3}{2}$.\n\n$\\log _{a}b\\geq 0$ holds when $a>1$ and $b\\geq 1$, or when $0<a<1$ and $0<b\\leq 1$.\n\nCase $x+\\frac{7}{2}>1$, i.e. $x>-\\frac{5}{2}$: the argument must satisfy $\\left (\\frac{x-7}{2x-3}\\right )^{2}\\geq 1$, i.e. $(2x-3)^{2}-(x-7)^{2}\\leq 0$.\n\n$(3x-10)(x+4)\\leq 0\\Rightarrow -4\\leq x\\leq \\frac{10}{3}$\n\nWith the domain this gives $x\\in \\left (-\\frac{5}{2},\\frac{10}{3}\\right ]-\\left \\{\\frac{3}{2}\\right \\}$, whose integers are $-2,-1,0,1,2,3$.\n\nCase $0<x+\\frac{7}{2}<1$, i.e. $-\\frac{7}{2}<x<-\\frac{5}{2}$: the argument must satisfy $(x-7)^{2}\\leq (2x-3)^{2}$, i.e. $x\\leq -4$ or $x\\geq \\frac{10}{3}$, which has no point in common with $\\left (-\\frac{7}{2},-\\frac{5}{2}\\right )$. For instance, at $x=-3$ the base is $\\frac{1}{2}$ and the argument is $\\left (\\frac{10}{9}\\right )^{2}>1$, so the logarithm is negative.\n\nThe integral solutions are $-2,-1,0,1,2,3$, which are 6 in number.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguwarz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An organization awarded 48 medals in event 'A', 25 in event 'B' and 18 in event 'C'. If these medals went to total 60 men and only five men got medals in all the three events, then, how many received medals in exactly two of three events?",
+  "options": [
+   "10",
+   "15",
+   "21",
+   "9"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We are given the number of medals for events A, B, and C which are 48, 25, and 18 respectively. We are also given that the total number of unique medal recipients across all events is 60 and that 5 people received a medal in all three events.\n\nUsing the Principle of Inclusion and Exclusion (PIE), we know that the total number of unique medal recipients can be calculated by adding the number of medal recipients in each event, subtracting the number of people who received a medal in any two events (to correct for double counting), and then adding back the number of people who received a medal in all three events (since we subtracted these people too much). \n\nMathematically, this can be represented as :\n\n|A ∪ B ∪ C| = |A| + |B| + |C| - |A ∩ B| - |B ∩ C| - |C ∩ A| + |A ∩ B ∩ C|\n\nHowever, we want to find the total number of people who received a medal in any two events (which is represented by |A ∩ B| + |B ∩ C| + |C ∩ A| in the equation).\n\n\n[IMG]\n\n\nTo find this, we rearrange the PIE formula to solve for |A ∩ B| + |B ∩ C| + |C ∩ A| :\n\n|A ∩ B| + |B ∩ C| + |C ∩ A| = |A| + |B| + |C| + |A ∩ B ∩ C| - |A ∪ B ∪ C|\n\nSubstituting the given values, we find that the total number of people who received a medal in any two events is 48 + 25 + 18 + 5 - 60 = 36.\n\nHowever, this includes people who received a medal in all three events, and we want to find the number of people who received a medal in exactly two events. Therefore, we need to subtract the people who received a medal in all three events from our calculated value. \n\nSince each person who received a medal in all three events is counted three times in |A ∩ B| + |B ∩ C| + |C ∩ A| (once for each pair of events), we subtract three times the number of people who received a medal in all three events from our calculated value:\n\nNumber of people who received a medal in exactly two events = |A ∩ B| + |B ∩ C| + |C ∩ A| - 3 $\\times$ |A ∩ B ∩ C|\n\nSubstituting the values we know, we find that the number of people who received a medal in exactly two events is 36 - 3 $\\times$ 5 = 21.\n\nTherefore, 21 people received a medal in exactly two of the three events.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-11th-april-morning-shift/1lguwarzq-0.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 11th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1lguwckg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $A=\\left [\\begin{array}{lll} 0 & 1 & 2 \\\\ a & 0 & 3 \\\\ 1 & c & 0 \\end{array}\\right ]$, where $a,c\\in \\mathrm{ℝ}$. If $A^{3}=A$ and the positive value of $a$ belongs to the interval $(n-1,n]$, where $n\\in \\mathrm{ℕ}$, then $n$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\text{We have,}A=\\left [\\begin{array}{lll} 0 & 1 & 2 \\\\ a & 0 & 3 \\\\ 1 & c & 0 \\end{array}\\right ]\\text{, where}a,c\\in R$\n\n$\\begin{array}{llllllllllllll} A^{2} & =\\left [\\begin{array}{lll} 0 & 1 & 2 \\\\ a & 0 & 3 \\\\ 1 & c & 0 \\end{array}\\right ]\\left [\\begin{array}{lll} 0 & 1 & 2 \\\\ a & 0 & 3 \\\\ 1 & c & 0 \\end{array}\\right ] \\\\  \\\\ =\\left [\\begin{array}{lll} a+2 & 2c & 3 \\\\ 3 & a+3c & 2a \\\\ ac & 1 & 2+3c \\end{array}\\right ] \\end{array}$\n\n$\\begin{array}{llllllllllllll} A^{3} & =\\left [\\begin{array}{lll} a+2 & 2c & 3 \\\\ 3 & a+3c & 2a \\\\ ac & 1 & 2+3c \\end{array}\\right ]\\left [\\begin{array}{lll} 0 & 1 & 2 \\\\ a & 0 & 3 \\\\ 1 & c & 0 \\end{array}\\right ] \\\\  \\\\ =\\left [\\begin{array}{lll} 2ac+3 & a+2+3c & 2a+4+6c \\\\ a(a+3c)+2a & 3+2ac & 6+3a+9c \\\\ a+2+3c & ac+2c+3c^{2} & 2ac+3 \\end{array}\\right ] \\end{array}$\n\n$\\begin{array}{l} A^{3}=A[Given] \\\\  \\\\ 2ac+3=0\\text{and}a+2+3c=1 \\\\  \\\\ a^{2}+2a+3ac=a \\\\  \\\\ \\Rightarrow a^{2}+a+3\\left (-\\dfrac{3}{2}\\right )=0 \\\\  \\\\ \\Rightarrow 2a^{2}+2a-9=0 \\end{array}$\n\nWhen, $a=1,2a^{2}+2a-9<0$ and\n\nWhen, $a=2,2a^{2}+2a-9>0$\n\n$\\therefore$ Positive value of $a\\in (1,2]$\n\nHence, $n=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguwg2a",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\mathrm{H}_{\\mathrm{n}}:\\frac{x^{2}}{1+n}-\\frac{y^{2}}{3+n}=1,n\\in N$. Let $\\mathrm{k}$ be the smallest even value of $\\mathrm{n}$ such that the eccentricity of $\\mathrm{H}_{\\mathrm{k}}$ is a rational number. If $l$ is the length of the latus rectum of $\\mathrm{H}_{\\mathrm{k}}$, then $21l$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 306.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have,\n\n$H_{n}\\Rightarrow \\frac{x^{2}}{1+n}-\\frac{y^{2}}{3+n}=1,n\\in N$\n\nHere, $a^{2}=1+n$ and $b^{2}=3+n$\n\n$\\begin{array}{ll} \\mathrm{Eccentricity}(e) & =\\sqrt{1+\\dfrac{b^{2}}{a^{2}}} \\\\  \\\\ =\\sqrt{1+\\left (\\dfrac{3+n}{1+n}\\right )}=\\sqrt{\\dfrac{2n+4}{n+1}}=\\sqrt{\\dfrac{2(n+2)}{n+1}} \\end{array}$\n\nThe smallest even value for which $e\\in Q$ is 48 .\n\n$\\begin{array}{ll} \\therefore n & =48 \\\\  \\\\ \\therefore e & =\\sqrt{\\dfrac{2(48+2)}{48+1}}=\\dfrac{10}{7} \\end{array}$\n\n$\\begin{array}{l} \\Rightarrow a^{2}=n+1=49,b^{2}=n+3=51 \\\\  \\\\ \\therefore 21l=21\\times \\left (\\frac{2b^{2}}{a}\\right )=21\\times 2\\times \\frac{51}{7}=306 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguwr95",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "For $m,n>0$, let $α(m,n)=\\int\\limits _{0}^{2}t^{m}(1+3t)^{n}dt$. If $11α(10,6)+18α(11,5)=p(14)^{6}$, then $p$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 32.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, $α(m,n)=\\int\\limits _{0}^{2}t^{m}(1+3t)^{n}dt$\n\nAlso, $11α(10,6)+18α(11,5)=P(14)^{6}$\n\n$\\Rightarrow 11\\int\\limits _{0}^{2}t^{10}(1+3t)^{6}dt+18\\int\\limits _{0}^{2}t^{11}(1+3t)^{5}dt=P(14)^{6}$\n\nUsing integration by part for expression $t^{10}(1+3t)^{6}$\n\n$\\left. \\begin{array}{l} \\Rightarrow 11\\left [(1+3t)^{6}\\times \\frac{t^{11}}{11}\\right ]_{0}^{2}-\\int\\limits _{0}^{2}6(1+3t)^{5}\\times 3\\times \\frac{t^{11}}{11}dt\\right ] \\\\  \\\\ +18\\int\\limits _{0}^{2}t^{11}(1+3t)^{5}dt=P(14)^{6} \\end{array}$\n\n$\\begin{array}{l} \\Rightarrow 7^{6}\\times 2^{11}-18\\int\\limits _{0}^{2}t^{11}(1+3t)^{5}dt+18\\int\\limits _{0}^{2}t^{11}(1+3t)^{5}dt=P(14)^{6} \\\\  \\\\ \\Rightarrow 7^{6}\\times 2^{11}=P(14)^{6}\\Rightarrow (7\\times 2)^{6}\\times 2^{5}=P(14)^{6} \\\\  \\\\ \\Rightarrow P=2^{5}=32 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguwuo8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "In an examination, 5 students have been allotted their seats as per their roll numbers. The number of ways, in which none of the students sits on the allotted seat, is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 44.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "This problem can be solved using the concept of derangements, which is a permutation of objects where no object appears in its original position. In this case, we have 5 students who should not sit in their allotted seats. \n\nThe formula for calculating the number of derangements (also known as subfactorials) is :\n\nD(n) $=n!\\left [\\frac{1}{0!}-\\frac{1}{1!}+\\frac{1}{2!}-\\frac{1}{3!}+\\frac{1}{4!}-\\ldots \\ldots ..+(-1)^{n}\\frac{1}{n!}\\right ]$\n\nWhere n is the number of students, in this case, 5.\n\nUsing the formula, let's calculate the derangements for 5 students :\n\nD(5) = $5!\\left (\\frac{1}{0!}-\\frac{1}{1!}+\\frac{1}{2!}-\\frac{1}{3!}+\\frac{1}{4!}-\\frac{1}{5!}\\right )$\n\nD(5) = $120\\left (1-1+\\frac{1}{2}-\\frac{1}{6}+\\frac{1}{24}-\\frac{1}{120}\\right )$\n\nD(5) = $120\\left (0+\\frac{1}{2}-\\frac{1}{6}+\\frac{1}{24}-\\frac{1}{120}\\right )$\n\nD(5) = $120\\left (\\frac{1}{2}-\\frac{1}{6}+\\frac{1}{24}-\\frac{1}{120}\\right )$\n\nD(5) = $120\\left (\\frac{60}{120}-\\frac{20}{120}+\\frac{5}{120}-\\frac{1}{120}\\right )$\n\nD(5) = $120\\left (\\frac{44}{120}\\right )$\n\nD(5) = 44\n\nSo, there are 44 ways in which none of the students sits on the allotted seat.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguwwp0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let a line $l$ pass through the origin and be perpendicular to the lines\n\n$l_{1}:⃗{r}=(\\hat{ı}-11\\hat{ȷ}-7\\hat{k})+λ(\\hat{i}+2\\hat{ȷ}+3\\hat{k}),λ\\in \\mathrm{ℝ}$ and\n\n$l_{2}:⃗{r}=(-\\hat{ı}+\\hat{\\mathrm{k}})+μ(2\\hat{ı}+2\\hat{ȷ}+\\hat{\\mathrm{k}}),μ\\in \\mathrm{ℝ}$.\n\nIf $\\mathrm{P}$ is the point of intersection of $l$ and $l_{1}$, and $\\mathrm{Q}(\\propto ,β,γ)$ is the foot of perpendicular from P on $l_{2}$, then $9(α+β+γ)$ is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have,\n\n$l_{1}:⃗{r}=(\\hat{ı}-11\\hat{ȷ}-7\\hat{k})+λ(\\hat{i}+2\\hat{ȷ}+3\\hat{k}),λ\\in \\mathrm{ℝ}$ and\n\n$l_{2}:⃗{r}=(-\\hat{ı}+\\hat{\\mathrm{k}})+μ(2\\hat{ı}+2\\hat{ȷ}+\\hat{\\mathrm{k}}),μ\\in \\mathrm{ℝ}$.\n\nLet direction ratio of line $l$ be $a,b$ and $c$ Equation of line $l$\n\n$\\begin{array}{ll} ⃗{r} & =(0\\hat{𝐢}+0\\hat{𝐣}+0\\hat{𝐤})+δ(a\\hat{𝐢}+b\\hat{𝐣}+c\\hat{𝐤}) \\\\  \\\\ =δ(a\\hat{𝐢}+b\\hat{𝐣}+c\\hat{𝐤}) \\end{array}$\n\nAs, line $l$ is perpendicular to $l_{1}$ and $l_{2}$,\n\n$a\\hat{𝐢}+b\\hat{𝐣}+c\\hat{𝐤}=\\left |\\begin{array}{lll} \\hat{𝐢} & \\hat{𝐣} & \\hat{𝐤} \\\\ 1 & 2 & 3 \\\\ 2 & 2 & 1 \\end{array}\\right |=-4\\hat{𝐢}+5\\hat{𝐣}-2\\hat{𝐤}$\n\n$\\therefore$ Equation of line $l:⃗{r}=δ(-4\\hat{𝐢}+5\\hat{𝐣}-2\\hat{𝐤})$\n\nAs, $P$ is the intersecting point of $l$ and $l_{1}$\n\n$-4δ=1+λ,5δ=-11+2λ,-2δ=-7+3λ$\n\nAfter solving the above three equation, we get\n\n$δ=-1\\text{and}λ=3$\n\n$\\therefore$ Co-ordinate of point $P$ is $(4,-5,2)$.\n\n$Q$ is a point on line $l_{2}$\n\nLet co-ordinate of $Q$ be $(-1+2μ,2μ,1+μ)$\n\n$\\begin{array}{l} PQ\\leftarrow =(-5+2μ)\\hat{𝐢}+(2μ+5)\\hat{𝐣}+(μ-1)\\hat{𝐤} \\\\  \\\\ PQ\\leftarrow \\cdot (2\\hat{𝐢}+2\\hat{𝐣}+\\hat{𝐤})=0\\left [\\because PQ\\leftarrow ⟂l_{2}\\right ] \\\\  \\\\ 2(-5+2μ)+2(2μ+5)+μ-1=0 \\\\  \\\\ 9μ-1=0\\Rightarrow μ=\\dfrac{1}{9} \\end{array}$\n\n$\\begin{array}{l} \\therefore α=-1+\\dfrac{2}{9}=\\dfrac{-7}{9},β=2\\times \\dfrac{1}{9}=\\dfrac{2}{9},r=1+\\dfrac{1}{9}=\\dfrac{10}{9} \\\\  \\\\ \\text{Hence,}9(α+β+γ)=9\\left (-\\dfrac{7}{9}+\\dfrac{2}{9}+\\dfrac{10}{9}\\right )=5 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguwxkf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The mean of the coefficients of $x,x^{2},\\ldots ,x^{7}$ in the binomial expansion of $(2+x)^{9}$ is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2736.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, binomial coefficient, $(2+x)^{9}$\n\n$T_{r+1}={}^{n}C_{r}2^{n-r}\\times x^{r}$\n\nCoefficient of $x(T_{2})={}^{9}C_{1}\\times 2^{8}$\n\nCoefficient of $x^{2}(T_{3})={}^{9}C_{2}\\times 2^{7}$\n\nCoefficient of $x^{3}(T_{4})={}^{9}C_{3}\\times 2^{6}$\n\n              .                    .\n\n              .                    .\n\n              .                    .\n\nCoefficient of $x^{7}(T_{8})={}^{9}C_{7}\\times 2^{2}$\n\n$\\text{Mean}=\\frac{{}^{9}C_{1}\\times 2^{8}+{}^{9}C_{2}\\times 2^{7}+{}^{9}C_{3}\\times 2^{6}+\\ldots +{}^{9}C_{7}\\times 2^{2}}{7}$\n\n$\\begin{array}{l} {}^{9}C_{0}\\times 2^{9}+{}^{9}C_{1}\\times 2^{8}+{}^{9}C_{2}\\times 2^{7}+{}^{9}C_{3}\\times 2^{6}+\\ldots .+{}^{9}C_{7}\\times 2^{2} \\\\ =\\dfrac{+{}^{9}C_{8}\\times 2^{1}+{}^{9}C_{9}\\times 2^{0}-{}^{9}C_{0}\\times 2^{9}-{}^{9}C_{8}\\times 2^{1}-{}^{9}C_{9}\\times 2^{0}}{7} \\end{array}$\n\n$=\\frac{(1+2)^{9}-2^{9}-18-1}{7}=\\frac{19152}{7}=2736$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguwygf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $a$ and $b$ are the roots of the equation $x^{2}-7x-1=0$, then the value of $\\frac{a^{21}+b^{21}+a^{17}+b^{17}}{a^{19}+b^{19}}$ is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 51.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, $a$ and $b$ are the roots of the equation\n\n$\\begin{array}{l} x^{2}-7x-1=0 \\\\  \\\\ \\Rightarrow a^{2}-7a-1=0\\Rightarrow a^{2}-1=7a.........(i) \\end{array}$\n\nOn squaring both sides, we get $a^{4}+1=51a^{2}$\n\nSimilarly, $b^{4}+1=51b^{2}$ ...........(ii)\n\n$\\text{Now,}\\frac{a^{21}+b^{21}+a^{17}+b^{17}}{a^{19}+b^{19}}=\\frac{a^{17}\\left (a^{4}+1\\right )+b^{17}\\left (b^{4}+1\\right )}{a^{19}+b^{19}}$\n\n$\\begin{array}{l} =\\dfrac{a^{17}\\left (51a^{2}\\right )+b^{17}\\left (51b^{2}\\right )}{a^{19}+b^{19}}[\\because \\text{From Eq. (i) and (ii)}] \\\\  \\\\ =\\dfrac{51\\left [a^{19}+b^{19}\\right ]}{a^{19}+b^{19}}=51 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lguwzu1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of integral terms in the expansion of $\\left (3^{\\frac{1}{2}}+5^{\\frac{1}{4}}\\right )^{680}$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 171.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 11th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\text{General term of the expansion}\\left (3^{\\frac{1}{2}}+5^{\\frac{1}{4}}\\right )^{680} \\\\  \\\\ ={}^{680}C_{r}\\left (3^{1/2}\\right )^{680-r}\\left (5^{1/4}\\right )^{r}={}^{680}C_{r}\\times 3^{\\frac{680-r}{2}}\\times 5^{\\frac{r}{4}} \\end{array}$\n\nThe term will be integral if $r$ is a multiple of 4 .\n\n$\\begin{array}{l} \\therefore r=0,4,8,12,\\ldots ,680(\\text{which is an}\\mathrm{AP}) \\\\  \\\\ 680=0+(n-1)4 \\\\  \\\\ n=\\dfrac{680}{4}+1=171 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 11th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

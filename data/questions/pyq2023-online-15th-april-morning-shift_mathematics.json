@@ -1,0 +1,894 @@
+[
+ {
+  "publicId": "PYQ-2023-lgnwbvoh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $x=x(y)$ be the solution of the differential equation\n\n$2(y+2)\\log _{e}(y+2)dx+(x+4-2\\log _{e}(y+2))dy=0,y>-1$\n\nwith $x\\left (e^{4}-2\\right )=1$. Then $x\\left (e^{9}-2\\right )$ is equal to :",
+  "options": [
+   "$\\frac{4}{9}$",
+   "$\\frac{32}{9}$",
+   "$\\frac{10}{3}$",
+   "3"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} 2(y+2)\\ln (y+2)dx+(x+4-2\\ln (y+2))dy=0 \\\\  \\\\ 2\\ln (y+2)+(x+4-2\\ln (y+2))\\dfrac{1}{y+2}\\cdot \\dfrac{dy}{dx}=0 \\\\  \\\\ \\text{let,}\\ln (y+2)=t \\\\  \\\\ \\dfrac{1}{y+2}\\cdot \\dfrac{dy}{dx}=\\dfrac{dt}{dx} \\\\  \\\\ 2t+(x+4-2t)\\cdot \\dfrac{dt}{dx}=0 \\\\  \\\\ (x+4-2t)\\dfrac{dt}{dx}=-2t \\\\  \\\\ \\dfrac{dx}{dt}=\\dfrac{2t-4-x}{2t} \\\\  \\\\ \\dfrac{dx}{dt}+\\dfrac{x}{2t}=\\dfrac{2t-4}{2t} \\end{array}$\n\n$\\begin{array}{l} x\\cdot t^{1/2}=\\int \\dfrac{2t-4}{2t}\\cdot t^{1/2}\\cdot dt \\\\  \\\\ x\\cdot t^{1/2}=\\int \\left (t^{1/2}-\\dfrac{2}{t^{1/2}}\\right )\\cdot dt \\\\  \\\\ =\\dfrac{t^{\\frac{3}{2}}}{\\frac{3}{2}}-2\\cdot \\dfrac{t^{\\frac{1}{2}}}{\\frac{1}{2}}+C \\\\  \\\\ x\\cdot t^{\\frac{1}{2}}=\\dfrac{2t^{\\frac{3}{2}}}{3}-4\\mathrm{t}^{\\frac{1}{2}}+C \\\\  \\\\ x=\\dfrac{2}{3}\\cdot \\mathrm{t}-4+\\mathrm{C}\\cdot \\mathrm{t}^{\\frac{-1}{2}} \\\\  \\\\ x=\\dfrac{2}{3}\\ln (\\mathrm{y}+2)-4+C\\cdot (\\ln (\\mathrm{y}+2))^{\\frac{-1}{2}} \\end{array}$\n\nPut $y=e^{4}-2,x=1$\n\n$\\begin{array}{l} 1=\\dfrac{2}{3}\\times 4-4+C\\times \\dfrac{1}{2} \\\\  \\\\ \\dfrac{C}{2}=5-\\dfrac{8}{3}=\\dfrac{7}{3} \\\\  \\\\ C=\\dfrac{14}{3} \\\\  \\\\ x=\\dfrac{2}{3}\\times 9-4+\\dfrac{14}{3}\\times \\dfrac{1}{3} \\\\  \\\\ =2+\\dfrac{14}{9} \\\\  \\\\ =\\dfrac{32}{9} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnwfxh4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\int\\limits _{0}^{1}\\frac{1}{(5+2x-2x^{2})\\left (1+e^{(2-4x)}\\right )}dx=\\frac{1}{α}\\log _{e}\\left (\\frac{α+1}{β}\\right ),α,β>0$, then $α^{4}-β^{4}$\n\nis equal to :",
+  "options": [
+   "-21",
+   "21",
+   "19",
+   "0"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The given integral is:\n\n$I=\\int\\limits _{0}^{1}\\frac{dx}{(5+2x-2x^{2})(1+e^{2-4x})}$ .............(i)\n\nPerform a substitution, $x\\to 1-x$. This gives:\n\n$I=\\int\\limits _{0}^{1}\\frac{dx}{(5+2(1-x)-2(1-x)^{2})\\left (1+e^{2-4(1-x)}\\right )}$\n\nSimplify the expression inside the integral:\n\n$I=\\int\\limits _{0}^{1}\\frac{dx}{(5+2-2x-2(1-2x+x^{2}))(1+e^{4x-2})}$ ............(ii)\n\nAdd the original integral (i) and the integral after substitution (ii):\n\n$2I=\\int\\limits _{0}^{1}\\frac{dx}{5+2x-2x^{2}}$\n\nFactor the quadratic expression in the denominator:\n\n$2I=\\int\\limits _{0}^{1}\\frac{dx}{2\\left (\\frac{11}{4}-\\left (x-\\frac{1}{2}\\right )^{2}\\right )}$\n\nTo solve this integral, we can perform a change of variables using the substitution \n\n$x-\\frac{1}{2}=\\frac{\\sqrt{11}}{2}\\tan u$, then $dx=\\frac{\\sqrt{11}}{2}\\sec ^{2}udu$:\n\n$I=\\frac{1}{\\sqrt{11}}\\int \\frac{\\sec ^{2}u}{1+\\tan ^{2}u}du$\n\nUsing the identity $\\sec ^{2}u=1+\\tan ^{2}u$:\n\n$I=\\frac{1}{\\sqrt{11}}\\int du=\\frac{1}{\\sqrt{11}}(u+C)$\n\nNow we need to find the limits of the integral after the substitution. If $x=0$, then $u=\\tan ^{-1}\\left (-\\frac{1}{\\sqrt{11}}\\right )$. If $x=1$, then $u=\\tan ^{-1}\\left (\\frac{1}{\\sqrt{11}}\\right )$. So, the integral becomes:\n\n$I=\\frac{1}{\\sqrt{11}}\\left [\\tan ^{-1}\\left (\\frac{1}{\\sqrt{11}}\\right )-\\tan ^{-1}\\left (-\\frac{1}{\\sqrt{11}}\\right )\\right ]$\n\nUsing the properties of the arctangent function, we can rewrite the integral as:\n\n$I=\\frac{1}{\\sqrt{11}}\\ln \\left (\\frac{\\sqrt{11}+1}{\\sqrt{10}}\\right )$\n\nFrom this result, we have $α=\\sqrt{11}$ and $β=\\sqrt{10}$. Now, we can find $α^{4}-β^{4}$:\n\n$α^{4}-β^{4}=(11)^{2}-(10)^{2}=121-100=21$\n\nThus, $α^{4}-β^{4}=21$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnwkhha",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The total number of three-digit numbers, divisible by 3, which can be formed using the digits $1,3,5,8$, if repetition of digits is allowed, is :",
+  "options": [
+   "21",
+   "22",
+   "18",
+   "20"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The number of three-digit numbers divisible by 3 by considering the possible sums of digits that are divisible by 3. Your approach is as follows:\n\n1. Sum of digits is 3: $(1,1,1)$ - 1 possible number\n\n2. Sum of digits is 9: $(1,3,5)$ and $(3,3,3)$ -\n\n Let's consider the cases separately :\n\na. Sum of digits is 9: $(1,3,5)$\n   For this case, we can arrange the digits in $3!$ ways :\n   135, 153, 315, 351, 513, and 531.\n\nb. Sum of digits is 9: $(3,3,3)$\n   For this case, since all the digits are the same, there is only 1 possible number :\n   333.\n\nNow, the total number of possible numbers when the sum of digits is 9 is :\n\n$3!+1=6+1=7$\n\n3. Sum of digits is 12: $(1,3,8)$ - $3!$ possible numbers\n\n4. Sum of digits is 15: $(5,5,5)$ - 1 possible number\n\n5. Sum of digits is 18: $(5,5,8)$ - $\\frac{3!}{2!}$ possible numbers (since 5 is repeated)\n\n6. Sum of digits is 21: $(5,8,8)$ - $\\frac{3!}{2!}$ possible numbers (since 8 is repeated)\n\n7. Sum of digits is 24: $(8,8,8)$ - 1 possible number\n\nAdding up the possible numbers for each case, we get:\n\n$1+7+3!+1+\\frac{3!}{2!}+\\frac{3!}{2!}+1=1+7+6+1+3+3+1=22$\n\nSo, there are a total of 22 three-digit numbers divisible by 3 that can be formed using the digits $1,3,5,8$ with repetition allowed.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnwmpwc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{ABCD}$ be a quadrilateral. If $\\mathrm{E}$ and $\\mathrm{F}$ are the mid points of the diagonals $\\mathrm{AC}$ and $\\mathrm{BD}$ respectively and $(AB\\leftarrow -BC\\leftarrow )+(AD\\leftarrow -DC\\leftarrow )=kFE\\leftarrow$, then $k$ is equal to :",
+  "options": [
+   "-2",
+   "4",
+   "-4",
+   "2"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the position vectors of $A,B,C,$ and $D$ be $⃗{a},⃗{b},⃗{c},$ and $⃗{d}$, respectively.\n\nThen the position vector of $E$ is:\n\n$⃗{E}=\\frac{⃗{a}+⃗{c}}{2}$\n\nAnd the position vector of $F$ is:\n\n$⃗{F}=\\frac{⃗{b}+⃗{d}}{2}$\n\nNow, we are given the equation:\n\n$(AB\\leftarrow -BC\\leftarrow )+(AD\\leftarrow -DC\\leftarrow )=kFE\\leftarrow$\n\nWe can rewrite this equation using the position vectors:\n\n$(⃗{b}-⃗{a}-(⃗{c}-⃗{b}))+(⃗{d}-⃗{a}-(⃗{c}-⃗{d}))=k(⃗{E}-⃗{F})$\n\nSimplifying the equation, we get:\n\n$(2⃗{b}-2⃗{a}-2⃗{c}+2⃗{d})=\\frac{k}{2}(2⃗{E}-2⃗{F})$\n\nNow substitute $⃗{E}$ and $⃗{F}$ expressions we found earlier:\n\n$(2⃗{b}-2⃗{a}-2⃗{c}+2⃗{d})=\\frac{k}{2}\\left (2\\left (\\frac{⃗{a}+⃗{c}}{2}\\right )-2\\left (\\frac{⃗{b}+⃗{d}}{2}\\right )\\right )$\n\nSimplifying the equation:\n\n$(2⃗{b}-2⃗{a}-2⃗{c}+2⃗{d})=-\\frac{k}{2}(⃗{b}+⃗{d}-⃗{a}-⃗{c})$\n\nSince both sides of the equation are equal:\n\n$k=-4$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnwv1sg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the domain of the function\n\n$f(x)=\\log _{e}\\left (4x^{2}+11x+6\\right )+\\sin ^{-1}(4x+3)+\\cos ^{-1}\\left (\\frac{10x+6}{3}\\right )$ is $(α,β]$, then\n\n$36|α+β|$ is equal to :",
+  "options": [
+   "72",
+   "54",
+   "45",
+   "63"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the domain of the function, we need to consider the individual functions and their respective domains. We have:\n\n$f_{1}(x)=\\ln (4x^{2}+11x+6)$\n$f_{2}(x)=\\sin ^{-1}(4x+3)$\n$f_{3}(x)=\\cos ^{-1}\\left (\\frac{10x+6}{3}\\right )$\n\nFor $f_{1}(x)$:\n\n$4x^{2}+11x+6>0$\n\nFactoring the quadratic expression:\n\n$(4x+3)(x+2)>0$\n\nFrom this inequality, we have:\n\n$x\\in (-\\infty ,-2)\\cup \\left (-\\frac{3}{4},\\infty \\right )$\n\nFor $f_{2}(x)$:\n\n$-1\\leq 4x+3\\leq 1$\n\nFrom these inequalities, we get:\n\n$x\\in \\left [-1,-\\frac{1}{2}\\right ]$\n\nFor $f_{3}(x)$:\n\n$-1\\leq \\frac{10x+6}{3}\\leq 1$\n\nFrom these inequalities, we get:\n\n$x\\in \\left [-\\frac{9}{10},-\\frac{3}{10}\\right ]$\n\nNow, we need to find the intersection of the domains of the three functions:\n\n$(-\\infty ,-2)\\cup \\left (-\\frac{3}{4},\\infty \\right )\\cap \\left [-1,-\\frac{1}{2}\\right ]\\cap \\left [-\\frac{9}{10},-\\frac{3}{10}\\right ]$\n\nTo find the intersection, let's analyze the intervals:\n\nThe interval $(-\\infty ,-2)\\cup \\left (-\\frac{3}{4},\\infty \\right )$ contains all $x$ values less than $-2$ and greater than $-\\frac{3}{4}$.\nThe interval $\\left [-1,-\\frac{1}{2}\\right ]$ contains all $x$ values between $-1$ and $-\\frac{1}{2}$.\nThe interval $\\left [-\\frac{9}{10},-\\frac{3}{10}\\right ]$ contains all $x$ values between $-\\frac{9}{10}$ and $-\\frac{3}{10}$.\n\nLooking at the intervals, we can see that the intersection is:\n\n$x\\in \\left (-\\frac{3}{4},-\\frac{1}{2}\\right ]$\n\nThus, the domain of the function is $(α,β]=\\left (-\\frac{3}{4},-\\frac{1}{2}\\right ]$. Now, we need to find the value of $36|α+β|$:\n\n$36\\left |-\\frac{3}{4}-\\frac{1}{2}\\right |=36\\left |-\\frac{5}{4}\\right |=45$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnx6vt2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $[x]$ denote the greatest integer function and \n\n$f(x)=\\max \\{1+x+[x],2+x,x+2[x]\\},0\\leq x\\leq 2$. Let $m$ be the number of points in $[0,2]$, where $f$ is not continuous and $n$ be the number of points in $(0,2)$, where $f$ is not differentiable. Then $(m+n)^{2}+2$ is equal to :",
+  "options": [
+   "3",
+   "6",
+   "2",
+   "11"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{llll} \\text{Let}g(x)=1+x+[x]=\\left \\{\\begin{array}{ll} 1+x; & x\\in [0,1) \\\\ 2+x; & x\\in [1,2) \\\\ 5; & x=2 \\end{array} \\\\  \\\\ λ(x)=x+2[x]=\\left \\{\\begin{array}{ll} x; & x\\in [0,1) \\\\ x+2; & x\\in [1,2) \\\\ 6; & x=2 \\end{array} \\\\  \\\\ r(x)=2+x \\\\  \\\\ f(x)=\\left \\{\\begin{array}{ll} 2+x; & x\\in [0,2) \\\\ 6; & x=2 \\end{array} \\end{array} \\right.  \\right.  \\right.$\n\n$\\mathrm{f}(\\mathrm{x})$ is discontinuous only at $x=2\\Rightarrow \\mathrm{m}=1$ \n\n$\\mathrm{f}(\\mathrm{x})$ is differentiable in $(0,2)\\Rightarrow \\mathrm{n}=0$\n\n$(m+n)^{2}+2=3$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnxgk71",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The mean and standard deviation of 10 observations are 20 and 8 respectively. Later on, it was observed that one observation was recorded as 50 instead of 40. Then the correct variance is :",
+  "options": [
+   "11",
+   "12",
+   "13",
+   "14"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "1. Calculate the sum of the original observations:\n\n$\\frac{x_{1}+x_{2}+\\ldots +x_{9}+50}{10}=20$\n\n$x_{1}+x_{2}+\\ldots +x_{9}=150$\n\n2. Calculate the sum of the squares of the original observations using the original variance:\n\n$σ^{2}=8^{2}=64$\n\n$64=\\frac{x_{1}^{2}+x_{2}^{2}+\\ldots +x_{9}^{2}+2500}{10}-400$\n\n$x_{1}^{2}+x_{2}^{2}+\\ldots +x_{9}^{2}=2140$\n\n3. Calculate the new mean after correcting the error:\n\n$\\text{New mean}=\\frac{150+40}{10}=19$\n\n4. Calculate the new variance using the corrected sum of observations and the corrected sum of squares of observations:\n\n$\\text{New}σ^{2}=\\frac{2140+1600}{10}-(19)^{2}$\n\n$\\Rightarrow$ $σ^{2}=13$\n\nThe correct variance after correcting the error is 13 (Option C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnxjgya",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\left (a+bx+cx^{2}\\right )^{10}=\\sum\\limits _{i=0}^{20}p_{i}x^{i},a,b,c\\in \\mathrm{ℕ}$.\n\n If $p_{1}=20$ and $p_{2}=210$, then\n\n$2(a+b+c)$ is equal to :",
+  "options": [
+   "15",
+   "8",
+   "6",
+   "12"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We are given that $\\left (a+bx+cx^{2}\\right )^{10}=\\sum\\limits _{i=0}^{20}p_{i}x^{i}$, and we are given that $p_{1}=20$ and $p_{2}=210$.\n\n We need to find the value of $2(a+b+c)$.\n\nUsing the multinomial theorem, we can express the expansion of $(a+bx+cx^{2})^{10}$ as follows:\n\n$\\sum\\limits _{k_{1}+k_{2}+k_{3}=10}\\frac{10!}{k_{1}!k_{2}!k_{3}!}a^{k_{1}}(bx)^{k_{2}}(cx^{2})^{k_{3}}$\n\nNow we need to find the coefficients of $x^{1}$ and $x^{2}$ in the expansion:\n\nFor $x^{1}$ term, we have:\n\n$k_{2}=1,k_{1}=9,k_{3}=0$\n\nSo,\n\n$p_{1}=\\frac{10!}{9!1!0!}a^{9}b^{1}=10a^{9}b$\n\nFor $x^{2}$ term, there are two possibilities:\n\n$k_{2}=2,k_{1}=8,k_{3}=0\\text{and}k_{2}=0,k_{1}=9,k_{3}=1$\n\nSo,\n\n$p_{2}=\\frac{10!}{8!2!0!}a^{8}b^{2}+\\frac{10!}{9!0!1!}a^{9}c=45a^{8}b^{2}+10a^{9}c$\n\nNow we are given $p_{1}=20$ and $p_{2}=210$. So,\n$10a^{9}b=20⟹a^{9}b=2$\n\nand $45a^{8}b^{2}+10a^{9}c=210$\n\nNow, divide the second equation by $a^{8}$:\n$45b^{2}+10ac=210$\n\nWe know that $a^{9}b=2$. Taking the $9^{th}$ root of both sides:\n$ab=\\sqrt{9 2}$\n\nNow, let $k=ab=\\sqrt{9 2}$. We can rewrite the equation for $x^{2}$ term as:\n$45k^{2}+10k^{9}=210$\n\nFrom the equation $ab=k=\\sqrt{9 2}$, we know that $a$ and $b$ are positive integers. Thus, $k=2$ (as both $a$ and $b$ must be factors of 2). Now we have:\n\n$a+b=2$\n\nand from the equation $a^{9}b=2$, we get $a=1,b=2$ or vice versa. \n\nNow we need to find the value of $c$. We can use the equation for the $x^{2}$ term again:\n\n$45a^{8}b^{2}+10a^{9}c=210$\n\nUsing $a=1$ and $b=2$, we get:\n\n$45(1)^{8}(2)^{2}+10(1)^{9}c=210⟹180+10c=210⟹c=3$\n\nSo, $a=1$, $b=2$, and $c=3$. Now, we need to find the value of $2(a+b+c)$:\n\n$2(a+b+c)=2(1+2+3)=2(6)=12$\n\nTherefore, the answer is $12$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnxp7gc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A bag contains 6 white and 4 black balls. A die is rolled once and the number of balls equal to the number obtained on the die are drawn from the bag at random. The probability that all the balls drawn are white is :",
+  "options": [
+   "$\\frac{1}{4}$",
+   "$\\frac{9}{50}$",
+   "$\\frac{1}{5}$",
+   "$\\frac{11}{50}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $X$ be the number rolled on the die, and let $W$ be the event that all balls drawn are white. We want to find the probability $P(W)$, which can be calculated using the law of total probability as follows :\n\n$P(W)=\\sum\\limits _{x=1}^{6}P(W|X=x)P(X=x)$\n\nThe probability of rolling any number from 1 to 6 on the die is equal, so $P(X=x)=\\frac{1}{6}$ for all $x\\in \\{1,2,3,4,5,6\\}$. \n\nNow let's calculate the conditional probabilities $P(W|X=x)$ for each possible value of $x$ :\n\n1. $P(W|X=1)=\\frac{{}^{6}C_{1}}{{}^{10}C_{1}}=\\frac{6}{10}=\\frac{3}{5}$, since there are 6 white balls out of a total of 10 balls.\n\n2. $P(W|X=2)=\\frac{{}^{6}C_{2}}{{}^{10}C_{2}}=\\frac{15}{45}=\\frac{1}{3}$, since there are 15 ways to choose 2 white balls out of 6, and 45 ways to choose 2 balls out of 10.\n\n3. $P(W|X=3)=\\frac{{}^{6}C_{3}}{{}^{10}C_{3}}=\\frac{20}{120}=\\frac{1}{6}$, since there are 20 ways to choose 3 white balls out of 6, and 120 ways to choose 3 balls out of 10.\n\n4. $P(W|X=4)=\\frac{{}^{6}C_{4}}{{}^{10}C_{4}}=\\frac{15}{210}=\\frac{1}{14}$, since there are 15 ways to choose 4 white balls out of 6, and 210 ways to choose 4 balls out of 10.\n\n5. $P(W|X=5)=\\frac{{}^{6}C_{5}}{{}^{10}C_{5}}=\\frac{6}{252}=\\frac{1}{42}$, since there are 6 ways to choose 5 white balls out of 6, and 252 ways to choose 5 balls out of 10.\n\n6. $P(W|X=6)=\\frac{{}^{6}C_{6}}{{}^{10}C_{6}}=\\frac{1}{210}$, since there are 1 ways to choose 6 white balls out of 6, and 210 ways to choose 6 balls out of 10.\n\nUsing the law of total probability, we have :\n\n$P(W)=\\frac{1}{6}(P(W|X=1)+P(W|X=2)+P(W|X=3)+P(W|X=4)+P(W|X=5)+P(W|X=6))$\n\n$P(W)=\\frac{1}{6}\\left (\\frac{3}{5}+\\frac{1}{3}+\\frac{1}{6}+\\frac{1}{14}+\\frac{1}{42}+\\frac{1}{210}\\right )$\n\nTo simplify this expression, find a common denominator :\n\n$P(W)=\\frac{1}{6}\\left (\\frac{126}{210}+\\frac{70}{210}+\\frac{35}{210}+\\frac{15}{210}+\\frac{5}{210}+\\frac{1}{210}\\right )$\n\nAdd the fractions :\n\n$P(W)=\\frac{1}{6}\\left (\\frac{126+70+35+15+5+1}{210}\\right )=\\frac{42}{210}=\\frac{1}{5}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnxyz9u",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of real roots of the equation $x|x|-5|x+2|+6=0$, is :",
+  "options": [
+   "4",
+   "3",
+   "5",
+   "6"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The expressions change form at $x=-2$ and $x=0$.\n\nFor $x<-2$: $x|x|=-x^{2}$ and $|x+2|=-(x+2)$, so $-x^{2}+5(x+2)+6=0\\Rightarrow x^{2}-5x-16=0\\Rightarrow x=\\dfrac{5\\pm \\sqrt{89}}{2}$. Since $\\sqrt{89}>9$, $\\dfrac{5-\\sqrt{89}}{2}<-2$ is accepted, while $\\dfrac{5+\\sqrt{89}}{2}>0$ is rejected.\n\nFor $-2\\leq x<0$: $x|x|=-x^{2}$ and $|x+2|=x+2$, so $-x^{2}-5(x+2)+6=0\\Rightarrow x^{2}+5x+4=0\\Rightarrow x=-1$ or $x=-4$. Only $x=-1$ lies in $[-2,0)$.\n\nFor $x\\geq 0$: $x|x|=x^{2}$ and $|x+2|=x+2$, so $x^{2}-5(x+2)+6=0\\Rightarrow x^{2}-5x-4=0\\Rightarrow x=\\dfrac{5\\pm \\sqrt{41}}{2}$. Since $\\sqrt{41}>5$, $\\dfrac{5-\\sqrt{41}}{2}<0$ is rejected and $x=\\dfrac{5+\\sqrt{41}}{2}$ is accepted.\n\nSo the equation has exactly 3 real roots: $\\dfrac{5-\\sqrt{89}}{2}$, $-1$ and $\\dfrac{5+\\sqrt{41}}{2}$.\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgny7des",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $(α,β)$ is the orthocenter of the triangle $\\mathrm{ABC}$ with vertices $A(3,-7),B(-1,2)$ and $C(4,5)$, then $9α-6β+60$ is equal to :",
+  "options": [
+   "30",
+   "40",
+   "25",
+   "35"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\text{Altitude of BC:}y+7=\\dfrac{-5}{3}(x-3) \\\\  \\\\ 3y+21=-5x+15 \\\\  \\\\ 5x+3y+6=0 \\\\  \\\\ \\text{Altitude of AC:}y-2=\\dfrac{-1}{12}(x+1) \\\\  \\\\ 12y-24=-x-1 \\\\  \\\\ x+12y=23 \\\\  \\\\ α=\\dfrac{-47}{19},β=\\dfrac{121}{57} \\\\  \\\\ 9α-6β+60=25 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-15th-april-morning-shift/lgny7des-0.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 15th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-lgnybkbk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A_{1}$ and $A_{2}$ be two arithmetic means and $G_{1},G_{2},G_{3}$ be three geometric means of two distinct positive numbers. Then $G_{1}^{4}+G_{2}^{4}+G_{3}^{4}+G_{1}^{2}G_{3}^{2}$ is equal to :",
+  "options": [
+   "$(A_{1}+A_{2})^{2}G_{1}G_{3}$",
+   "$(A_{1}+A_{2})G_{1}^{2}G_{3}^{2}$",
+   "$2(A_{1}+A_{2})G_{1}^{2}G_{3}^{2}$",
+   "$2(A_{1}+A_{2})G_{1}G_{3}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Now, we have the following relations :\n\nArithmetic progression :\n\nSince $A_{1}$ and $A_{2}$ are arithmetic means between $a$ and $b$, we can say that $a$, $A_{1}$, $A_{2}$, and $b$ are in an arithmetic progression. This means there are three equal intervals between $a$ and $b$, which are represented by the common difference $d$.\n\nTo find the value of $d$, we can use the following equation :\n\n$b-a=3d$\n\nFrom this equation, we can find the value of $d$ :\n\n$d=\\frac{b-a}{3}$\n\n$A_{1}=a+\\frac{b-a}{3}=\\frac{2a+b}{3}$\n\n$A_{2}=\\frac{a+2b}{3}$\n\n$A_{1}+A_{2}=a+b$\n\nGeometric progression :\n\n$a,G_{1},G_{2},G_{3},b\\text{are in G.P.}$\n\n$r=\\left (\\frac{b}{a}\\right )^{\\frac{1}{4}}$\n\n$G_{1}=\\left (a^{3}b\\right )^{\\frac{1}{4}}$\n\n$G_{2}=\\left (a^{2}b^{2}\\right )^{\\frac{1}{4}}$\n\n$G_{3}=\\left (ab^{3}\\right )^{\\frac{1}{4}}$\n\nWe have the expression :\n\n$G_{1}^{4}+G_{2}^{4}+G_{3}^{4}+G_{1}^{2}G_{3}^{2}=a^{3}b+a^{2}b^{2}+ab^{3}+\\left (a^{3}b\\right )^{\\frac{1}{2}}\\cdot \\left (ab^{3}\\right )^{\\frac{1}{2}}$\n\nSimplify the expression :\n\n$a^{3}b+a^{2}b^{2}+ab^{3}+a^{2}b^{2}$\n\nFactor out $ab$:\n\n$ab(a^{2}+ab+b^{2}+ab)$\n\nCombine the terms :\n\n$ab(a^{2}+2ab+b^{2})$\n\nRewrite the expression using the sum of squares :\n\n$ab(a+b)^{2}$\n\nNow, recall that $A_{1}+A_{2}=a+b$. Substitute this into the expression :\n\n$G_{1}\\cdot G_{3}\\cdot (A_{1}+A_{2})^{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnyep2q",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{S}$ be the set of all values of $λ$, for which the shortest distance between the lines $\\frac{x-λ}{0}=\\frac{y-3}{4}=\\frac{z+6}{1}$ and $\\frac{x+λ}{3}=\\frac{y}{-4}=\\frac{z-6}{0}$ is 13. Then $8\\left |\\sum\\limits _{λ\\in S}λ\\right |$ is equal to :",
+  "options": [
+   "306",
+   "304",
+   "308",
+   "302"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given the two lines :\n\n$x-λ0=y-3 4=z+6 1\\, x+λ3=y-4=z-6 0$\n\nLet's find the direction vectors of these lines: $⃗{d_{1}}=\\langle 0,4,1\\rangle$ and $⃗{d_{2}}=\\langle 3,-4,0\\rangle$.\n\nNow, let's find the cross product of the direction vectors, which will give a vector that is perpendicular to both lines :\n\n$⃗{n}=⃗{d_{1}}\\times ⃗{d_{2}}=\\langle 4,3,-12\\rangle$\n\nLet's find the vector connecting a point on line 1 to a point on line 2 :\n\n$⃗{c}=\\langle 2λ,3,-12\\rangle$\n\nThe shortest distance between the two lines is the projection of $⃗{c}$ onto $⃗{n}$ :\n\n$d=\\left |\\frac{⃗{c}\\cdot ⃗{n}}{|⃗{n}|}\\right |=\\left |\\frac{(2λ)(4)+(3)(3)-(12)(-12)}{\\sqrt{16+9+144}}\\right |$\n\nWe are given that the shortest distance is 13 :\n\n$13=\\left |\\frac{8λ+153}{13}\\right |$\n\n$|8λ+153|=169$\n\nWe have two cases :\n\n1. $8λ+153=169$\n\n$λ=\\frac{16}{8}$\n\n2. $8λ+153=-169$\n\n$λ=\\frac{-322}{8}$\n\nNow, let's calculate $8\\left |\\sum\\limits _{λ\\in S}λ\\right |$ :\n\n$8\\left |\\frac{16}{8}+\\frac{-322}{8}\\right |=8\\left |\\frac{-306}{8}\\right |=306$\n\nThus, the correct answer is Option A : 306.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnyjdfm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the set $\\left \\{\\mathrm{Re}\\left (\\frac{z-\\bar{z}+z\\bar{z}}{2-3z+5\\bar{z}}\\right ):z\\in \\mathrm{ℂ},\\mathrm{Re}(z)=3\\right \\}$ is equal to the interval $(α,β]$, then $24(β-α)$ is equal to :",
+  "options": [
+   "36",
+   "27",
+   "42",
+   "30"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $z_{1}=\\left (\\frac{z-\\bar{z}+z\\bar{z}}{2-3z+5\\bar{z}}\\right )$\n\nLet $\\mathrm{z}=3+\\mathrm{iy}$\n\n $\\bar{z}=3-iy$\n\n$\\begin{array}{l} z_{1}=\\dfrac{2iy+\\left (9+y^{2}\\right )}{2-3(3+iy)+5(3-iy)} \\\\  \\\\ =\\dfrac{9+y^{2}+i(2y)}{8-8iy} \\\\  \\\\ =\\dfrac{\\left (9+y^{2}\\right )+i(2y)}{8(1-iy)} \\\\  \\\\ \\mathrm{Re}(z_{1})=\\dfrac{\\left (9+y^{2}\\right )-2y^{2}}{8(1+y^{2})} \\end{array}$\n\n$\\begin{array}{l} =\\dfrac{9-y^{2}}{8(1+y^{2})} \\\\  \\\\ =\\dfrac{1}{8}\\left [\\dfrac{10-\\left (1+y^{2}\\right )}{(1+y^{2})}\\right ] \\\\  \\\\ =\\dfrac{1}{8}\\left [\\dfrac{10}{1+y^{2}}-1\\right ] \\\\  \\\\ 1+y^{2}\\in [1,\\infty ) \\\\  \\\\ \\dfrac{1}{1+y^{2}}\\in (0,1] \\\\  \\\\ \\dfrac{10}{1+y^{2}}\\in (0,10] \\\\  \\\\ \\dfrac{10}{1+y^{2}}-1\\in (-1,9] \\\\  \\\\ \\mathrm{Re}(\\mathrm{z}_{1})\\in \\left (\\dfrac{-1}{8},\\dfrac{9}{8}\\right ] \\\\  \\\\ α=\\dfrac{-1}{8},β=\\dfrac{9}{8} \\\\  \\\\ 24(β-α)=24\\left (\\dfrac{9}{8}+\\dfrac{1}{8}\\right )=30 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnys0w5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A person forgets his 4-digit ATM pin code. But he remembers that in the code all the digits are different, the greatest digit is 7 and the sum of the first two digits is equal to the sum of the last two digits. Then the maximum number of trials necessary to obtain the correct code is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 72.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the 4-digit ATM pin code be represented by the digits $abxy$, where all digits are different, the greatest digit is 7, and the sum of the first two digits is equal to the sum of the last two digits: $a+b=x+y$.\n\nSince the greatest digit is 7, the possible digits for the pin code are $0,1,2,3,4,5,6,$ and $7$.\n\n1. Let's denote the sum of the first two digits and the sum of the last two digits as $λ$. Since the largest digit is 7, we can analyze different possible values for $λ$.\n\nWe will analyze different possible values for $λ$ and the corresponding possible pairs of digits:\n\n- $λ=7$: The pairs of digits that have a sum of 7 are $(0,7),(7,0),(1,6),(6,1),(2,5),(5,2),(3,4),(4,3)$. Since 7 must be present, we consider the pairs with 7: $(0,7),(7,0)$. \n\nWhen the pair $(0,7)$ is chosen, the other two digits can be any one of the remaining pairs: $(1,6),(6,1),(2,5),(5,2),(3,4),(4,3)$. For each of these pairs, there are 2 possible pin codes: $07xy$ and $07yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 12 possible pin codes for this case.\n\nWhen the pair $(7,0)$ is chosen, the other two digits can also be any one of the remaining pairs: $(1,6),(6,1),(2,5),(5,2),(3,4),(4,3)$. For each of these pairs, there are 2 possible pin codes: $70xy$ and $70yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 12 possible pin codes for this case.\n\nSo, there are 24 possible pin codes for $λ=7$.\n\n\n[IMG]\n\n\n- $λ=8$: The pairs of digits that have a sum of 8 are $(1,7),(7,1),(2,6),(6,2),(3,5),(5,3)$. Since 7 must be present, we consider the pairs with 7: $(1,7),(7,1)$.\n\nWhen the pair $(1,7)$ is chosen, the other two digits can be any one of the remaining pairs: $(2,6),(6,2),(3,5),(5,3)$. For each of these pairs, there are 2 possible pin codes: $17xy$ and $17yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 8 possible pin codes for this case.\n\nWhen the pair $(7,1)$ is chosen, the other two digits can also be any one of the remaining pairs: $(2,6),(6,2),(3,5),(5,3)$. For each of these pairs, there are 2 possible pin codes: $71xy$ and $71yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 8 possible pin codes for this case.\n\nSo, there are 16 possible pin codes for $λ=8$.\n\n\n[IMG]\n\n\n- $λ=9$: The pairs of digits that have a sum of 9 are $(2,7),(7,2),(3,6),(6,3),(4,5),(5,4)$. Since 7 must be present, we consider the pairs with 7: $(2,7),(7,2)$.\n\nWhen the pair $(2,7)$ is chosen, the other two digits can be any one of the remaining pairs: $(3,6),(6,3),(4,5),(5,4)$. For each of these pairs, there are 2 possible pin codes: $27xy$ and $27yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 8 possible pin codes for this case.\n\nWhen the pair $(7,2)$ is chosen, the other two digits can also be any one of the remaining pairs: $(3,6),(6,3),(4,5),(5,4)$. For each of these pairs, there are 2 possible pin codes: $72xy$ and $72yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 8 possible pin codes for this case.\n\nSo, there are 16 possible pin codes for $λ=9$.\n\n\n[IMG]\n\n\n- $λ=10$: The pairs of digits that have a sum of 10 are $(3,7),(7,3),(4,6),(6,4)$. Since 7 must be present, we consider the pairs with 7: $(3,7),(7,3)$.\n\nWhen the pair $(3,7)$ is chosen, the other two digits can be any one of the remaining pairs: $(4,6),(6,4)$. For each of these pairs, there are 2 possible pin codes: $37xy$ and $37yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 4 possible pin codes for this case.\n\nWhen the pair $(7,3)$ is chosen, the other two digits can also be any one of the remaining pairs: $(4,6),(6,4)$. For each of these pairs, there are 2 possible pin codes: $73xy$ and $73yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 4 possible pin codes for this case.\n\nSo, there are 8 possible pin codes for $λ=10$.\n\n\n[IMG]\n\n\n- $λ=11$: The pairs of digits that have a sum of 11 are $(4,7),(7,4),(5,6),(6,5)$. Since 7 must be present, we consider the pairs with 7: $(4,7),(7,4)$.\n\nWhen the pair $(4,7)$ is chosen, the other two digits can be any one of the remaining pairs: $(5,6),(6,5)$. For each of these pairs, there are 2 possible pin codes: $47xy$ and $47yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 4 possible pin codes for this case.\n\nWhen the pair $(7,4)$ is chosen, the other two digits can also be any one of the remaining pairs: $(5,6),(6,5)$. For each of these pairs, there are 2 possible pin codes: $74xy$ and $74yx$, where $x$ and $y$ are the digits from the chosen pair. In total, there are 4 possible pin codes for this case.\n\nSo, there are 8 possible pin codes for $λ=11$.\n\n\n[IMG]\n\n\n- $λ=12$: The only pair of digits that have a sum of 12 is $(5,7)$. Since 7 must be present, this case is not possible.\n\n- $λ=13$: The only pair of digits that have a sum of 13 is $(6,7)$. Since 7 must be present, this case is not possible.\n\n- $λ=14$: The only pair of digits that have a sum of 14 is $(7,7)$. Since all the digits must be different, this case is not possible.\n\nAdding up all the possible pin codes for each value of $λ$, we get:\n\n$24+16+16+8+8=72$\n\nTherefore, the maximum number of trials necessary to obtain the correct code is 72.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-15th-april-morning-shift/lgnys0w5-0.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 15th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2023-online-15th-april-morning-shift/lgnys0w5-1.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 15th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2023-online-15th-april-morning-shift/lgnys0w5-2.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 15th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2023-online-15th-april-morning-shift/lgnys0w5-3.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 15th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2023-online-15th-april-morning-shift/lgnys0w5-4.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 15th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-lgnyuzc0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let an ellipse with centre $(1,0)$ and latus rectum of length $\\frac{1}{2}$ have its major axis along $\\mathrm{x}$-axis. If its minor axis subtends an angle $60^{\\circ }$ at the foci, then the square of the sum of the lengths of its minor and major axes is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 9.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The centre $(1,0)$ only fixes the position of the ellipse; the lengths of the axes and latus rectum, and the angle at a focus, do not depend on it. Let the semi-axes be $a>b$ and the eccentricity $e$: a focus $S$ is at distance $ae$ from the centre $C$ along the major axis, and the ends $B,B^{'}$ of the minor axis are at distance $b$ from $C$.\n\nLatus rectum: $\\dfrac{2b^{2}}{a}=\\dfrac{1}{2}\\Rightarrow b^{2}=\\dfrac{a}{4}$\n\nThe minor axis $BB^{'}$ subtends $60^{\\circ }$ at $S$, and by symmetry $SC$ bisects $\\angle BSB^{'}$. In right triangle $SCB$:\n\n$\\tan 30^{\\circ }=\\dfrac{CB}{CS}=\\dfrac{b}{ae}\\Rightarrow a^{2}e^{2}=3b^{2}$\n\nSince $a^{2}e^{2}=a^{2}-b^{2}$, this gives $a^{2}=4b^{2}$. With $b^{2}=\\dfrac{a}{4}$: $a^{2}=a\\Rightarrow a=1$ and $b=\\dfrac{1}{2}$.\n\nMajor axis $2a=2$, minor axis $2b=1$, so $(2a+2b)^{2}=3^{2}=9$.\n\nHence, the answer is 9.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnz10hf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the area bounded by the curve $2y^{2}=3x$, lines $x+y=3,y=0$ and outside the circle $(x-3)^{2}+y^{2}=2$ is $\\mathrm{A}$, then $4(π+4A)$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 42.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The parabola is $x=\\dfrac{2y^{2}}{3}$ and the line is $x=3-y$. They meet where $2y^{2}=3(3-y)$, i.e. $2y^{2}+3y-9=0\\Rightarrow (2y-3)(y+3)=0$, so $y=\\dfrac{3}{2}$ (point $\\left (\\frac{3}{2},\\frac{3}{2}\\right )$) or $y=-3$.\n\nThe region taken is the one above the $x$-axis, between $y=0$ and $y=\\dfrac{3}{2}$, bounded on the left by the parabola and on the right by the line (for the part below the axis, $4(π+4A)$ would still contain $π$).\n\n\n[IMG]\n\nThe circle has centre $(3,0)$, the point where the line meets $y=0$, and radius $\\sqrt{2}$. Putting $y^{2}=\\dfrac{3x}{2}$ in the circle gives $x^{2}-\\dfrac{9}{2}x+7=0$, whose discriminant $\\dfrac{81}{4}-28<0$, so the circle does not meet the parabola. The part of the region inside the circle is therefore a sector of radius $\\sqrt{2}$ and angle $\\dfrac{π}{4}$ (the angle between $y=0$ and $x+y=3$), of area $\\dfrac{1}{2}\\cdot 2\\cdot \\dfrac{π}{4}=\\dfrac{π}{4}$.\n\n$A=\\int\\limits _{0}^{3/2}\\left (3-y-\\frac{2y^{2}}{3}\\right )dy-\\frac{π}{4}=\\left [3y-\\frac{y^{2}}{2}-\\frac{2y^{3}}{9}\\right ]_{0}^{3/2}-\\frac{π}{4}$\n\n$=\\frac{9}{2}-\\frac{9}{8}-\\frac{3}{4}-\\frac{π}{4}=\\frac{21}{8}-\\frac{π}{4}$\n\n$\\Rightarrow 4A+π=\\frac{21}{2}\\Rightarrow 4(π+4A)=42$\n\nHence, the answer is 42.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-15th-april-morning-shift/lgnz10hf-0.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 15th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-lgnz42oa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $f(x)=\\int \\frac{dx}{(3+4x^{2})\\sqrt{4-3x^{2}}},|x|<\\frac{2}{\\sqrt{3}}$. If $f(0)=0$ and $f(1)=\\frac{1}{αβ}\\tan ^{-1}\\left (\\frac{α}{β}\\right )$,\n\n$α,β>0$, then $α^{2}+β^{2}$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 28.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} f(x)=\\int \\dfrac{dx}{(3+4x^{2})\\sqrt{4-3x^{2}}} \\\\  \\\\ x=\\dfrac{1}{t} \\\\  \\\\ =\\int \\dfrac{\\frac{-1}{t^{2}}dt}{\\frac{(3t^{2}+4)}{t^{2}}\\frac{\\sqrt{4t^{2}-3}}{t}} \\\\  \\\\ =\\int \\dfrac{-dt\\cdot t}{(3t^{2}+4)\\sqrt{4t^{2}-3}}:\\text{Put}4t^{2}-3=z^{2} \\\\  \\\\ =-\\dfrac{1}{4}\\int \\dfrac{zdz}{\\left (3\\left (\\frac{z^{2}+3}{4}\\right )+4\\right )z} \\end{array}$\n\n$\\begin{array}{l} =\\int \\dfrac{-dz}{3z^{2}+25}=-\\dfrac{1}{3}\\int \\dfrac{\\mathrm{dz}}{\\mathrm{z}^{2}+\\left (\\frac{5}{\\sqrt{3}}\\right )^{2}} \\\\  \\\\ =-\\dfrac{1}{3}\\dfrac{\\sqrt{3}}{5}\\tan ^{-1}\\left (\\dfrac{\\sqrt{3}z}{5}\\right )+C \\\\  \\\\ =-\\dfrac{1}{5\\sqrt{3}}\\tan ^{-1}\\left (\\dfrac{\\sqrt{3}}{5}\\sqrt{4t^{2}-3}\\right )+C \\\\  \\\\ f(x)=-\\dfrac{1}{5\\sqrt{3}}\\tan ^{-1}\\left (\\dfrac{\\sqrt{3}}{5}\\sqrt{\\dfrac{4-3\\mathrm{x}^{2}}{x^{2}}}\\right )+C \\\\  \\\\ \\because \\mathrm{f}(0)=0\\therefore \\mathrm{c}=\\dfrac{π}{10\\sqrt{3}} \\end{array}$\n\n$\\begin{array}{l} f(1)=-\\dfrac{1}{5\\sqrt{3}}\\tan ^{-1}\\left (\\dfrac{\\sqrt{3}}{5}\\right )+\\dfrac{π}{10\\sqrt{3}} \\\\  \\\\ f(1)=\\dfrac{1}{5\\sqrt{3}}\\cot ^{-1}\\left (\\dfrac{\\sqrt{3}}{5}\\right )=\\dfrac{1}{5\\sqrt{3}}\\tan ^{-1}\\left (\\dfrac{5}{\\sqrt{3}}\\right ) \\\\  \\\\ α=5:β=\\sqrt{3}\\therefore α^{2}+β^{2}=28 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnz80z6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Consider the triangles with vertices $A(2,1),B(0,0)$ and $C(t,4),t\\in [0,4]$.\n\nIf the maximum and the minimum perimeters of such triangles are obtained at \n\n$t=α$ and $t=β$ respectively, then $6α+21β$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 48.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$AB=\\sqrt{5}$ is fixed, so the perimeter is $\\sqrt{5}+f(t)$, where\n\n$f(t)=AC+BC=\\sqrt{(t-2)^{2}+9}+\\sqrt{t^{2}+16},t\\in [0,4].$\n\nMinimum: $A(2,1)$ and $B(0,0)$ lie on the same side of the line $y=4$. The image of $B$ in $y=4$ is $B^{'}(0,8)$ and $BC=B^{'}C$, so $AC+BC=AC+CB^{'}\\geq AB^{'}$, with equality when $C$ lies on the segment $AB^{'}$.\n\nThe slope of $AB^{'}$ is $\\dfrac{8-1}{0-2}=-\\dfrac{7}{2}$, so $AB^{'}$ is $7x+2y=16$. At $y=4$, $x=\\dfrac{8}{7}\\in [0,4]$, so $β=\\dfrac{8}{7}$.\n\nMaximum: for $t\\in [2,4]$ both $AC$ and $BC$ increase with $t$, so $f(t)\\leq f(4)$. For $t\\in [0,2]$, $AC(t)=AC(4-t)$ and $BC(t)\\leq BC(4-t)$, so $f(t)\\leq f(4-t)\\leq f(4)$. Thus the maximum is at $t=4$ ($f(4)=\\sqrt{13}+4\\sqrt{2}>f(0)=\\sqrt{13}+4$), so $α=4$.\n\n$6α+21β=24+21\\cdot \\frac{8}{7}=24+24=48$\n\nHence, the answer is 48.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnzb2hr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of elements in the set \n\n$\\{n\\in \\mathrm{ℕ}:10\\leq n\\leq 100$ and $3^{n}-3$ is a multiple of 7$\\}$ is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 15.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the number of elements in the given set, we need to find how many natural numbers $n$ between $10$ and $100$ (inclusive) satisfy the condition that $3^{n}-3$ is a multiple of $7$.\n\nRecall that for any integers $a$ and $b$, $a$ is a multiple of $b$ if there exists an integer $k$ such that $a=bk$. So in our case, we need to find how many $n$ satisfy the equation $3^{n}-3=7k$ for some integer $k$.\n\nNotice that $3^{n}-3=3(3^{n-1}-1)$. We want this expression to be a multiple of 7. Let's explore a few powers of 3 modulo 7:\n\n$3^{1}\\equiv 3(\\mathrm{mod}7)$\n\n$3^{2}\\equiv 9\\equiv 2(\\mathrm{mod}7)$\n\n$3^{3}\\equiv 27\\equiv 6(\\mathrm{mod}7)$\n\n$3^{4}\\equiv 81\\equiv 4(\\mathrm{mod}7)$\n\n$3^{5}\\equiv 243\\equiv 5(\\mathrm{mod}7)$\n\n$3^{6}\\equiv 729\\equiv 1(\\mathrm{mod}7)$\n\nWe observe that $3^{n}\\quad (\\mathrm{mod}7)$ follows a cycle of length 6. So, $3^{n-1}\\qquad (\\mathrm{mod}7)$ also follows the same cycle, but shifted:\n\n$3^{0}\\equiv 1(\\mathrm{mod}7)$\n\n$3^{1}\\equiv 3(\\mathrm{mod}7)$\n\n$3^{2}\\equiv 2(\\mathrm{mod}7)$\n\n$3^{3}\\equiv 6(\\mathrm{mod}7)$\n\n$3^{4}\\equiv 4(\\mathrm{mod}7)$\n\n$3^{5}\\equiv 5(\\mathrm{mod}7)$\n\nWe want $3(3^{n-1}-1)\\equiv 0(\\mathrm{mod}7)$, which means that $3^{n-1}-1\\equiv 0(\\mathrm{mod}7)$. From the cycle above, we see that this is true when $n-1$ is a multiple of 6, or equivalently, when $n$ is one more than a multiple of 6.\n\nNow let's find the multiples of 6 between 10 and 100:\n\n$12,18,24,30,36,42,48,54,60,66,72,78,84,90,96$\n\nAdding 1 to each of these values, we get the set of natural numbers $n$ that satisfy the given condition:\n\n$13,19,25,31,37,43,49,55,61,67,73,79,85,91,97$\n\nThere are 15 elements in this set. Therefore, the number of elements in the given set is $15$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-lgnzfh40",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $A=\\{1,2,3,4\\}$ and $\\mathrm{R}$ be a relation on the set $A\\times A$ defined by \n\n$R=\\{((a,b),(c,d)):2a+3b=4c+5d\\}$. Then the number of elements in $\\mathrm{R}$ is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 15th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2a+3b=4c+5d$\n\nGiven A = {1, 2, 3, 4}, the maximum value of $2a+3b$ is 20, when (a, b) = (4, 4), and the minimum value of $4c+5d$ is 9, when (c, d) = (1, 1). Therefore, the possible values for $2a+3b=4c+5d$ are 9, 13, 14, 17, 18, and 19.\n\nNow, let's find the combinations of (a, b), (c, d) that satisfy the given equation:\n\n1. $2a+3b=9\\Rightarrow (a,b)=(3,1)\\Rightarrow (c,d)=(1,1)$\n\n2. $2a+3b=13\\Rightarrow (a,b)=(2,3)\\Rightarrow (c,d)=(2,1)$\n\n3. $2a+3b=14\\Rightarrow (a,b)=(4,2)\\Rightarrow (c,d)=(1,2)$\n\n4. $2a+3b=14\\Rightarrow (a,b)=(1,4)\\Rightarrow (c,d)=(1,2)$\n\n5. $2a+3b=17\\Rightarrow (a,b)=(4,3)\\Rightarrow (c,d)=(3,1)$\n\n6. $2a+3b=18\\Rightarrow (a,b)=(3,4)\\Rightarrow (c,d)=(2,2)$\n\nThere are a total of 6 elements in the relation R for the given equation with the specified values of a, b, c, and d.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 15th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

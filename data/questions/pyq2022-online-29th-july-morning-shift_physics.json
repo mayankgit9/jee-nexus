@@ -1,0 +1,1228 @@
+[
+ {
+  "publicId": "PYQ-2022-1l6p3y0n",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given below are two statements : One is labelled as Assertion (A) and other is labelled as Reason (R).\n\nAssertion (A) : Time period of oscillation of a liquid drop depends on surface tension (S), if density of the liquid is $ρ$ and radius of the drop is r, then $\\mathrm{T}=\\mathrm{K}\\sqrt{ρ\\mathrm{r}^{3}/\\mathrm{S}^{3/2}}$ is dimensionally correct, where K is dimensionless.\n\nReason (R) : Using dimensional analysis we get R.H.S. having different dimension than that of time period.\n\nIn the light of above statements, choose the correct answer from the options given below.",
+  "options": [
+   "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+   "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+   "(A) is true but (R) is false",
+   "(A) is false but (R) is true"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We know,\n\n$\\begin{array}{l} [S]=\\left [\\mathrm{MT}^{-2}\\right ] \\\\  \\\\ [ρ]=\\left [\\mathrm{ML}^{-3}\\right ] \\\\  \\\\ [r]=[\\mathrm{L}] \\end{array}$\n\n$\\begin{array}{ll} \\therefore \\text{Dimension of}\\mathrm{RHS} & =\\dfrac{\\left [\\mathrm{M}^{\\frac{1}{2}}\\mathrm{L}^{-\\frac{3}{2}}\\right ]\\left [\\mathrm{L}^{\\frac{3}{2}}\\right ]}{\\left [\\mathrm{MT}^{-2}\\right ]^{\\frac{3}{4}}} \\\\  \\\\ =\\left [\\mathrm{M}^{\\left (\\frac{1}{2}-\\frac{3}{4}\\right )}\\mathrm{L}^{\\left (-\\frac{3}{2}+\\frac{3}{2}\\right )}\\mathrm{T}^{\\frac{6}{4}}\\right ]=\\mathrm{M}^{-\\frac{1}{4}}\\mathrm{L}^{0}\\mathrm{T}^{\\frac{3}{2}} \\end{array}$\n\ndimension of L.H.S. = $[\\mathrm{T}]$\n\n$\\therefore$ Dimension of LHS $\\neq$ Dimension of RHS.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p3zz0",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A ball is thrown up vertically with a certain velocity so that, it reaches a maximum height h. Find the ratio of the times in which it is at height $\\frac{h}{3}$ while going up and coming down respectively.",
+  "options": [
+   "$\\frac{\\sqrt{2}-1}{\\sqrt{2}+1}$",
+   "$\\frac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}+\\sqrt{2}}$",
+   "$\\frac{\\sqrt{3}-1}{\\sqrt{3}+1}$",
+   "$\\frac{1}{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "motion in a straight line"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A ball is thrown vertically upward with a certain velocity, reaching a maximum height $h$. We need to find the ratio of the times it is at height $\\frac{h}{3}$ while ascending and descending, respectively.\n\nThe initial velocity of the ball $v$ can be given by:\n\n$v=\\sqrt{2gh}$\n\nWhen the ball is at height $\\frac{h}{3}$, the equation of motion is:\n\n$\\frac{h}{3}=\\sqrt{2gh}\\cdot t-\\frac{1}{2}gt^{2}$\n\nRearranging the equation, we get a quadratic equation in terms of $t$:\n\n$\\frac{g}{2}t^{2}-\\sqrt{2gh}\\cdot t+\\frac{h}{3}=0$\n\nThe ratio of the times taken to ascend and descend to the height $\\frac{h}{3}$ can be found using the quadratic formula solution for $t$, considering the corresponding velocities:\n\n$\\frac{t_{1}}{t_{2}}=\\frac{\\sqrt{2gh}-\\sqrt{2gh-\\frac{2gh}{3}}}{\\sqrt{2gh}+\\sqrt{2gh-\\frac{2gh}{3}}}$\n\nSimplifying the terms inside the fraction:\n\n$=\\frac{\\sqrt{2}-\\frac{2}{\\sqrt{3}}}{\\sqrt{2}+\\frac{2}{\\sqrt{3}}}=\\frac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}+\\sqrt{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p41lx",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\mathrm{t}=\\sqrt{x}+4$, then $\\left (\\frac{\\mathrm{d}x}{\\mathrm{d}t}\\right )_{\\mathrm{t}=4}$ is :",
+  "options": [
+   "4",
+   "zero",
+   "8",
+   "16"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "motion in a straight line"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$t=\\sqrt{x}+4$, Squaring on both\n\n$\\begin{array}{l} x=(t-4)^{2}=t^{2}-8t+16 \\\\  \\\\ \\dfrac{dx}{dt}=2t-8 \\\\  \\\\ \\text{at}t=4 \\\\  \\\\ \\dfrac{dx}{dt}=8-8=0 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p43wr",
+  "subjectKey": "physics",
+  "chapterKey": "physics:laws-of-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A smooth circular groove has a smooth vertical wall as shown in figure. A block of mass m moves against the wall with a speed v. Which of the following curve represents the correct relation between the normal reaction on the block by the wall (N) and speed of the block (v) ?\n\n\n[IMG]",
+  "options": [
+   "[IMG]",
+   "[IMG]",
+   "[IMG]",
+   "[IMG]"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circular motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Block is moving in the circular path, that means there should be a force which is keeping the block in contact with the wall here that force is normal force, which is towards the center of the circular path. And we know this force is equal to $\\frac{mv^{2}}{r}$.\n\n$\\therefore$ $N=\\frac{mv^{2}}{r}$\n\n$\\Rightarrow$ N $\\propto$ $v^{2}$\n\n$\\Rightarrow$ The graph given in option A suits the best for the above relation.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-29th-july-morning-shift/1l6p43wr0-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2022-online-29th-july-morning-shift/1l6p43wr0-1.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2022-online-29th-july-morning-shift/1l6p43wr0-2.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2022-online-29th-july-morning-shift/1l6p43wr0-3.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2022-online-29th-july-morning-shift/1l6p43wr0-4.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l6p45uh",
+  "subjectKey": "physics",
+  "chapterKey": "physics:work-energy-power",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A ball is projected with kinetic energy E, at an angle of $60^{\\circ }$ to the horizontal. The kinetic energy of this ball at the highest point of its flight will become :",
+  "options": [
+   "Zero",
+   "$\\frac{E}{2}$",
+   "$\\frac{E}{4}$",
+   "E"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 51,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "work power and energy"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$K.E.=E=\\frac{1}{2}mv^{2}$\n\nat highest point\n\n$K.E^{'}=\\frac{1}{2}mv^{2}\\cos ^{2}θ$\n\n$=\\frac{1}{2}mv^{2}\\left (\\frac{1}{4}\\right )$\n\n$=\\frac{E}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p4a8p",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two bodies of mass $1\\mathrm{kg}$ and $3\\mathrm{kg}$ have position vectors $\\hat{i}+2\\hat{j}+\\hat{k}$ and $-3\\hat{i}-2\\hat{j}+\\hat{k}$ respectively. The magnitude of position vector of centre of mass of this system will be similar to the magnitude of vector :",
+  "options": [
+   "$\\hat{i}+2\\hat{j}+\\hat{k}$",
+   "$-3\\hat{i}-2\\hat{j}+\\hat{k}$",
+   "$-2\\hat{i}+2\\hat{k}$",
+   "$2\\hat{i}-\\hat{j}+2\\hat{k}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 52,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "center of mass"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$r–_{com}=\\frac{m_{1}r–_{1}+m_{2}r–_{2}}{m_{1}+m_{2}}$\n\n$=\\frac{(1-9)\\hat{i}+(2-6)\\hat{j}+(1+3)\\widehat{k}}{4}$\n\n$=\\frac{-8\\hat{i}-4\\hat{j}+4\\widehat{k}}{4}$\n\n$r–_{com}=-2\\hat{i}-\\hat{j}+\\widehat{k}$\n\n$|r–|=\\sqrt{4+1+1}=\\sqrt{6}$\n\n$\\left |\\hat{i}+2\\hat{j}+\\widehat{k}\\right |=\\sqrt{6}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p4d4b",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given below are two statements : One is labelled as Assertion (A) and the other is labelled as Reason (R).\n\nAssertion (A): Clothes containing oil or grease stains cannot be cleaned by water wash.\n\nReason (R): Because the angle of contact between the oil/grease and water is obtuse.\n\nIn the light of the above statements, choose the correct answer from the option given below.",
+  "options": [
+   "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+   "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+   "(A) is true but (R) is false",
+   "(A) is false but (R) is true"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 53,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Due to obtuse angle of contact the water doesn't wet the oiled surface properly and cannot wash it also.\n\n$\\Rightarrow$ Assertion is correct and Reason given is a correct explanation.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p4eiz",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the length of a wire is made double and radius is halved of its respective values. Then, the Young's modulus of the material of the wire will :",
+  "options": [
+   "remain same",
+   "become 8 times its initial value",
+   "become $\\frac{1}{4}$ of its initial value",
+   "become 4 times its initial value"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 54,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "elasticity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Young's modulus of matter depends on material of wire and is independent of the dimensions of the wire. As the material remains same so Young's modulus also remain same.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p4qe4",
+  "subjectKey": "physics",
+  "chapterKey": "physics:oscillations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The time period of oscillation of a simple pendulum of length L suspended from the roof of a vehicle, which moves without friction down an inclined plane of inclination $α$, is given by :",
+  "options": [
+   "$2π\\sqrt{\\mathrm{L}/(\\mathrm{g}\\cos α)}$",
+   "$2π\\sqrt{\\mathrm{L}/(\\mathrm{g}\\sin α)}$",
+   "$2π\\sqrt{\\mathrm{L}/\\mathrm{g}}$",
+   "$2π\\sqrt{\\mathrm{L}/(\\mathrm{g}\\tan α)}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 55,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "simple harmonic motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The vehicle slides down the frictionless incline with acceleration $a=g\\sin α$ along the incline.\n\nIn the frame of the vehicle, the bob experiences $⃗{g}_{\\text{eff}}=⃗{g}-⃗{a}$. The component of $⃗{g}$ along the incline, $g\\sin α$, is cancelled by $-⃗{a}$, leaving only the component perpendicular to the incline:\n\n$g_{\\text{eff}}=g\\cos α$\n\nThe pendulum oscillates about the normal to the incline with time period\n\n$T=2π\\sqrt{\\dfrac{L}{g_{\\text{eff}}}}=2π\\sqrt{\\dfrac{L}{g\\cos α}}$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p4vot",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A spherically symmetric charge distribution is considered with charge density varying as\n\n$ρ(r)=\\left \\{\\begin{array}{ll} ρ_{0}\\left (\\frac{3}{4}-\\frac{r}{R}\\right ) & \\text{for}r\\leq R \\\\ \\text{zero} & \\text{for}r>R \\end{array} \\right.$\n\nWhere, $r(r<R)$ is the distance from the centre O (as shown in figure). The electric field at point P will be:\n\n\n[IMG]",
+  "options": [
+   "$\\frac{ρ_{0}\\mathrm{r}}{4ε_{0}}\\left (\\frac{3}{4}-\\frac{r}{R}\\right )$",
+   "$\\frac{ρ_{0}r}{3ε_{0}}\\left (\\frac{3}{4}-\\frac{r}{R}\\right )$",
+   "$\\frac{ρ_{0}r}{4ε_{0}}\\left (1-\\frac{r}{R}\\right )$",
+   "$\\frac{ρ_{0}r}{5ε_{0}}\\left (1-\\frac{r}{R}\\right )$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 56,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "By spherical symmetry the field at P is radial, so Gauss's law over a sphere of radius $r$ through P gives\n\n$E(4πr^{2})=\\dfrac{Q_{\\text{in}}}{ε_{0}}$\n\nCharge enclosed, with $r^{'}$ as the variable of integration:\n\n$Q_{\\text{in}}=\\int\\limits _{0}^{r}ρ_{0}\\left (\\dfrac{3}{4}-\\dfrac{r^{'}}{R}\\right )4πr^{'2}dr^{'}=4πρ_{0}\\left (\\dfrac{r^{3}}{4}-\\dfrac{r^{4}}{4R}\\right )=πρ_{0}r^{3}\\left (1-\\dfrac{r}{R}\\right )$\n\nTherefore\n\n$E=\\dfrac{πρ_{0}r^{3}}{4πε_{0}r^{2}}\\left (1-\\dfrac{r}{R}\\right )=\\dfrac{ρ_{0}r}{4ε_{0}}\\left (1-\\dfrac{r}{R}\\right )$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-29th-july-morning-shift/1l6p4vott-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l6p4ymx",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given below are two statements.\n\nStatement I : Electric potential is constant within and at the surface of each conductor.\n\nStatement II : Electric field just outside a charged conductor is perpendicular to the surface of the conductor at every point.\n\nIn the light of the above statements, choose the most appropriate answer from the options given below.",
+  "options": [
+   "Both Statement I and Statement II are correct",
+   "Both Statement I and Statement II are incorrect",
+   "Statement I is correct but Statement II is incorrect",
+   "Statement I is incorrect but Statement II is correct"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 57,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since $\\vec{E}_{net}=\\vec{0}$ in the bulk of a conductor\n\n$\\Rightarrow$ Potential would be constant.\n\n$\\Rightarrow$ Statement I is correct\n\nSince a conductor's surface is equipotential, $\\vec{E}$ just outside is perpendicular to the surface.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p50ib",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two metallic wires of identical dimensions are connected in series. If $σ_{1}$ and $σ_{2}$ are the conductivities of these wires respectively, the effective conductivity of the combination is :",
+  "options": [
+   "$\\frac{σ_{1}σ_{2}}{σ_{1}+σ_{2}}$",
+   "$\\frac{2σ_{1}σ_{2}}{σ_{1}+σ_{2}}$",
+   "$\\frac{σ_{1}+σ_{2}}{2σ_{1}σ_{2}}$",
+   "$\\frac{σ_{1}+σ_{2}}{σ_{1}σ_{2}}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 58,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Identical dimensions: each wire has length $l$ and cross-sectional area $A$, so $R_{1}=\\dfrac{l}{σ_{1}A}$ and $R_{2}=\\dfrac{l}{σ_{2}A}$.\n\nJoined end to end in series, they form one conductor of length $2l$ and area $A$ with resistance $R_{1}+R_{2}$. Its effective conductivity $σ$ satisfies\n\n$\\dfrac{2l}{σA}=\\dfrac{l}{σ_{1}A}+\\dfrac{l}{σ_{2}A}$\n\n$\\Rightarrow \\dfrac{2}{σ}=\\dfrac{1}{σ_{1}}+\\dfrac{1}{σ_{2}}\\Rightarrow σ=\\dfrac{2σ_{1}σ_{2}}{σ_{1}+σ_{2}}$\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p51yr",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An alternating emf $\\mathrm{E}=440\\sin 100π\\mathrm{t}$ is applied to a circuit containing an inductance of $\\frac{\\sqrt{2}}{π}\\mathrm{H}$. If an a.c. ammeter is connected in the circuit, its reading will be :",
+  "options": [
+   "4.4 A",
+   "1.55 A",
+   "2.2 A",
+   "3.11 A"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 59,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "alternating current"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=\\frac{V}{ωL}$\n\n$=\\frac{440}{100π\\times \\frac{\\sqrt{2}}{π}}=\\frac{44}{10\\sqrt{2}}$\n\n$\\Rightarrow I_{rms}=\\frac{I}{\\sqrt{2}}=\\frac{44}{20}=2.2A$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p56ir",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A coil of inductance 1 H and resistance $100\\Omega$ is connected to a battery of 6 V. Determine approximately :\n\n(a) The time elapsed before the current acquires half of its steady - state value.\n\n(b) The energy stored in the magnetic field associated with the coil at an instant 15 ms after the circuit is switched on. (Given $\\ln 2=0.693,\\mathrm{e}^{-3/2}=0.25$)",
+  "options": [
+   "t = 10 ms; U = 2 mJ",
+   "t = 10 ms; U = 1 mJ",
+   "t = 7 ms; U = 1 mJ",
+   "t = 7 ms; U = 2 mJ"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 60,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "alternating current"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The current in the LR circuit grows as\n\n$i(t)=\\dfrac{V}{R}\\left (1-e^{-t/τ}\\right ),τ=\\dfrac{L}{R}=\\dfrac{1}{100}\\text{s}=10\\text{ms}$\n\nFor half the steady value, $e^{-t/τ}=\\dfrac{1}{2}$:\n\n$t=τ\\ln 2=10\\times 0.693=6.93\\text{ms}\\approx 7\\text{ms}$\n\nAt $t=15\\text{ms}$, $t/τ=3/2$:\n\n$i=\\dfrac{6}{100}\\left (1-e^{-3/2}\\right )=0.06\\times 0.75=0.045\\text{A}$\n\n$U=\\dfrac{1}{2}Li^{2}=\\dfrac{1}{2}\\times 1\\times (0.045)^{2}=1.01\\times 10^{-3}\\text{J}\\approx 1\\text{mJ}$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p5a0d",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-waves",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Match List - I with List - II :\n\n  \n    \n    List - I\n    \n    List - II\n  \n\n  \n    (a)\n    UV rays\n    (i)\n    Diagnostic tool in medicine\n  \n  \n    (b)\n    X-rays\n    (ii)\n    Water purification\n  \n  \n    (c)\n    Microwave\n    (iii)\n    Communication, Radar\n  \n  \n    (d)\n    Infrared wave\n    (iv)\n    Improving visibility in foggy days\n  \n\nChoose the correct answer from the options given below :",
+  "options": [
+   "(a)-(iii), (b)-(ii), (c)-(i), (d)-(iv)",
+   "(a)-(ii), (b)-(i), (c)-(iii), (d)-(iv)",
+   "(a)-(ii), (b)-(iv), (c)-(iii), (d)-(i)",
+   "(a)-(iii), (b)-(i), (c)-(ii), (d)-(iv)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 61,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "UV - Water purification\n\nX-rays - Diagnostic tool in medicine\n\nMicrowave - Communication, Radar\n\nInfrared wave - Improving visibility in foggy days.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p5cft",
+  "subjectKey": "physics",
+  "chapterKey": "physics:dual-nature-of-matter",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The kinetic energy of emitted electron is E when the light incident on the metal has wavelength $λ$. To double the kinetic energy, the incident light must have wavelength:",
+  "options": [
+   "$\\frac{\\mathrm{hc}}{\\mathrm{E}λ-\\mathrm{hc}}$",
+   "$\\frac{\\mathrm{hc}λ}{\\mathrm{E}λ+\\mathrm{hc}}$",
+   "$\\frac{\\mathrm{h}λ}{\\mathrm{E}λ+\\mathrm{hc}}$",
+   "$\\frac{\\text{hc}λ}{\\mathrm{E}λ-\\mathrm{hc}}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 62,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "dual nature of radiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$k=\\frac{hc}{λ}-𝜙=E$\n\nand, $2k=\\frac{hc}{λ_{2}}-𝜙=2E$\n\n$\\Rightarrow \\frac{hc}{λ}-E=\\frac{hc}{λ_{2}}-2E$\n\n$\\Rightarrow \\frac{hc}{λ_{2}}=\\frac{hc}{λ}+E$\n\n$\\Rightarrow λ_{2}=\\frac{hcλ}{hc+λE}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p5g0c",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Find the ratio of energies of photons produced due to transition of an electron of hydrogen atom from its (i) second permitted energy level to the first level, and (ii) the highest permitted energy level to the first permitted level.",
+  "options": [
+   "3 : 4",
+   "4 : 3",
+   "1 : 4",
+   "4 : 1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 63,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$E_{1}=E_{0}\\left (\\frac{1}{1^{2}}-\\frac{1}{2^{2}}\\right )=E_{0}\\times \\frac{3}{4}$\n\n$E_{2}=E_{0}$\n\n$\\therefore$ $\\frac{E_{1}}{E_{2}}=\\frac{3}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p5jrb",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A travelling microscope has 20 divisions per $\\mathrm{cm}$ on the main scale while its vernier scale has total 50 divisions and 25 vernier scale divisions are equal to 24 main scale divisions, what is the least count of the travelling microscope?",
+  "options": [
+   "0.001 cm",
+   "0.002 mm",
+   "0.002 cm",
+   "0.005 cm"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 64,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "1 MSD = $\\frac{1}{20}$ cm\n\n1 VSD = $\\frac{24}{25}\\times \\frac{1}{20}$ cm\n\n$\\therefore$ Least count = 1 MSD $-$ 1 VSD\n\n$=\\frac{1}{20}\\left (1-\\frac{24}{25}\\right )$ cm\n\n$=\\frac{1}{20}\\times \\frac{1}{25}$ cm\n\n$=0.002$ cm",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p5nvr",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In an experiment to find out the diameter of wire using screw gauge, the following observations were noted :\n\n\n[IMG]\n\n\n(A) Screw moves $0.5\\mathrm{mm}$ on main scale in one complete rotation\n\n(B) Total divisions on circular scale $=50$\n\n(C) Main scale reading is $2.5\\mathrm{mm}$\n\n(D) $45^{\\text{th}}$ division of circular scale is in the pitch line\n\n(E) Instrument has 0.03 mm negative error\n\nThen the diameter of wire is :",
+  "options": [
+   "2.92 mm",
+   "2.54 mm",
+   "2.98 mm",
+   "3.45 mm"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 65,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "L.C. = $\\frac{0.5}{50}$ mm = 0.01 mm\n\n$d=(2.5+45\\times 0.01+0.03)$ mm\n\n= 2.98",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-29th-july-morning-shift/1l6p5nvrr-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l6p5wou",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "An object is projected in the air with initial velocity u at an angle $θ$. The projectile motion is such that the horizontal range R, is maximum. Another object is projected in the air with a horizontal range half of the range of first object. The initial velocity remains same in both the cases. The value of the angle of projection, at which the second object is projected, will be $_________$ degree.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 66,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "motion in a plane",
+   "numerical-multi-answer"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\mathrm{R}_{\\max }=\\dfrac{\\mathrm{u}^{2}\\sin 2(45^{\\circ })}{\\mathrm{g}}=\\dfrac{\\mathrm{u}^{2}}{\\mathrm{g}} \\\\  \\\\ \\dfrac{\\mathrm{R}}{2}=\\dfrac{\\mathrm{u}^{2}}{2\\mathrm{g}}=\\dfrac{\\mathrm{u}^{2}\\sin 2θ}{\\mathrm{g}} \\\\  \\\\ \\sin 2θ=\\dfrac{1}{2} \\\\  \\\\ 2θ=30^{\\circ },150^{\\circ } \\\\  \\\\ θ=15^{\\circ },75^{\\circ } \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p5yz0",
+  "subjectKey": "physics",
+  "chapterKey": "physics:gravitation",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the acceleration due to gravity experienced by a point mass at a height h above the surface of earth is same as that of the acceleration due to gravity at a depth $α\\mathrm{h}(\\mathrm{h}<<\\mathrm{R}_{\\mathrm{e}})$ from the earth surface. The value of $α$ will be $_________$.\n\n(use $\\mathrm{R}_{\\mathrm{e}}=6400\\mathrm{km})$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 67,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "gravitation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$g\\left (1-\\frac{2h}{R}\\right )=g\\left (1-\\frac{d}{R}\\right )$\n\n$\\Rightarrow 2h=d$\n\n$\\Rightarrow α=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p60sh",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The pressure $\\mathrm{P}_{1}$ and density $\\mathrm{d}_{1}$ of diatomic gas $\\left (γ=\\frac{7}{5}\\right )$ changes suddenly to $\\mathrm{P}_{2}(>\\mathrm{P}_{1})$ and $\\mathrm{d}_{2}$ respectively during an adiabatic process. The temperature of the gas increases and becomes $________$ times of its initial temperature. (given $\\frac{\\mathrm{d}_{2}}{\\mathrm{d}_{1}}=32$)",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 68,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$P_{1}V_{1}^{γ}=P_{2}V_{2}^{2}$\n\n$\\frac{P_{1}}{d_{1}^{γ}}=\\frac{P_{2}}{d_{2}^{γ}}$\n\n$\\frac{d_{1}T_{1}}{d_{1}^{γ}}=\\frac{d_{2}T_{2}}{d_{2}^{γ}}$\n\n$T_{2}=\\left (\\frac{d_{2}}{d_{1}}\\right )^{γ-1}T_{1}$\n\n$=(32)^{\\frac{2}{5}}T_{1}$\n\n$T_{2}=4T_{1}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p64ss",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinetic-theory",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "One mole of a monoatomic gas is mixed with three moles of a diatomic gas. The molecular specific heat of mixture at constant volume is $\\frac{α^{2}}{4}\\mathrm{R}\\qquad \\mathrm{J}/\\mathrm{mol}\\mathrm{K}$; then the value of $α$ will be $_________. ($Assume that the given diatomic gas has no vibrational mode).",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 69,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "kinetic theory of gases"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$C_{V}=\\frac{f}{2}R$\n\ntotal degree of freedoms\n\n$=1\\times 3+3\\times 5=18$\n\n$\\frac{α^{2}}{4}=\\frac{18}{2n}=\\frac{18}{2\\times 4}$\n\n$\\Rightarrow α^{2}=9$\n\n$α=3$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p66e6",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The current I flowing through the given circuit will be $__________A$.\n\n\n[IMG]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 70,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "All $9\\Omega$ resistances are in parallel\n\n$R_{eq}=3\\Omega$\n\n$I=\\frac{6}{3}A=2A$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-29th-july-morning-shift/1l6p66e6u-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l6p68h3",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A closely wound circular coil of radius 5 cm produces a magnetic field of $37.68\\times 10^{-4}\\mathrm{T}$ at its center. The current through the coil is $_________A$.\n\n[Given, number of turns in the coil is 100 and $π=3.14$]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 71,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$B=\\frac{μ_{0}nI}{2R}$\n\n$37.68\\times 10^{-4}=\\frac{4π\\times 10^{-7}100I}{2\\times 5\\times 10^{-2}}$\n\n$I=\\frac{300A}{100}$\n\n$=3A$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p6aaw",
+  "subjectKey": "physics",
+  "chapterKey": "physics:wave-optics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Two light beams of intensities 4I and 9I interfere on a screen. The phase difference between these beams on the screen at point A is zero and at point B is $π$. The difference of resultant intensities, at the point A and B, will be $_________ I$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 24.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 72,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "wave optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I_{A}=\\left (\\sqrt{I_{1}}+\\sqrt{I_{2}}\\right )^{2}=25I$\n\n$I_{B}=\\left (\\sqrt{I_{1}}-\\sqrt{I_{2}}\\right )^{2}=I$\n\nSo, $I_{A}-I_{B}=24I$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p6c1f",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A wire of length $314\\mathrm{cm}$ carrying current of $14\\mathrm{A}$ is bent to form a circle. The magnetic moment of the coil is $________ A$ $-\\mathrm{m}^{2}$. [Given $π=3.14$]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 11.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 73,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$R=\\frac{l}{2π}=\\frac{314}{2\\times 3.14}=50$ cm\n\n$μ=πR^{2}i$\n\n$=14\\times 3.14\\times (0.5)^{2}$\n\n$=11$ $A-m^{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6p6ff3",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The X-Y plane be taken as the boundary between two transparent media $\\mathrm{M}_{1}$ and $\\mathrm{M}_{2}$. $\\mathrm{M}_{1}$ in $Z⩾0$ has a refractive index of $\\sqrt{2}$ and $M_{2}$ with $Z<0$ has a refractive index of $\\sqrt{3}$. A ray of light travelling in $\\mathrm{M}_{1}$ along the direction given by the vector $\\vec{\\mathrm{P}}=4\\sqrt{3}\\hat{i}-3\\sqrt{3}\\hat{j}-5\\hat{k}$, is incident on the plane of separation. The value of difference between the angle of incidence in $\\mathrm{M}_{1}$ and the angle of refraction in $\\mathrm{M}_{2}$ will be $__________$ degree.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 15.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 74,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Normal will be $-\\widehat{k}$ so\n\n \n[IMG]\n \n\n$\\cos i=\\frac{\\vec{P}.\\widehat{n}}{\\left |\\vec{P}\\right |.\\left |\\widehat{n}\\right |}$\n\n$\\frac{5}{10}=\\frac{1}{2}$\n\n$\\Rightarrow i=60^{\\circ }$\n\nand using Snell's law\n\n$\\sqrt{2}\\sin 60^{\\circ }=\\sqrt{3}\\sin r$\n\n$\\frac{\\sqrt{3}}{\\sqrt{2}}=\\sqrt{3}\\sin r$\n\n$\\Rightarrow r=45^{\\circ }$\n\nSo, $i-r=15^{\\circ }$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-29th-july-morning-shift/1l6p6ff3x-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l6p6iam",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electronic-devices",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the potential barrier across a p-n junction is $0.6\\mathrm{V}$. Then the electric field intensity, in the depletion region having the width of $6\\times 10^{-6}\\mathrm{m}$, will be $__________$ $\\times 10^{5}\\mathrm{N}/\\mathrm{C}$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 75,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electronic devices"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The barrier potential $V=0.6\\text{V}$ acts across the depletion region of width $d=6\\times 10^{-6}\\text{m}$, and the field in this region is taken as uniform.\n\n$E=\\dfrac{V}{d}=\\dfrac{0.6}{6\\times 10^{-6}}=1\\times 10^{5}\\text{N C}^{-1}$\n\nHence, the answer is 1.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

@@ -1,0 +1,923 @@
+[
+ {
+  "publicId": "PYQ-2023-1lgow1w1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a${}_{1}$, a${}_{2}$, a${}_{3}$, .... be a G.P. of increasing positive numbers. Let the sum of its $6^{th}$ and $8^{th}$ terms be 2 and the product of its $3^{rd}$ and $5^{th}$ terms be $\\frac{1}{9}$. Then $6(a_{2}+a_{4})(a_{4}+a_{6})$ is equal to",
+  "options": [
+   "2$\\sqrt{2}$",
+   "2",
+   "3$\\sqrt{3}$",
+   "3"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given the conditions :\n\n$a_{6}+a_{8}=2\\Rightarrow ar^{5}+ar^{7}=2$\n$a_{3}\\cdot a_{5}=\\frac{1}{9}\\Rightarrow a^{2}\\cdot r^{2}\\cdot r^{4}=\\frac{1}{9}\\Rightarrow ar^{3}=\\frac{1}{3}$\n\nFrom this, we can form the equation $\\frac{r^{2}}{3}+\\frac{r^{4}}{3}=2$, which simplifies to $r^{4}+r^{2}=6$.\n\nThis can be factored to give $\\left (r^{2}-2\\right )\\left (r^{2}+3\\right )=0$, yielding $r^{2}=2$ (since $r^{2}$ cannot be $-3$ for real $r$).\n\nSo, we have $r=\\sqrt{2}$.\n\nSubstituting $r=\\sqrt{2}$ into the equation $ar=\\frac{1}{6}$, we get $a=\\frac{1}{6\\sqrt{2}}$.\n\nNow, we find the value of $6(a_{2}+a_{4})(a_{4}+a_{6})$:\n\n$6(a_{2}+a_{4})(a_{4}+a_{6})=6\\left (ar+ar^{3}\\right )\\left (ar^{3}+ar^{5}\\right )$\n\n$=6\\left (\\frac{1}{6}+\\frac{1}{3}\\right )\\left (\\frac{1}{3}+\\frac{2}{3}\\right )$\n\n$=6\\cdot \\frac{1}{2}\\cdot 1=3$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgow35t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $|⃗{a}|=2,|⃗{b}|=3$ and the angle between the vectors $⃗{a}$ and $⃗{b}$ be $\\frac{π}{4}$. Then $|(⃗{a}+2⃗{b})\\times (2⃗{a}-3⃗{b})|^{2}$ is equal to :",
+  "options": [
+   "441",
+   "482",
+   "841",
+   "882"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} |⃗{a}|=2 \\\\  \\\\ |⃗{b}|=3 \\\\  \\\\ ⃗{a}\\cdot ⃗{b}=\\dfrac{π}{4} \\end{array}$\n\n$\\begin{array}{l} |(⃗{a}+2⃗{b})\\times (2⃗{a}-3⃗{b})|^{2} \\\\  \\\\ =|-3⃗{a}\\times ⃗{b}+4⃗{b}\\times ⃗{a}|^{2} \\\\  \\\\ =|-3⃗{a}\\times ⃗{b}-4⃗{a}\\times ⃗{b}|^{2} \\\\  \\\\ =|-7⃗{a}\\times ⃗{b}|^{2} \\\\  \\\\ =\\left (-7|⃗{a}|\\times |⃗{b}|\\sin \\left (\\dfrac{π}{4}\\right )\\right )^{2} \\end{array}$\n\n= $49\\times 4\\times 9\\times \\frac{1}{2}=882$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgow5dw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "All words, with or without meaning, are made using all the letters of the word MONDAY. These words are written as in a dictionary with serial numbers. The serial number of the word MONDAY is :",
+  "options": [
+   "324",
+   "328",
+   "326",
+   "327"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The letters of &quot;MONDAY&quot; arranged in alphabetical order are: A, D, M, N, O, Y.\n\nFix A as the first letter, we can arrange the remaining 5 letters in 5! ways = 120 ways.\nFix D as the first letter, we can arrange the remaining 5 letters in 5! ways = 120 ways.\n\nSo far, we have 120 (for A) + 120 (for D) = 240 words.\n\nNow, let&#39;s proceed with words starting with M:\n\nFix MA as the first two letters, we can arrange the remaining 4 letters in 4! ways = 24 ways.\nFix MD as the first two letters, we can arrange the remaining 4 letters in 4! ways = 24 ways.\nFix MN as the first two letters, we can arrange the remaining 4 letters in 4! ways = 24 ways.\n\nNow, we have 240 (for A and D) + 24 (for MA) + 24 (for MD) + 24 (for MN) = 312 words.\n\nAfter MN, we consider words that start with MO:\n\nFix MOA as the first three letters, we can arrange the remaining 3 letters in 3! ways = 6 ways.\nFix MOD as the first three letters, we can arrange the remaining 3 letters in 3! ways = 6 ways.\n\nAdding these to the total, we have 312 (previous total) + 6 (for MOA) + 6 (for MOD) = 324 words.\n\nNext, we consider words that start with &#39;MON&#39;. The word &#39;MONDAY&#39; comes after &#39;MONAD&#39; in dictionary order, so:\n\nFix &#39;MONA&#39; as the first four letters. The remaining 2 letters (&#39;D&#39; and &#39;Y&#39;) can be arranged in 2! ways, which gives us 2 more words: &#39;MONADY&#39; and &#39;MONAYD&#39;.\n\nSo, we have 324 (previous total) + 2 (for &#39;MONADY&#39; and &#39;MONAYD&#39;) = 326 words.\n\nFinally, we have the word &#39;MONDAY&#39; itself, which is the 327th word.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgow71e",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $S=\\left \\{z\\in \\mathrm{ℂ}:\\bar{z}=i\\left (z^{2}+\\mathrm{Re}(\\bar{z})\\right )\\right \\}$. Then $\\sum\\limits _{z\\in \\mathrm{S}}|z|^{2}$ is equal to :",
+  "options": [
+   "$\\frac{7}{2}$",
+   "4",
+   "3",
+   "$\\frac{5}{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $z=x+iy$\n\n$\\begin{array}{l} \\bar{z}=i\\left (z^{2}+\\mathrm{Re}(\\bar{z})\\right ) \\\\  \\\\ \\Rightarrow x-iy=i\\left (x^{2}-y^{2}+2ixy+x\\right ) \\\\  \\\\ x-iy=i\\left (x^{2}-y^{2}+x\\right )-2xy \\\\  \\\\ x=-2xy\\Rightarrow x(2y+1)=0 \\\\  \\\\ \\Rightarrow x=0\\text{or}y=\\dfrac{-1}{2}........(i) \\\\  \\\\ -y=x^{2}-y^{2}+x...........(ii) \\end{array}$\n\nCase (I) $x=0$\n\n$\\Rightarrow -y=-y^{2}\\Rightarrow y^{2}-y=0\\Rightarrow y=0,1$\n\n$\\therefore$ $z=0,i$\n\nCase (II) $y=\\frac{-1}{2}$\n\n$\\Rightarrow \\frac{1}{2}=x^{2}-\\frac{1}{4}+x\\Rightarrow x^{2}+x-\\frac{3}{4}=0$ \n\n$\\Rightarrow$ $4x^{2}+4x-3=0\\Rightarrow (2x-1)(2x+3)=0$ \n\n$\\Rightarrow$ $x=\\frac{1}{2},\\frac{-3}{2}$\n\n$\\begin{array}{l} z=\\dfrac{1}{2}-\\dfrac{1}{2}i,\\dfrac{-3}{2}-\\dfrac{1}{2}i \\\\  \\\\ \\sum |z|^{2}=0+1+\\dfrac{1}{2}+\\dfrac{5}{2}=4 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgow7xs",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\lim _{x\\to 0}\\frac{e^{ax}-\\cos (bx)-\\frac{cxe-cx}{2}}{1-\\cos (2x)}=17$, then $5a^{2}+b^{2}$ is equal to",
+  "options": [
+   "64",
+   "68",
+   "72",
+   "76"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The Taylor series for $e^{x}$, $\\cos x$, and $e^{-x}$ around $x=0$ are:\n\n$e^{ax}=1+ax+\\frac{(ax)^{2}}{2!}+\\ldots ,$\n\n$\\cos (bx)=1-\\frac{(bx)^{2}}{2!}+\\ldots ,$\n\n$e^{-cx}=1-cx+\\frac{(cx)^{2}}{2!}-\\ldots .$\n\nSubstituting these into the limit and simplifying:\n\n$\\lim _{x\\to 0}\\frac{(1+ax+\\frac{(ax)2}{2!})-(1-\\frac{(bx)2}{2!})-\\frac{cx}{2}(1-(cx)+\\frac{(cx)2}{2!})}{1-\\cos 2x}.$\n\nThis simplifies to:\n\n$\\lim _{x\\to 0}\\frac{(a-\\frac{c}{2})x+(\\frac{a2+b2+c2}{2})x^{2}+\\ldots }{\\left (\\frac{1-\\cos 2x}{(2x)2}\\right )\\times 4x^{2}}.$\n\nLet's evaluate this expression:\n\n$(\\frac{1-\\cos 2x}{(2x)^{2}})\\times 4x^{2}.$\n\nWe know that $1-\\cos 2x$ can be rewritten using the double-angle formula for cosine, which is $\\cos 2x=1-2\\sin ^{2}x$. So, $1-\\cos 2x=2\\sin ^{2}x$.\n\nSubstituting this into our expression we get:\n\n$(\\frac{2\\sin ^{2}x}{(2x)^{2}})\\times 4x^{2}.$\n\nThis simplifies to:\n\n$\\frac{1}{2}(\\frac{\\sin x}{x})^{2}\\times 4x^{2}=\\frac{1}{2}\\times 4x^{2}=2x^{2}.$\n\nSo, \n\n$(\\frac{1-\\cos 2x}{(2x)^{2}})\\times 4x^{2}=2x^{2}.$ \n\n$\\therefore$ $\\lim _{x\\to 0}\\frac{(a-\\frac{c}{2})x+(\\frac{a2+b2+c2}{2})x^{2}+\\ldots }{2x^{2}}=17.$\n\nNow, for the limit to exist, the coefficient of $x$ in the numerator must be zero, as the limit would be undefined otherwise. This gives us the equation:\n\n$a-\\frac{c}{2}=0\\Rightarrow c=2a.$\n\nThen, for the limit to equal $17$, the coefficient of $x^{2}$ in the numerator must equal $17\\times 2=34$. This gives us the equation:\n\n$\\frac{a^{2}+b^{2}+c^{2}}{2}=34\\Rightarrow a^{2}+b^{2}+c^{2}=68.$\n\nSince $c=2a$, we can substitute $c$ in the equation to get:\n\n$a^{2}+b^{2}+(2a)^{2}=68\\Rightarrow 5a^{2}+b^{2}=68.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgowaju",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The line, that is coplanar to the line $\\frac{x+3}{-3}=\\frac{y-1}{1}=\\frac{z-5}{5}$, is :",
+  "options": [
+   "$\\frac{x+1}{-1}=\\frac{y-2}{2}=\\frac{z-5}{4}$",
+   "$\\frac{x+1}{-1}=\\frac{y-2}{2}=\\frac{z-5}{5}$",
+   "$\\frac{x-1}{-1}=\\frac{y-2}{2}=\\frac{z-5}{5}$",
+   "$\\frac{x+1}{1}=\\frac{y-2}{2}=\\frac{z-5}{5}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given two lines:\n\n$\\frac{x-x_{1}}{a_{1}}=\\frac{y-y_{1}}{b_{1}}=\\frac{z-z_{1}}{c_{1}}$\n\nand \n\n$\\frac{x-x_{2}}{a_{2}}=\\frac{y-y_{2}}{b_{2}}=\\frac{z-z_{2}}{c_{2}}$\n\nThese lines are coplanar if the determinant of the matrix\n\n$\\left |\\begin{array}{lll} x_{2}-x_{1} & y_{2}-y_{1} & z_{2}-z_{1} \\\\ a_{1} & b_{1} & c_{1} \\\\ a_{2} & b_{2} & c_{2} \\end{array}\\right |$ = 0\n\nNow let's apply this condition to the given problem. The given line is :\n\n$\\frac{x+3}{-3}=\\frac{y-1}{1}=\\frac{z-5}{5}$\n\nSo, a point on this line is $(-3,1,5)$ and the direction ratios are $(-3,1,5)$.\n\nNow, let's calculate the determinants for each option and check which one equals zero.\n\nFor Option A :\n\n$\\frac{x+1}{-1}=\\frac{y-2}{2}=\\frac{z-5}{4}$ \n\nThe coordinates of any point on this line are $(-1,2,5)$ and the direction ratios are $(-1,2,4)$.\n\nThe determinant is :\n\n$\\left |\\begin{array}{lll} -1-(-3) & 2-1 & 5-5 \\\\ -3 & 1 & 5 \\\\ -1 & 2 & 4 \\end{array}\\right |=\\left |\\begin{array}{lll} 2 & 1 & 0 \\\\ -3 & 1 & 5 \\\\ -1 & 2 & 4 \\end{array}\\right |$\n\nApplying the formula :\n\n= $2(1\\times 4-5\\times 2)-1((-3\\times 4)-(5\\times -1))+0((-3\\times 2)-(1\\times -1))$\n\n= $2(4-10)-1(-12-(-5))+0(-6-(-1))$\n\n= $2(-6)-1(-7)+0(-5)$\n\n= $-12+7+0$\n\n= $-5$ \n\nThe determinant for Option A is not equal to zero, so this line is not coplanar with the given line.\n\nFor Option B, we have :\n\n$\\frac{x+1}{-1}=\\frac{y-2}{2}=\\frac{z-5}{5}$\n\nThe coordinates of any point on this line are $(-1,2,5)$ and the direction ratios are $(-1,2,5)$.\n\n$\\left |\\begin{array}{lll} -1-(-3) & 2-1 & 5-5 \\\\ -3 & 1 & 5 \\\\ -1 & 2 & 5 \\end{array}\\right |=\\left |\\begin{array}{lll} 2 & 1 & 0 \\\\ -3 & 1 & 5 \\\\ -1 & 2 & 5 \\end{array}\\right |$\n\nApplying the formula, we get :\n\n= $2(1\\ast 5-5\\ast 2)-1((-3\\ast 5)-(5\\ast -1))+0((-3\\ast 2)-(1\\ast -1))$\n\n= $2(5-10)-1(-15-(-5))+0(-6-(-1))$\n\n= $2(-5)-1(-10)+0(-5)$\n\n= $-10+10+0$\n\n= $0$\n\nSo, the determinant for Option B equals zero, which confirms that the line in Option B is coplanar with the given line.\n\nFor Option C :\n\n$\\frac{x-1}{-1}=\\frac{y-2}{2}=\\frac{z-5}{5}$ \n\nThe coordinates of any point on this line are $(1,2,5)$ and the direction ratios are $(-1,2,5)$.\n\nThe determinant is:\n\n$\\left |\\begin{array}{lll} 1-(-3) & 2-1 & 5-5 \\\\ -3 & 1 & 5 \\\\ -1 & 2 & 5 \\end{array}\\right |=\\left |\\begin{array}{lll} 4 & 1 & 0 \\\\ -3 & 1 & 5 \\\\ -1 & 2 & 5 \\end{array}\\right |$\n\nApplying the formula :\n\n= $4(1\\ast 5-5\\ast 2)-1((-3\\ast 5)-(5\\ast -1))+0((-3\\ast 2)-(1\\ast -1))$\n\n= $4(5-10)-1(-15-(-5))+0(-6-(-1))$\n\n= $4(-5)-1(-10)+0(-5)$\n\n= $-20+10+0$\n\n= $-10$\n\nThe determinant for Option C is not equal to zero, so this line is not coplanar with the given line.\n\nFor Option D :\n\n$\\frac{x+1}{1}=\\frac{y-2}{2}=\\frac{z-5}{5}$ \n\nThe coordinates of any point on this line are $(-1,2,5)$ and the direction ratios are $(1,2,5)$.\n\nThe determinant is :\n\n$\\left |\\begin{array}{lll} -1-(-3) & 2-1 & 5-5 \\\\ -3 & 1 & 5 \\\\ 1 & 2 & 5 \\end{array}\\right |=\\left |\\begin{array}{lll} 2 & 1 & 0 \\\\ -3 & 1 & 5 \\\\ 1 & 2 & 5 \\end{array}\\right |$\n\nApplying the formula :\n\n= $2(1\\ast 5-5\\ast 2)-1((-3\\ast 5)-(5\\ast 1))+0((-3\\ast 2)-(1\\ast 1))$\n\n= $2(5-10)-1(-15-5)+0(-6-1)$\n\n= $2(-5)-1(-20)+0(-7)$\n\n= $-10+20+0$\n\n= $10$\n\nSo the determinant for Option D is not equal to zero, which means the line in Option D is not coplanar with the given line.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgowbuo",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The coefficient of $x^{5}$ in the expansion of $\\left (2x^{3}-\\frac{1}{3x^{2}}\\right )^{5}$ is :",
+  "options": [
+   "$\\frac{26}{3}$",
+   "$\\frac{80}{9}$",
+   "9",
+   "8"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $\\left (2x^{3}-\\frac{1}{3x^{2}}\\right )^{5}$\n\nGeneral term,\n\n$\\begin{array}{l} T_{r+1}={}^{5}C_{r}\\left (2x^{3}\\right )^{5-r}\\left (\\dfrac{-1}{3x^{2}}\\right )^{r}={}^{5}C_{r}\\dfrac{(2)^{5-r}}{(-3)^{r}}(x)^{15-5r} \\\\  \\\\ \\therefore 15-5\\mathrm{r}=5 \\\\  \\\\ \\therefore \\mathrm{r}=2 \\\\  \\\\ T_{3}=10\\left (\\dfrac{8}{9}\\right )x^{5} \\end{array}$\n\nSo, coefficient is $\\frac{80}{9}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgowfar",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α,β$ be the roots of the equation $x^{2}-\\sqrt{2}x+2=0$. Then $α^{14}+β^{14}$ is equal to",
+  "options": [
+   "$-64$",
+   "$-64\\sqrt{2}$",
+   "$-128\\sqrt{2}$",
+   "$-128$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Find the roots of the quadratic equation:\n\nThe quadratic formula is $x=\\frac{-b\\pm \\sqrt{b^{2}-4ac}}{2a}$. For the quadratic equation $x^{2}-\\sqrt{2}x+2=0$, we have $a=1,b=-\\sqrt{2},c=2$. Plugging these into the quadratic formula gives:\n\n$x=\\frac{\\sqrt{2}\\pm \\sqrt{(-\\sqrt{2})^{2}-4(1)(2)}}{2(1)}=\\frac{\\sqrt{2}\\pm \\sqrt{2-8}}{2}=\\frac{\\sqrt{2}\\pm \\sqrt{6}i}{2}.$\n\nSo, we have two roots, $α$ and $β$, which are:\n\n$α=\\frac{\\sqrt{2}+\\sqrt{6}i}{2},$\n\n$β=\\frac{\\sqrt{2}-\\sqrt{6}i}{2}.$\n\nExpress the roots in exponential form:\n\nWe can express complex numbers in the form $re^{iθ}$. For $α$ and $β$, we find the magnitude $r=\\sqrt{2}$ and the arguments $θ=\\frac{π}{3},-\\frac{π}{3}$ respectively. So, we have:\n\n$α=\\sqrt{2}e^{i\\frac{π}{3}},$\n\n$β=\\sqrt{2}e^{-i\\frac{π}{3}}.$\n\nCalculate the 14th power of the roots:\n\nTo find $α^{14}$ and $β^{14}$, we use the property of exponents which says that $(a^{m})^{n}=a^{mn}$. So, we have:\n\n$α^{14}=(\\sqrt{2}e^{i\\frac{π}{3}})^{14}=2^{7}e^{i\\frac{14π}{3}}=128e^{i\\frac{2π}{3}},$\n\n$β^{14}=(\\sqrt{2}e^{-i\\frac{π}{3}})^{14}=2^{7}e^{-i\\frac{14π}{3}}=128e^{-i\\frac{2π}{3}}.$\n\nAdd the 14th powers of the roots:\n\nWe want to find the real part of $α^{14}+β^{14}$. To do this, we use the property that $e^{ix}=\\cos (x)+i\\sin (x)$. We have:\n\n$α^{14}+β^{14}=128e^{i\\frac{2π}{3}}+128e^{-i\\frac{2π}{3}}=128(2)\\cos \\left (\\frac{2π}{3}\\right )=-128.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgowjxy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $(α,β)$ be the centroid of the triangle formed by the lines $15x-y=82,6x-5y=-4$ and $9x+4y=17$. Then $α+2β$ and $2α-β$ are the roots of the equation :",
+  "options": [
+   "$x^{2}-7x+12=0$",
+   "$x^{2}-13x+42=0$",
+   "$x^{2}-14x+48=0$",
+   "$x^{2}-10x+25=0$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Solve the equations $15x-y=82$ and $6x-5y=-4$\n\nMultiply the first equation by 5 and the second by 1 and then subtract the second from the first:\n\n$75x-5y=410$\n\n$6x-5y=-4$\n\nSubtracting these gives $69x=414$ which leads to $x=6$\n\nSubstitute $x=6$ into the first equation to get $y=8$\n\nSo, the first vertex is $(6,8)$.\n\nSolve the equations $15x-y=82$ and $9x+4y=17$\n\nMultiply the first equation by 4 and the second by 1 and then add:\n\n$60x-4y=328$\n\n$9x+4y=17$\n\nAdding these gives $69x=345$ which leads to $x=5$\n\nSubstitute $x=5$ into the second equation to get $y=-7$\n\nSo, the second vertex is $(5,-7)$.\n\nSolve the equations $6x-5y=-4$ and $9x+4y=17$\n\nMultiply the first equation by 4 and the second by 5 and then add:\n\n$24x-20y=-16$\n\n$45x+20y=85$\n\nAdding these gives $69x=69$ which leads to $x=1$\n\nSubstitute $x=1$ into the first equation to get $y=2$\n\nSo, the third vertex is $(1,2)$.\n\nSo, the vertices of the triangle are $(6,8)$, $(5,-7)$, and $(1,2)$.\n\nNow that we have the vertices of the triangle, we can find the centroid. The centroid $(α,β)$ of a triangle with vertices $(x_{1},y_{1})$, $(x_{2},y_{2})$, and $(x_{3},y_{3})$ is given by :\n\n$α=\\frac{x_{1}+x_{2}+x_{3}}{3}$,\n\n$β=\\frac{y_{1}+y_{2}+y_{3}}{3}$\n\nSubstituting the coordinates of the vertices into these equations, we get:\n\n$α=\\frac{6+5+1}{3}=4$,\n\n$β=\\frac{8-7+2}{3}=1$\n\nThen, we find $α+2β$ and $2α-β$:\n\n$α+2β=4+2(1)=6 2α-β=2(4)-1=7$\n\nSo, $α+2β=6$ and $2α-β=7$ are the roots of the quadratic equation. \n\nWe can write the quadratic equation as \n\n$x^{2}-(α+2β+2α-β)x+(α+2β)(2α-β)=0$\n\nSubstituting $α=4$, $β=1$ gives us:\n\n$x^{2}-13x+42=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoxgbm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of equations\n\n$2x+y-z=5$\n\n$2x-5y+λz=μ$\n\n$x+2y-5z=7$\n\nhas infinitely many solutions, then $(λ+μ)^{2}+(λ-μ)^{2}$ is equal to",
+  "options": [
+   "916",
+   "912",
+   "920",
+   "904"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} 2x+y-z=5 \\\\ 2x-5y+λz=μ \\\\ x+2y-5z=7 \\end{array}$\n\nFor infinite solution $\\Delta =0=\\Delta _{1}=\\Delta _{2}=\\Delta _{3}$\n\n$\\Delta =\\left |\\begin{array}{lll} 2 & 1 & -1 \\\\ 2 & -5 & λ \\\\ 1 & 2 & -5 \\end{array}\\right |=0$\n\n$\\begin{array}{ll} \\Rightarrow  & 2(25-2λ)-(-10-λ)-(4+5)=0 \\\\  \\\\ \\Rightarrow  & 50-4λ+10+λ-9=0 \\\\  \\\\ \\Rightarrow  & 51=3λ\\Rightarrow λ=17 \\end{array}$\n\n$\\Delta _{3}=\\left |\\begin{array}{lll} 5 & 2 & 1 \\\\ μ & 2 & -5 \\\\ 7 & 1 & 2 \\end{array}\\right |=0$\n\n$\\begin{array}{ll} \\Rightarrow  & 2(-35-2μ)-(14-μ)+5(4+5)=0 \\\\  \\\\ \\Rightarrow  & -70-4μ-14+μ+45=0 \\\\  \\\\ \\Rightarrow  & -3μ=39 \\\\  \\\\ \\Rightarrow  & -μ=13 \\end{array}$\n\nNow $(λ+μ)^{2}+(λ-μ)^{2}$\n\n$\\begin{array}{l} (17+13)^{2}+(17-13)^{2} \\\\  \\\\ 900+16 \\\\  \\\\ =916 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoxjwx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area of the region $\\left \\{(x,y):x^{2}\\leq y\\leq \\left |x^{2}-4\\right |,y\\geq 1\\right \\}$ is",
+  "options": [
+   "$\\frac{4}{3}(4\\sqrt{2}+1)$",
+   "$\\frac{3}{4}(4\\sqrt{2}+1)$",
+   "$\\frac{4}{3}(4\\sqrt{2}-1)$",
+   "$\\frac{3}{4}(4\\sqrt{2}-1)$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\left.  \\left. \\begin{array}{l} \\text{Required area}=2\\left [\\int\\limits _{1}^{2}\\sqrt{y}dy+\\int\\limits _{2}^{4}\\sqrt{4-y}dy\\right ] \\\\  \\\\ =2\\left [\\dfrac{y^{3/2}}{\\frac{3}{2}}\\right ]_{1}^{2}-\\dfrac{2(4-y)^{3/2}}{3}\\right ]_{2}^{4}\\right ] \\\\  \\\\ =\\dfrac{4}{3}(4\\sqrt{2}-1) \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-13th-april-evening-shift/1lgoxjwx4-0.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 13th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1lgoxpnh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\frac{e^{-\\dfrac{π}{4}}+\\int\\limits _{0}^{\\dfrac{π}{4}}e^{-x}\\tan ^{50}xdx}{\\int\\limits _{0}^{\\dfrac{π}{4}}e^{-x}(\\tan ^{49}x+\\tan ^{51}x)dx}$ is",
+  "options": [
+   "51",
+   "50",
+   "25",
+   "49"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We're given the expression:\n\n$\\frac{e^{-π/4}+\\int _{0}^{π/4}e^{-x}\\tan ^{50}xdx}{\\int _{0}^{π/4}e^{-x}(\\tan x)^{49}dx+\\int _{0}^{π/4}e^{-x}(\\tan x)^{51}dx}$\n\nNotice that the integrals in the numerator and denominator have the same form. They both involve an integral of $e^{-x}\\tan ^{n}x$ from 0 to $π/4$, where $n$ is an integer. Let's denote this integral as $I(n)$:\n\n$I(n)=\\int\\limits _{0}^{π/4}e^{-x}\\tan ^{n}xdx$\n\nWe can then rewrite the original expression in terms of $I(n)$:\n\n$\\frac{e^{-π/4}+I(50)}{I(49)+I(51)}$\n\nNow, we'll apply the method of integration by parts, which states that for two functions $u(x)$ and $v(x)$:\n\n$\\int udv=uv-\\int vdu$\n\nWe'll choose:\n\n$u=\\tan ^{n}x,dv=e^{-x}dx$\n\nThen we get:\n\n$du=n\\tan ^{n-1}x\\sec ^{2}xdx,v=-e^{-x}$\n\nApplying integration by parts, we have:\n\n$I(n)=-e^{-x}\\tan ^{n}x\\left |_{0}^{π/4}+n\\int\\limits _{0}^{π/4}e^{-x}\\tan ^{n-1}x\\sec ^{2}xdx \\right.$\n\nSince $\\tan (π/4)=1$, the first term evaluates to:\n\n$-e^{-π/4}$\n\nThe second term becomes:\n\n$n\\int\\limits _{0}^{π/4}e^{-x}\\tan ^{n-1}x(1+\\tan ^{2}x)dx=n\\int\\limits _{0}^{π/4}e^{-x}\\tan ^{n-1}xdx+n\\int\\limits _{0}^{π/4}e^{-x}\\tan ^{n+1}xdx$\n\nThis is equal to:\n\n$n(I(n-1)+I(n+1))$\n\nSo we have:\n\n$I(n)=-e^{-π/4}+n(I(n-1)+I(n+1))$\n\nNow we can substitute $n=50$ into this equation:\n\n$I(50)=-e^{-π/4}+50(I(49)+I(51))$\n\nSo the original expression becomes:\n\n$\\frac{e^{-π/4}+I(50)}{I(49)+I(51)}=\\frac{e^{-π/4}-e^{-π/4}+50(I(49)+I(51))}{I(49)+I(51)}=50$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoxs5u",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The range of $f(x)=4\\sin ^{-1}\\left (\\frac{x^{2}}{x^{2}+1}\\right )$ is",
+  "options": [
+   "$[0,2π]$",
+   "$[0,2π)$",
+   "$[0,π)$",
+   "$[0,π]$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{ll} \\quad \\dfrac{x^{2}}{1+x^{2}}=1-\\dfrac{1}{1+x^{2}}<1 \\\\  \\\\ \\therefore  & 0\\leq \\dfrac{x^{2}}{1+x^{2}}<1 \\\\  \\\\ \\Rightarrow  & 0\\leq \\sin ^{-1}\\left (\\dfrac{x^{2}}{1+x^{2}}\\right )<\\dfrac{π}{2} \\\\  \\\\ \\Rightarrow  & 0\\leq 4\\sin ^{-1}\\left (\\dfrac{x^{2}}{1+x^{2}}\\right )<2π \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoxv6q",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let for a triangle $\\mathrm{ABC}$,\n\n$\\mathrm{AB}\\leftarrow =-2\\hat{i}+\\hat{j}+3\\hat{k}$\n\n$\\mathrm{CB}\\leftarrow =α\\hat{i}+β\\hat{j}+γ\\hat{k}$\n\n$\\mathrm{CA}\\leftarrow =4\\hat{i}+3\\hat{j}+δ\\hat{k}$\n\nIf $δ>0$ and the area of the triangle $\\mathrm{ABC}$ is $5\\sqrt{6}$, then $CB\\leftarrow \\cdot CA\\leftarrow$ is equal to",
+  "options": [
+   "60",
+   "54",
+   "120",
+   "108"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "By the triangle law, $CA\\leftarrow +AB\\leftarrow =CB\\leftarrow$:\n\n$α\\hat{i}+β\\hat{j}+γ\\hat{k}=(4-2)\\hat{i}+(3+1)\\hat{j}+(δ+3)\\hat{k}\\Rightarrow α=2,β=4,γ=δ+3$\n\n\n[IMG]\n\n$AB\\leftarrow \\times CB\\leftarrow =\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\hat{k} \\\\ -2 & 1 & 3 \\\\ 2 & 4 & γ \\end{array}\\right |=(γ-12)\\hat{i}+(2γ+6)\\hat{j}-10\\hat{k}$\n\nThe area is $\\dfrac{1}{2}\\left |AB\\leftarrow \\times CB\\leftarrow \\right |=5\\sqrt{6}$, so\n\n$(γ-12)^{2}+(2γ+6)^{2}+100=600\\Rightarrow 5γ^{2}+280=600\\Rightarrow γ^{2}=64$\n\n$γ=-8$ gives $δ=-11<0$, so $γ=8$ and $δ=5$.\n\n$CB\\leftarrow \\cdot CA\\leftarrow =(2\\hat{i}+4\\hat{j}+8\\hat{k})\\cdot (4\\hat{i}+3\\hat{j}+5\\hat{k})=8+12+40=60$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-13th-april-evening-shift/1lgoxv6q0-0.png",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 13th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1lgoxwkg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The mean and standard deviation of the marks of 10 students were found to be 50 and 12 respectively. Later, it was observed that two marks 20 and 25 were wrongly read as 45 and 50 respectively. Then the correct variance is $_________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 269.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The initial mean is given by:\n\n$\\bar{x}=50$\n\nSo, the total sum of the marks initially was:\n\n$\\sum x_{i}=\\bar{x}\\times n=50\\times 10=500$\n\nWe later realize that two marks were incorrectly read as 45 and 50, when they should have been 20 and 25. Therefore, the corrected sum of the marks is:\n\n$\\sum x_{i\\text{correct}}=\\sum x_{i}-45-50+20+25=500-45-50+20+25=450$\n\nThe initial variance is given as:\n\n$σ^{2}=144$\n\nWe know that variance is calculated as the mean of the squares minus the square of the mean. Therefore, rearranging gives:\n\n$\\frac{\\sum x_{i}^{2}}{n}=σ^{2}+\\bar{x}^{2}=144+50^{2}=2644$\n\nThen, the sum of the squares of the initial marks is:\n\n$\\sum x_{i}^{2}=n\\times \\frac{\\sum x_{i}^{2}}{n}=10\\times 2644=26440$\n\nThe corrected sum of the squares of the marks is calculated by subtracting the squares of the incorrect marks and adding the squares of the correct marks:\n\n$\\sum x_{i\\text{correct}}^{2}=\\sum x_{i}^{2}-45^{2}-50^{2}+20^{2}+25^{2}=26440-45^{2}-50^{2}+20^{2}+25^{2}=22940$\n\nNow we can calculate the corrected variance. The variance is the mean of the squares minus the square of the mean. Using the corrected values gives:\n\n$σ_{\\text{correct}}^{2}=\\frac{\\sum x_{i\\text{correct}}^{2}}{n}-\\left (\\frac{\\sum x_{i\\text{correct}}}{n}\\right )^{2}=\\frac{22940}{10}-\\left (\\frac{450}{10}\\right )^{2}=2294-45^{2}=2294-2025=269$\n\nTherefore, the correct variance is 269.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoxyjg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\mathrm{A}=\\{-4,-3,-2,0,1,3,4\\}$ and $\\mathrm{R}=\\{(a,b)\\in \\mathrm{A}\\times \\mathrm{A}:b=|a|$ or $\\left. b^{2}=a+1\\right \\}$ be a relation on $\\mathrm{A}$. Then the minimum number of elements, that must be added to the relation $\\mathrm{R}$ so that it becomes reflexive and symmetric, is $__________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 7.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{ll} A & =\\{-4,-3,-2,0,1,3,4\\} \\\\  \\\\ R= & \\{(-4,4),(-3,3),(0,0),(1,1) \\\\ (3,3),(4,4),(0,1),(3,-2)\\} \\end{array}$\n\nRelation to be reflexive $(a,a)\\in R\\forall a\\in A$\n\n$\\Rightarrow (-4,-4),(-3,-3),(-2,-2)$ also should be added in $R$.\n\nRelation to be symmetric if $(a,b)\\in R$, then $(b,a)\\in R\\forall a,b\\in A$\n\n$\\Rightarrow (4,-4),(3,-3),(1,0),(-2,3)$ also should be added in $R$\n\n$\\Rightarrow$ Minimum number of elements to be added to $R=3+4=7$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoy1rh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $f_{n}=\\int\\limits _{0}^{\\frac{π}{2}}\\left (\\sum\\limits _{k=1}^{n}\\sin ^{k-1}x\\right )\\left (\\sum\\limits _{k=1}^{n}(2k-1)\\sin ^{k-1}x\\right )\\cos xdx,n\\in \\mathrm{ℕ}$. Then $f_{21}-f_{20}$ is equal to $_________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 41.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Substituting $t=\\sin x$, $dt=\\cos xdx$, with $A_{n}(t)=\\sum\\limits _{k=1}^{n}t^{k-1}$:\n\n$f_{n}=\\int\\limits _{0}^{1}A_{n}(t)\\left (\\sum\\limits _{k=1}^{n}(2k-1)t^{k-1}\\right )dt$\n\nSince $(2k-1)t^{k-1}=t^{k-1}+2t\\cdot (k-1)t^{k-2}$, the second sum is $A_{n}+2tA_{n}^{'}$. Hence\n\n$A_{n}(A_{n}+2tA_{n}^{'})=A_{n}^{2}+2tA_{n}A_{n}^{'}=\\dfrac{d}{dt}\\left (tA_{n}^{2}\\right )$\n\n$f_{n}=\\left [tA_{n}(t)^{2}\\right ]_{0}^{1}=A_{n}(1)^{2}=n^{2}$\n\n$f_{21}-f_{20}=21^{2}-20^{2}=441-400=41$\n\nHence, the answer is 41.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoy2e8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The remainder, when $7^{103}$ is divided by 17, is $__________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 12.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$7^{103}=7\\times 7^{102}$\n\n$\\begin{array}{l} =7\\times (49)^{51} \\\\  \\\\ =7\\times (51-2)^{51} \\end{array}$\n\nRemainder = $7\\times (-2)^{51}$\n\n$\\begin{array}{l} =-7\\left (2^{3}\\cdot (16)^{12}\\right ) \\\\  \\\\ =-56(17-1)^{12} \\end{array}$\n\nRemainder $=-56\\times (-1)^{12}=-56+68=12$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoy3hx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $f(x)=\\sum\\limits _{k=1}^{10}kx^{k},x\\in \\mathrm{ℝ}$. If $2f(2)+f^{'}(2)=119(2)^{\\mathrm{n}}+1$ then $\\mathrm{n}$ is equal to $___________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 10.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $f(x)=\\sum\\limits _{k=1}^{10}kx^{k}$\n\n$\\begin{array}{l} f(x)=x+2x^{2}+\\ldots \\ldots \\ldots +10x^{10} \\\\  \\\\ f(x).x=x^{2}+2x^{3}+\\ldots \\ldots \\ldots +9x^{10}+10x^{11} \\\\  \\\\ f(x)(1-x)=x+x^{2}+x^{3}+\\ldots \\ldots \\ldots +x^{10}-10x^{11} \\\\  \\\\ \\therefore f(x)=\\dfrac{x\\left (1-x^{10}\\right )}{(1-x)^{2}}-\\dfrac{10x^{11}}{(1-x)} \\end{array}$\n\n$\\Rightarrow$ $f(x)=\\frac{x-x^{11}-10x^{11}+10x^{12}}{(1-x)^{2}}=\\frac{10x^{12}-11x^{11}+x}{(1-x)^{2}}$\n\nSo, \n\n$\\begin{array}{l} f(2)=2\\left (1-2^{10}\\right )+10\\cdot 2^{11} \\\\  \\\\ =2+18\\cdot 2^{10} \\end{array}$\n\n$f^{'}(x)=\\frac{(1-x)^{2}\\left (120x^{11}-121x^{10}+1\\right )+2(1-x)\\left (10x^{12}-11.x^{11}+2\\right )}{(1-x)^{4}}$\n\nSo,\n\n$f^{'}(x)=\\frac{1\\left (120.2^{11}-121.2^{10}+1\\right )+2(-1)\\left (10.2^{12}-11.2^{11}+2\\right )}{(-1)^{4}}$\n\n= $2^{10}(83)-3$\n\nHence $2f(2)+f^{'}(2)=119.2^{10}+1$\n\n$\\Rightarrow \\text{So,}\\mathrm{n}=10$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoy4b0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "For $x\\in (-1,1]$, the number of solutions of the equation $\\sin ^{-1}x=2\\tan ^{-1}x$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We're given the equation $\\sin ^{-1}x=2\\tan ^{-1}x$ for $x$ in the interval $(-1,1]$. We want to find the number of solutions.\n\nStep 1: Apply the sine and tangent functions to both sides :\n\nWe can rewrite the equation by applying the sine function to both sides :\n\n$\\sin (\\sin ^{-1}x)=\\sin (2\\tan ^{-1}x).$\n\nThis simplifies to:\n\n$x=\\sin (2\\tan ^{-1}x).$\n\nStep 2: Use the double-angle identity for sine :\n\nRecall that $\\sin (2y)=2\\sin (y)\\cos (y)$. Applying this identity to the right-hand side gives :\n\n$x=2\\sin (\\tan ^{-1}x)\\cos (\\tan ^{-1}x).$\n\nStep 3: Use the identities for sine and cosine of an inverse tangent :\n\nRecall that $\\sin (\\tan ^{-1}x)=\\frac{x}{\\sqrt{1+x^{2}}}$ and $\\cos (\\tan ^{-1}x)=\\frac{1}{\\sqrt{1+x^{2}}}$. Substituting these into the equation gives :\n\n$x=2\\cdot \\frac{x}{\\sqrt{1+x^{2}}}\\cdot \\frac{1}{\\sqrt{1+x^{2}}}.$\n\nThis simplifies to :\n\n$x=\\frac{2x}{1+x^{2}}.$\n\nStep 4: Solve for $x$ :\n\nWe have :\n\n$x=\\frac{2x}{1+x^{2}}.$\n\nCross-multiplying gives :\n\n$x(1+x^{2})=2x.$\n\nThis simplifies to :\n\n$x^{3}+x-2x=0.$\n\nRearranging terms gives :\n\n$x^{3}-x=0.$\n\nThis factors to:\n\n$x(x^{2}-1)=0.$\n\nSetting each factor equal to zero gives the solutions $x=0$, $x=-1$, and $x=1$.\n\nHowever, we are given that $x\\in (-1,1]$. Therefore, the only solutions in this interval are $x=0$ and $x=1$.\n\nSo there are 2 solutions to the equation $\\sin ^{-1}x=2\\tan ^{-1}x$ in the interval $x\\in (-1,1]$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoy5uj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $y=y(x)$ is the solution of the differential equation \n\n$\\frac{dy}{dx}+\\frac{4x}{(x^{2}-1)}y=\\frac{x+2}{(x^{2}-1)^{\\dfrac{5}{2}}},x>1$ such that \n\n$y(2)=\\frac{2}{9}\\log _{e}(2+\\sqrt{3})\\text{and}y(\\sqrt{2})=α\\log _{e}(\\sqrt{α}+β)+β-\\sqrt{γ},α,β,γ\\in \\mathrm{ℕ}\\text{, then}αβγ\\text{is equal to}$ :",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We can solve the given differential equation using an integrating factor. \n\nThe integrating factor is given by :\n\n$μ(x)=e^{\\int \\frac{4x}{x2-1}dx}=e^{2\\ln (x^{2}-1)}=(x^{2}-1)^{2}$ \n\nMultiplying both sides of the differential equation by $μ(x)$, we get :\n\n$(x^{2}-1)^{2}\\frac{dy}{dx}+4xy=\\frac{x+2}{(x^{2}-1)^{\\dfrac{1}{2}}}$\n\nWe can rewrite the left-hand side using the product rule:\n\n$\\frac{d}{dx}\\left ((x^{2}-1)^{2}y\\right )=\\frac{x+2}{(x^{2}-1)^{\\dfrac{1}{2}}}$\n\nIntegrating both sides with respect to $x$, we get:\n\n$(x^{2}-1)^{2}y=\\int \\frac{x+2}{(x^{2}-1)^{\\dfrac{1}{2}}}dx=\\sqrt{x^{2}-1}+2\\ln \\left |x+\\sqrt{x^{2}-1}\\right |+C$\n\nwhere $C$ is the constant of integration. Using the initial condition $y(2)=\\frac{2}{9}\\log _{e}(2+\\sqrt{3})$, we can solve for $C$:\n\nAt $x=2$,\n\n$9\\cdot \\frac{2}{9}\\ln (2+\\sqrt{3})=2\\ln (2+\\sqrt{3})+\\sqrt{3}+C$\n\n$C=-\\sqrt{3}$\n\nAt $x=\\sqrt{2}$\n\n$y(\\sqrt{2})=2\\ln (1+\\sqrt{2})+1-\\sqrt{3}$\n\n$β=1,α=2,γ=3$\n\n$\\Rightarrow αβγ=6$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoy6y4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $[α]$ denote the greatest integer $\\leq α$. Then $[\\sqrt{1}]+[\\sqrt{2}]+[\\sqrt{3}]+\\ldots +[\\sqrt{120}]$ is equal to $__________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 825.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} [\\sqrt{1}]+[\\sqrt{2}]+[\\sqrt{3}]+\\ldots .+[\\sqrt{120}] \\\\  \\\\ E=1+1+1+2+2+2+2+2+3+3+3+3+3 \\\\  \\\\ +3+3+4+4+\\ldots  \\\\  \\\\ E=3\\times 1+5\\times 2+7\\times 3+\\ldots .+19\\times 9+10\\times 21 \\\\  \\\\ =\\sum\\limits _{r=1}^{10}(2r+1)r=2\\left [\\dfrac{10\\times 11\\times 21}{6}\\right ]+\\dfrac{10\\times 11}{2} \\\\  \\\\ =770+55 \\\\  \\\\ =825 \\\\  \\\\  \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgoy7m2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Total numbers of 3-digit numbers that are divisible by 6 and can be formed by using the digits $1,2,3,4,5$ with repetition, is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 16.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 13th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A number is divisible by 6 if it is divisible by both 2 and 3. A number is divisible by 2 if its last digit is even, which means it must be either 2 or 4 from the given digits. A number is divisible by 3 if the sum of its digits is divisible by 3.\n\n$\\begin{array}{l} (2,1,3),(2,3,4),(2,5,5),(2,2,5),(2,2,2) \\\\  \\\\ (4,1,1),(4,4,1),(4,4,4),(4,3,5) \\\\  \\\\ 2,1,3\\Rightarrow 312,132 \\\\  \\\\ 2,3,4\\Rightarrow 342,432,234,324 \\\\  \\\\ 2,5,5\\Rightarrow 552 \\\\  \\\\ 2,2,5\\Rightarrow 252,522 \\\\  \\\\ 2,2,2\\Rightarrow 222 \\\\  \\\\ 4,1,1\\Rightarrow 114 \\\\  \\\\ 4,4,1\\Rightarrow 414,144 \\\\  \\\\ 4,4,4\\Rightarrow 444 \\\\  \\\\ 4,3,5\\Rightarrow 354,534 \\end{array}$\n\nTotal 16 numbers.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 13th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

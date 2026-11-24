@@ -1,0 +1,866 @@
+[
+ {
+  "publicId": "PYQ-2022-1l5vz0zg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $S_{1}=\\left \\{x\\in R-\\{1,2\\}:\\frac{(x+2)(x^{2}+3x+5)}{-2+3x-x^{2}}\\geq 0\\right \\}$ and $S_{2}=\\left \\{x\\in R:3^{2x}-3^{x+1}-3^{x+2}+27\\leq 0\\right \\}$. Then, $S_{1}\\cup S_{2}$ is equal to :",
+  "options": [
+   "$(-\\infty ,-2]\\cup (1,2)$",
+   "$(-\\infty ,-2]\\cup [1,2]$",
+   "$(-2,1]\\cup [2,\\infty )$",
+   "$(-\\infty ,2]$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$\\frac{(x+2)(x^{2}+3x+5)}{-2+3x-x^{2}}\\geq 0$\n\n$x^{2}+3x+5$ is a quadratic equation\n\n$a=1>0$ and $D=(-3)^{2}-4.1.5=-11<0$\n\n$\\therefore$ $x^{2}+3x+5>0$ (always)\n\nSo, we can ignore this quadratic term\n\n$\\frac{(x+2)}{-2+3x-x^{2}}\\geq 0$\n\n$\\Rightarrow \\frac{x+2}{-(x^{2}-3x+2)}\\geq 0$\n\n$\\Rightarrow \\frac{x+2}{x^{2}-3x+2}\\leq 0$\n\n$\\Rightarrow \\frac{x+2}{x^{2}-2x-x+2}\\leq 0$\n\n$\\Rightarrow \\frac{x+2}{(x-1)(x-2)}\\leq 0$\n\n\n[IMG]\n\n\n$\\therefore$ $x\\in (-\\infty ,-2]\\cup (1,2)$\n\n$\\therefore$ $S_{1}=(-\\infty ,-2]\\cup (1,2)$\n\nNow,\n\n$3^{2x}-3^{x+1}-3^{x+2}+27\\leq 0$\n\n$\\Rightarrow (3^{x})^{2}-3.3^{x}-3^{2}.3^{x}+27\\leq 0$\n\nLet $3^{x}=t$\n\n$\\Rightarrow t^{2}-3.t-3^{2}.t+27\\leq 0$\n\n$\\Rightarrow t(t-3)-9(t-3)\\leq 0$\n\n$\\Rightarrow (t-3)(t-9)\\leq 0$\n\n\n[IMG]\n\n\n$\\therefore$ $3\\leq t\\leq 9$\n\n$\\Rightarrow 3^{1}\\leq 3^{x}\\leq 3^{2}$\n\n$\\Rightarrow 1\\leq x\\leq 2$\n\n$\\therefore$ $x\\in [1,2]$\n\n$\\therefore$ $S_{2}=[1,2]$\n\n$\\therefore$ $S_{1}\\cup S_{2}=(-\\infty ,-2]\\cup (1,2)\\cup [1,2]$\n\n$=(-\\infty ,-2]\\cup [1,2]$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5vz0zg9-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5vz0zg9-1.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l5vz2v9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The real part of the complex number $\\frac{(1+2i)^{8}.(1-2i)^{2}}{(3+2i).(4-6i)–}$ is equal to :",
+  "options": [
+   "$\\frac{500}{13}$",
+   "$\\frac{110}{13}$",
+   "$\\frac{55}{6}$",
+   "$\\frac{550}{13}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$\\frac{(1+2i)^{8}.(1-2i)^{2}}{(3+2i).(4-6i)–}$\n\n$=\\frac{(1+2i)^{2}(1-2i)^{2}(1+2i)^{6}}{(3+2i)(4+6i)}$\n\n$=\\frac{(1-4i^{2})^{2}(1+2i)^{6}}{12+18i+8i+12i^{2}}$\n\n$=\\frac{(1+4)^{2}\\left [(1+2i)^{2}\\right ]^{3}}{12+26i-12}$\n\n$=\\frac{25(1+4i^{2}+4i)^{3}}{26i}$\n\n$=\\frac{25(1-4+4i)^{3}}{26i}$\n\n$=\\frac{25(-3+4i)^{3}}{26i}$\n\n$=\\frac{25}{26i}\\left [(-3)^{3}+(4i)^{3}+3.(-3)^{2}.4i+3(-3).(4i)^{2}\\right ]$\n\n$=\\frac{25}{26i}(-27-64i+108i+144)$\n\n$=\\frac{25}{26i}(117+44i)$\n\n$=\\frac{25i}{26i^{2}}(117+44i)$\n\n$=\\frac{25i}{-26}(117+44i)$\n\n$=\\frac{25\\times 117i}{-26}-\\frac{25\\times 44i^{2}}{26}$\n\n$=\\frac{25\\times 117i}{-26}+\\frac{22\\times 25}{13}$\n\n$=\\frac{25\\times 117i}{-26}+\\frac{550}{13}$\n\n$\\therefore$ Real part $=\\frac{550}{13}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5vz59z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let S be the set of all integral values of $α$ for which the sum of squares of two real roots of the quadratic equation $3x^{2}+(α-6)x+(α+3)=0$ is minimum. Then S :",
+  "options": [
+   "is an empty set",
+   "is a singleton",
+   "contains exactly two elements",
+   "contains more than two elements"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given quadratic equation,\n\n$3x^{2}+(α-6)x+(α+3)=0$\n\nLet, a and b are the roots of the equation,\n\n$\\therefore$ $a+b=-\\frac{α-6}{3}$\n\nand $ab=\\frac{α+3}{3}$\n\nFor real roots,\n\n$D\\geq 0$\n\n$\\Rightarrow (α-6)^{2}-4.3.(α+3)\\geq 0$\n\n$\\Rightarrow α^{2}-12α+36-12α-36\\geq 0$\n\n$\\Rightarrow α^{2}-24α\\geq 0$\n\n$\\Rightarrow α(α-24)\\geq 0$\n\n\n[IMG]\n\n\n$\\therefore$ $α>24$ or $α<0$\n\n$\\therefore$ Real roots of the equation possible for $α>24$ or $α<0$.\n\nNow, sum of square of roots\n\n$=a^{2}+b^{2}$\n\n$=(a+b)^{2}-2ab$\n\n$=\\frac{(α-6)^{2}}{9}-2.\\frac{(α+3)}{3}$\n\n$=\\frac{α^{2}-12α+36-6α-18}{9}$\n\n$=\\frac{α^{2}-18α+18}{9}=f(x)$\n\n$\\therefore$ Sum of square of roots are minimum when $a^{2}+b^{2}=$ minimum.\n\n$\\therefore$ $f(α)_{\\min }=\\frac{α^{2}-18α+18}{9}$\n\nValue of quadratic equation $α^{2}-18α+18$ is minimum at $α=-\\frac{b}{2a}=-\\frac{(-18)}{2.1}=9$\n\nBut for real roots $α$ should be less than 0 or greater than 24.\n\nSo, there is no value of $α$ in the range $α>24\\cup α<0$ where sum of squares of two real roots is minimum.\n\n$\\therefore$ S is an empty set.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5vz59za-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l5vzbkl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=\\left [\\begin{array}{lll} 1 & -2 & α \\\\ α & 2 & -1 \\end{array}\\right ]$ and $B=\\left [\\begin{array}{ll} 2 & α \\\\ -1 & 2 \\\\ 4 & -5 \\end{array}\\right ],α\\in C$. Then the absolute value of the sum of all values of $α$ for which det(AB) = 0 is :",
+  "options": [
+   "3",
+   "4",
+   "2",
+   "5"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A$ is $2\\times 3$ and $B$ is $3\\times 2$, so $AB$ is $2\\times 2$:\n\n$AB=\\left [\\begin{array}{ll} 2+2+4α & α-4-5α \\\\ 2α-2-4 & α^{2}+4+5 \\end{array}\\right ]=\\left [\\begin{array}{ll} 4α+4 & -4α-4 \\\\ 2α-6 & α^{2}+9 \\end{array}\\right ].$\n\n$\\det (AB)=(4α+4)(α^{2}+9)+(4α+4)(2α-6)=4(α+1)(α^{2}+2α+3).$\n\n$\\det (AB)=0$ gives $α=-1$ or $α^{2}+2α+3=0$. The quadratic has discriminant $4-12<0$, so its two roots are non-real complex numbers (allowed, since $α\\in \\mathrm{ℂ}$) with sum $-2$.\n\nSum of all values of $α$ $=-1+(-2)=-3$, whose absolute value is $3$.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5vzfda",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For two positive real numbers a and b such that $\\frac{1}{a^{2}}+\\frac{1}{b^{3}}=4$, then minimum value of the constant term in the expansion of $\\left (ax^{\\frac{1}{8}}+bx^{-\\frac{1}{12}}\\right )^{10}$ is :",
+  "options": [
+   "$\\frac{105}{2}$",
+   "$\\frac{105}{4}$",
+   "$\\frac{105}{8}$",
+   "$\\frac{105}{16}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, Binomial expansion,\n\n$\\left (ax^{\\frac{1}{8}}+bx^{-\\frac{1}{12}}\\right )^{10}$\n\nGeneral term,\n\n$T_{r+1}={}^{10}C_{r}.\\left (ax^{\\frac{1}{8}}\\right )^{10-r}.\\left (bx^{-\\frac{1}{12}}\\right )^{r}$\n\n$={}^{10}C_{r}.a^{10-r}.b^{r}.x^{\\frac{10-r}{8}}.x^{-\\frac{r}{12}}$\n\n$={}^{10}C_{r}.a^{10-r}.b^{r}.x^{\\left (\\frac{10-r}{8}-\\frac{r}{12}\\right )}$\n\n$={}^{10}C_{r}.a^{10-r}.b^{r}.x^{\\frac{30-3r-2r}{24}}$\n\n$={}^{10}C_{r}.a^{10-r}.b^{r}.x^{\\frac{30-5r}{24}}$\n\nFor constant term,\n\n$\\frac{30-5r}{24}=0$\n\n$\\Rightarrow r=6$\n\n$\\therefore$ Constant term,\n\n$T_{r+1}=T_{6+1}={}^{10}C_{6}.a^{4}.b^{6}$\n\n$=\\frac{10!}{6!4!}a^{4}.b^{6}$\n\n$=\\frac{10\\times 9\\times 8\\times 7}{4\\times 3\\times 2\\times 1}.a^{4}.b^{6}$\n\n$=210a^{4}b^{6}$\n\nWe know, $GM\\geq HM$\n\nFor terms $a^{2}$ and $b^{3}$,\n\n$\\sqrt{a^{2}b^{3}}\\geq \\frac{2}{\\frac{1}{a2}+\\frac{1}{b3}}$\n\n$\\Rightarrow \\sqrt{a^{2}b^{3}}\\geq \\frac{2}{4}$\n\n$\\Rightarrow a^{2}b^{3}\\geq \\frac{1}{4}$\n\n$\\Rightarrow (a^{2}b^{3})^{2}\\geq \\frac{1}{16}$\n\n$\\therefore$ $a^{4}b^{6}\\geq \\frac{1}{16}$\n\n$\\therefore$ Minimum value of $a^{4}b^{6}=\\frac{1}{16}$\n\n$\\therefore$ Minimum value of constant term\n\n$T_{7}=210\\times a^{4}b^{6}$\n\n$=210\\times \\frac{1}{16}$\n\n$=\\frac{105}{8}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5vzjzd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $xy^{4}$ attains maximum value at the point (x, y) on the line passing through the points (50 + $α$, 0) and (0, 50 + $α$), $α$ > 0, then (x, y) also lies on the line :",
+  "options": [
+   "y = 4x",
+   "x = 4y",
+   "y = 4x + $α$",
+   "x = 4y $-$ $α$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Equation of line passing through the point (50 + $α$, 0) and (0, 50 + $α$) is\n\n$y-0=\\frac{50+α-0}{0-(50+α)}(x-(50+α))$\n\n$\\Rightarrow y=-1(x-(50+α))$\n\n$\\Rightarrow y=(50+α)-x$\n\n$\\Rightarrow x+y=50+α$\n\nLet $p=xy^{4}$\n\n$=(50+α-y)y^{4}$\n\n$=(50+α)y^{4}-y^{5}$\n\nFor maximum or minimum value of p,\n\n$\\frac{dp}{dy}=0$\n\n$\\Rightarrow 4y^{3}(50+α)-5y^{4}=0$\n\n$\\Rightarrow y^{3}[200+4α-5y]=0$\n\n$\\therefore$ $y=0$\n\nor\n\n$200+4α-5y=0$\n\n$\\Rightarrow y=\\frac{4}{5}(50+α)$\n\n$\\therefore$ $x=50+α-y$\n\n$=50+α-\\frac{4}{5}(50+α)$\n\n$=(50+α)\\left (1-\\frac{4}{5}\\right )$\n\n$=\\frac{1}{5}(50+α)$\n\n$\\Rightarrow 4x=\\frac{4}{5}(50+α)=y$\n\n$\\Rightarrow y=4x$\n\n$\\therefore$ (x, y) lies on the line y = 4x",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5vzpx9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=4x^{3}-11x^{2}+8x-5,x\\in R$. Then f :",
+  "options": [
+   "has a local minima at $x=\\frac{1}{2}$",
+   "has a local minima at $x=\\frac{3}{4}$",
+   "is increasing in $\\left (\\frac{1}{2},\\frac{3}{4}\\right )$",
+   "is decreasing in $\\left (\\frac{1}{2},\\frac{4}{3}\\right )$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$f(x)=4x^{3}-11x^{2}+8x-5$\n\n$\\therefore$ $f^{'}(x)=12x^{2}-22x+8$\n\n$=2(6x^{2}-11x+4)$\n\n$=2(6x^{2}-8x-3x+4)$\n\n$=2[2x(3x-4)-1(3x-4)]$\n\n$=2[(3x-4)(2x-1)]$\n\n\n[IMG]\n\n\n$f^{'}(x)$ is positive before $\\frac{1}{2}$ means slope of f(x) is positive before $\\frac{1}{2}$ and f'(x) is negative after $\\frac{1}{2}$ means slope of f(x) is negative after $\\frac{1}{2}$.\n\n\n[IMG]\n\n\n$\\therefore$ At $\\frac{1}{2}$, f(x) is local maximum\n\nAlso, $f^{'}(x)$ is negative before $\\frac{4}{3}$ means slope of f(x) is negative before $\\frac{4}{3}$ and f'(x) is positive after $\\frac{4}{3}$ means slope of f(x) is positive after $\\frac{4}{3}$.\n\n\n[IMG]\n\n\n$\\therefore$ At $\\frac{4}{3},\\quad f(x)$ is local minimum\n\nFrom wavy curve method,\n\n$f^{'}(x)>0,\\forall x\\in \\left (-\\infty ,\\qquad \\frac{1}{2}\\right )\\cup \\left (\\frac{4}{3},\\quad \\infty \\right )$\n\n$\\therefore$ f(x) increasing in $x\\in \\left (-\\infty ,\\qquad \\frac{1}{2}\\right )\\cup \\left (\\frac{4}{3},\\quad \\infty \\right )$\n\n$f^{'}(x)<0\\forall x\\in \\left (\\frac{1}{2},\\frac{4}{3}\\right )$\n\n$\\therefore$ f(x) decreasing in $x\\in \\left (\\frac{1}{2},\\frac{4}{3}\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5vzpx90-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5vzpx90-1.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5vzpx90-2.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l5vzrho",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let m and M respectively be the minimum and the maximum values of $f(x)=\\sin ^{-1}2x+\\sin 2x+\\cos ^{-1}2x+\\cos 2x,x\\in \\left [0,\\frac{π}{8}\\right ]$. Then m + M is equal to :",
+  "options": [
+   "$1+\\sqrt{2}+π$",
+   "$\\left (1+\\sqrt{2}\\right )π$",
+   "$π+\\sqrt{2}$",
+   "$1+π$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\sin ^{-1}(2x)+\\sin 2x+\\cos ^{-1}(2x)+\\cos 2x$\n\n$=\\sin ^{-1}(2x)+\\cos ^{-1}(2x)+\\sin 2x+\\cos 2x$\n\n$=\\frac{π}{2}+\\sqrt{2}\\left (\\frac{1}{\\sqrt{2}}\\sin 2x+\\frac{1}{\\sqrt{2}}\\cos 2x\\right )$\n\n$=\\frac{π}{2}+\\sqrt{2}\\left (\\cos \\frac{π}{4}\\sin 2x+\\sin \\frac{π}{4}\\cos 2x\\right )$\n\n$=\\frac{π}{2}+\\sqrt{2}.\\sin \\left (2x+\\frac{π}{4}\\right )$\n\nf(x) is maximum when $\\sin \\left (2x+\\frac{π}{4}\\right )$ is maximum means $x=\\frac{π}{8}$ or $\\sin \\left (2\\times \\frac{π}{8}+\\frac{π}{4}\\right )=\\sin \\frac{π}{2}=1$\n\n$\\therefore$ $[f(x)]_{\\max }=\\frac{π}{2}+\\sqrt{2}.1=\\frac{π}{2}+\\sqrt{2}=M$\n\nf(x) is minimum when $\\sin \\left (2x+\\frac{π}{4}\\right )$ is minimum means $x=0$ or $\\sin \\left (2\\times 0+\\frac{π}{4}\\right )=\\frac{1}{\\sqrt{2}}$\n\n$\\therefore$ $[f(x)]_{\\min }=\\frac{π}{2}+\\sqrt{2}.\\frac{1}{\\sqrt{2}}=\\frac{π}{2}+1=m$\n\n$\\therefore$ $m+M=\\frac{π}{2}+\\sqrt{2}+\\frac{π}{2}+1=π+\\sqrt{2}+1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5vzzg8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α_{1}$, $α_{2}$ ($α_{1}$ < $α_{2}$) be the values of $α$ for the points ($α$, $-$3), (2, 0) and (1, $α$) to be collinear. Then the equation of the line, passing through ($α_{1}$, $α_{2}$) and making an angle of $\\frac{π}{3}$ with the positive direction of the x-axis, is :",
+  "options": [
+   "$x-\\sqrt{3}y-3\\sqrt{3}+1=0$",
+   "$\\sqrt{3}x-y+\\sqrt{3}+3=0$",
+   "$x-\\sqrt{3}y+3\\sqrt{3}+1=0$",
+   "$\\sqrt{3}x-y+\\sqrt{3}-3=0$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Points A($α$, $-$3), B(2, 0) and C(1, $α$) are collinear.\n\n\n[IMG]\n\n\n$\\therefore$ Slope of AB = Slope of BC\n\n$\\Rightarrow \\frac{0+3}{2-α}=\\frac{α-0}{1-2}$\n\n$\\Rightarrow -3=α(2-α)$\n\n$\\Rightarrow -3=2α-α^{2}$\n\n$\\Rightarrow α^{2}-2α-3=0$\n\n$\\Rightarrow α^{2}-3α+α-3=0$\n\n$\\Rightarrow α(α-3)+1(α-3)=0$\n\n$\\Rightarrow (α+1)(α-3)=0$\n\n$\\Rightarrow α=-1,3$\n\nGiven, $α_{1}<α_{2}$\n\n$\\therefore$ $α_{1}=-1$ and $α_{2}=3$\n\n$\\therefore$ $(α_{1},α_{2})=(-1,3)$\n\nNow, equation of the line passing through ($-$1, 3) and making angle $\\frac{π}{3}$ with positive x-axis is\n\n$(y-y_{1})=m(x-x_{1})$\n\n$\\Rightarrow y-3=\\left (\\tan \\frac{π}{3}\\right )(x+1)$\n\n$\\Rightarrow y-3=\\sqrt{3}(x+1)$\n\n$\\Rightarrow \\sqrt{3}x-y+\\sqrt{3}+3=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5vzzg8x-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l5w08jc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the eccentricity of the ellipse $x^{2}+a^{2}y^{2}=25a^{2}$ be b times the eccentricity of the hyperbola $x^{2}-a^{2}y^{2}=5$, where a is the minimum distance between the curves $y = e^{x}$ and $y = \\log _{e}x$. Then $a^{2}+\\frac{1}{b^{2}}$ is equal to :",
+  "options": [
+   "$\\frac{3}{2}$",
+   "$\\frac{5}{2}$",
+   "3",
+   "5"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given ellipse $x^{2}+a^{2}y^{2}=25a^{2}\\Rightarrow \\frac{x^{2}}{25a^{2}}+\\frac{y^{2}}{25}=1$\n\neccentricity $(e_{1})=\\sqrt{1-\\frac{b^{2}}{a^{2}}}$\n\n$=\\sqrt{1-\\frac{25}{25a^{2}}}$\n\n$=\\sqrt{1-\\frac{1}{a^{2}}}$\n\n$\\Rightarrow e_{1}^{2}=1-\\frac{1}{a^{2}}$\n\nAlso, given hyperbola,\n\n$x^{2}-a^{2}y^{2}=5$\n\n$\\Rightarrow \\frac{x^{2}}{5}-\\frac{y^{2}}{\\frac{5}{a2}}=1$\n\neccentricity $(e_{2})=\\sqrt{1+\\frac{b^{2}}{a^{2}}}$\n\n$=\\sqrt{1+\\frac{5}{5a^{2}}}$\n\n$=\\sqrt{1+\\frac{1}{a^{2}}}$\n\n$\\Rightarrow e_{2}^{2}=1+\\frac{1}{a^{2}}$\n\nAlso given,\n\n$e_{1}=b\\times e_{2}$\n\n$\\Rightarrow e_{1}^{2}=b^{2}\\times e_{2}^{2}$\n\n$\\Rightarrow 1-\\frac{1}{a^{2}}=b^{2}\\left (1+\\frac{1}{a^{2}}\\right )$\n\n$\\Rightarrow \\frac{a^{2}-1}{a^{2}}=\\frac{b^{2}(a^{2}+1)}{a^{2}}$\n\n$\\Rightarrow b^{2}=\\frac{a^{2}-1}{a^{2}+1}$\n\n \n[IMG]\n\n\n$y=\\log _{e}^{x}$ is inverse of $y=e^{x}$ so it is mirror image of each other with respect to y = x line.\n\nSlope of tangent to $y = e^{x}$ curve\n\n$\\frac{dy}{dx}=e^{x}$\n\nSlope of tangent to $y=\\log _{e}^{x}$ curve,\n\n$\\frac{dy}{dx}=\\frac{1}{x}$\n\nBoth tangents are parallel to y = x line for minimum distance condition.\n\n$\\therefore$ Slope of y = x line = Slope of both the tangent.\n\n$\\therefore$ $\\frac{dy}{dx}=e^{x}=1\\Rightarrow e^{x}=e^{0}\\Rightarrow x=0$\n\n$\\therefore$ $y=e^{x}=e^{0}=1$\n\nand $\\frac{dy}{dx}=\\frac{1}{x}=1\\Rightarrow x=1$\n\n$\\therefore$ $y=\\log _{e}^{1}=0$\n\n$\\therefore$ tangent at (0, 1) point of $y=e^{x}$ curve and tangent at (1, 0) point of $y=\\log _{e}^{x}$ curve are parallel.\n\n$\\therefore$ Minimum distance between point (0, 1) and (1, 0) is $=\\sqrt{1^{2}+1^{2}}=\\sqrt{2}$\n\n$\\therefore$ $a=\\sqrt{2}$\n\nSo, $b^{2}=\\frac{a^{2}-1}{a^{2}+1}=\\frac{2-1}{2+1}=\\frac{1}{3}$\n\n$\\therefore$ $a^{2}+\\frac{1}{b^{2}}=2+\\frac{1}{1/3}=5$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5w08jcr-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l5w0n37",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α=\\tan \\left (\\frac{5π}{16}\\sin \\left (2\\cos ^{-1}\\left (\\frac{1}{\\sqrt{5}}\\right )\\right )\\right )$ and $β=\\cos \\left (\\sin ^{-1}\\left (\\frac{4}{5}\\right )+\\sec ^{-1}\\left (\\frac{5}{3}\\right )\\right )$ where the inverse trigonometric functions take principal values. Then, the equation whose roots are $α$ and $β$ is :",
+  "options": [
+   "$15x^{2}-8x-7=0$",
+   "$5x^{2}-12x+7=0$",
+   "$25x^{2}-18x-7=0$",
+   "$25x^{2}-32x+7=0$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$α=\\tan \\left (\\frac{5π}{16}\\sin \\left (2\\cos ^{-1}\\left (\\frac{1}{\\sqrt{5}}\\right )\\right )\\right )$\n\nWe know, $2\\cos ^{-1}x=\\cos ^{-1}(2x^{2}-1)$\n\n$\\therefore$ $2\\cos ^{-1}\\left (\\frac{1}{\\sqrt{5}}\\right )=\\cos ^{-1}\\left (2\\times \\frac{1}{5}-1\\right )=\\cos ^{-1}\\left (-\\frac{3}{5}\\right )$\n\n$\\therefore$ $α=\\tan \\left (\\frac{5π}{16}\\sin \\left (\\cos ^{-1}\\left (-\\frac{3}{5}\\right )\\right ) \\right.$\n\n$=\\tan \\left (\\frac{5π}{16}\\sin \\left (π-\\cos ^{-1}\\left (\\frac{3}{5}\\right )\\right ) \\right.$\n\n$=\\tan \\left (\\frac{5π}{16}\\sin \\left (\\cos ^{-1}\\left (\\frac{3}{5}\\right )\\right ) \\right.$\n\n$=\\tan \\left (\\frac{5π}{16}\\sin \\left (\\sin ^{-1}\\left (\\frac{4}{5}\\right )\\right ) \\right.$\n\n$=\\tan \\left (\\frac{5π}{16}\\times \\frac{4}{5}\\right )$\n\n$=\\tan \\left (\\frac{π}{4}\\right )$\n\n$=1$\n\n$\\therefore$ $α=1$\n\nAlso given,\n\n$β=\\cos \\left (\\sin ^{-1}\\left (\\frac{4}{5}\\right )+\\sec ^{-1}\\left (\\frac{5}{3}\\right )\\right )$\n\n$=\\cos \\left (\\cos ^{-1}\\left (\\frac{3}{5}\\right )+\\cos ^{-1}\\left (\\frac{3}{5}\\right )\\right )$\n\n$=\\cos \\left (2\\cos ^{-1}\\left (\\frac{3}{5}\\right )\\right )$\n\n$=\\cos \\left (\\cos ^{-1}\\left (2\\left (\\frac{3}{5}\\right )^{2}-1\\right )\\right )$\n\n$=\\cos \\left (\\cos ^{-1}\\left (\\frac{18}{25}-1\\right ) \\right.$\n\n$=\\frac{18}{25}-1$\n\n$=\\frac{18-25}{25}$\n\n$=-\\frac{7}{25}$\n\n$\\therefore$ $β=-\\frac{7}{25}$\n\n$\\therefore$ The quadratic equation with roots $α$ and $β$ is\n\n$x^{2}-(α+β)x+αβ=0$\n\n$\\Rightarrow x^{2}-\\left (1-\\frac{7}{25}\\right )x+1\\times \\left (-\\frac{7}{25}\\right )=0$\n\n$\\Rightarrow 25x^{2}-18x-7=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5w0pg9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of 6-digit numbers made by using the digits 1, 2, 3, 4, 5, 6, 7, without repetition and which are multiple of 15 is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 360.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A number is multiple of 15 when the number is divisible by 5 and sum of digits of the number is divisible by 3.\n\n\n[IMG]\n\n\nAmong 1, 2, 3, 4, 5, 6, 7 unit place is filled with 5 so it is multiple of 5.\n\nNow to make it divisible by 3, take remaining 5 digits such a way that sum becomes divisible by 3.\n\nRemaining 5 digits can be\n\n(1) 1, 2, 3, 4, 6\n\nHere sum = 1 + 2 + 3 + 4 + 6 + 5 = 21 (divisible by 3)\n\nThese 5 digits can be filled in those 5 places without repetition in 5 $\\times$ 4 $\\times$ 3 $\\times$ 2 $\\times$ 1 = 5! = 120 ways\n\n(2) 2, 3, 4, 6, 7\n\nHere sum = 2 + 3 + 4 + 6 + 7 + 5 = 27 (divisible by 3)\n\n$\\therefore$ Number of ways = 5! = 120\n\n(3) 1, 2, 3, 6, 7\n\nHere sum = 1 + 2 + 3 + 6 + 7 + 5 = 24 (divisible by 3)\n\n$\\therefore$ Number of ways = 5! = 120\n\n$\\therefore$ Total possible 6 digit numbers divisible by 15\n\n= 120 + 120 + 120 = 360",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5w0pg9y-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l5w0zq0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Suppose $\\lim _{x\\to 0}\\frac{F(x)}{x^{3}}$ exists and is equal to L, where\n\n$F(x)=\\left |\\begin{array}{lll} a+\\sin \\frac{x}{2} & -b\\cos x & 0 \\\\ -b\\cos x & 0 & a+\\sin \\frac{x}{2} \\\\ 0 & a+\\sin \\frac{x}{2} & -b\\cos x \\end{array}\\right |$.\n\nThen, $-$112 L is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 14.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$F(x)=\\left |\\begin{array}{lll} a+\\sin \\frac{x}{2} & -b\\cos x & 0 \\\\ -b\\cos x & 0 & a+\\sin \\frac{x}{2} \\\\ 0 & a+\\sin \\frac{x}{2} & -b\\cos x \\end{array}\\right |$\n\n$=\\left (a+\\sin \\frac{x}{2}\\right )\\left (-\\left (a+\\sin \\frac{x}{2}\\right )^{2}\\right )+b\\cos x\\times b^{2}\\cos ^{2}x$\n\n$=-\\left (a+\\sin \\frac{x}{2}\\right )^{3}-b^{3}\\cos ^{3}x$\n\nNow,\n\n$\\lim _{x\\to 0}\\frac{F(x)}{x^{3}}$\n\n$=\\lim _{x\\to 0}\\frac{-\\left (a+\\sin \\frac{x}{2}\\right )^{3}-b^{3}\\cos ^{3}x}{x^{3}}$\n\nGiven limit exists, it only possible when a = 0 and b = 0.\n\n$=\\lim _{x\\to 0}\\frac{-\\left (\\sin \\frac{x}{2}\\right )^{3}}{x^{3}}$\n\n$=\\lim _{x\\to 0}-\\left (\\frac{1}{2}\\times \\left (\\frac{\\sin \\frac{x}{2}}{\\frac{x}{2}}\\right )\\right )^{3}$\n\n$=\\lim _{x\\to 0}-\\left (\\frac{1}{2}\\right )^{3}\\times \\left (\\frac{\\sin \\frac{x}{2}}{\\frac{x}{2}}\\right )^{3}$\n\n$=-\\frac{1}{8}\\times 1=L$\n\n$\\therefore$ $-112L=-112\\times -\\frac{1}{8}=14$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5w1a9e",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If for some $α$ > 0, the area of the region $\\{(x,y):|x+α|\\leq y\\leq 2-|x|\\}$ is equal to $\\frac{3}{2}$, then the area of the region $\\{(x,y):0\\leq y\\leq x+2α,|x|\\leq 1\\}$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nPoint A is the intersection of y = x + $α$ and y = 2 $-$ x lines.\n\n$\\therefore$ $y=2-y+α$\n\n$\\Rightarrow 2y=2+α$\n\n$\\Rightarrow y=\\frac{2+α}{2}$\n\nand $x=2-\\frac{2+α}{2}=\\frac{2-α}{2}$\n\n$\\therefore$ Point $A=\\left (\\frac{2-α}{2},\\frac{2+α}{2}\\right )$\n\n$\\therefore$ AN = y-coordinate of point $A=\\frac{2+α}{2}$\n\nPoint B is the intersection of $y=2+x$ and $y=-x-α$ lines.\n\n$\\therefore$ $y=2-y-α$\n\n$\\Rightarrow 2y=2-α$\n\n$\\Rightarrow y=\\frac{2-α}{2}$\n\n$\\therefore$ $x=\\frac{2-α}{2}-2=\\frac{2-α-4}{2}=\\frac{-α-2}{2}$\n\n$\\therefore$ Point $B=\\left (\\frac{-α-2}{2},\\frac{2-α}{2}\\right )$\n\n$\\therefore$ $BM=y-$coordinate of point $B=\\frac{2-α}{2}$\n\nArea of the common region $BRAE$\n\n$=\\Delta CDE-(\\Delta BCR+\\Delta ARD)$\n\n$=\\frac{1}{2}\\times 4\\times 2-\\left (\\frac{1}{2}(-α+2)\\times BM+\\frac{1}{2}\\times (2+α)\\times AN\\right )$\n\n$=4-\\left (\\frac{1}{2}\\times (2-α)\\times \\frac{(2-α)}{2}+\\frac{1}{2}\\times (2+α)\\times \\frac{2+α}{2}\\right )$\n\n$=4-\\left [\\frac{(2-α)^{2}}{4}+\\frac{(2+α)^{2}}{4}\\right ]$\n\nGiven, $4-\\left [\\frac{(2-α)^{2}}{4}+\\frac{(2+α)^{2}}{4}\\right ]=\\frac{3}{2}$\n\n$\\Rightarrow \\frac{(2-α)^{2}}{4}+\\frac{(2+α)^{2}}{4}=\\frac{5}{2}$\n\n$\\Rightarrow (2-α)^{2}+(2+α)^{2}=10$\n\n$\\Rightarrow 4+α^{2}-4α+4+α^{2}+4α=10$\n\n$\\Rightarrow 2α^{2}+8=10$\n\n$\\Rightarrow 2α^{2}=2$\n\n$\\Rightarrow α^{2}=1$\n\n$\\Rightarrow α=\\pm 1$\n\nGiven that $α>0$ so accepted value of $α=+1$.\n\nNow, $0\\leq y\\leq x+2α$ and $|x|\\leq 1$\n\n$\\Rightarrow 0\\leq y\\leq x+2$ and $-1\\leq x\\leq 1$\n\n\n[IMG]\n\n\nArea of $ABCD=\\frac{1}{2}(1+3)\\times (1-(-1))$\n\n$=\\frac{1}{2}\\times 4\\times 2$\n\n$=4$ sq. unit",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5w1a9en-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5w1a9en-1.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l5w1cio",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $f(t)=\\int\\limits _{0}^{t}e^{x^{3}}\\left (\\frac{x^{8}}{(x^{6}+2x^{3}+2)^{2}}\\right )dx$. If $f(1)+f^{'}(1)=αe-\\frac{1}{6}$, then the value of 150$α$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 16.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "By the Leibniz rule, $f^{'}(t)=e^{t^{3}}\\dfrac{t^{8}}{(t^{6}+2t^{3}+2)^{2}}$, so $f^{'}(1)=\\dfrac{e}{25}$.\n\nSubstituting $z=x^{3}$, $dz=3x^{2}dx$ and $x^{8}\\quad dx=x^{6}\\cdot x^{2}dx=\\dfrac{z^{2}\\quad dz}{3}$:\n\n$f(t)=\\dfrac{1}{3}\\int\\limits _{0}^{t^{3}}e^{z}\\dfrac{z^{2}}{(z^{2}+2z+2)^{2}}dz$\n\nWith $g(z)=\\dfrac{1}{z^{2}+2z+2}$, $g^{'}(z)=-\\dfrac{2z+2}{(z^{2}+2z+2)^{2}}$, and\n\n$\\dfrac{z^{2}}{(z^{2}+2z+2)^{2}}=\\dfrac{(z^{2}+2z+2)-(2z+2)}{(z^{2}+2z+2)^{2}}=g(z)+g^{'}(z)$\n\nSince $\\int e^{z}(g(z)+g^{'}(z))dz=e^{z}g(z)$:\n\n$f(t)=\\dfrac{1}{3}\\left [\\dfrac{e^{z}}{z^{2}+2z+2}\\right ]_{0}^{t^{3}}=\\dfrac{1}{3}\\left (\\dfrac{e^{t^{3}}}{t^{6}+2t^{3}+2}-\\dfrac{1}{2}\\right )$\n\n$f(1)=\\dfrac{1}{3}\\left (\\dfrac{e}{5}-\\dfrac{1}{2}\\right )=\\dfrac{e}{15}-\\dfrac{1}{6}$\n\n$f(1)+f^{'}(1)=\\left (\\dfrac{1}{15}+\\dfrac{1}{25}\\right )e-\\dfrac{1}{6}=\\dfrac{16}{150}e-\\dfrac{1}{6}\\Rightarrow α=\\dfrac{16}{150}$\n\n$150α=16$\n\nHence, the answer is 16.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5w1f9p",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A hostel has 100 students. On a certain day (consider it day zero) it was found that two students are infected with some virus. Assume that the rate at which the virus spreads is directly proportional to the product of the number of infected students and the number of non-infected students. If the number of infected students on $4^{th}$ day is 30, then number of infected students on $8^{th}$ day will be $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 90.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Total students = 100\n\nAt t = 0 (zero day), infected student = 2\n\nLet at t = t day infected student  = x\n\n$\\therefore$ At t = t day non infected student = (100 $-$ x)\n\nRate of infection $=\\frac{dx}{dt}$\n\nGiven, $\\frac{dx}{dt}\\propto x(100-x)$\n\n$\\Rightarrow \\int \\: ~\\frac{dx}{x(100-x)}=\\int \\: ~kdt$\n\n$\\Rightarrow \\frac{1}{100}\\int \\: ~\\frac{100-x+x}{x(100-x)}dx=kt+c$\n\n$\\Rightarrow \\frac{1}{100}\\int \\: ~\\left (\\frac{1}{x}+\\frac{1}{100-x}\\right )dx=kt+c$\n\n$\\Rightarrow \\frac{1}{100}[\\ln x-\\ln (100-x)]=kt+c$\n\n$\\Rightarrow \\frac{1}{100}\\ln \\frac{x}{100-x}=kt+c$ ...... (1)\n\nGiven, At, t = 0, x = 2\n\n$\\therefore$ $\\frac{1}{100}\\ln \\frac{2}{98}=c$\n\nPutting value of c in equation (1), we get\n\n$\\frac{1}{100}\\ln \\frac{x}{100-x}=kt+\\frac{1}{100}\\ln \\frac{2}{98}$\n\n$\\Rightarrow \\frac{1}{100}\\ln \\frac{x}{100-x}-\\frac{1}{100}\\ln \\frac{2}{98}=kt$\n\n$\\Rightarrow \\frac{1}{100}\\ln \\frac{x\\times 98}{2(100-x)}=kt$\n\nGiven, At t = 4, x = 30\n\n$\\therefore$ $\\frac{1}{100}\\ln \\frac{30\\times 98}{2(70)}=k\\times 4$\n\n$\\Rightarrow k=\\frac{1}{400}\\ln 21$\n\n$\\therefore$ $\\frac{1}{100}\\ln \\frac{x\\times 98}{2(100-x)}=t\\times \\frac{1}{400}\\times \\ln 21$\n\nNow, when t = 8, then r = ?\n\n$\\frac{1}{100}\\ln \\frac{49x}{(100-x)}=8\\times \\frac{1}{400}\\times \\ln 21$\n\n$\\Rightarrow \\ln \\frac{49x}{(100-x)}=2\\ln 21$\n\n$\\Rightarrow \\frac{49x}{100-x}=21^{2}$\n\n$\\Rightarrow \\frac{x}{100-x}=\\frac{21\\times 21}{49}$\n\n$\\Rightarrow \\frac{x}{100-x}=9$\n\n$\\Rightarrow x=900-9x$\n\n$\\Rightarrow 10x=900$\n\n$\\Rightarrow x=90$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5w1gh8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let PQ be a focal chord of length 6.25 units of the parabola $y^{2} = 4x$. If O is the vertex of the parabola, then 10 times the area (in sq. units) of $\\Delta$POQ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 25.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nGiven parabola $y^{2}=4x$\n\n$\\therefore$ a = 1\n\nHere, P, S, Q points are collinear.\n\n$\\therefore$ Slope of PS = Slope of QS\n\n$\\Rightarrow \\frac{2t_{1}-0}{t_{1}^{2}-1}=\\frac{0-2t_{2}}{1-t_{2}^{2}}$\n\n$\\Rightarrow \\frac{2t_{1}}{t_{1}^{2}-1}=\\frac{2t_{2}}{t_{2}^{2}-1}$\n\n$\\Rightarrow t_{1}(t_{2}^{2}-1)=t_{2}(t_{1}^{2}-1)$\n\n$\\Rightarrow t_{2}^{2}t_{1}-t_{1}=t_{1}^{2}t_{2}-t_{2}$\n\n$\\Rightarrow t_{2}^{2}t_{1}-t_{1}^{2}t_{2}-t_{1}+t_{2}=0$\n\n$\\Rightarrow t_{1}t_{2}(t_{2}-t_{1})+(t_{2}-t_{1})=0$\n\n$\\Rightarrow (t_{2}-t_{1})(t_{1}t_{2}+1)=0$\n\nAs $t_{2}-t_{1}\\neq 0$\n\n$\\therefore$ $t_{1}t_{2}+1=0$\n\n$t_{1}t_{2}=-1$\n\nNow, length of PQ\n\n$=\\sqrt{\\left (t_{1}^{2}-t_{2}^{2}\\right )^{2}+(2t_{1}-2t_{2})^{2}}$\n\n$=\\sqrt{(t_{1}+t_{2})^{2}(t_{1}-t_{2})^{2}+4(t_{1}-t_{2})^{2}}$\n\n$=(t_{1}-t_{2})\\sqrt{(t_{1}+t_{2})^{2}+4}$\n\n$=(t_{1}-t_{2})\\sqrt{t_{1}^{2}+t_{2}^{2}+2t_{1}t_{2}+4}$\n\n$=(t_{1}-t_{2})\\sqrt{t_{1}^{2}+t_{2}^{2}+2(-1)+4}$\n\n$=(t_{1}-t_{2})\\sqrt{t_{1}^{2}+t_{2}^{2}+2}$\n\n$=(t_{1}-t_{2})\\sqrt{t_{1}^{2}+t_{2}^{2}-2(-1)}$\n\n$=(t_{1}-t_{2})\\sqrt{t_{1}^{2}+t_{2}^{2}-2t_{1}t_{2}}$\n\n$=(t_{1}-t_{2})\\sqrt{(t_{1}-t_{2})^{2}}$\n\n$=(t_{1}-t_{2})^{2}$\n\nGiven, length of $PQ=(t_{1}-t_{2})^{2}=6.25$\n\n$\\Rightarrow t_{1}-t_{2}=2.5$\n\nNow, Area of $\\Delta OPQ$\n\n$=\\left |\\frac{1}{2}\\right |\\begin{array}{lll} t_{1}^{2} & 2t_{1} & 1 \\\\ t_{2}^{2} & 2t_{2} & 1 \\\\ 0 & 0 & 1 \\end{array}\\left |\\right |$\n\n$=\\left |\\frac{1}{2}\\left (2t_{2}t_{1}^{2}-2t_{1}t_{2}^{2}\\right )\\right |$\n\n$=\\left |\\frac{1}{2}\\times 2t_{1}t_{2}(t_{1}-t_{2})\\right |$\n\n$=|t_{1}t_{2}\\times (t_{1}-t_{2})|$\n\n$=|-1\\times 2.5|$\n\n$=2.5$\n\n$\\therefore$ 10$\\Delta$OPQ =\n\n$=10\\times \\frac{25}{10}=25$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5w1gh8w-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l5w1j95",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Consider a triangle ABC whose vertices are A(0, $α$, $α$), B($α$, 0, $α$) and C($α$, $α$, 0), $α$ > 0. Let D be a point moving on the line x + z $-$ 3 = 0 = y and G be the centroid of $\\Delta$ABC. If the minimum length of GD is $\\sqrt{\\frac{57}{2}}$, then $α$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nGiven, G is the centroid of $\\Delta$ABC\n\n$\\therefore$ $G=\\left (\\frac{0+α+α}{3},\\frac{α+0+α}{3},\\frac{α+α+0}{3}\\right )$\n\n$=\\left (\\frac{2α}{3},\\frac{2α}{3},\\frac{2α}{3}\\right )$\n\nAlso given, D is a point moving on the line $x+z-3=0=y$\n\nLet $D=(h,0,k)$\n\n$x+z-3=0\\Rightarrow h+k-3=0\\Rightarrow h=3-k$\n\n$\\therefore$ $D=(3-k,0,k)$\n\nNow, length of $GD=d$\n\n$=\\sqrt{\\left (\\frac{2α}{3}-3+k\\right )^{2}+\\left (\\frac{2α}{3}\\right )^{2}+\\left (\\frac{2α}{3}-k\\right )^{2}}$\n\n$\\Rightarrow d^{2}=\\left (\\frac{2α}{3}-3+k\\right )^{2}+\\left (\\frac{2α}{3}\\right )^{2}+\\left (\\frac{2α}{3}-k\\right )^{2}$\n\nDifferentiating both side with respect to k, we get\n\n$2dd^{'}=2\\left (\\frac{2α}{3}-3+k\\right )+0+2\\left (\\frac{2α}{3}-k\\right )\\times (-1)$\n\nFor maximum or minimum value of k, $d^{'}=0$\n\n$\\therefore$ $0=2\\left (\\frac{2α}{3}-3+k\\right )-2\\left (\\frac{2α}{3}-k\\right )$\n\n$\\Rightarrow 2\\left (\\frac{2α}{3}-3+k\\right )=2\\left (\\frac{2α}{3}-k\\right )$\n\n$\\Rightarrow -3+k=-k$\n\n$\\Rightarrow k=\\frac{3}{2}$\n\n$\\therefore$ $GD^{2}=\\left (\\frac{2α}{3}-3+\\frac{3}{2}\\right )^{2}+\\left (\\frac{2α}{3}\\right )^{2}+\\left (\\frac{2α}{3}-\\frac{3}{2}\\right )^{2}=\\frac{57}{2}$\n\n$\\Rightarrow \\frac{(4α-9)^{2}}{36}+\\frac{16α^{2}}{36}+\\frac{(4α-9)^{2}}{36}=\\frac{57}{2}$\n\n$\\Rightarrow (4α-9)^{2}+16α^{2}+(4α-9)^{2}=57\\times 18$\n\n$\\Rightarrow 16α^{2}-72α+81+16α^{2}+16α^{2}-72α+81=57\\times 18$\n\n$\\Rightarrow 48α^{2}-144α+162=1026$\n\n$\\Rightarrow 24α^{2}-72α+81-513=0$\n\n$\\Rightarrow 24α^{2}-72α-432=0$\n\n$\\Rightarrow α^{2}-3α-18=0$\n\n$\\Rightarrow α^{2}-6α+3α-18=0$\n\n$\\Rightarrow α(α-6)+3(α-6)=0$\n\n$\\Rightarrow (α-6)(α+3)=0$\n\n$\\Rightarrow α=6,-3$\n\nGiven, $α>0$\n\n$\\therefore$ Possible value of $α=6$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5w1j95q-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l5w1mu8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The probability distribution of X is :\n\n  \n    X\n    0\n    1\n    2\n    3\n  \n\n  \n    P(X)\n    $\\frac{1-d}{4}$\n    $\\frac{1+2d}{4}$\n    $\\frac{1-4d}{4}$\n    $\\frac{1+3d}{4}$\n  \n\nFor the minimum possible value of d, sixty times the mean of X is equal to $_______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 75.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "X\n    0\n    1\n    2\n    3\n  \n\n  \n    $P(x)$\n    $\\frac{1-d}{4}$\n    $\\frac{1+2d}{4}$\n    $\\frac{1-4d}{4}$\n    $\\frac{1+3d}{4}$\n  \n\nWe know, $0\\leq P(x)\\leq 1$\n\n$\\therefore$ $0\\leq \\frac{1-d}{4}\\leq 1$\n\n$\\Rightarrow 0\\leq 1-d\\leq 4$\n\n$\\Rightarrow -1\\leq -d\\leq 3$\n\n$\\Rightarrow 1\\geq d\\geq -3$\n\nAlso,\n\n$0\\leq \\frac{1+2d}{4}\\leq 1$\n\n$\\Rightarrow 0\\leq 1+2d\\leq 4$\n\n$\\Rightarrow -1\\leq 2d\\leq 3$\n\n$\\Rightarrow -\\frac{1}{2}\\leq d\\leq \\frac{3}{2}$\n\nAlso,\n\n$0\\leq \\frac{1-4d}{4}\\leq 1$\n\n$\\Rightarrow 0\\leq 1-4d\\leq 4$\n\n$\\Rightarrow -1\\leq -4d\\leq 3$\n\n$\\Rightarrow 1\\geq 4d\\geq -3$\n\n$\\Rightarrow \\frac{1}{4}\\geq d\\geq -\\frac{3}{4}$\n\nAnd,\n\n$0\\leq \\frac{1+3d}{4}\\leq 1$\n\n$\\Rightarrow 0\\leq 1+3d\\leq 4$\n\n$\\Rightarrow -1\\leq 3d\\leq 3$\n\n$\\Rightarrow -\\frac{1}{3}\\leq d\\leq 1$\n\n\n[IMG]\n\n\nCommon range is $=-\\frac{1}{3}$ to $\\frac{1}{4}$\n\n$\\therefore$ $d\\in \\left [-\\frac{1}{3},\\frac{1}{4}\\right ]$\n\n$\\therefore$ Minimum value of $d=-\\frac{1}{3}$\n\nWe know, mean\n\n$E(x)=\\sum x.\\quad P(x)$\n\n$=0\\times \\frac{1-d}{4}+1\\times \\frac{1+2d}{4}+2\\times \\frac{1-4d}{4}+3\\times \\frac{1+3d}{4}$\n\n$=\\frac{1+2d+2-8d+3+9d}{4}$\n\n$=\\frac{6+3d}{4}$\n\nFor $d=-\\frac{1}{3}$, $E(x)=\\frac{6+3\\times -\\frac{1}{3}}{4}=\\frac{5}{4}$\n\n$\\therefore$ $60E(x)=60\\times \\frac{5}{4}=75$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 30th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-30th-june-morning-shift/1l5w1mu8i-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 30th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

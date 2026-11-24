@@ -1,0 +1,920 @@
+[
+ {
+  "publicId": "PYQ-2022-1l544hp5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The probability that a randomly chosen 2 $\\times$ 2 matrix with all the entries from the set of first 10 primes, is singular, is equal to :",
+  "options": [
+   "$\\frac{133}{10^{4}}$",
+   "$\\frac{18}{10^{3}}$",
+   "$\\frac{19}{10^{3}}$",
+   "$\\frac{271}{10^{4}}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 20,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "First 10 prime numbers are\n\n={2, 3, 5, 7, 11, 13, 17, 19, 23, 29}\n\nLet A is a 2 $\\times$ 2 matrix,\n\n$A=\\left [\\begin{array}{ll} a & b \\\\ c & d \\end{array}\\right ]$\n\nGiven that matrix A is singular.\n\n$\\therefore$ | A | = 0\n\n$\\Rightarrow \\left |\\begin{array}{ll} a & b \\\\ c & d \\end{array}\\right |=0$\n\n$\\Rightarrow ad=bc$\n\nCase I :\n\nad = bc condition satisfy when a = b = c = d.\n\nFor ex when a = 2, b = 2, c = 2, d = 2, then ad = bc satisfy.\n\nNow there are 10 prime numbers.\n\nWe can choose any one of the 10 prime number in ${}^{10}C_{1}$ = 10 ways and put them in the four positions of the matrix and matrix will be singular.\n\n$\\therefore$ In this case, total favorable case = 10\n\nCase 2 :\n\nad = bc condition satisfies when\n\n(1)\n\na = 2, d = 3 then\n\n(a) b = 2, c = 3\n\n(b) b = 3, c = 2\n\nor\n\na = 3, d = 2 then\n\n(a) b = 2, c = 3\n\n(b) b = 3, c = 2\n\nSo you can see for two different prime number for a and d there are 4 possible value of b and c which satisfy ad = bc condition.\n\nTwo different values of a and d can be chosen from 10 prime numbers = ${}^{10}C_{2}$ ways\n\nAnd for each combination of a and d there are 4 possible values of b and c.\n\n$\\therefore$ Total possible values = ${}^{10}C_{2}$ $\\times$ 4\n\nFrom case I and case II total possible values of 10 prime numbers which satisfy ad = bc condition\n\n= 10 + ${}^{10}C_{2}$ $\\times$ 4\n\nFor sample space,\n\nNumber of ways to fill element a of matrix A = chose any prime number among 10 available prime number = ${}^{10}C_{1}$ ways\n\nSimilarly,\n\nFor element b of matrix A = ${}^{10}C_{1}$ ways\n\nFor element c of matrix A = ${}^{10}C_{1}$ ways\n\nFor element d of matrix A = ${}^{10}C_{1}$ ways\n\n$\\therefore$ Sample space = ${}^{10}C_{1}$ $\\times$ ${}^{10}C_{1}$ $\\times$ ${}^{10}C_{1}$ $\\times$ ${}^{10}C_{1}$ $= 10^{4}$\n\n$\\therefore$ Probability $=\\frac{10+{}^{10}C_{2}\\times 4}{10^{4}}$\n\n$=\\frac{10+180}{10^{4}}$\n\n$=\\frac{190}{10^{4}}$\n\n$=\\frac{19}{10^{3}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l544jes",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the solution curve of the differential equation\n\n$x\\frac{dy}{dx}-y=\\sqrt{y^{2}+16x^{2}}$, $y(1)=3$ be $y=y(x)$. Then y(2) is equal to:",
+  "options": [
+   "15",
+   "11",
+   "13",
+   "17"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$x\\frac{dy}{dx}-y=\\sqrt{y^{2}+16x^{2}}$\n\n$\\Rightarrow x\\frac{dy}{dx}=y+\\sqrt{y^{2}+16x^{2}}$\n\n$\\Rightarrow \\frac{dy}{dx}=\\frac{y}{x}+\\sqrt{\\left (\\frac{y}{x}\\right )^{2}+16}$\n\nThis is a homogeneous differential equation.\n\nLet $\\frac{y}{x}=v$\n\n$\\Rightarrow y=vx$\n\n$\\Rightarrow \\frac{dy}{dx}=v+x\\frac{dv}{dx}$\n\n$\\therefore$ $v+x\\frac{dv}{dx}=v+\\sqrt{v^{2}+16}$\n\n$\\Rightarrow$ $x\\frac{dv}{dx}=\\sqrt{v^{2}+16}$\n\n$\\Rightarrow \\frac{dv}{\\sqrt{v^{2}+16}}=\\frac{dx}{x}$\n\nIntegrating both sides, we get\n\n$\\int \\frac{dv}{\\sqrt{v^{2}+16}}=\\int \\frac{dx}{x}$\n\n$\\Rightarrow \\ln \\left |v+\\sqrt{v^{2}+16}\\right |=\\ln x+\\ln c$\n\n$\\Rightarrow v+\\sqrt{v^{2}+16}=cx$\n\nNow putting, $v=\\frac{y}{x}$, we get\n\n$\\frac{y}{x}+\\sqrt{\\frac{y^{2}}{x^{2}}+16}=cx$\n\n$\\Rightarrow \\frac{y}{x}+\\sqrt{\\frac{y^{2}+16x^{2}}{x^{2}}}=cx$\n\n$\\Rightarrow y+\\sqrt{y^{2}+16x^{2}}=cx^{2}$ ...... (1)\n\nGiven, $y(1)=3$\n\n$\\therefore$ When x = 1 then y = 3.\n\nPutting in equation (1) we get,\n\n$3+\\sqrt{9+16}=c.1$\n\n$\\Rightarrow c=8$\n\n$\\therefore$ Solution of equation,\n\n$y+\\sqrt{y^{2}+16x^{2}}=8x^{2}$\n\nNow, y(2) means when x = 2 then y = ?\n\n$\\therefore$ $y+\\sqrt{y^{2}+16\\times 4}=8\\times 4$\n\n$\\Rightarrow y=15$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l544p8q",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f:R\\to R$ be a function defined by :\n\n$f(x)=\\left \\{\\begin{array}{lll} \\max \\{t^{3}-3t:t\\leq x\\} & ; & x\\leq 2 \\\\ x^{2}+2x-6 & ; & 2<x<3 \\\\ [x-3]+9 & ; & 3\\leq x\\leq 5 \\\\ 2x+1 & ; & x>5 \\end{array} \\right.$\n\nwhere [t] is the greatest integer less than or equal to t. Let m be the number of points where f is not differentiable and $I=\\int\\limits _{-2}^{2}f(x)dx$. Then the ordered pair (m, I) is equal to :",
+  "options": [
+   "$\\left (3,\\frac{27}{4}\\right )$",
+   "$\\left (3,\\frac{23}{4}\\right )$",
+   "$\\left (4,\\frac{27}{4}\\right )$",
+   "$\\left (4,\\frac{23}{4}\\right )$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left \\{\\begin{array}{l} f(x)=x^{3}-3x,x\\leq -1 \\\\  \\\\ 2,-1<x<2 \\\\  \\\\ x^{2}+2x-6,2<x<3 \\\\  \\\\ 9,3\\leq x<4 \\\\  \\\\ 10,4\\leq x<5 \\\\  \\\\ 11,x=5 \\\\  \\\\ 2x+1,x>5 \\end{array} \\right.$\n\n Clearly $\\mathrm{f}(\\mathrm{x})$ is not differentiable at\n\n$\\begin{array}{l} x=2,3,4,5\\Rightarrow m=4 \\\\  \\\\ I=\\int\\limits _{-2}^{-1}\\left (x^{3}-3x\\right )dx+\\int\\limits _{-1}^{2}2\\cdot dx=\\dfrac{27}{4} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l544t6p",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{a}=α\\hat{i}+3\\hat{j}-\\widehat{k}$, $\\vec{b}=3\\hat{i}-β\\hat{j}+4\\widehat{k}$ and $\\vec{c}=\\hat{i}+2\\hat{j}-2\\widehat{k}$ where $α,\\quad β\\in R$, be three vectors. If the projection of $\\vec{a}$ on $\\vec{c}$ is $\\frac{10}{3}$ and $\\vec{b}\\times \\vec{c}=-6\\hat{i}+10\\hat{j}+7\\widehat{k}$, then the value of $α+β$ is equal to :",
+  "options": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\vec{a}=α\\hat{i}+3\\hat{j}-\\widehat{k}$\n\n$\\vec{b}=3\\hat{i}-β\\hat{j}+4\\widehat{k}$\n\n$\\vec{c}=\\hat{i}+2\\hat{j}-2\\widehat{k}$\n\nProjection of $\\vec{a}$ on $\\vec{c}$ is\n\n$\\frac{\\vec{a}.\\vec{c}}{|\\vec{c}|}=\\frac{10}{3}$\n\n$\\frac{α+6+2}{\\sqrt{1^{2}+2^{2}+(-2)^{2}}}=\\frac{α+8}{3}=\\frac{10}{3}$\n\n$\\therefore$ $α$ = 2\n\n$\\vec{b}\\times \\vec{c}=-6\\hat{i}+10\\hat{j}+7\\widehat{k}$\n\n$\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\widehat{k} \\\\ 3 & -β & 4 \\\\ 1 & 2 & -2 \\end{array}\\right |=(2β-8)\\hat{i}+10\\hat{j}+(6+β)\\widehat{k}=-6\\hat{i}+10\\hat{j}+7\\widehat{k}$\n\n$2β-8=-6$ & $6+β=7$\n\n$\\therefore$ $β$ = 1\n\n$α+β=2+1=3$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l544ulf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area enclosed by $y^{2} = 8x$ and y = $\\sqrt{2}$ x that lies outside the triangle formed by y = $\\sqrt{2}$ x, x = 1, y = 2$\\sqrt{2}$, is equal to:",
+  "options": [
+   "$\\frac{16\\sqrt{2}}{6}$",
+   "$\\frac{11\\sqrt{2}}{6}$",
+   "$\\frac{13\\sqrt{2}}{6}$",
+   "$\\frac{5\\sqrt{2}}{6}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$A\\left (2,2\\sqrt{2}\\right ),B\\left (1,2\\sqrt{2}\\right ),C\\left (1,\\sqrt{2}\\right )$\n\nArea $=\\int\\limits _{0}^{4\\sqrt{2}}\\left (\\frac{y}{\\sqrt{2}}-\\frac{y^{2}}{8}\\right )dy-$ area ($\\Delta$BAC)\n\n$=\\left [\\frac{y^{2}}{2\\sqrt{2}}-\\frac{y^{3}}{24}\\right ]_{0}^{4\\sqrt{2}}-\\frac{1}{2}\\times AB\\times BC$\n\n$=8\\sqrt{2}-\\frac{32\\times 4\\sqrt{2}}{24}-\\frac{1}{2}\\times 1\\times \\sqrt{2}$\n\n$=8\\sqrt{2}-\\frac{16\\sqrt{2}}{3}-\\frac{\\sqrt{2}}{2}$\n\n$=\\frac{\\sqrt{2}}{6}(48-32-3)=\\frac{13\\sqrt{2}}{6}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-29th-june-morning-shift/1l544ulfw-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l544wdk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of linear equations\n\n2x + y $-$ z = 7\n\nx $-$ 3y + 2z = 1\n\nx + 4y + $δ$z = k, where $δ$, k $\\in$ R has infinitely many solutions, then $δ$ + k is equal to:",
+  "options": [
+   "$-$3",
+   "3",
+   "6",
+   "9"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2x+y-z=7$\n\n$x-3y+2z=1$\n\n$x+4y+δz=k$\n\n$\\Delta =\\left |\\begin{array}{lll} 2 & 1 & -1 \\\\ 1 & -3 & 2 \\\\ 1 & 4 & δ \\end{array}\\right |=-7δ-21=0$\n\n$δ=-3$\n\n$\\Delta _{1}=\\left |\\begin{array}{lll} 7 & 1 & -1 \\\\ 1 & -3 & 2 \\\\ k & 4 & -3 \\end{array}\\right |$\n\n$\\Rightarrow 6-k=0\\Rightarrow k=6$\n\n$δ+k=-3+6=3$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l544xjn",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α$ and $β$ be the roots of the equation $x^{2} + (2i$ $-$ 1) = 0. Then, the value of |$α^{8}$ + $β^{8}$| is equal to :",
+  "options": [
+   "50",
+   "250",
+   "1250",
+   "1500"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given equation,\n\n$x^{2}+(2i-1)=0$\n\n$\\Rightarrow x^{2}=1-2i$\n\nLet $α$ and $β$ are the two roots of the equation.\n\nAs, we know roots of a equation satisfy the equation so\n\n$α^{2}=1-2i$\n\nand $β^{2}=1-2i$\n\n$\\therefore$ $α^{2}=β^{2}=1-2i$\n\n$\\therefore$ $|α^{2}|=\\sqrt{1^{2}+(-2)^{2}}=\\sqrt{5}$\n\nNow, $|α^{8}+β^{8}|$\n\n$|α^{8}+α^{8}|$\n\n$=2|α^{8}|$\n\n$=2|α^{2}|^{4}$\n\n$=2\\left (\\sqrt{5}\\right )^{4}$\n\n$=2\\times 25$\n\n$=50$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5452x4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=[a_{ij}]$ be a square matrix of order 3 such that $a_{ij}=2^{j-i}$, for all i, j = 1, 2, 3. Then, the matrix $A^{2} + A^{3} + ...... + A^{10}$ is equal to :",
+  "options": [
+   "$\\left (\\frac{3^{10}-3}{2}\\right )A$",
+   "$\\left (\\frac{3^{10}-1}{2}\\right )A$",
+   "$\\left (\\frac{3^{10}+1}{2}\\right )A$",
+   "$\\left (\\frac{3^{10}+3}{2}\\right )A$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $a_{ij}=2^{j-i}$\n\nNow, $A=\\left [\\begin{array}{lll} 2^{0} & 2^{1} & 2^{2} \\\\ 2^{-1} & 2^{0} & 2^{1} \\\\ 2^{-2} & 2^{-1} & 2^{0} \\end{array}\\right ]$\n\n$=\\left [\\begin{array}{lll} 1 & 2 & 4 \\\\ \\frac{1}{2} & 1 & 2 \\\\ \\frac{1}{4} & \\frac{1}{2} & 1 \\end{array}\\right ]$\n\n$A^{2}=\\left [\\begin{array}{lll} 1 & 2 & 4 \\\\ \\frac{1}{2} & 1 & 2 \\\\ \\frac{1}{4} & \\frac{1}{2} & 1 \\end{array}\\right ]\\left [\\begin{array}{lll} 1 & 2 & 4 \\\\ \\frac{1}{2} & 1 & 2 \\\\ \\frac{1}{4} & \\frac{1}{2} & 1 \\end{array}\\right ]$\n\n$=\\left [\\begin{array}{lll} 1+1+1 & 2+2+2 & 4+4+4 \\\\ \\frac{1}{2}+\\frac{1}{2}+\\frac{1}{2} & 1+1+1 & 2+2+2 \\\\ \\frac{1}{4}+\\frac{1}{4}+\\frac{1}{4} & \\frac{1}{2}+\\frac{1}{2}+\\frac{1}{2} & 1+1+1 \\end{array}\\right ]$\n\n$=\\left [\\begin{array}{lll} 3 & 6 & 12 \\\\ \\frac{3}{2} & 3 & 6 \\\\ \\frac{3}{4} & \\frac{3}{2} & 3 \\end{array}\\right ]$\n\n$=3\\left [\\begin{array}{lll} 1 & 2 & 4 \\\\ \\frac{1}{2} & 1 & 2 \\\\ \\frac{1}{4} & \\frac{1}{2} & 1 \\end{array}\\right ]$\n\n$=3A$\n\nSimilarly, $A^{3}=3^{2}A$\n\n$A^{4}=3^{3}A$\n\n$\\therefore$ $A^{2}+A^{3}+......+A^{10}$\n\n$=3A+3^{2}A+3^{3}A+......+3^{9}A$\n\n$=A(3+3^{2}+3^{3}+......+3^{9})$\n\n$=A\\left (\\frac{3(3^{9}-1)}{3-1}\\right )=\\frac{3(3^{9}-1)}{2}A$ = $\\left (\\frac{3^{10}-3}{2}\\right )A$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l54578k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a set $A = A_{1}$ $\\cup$ $A_{2}$ $\\cup$ ..... $\\cup$ $A_{k}$, where $A_{i}$ $\\cap$ $A_{j} =$ $𝜙$ for i $\\neq$ j, 1 $\\leq$ i, j $\\leq$ k. Define the relation R from A to A by R = {(x, y) : y $\\in$ $A_{i}$ if and only if x $\\in$ $A_{i}, 1$ $\\leq$ i $\\leq$ k}. Then, R is :",
+  "options": [
+   "reflexive, symmetric but not transitive.",
+   "reflexive, transitive but not symmetric.",
+   "reflexive but not symmetric and transitive.",
+   "an equivalence relation."
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$R=\\{(x,y):y\\in A_{i},iffx\\in A_{i}1\\leq i\\leq k\\}$\n\n(1) Reflexive\n\n(a, a) $\\Rightarrow$ $a\\in A_{i}$ iff $a\\in A_{i}$\n\n(2) Symmetric\n\n(a, b) $\\Rightarrow$ $a\\in A_{i}$ iff $b\\in A_{i}$\n\n(b, a) $\\in$R as $b\\in A_{i}$ iff $a\\in A_{i}$\n\n(3) Transitive\n\n(a, b) $\\in$R & (b, c) $\\in$R.\n\n$\\Rightarrow$ $a\\in A_{i}$ iff $b\\in A_{i}$ & $b\\in A_{i}$ iff $c\\in A_{i}$\n\n$\\Rightarrow$ $a\\in A_{i}$ iff $c\\in A_{i}$\n\n$\\Rightarrow$ (a, c) $\\in$ R.\n\n$\\Rightarrow$ Relation is equivalence.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l545bue",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The distance between the two points A and A' which lie on y = 2 such that both the line segments AB and A' B (where B is the point (2, 3)) subtend angle $\\frac{π}{4}$ at the origin, is equal to :",
+  "options": [
+   "10",
+   "$\\frac{48}{5}$",
+   "$\\frac{52}{5}$",
+   "3"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $A(α,2)$ Given $B(2,3)$\n\n$\\begin{array}{l} m_{OA}=\\dfrac{2}{α}&m_{OB}=\\dfrac{3}{2} \\\\  \\\\ \\tan \\dfrac{π}{4}=\\left |\\dfrac{\\frac{2}{α}-\\frac{3}{2}}{1+\\frac{2}{α}\\cdot \\frac{3}{2}}\\right |\\Rightarrow \\dfrac{4-3α}{2α+6}=\\pm 1 \\\\  \\\\ 4-3α=2α+6&4-3α=-2α-6 \\\\  \\\\ α=\\dfrac{-2}{5}&α=10 \\\\  \\\\ A\\left (-\\dfrac{2}{5},2\\right )&A^{'}(10,2)\\text{and}B(2,3) \\\\  \\\\ AA^{'}=10+\\dfrac{2}{5}=\\dfrac{52}{5} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l545dst",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A wire of length 22 m is to be cut into two pieces. One of the pieces is to be made into a square and the other into an equilateral triangle. Then, the length of the side of the equilateral triangle, so that the combined area of the square and the equilateral triangle is minimum, is :",
+  "options": [
+   "$\\frac{22}{9+4\\sqrt{3}}$",
+   "$\\frac{66}{9+4\\sqrt{3}}$",
+   "$\\frac{22}{4+9\\sqrt{3}}$",
+   "$\\frac{66}{4+9\\sqrt{3}}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$4a+3b=22$\n\nTotal area $=A=a^{2}+\\frac{\\sqrt{3}}{4}b^{2}$\n\n$A=\\left (\\frac{22-3b}{4}\\right )^{2}+\\frac{\\sqrt{3}}{4}b^{2}$\n\n$\\frac{dA}{dB}=2\\left (\\frac{22-3b}{4}\\right )\\left (\\frac{-3}{4}\\right )+\\frac{\\sqrt{3}}{4}.2b=0$\n\n$\\Rightarrow \\frac{\\sqrt{3b}}{2}=\\frac{3}{8}(22-3b)$\n\n$\\Rightarrow 4\\sqrt{3}b=66-9b$\n\n$\\therefore b=\\frac{66}{9+4\\sqrt{3}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-29th-june-morning-shift/1l545dst9-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l545i5v",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The domain of the function $\\cos ^{-1}\\left (\\frac{2\\sin ^{-1}\\left (\\frac{1}{4x2-1}\\right )}{π}\\right )$ is :",
+  "options": [
+   "$R-\\left \\{-\\frac{1}{2},\\frac{1}{2}\\right \\}$",
+   "$(-\\infty ,-1]\\cup [1,\\infty )\\cup \\{0\\}$",
+   "$\\left (-\\infty ,\\frac{-1}{2}\\right )\\cup \\left (\\frac{1}{2},\\infty \\right )\\cup \\{0\\}$",
+   "$\\left (-\\infty ,\\frac{-1}{\\sqrt{2}}\\right ]\\cup \\left [\\frac{1}{\\sqrt{2}},\\infty \\right )\\cup \\{0\\}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$-1\\leq \\frac{2\\sin ^{-1}\\left (\\frac{1}{4x2-1}\\right )}{π}\\leq 1$\n\n$\\Rightarrow -\\frac{π}{2}\\leq \\sin ^{-1}\\left (\\frac{1}{4x^{2}-1}\\right )\\leq \\frac{π}{2}$\n\n$\\Rightarrow -1\\leq \\frac{1}{4x^{2}-1}\\leq 1$\n\n$\\therefore$ $\\frac{1}{4x^{2}-1}+1\\geq 0$\n\n$\\Rightarrow \\frac{1+4x^{2}-1}{4x^{2}-1}\\geq 0$\n\n$\\Rightarrow \\frac{4x^{2}}{4x^{2}-1}\\geq 0$ \n\n$\\Rightarrow$ $\\frac{4x^{2}}{(2x+1)(2x-1)}\\geq 0$ ...... (1)\n\n$\\therefore$ $x\\in \\left (-\\infty ,-\\frac{1}{2}\\right )\\cup \\{0\\}\\cup \\left (\\frac{1}{2},\\infty \\right )$   .....(2)\n\nAnd $\\frac{1}{4x^{2}-1}-1\\leq 0$\n\n$\\Rightarrow \\frac{1-4x^{2}+1}{4x^{2}-1}\\leq 0$\n\n$\\Rightarrow \\frac{2-4x^{2}}{4x^{2}-1}\\leq 0$\n\n$\\Rightarrow \\frac{2x^{2}-1}{4x^{2}-1}\\geq 0$\n\n$\\Rightarrow$ $\\frac{\\left (\\sqrt{2}x+1\\right )\\left (\\sqrt{2}x-1\\right )}{(2x+1)(2x-1)}\\geq 0$  ...... (3)\n\n$x\\in \\left (-\\infty ,-\\frac{1}{\\sqrt{2}}\\right ]\\cup \\left (-\\frac{1}{2},\\frac{1}{2}\\right )\\cup \\left [\\frac{1}{\\sqrt{2}},\\infty \\right )$ .....(4)\n\nFrom (2) and (4), we get\n\n$\\therefore$ $x\\in \\left (-\\infty ,-\\frac{1}{\\sqrt{2}}\\right ]\\cup \\left [\\frac{1}{\\sqrt{2}},\\infty \\right )\\cup \\{0\\}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l545j8g",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the constant term in the expansion of \n\n$\\left (3x^{3}-2x^{2}+\\frac{5}{x^{5}}\\right )^{10}$ is $2^{k}.l$, where l is an odd integer, then the value of k is equal to:",
+  "options": [
+   "6",
+   "7",
+   "8",
+   "9"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The general term of $\\left (3x^{3}-2x^{2}+\\dfrac{5}{x^{5}}\\right )^{10}$ is\n\n$\\dfrac{10!}{n_{1}!n_{2}!n_{3}!}(3x^{3})^{n_{1}}(-2x^{2})^{n_{2}}\\left (\\dfrac{5}{x^{5}}\\right )^{n_{3}},n_{1}+n_{2}+n_{3}=10$\n\nThe power of $x$ is $3n_{1}+2n_{2}-5n_{3}$. For the constant term, $3n_{1}+2n_{2}=5n_{3}=5(10-n_{1}-n_{2})$, i.e. $8n_{1}+7n_{2}=50$.\n\nChecking $n_{1}=0,1,\\ldots ,6$, the only non-negative integer solution is $n_{1}=1$, $n_{2}=6$, which gives $n_{3}=3$.\n\n$\\text{Constant term}=\\dfrac{10!}{1!6!3!}(3)(-2)^{6}(5)^{3}=840\\times 3\\times 2^{6}\\times 5^{3}$\n\nSince $840=2^{3}\\times 3\\times 5\\times 7$, the constant term is $2^{9}\\times \\left (3^{2}\\times 5^{4}\\times 7\\right )=2^{9}\\cdot l$, where $l=3^{2}\\times 5^{4}\\times 7$ is odd.\n\nSo $k=9$.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l545kve",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\int\\limits _{0}^{5}\\cos \\left (π\\left (x-\\left [\\frac{x}{2}\\right ]\\right )\\right )dx$,\n\nwhere [t] denotes greatest integer less than or equal to t, is equal to:",
+  "options": [
+   "$-$3",
+   "$-$2",
+   "2",
+   "0"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We know,\n\n$\\left [\\frac{x}{2}\\right ]$ is discontinuous at 1, 2, 3, 4 ........\n\n$\\therefore$ [ x ] is discontinuous at 2, 4, 6, 8 .....\n\nIn between 0 to 5 it is discontinuous at 2 and 4.\n\nBreak the integration into 3 parts\n\n(1) 0 to 2\n\n(2) 2 to 4\n\n(3) 4 to 5\n\n$\\therefore$ $\\int\\limits _{0}^{5}\\cos \\left (π\\left (x-\\left [\\frac{x}{2}\\right ]\\right )\\right )dx$\n\n$=\\int\\limits _{0}^{2}\\cos (π(x-0))dx+\\int\\limits _{2}^{4}\\cos (π(x-1))dx+\\int\\limits _{4}^{5}\\cos (π(x-2))dx$\n\n$=\\int\\limits _{0}^{2}\\cos πxdx+\\int\\limits _{2}^{4}\\cos (πx-π)dx+\\int\\limits _{4}^{5}\\cos (πx-2π)dx$\n\n$=\\int\\limits _{0}^{2}\\cos πdx-\\int\\limits _{2}^{4}\\cos πxdx+\\int\\limits _{4}^{5}\\cos πxdx$\n\n$=\\left [\\frac{\\sin πx}{π}\\right ]_{0}^{2}-\\left [\\frac{\\sin πx}{π}\\right ]_{2}^{4}+\\left [\\frac{\\sin πx}{π}\\right ]_{4}^{5}$\n\n$=0-0+0$\n\n$=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l545nh5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let PQ be a focal chord of the parabola $y^{2} = 4x$ such that it subtends an angle of $\\frac{π}{2}$ at the point (3, 0). Let the line segment PQ be also a focal chord of the ellipse $E:\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$, $a^{2}>b^{2}$. If e is the eccentricity of the ellipse E, then the value of $\\frac{1}{e^{2}}$ is equal to :",
+  "options": [
+   "$1+\\sqrt{2}$",
+   "$3+2\\sqrt{2}$",
+   "$1+2\\sqrt{3}$",
+   "$4+5\\sqrt{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nAs $\\angle PRQ=\\frac{π}{2}$\n\n$\\left (\\frac{\\frac{2}{t}}{3-\\frac{1}{t2}}\\right ).\\left (\\frac{-2t}{3-t^{2}}\\right )=-1$\n\n$\\Rightarrow t=\\pm 1$\n\n$\\therefore$ $P\\equiv (1,2)$ & $Q(1,-2)$\n\n$\\therefore$ for ellipse $\\frac{1}{a^{2}}+\\frac{4}{b^{2}}=1$ and $ae=1$\n\n$\\Rightarrow \\frac{1}{a^{2}}+\\frac{4}{a^{2}(1-e^{2})}=1$\n\n$\\Rightarrow 1+\\frac{4}{(1-e^{2})}=\\frac{1}{e^{2}}$\n\n$\\Rightarrow (5-e^{2})e^{2}=1-e^{2}$\n\n$\\Rightarrow e^{4}-6e^{2}+1=0$\n\n$\\Rightarrow e^{2}=3-2\\sqrt{2}\\Rightarrow \\frac{1}{e^{2}}=3+2\\sqrt{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-29th-june-morning-shift/1l545nh5v-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l545suj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the mean and the variance of 5 observations $x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$ be $\\frac{24}{5}$ and $\\frac{194}{25}$ respectively. If the mean and variance of the first 4 observations are $\\frac{7}{2}$ and a respectively, then $(4a + x_{5})$ is equal to:",
+  "options": [
+   "13",
+   "15",
+   "17",
+   "18"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Mean $(x–)=\\frac{x_{1}+x_{2}+x_{3}+x_{4}+x_{5}}{5}$\n\nGiven, $\\frac{x_{1}+x_{2}+x_{3}+x_{4}+x_{5}}{5}=\\frac{24}{5}$\n\n$\\Rightarrow x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=24$ ...... (1)\n\nNow, Mean of first 4 observation\n\n$=\\frac{x_{1}+x_{2}+x_{3}+x_{4}}{4}$\n\nGiven, $=\\frac{x_{1}+x_{2}+x_{3}+x_{4}}{4}=\\frac{7}{2}$\n\n$\\Rightarrow x_{1}+x_{2}+x_{3}+x_{4}=14$ ...... (2)\n\nFrom equation (1) and (2), we get\n\n$14+x_{5}=24$\n\n$\\Rightarrow x_{5}=10$\n\nNow, variance of first 5 observation\n\n$=\\frac{\\sum x_{i}^{2}}{n}-(x–)^{2}$\n\n$=\\frac{x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+x_{4}^{2}+x_{5}^{2}}{5}-\\left (\\frac{24}{5}\\right )^{2}$\n\nGiven,\n\n$\\frac{x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+x_{4}^{2}+x_{5}^{2}}{5}-\\left (\\frac{24}{5}\\right )^{2}=\\frac{194}{25}$\n\n$\\Rightarrow x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+x_{4}^{2}+x_{5}^{2}=5\\left (\\frac{194}{25}+\\frac{576}{25}\\right )$\n\n$\\Rightarrow x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+x_{4}^{2}+x_{5}^{2}=154$\n\n$\\Rightarrow x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+x_{4}^{2}+(10)^{2}=154$\n\n$\\Rightarrow x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+x_{4}^{2}=54$\n\nNow, variance of first 4 observation\n\n$=\\frac{x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+x_{4}^{2}}{4}-\\left (\\frac{7}{2}\\right )^{2}$\n\nGiven,\n\n$\\frac{x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+x_{4}^{2}}{4}-\\left (\\frac{7}{2}\\right )^{2}=a$\n\n$\\Rightarrow \\frac{54}{4}-\\frac{49}{4}=a$\n\n$\\Rightarrow a=\\frac{5}{4}$\n\n$\\therefore$ $4a+x_{5}$\n\n$=4\\times \\frac{5}{4}+10=15$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l545wee",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $S=\\{z\\in C:|z-2|\\leq 1,z(1+i)+z–(1-i)\\leq 2\\}$. Let $|z-4i|$ attain minimum and maximum values, respectively, at $z_{1}$ $\\in$ S and $z_{2}$ $\\in$ S. If $5(|z_{1}|^{2}+|z_{2}|^{2})=α+β\\sqrt{5}$, where $α$ and $β$ are integers, then the value of $α$ + $β$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 26.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "With $z=x+iy$:\n\n$z(1+i)+\\bar{z}(1-i)=(x-y)+i(x+y)+(x-y)-i(x+y)=2(x-y)\\leq 2\\Rightarrow x-y\\leq 1$\n\n$|z-2|\\leq 1$ is the disc with centre $A(2,0)$ and radius 1. The line $x-y=1$ meets $(x-2)^{2}+y^{2}=1$ where $(x-2)^{2}+(x-1)^{2}=1$, i.e. $x^{2}-3x+2=0$, giving $B(1,0)$ and $C(2,1)$. So $S$ is the part of the disc between the chord $BC$ and the arc $BC$ on the side of the origin.\n\n\n[IMG]\n\nThe point of the circle nearest to $P(0,4)$ lies on $PA$: $2x+y=4$. Moving 1 unit from $A$ towards $P$ (since $PA=2\\sqrt{5}$):\n\n$z_{1}=\\left (2-\\dfrac{1}{\\sqrt{5}}\\right )+\\dfrac{2}{\\sqrt{5}}i$\n\nHere $x-y=2-\\dfrac{3}{\\sqrt{5}}<1$, so $z_{1}\\in S$, and $|z_{1}|^{2}=\\left (2-\\dfrac{1}{\\sqrt{5}}\\right )^{2}+\\dfrac{4}{5}=5-\\dfrac{4}{\\sqrt{5}}$.\n\nAlong the circle the distance from $P$ increases steadily on both sides of $z_{1}$, so on the arc $BC$ it is largest at $B$ or $C$; on the chord $BC$ it is also largest at an end. $PB=\\sqrt{1+16}=\\sqrt{17}$ and $PC=\\sqrt{4+9}=\\sqrt{13}$, so $z_{2}=1$ and $|z_{2}|^{2}=1$.\n\n$5\\left (|z_{1}|^{2}+|z_{2}|^{2}\\right )=5\\left (6-\\dfrac{4}{\\sqrt{5}}\\right )=30-4\\sqrt{5}$\n\nSo $α=30$, $β=-4$ and $α+β=26$.\n\nHence, the answer is 26.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-29th-june-morning-shift/1l545wee0-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 29th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l546055",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let y = y(x) be the solution of the differential equation $\\frac{dy}{dx}+\\frac{\\sqrt{2}y}{2\\cos ^{4}x-\\cos 2x}=xe^{\\tan ^{-1}(\\sqrt{2}\\cot 2x)},0<x<\\frac{π}{2}$ with $y\\left (\\frac{π}{4}\\right )=\\frac{π^{2}}{32}$. If $y\\left (\\frac{π}{3}\\right )=\\frac{π^{2}}{18}e^{-\\tan ^{-1}(α)}$, then the value of 3$α^{2}$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}+\\frac{2\\sqrt{2}y}{1+\\cos ^{2}2x}=xe^{\\tan ^{-1}(\\sqrt{2}\\cot 2x)}$\n\nI.F. $=e^{\\int \\frac{2\\sqrt{2}dx}{1+\\cos 2 2x}}=e^{\\sqrt{2}\\int \\frac{2\\sec 2 2x}{2+\\tan 2 2x}dx}$ $=e^{\\tan ^{-1}\\left (\\frac{\\tan 2x}{\\sqrt{2}}\\right )}$\n\n$\\Rightarrow y\\cdot e^{\\tan ^{-1}\\left (\\frac{\\tan 2x}{\\sqrt{2}}\\right )}=\\int xe^{\\tan ^{-1}(\\sqrt{2}\\cot 2x)}$\n\n$\\cdot e^{\\tan ^{-1}\\left (\\frac{\\tan 2x}{\\sqrt{2}}\\right )}dx+c$\n\n$\\Rightarrow y\\cdot e^{\\tan ^{-1}\\left (\\frac{\\tan 2x}{\\sqrt{2}}\\right )}=e^{\\frac{π}{2}}\\cdot \\frac{x^{2}}{2}+c$\n\nWhen $x=\\frac{π}{4},y=\\frac{π^{2}}{32}$ gives $c=0$\n\nWhen $x=\\frac{π}{3},y=\\frac{π^{2}}{18}e^{-\\tan ^{-1}α}$\n\nSo $\\frac{π^{2}}{18}e^{-\\tan ^{-1}α}\\cdot e^{-\\tan ^{-1}\\left (-\\sqrt{\\frac{3}{2}\\right )}}=e^{π/2}\\frac{π^{2}}{18}$\n\n$\\Rightarrow \\quad -\\tan ^{-1}α+\\tan ^{-1}\\left (\\sqrt{\\frac{3}{2}}\\right )=\\frac{π}{2}$\n\n$\\Rightarrow \\tan ^{-1}(-α)=\\tan ^{-1}\\left (\\sqrt{\\frac{2}{3}}\\right )$\n\n$\\Rightarrow α=-\\sqrt{\\frac{2}{3}}\\Rightarrow 3α^{2}=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5464te",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "$50\\tan \\left (3\\tan ^{-1}\\left (\\frac{1}{2}\\right )+2\\cos ^{-1}\\left (\\frac{1}{\\sqrt{5}}\\right )\\right )+4\\sqrt{2}\\tan \\left (\\frac{1}{2}\\tan ^{-1}(2\\sqrt{2})\\right )$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 29.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$50\\tan \\left (\\tan ^{-1}\\frac{1}{2}+2\\tan ^{-1}\\left (\\frac{1}{2}\\right )+2\\tan ^{-1}(2)\\right )$\n\n$+4\\sqrt{2}\\tan \\left (\\frac{1}{2}\\tan ^{-1}(2\\sqrt{2})\\right )$\n\n$\\Rightarrow 50\\tan \\left (π+\\tan ^{-1}\\left (\\frac{1}{2}\\right )\\right )+4\\sqrt{2}\\tan \\left (\\frac{1}{2}\\tan ^{-1}2\\sqrt{2}\\right )$\n\n$\\Rightarrow \\quad 50\\left (\\frac{1}{2}\\right )+4\\sqrt{2}\\tan α$\n\nWhere $2α=\\tan ^{-1}2\\sqrt{2}$\n\n$\\Rightarrow \\frac{2\\tan α}{1-\\tan ^{2}α}=2\\sqrt{2}$.. (i)\n\n$\\Rightarrow \\quad 2\\sqrt{2}\\tan ^{2}α+2\\tan α-2\\sqrt{2}=0$\n\n$\\Rightarrow \\quad 2\\sqrt{2}\\tan ^{2}α+4\\tan α-2\\tan α-2\\sqrt{2}=0$\n\n$\\Rightarrow (2\\tan α-\\sqrt{2})(\\sqrt{2}\\tan α+2)=0$\n\n$\\Rightarrow \\tan α=-\\sqrt{2}$ or $\\frac{1}{\\sqrt{2}}$\n\n$\\Rightarrow \\tan α=\\frac{1}{\\sqrt{2}}$\n\n$(\\tan α=-\\sqrt{2}$ is rejected as $0<α<\\frac{π}{4}$)\n\n$\\Rightarrow \\quad 25+4\\sqrt{2}\\frac{1}{\\sqrt{2}}=29$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l546a0k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let c, k $\\in$ R. If $f(x)=(c+1)x^{2}+(1-c^{2})x+2k$ and $f(x+y)=f(x)+f(y)-xy$, for all x, y $\\in$ R, then the value of $|2(f(1)+f(2)+f(3)+......+f(20))|$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3395.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "f(x) is polynomial\n\nPut y = 1/x in given functional equation we get\n\n$f\\left (x+\\frac{1}{x}\\right )=f(x)+f\\left (\\frac{1}{x}\\right )-1$\n\n$\\Rightarrow (c+1)\\left (x+\\frac{1}{x}\\right )^{2}+(1-c^{2})\\left (x+\\frac{1}{x}\\right )+2K$\n\n$=(c+1)x^{2}+(1-c^{2})x+2K+(c+1)\\frac{1}{x^{2}}+(1-c^{2})\\frac{1}{x}+2K-1$\n\n$\\Rightarrow 2(c+1)=2K-1$ ..... (1)\n\nand put $x=y=0$ we get\n\n$f(0)=f(0)+f(0)-0\\Rightarrow f(0)=0\\Rightarrow k=0$\n\n$\\therefore$ $k=0$ and $2c=-3\\Rightarrow c=-3/2$\n\n$f(x)=-\\frac{x^{2}}{2}-\\frac{5x}{4}=-\\frac{1}{4}(5x+2x^{2})$\n\n$\\left |2\\sum\\limits _{i=1}^{20}f(i)\\right |=\\left |\\frac{-2}{4}\\left (\\frac{5.20.21}{2}+\\frac{2.20.21.41}{6}\\right )\\right |$\n\n$=\\left |\\frac{-1}{2}(1050+5740)\\right |$\n\n$=\\left |-\\frac{6790}{2}\\right |=3395$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l546blt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $H:\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$, a > 0, b > 0, be a hyperbola such that the sum of lengths of the transverse and the conjugate axes is $4(2\\sqrt{2}+\\sqrt{14})$. If the eccentricity H is $\\frac{\\sqrt{11}}{2}$, then the value of $a^{2} + b^{2}$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 88.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2a+2b=4\\left (2\\sqrt{2}+\\sqrt{14}\\right )$ ...... (1)\n\n$1+\\frac{b^{2}}{a^{2}}=\\frac{11}{4}$ ....... (2)\n\n$\\Rightarrow \\frac{b^{2}}{a^{2}}=\\frac{7}{4}$ ....... (3)\n\nand $a+b=4\\sqrt{2}+2\\sqrt{14}$ ...... (4)\n\nBy (3) and (4)\n\n$\\Rightarrow a+\\frac{\\sqrt{7}}{2}a=4\\sqrt{2}+2\\sqrt{14}$\n\n$\\Rightarrow \\frac{a\\left (2+\\sqrt{7}\\right )}{2}=2\\sqrt{2}\\left (2+\\sqrt{7}\\right )$\n\n$\\Rightarrow a=4\\sqrt{2}\\Rightarrow a^{2}=32$ and $b^{2}=56$\n\n$\\Rightarrow a^{2}+b^{2}=32+56=88$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l546nn3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $b_{1}b_{2}b_{3}b_{4}$ be a 4-element permutation with $b_{i}$ $\\in$ {1, 2, 3, ........, 100} for 1 $\\leq$ i $\\leq$ 4 and $b_{i}$ $\\neq$ $b_{j}$ for i $\\neq$ j, such that either $b_{1}, b_{2}, b_{3}$ are consecutive integers or $b_{2}, b_{3}, b_{4}$ are consecutive integers. Then the number of such permutations $b_{1}b_{2}b_{3}b_{4}$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 18915.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 29th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "There are 98 sets of three consecutive integers and 97 sets of four consecutive integers.\n\nUsing the principle of inclusion and exclusion,\n\nNumber of permutations of $b_{1}b_{2}b_{3}b_{4}=$ Number of permutations when $b_{1}b_{2}b_{3}$ are consecutive + Number of permutations when $b_{2}b_{3}b_{4}$ are consecutive - Number of permutations when $b_{1}b_{2}$ $b_{3}b_{4}$ are consecutive\n\n$=97\\times 98+97\\times 98-97=97\\times 195=18915$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 29th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

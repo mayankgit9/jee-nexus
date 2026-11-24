@@ -1,0 +1,798 @@
+[
+ {
+  "publicId": "PYQ-2022-1l56640d",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a function f : N $\\to$ N be defined by\n\n$f(n)=\\left [\\begin{array}{ll} 2n, & n=2,4,6,8,...... \\\\ n-1, & n=3,7,11,15,...... \\\\ \\frac{n+1}{2}, & n=1,5,9,13,...... \\end{array} \\right.$\n\nthen, f is",
+  "options": [
+   "one-one but not onto",
+   "onto but not one-one",
+   "neither one-one nor onto",
+   "one-one and onto"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "When n = 1, 5, 9, 13 then $\\frac{n+1}{2}$ will give all odd numbers.\n\nWhen n = 3, 7, 11, 15 .....\n\nn $-$ 1 will be even but not divisible by 4\n\nWhen n = 2, 4, 6, 8 .....\n\nThen 2n will give all multiples of 4\n\nSo range will be N.\n\nAnd no two values of n give same y, so function is one-one and onto.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l56668z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of linear equations\n\n$2x+3y-z=-2$\n\n$x+y+z=4$\n\n$x-y+|λ|z=4λ-4$\n\nwhere, $λ$ $\\in$ R, has no solution, then",
+  "options": [
+   "$λ$ = 7",
+   "$λ$ = $-$7",
+   "$λ$ = 8",
+   "$λ^{2}$ = 1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\Delta =\\left |\\begin{array}{lll} 2 & 3 & -1 \\\\ 1 & 1 & 1 \\\\ 1 & -1 & |λ| \\end{array}\\right |=0\\Rightarrow |λ|=7$\n\nBut at $λ=7,D_{x}=D_{y}=D_{z}=0$\n\n$P_{1}:2x+3y-z=-2$\n\n$P_{2}:x+y+z=4$\n\n$P_{3}:x-y+|λ|z=4λ-4$\n\nSo clearly $5P_{2}-2P_{1}=P_{3}$, so at $λ=7$, system of equation is having infinite solutions.\n\nSo $λ=-7$ is correct answer.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l5668os",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The total number of 5-digit numbers, formed by using the digits 1, 2, 3, 5, 6, 7 without repetition, which are multiple of 6, is :",
+  "options": [
+   "36",
+   "48",
+   "60",
+   "72"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A number is a multiple of 6 when it is even and its digit sum is a multiple of 3.\n\nThe six digits sum to $1+2+3+5+6+7=24$. A 5-digit number leaves out one digit $d$, and $24-d$ is a multiple of 3 only for $d=3$ or $d=6$.\n\nLeaving out 3, the digits are 1, 2, 5, 6, 7 (sum 21). The units digit is 2 or 6, and the other four digits fill the remaining places in $4!=24$ ways, giving $2\\times 24=48$ numbers.\n\nLeaving out 6, the digits are 1, 2, 3, 5, 7 (sum 18). The units digit must be 2, giving $4!=24$ numbers.\n\n$\\text{Total}=48+24=72$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l566am8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A_{1}, A_{2}, A_{3}$, ....... be an increasing geometric progression of positive real numbers. If $A_{1}A_{3}A_{5}A_{7} =$ $\\frac{1}{1296}$ and $A_{2} + A_{4} =$ $\\frac{7}{36}$, then the value of $A_{6} + A_{8} + A_{10}$ is equal to",
+  "options": [
+   "33",
+   "37",
+   "43",
+   "47"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{A_{4}}{r^{3}}.\\frac{A_{4}}{r}.A_{4}r.A_{4}r^{3}=\\frac{1}{1296}$\n\n$A_{4}=\\frac{1}{6}$\n\n$A_{2}=\\frac{7}{36}-\\frac{1}{6}=\\frac{1}{36}$\n\nSo $A_{6}+A_{8}+A_{10}=1+6+36=43$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l566dpz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let [t] denote the greatest integer less than or equal to t. Then, the value of the integral $\\int\\limits _{0}^{1}[-8x^{2}+6x-1]dx$ is equal to :",
+  "options": [
+   "$-$1",
+   "$\\frac{-5}{4}$",
+   "$\\frac{\\sqrt{17}-13}{8}$",
+   "$\\frac{\\sqrt{17}-16}{8}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{0}^{1}\\left [-8x^{2}+6x-1\\right ]dx$\n\n\n[IMG]\n\n\n$=\\int\\limits _{0}^{\\frac{1}{4}}(-1)dx+\\int\\limits _{\\frac{1}{4}}^{\\frac{1}{2}}0dx+\\int\\limits _{\\frac{1}{2}}^{\\frac{3}{4}}-1dx+\\int\\limits _{\\frac{3}{4}}^{\\frac{3+\\sqrt{17}}{8}}-2dx+\\int\\limits _{\\frac{3+\\sqrt{17}}{8}}^{1}-3dx$\n\n $=-\\frac{1}{4}-\\frac{1}{4}-2\\left (\\frac{3+\\sqrt{17}}{8}-\\frac{3}{4}\\right )-3\\left (1-\\frac{3+\\sqrt{17}}{8}\\right )$\n\n $=\\frac{\\sqrt{17}-13}{8}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-28th-june-morning-shift/1l566dpzj-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 28th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l566fwd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : R $\\to$ R be defined as\n\n$f(x)=\\left [\\begin{array}{ll} [e^{x}], & x<0 \\\\ ae^{x}+[x-1], & 0\\leq x<1 \\\\ b+[\\sin (πx)], & 1\\leq x<2 \\\\ [e^{-x}]-c, & x\\geq 2 \\end{array} \\right.$\n\nwhere a, b, c $\\in$ R and [t] denotes greatest integer less than or equal to t. Then, which of the following statements is true?",
+  "options": [
+   "There exists a, b, c $\\in$ R such that f is continuous on R.",
+   "If f is discontinuous at exactly one point, then a + b + c = 1",
+   "If f is discontinuous at exactly one point, then a + b + c $\\neq$ 1",
+   "f is discontinuous at at least two points, for any values of a, b and c"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\left \\{\\begin{array}{ll} 0 & x<0 \\\\ ae^{x}-1 & 0\\leq x<1 \\\\ b & x=1 \\\\ b-1 & 1<x<2 \\\\ -c & x\\geq 2 \\end{array} \\right.$\n\nTo be continuous at x = 0\n\na $-$ 1 = 0\n\nto be continuous at x = 1\n\nae $-$ 1 = b = b $-$ 1 $\\Rightarrow$ not possible\n\nto be continuous at x = 2\n\nb $-$ 1 = $-$ c $\\Rightarrow$ b + c = 1\n\nIf a = 1 and b + c = 1 then f(x) is discontinuous at exactly one point.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l566hjj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area of the region S = {(x, y) : $y^{2}$ $\\leq$ 8x, y $\\geq$ $\\sqrt{2}$x, x $\\geq$ 1} is",
+  "options": [
+   "$\\frac{13\\sqrt{2}}{6}$",
+   "$\\frac{11\\sqrt{2}}{6}$",
+   "$\\frac{5\\sqrt{2}}{6}$",
+   "$\\frac{19\\sqrt{2}}{6}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n \n\nRequired area\n\n$=\\int\\limits _{1}^{4}\\left (\\sqrt{8x}-\\sqrt{2}x\\right )dx$\n\n$=\\frac{2\\sqrt{8}}{3}x^{\\frac{3}{2}}-\\frac{x^{2}}{\\sqrt{2}}\\left |_{1}^{4} \\right.$\n\n$=\\frac{16\\sqrt{3}}{3}-\\frac{16}{\\sqrt{2}}-\\frac{2\\sqrt{8}}{3}+\\frac{1}{\\sqrt{2}}$\n\n$=\\frac{11\\sqrt{2}}{6}$ sq. units",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-28th-june-morning-shift/1l566hjjl-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 28th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l566lm5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the solution curve $y=y(x)$ of the differential equation\n\n$\\left [\\frac{x}{\\sqrt{x^{2}-y^{2}}}+e^{\\frac{y}{x}}\\right ]x\\frac{dy}{dx}=x+\\left [\\frac{x}{\\sqrt{x^{2}-y^{2}}}+e^{\\frac{y}{x}}\\right ]y$\n\npass through the points (1, 0) and (2$α$, $α$), $α$ > 0. Then $α$ is equal to",
+  "options": [
+   "$\\frac{1}{2}\\exp \\left (\\frac{π}{6}+\\sqrt{e}-1\\right )$",
+   "$\\frac{1}{2}\\exp \\left (\\frac{π}{6}+e-1\\right )$",
+   "$\\exp \\left (\\frac{π}{6}+\\sqrt{e}+1\\right )$",
+   "$2\\exp \\left (\\frac{π}{3}+\\sqrt{e}-1\\right )$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$⎛⎝⎜\\frac{1}{\\sqrt{1-\\frac{y2}{x2}}}+e^{\\frac{y}{x}}⎞⎠⎟\\frac{dy}{dx}=1+⎛⎝⎜\\frac{1}{\\sqrt{1-\\frac{y2}{x2}}}+e^{\\frac{y}{x}}⎞⎠⎟\\frac{y}{x}$\n\nPutting y = tx\n\n$\\left (\\frac{1}{\\sqrt{1-t^{2}}}+e^{t}\\right )\\left (t+x\\frac{dt}{dx}\\right )=1+\\left (\\frac{1}{\\sqrt{1-t^{2}}}+e^{t}\\right )t$\n\n$\\Rightarrow x\\left (\\frac{1}{\\sqrt{1-t^{2}}}+e^{t}\\right )\\frac{dt}{dx}=1$\n\n$\\Rightarrow \\sin ^{-1}t+e^{t}=\\ln x+C$\n\n$\\Rightarrow \\sin ^{-1}\\left (\\frac{y}{x}\\right )+e^{y/x}=\\ln x+C$\n\nat x = 1, y = 0\n\nSo, $0+e^{0}=0+C\\Rightarrow C=1$\n\nat $(2α,α)$\n\n$\\sin ^{-1}\\left (\\frac{y}{x}\\right )+e^{y/x}=\\ln x+1$\n\n$\\Rightarrow \\frac{π}{6}+e^{\\frac{1}{2}}-1=\\ln (2α)$\n\n$\\Rightarrow α=\\frac{1}{2}e^{\\left (\\frac{π}{6}+e^{\\dfrac{1}{2}}-1\\right )}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l566pyt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution of the differential equation $x(1-x^{2})\\frac{dy}{dx}+(3x^{2}y-y-4x^{3})=0$, $x>1$, with $y(2)=-2$. Then y(3) is equal to :",
+  "options": [
+   "$-$18",
+   "$-$12",
+   "$-$6",
+   "$-$3"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}+\\frac{y(3x^{2}-1)}{x(1-x^{2})}=\\frac{4x^{3}}{x(1-x^{2})}$\n\n$IF=e^{\\int \\frac{3x2-1}{x-x3}dx}=e^{-\\ln |x^{3}-x|}=e^{-\\ln (x^{3}-x)}=\\frac{1}{x^{3}-x}$\n\nSolution of D.E. can be given by\n\n$y.\\frac{1}{x^{3}-x}=\\int \\frac{4x^{3}}{x(1-x^{2})}.\\frac{1}{x(x^{2}-1)}dx$\n\n$\\Rightarrow \\frac{y}{x^{3}-x}=\\int \\frac{-4x}{(x^{2}-1)^{2}}dx$\n\n$\\Rightarrow \\frac{y}{x^{3}-x}=\\frac{2}{(x^{2}-1)}+c$\n\nat x = 2, y = $-$2\n\n$\\frac{-2}{6}=\\frac{2}{3}+c\\Rightarrow c=-1$\n\nat $x=3\\Rightarrow \\frac{y}{24}=\\frac{2}{8}-1\\Rightarrow y=-18$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l566qk0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of real solutions of \n\n$x^{7}+5x^{3}+3x+1=0$ is equal to $____________$.",
+  "options": [
+   "0",
+   "1",
+   "3",
+   "5"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$f^{'}(x)=7x^{6}+15x^{2}+3>0\\forall x\\in R$\n\n$f(x)$ is always increasing\n\nSo clearly it intersects\n\nx-axis at only one point",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-28th-june-morning-shift/1l566qk0u-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 28th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l56744u",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The probability, that in a randomly selected 3-digit number at least two digits are odd, is :",
+  "options": [
+   "$\\frac{19}{36}$",
+   "$\\frac{15}{36}$",
+   "$\\frac{13}{36}$",
+   "$\\frac{23}{36}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "At least two digits are odd = exactly two digits are odd + exactly there 3 digits\nare odd \n\nFor exactly three digits are odd \n\n\n[IMG]\n\n\nFor exactly two digits odd :\n\nIf 0 is used then $:2\\times 5\\times 5=50$\n\nIf 0 is not used then : ${}^{3}\\mathrm{C}_{1}\\times 4\\times 5\\times 5=300$\n\nRequired Probability $=\\frac{475}{900}=\\frac{19}{36}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-28th-june-morning-shift/1l56744uu-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 28th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l567gii",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $R_{1}$ and $R_{2}$ be relations on the set {1, 2, ......., 50} such that\n\n$R_{1} = {(p, p^{n})$ : p is a prime and n $\\geq$ 0 is an integer} and\n\n$R_{2} = {(p, p^{n})$ : p is a prime and n = 0 or 1}.\n\nThen, the number of elements in $R_{1}$ $-$ $R_{2}$ is $_______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $R_{1}=\\{(p,p^{n}):p$ is a Prime and $n\\geq 0$ is an integer $\\}$\n\nand, set $A=\\{1,2,3\\ldots \\ldots .50\\}$\n\n$p$ is a Prime number which can take 15 values $2,3,5,7,11,13,17,19,23,29,31,37,41,43$ and 47\n\n$\\therefore$ We can calculate no. of elements in $\\mathrm{R}_{1}$\n\n$\\mathrm{R}_{1}=\\left (2,2^{0}\\right ),\\left (2,2^{1}\\right ),\\left (2,2^{2}\\right )\\left (2,2^{3}\\right )\\ldots \\ldots \\left (2,2^{5}\\right )=6$ number of ordered pairs\n\n$\\left (3,3^{0}\\right ),\\left (3,3^{1}\\right ),\\left (3,3^{2}\\right )\\ldots \\ldots ..\\left (3,3^{3}\\right )=4$ number of ordered pairs\n\n$\\left (5,5^{0}\\right ),\\left (5,5^{1}\\right ),\\left (5,5^{2}\\right )\\ldots \\ldots \\ldots ..=3$ number of ordered pairs\n\n$\\left (7,7^{0}\\right )\\ldots \\ldots .\\left (7,7^{2}\\right )\\ldots \\ldots \\ldots =3$ number of ordered pairs\n\n$\\left (11,11^{0}\\right )$ and $\\left (11,11^{1}\\right )=2$ number of ordered pairs\n\n$\\left (13,13^{0}\\right )$ and $\\left (13,13^{1}\\right )=2$ number of ordered pairs\n\n$\\therefore$ For the 11 prime numbers ($11,13,17,19,23,29,31,37,41,43$ and 47), $n$ can only be 0, 1 (two pairs each).\n\n$\\therefore n(\\mathrm{R}_{1})=6+4+3+3+(2\\times 11)=38$\n\n$\\mathrm{R}_{2}=(p,p^{n})$, where n = 0 or 1\n\n$\\left (2,2^{0}\\right ),\\left (2,2^{1}\\right )\\left (3,3^{0}\\right )\\left (3,3^{1}\\right )\\ldots ..\\left (47,47^{0}\\right )\\left (47,47^{1}\\right )$\n\nTwo ordered pairs of each element $n(R_{2})=2\\times 15=30$ elements \n\nHence $R_{1}-R_{2}=38-30=8$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l567jtf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of real solutions of the equation $e^{4x}+4e^{3x}-58e^{2x}+4e^{x}+1=0$ is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Dividing by $e^{2x}$\n\n$e^{2x}+4e^{x}-58+4e^{-x}+e^{-2x}=0$\n\n$\\Rightarrow (e^{x}+e^{-x})^{2}+4(e^{x}+e^{-x})-60=0$\n\nLet $e^{x}+e^{-x}=t\\in [2,\\infty )$\n\n$\\Rightarrow t^{2}+4t-60=0$\n\n$\\Rightarrow t=6$ is only possible solution\n\n$e^{x}+e^{-x}=6\\Rightarrow e^{2x}-6e^{x}+1=0$\n\nLet $e^{x}=p$,\n\n$p^{2}-6p+1=0$\n\n$\\Rightarrow p=\\frac{3+\\sqrt{5}}{2}$ or $\\frac{3-\\sqrt{5}}{2}$\n\nSo $x=\\ln \\left (\\frac{3+\\sqrt{5}}{2}\\right )$ or $\\ln \\left (\\frac{3-\\sqrt{5}}{2}\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l567lky",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The mean and standard deviation of 15 observations are found to be 8 and 3 respectively. On rechecking it was found that, in the observations, 20 was misread as 5. Then, the correct variance is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 17.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{\\sum x_{i}^{2}}{15}-8^{2}=9\\Rightarrow \\sum x_{i}^{2}=15\\times 73=1095$\n\nLet $x–_{c}$ be corrected mean $x–_{c}$ = 9\n\n$\\sum x_{c}^{2}=1095-25+400=1470$\n\nCorrect variance $=\\frac{1470}{15}-(9)^{2}=98-81=17$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l567mme",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\vec{a}=2\\hat{i}+\\hat{j}+3\\widehat{k}$, $\\vec{b}=3\\hat{i}+3\\hat{j}+\\widehat{k}$ and $\\vec{c}=c_{1}\\hat{i}+c_{2}\\hat{j}+c_{3}\\widehat{k}$ are coplanar vectors and $\\vec{a}\\quad .\\vec{c}=5$, $\\vec{b}⊥\\vec{c}$, then $122(c_{1}+c_{2}+c_{3})$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 150.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2C_{1}+C_{2}+3C_{3}=5$ ...... (i)\n\n$3C_{1}+3C_{2}+C_{3}=0$ ...... (ii)\n\n$\\left [\\vec{a}\\vec{b}\\vec{c}\\right ]=\\left |\\begin{array}{lll} 2 & 1 & 3 \\\\ 3 & 3 & 1 \\\\ C_{1} & C_{2} & C_{3} \\end{array}\\right |$\n\n$=2(3C_{3}-C_{2})-1(3C_{3}-C_{1})+3(3C_{2}-3C_{1})$\n\n$=3C_{3}+7C_{2}-8C_{1}$\n\n$\\Rightarrow 8C_{1}-7C_{2}-3C_{3}=0$ ...... (iii)\n\n$C_{1}=\\frac{10}{122},C_{2}=\\frac{-85}{122},C_{3}=\\frac{225}{122}$\n\nSo $122(C_{1}+C_{2}+C_{3})=150$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l567opn",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A ray of light passing through the point P(2, 3) reflects on the x-axis at point A and the reflected ray passes through the point Q(5, 4). Let R be the point that divides the line segment AQ internally into the ratio 2 : 1. Let the co-ordinates of the foot of the perpendicular M from R on the bisector of the angle PAQ be ($α$, $β$). Then, the value of 7$α$ + 3$β$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 31.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n \n\n$\\frac{4}{5-α}=\\frac{3}{α-2}\\Rightarrow 4α-8=15-3α$\n\n$α=\\frac{23}{7}$\n\n$A=\\left (\\frac{23}{7},0\\right )Q=(5,4)$\n\n$R=\\left (\\frac{10+\\frac{23}{7}}{3},\\frac{8}{3}\\right )$\n\n$=\\left (\\frac{31}{7},\\frac{8}{3}\\right )$\n\nBisector of angle PAQ is $X=\\frac{23}{7}$\n\n$\\Rightarrow M=\\left (\\frac{23}{7},\\frac{8}{3}\\right )$\n\nSo, $7α+3β=31$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-28th-june-morning-shift/1l567opn9-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 28th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l567rod",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $A = {1, a_{1}, a_{2} ....... a_{18}, 77}$ be a set of integers with $1 < a_{1} < a_{2} < ....... < a_{18} < 77$. \n\nLet the set A + A = {x + y : x, y $\\in$ A} contain exactly 39 elements. Then, the value of $a_{1} + a_{2} + ...... + a_{18}$ is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 702.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "If we write the elements of $A+A$, we can certainly find 39 distinct elements as $1+1,1+a_{1},1+a_{2},\\ldots .1$ $+a_{18},1+77,a_{1}+77,a_{2}+77,\\ldots \\ldots a_{18}+77,77+77$.\n\n It means all other sums are already present in these 39 values, which is only possible in case when all numbers are in A.P.\n\nLet the common difference be '$d$'.\n\n$77=1+19\\mathrm{d}\\Rightarrow d=4$\n\nSo, $\\sum\\limits _{i=1}^{18}a_{i}=\\frac{18}{2}[2a_{1}+17d]=9[10+68]=702$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l567u2d",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of positive integers k such that the constant term in the binomial expansion of $\\left (2x^{3}+\\frac{3}{x^{k}}\\right )^{12}$, x $\\neq$ 0 is $2^{8} . l$, where l is an odd integer, is $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given Binomial expression is\n\n$\\left (2x^{3}+\\frac{3}{x^{k}}\\right )^{12}$\n\nGeneral term,\n\n$T_{r+1}={}^{12}C_{r}(2x^{3})^{r}.\\left (\\frac{3}{x^{k}}\\right )^{12-r}$\n\n$=\\left ({}^{12}C_{r}\\qquad .2^{r}.3^{12-r}\\right ).x^{3r-12k+kr}$\n\nFor constant term,\n\n$3r-12k+kr=0$\n\n$\\Rightarrow k(12-r)=3r$\n\n$\\Rightarrow k=\\frac{3r}{12-r}$\n\nFor r = 1, $k=\\frac{3}{11}$ (not integer)\n\nFor r = 2, $k=\\frac{6}{10}$ (not integer)\n\nFor r = 3, $k=\\frac{9}{9}=1$  (integer)\n\nFor r = 6, $k=\\frac{18}{6}=3$ (integer)\n\nFor r = 8, $k=\\frac{24}{4}=6$ (integer)\n\nFor r = 9, $k=\\frac{27}{3}=9$ (integer)\n\nFor r = 10, $k=\\frac{30}{2}=15$ (integer)\n\nFor r = 11, $k=\\frac{33}{1}=33$ (integer)\n\nSo, for r = 3, 6, 8, 9, 10 and 11 k is positive integer.\n\nWhen k = 1 then r  = 3 and constant term is\n\n$={}^{12}C_{3}.2^{3}.3^{9}$\n\n$=\\frac{12.11.10}{3.2.1}.2^{3}.3^{9}$\n\n$=2.\\qquad 11.2.5.2^{3}.3^{9}$\n\n$=11\\qquad .5.2^{5}.3^{9}$\n\n$=2^{5}\\qquad .(55.3^{9})$\n\n$=2^{5}(l)$\n\n$\\neq 2^{8}\\qquad .l$\n\nWhen k = 3 then r = 6 and constant term\n\n$={}^{12}C_{6}.2^{6}.3^{6}$\n\n$=\\frac{12.11.10.9.8.7}{6.5.4.3.2.1}.2^{6}.3^{6}$\n\n$=2^{8}\\qquad .231.3^{6}$\n\n$=2^{8}(l)$\n\nWhen k = 6 then r = 8 and constant term\n\n$={}^{12}C_{8}.2^{8}.3^{4}$\n\n$=\\frac{12.11.10.9}{4.3.2.1}.2^{8}.3^{4}$\n\n$=2^{8}\\qquad .55.3^{6}$\n\n$=2^{8}(l)$\n\nWhen k = 9 then r = 9 and constant term\n\n$={}^{12}C_{9}.2^{9}.3^{3}$\n\n$=\\frac{12.11.10}{3.2.1}.2^{9}.3^{3}$\n\n$=2^{11}.55.3^{3}$\n\nHere power of 2 is 11 which is greater than 8. So, k = 9 is not possible.\n\nSimilarly for k = 15 and k = 33, $2^{8}\\quad .l$ form is not possible.\n\n$\\therefore$ k = 3 and k = 6 is accepted.\n\n$\\therefore$ For 2 positive integer value of k, $2^{8}\\quad .l$ form of constant term possible.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l567v51",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of elements in the set {z = a + ib $\\in$ C : a, b $\\in$ Z and 1 < | z $-$ 3 + 2i | < 4} is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 40.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 28th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nat line $y=-2$, we have $(5,-2)(6,-2)(1,-2)(0,-2)$ $\\Rightarrow 4$ points \n\nat line $y=-1$, we have $(4,-1)(5,-1)(6,-1)(2,-1)$ $(1,-1)(0,-1)\\Rightarrow 6$ points\n\nat line $y=0$, we have $(0,0)(1,0)(2,0)(3,0)(4,0)$ $(5,0)(6,0)\\Rightarrow 7$ points\n\nat line $y=1$, we have $(1,1),(2,1),(3,1),(4,1),(5,1)$ i.e. 5 points\n\nsymmetrically\n\nat line $y=-5$, we have 5 points\n\nat line $y=-4$, we have 7 points\n\nat line $y=-3$, we have 6 points\n\nSo Total integral points $=2(5+7+6)+4$\n\n$=40$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 28th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-28th-june-morning-shift/1l567v516-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 28th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

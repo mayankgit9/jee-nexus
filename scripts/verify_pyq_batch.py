@@ -54,12 +54,22 @@ def main():
             check(f"{qid} text len", isinstance(q.get("text"), str) and len(q["text"]) >= 10, "")
             check(f"{qid} no MATH_FAILED", "[MATH_FAILED]" not in q.get("text", ""), "")
             check(f"{qid} no raw svg", "<mjx" not in q.get("text", "") and "<svg" not in q.get("text", ""), "")
-            check(f"{qid} no html tags", not re.search(r"<[a-z][^>]*>", q.get("text", ""), re.I), "")
+            # only flag REAL html tags — '2<x<3 ... x>5' is math, not markup
+            html_re = re.compile(r"</?(?:sub|sup|b|i|em|strong|span|div|p|br|img|table|thead|tbody|tr|td|th|ul|ol|li|a|math|svg|font|h[1-6]|code|pre|u|s|small|big|label|button|svg|mjx-[a-z-]+)[\s/>]", re.I)
+            check(f"{qid} no html tags", not html_re.search(q.get("text", "")), "")
             check(f"{qid} balanced math $", q.get("text", "").count("$") % 2 == 0,
                   q.get("text", "")[:80])
             if q.get("type") == "numerical":
-                check(f"{qid} numericalAnswer",
-                      q.get("numericalAnswer") is not None, "")
+                tags = q.get("tags") or []
+                if "numerical-multi-answer" in tags:
+                    # official solution derives TWO valid values (e.g. 15 or 75);
+                    # no single numerical key exists — cannot be auto-graded
+                    check(f"{qid} multi-answer has no single key", q.get("numericalAnswer") is None, str(q.get("numericalAnswer")))
+                elif "bonus-dropped-by-nta" in tags:
+                    # NTA dropped the question (inconsistent data etc.) — no key
+                    check(f"{qid} bonus has no key (dropped by NTA)", q.get("numericalAnswer") is None, str(q.get("numericalAnswer")))
+                else:
+                    check(f"{qid} numericalAnswer", q.get("numericalAnswer") is not None, "")
             else:
                 opts = q.get("options") or []
                 check(f"{qid} options>=2", len(opts) >= 2, str(len(opts)))
