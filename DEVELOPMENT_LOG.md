@@ -11,6 +11,49 @@ User directive: keep working autonomously (health checks, bug hunting, features,
 UI). All changes below are committed, pushed AND deployed to
 https://jee-nexus-app.jee-nexus.workers.dev.
 
+### Bug 7 (latent, critical) — subrequest cap on exam SUBMISSION
+- Per-answer `examAttemptAnswer.update` in submit: 75 answers × fresh client
+  per Proxy access = 75 connections → a fully-answered mock would 500 AFTER
+  the student's 3-hour effort (E2E had answered 30, masking it).
+- Fix ladder (each step verified live with a full 75-answer E2E):
+  1. `$transaction` array over one `dbClient()` — worked, 20.6s (76 sequential
+     round trips over one connection)
+  2. single `$executeRawUnsafe` `UPDATE ... FROM (VALUES ...)` with numbered
+     placeholders — **2.6s**. (`Prisma.join` does NOT expand inside
+     `$executeRaw` on the WASM engine — renders the list as one `$1`.)
+- `db.ts` exports `dbClient()` — one explicit client for multi-op units of
+  work (Proxy per-access clients make `$transaction([db.X(), db.Y()])`
+  impossible: ops come from different clients).
+
+### Bug 8 (latent) — admin import would die at ~16-20 questions on Workers
+- import.ts used the Proxy for every query (2-3 connections per question).
+  Actions bulk import runs on Node (unaffected) — the admin dashboard path
+  on the Worker would blow the cap.
+- Fix: single `dbClient()` for the whole batch + AdminView chunks client-side
+  (100/req) with live progress. Verified live: 1/1 imported through the
+  deployed Worker, then cleaned up.
+
+### Analytics — mock performance merged into stats (feature gap)
+- /api/stats read only the practice `attempts` table: mock-only students saw
+  "No data yet" despite hours of exam effort. Graded exam answers (submitted/
+  expired attempts) now merge into totals, accuracy, subject/chapter maps,
+  daily activity, recent feed (source-tagged) + `examAttempts` count.
+  PerformanceView: "Mock tests taken" stat card. Verified: admin shows
+  30 attempts / 73% / 1 mock, Physics 25/18, Chemistry 5/4, exam-source recents.
+
+### CBT runner polish (VLM-reviewed)
+- NTA-style HH:MM:SS timer (was 179:58-style minutes) in header + summary
+- Question counter promoted (font-medium foreground — was washed out)
+
+### Also this session
+- Attempt-first browsing + "Just show solution" (PYQ/bookmarks).
+- Data-driven year grids (home + practice filter), honest copy fixes.
+- "Generate full-length mock" button (MockView).
+- Mobile home polish (subject icons, badge wrap, always-visible CTA).
+- Live E2E suites: `scripts/cbt_e2e_live.py` (12/12 grading),
+  `scripts/mock_e2e_live.py` (75-answer full mock: 75/75 graded, 190/300).
+- Verified live: admin import (1/1), exam list, full 75Q E2E ×3.
+
 ### Bug 5 — Hyperdrive query cache stale reads (P2002 storm on /api/exam/list)
 - Symptom: exam/list 500'd for EVERY request in a ~60s window after the first
   call, then healed. Local wrangler dev (direct pg) never reproduced.
