@@ -26,7 +26,8 @@ REPO = "mayankgit9/jee-nexus"
 CF_ACCOUNT = "d847f3e3bffdd74a6df0ecfbf150df31"
 WORKER = "jee-nexus-app"
 # session pooler (port 5432, transaction-safe for Workers direct TCP)
-DB_URL_TMPL = ("postgresql://jee_app.kwavmbowgvgphaccrqlc:{pw}"
+# project: preparena (ref mxfiazcjcgqzqynmsefp, ap-south-1, aws-0 cluster)
+DB_URL_TMPL = ("postgresql://jee_app.mxfiazcjcgqzqynmsefp:{pw}"
                "@aws-0-ap-south-1.pooler.supabase.com:5432/postgres?sslmode=require")
 
 

@@ -10,14 +10,14 @@
 #   2. The DATABASE_URL worker secret (one-time, or after any password reset):
 #        bunx wrangler secret put DATABASE_URL --name jee-nexus-app
 #      URL = Supabase SESSION pooler as jee_app (port 5432, NOT 6543):
-#        postgresql://jee_app.kwavmbowgvgphaccrqlc:<PASSWORD>@aws-0-ap-south-1.pooler.supabase.com:5432/postgres?sslmode=require
+#        postgresql://jee_app.mxfiazcjcgqzqynmsefp:<PASSWORD>@aws-0-ap-south-1.pooler.supabase.com:5432/postgres?sslmode=require
 #   3. (Optional, needs Hyperdrive:Edit) create the config and paste its id
 #      into wrangler.jsonc (hyperdrive binding):
 #        curl -X POST .../accounts/$ACCOUNT/hyperdrive/config -d '{
 #          "name": "jee-nexus-db",
 #          "origin": { "database": "postgres", "host": "aws-0-ap-south-1.pooler.supabase.com",
 #                      "port": 5432, "scheme": "postgres",
-#                      "user": "jee_app.kwavmbowgvgphaccrqlc", "password": "<PASSWORD>" } }'
+#                      "user": "jee_app.mxfiazcjcgqzqynmsefp", "password": "<PASSWORD>" } }'
 #
 # THEN this script performs the deploy:
 set -eu

@@ -4,7 +4,7 @@ import json
 import subprocess
 import sys
 
-REF = "kwavmbowgvgphaccrqlc"
+REF = "mxfiazcjcgqzqynmsefp"  # preparena (ap-south-1)
 
 with open("/home/z/my-project/.secrets/tokens.env") as f:
     pat = [l.split("=", 1)[1].strip() for l in f if l.startswith("SB_PAT=")][0]

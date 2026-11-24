@@ -3,7 +3,7 @@
 # Target: the default-named project (likely unused); preparena is left untouched.
 set -u
 . /home/z/my-project/.secrets/tokens.env
-REF="kwavmbowgvgphaccrqlc"
+REF="mxfiazcjcgqzqynmsefp"
 
 echo "Requesting restore for project $REF ..."
 code=$(curl -sS -m 30 -X POST -H "Authorization: Bearer $SB_PAT" \

@@ -4,7 +4,7 @@ import json
 import subprocess
 import sys
 
-REF = "kwavmbowgvgphaccrqlc"
+REF = "mxfiazcjcgqzqynmsefp"  # preparena (ap-south-1)
 SQL_FILE = sys.argv[1] if len(sys.argv) > 1 else "supabase/migrations/0001_init.sql"
 
 with open("/home/z/my-project/.secrets/tokens.env") as f:

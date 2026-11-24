@@ -21,7 +21,10 @@ jobs:
   import:
     if: ${{ github.event.inputs.confirm == 'IMPORT' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # First full run measured ~0.8s/question through the Supabase session
+    # pooler (6,333 questions ≈ 90 min) + per-question status move — 45 min
+    # was not enough; 240 min leaves headroom. Re-runs skip fast (idempotent).
+    timeout-minutes: 240
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
       ADMIN_EMAILS: admin@jee-nexus.dev
