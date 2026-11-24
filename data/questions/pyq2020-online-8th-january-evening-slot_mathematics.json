@@ -1,0 +1,713 @@
+[
+ {
+  "publicId": "PYQ-2020-CB4aJTXb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{a}=\\hat{i}-2\\hat{j}+\\widehat{k}$ and $\\vec{b}=\\hat{i}-\\hat{j}+\\widehat{k}$ be two\nvectors. If $\\vec{c}$ is a vector such that $\\vec{b}\\times \\vec{c}=\\vec{b}\\times \\vec{a}$ and $\\vec{c}.\\vec{a}=0$, then $\\vec{c}.\\vec{b}$ is equal to",
+  "options": [
+   "$-\\frac{1}{2}$",
+   "$-\\frac{3}{2}$",
+   "$\\frac{1}{2}$",
+   "-1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 20,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\vec{a}=\\hat{i}-2\\hat{j}+\\widehat{k}$\n\n$\\vec{b}=\\hat{i}-\\hat{j}+\\widehat{k}$\n\n$\\left |\\vec{a}\\right |$ = $\\sqrt{6}$, $\\left |\\vec{b}\\right |$ = $\\sqrt{3}$\n\nand $\\vec{a}.\\vec{b}$ = 4\n\nGiven $\\vec{b}\\times \\vec{c}=\\vec{b}\\times \\vec{a}$\n\n$\\Rightarrow$ $\\left (\\vec{b}\\times \\vec{c}\\right )$ - $\\left (\\vec{b}\\times \\vec{a}\\right )$ = 0\n\n$\\Rightarrow$ $\\vec{b}\\times \\left (\\vec{c}-\\vec{a}\\right )$ = 0\n\n$\\therefore$ $\\vec{b}\\| \\left (\\vec{c}-\\vec{a}\\right )$\n\n$\\Rightarrow$ $\\left (\\vec{c}-\\vec{a}\\right )=λ\\vec{b}$\n\n$\\Rightarrow$ $\\vec{c}=\\vec{a}+λ\\vec{b}$\n\n$\\Rightarrow$ $\\vec{c}.\\vec{a}=\\vec{a}.\\vec{a}+λ\\vec{a}.\\vec{b}$\n\n$\\Rightarrow$ 0 = $\\left |\\vec{a}\\right |^{2}+λ\\left (\\vec{a}.\\vec{b}\\right )$\n\n$\\Rightarrow$ $λ$ = $\\frac{-\\left |\\vec{a}\\right |^{2}}{\\vec{a}.\\vec{b}}$ = $\\frac{-6}{4}=-\\frac{3}{2}$\n\n$\\therefore$ $\\vec{c}$ = $\\vec{a}-\\frac{3}{2}\\vec{b}$\n\n$\\Rightarrow$ $\\vec{c}$ = ($\\hat{i}-2\\hat{j}+\\widehat{k}$) - $\\frac{3}{2}$($\\hat{i}-\\hat{j}+\\widehat{k}$)\n\n$\\Rightarrow$ $\\vec{c}$ = $-\\frac{1}{2}\\left (\\hat{i}+\\hat{j}+\\widehat{k}\\right )$\n\n$\\therefore$ $\\vec{c}.\\vec{b}$ = $-\\frac{1}{2}\\left (\\hat{i}+\\hat{j}+\\widehat{k}\\right )$($\\hat{i}-\\hat{j}+\\widehat{k}$)\n\n$\\therefore$ $\\vec{c}.\\vec{b}$ = $-\\frac{1}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-oliGjHCW",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) of the region\n\n{(x,y) $\\in$ $R^{2}$ : $x^{2}$ $\\leq$ y $\\leq$ 3 – 2x}, is :",
+  "options": [
+   "$\\frac{34}{3}$",
+   "$\\frac{29}{3}$",
+   "$\\frac{31}{3}$",
+   "$\\frac{32}{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$x^{2}$ $\\leq$ y $\\leq$ – 2x + 3\n\n$\\Rightarrow$ $x^{2}$\n = – 2x + 3\n\n$\\Rightarrow$ $x^{2}$\n + 2x – 3 = 0\n \n\n$\\Rightarrow$ (x + 3) (x – 1) = 0\n \n\n$\\Rightarrow$ x = – 3, x = 1\n\nArea = $\\int\\limits _{-3}^{1}\\left (-2x+3-x^{2}\\right )dx$\n\n= $\\left (-x^{2}+3x-\\frac{x^{3}}{3}\\right )_{-3}^{1}$\n\n= $\\left (-1+3-\\frac{1}{3}+9+9-9\\right )$\n\n= 11 - $\\frac{1}{3}$\n\n= $\\frac{32}{3}$ sq. unit",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-8th-january-evening-slot/oliGjHCWAC079qXRzK7k9k2k5higv7o-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 8th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-QwXQqjMd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $I=\\int\\limits _{1}^{2}\\frac{dx}{\\sqrt{2x^{3}-9x^{2}+12x+4}}$, then :",
+  "options": [
+   "$\\frac{1}{16}<I^{2}<\\frac{1}{9}$",
+   "$\\frac{1}{8}<I^{2}<\\frac{1}{4}$",
+   "$\\frac{1}{9}<I^{2}<\\frac{1}{8}$",
+   "$\\frac{1}{6}<I^{2}<\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let f(x) = $\\frac{1}{\\sqrt{2x^{3}-9x^{2}+12x+4}}$\n\nf'(x) = $-\\frac{1}{2}\\frac{-6x^{2}-18x+12}{2(2x^{3}-9x^{2}+12x+4)^{3/2}}$\n\n= $\\frac{-6(x-1)(x-2)}{2(2x^{3}-9x^{2}+12x+4)^{3/2}}$\n\n\n[IMG]\n\n\n$f_{\\max } = f(1)$\n\n$f_{\\min } = f(2)$\n\nf(1) = $\\frac{1}{\\sqrt{2-9+12+4}}$ = $\\frac{1}{\\sqrt{9}}$ = $\\frac{1}{3}$\n\nf(2) = $\\frac{1}{\\sqrt{16-36+24+4}}$ = $\\frac{1}{\\sqrt{8}}$\n\n$\\therefore$ $\\frac{1}{3}<I<$ $\\frac{1}{\\sqrt{8}}$\n\nSo $\\frac{1}{9}<I^{2}<\\frac{1}{8}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-8th-january-evening-slot/QwXQqjMdV5LMiJiAdJ7k9k2k5hikkq5-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 8th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-hdTiOWFq",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let S be the set of all functions ƒ : [0,1] $\\to$ R,\nwhich are continuous on [0,1] and differentiable\non (0,1). Then for every ƒ in S, there exists a\nc $\\in$ (0,1), depending on ƒ, such that",
+  "options": [
+   "$|f(c)-f(1)|<|f^{'}(c)|$",
+   "$|f(c)+f(1)|<(1+c)|f^{'}(c)|$",
+   "$|f(c)-f(1)|<(1-c)|f^{'}(c)|$",
+   "None"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "If we consider the case where f(x) is a constant function, then its derivative f'(x) is equal to 0 for all x in the interval (0,1). \n\nTherefore, if we substitute this into the expressions provided in Options A, B and C, we would have :\n\nOption A : |f(c) - f(1)| < |f'(c)| would become |constant - constant| < |0|, which is 0 < 0. This is not true.\n\nOption B : |f(c) + f(1)| < (1 + c)|f'(c)| would become |constant + constant| < (1 + c)$\\times$0, which is a positive number < 0. This is not true.\n\nOption C : |f(c) - f(1)| < (1 - c)|f'(c)| would become |constant - constant| < (1 - c)$\\times$0, which is 0 < 0. This is not true.\n\nHence, for the case where f(x) is a constant function, none of the options A, B and C are correct.\n\nSo, the correct answer would be Option D : None.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-m38rP9Tk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the $10^{th}$ term of an A.P. is $\\frac{1}{20}$ and its $20^{th}$ term\nis $\\frac{1}{10}$, then the sum of its first 200 terms is",
+  "options": [
+   "100",
+   "$100\\frac{1}{2}$",
+   "$50\\frac{1}{4}$",
+   "50"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T_{10} = a + 9d =$ $\\frac{1}{20}$ ....(1)\n\n$T_{20} = a + 19d =$ $\\frac{1}{10}$ .....(2)\n\nEquation (2) – (1)\n\n10d = $\\frac{1}{10}$ - $\\frac{1}{20}$\n\n$\\Rightarrow$ d = $\\frac{1}{200}$\n\na + $\\frac{9}{200}$ = $\\frac{1}{20}$\n\n$\\Rightarrow$ a = $\\frac{1}{200}$\n\n$S_{200} =$ $\\frac{200}{2}\\left [\\frac{2}{200}+(200-1)\\times \\frac{1}{200}\\right ]$\n\n= $100\\left [\\frac{2}{200}+\\frac{199}{200}\\right ]$\n\n= $\\frac{201}{2}$ = $100\\frac{1}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-ohIDlBis",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let ƒ : (1, 3) $\\to$ R be a function defined by\n\n$f(x)=\\frac{x[x]}{1+x^{2}}$ , where [x] denotes the greatest\ninteger $\\leq$ x. Then the range of ƒ is",
+  "options": [
+   "$\\left (\\frac{2}{5},\\frac{1}{2}\\right )\\cup \\left (\\frac{3}{5},\\frac{4}{5}\\right ]$",
+   "$\\left (\\frac{3}{5},\\frac{4}{5}\\right )$",
+   "$\\left (\\frac{2}{5},\\frac{4}{5}\\right ]$",
+   "$\\left (\\frac{2}{5},\\frac{3}{5}\\right ]\\cup \\left (\\frac{3}{4},\\frac{4}{5}\\right )$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "f(x) = $\\left \\{\\begin{array}{ll} \\frac{x}{x^{2}+1}, & 1<x<2 \\\\ \\frac{2x}{x^{2}+1}, & 2\\leq x<3 \\end{array} \\right.$\n\n$\\therefore$  f(x) is decreasing function\n\n$\\therefore$ Range is $\\left (\\frac{2}{5},\\frac{1}{2}\\right )\\cup \\left (\\frac{3}{5},\\frac{4}{5}\\right ]$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-TOdbw5R1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The system of linear equations\n\n$λ$x + 2y + 2z = 5\n\n2$λ$x + 3y + 5z = 8\n\n4x + $λ$y + 6z = 10 has",
+  "options": [
+   "a unique solution when $λ$ = –8",
+   "no solution when $λ$ = 2",
+   "infinitely many solutions when $λ$ = 2",
+   "no solution when $λ$ = 8"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\Delta$ = $\\left |\\begin{array}{lll} λ & 2 & 2 \\\\ 2λ & 3 & 5 \\\\ 4 & λ & 6 \\end{array}\\right |$\n\n=  $λ$ ( 18 – 5$λ$) – 2(12$λ$ – 20) + 2(2$λ^{2}$\n – 12)\n\n= 18$λ$ – 5$λ^{2}$\n – 24$λ$ + 40 + 4$λ^{2}$\n – 24\n\n= – $λ^{2}$\n – 6$λ$ + 16\n\n= – ($λ$ + 8)($λ$ – 2)\n\nFor no solutions $λ$ = 0 $\\Rightarrow$ $λ$ = – 8, $λ$ = 2\n\nwhen $λ$ = 2\n\n$\\Delta_{x}$ = $\\left |\\begin{array}{lll} 5 & 2 & 2 \\\\ 8 & 3 & 5 \\\\ 10 & 2 & 6 \\end{array}\\right |$\n\n= 5 (18 – 10) – 2 (48 – 50) + 2 (16 – 30) \n\n= 40 + 4 – 28 $\\neq$ 0\n\nSo no solution for $λ$ = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-whKykbRu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $α$ and $β$ be the coefficients of $x^{4}$ and $x^{2}$\nrespectively in the expansion of\n\n$\\left (x+\\sqrt{x^{2}-1}\\right )^{6}+\\left (x-\\sqrt{x^{2}-1}\\right )^{6}$, then",
+  "options": [
+   "$α+β=60$",
+   "$α-β=60$",
+   "$α+β=-30$",
+   "$α-β=-132$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "With $y=\\sqrt{x^{2}-1}$, the odd powers of $y$ cancel in the sum:\n\n$(x+y)^{6}+(x-y)^{6}=2\\left [x^{6}+{}^{6}C_{2}x^{4}y^{2}+{}^{6}C_{4}x^{2}y^{4}+y^{6}\\right ].$\n\nPutting $y^{2}=x^{2}-1$:\n\n$=2\\left [x^{6}+15x^{4}(x^{2}-1)+15x^{2}(x^{2}-1)^{2}+(x^{2}-1)^{3}\\right ]$\n\n$=2\\left [x^{6}+(15x^{6}-15x^{4})+(15x^{6}-30x^{4}+15x^{2})+(x^{6}-3x^{4}+3x^{2}-1)\\right ]$\n\n$=2\\left [32x^{6}-48x^{4}+18x^{2}-1\\right ]=64x^{6}-96x^{4}+36x^{2}-2.$\n\nSo $α=-96$ and $β=36$, which give $α+β=-60$ and $α-β=-132$.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-Cj07jRGh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{x\\to 0}\\frac{\\int _{0}^{x}t\\sin (10t)dt}{x}$ is equal to",
+  "options": [
+   "$-\\frac{1}{5}$",
+   "$-\\frac{1}{10}$",
+   "0",
+   "$\\frac{1}{10}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 0}\\frac{\\int _{0}^{x}t\\sin (10t)dt}{x}$\n\nThis is in $\\frac{0}{0}$ form.\n\nSo apply newton leibniz rule\n\n$\\lim _{x\\to 0}\\frac{x.\\sin (10x)-0}{1}$ = 0",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-WRLXvWOx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $A=\\left (\\begin{array}{ll} 2 & 2 \\\\ 9 & 4 \\end{array}\\right )$ and $I=\\left (\\begin{array}{ll} 1 & 0 \\\\ 0 & 1 \\end{array}\\right )$ then $10A^{–1}$ is\nequal to :",
+  "options": [
+   "6I – A",
+   "4I – A",
+   "A – 6I",
+   "A – 4I"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "According to Cayley Hamilton equation\n\n|A – $λ$I| = 0\n\n$\\Rightarrow$ $\\left |\\begin{array}{ll} 2-λ & 2 \\\\ 9 & 4-λ \\end{array}\\right |$ = 0\n\n$\\Rightarrow$ (2 – $λ$)(4 – $λ$) – 18 = 0\n\n$\\Rightarrow$ 8 – 2$λ$ – 4$λ$ + $λ^{2}$\n – 18 = 0\n\n$\\Rightarrow$ $λ^{2}$\n – 6$λ$ – 10 = 0\n\n$\\therefore$ $A^{2}$\n – 6A– 10 = 0\n\n$\\Rightarrow$ $A^{–1}(A^{2}) – 6A^{–1}A – 10A^{–1} = 0$\n\n$\\Rightarrow$ $A – 6I – 10A^{–1} = 0$\n\n$\\Rightarrow$ $10A^{–1} = A – 6I$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-vMYmelKA",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The mean and variance of 20 observations are\nfound to be 10 and 4, respectively. On\nrechecking, it was found that an observation 9\nwas incorrect and the correct observation was\n11. Then the correct variance is",
+  "options": [
+   "3.98",
+   "3.99",
+   "4.01",
+   "4.02"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let 20 observation be $x_{1}$\n , $x_{2}$\n ,....., $x_{20}$\n\nMean = \n     $x_{1}$\n $+ x_{2}$\n $+, .....+ x_{20}$\n     20\n = 10\n\n$\\Rightarrow$ $x_{1}$\n $+ x_{2}$\n $+, .....+ x_{20} = 200$\n\nVariance = $\\frac{\\sum\\limits _{i=1}^{i=n}x_{i}^{2}}{n}-(x–)^{2}$\n\n$\\Rightarrow$ 4 = $\\frac{x_{1}^{2}+x_{2}^{2}+...+x_{20}^{2}}{20}$ $- 10^{2}$\n\n$\\Rightarrow$ $x_{1}^{2}+x_{2}^{2}+...+x_{20}^{2}$ = 2080\n\nAlso $x_{1}$\n $+ x_{2}$\n $+, .....+ x_{20} - 9 + 11 = 202$\n\nnew variance will be\n\n= $\\frac{x_{1}^{2}+x_{2}^{2}+...+x_{20}^{2}-81+121}{20}$ - $\\left (\\frac{202}{20}\\right )^{2}$\n\n= 3.99",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-QkHi8fNA",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let A and B be two events such that the\nprobability that exactly one of them occurs is $\\frac{2}{5}$ and the probability that A or B occurs is $\\frac{1}{2}$ ,\nthen the probability of both of them occur\ntogether is :",
+  "options": [
+   "0.20",
+   "0.02",
+   "0.01",
+   "0.10"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Probability that exactly one of them occurs\n\nP(A) + P(B) – 2P (A $\\cap$ B) = $\\frac{2}{5}$ .....(1)\n\nProbability\nthat A or B occurs is\n\nP(A) + P(B) – P(A $\\cap$ B) = $\\frac{1}{2}$ ......(2)\n\nDoing (2) - (1)\n\nP(A $\\cap$ B) = $\\frac{1}{2}-\\frac{2}{5}$ = 0.10",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-tLULgaIg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let S be the set of all real roots of the equation,\n\n$3^{x}(3^{x} – 1) + 2 = |3^{x} – 1| + |3^{x} – 2|$. Then S :",
+  "options": [
+   "contains exactly two elements.",
+   "is an empty set.",
+   "is a singleton.",
+   "contains at least four elements."
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $3^{x} = t$ ; t $>$ 0\n\nt(t – 1) + 2 = |t – 1| + |t – 2|\n\n$t^{2} – t + 2 = |t – 1| + |t – 2|$\n\nCase-I : t $<$ 1\n\n$t^{2} – t + 2 = 1 – t + 2 – t$\n\n$\\Rightarrow$ $t^{2} + 2 = 3 – t$\n\n$\\Rightarrow$ $t^{2} + t – 1 = 0$\n\n$\\Rightarrow$ t = $\\frac{-1\\pm \\sqrt{5}}{2}$\n\n$\\Rightarrow$ t = $\\frac{\\sqrt{5}-1}{2}$ [ As t $>$ 0]\n\nCase-II : 1 $\\leq$ t $<$ 2\n\n$\\Rightarrow$ $t^{2} – t + 2 = t – 1 + 2 – t$\n\n$\\Rightarrow$ $t^{2} – t + 1 = 0$\n\nD $<$ 0 so no real solution.\n\nCase-III : t $\\geq$ 2\n\n$\\Rightarrow$ $t^{2} – t + 2 = t – 1 + t – 2$\n\n$\\Rightarrow$ $t^{2} – 3t + 5 = 0$ \n\n$\\Rightarrow$ D $<$ 0 so no real solution.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-oXLFdyeU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α=\\frac{-1+i\\sqrt{3}}{2}$. \nIf $a=(1+α)\\sum\\limits _{k=0}^{100}α^{2k}$ and\n $b=\\sum\\limits _{k=0}^{100}α^{3k}$, then a and b are the roots of the quadratic equation :",
+  "options": [
+   "$x^{2} + 101x + 100 = 0$",
+   "$x^{2} + 102x + 101 = 0$",
+   "$x^{2} – 102x + 101 = 0$",
+   "$x^{2} – 101x + 100 = 0$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α=\\frac{-1+i\\sqrt{3}}{2}$ = $ω$\n\n$a=(1+α)\\sum\\limits _{k=0}^{100}α^{2k}$\n\n= $(1+ω)\\sum\\limits _{k=0}^{100}ω^{2k}$\n\n= $(1+ω)\\frac{1\\left (1-\\left (ω^{2}\\right )^{101}\\right )}{1-ω^{2}}$\n\n= $\\frac{1-ω^{202}}{1-ω}$\n\n= $\\frac{1-ω}{1-ω}$ = 1\n\n$b=\\sum\\limits _{k=0}^{100}α^{3k}$\n\n= $\\sum\\limits _{k=0}^{100}ω^{3k}$\n\n= 101 [as $ω^{3}$ = 1]\n\n$\\therefore$ roots are 101 and 1\n\nThen  equation is $= x^{2}$\n – 102x + 101 = 0",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-rPyf3XUC",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{\\sqrt{2}\\sin α}{\\sqrt{1+\\cos 2α}}=\\frac{1}{7}$ and $\\sqrt{\\frac{1-\\cos 2β}{2}}=\\frac{1}{\\sqrt{10}}$\n\n$α,β\\in \\left (0,\\frac{π}{2}\\right )$ then tan($α$ + 2$β$) is equal to\n$_____$.",
+  "options": [],
+  "correctOptions": [],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{\\sqrt{2}\\sin α}{\\sqrt{1+\\cos 2α}}=\\frac{1}{7}$\n\n$\\Rightarrow$ $\\frac{\\sqrt{2}\\sin α}{\\sqrt{2\\cos ^{2}α}}$ = $\\frac{1}{7}$\n\n$\\Rightarrow$ $\\frac{\\sqrt{2}\\sin α}{\\sqrt{2}\\cos α}$ = $\\frac{1}{7}$\n\n$\\Rightarrow$ tan$α$ = $\\frac{1}{7}$\n\nAlso given $\\sqrt{\\frac{1-\\cos 2β}{2}}=\\frac{1}{\\sqrt{10}}$\n\n$\\Rightarrow$ $\\frac{\\sqrt{2}\\sin β}{\\sqrt{2}}$ = $\\frac{1}{\\sqrt{10}}$\n\n$\\Rightarrow$ sin $β$ = $\\frac{1}{\\sqrt{10}}$\n\n$\\therefore$ tan $β$ = $\\frac{1}{3}$\n\n$\\tan 2β=\\frac{2\\tan β}{1-\\tan ^{2}β}$\n\n= $\\frac{2\\left (\\frac{1}{3}\\right )}{1-\\frac{1}{9}}$ = $\\frac{3}{4}$\n\n$\\therefore$ tan($α$ + 2$β$) = $\\frac{\\tan α+\\tan 2β}{1-\\tan α.\\tan 2β}$\n\n= $\\frac{\\frac{1}{7}+\\frac{3}{4}}{1-\\frac{1}{7}.\\frac{3}{4}}$\n\n= $\\frac{25}{25}$ = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-1lBNcIAt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let ƒ(x) be a polynomial of degree 3 such that\nƒ(–1) = 10, ƒ(1) = –6, ƒ(x) has a critical point\nat x = –1 and ƒ'(x) has a critical point at x = 1.\nThen ƒ(x) has a local minima at $x = _______$.",
+  "options": [],
+  "correctOptions": [],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $f(x) = ax^{3}$\n $+ bx^{2}$\n + cx + d\n\nGiven f(-1) = 10, f(1) = -6\n\n$\\therefore$ -a + b - c + d = 10 ....(i)\n\nand a + b + c + d = -6 ......(ii)\n\nadding (i) + (ii)\n\n2(b + d) = 4\n\n$\\Rightarrow$ b + d = 2 ....(iii)\n\n$f'(x) = 3ax^{2} + 2bx + c$\n\nGiven f'(-1) = 0\n\n$\\Rightarrow$ 3a - 2b + c = 0 .....(iv)\n\nf\"(x) = 6ax + 2b\n\nGiven f\"(1) = 0\n\n$\\therefore$ 6a + 2b = 0 ....(v)\n\n$\\Rightarrow$ b = -3a\n\nadding (iv) + (v), we get\n\n9a + c = 0 ....(vi)\n\n$\\Rightarrow$ $9\\left (\\frac{-b}{3}\\right )$ + c = 0\n\n$\\Rightarrow$ c = 3b\n\nf(x) =\n$\\frac{-b}{3}x^{3}$ $+ bx^{2} + 3bx + (2 - b)$\n\n$\\Rightarrow$ $f'(x) = -bx^{2}$\n + 2bx + 3b\n\n $= -b(x^{2}$\n - 2x - 3)\n\nAt maxima and minima f'(x) = 0\n\n$\\therefore$ $(x^{2}$\n - 2x - 3) = 0\n\n$\\Rightarrow$ (x - 3) (x + 1) = 0\n\nx = 3, -1\n\nAs a + b + c + d = -6\n\n$\\Rightarrow$ $\\frac{-b}{3}$ + b + 3b + 2 - b = -6\n\n$\\Rightarrow$ b = -3\n\n$\\therefore$  $f'(x) = 3(x^{2}$\n - 2x - 3)\n\n$\\Rightarrow$ f''(x) = 3(2x\n - 2)\n\nAt x = 3, f''(x) = 3(2.3\n - 2) = 12 > 0\n\n$\\therefore$ Minima\nat x = 3.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-qbRvgJn6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of 4 letter words (with or without\nmeaning) that can be formed from the eleven\nletters of the word 'EXAMINATION' is\n$_______$.",
+  "options": [],
+  "correctOptions": [],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-08 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 8th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "2A, 2I, 2N, E, X, M, T, O\n\nTo form four letter words\n\nCase 1 : All same ( not possible)\n\nCase 2 : 1 different, 3 same (not possible)\n\nCase 3 : 2 different, 2 same\n\n$= ^{3}C_{1}$ $\\times$ $^{7}C_{2}$ $\\times$ $\\frac{4!}{2!}$ = 756\n\nCase 4 : 2 same of one kind, 2 same same of other kind\n\n$= ^{3}C_{2}$ $\\times$ $\\frac{4!}{2!2!}$ = 18\n\nCase 5 : All letters are different\n\n$= ^{8}C_{4}$ $\\times$ 4! = 1680\n\n$\\therefore$ Total ways = 1680 + 756 + 18 = 2454",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 8th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
