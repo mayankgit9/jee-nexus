@@ -178,7 +178,7 @@ export function PracticeView({ taxonomy, loggedIn, onRequireAuth }: Props) {
         <div className="mb-4 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Dice5 className="h-4 w-4 text-primary" />
-            <span>{qIndex} done · {session.length - qIndex} left</span>
+            <span>{results.length} answered · {session.length - results.length} left</span>
           </div>
           <Button variant="ghost" size="sm" onClick={() => { setSession(null); setShowFilters(true) }}>
             End session
