@@ -57,6 +57,13 @@ https://jee-nexus-app.jee-nexus.workers.dev.
 - Verified live: recover no longer leaks; full reset flow works with a
   legitimately delivered token; new password logs in.
 
+### Perf — one client per request on hot routes
+- The db Proxy opens a fresh Prisma client (TCP+auth through Hyperdrive,
+  ~300ms) on EVERY db.* access; sequential routes paid it per query. pyq,
+  stats and random-selection now use one dbClient() per request —
+  connection churn per request down 3-8x (wall-time similar today; the
+  win grows with the bank).
+
 ### Also this session
 - Attempt-first browsing + "Just show solution" (PYQ/bookmarks).
 - Data-driven year grids (home + practice filter), honest copy fixes.
