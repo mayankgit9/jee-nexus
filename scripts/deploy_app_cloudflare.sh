@@ -41,6 +41,16 @@ unset DATABASE_URL
 # next build evaluates route modules; PrismaClient constructor requires a
 # syntactically valid DATABASE_URL even though no query runs at build time.
 export DATABASE_URL='postgresql://build:build@127.0.0.1:5432/build'
+# opennextjs-cloudflare deploy evaluates bindings via getPlatformProxy, which
+# refuses to boot a Hyperdrive binding without a local emulation string (it
+# never connects during deploy — the env var only satisfies the guard).
+# Point it at the real session pooler; harmless, never used remotely.
+if [ -f .secrets/supabase_db.env ]; then
+  set -a; . .secrets/supabase_db.env; set +a
+fi
+if [ -n "${SUPABASE_DB_PASSWORD:-}" ]; then
+  export CLOUDFLARE_HYPERDRIVE_LOCAL_CONNECTION_STRING_HYPERDRIVE="postgresql://jee_app.mxfiazcjcgqzqynmsefp:${SUPABASE_DB_PASSWORD}@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
+fi
 bunx opennextjs-cloudflare build
 
 echo "— deploying worker + assets —"

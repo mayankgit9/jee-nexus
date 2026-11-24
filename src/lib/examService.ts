@@ -16,18 +16,22 @@ function mulberry32(seed: number) {
 }
 
 export async function ensureDefaultPatterns(): Promise<void> {
-  const existing = await db.examPattern.findFirst({ where: { key: 'jee-main-2025' } })
-  if (!existing) {
-    await db.examPattern.create({
-      data: {
-        key: 'jee-main-2025',
-        name: 'JEE Main 2025 pattern',
-        description: '75 questions · 180 minutes · +4/-1 MCQ & numerical · partial marking for multiple-correct',
-        durationMinutes: 180,
-        config: JEE_MAIN_2025_PATTERN as unknown as Prisma.InputJsonValue,
-      },
-    })
-  }
+  // Idempotent bootstrap. A plain findFirst→create pair is NOT safe here:
+  // with Hyperdrive's (now disabled) query cache, a stale cached SELECT made
+  // every post-create request re-attempt the INSERT and die on P2002 for the
+  // cache TTL window; concurrent requests race the same way regardless.
+  // upsert() makes both failure modes harmless.
+  await db.examPattern.upsert({
+    where: { key: 'jee-main-2025' },
+    update: {},
+    create: {
+      key: 'jee-main-2025',
+      name: 'JEE Main 2025 pattern',
+      description: '75 questions · 180 minutes · +4/-1 MCQ & numerical · partial marking for multiple-correct',
+      durationMinutes: 180,
+      config: JEE_MAIN_2025_PATTERN as unknown as Prisma.InputJsonValue,
+    },
+  })
 }
 
 export interface GenerateExamInput {

@@ -95,7 +95,14 @@ export function jsonError(err: unknown) {
   if (err instanceof HttpError) {
     return Response.json({ error: err.message }, { status: err.status })
   }
-  console.error('[api]', err)
+  // Structured logging: workerd's console serializer drops the message line of
+  // Prisma errors (only the stack survives), which made production 500s
+  // undiagnosable. Log explicit fields as one flat string instead.
+  const e = err as { name?: string; code?: string; message?: string; meta?: unknown; stack?: string }
+  console.error(
+    `[api] ${e?.name ?? 'Error'} code=${e?.code ?? '-'} msg=${String(e?.message ?? err).slice(0, 500)}` +
+      ` meta=${JSON.stringify(e?.meta ?? null)?.slice(0, 300)} stack=${(e?.stack ?? '').split('\n').slice(0, 4).join(' | ')}`
+  )
   return Response.json({ error: 'Internal server error' }, { status: 500 })
 }
 

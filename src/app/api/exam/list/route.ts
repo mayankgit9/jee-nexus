@@ -19,16 +19,23 @@ export async function GET() {
       take: 50,
     })
     return Response.json({
-      exams: exams.map((e) => ({
-        id: e.id,
-        title: e.title,
-        description: e.description,
-        kind: e.kind,
-        durationMinutes: e.pattern.durationMinutes,
-        questionCount: e._count.examQuestions,
-        attemptCount: e._count.attempts,
-        createdAt: e.createdAt,
-      })),
+      exams: exams.map((e) => {
+        // Custom-timed exams store their duration in config.durationMinutes
+        // (same source the start route uses); the pattern value is only the
+        // default for full-length attempts.
+        const cfg = (e.config ?? {}) as { durationMinutes?: number }
+        return {
+          id: e.id,
+          title: e.title,
+          description: e.description,
+          kind: e.kind,
+          durationMinutes:
+            typeof cfg.durationMinutes === 'number' ? cfg.durationMinutes : e.pattern.durationMinutes,
+          questionCount: e._count.examQuestions,
+          attemptCount: e._count.attempts,
+          createdAt: e.createdAt,
+        }
+      }),
     })
   } catch (err) {
     return jsonError(err)
