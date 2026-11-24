@@ -24,7 +24,18 @@ export async function POST(req: NextRequest) {
     await db.passwordReset.create({
       data: { userId: user.id, token, expiresAt: new Date(Date.now() + 1000 * 60 * 30) },
     })
-    return Response.json({ ok: true, resetToken: token, note: 'sandbox-mode: token returned inline; production sends email' })
+
+    // SECURITY: never return the token in the response by default — on the
+    // live site that let ANYONE who knows an email take over the account
+    // (recover -> inline token -> reset). Inline tokens are a sandbox/dev
+    // affordance only, opt-in via RESET_TOKEN_INLINE=true (local .env).
+    if (process.env.RESET_TOKEN_INLINE === 'true') {
+      return Response.json({ ok: true, resetToken: token, note: 'sandbox-mode: inline token enabled via RESET_TOKEN_INLINE' })
+    }
+    return Response.json({
+      ok: true,
+      note: 'If this account exists, a password reset link has been generated. Email delivery is not configured on this deployment yet — contact the operator if you are locked out.',
+    })
   } catch (err) {
     return jsonError(err)
   }

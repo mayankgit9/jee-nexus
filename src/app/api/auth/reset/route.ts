@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server'
-import { db } from '@/lib/db'
+import { db, dbClient } from '@/lib/db'
 import { hashPassword, createSession, rateLimit, jsonError, HttpError } from '@/lib/auth'
 
 export async function POST(req: NextRequest) {
@@ -16,10 +16,14 @@ export async function POST(req: NextRequest) {
       throw new HttpError(400, 'This reset link is invalid or has expired')
     }
 
-    await db.$transaction([
-      db.user.update({ where: { id: pr.userId }, data: { passwordHash: hashPassword(password) } }),
-      db.passwordReset.update({ where: { id: pr.id }, data: { usedAt: new Date() } }),
-      db.session.deleteMany({ where: { userId: pr.userId } }),
+    // One client for the whole transaction: through the db Proxy every
+    // db.X() in the array would come from a DIFFERENT client (fresh client
+    // per access) and the transaction would fail on Workers.
+    const prisma = dbClient()
+    await prisma.$transaction([
+      prisma.user.update({ where: { id: pr.userId }, data: { passwordHash: hashPassword(password) } }),
+      prisma.passwordReset.update({ where: { id: pr.id }, data: { usedAt: new Date() } }),
+      prisma.session.deleteMany({ where: { userId: pr.userId } }),
     ])
     await createSession(pr.userId)
     return Response.json({ ok: true })
