@@ -12,6 +12,14 @@
 //      the transaction pooler (6543) is not suited to direct long-lived TCP.
 // If neither is present the worker still boots: UI/static routes serve fine
 // and DB-backed routes fail per-request until the secret/binding is added.
+//
+// IMPORTANT (prod lesson 2026-11-25): the client must be created LAZILY, on
+// first use, not at module load. getCloudflareContext() only exposes secrets
+// inside a request scope; reading it during module initialization returned a
+// context whose env lacked DATABASE_URL (worker logged "No database
+// configured" even with the secret attached). The lazy Proxy below defers
+// createClient() to the first db.* call, which always happens inside a route
+// handler — where the full env (vars + secrets) is populated.
 import { PrismaClient } from '@prisma/client'
 import { PrismaClient as WorkerPrismaClient } from '@/generated/worker/client'
 import { PrismaPg } from '@prisma/adapter-pg-worker'
@@ -40,11 +48,13 @@ function createClient(): PrismaClient {
   if (workersEnv) {
     const hyperdrive = (workersEnv as { HYPERDRIVE?: { connectionString?: string } }).HYPERDRIVE
     const directUrl = (workersEnv as { DATABASE_URL?: string }).DATABASE_URL
+      ?? process.env.DATABASE_URL // OpenNext merges bindings into process.env in newer versions
     const connectionString = hyperdrive?.connectionString ?? directUrl
     if (!connectionString) {
       console.error(
         '[db] No database configured on Workers: set the DATABASE_URL secret ' +
           '(Supabase session-pooler URL as jee_app) or bind HYPERDRIVE. ' +
+          `Visible env keys: [${Object.keys(workersEnv).sort().join(', ')}]. ` +
           'DB-backed API routes will keep failing until one of them is added.'
       )
     }
@@ -58,9 +68,21 @@ function createClient(): PrismaClient {
   }
 
   // node runtime (local dev, CI, sandbox preview)
-  return new PrismaClient({ log: ['query'] })
+  return new PrismaClient()
 }
 
-export const db = globalForPrisma.prisma ?? createClient()
-
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = db
+/**
+ * Lazy Prisma singleton. Route handlers import `db` at module scope, but the
+ * underlying client is only constructed on first use (inside a request) so
+ * the Workers async context — and with it the DATABASE_URL secret — is
+ * guaranteed to be available. Prisma client construction is cheap; the pg
+ * adapter opens connections per query, not at construction.
+ */
+export const db: PrismaClient = new Proxy({} as PrismaClient, {
+  get(_target, prop, _receiver) {
+    if (!globalForPrisma.prisma) globalForPrisma.prisma = createClient()
+    const client = globalForPrisma.prisma as unknown as Record<string | symbol, unknown>
+    const value = client[prop]
+    return typeof value === 'function' ? (value as (...a: unknown[]) => unknown).bind(globalForPrisma.prisma) : value
+  },
+})

@@ -27,8 +27,10 @@
   //      POST /accounts/{account}/hyperdrive/config  { name: "jee-nexus-db",
   //        origin: { host: aws-0-ap-south-1.pooler.supabase.com, port: 5432,
   //                  user: jee_app.mxfiazcjcgqzqynmsefp, database: postgres } }
-  //      then paste its id below and uncomment.
-  // "hyperdrive": [{ "binding": "HYPERDRIVE", "id": "<hyperdrive-config-id>" }],
+  //      then paste the config id below and uncomment (placeholder goes in the
+  //      ACTIVE binding only — the deploy script refuses while a placeholder
+  //      id is present anywhere).
+  // "hyperdrive": [{ "binding": "HYPERDRIVE", "id": "put-config-id-here" }],
   "vars": {
     "ADMIN_EMAILS": "admin@jee-nexus.dev"
   },
