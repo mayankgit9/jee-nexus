@@ -1,0 +1,697 @@
+[
+ {
+  "publicId": "PYQ-2020-ZIxbIoXk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution of the differential equation, \n$xy'- y = x^{2}($xcosx + sinx), x > 0. if y ($π$) = $π$ then \n$y^{''}\\left (\\frac{π}{2}\\right )+y\\left (\\frac{π}{2}\\right )$ is equal to :",
+  "options": [
+   "$1+\\frac{π}{2}$",
+   "$2+\\frac{π}{2}+\\frac{π^{2}}{4}$",
+   "$2+\\frac{π}{2}$",
+   "$1+\\frac{π}{2}+\\frac{π^{2}}{4}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$xy^{'}-y=x^{2}(x\\mathrm{cosx}+sinx),x>0,y(π)=π$\n\n$y^{'}-\\frac{1}{x}y=x\\{x\\cos x+\\sin x\\}$\n\n$I.F.=e^{-\\int \\frac{1}{2}dx}=e^{-\\ln x}=\\frac{1}{x}$\n\n$\\therefore$ $y.\\frac{1}{x}=\\int \\frac{1}{x}.x(xcosx+sinx)dx$\n\n$\\frac{y}{x}$ = $\\int (x\\cos x+\\sin x)dx$\n\n$=x\\sin x+C$\n\n$\\frac{y}{x}$ = $x\\sin x+C$\n\n$\\Rightarrow y=x^{2}=\\sin x+cx$\n\nx = $π$, y = $π$\n\n$π$ = $π$c $\\Rightarrow$ C = 1\n\n$y=x^{2}\\sin x+x\\Rightarrow y\\left (\\frac{π}{2}\\right )=\\frac{π^{2}}{4}+\\frac{π}{2}$\n\n$y^{'}=2x\\sin x+x^{2}\\cos x+1$\n\ny\" = $2\\sin x+2x\\cos x+2x\\cos x-x^{2}\\sin x$\n\ny\" $\\left (\\frac{π}{2}\\right )=2-\\frac{π^{2}}{4}$\n\n$\\Rightarrow y\\left (\\frac{π}{2}\\right )$ + y\" $\\left (\\frac{π}{2}\\right )=2+\\frac{π}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-t5TJfuWE",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let [t] denote the greatest integer $\\leq$ t. Then the equation in x,\n\n[x]$^{2} + 2$[x+2] - 7 = 0 has :",
+  "options": [
+   "no integral solution.",
+   "exactly two solutions.",
+   "exactly four integral solutions.",
+   "infinitely many solutions."
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$[x]^{2}+2[x+2]-7=0$\n\n$\\Rightarrow$ $[x]^{2}+2[x]+4-7=0$\n\nUsing the property [x + n] = [x] + n ; n $\\in$ I\n\n$\\Rightarrow$ $[x]^{2}+2[x]-3=0$\n\nlet [x] = y\n\n$y^{2}+3y-y-3=0$\n\n$\\Rightarrow$ $(y-1)(y+3)=0$\n\n$[x]=1or[x]=-3$\n\n$\\therefore$ $x\\in [1,2)&\\in [-3,-2)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-8tth7Zao",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ (a > b) be a given ellipse, length of whose latus rectum is 10. If its eccentricity is the maximum value of the function, \n$𝜙(t)=\\frac{5}{12}+t-t^{2}$,  then $a^{2} + b^{2}$ is equal to :",
+  "options": [
+   "145",
+   "126",
+   "135",
+   "116"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given ellipse $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ (a > b)\n\nLength of latus rectum $=\\frac{2b^{2}}{a}=10$\n\n$𝜙(t)=\\frac{5}{12}+t-t^{2}$\n\n$=\\frac{8}{12}-\\left (t-\\frac{1}{2}\\right )^{2}$\n\n$\\therefore$ $𝜙(t)_{\\max }=\\frac{8}{12}=\\frac{2}{3}$\n\n$\\therefore$ eccentricity (e) = $\\frac{2}{3}$\n\nAlso, $e^{2}=1-\\frac{b^{2}}{a^{2}}$\n\n$\\Rightarrow \\frac{4}{9}=1-\\frac{b^{2}}{a^{2}}$\n\n$\\Rightarrow \\frac{b^{2}}{a^{2}}=\\frac{5}{9}$\n\n$\\Rightarrow \\frac{b^{2}}{a}\\times \\frac{1}{a}=\\frac{5}{9}$\n\n$\\Rightarrow \\frac{5}{a}=\\frac{5}{9}$\n\n$\\Rightarrow a=9$\n\n$\\therefore$ $b^{2}=5\\times 9=45$\n\n$\\therefore$ $a^{2}+b^{2}=81+45=126$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-E6ZDVN1s",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=\\int \\frac{\\sqrt{x}}{(1+x)^{2}}dx(x\\geq 0)$.  Then f(3) – f(1) is equal to :",
+  "options": [
+   "$-\\frac{π}{12}+\\frac{1}{2}+\\frac{\\sqrt{3}}{4}$",
+   "$\\frac{π}{12}+\\frac{1}{2}-\\frac{\\sqrt{3}}{4}$",
+   "$-\\frac{π}{6}+\\frac{1}{2}+\\frac{\\sqrt{3}}{4}$",
+   "$\\frac{π}{6}+\\frac{1}{2}-\\frac{\\sqrt{3}}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int \\frac{\\sqrt{x}}{(1+x)^{2}}dx(x>0)$\n\nPut $x = \\tan ^{2}θ$ $\\Rightarrow$ dx = 2tan$θ\\sec ^{2}θ$d$θ$\n\n$I=\\int \\frac{2\\tan ^{2}θ.\\sec ^{2}θ}{\\sec ^{4}θ}dθ=\\int 2\\sin ^{2}θdθ=\\int (1-\\cos 2θ)dθ$\n\n$=θ-\\frac{\\sin 2θ}{2}+c$\n\n$\\Rightarrow f(x)=θ-\\frac{1}{2}\\times \\frac{2\\tan θ}{1+\\tan ^{2}θ}+c$ $f(x)=θ-\\frac{\\tan θ}{1+\\tan ^{2}θ}+c=\\tan ^{-1}\\sqrt{x}-\\frac{\\sqrt{x}}{1+x}+c$\n\nNow $f(3)-f(1)=\\tan ^{-1}\\left (\\sqrt{3}\\right )-\\frac{\\sqrt{3}}{1+3}-\\tan ^{-1}(1)+\\frac{1}{2}$\n\n$=\\frac{π}{3}-\\frac{\\sqrt{3}}{4}-\\frac{π}{4}+\\frac{1}{2}$\n\n$=\\frac{π}{12}+\\frac{1}{2}-\\frac{\\sqrt{3}}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-GbIwcD7j",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The integral $\\int \\left (\\frac{x}{x\\sin x+\\cos x}\\right )^{2}dx$ is equal to \n\n(where C is a constant of integration):",
+  "options": [
+   "$\\sec x-\\frac{x\\tan x}{x\\sin x+\\cos x}+C$",
+   "$\\sec x+\\frac{x\\tan x}{x\\sin x+\\cos x}+C$",
+   "$\\tan x-\\frac{x\\sec x}{x\\sin x+\\cos x}+C$",
+   "$\\tan x+\\frac{x\\sec x}{x\\sin x+\\cos x}+C$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int \\left (\\frac{x}{x\\sin x+\\cos x}\\right )^{2}dx$\n\n$=\\int \\left (\\frac{x}{\\cos x}\\right ).\\frac{x\\cos xdx}{(x\\sin x+\\cos x)^{2}}$\n\n= $\\frac{x}{\\cos x}\\left (-\\frac{1}{x\\sin x+\\cos x}\\right )+\\int \\left (\\frac{\\cos x+x\\sin x}{\\cos ^{2}x}\\right )\\left (\\frac{1}{x\\sin x+\\cos x}\\right )dx$\n\n$=-\\frac{x\\sec x}{x\\sin x+\\cos x}+\\int \\sec ^{2}xdx$\n\n$=-\\frac{x\\sec x}{x\\sin x+\\cos x}+\\tan x+C$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-nbq0G4yu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=|x-2|$ and g(x) = f(f(x)), $x\\in [0,4]$. Then \n$\\int\\limits _{0}^{3}(g(x)-f(x))dx$ is equal to:",
+  "options": [
+   "1",
+   "0",
+   "$\\frac{1}{2}$",
+   "$\\frac{3}{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=|x-2|$\n\n$\\therefore$ $f(f(x))=||x-2|-2|=g(x)$\n\n$\\Rightarrow g(x)=||x-2|-2|=\\left \\{\\begin{array}{ll} |x-4| & ifx\\geq 2 \\\\ |-x| & ifx<2 \\end{array} \\right.$\n\n$\\therefore$ $\\int\\limits _{0}^{3}(g(x)-f(x))dx$\n\n$=\\int\\limits _{0}^{3}g(x)dx-\\int\\limits _{0}^{3}f(x)dx$\n\n$=\\int\\limits _{0}^{2}|-x|dx+\\int\\limits _{2}^{3}-(x-4)dx-\\int\\limits _{0}^{2}-(x-2)dx-\\int\\limits _{2}^{3}(x-2)dx$\n\n$=\\int\\limits _{0}^{2}xdx-\\int\\limits _{2}^{3}(x-4)dx+\\int\\limits _{0}^{2}(x-2)dx-\\int\\limits _{2}^{3}(x-2)dx$\n\n$=\\left [\\frac{x^{2}}{2}\\right ]_{0}^{2}-\\left [\\frac{x^{2}}{2}-4x\\right ]_{2}^{3}+\\left [\\frac{x^{2}}{2}-2x\\right ]_{0}^{2}-\\left [\\frac{x^{2}}{2}-2x\\right ]_{2}^{3}$\n\n$=2-\\left \\{\\frac{9}{2}-12-2+8\\right \\}+\\{2-4\\}-\\left \\{\\frac{9}{2}-6-2+4\\right \\}$\n\n$=2-\\left \\{\\frac{9}{2}-6\\right \\}-2-\\left \\{\\frac{9}{2}-4\\right \\}$\n\n$=10-\\frac{9}{2}-\\frac{9}{2}=\\frac{20-9-9}{2}=\\frac{2}{2}=1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-FBiTnaSp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f be a twice differentiable function on (1, 6). If f(2) = 8, f’(2) = 5, f’(x) $\\geq$ 1 and f''(x) $\\geq$ 4, for all x $\\in$ (1, 6), then :",
+  "options": [
+   "f(5) $\\leq$ 10",
+   "f(5) + f'(5) $\\geq$ 28",
+   "f(5) + f'(5) $\\leq$ 26",
+   "f'(5) + f''(5) $\\leq$ 20"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $f^{'}(x)\\geq 1$\n\n$\\therefore$ $\\int\\limits _{2}^{5}f^{'}(x)dx\\geq \\int\\limits _{2}^{5}dx$\n\n$\\Rightarrow f(5)-f(2)\\geq 3$\n\n$\\Rightarrow f(5)-8\\geq 3$\n\n$\\Rightarrow f(5)\\geq 11$ ...(1)\n\nAlso, $f^{''}(x)\\geq 4$\n\n$\\therefore$ $\\int\\limits _{2}^{5}f^{''}(x)dx\\geq \\int\\limits _{2}^{5}4dx$\n\n$\\Rightarrow f^{'}(5)-f^{'}(2)\\geq 4(3)$\n\n$\\Rightarrow f^{'}(5)-5\\geq 12$\n\n$\\Rightarrow f^{'}(5)\\geq 17$ ...(2)\n\nFrom (1) and (2),\n\n$f^{'}(5)+f^{'}(5)\\geq 11+17$\n\n$\\Rightarrow f^{'}(5)+f^{'}(5)\\geq 28$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-0EWeqQci",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α$ and $β$ be the roots of $x^{2} - 3x + p=0$ and $γ$ and $δ$ be the roots of $x^{2} - 6x + q = 0$. If $α,β,γ,δ$\nform a geometric progression.Then ratio (2q + p) : (2q - p) is:",
+  "options": [
+   "9 : 7",
+   "5 : 3",
+   "3 : 1",
+   "33 :31"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α$ and $β$ are the roots of $x^{2}$ $-$ 3x + p = 0\n\n$\\therefore$ $α$ + $β$ = 3 and $αβ$ = p\n\n$γ$ and $δ$ are the roots of $x^{2}$ $-$ 6x + q = 0\n\n$\\therefore$ $γ$ + $δ$ = 6 and $γδ$ = q\n\nGiven that, $α$, $β$, $γ$, $δ$ are in G.P.\n\n$\\therefore$ Let $α$ = a, $β$ = ar, $γ$ $= ar^{2}$ and $δ$ $= ar^{3}$\n\nAs $α$ + $β$ = 3\n\n$\\Rightarrow$ a + ar = 3\n\n$\\Rightarrow$ a(1 + r) = 3 ...(1)\n\nAlso $γ$ + $δ$ = 6\n\n$\\Rightarrow$ $ar^{2} + ar^{3} = 6$\n\n$\\Rightarrow$ $ar^{2} (1 + r) = 6 ... (2)$\n\nDividing (2) by (1),\n\n$r^{2} = 2$\n\n$\\Rightarrow r=\\sqrt{2}$\n\n$\\therefore$ $a=\\frac{3}{1+\\sqrt{2}}$\n\nSo, $α=\\frac{3}{1+\\sqrt{2}}$, $β=\\frac{3\\sqrt{2}}{1+\\sqrt{2}}$, $γ=\\frac{3\\times 2}{1+\\sqrt{2}}$, $δ=\\frac{3(2\\sqrt{2)}}{1+\\sqrt{2}}$\n\n$\\therefore$ $p=αβ=\\frac{9\\sqrt{2}}{\\left (1+\\sqrt{2}\\right )^{2}}$\n\nand $q=γδ=\\frac{36\\sqrt{2}}{\\left (1+\\sqrt{2}\\right )^{2}}$\n\nNow, $\\frac{2q+p}{2q-p}$\n\n$=\\frac{\\frac{72\\sqrt{2}}{\\left (1+\\sqrt{2}\\right )2}+\\frac{9\\sqrt{2}}{\\left (1+\\sqrt{2}\\right )2}}{\\frac{72\\sqrt{2}}{\\left (1+\\sqrt{2}\\right )2}-\\frac{9\\sqrt{2}}{\\left (1+\\sqrt{2}\\right )2}}$\n\n$=\\frac{72\\sqrt{2}+9\\sqrt{2}}{72\\sqrt{2}-9\\sqrt{2}}$\n\n$=\\frac{81}{63}$\n\n$=\\frac{9}{7}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-TBLslHD2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $u=\\frac{2z+i}{z-ki}$, z = x + iy and k > 0.  If the curve represented\n by Re(u) + Im(u) = 1 intersects the y-axis at the points P and Q where PQ = 5, then the value of k is :",
+  "options": [
+   "2",
+   "4",
+   "1/2",
+   "3/2"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, z = x + iy\n\nand $u=\\frac{2z+i}{z-ki}$\n\n$=\\frac{2(x+iy)+i}{(x+iy)-ki}$\n\n$=\\frac{2x+i(2y+1)}{x+i(y-k)}\\times \\frac{x-i(y-k)}{x-i(y-k)}$\n\n$=\\frac{2x^{2}+(2y+1)(y-k)+i(2xy+x-2xy+2kx)}{x^{2}+(y-k)^{2}}$\n\nGiven, \n\n$\\mathrm{Re}(u)+\\mathrm{Im}(u)=1$\n\n$\\Rightarrow \\frac{2x^{2}+(2y+1)(y-k)}{x^{2}+(y-k)^{2}}+\\frac{x+2kx}{x^{2}+(y-k)^{2}}=1$\n\n$\\Rightarrow 2x^{2}+(2y+1)(y-k)+x+2kx=x^{2}+(y-k)^{2}$\n\nThis curve intersect the y-axis at point P and Q, so at point P and Q x = 0\n\nPutting x = 0 at the above equation,\n\n$\\therefore$ $(2y+1)(y-k)=(y-k)^{2}$\n\n$\\Rightarrow 2y^{2}+y-2yk-k=y^{2}+k^{2}-2ky$\n\n$\\Rightarrow y^{2}+y-(k+k^{2})=0$\n\nLet roots of this quadratic equation $y_{1}$ and $y_{2}$\n\n$\\therefore$ Point $P (0, y_{1})$ and $Q (0, y_{2})$\n\nand $y_{{}_{1}}+y_{2}=1$ , $y_{1}y_{2}=-k-k^{2}$\n\n$\\therefore$ $(y_{1}-y_{2})^{2}=(y_{1}+y_{2})^{2}-4y_{1}y_{2}$\n\n$=1+4k+4k^{2}$\n\n$\\Rightarrow |y_{1}-y_{2}|=\\sqrt{1+4k+4k^{2}}$\n\nGiven, PQ = 5\n\n$\\Rightarrow |y_{1}-y_{2}|=5$\n\n$\\Rightarrow \\sqrt{1+4k+4k^{2}}=5$\n\n$\\Rightarrow k^{2}+k-6=0$\n\n$\\Rightarrow k=-3,2$\n\nSo, k = 2 (Given k > 0)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-W3T58kXu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $A=\\left [\\begin{array}{ll} \\cos θ & i\\sin θ \\\\ i\\sin θ & \\cos θ \\end{array}\\right ]$, $\\left (θ=\\frac{π}{24}\\right )$\n\nand $A^{5}=\\left [\\begin{array}{ll} a & b \\\\ c & d \\end{array}\\right ]$, where $i=\\sqrt{-1}$  then which one of the following is\nnot true?",
+  "options": [
+   "$a^{2}$ - $c^{2}$ = 1",
+   "$0\\leq a^{2}+b^{2}\\leq 1$",
+   "$a^{2}$ - $d^{2}$ = 0",
+   "$a^{2}-b^{2}=\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\because$ $A=\\left [\\begin{array}{ll} \\cos θ & i\\sin θ \\\\ i\\sin θ & \\cos θ \\end{array}\\right ]$\n\n$\\therefore$ $A^{n}=\\left [\\begin{array}{ll} \\cos nθ & i\\sin nθ \\\\ i\\sin nθ & \\cos nθ \\end{array}\\right ],n\\in N$\n\n$\\thereforeA^{5}=\\left [\\begin{array}{ll} \\cos 5θ & i\\sin 5θ \\\\ i\\sin 5θ & \\cos 5θ \\end{array}\\right ]=\\left [\\begin{array}{ll} a & b \\\\ c & d \\end{array}\\right ]$\n\n$\\therefore$ $a=\\cos 5θ,b=i\\sin 5θ=c,d=\\cos 5θ$\n\n$\\therefore$ $a^{2}-b^{2}=\\cos ^{2}5θ+\\sin ^{2}5θ=1$\n\n$a^{2}-c^{2}=\\cos ^{2}5θ+\\sin ^{2}5θ=1$\n\n$a^{2}-d^{2}=\\cos ^{2}5θ-\\cos ^{2}5θ=0$\n\n$a^{2}+b^{2}=\\cos ^{2}5θ-\\sin ^{2}5θ=\\cos 10θ=\\cos \\frac{10π}{24}$\n\nand $0<\\cos \\frac{5π}{12}<1$\n\n$\\Rightarrow 0\\leq a^{2}+b^{2}\\leq 1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-9eXN0Xuw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The mean and variance of 8 observations are 10 and 13.5, respectively. If 6 of these observations\nare 5, 7, 10, 12, 14, 15, then the absolute difference of the remaining two observations is :",
+  "options": [
+   "5",
+   "3",
+   "7",
+   "9"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the two remaining observations be x and y.\n\n$\\because$ $\\bar{x}=10=\\frac{5+7+10+12+14+15+x+y}{8}$\n\n$\\Rightarrow x+y=17$ ....(1)\n\n$\\because$ $\\mathrm{var}(x)=13.5=\\frac{25+49+100+144+196+225+x^{2}+y^{2}}{8}-(10)^{2}$\n\n$\\Rightarrow x^{2}+y^{2}=169$ ....(2)\n\nFrom (1) and (2)\n\n(x, y) = (12, 5) or (5, 12)\n\nSo $|x-y|=7$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-D2PrxSbb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A survey shows that 63% of the people in a city read newspaper A whereas 76% read\nnewspaper B. If x% of the people read both the newspapers, then a possible value of x can be:",
+  "options": [
+   "37",
+   "65",
+   "29",
+   "55"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nA $\\cup$ B = 63 - x + x + 76 - x = 139 - x\n\nAs 139 - x $\\leq$ 100\n\n$\\Rightarrow$ x $\\geq$ 39\n\nFrom Venn diagram, you can see x should be less than 76 and 63 otherwise only A newspaper or only B newspaper reader will be negative number.\n\nIntersection of x $\\leq$ 63 and x $\\leq$76 is = x $\\leq$ 63.\n\n$\\therefore$ 39 $\\leq$ x $\\leq$ 63\n\nFrom options possible value of x = 55.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-4th-september-morning-slot/D2PrxSbbi6MwpADcmujgy2xukf8zgpnm-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 4th September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-Dv3KDCMR",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\left (a+\\sqrt{2}b\\cos x\\right )\\left (a-\\sqrt{2}b\\cos y\\right )=a^{2}-b^{2}$\n\n where a > b > 0, then $\\frac{dx}{dy}at\\left (\\frac{π}{4},\\frac{π}{4}\\right )$ is :",
+  "options": [
+   "$\\frac{a-2b}{a+2b}$",
+   "$\\frac{a-b}{a+b}$",
+   "$\\frac{a+b}{a-b}$",
+   "$\\frac{2a+b}{2a-b}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(a+\\sqrt{2}b\\cos x)(a-\\sqrt{2}b\\cos y)=a^{2}-b^{2}$\n\n$\\Rightarrow a^{2}-\\sqrt{2}ab\\cos y+\\sqrt{2}ab\\cos x-2b^{2}\\cos x\\cos y=a^{2}-b^{2}$\n\nDifferentiating both sides :\n\n$0-\\sqrt{2}ab\\left (-\\sin y\\frac{dy}{dx}\\right )+\\sqrt{2}ab(-\\sin x)$\n\n$-2b^{2}\\left [\\cos x\\left (-\\sin y\\frac{dy}{dx}\\right )+\\cos y(-\\sin x)\\right ]=0$\n\nAt $\\left (\\frac{π}{4},\\frac{π}{4}\\right )$ :\n\n$ab\\frac{dy}{dx}-ab-2b^{2}\\left (-\\frac{1}{2}\\frac{dy}{dx}-\\frac{1}{2}\\right )=0$\n\n$\\Rightarrow \\frac{dx}{dy}=\\frac{ab+b^{2}}{ab-b^{2}}=\\frac{a+b}{a-b}$; a, b > 0",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-hojNfgyr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Suppose a differentiable function f(x) satisfies the identity \n$f(x+y) = f(x) + f(y) + xy^{2} + x^{2}y$, for all real x and y.\n\n$\\lim _{x\\to 0}\\frac{f(x)}{x}=1$,  then f'(3) is equal to $______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 10.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $f(x + y) = f(x) + f(y) + xy^{2} + x^{2}y ...(1)$\n\ndifferentiating partially with respect to x,\n\n$f'(x+y) = f'(x) + 0 + y^{2} + y(2x)$ [y = constant]\n\nPut x = 0 and y = x\n\n$\\therefore$ $f'(x) = f'(0) + x^{2} ....(2)$\n\nputting x = y = 0 at equation (1),\n\nf(0) = 2f(0)\n\n$\\Rightarrow$ f(0) = 0\n\nGiven, $\\lim _{x\\to 0}\\frac{f(x)}{x}=1$\n\nThis is in $\\frac{0}{0}$ form, so we can apply L' hospital rule.\n\n$\\lim _{x\\to 0}\\frac{f^{'}(x)}{1}=1$\n\n$\\Rightarrow f^{'}(0)=1$\n\nPutting value of f'(0) at equation (2), we get\n\n$f'(x) = 1 + x^{2}$\n\n$\\therefore$ $f'(3) = 1 + 3^{2} = 10$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-dWw9wkzg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the system of equations\n\nx - 2y + 3z = 9\n\n2x + y + z = b\n\nx - 7y + az = 24, \nhas infinitely many solutions, then a - b is equal to.........",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "D = 0\n\n$\\left |\\begin{array}{lll} 1 & -2 & 3 \\\\ 2 & 1 & 1 \\\\ 1 & -7 & a \\end{array}\\right |=0$\n\n$1(a+7)+2(2a-1)+3(-14-1)=0$\n\n$a+7+4a-2-45=0$\n\n$5a=40$\n\n$a=8$\n\n$D_{1}=\\left |\\begin{array}{lll} 9 & -2 & 3 \\\\ b & 1 & 1 \\\\ 24 & -7 & 8 \\end{array}\\right |=0$\n\n$\\Rightarrow 9(8+7)+2(8b-24)+3(-7b-24)=0$\n\n$\\Rightarrow 135+16b-48-21b-72=0$\n\n$\\Rightarrow$ $15=5b$\n\n$\\Rightarrow b=3$\n\n$a-b=5$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-mSr47psy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\left (2x^{2}+3x+4\\right )^{10}=\\sum\\limits _{r=0}^{20}a_{r}x^{r}$\n\nThen $\\frac{a_{7}}{a_{13}}$ is equal to $______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Note :  Multinomial Theorem : \n\nThe general term of $(x_{1}+x_{2}+...+x_{n})^{n}$ the expansion is \n\n$\\frac{n!}{n_{1}!n_{2}!...n_{n}!}x_{1}^{n_{1}}x_{2}^{n_{2}}...x_{n}^{n_{n}}$\n\nwhere $n_{1} + n_{2} + ..... + n_{n} = n$\n\nHere, in $(2x^{2}+3x+4)^{10}$ general term is \n\n$=\\frac{10!}{n_{1}!n_{2}!n_{3}!}(2x^{2})^{n_{1}}(3x)^{n_{2}}(4)^{n_{3}}$\n\n$=\\frac{10!}{n_{1}!n_{2}!n_{3}!}.2^{n_{1}}.3^{n_{2}}.4^{n_{3}}.x^{2n_{1}+n_{2}}$\n\n$\\therefore$ Coefficient of $x^{2n_{1}+n_{2}}$  is \n\n$\\frac{10!}{n_{1}!n_{2}!n_{3}!}.2^{n_{1}}.3^{n_{2}}.4^{n_{3}}$\n\nwhere $n_{1}+n_{2}+n_{3}=10$\n\n For, Coefficient of $x^{7}$ : \n$2n_{1} + n_{2} = 7$\n\nPossible values of $n_{1}, n_{2}$ and $n_{3}$ are \n\n  \n    $n_{1}$\n    $n_{2}$\n    $n_{3}$\n  \n\n  \n    3\n    1\n    6\n  \n  \n    2\n    3\n    5\n  \n  \n    1\n    5\n    4\n  \n  \n    0\n    7\n    3\n  \n\n$\\therefore$ Coefficient of $x^{7}$\n\n$=\\frac{10!}{3!1!6!}(2)^{3}(3)^{1}(4)^{6}+\\frac{10!}{3!1!6!}(2)^{2}(3)^{3}(4)^{5}+\\frac{10!}{1!5!4!}(2)^{1}(3)^{5}(4)^{4}+\\frac{10!}{0!7!3!}(2)^{0}(3)^{7}(4)^{3}$\n\nCoefficient of $x^{13} = a_{13}$\n\nHere $2n_{1} + n_{2} = 13$\n\npossible values of $n_{1}, n_{2}$ and $n_{3}$ are\n\n  \n    $n_{1}$\n    $n_{2}$\n    $n_{3}$\n  \n\n  \n    6\n    1\n    3\n  \n  \n    5\n    3\n    2\n  \n  \n    4\n    5\n    1\n  \n  \n    3\n    7\n    0\n  \n\n$\\therefore$ Coefficient of $x^{13}$\n\n$=\\frac{10!}{6!1!3!}(2)^{6}(3)^{1}(4)^{3}+\\frac{10!}{5!3!2!}(2)^{5}(3)^{3}(4)^{2}+\\frac{10!}{4!5!1!}(2)^{4}(3)^{5}(4)^{1}+\\frac{10!}{3!7!0!}(2)^{3}(3)^{7}(4)^{0}$\n\n$\\therefore$ $\\frac{a_{7}}{a_{13}}=8$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-TlVWYzrt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The probability of a man hitting a target is $\\frac{1}{10}$. The least number of shots required, so that the\nprobability of his hitting the target at least once is greater than $\\frac{1}{4}$, is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We have, $1-$(probability of all shots results in failure out of n trials) > $\\frac{1}{4}$\n\n$\\Rightarrow 1-\\left (\\frac{9}{10}\\right )^{n}>\\frac{1}{4}$\n\n$\\Rightarrow \\frac{3}{4}>\\left (\\frac{9}{10}\\right )^{n}\\Rightarrow n\\geq 3$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
