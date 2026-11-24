@@ -179,6 +179,7 @@ function OverviewTab() {
 function ImportTab() {
   const [json, setJson] = useState('')
   const [busy, setBusy] = useState(false)
+  const [importProgress, setImportProgress] = useState<{ done: number; total: number } | null>(null)
   const [result, setResult] = useState<{ inserted: number; skippedDuplicate: number; rejected: number; total: number; errors: { row: number; error: string }[] } | null>(null)
   const fileRef = useRef<HTMLInputElement>(null)
 
@@ -199,11 +200,38 @@ function ImportTab() {
       } catch {
         throw new Error('Invalid JSON — paste a question array or {"questions": [...]}')
       }
-      const r = await api<typeof result & { jobId: string }>('/api/admin/import', { questions, fileName: 'admin-dashboard.json' })
-      setResult(r)
-      toast({ title: `Imported ${r.inserted}/${r.total}`, description: `${r.skippedDuplicate} duplicates skipped, ${r.rejected} rejected` })
+      if (!Array.isArray(questions) || questions.length === 0) {
+        throw new Error('No questions found in the JSON')
+      }
+      // Chunked import: one request per 100 questions keeps each Worker
+      // invocation well inside runtime limits (a 500-question single batch
+      // would run minutes of sequential inserts) and shows live progress.
+      const CHUNK = 100
+      const all = questions as unknown[]
+      const chunks: unknown[][] = []
+      for (let i = 0; i < all.length; i += CHUNK) chunks.push(all.slice(i, i + CHUNK))
+
+      const acc = { inserted: 0, skippedDuplicate: 0, rejected: 0, total: all.length, errors: [] as { row: number; error: string }[] }
+      for (let c = 0; c < chunks.length; c++) {
+        setImportProgress({ done: c * CHUNK, total: all.length })
+        const r = await api<typeof acc & { jobId: string }>('/api/admin/import', {
+          questions: chunks[c],
+          fileName: `admin-dashboard-${c + 1}-${chunks.length}.json`,
+        })
+        acc.inserted += r.inserted
+        acc.skippedDuplicate += r.skippedDuplicate
+        acc.rejected += r.rejected
+        acc.errors.push(...r.errors.slice(0, 10))
+      }
+      setImportProgress(null)
+      setResult(acc)
+      toast({
+        title: `Imported ${acc.inserted}/${acc.total}`,
+        description: `${acc.skippedDuplicate} duplicates skipped, ${acc.rejected} rejected`,
+      })
     } catch (e) {
       toast({ title: 'Import failed', description: (e as Error).message, variant: 'destructive' })
+      setImportProgress(null)
     } finally {
       setBusy(false)
     }
@@ -231,7 +259,9 @@ function ImportTab() {
             placeholder='[{"publicId":"...","subjectKey":"physics","chapterKey":"physics:kinematics","type":"mcq_single","text":"...","options":["..."],"correctOptions":[0],"difficulty":"easy","solution":{"body":"...","keyConcept":"..."}}]'
             className="font-mono text-xs" />
           <Button onClick={runImport} disabled={busy || !json.trim()}>
-            {busy ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Importing…</> : 'Validate & import'}
+            {busy
+              ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> {importProgress ? `Importing ${importProgress.done}/${importProgress.total}…` : 'Importing…'}</>
+              : 'Validate & import'}
           </Button>
 
           {result && (

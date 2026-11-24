@@ -1,5 +1,5 @@
 // JEE NEXUS — question import pipeline: validation + duplicate detection
-import { db } from '@/lib/db'
+import { dbClient } from '@/lib/db'
 import { computeContentHash } from '@/lib/questions'
 import { Prisma } from '@prisma/client'
 import type { QuestionType, Difficulty } from '@prisma/client'
@@ -122,16 +122,23 @@ export async function importQuestions(
   let skippedDuplicate = 0
   let rejected = 0
 
-  const subjectRows = await db.subject.findMany({ select: { id: true, key: true } })
-  const chapterRows = await db.chapter.findMany({ select: { id: true, key: true } })
+  // ONE client/connection for the entire batch: every db.* Proxy access
+  // opens a fresh connection on Workers (each counts against the
+  // 50-subrequest-per-invocation cap — a 20-question import would fail).
+  // Queries over a single connection do not each count as subrequests
+  // (proven by the exam-submit batch transaction).
+  const prisma = dbClient()
+
+  const subjectRows = await prisma.subject.findMany({ select: { id: true, key: true } })
+  const chapterRows = await prisma.chapter.findMany({ select: { id: true, key: true } })
   const subjects = new Map(subjectRows.map((s) => [s.key, s.id]))
   const chapters = new Map(chapterRows.map((c) => [c.key, c.id]))
 
   // pre-load existing hashes for duplicate detection
-  const existingHashes = new Set((await db.question.findMany({ select: { contentHash: true } })).map((q) => q.contentHash))
+  const existingHashes = new Set((await prisma.question.findMany({ select: { contentHash: true } })).map((q) => q.contentHash))
   const batchHashes = new Set<string>()
 
-  const job = await db.importJob.create({
+  const job = await prisma.importJob.create({
     data: { adminId: opts.adminId, fileName: opts.fileName, sourceFormat: opts.sourceFormat, totalRows: input.length, status: 'running' },
   })
 
@@ -156,7 +163,7 @@ export async function importQuestions(
       // publicId: use given or generate; ensure uniqueness
       let publicId = q.publicId?.trim()
       if (publicId) {
-        const taken = await db.question.findUnique({ where: { publicId } })
+        const taken = await prisma.question.findUnique({ where: { publicId } })
         if (taken) {
           publicId = `${publicId}-${hash.slice(0, 6)}`
         }
@@ -166,7 +173,7 @@ export async function importQuestions(
 
       const options = q.type === 'numerical' ? [] : toOptionArray(q.options)!
 
-      await db.question.create({
+      await prisma.question.create({
         data: {
           publicId,
           subjectId: subjects.get(q.subjectKey!)!,
@@ -234,7 +241,7 @@ export async function importQuestions(
     }
   }
 
-  await db.importJob.update({
+  await prisma.importJob.update({
     where: { id: job.id },
     data: {
       inserted,
