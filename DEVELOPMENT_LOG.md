@@ -45,6 +45,18 @@ https://jee-nexus-app.jee-nexus.workers.dev.
 - NTA-style HH:MM:SS timer (was 179:58-style minutes) in header + summary
 - Question counter promoted (font-medium foreground — was washed out)
 
+### SECURITY — password-reset token leak (fixed on live)
+- POST /api/auth/recover returned the reset token inline in the response —
+  on the LIVE site anyone who knew an email (the admin's!) could take over
+  the account: recover → token → reset → own it. The note claimed
+  "production sends email" but no email provider is wired.
+- Fix: inline tokens opt-in via RESET_TOKEN_INLINE=true (local .env /
+  sandbox only); production returns an honest no-leak response for existing
+  AND unknown emails (no account-existence oracle either). Reset route's
+  cross-client $transaction (Proxy bug) fixed with one dbClient().
+- Verified live: recover no longer leaks; full reset flow works with a
+  legitimately delivered token; new password logs in.
+
 ### Also this session
 - Attempt-first browsing + "Just show solution" (PYQ/bookmarks).
 - Data-driven year grids (home + practice filter), honest copy fixes.
