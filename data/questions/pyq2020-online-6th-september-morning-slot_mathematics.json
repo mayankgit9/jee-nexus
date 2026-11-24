@@ -1,0 +1,755 @@
+[
+ {
+  "publicId": "PYQ-2020-3NBa8Gu3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The region represented by\n {z = x + iy $\\in$ C : |z| – Re(z) $\\leq$ 1} is also given by the\n inequality :",
+  "options": [
+   "$y^{2}$ $\\leq$ $2\\left (x+\\frac{1}{2}\\right )$",
+   "$y^{2}$ $\\leq$ $x+\\frac{1}{2}$",
+   "$y^{2}$ $\\geq$ 2(x + 1)",
+   "$y^{2}$ $\\geq$ x + 1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 20,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given z = x + iy \n\n |z| – Re(z) $\\leq$ 1\n\n$\\Rightarrow$ $\\sqrt{x^{2}+y^{2}}$ - x $\\leq$ 1\n\n$\\Rightarrow$ $\\sqrt{x^{2}+y^{2}}$ $\\leq$ 1 + x\n\n$\\Rightarrow$ $x^{2} + y^{2}$ $\\leq$ $1 + 2x + x^{2}$\n\n$\\Rightarrow$ $y^{2}$ $\\leq$ 2x + 1\n\n$\\Rightarrow$ $y^{2}$ $\\leq$ 2$\\left (x+\\frac{1}{2}\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-FcgPlMWl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The general solution of the differential equation\n\n$\\sqrt{1+x^{2}+y^{2}+x^{2}y^{2}}$ + xy$\\frac{dy}{dx}$ = 0 is :\n\n(where C is a constant of integration)",
+  "options": [
+   "$\\sqrt{1+y^{2}}+\\sqrt{1+x^{2}}=\\frac{1}{2}\\log _{e}\\left (\\frac{\\sqrt{1+x^{2}}-1}{\\sqrt{1+x^{2}}+1}\\right )+C$",
+   "$\\sqrt{1+y^{2}}-\\sqrt{1+x^{2}}=\\frac{1}{2}\\log _{e}\\left (\\frac{\\sqrt{1+x^{2}}-1}{\\sqrt{1+x^{2}}+1}\\right )+C$",
+   "$\\sqrt{1+y^{2}}+\\sqrt{1+x^{2}}=\\frac{1}{2}\\log _{e}\\left (\\frac{\\sqrt{1+x^{2}}+1}{\\sqrt{1+x^{2}}-1}\\right )+C$",
+   "$\\sqrt{1+y^{2}}-\\sqrt{1+x^{2}}=\\frac{1}{2}\\log _{e}\\left (\\frac{\\sqrt{1+x^{2}}+1}{\\sqrt{1+x^{2}}-1}\\right )+C$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sqrt{1+x^{2}+y^{2}+x^{2}y^{2}}$ + xy$\\frac{dy}{dx}$ = 0\n\n$\\Rightarrow$ $\\sqrt{(1+x^{2})(1+y^{2})}$ + xy$\\frac{dy}{dx}$ = 0\n\n$\\Rightarrow$ $\\sqrt{(1+x^{2})}\\sqrt{(1+y^{2})}$ = -xy$\\frac{dy}{dx}$\n\n$\\Rightarrow$ $\\int \\frac{ydy}{\\sqrt{1+y^{2}}}=-\\int \\frac{\\sqrt{1+x^{2}}}{x}dx$ .....(1)\n\nNow put $1 + x^{2}$\n $= u^{2}$\n and $1 + y^{2}$\n $= v^{2}$\n\n2xdx = 2udu and 2ydy = 2vdv\n\n$\\Rightarrow$ xdx = udu and ydy = vdv\n\nSubstitute these values in equation (1)\n\n$\\int \\frac{vdv}{v}=-\\int \\frac{u^{2}du}{u^{2}-1}$\n\n$\\Rightarrow$ $\\int dv=-\\int \\frac{u^{2}-1+1}{u^{2}-1}du$\n\n$\\Rightarrow$ v = $-\\int \\left (1+\\frac{1}{u^{2}-1}\\right )du$\n\n$\\Rightarrow$ v = -u - $\\frac{1}{2}\\log _{e}\\left |\\frac{u-1}{u+1}\\right |$ + C\n\n$\\Rightarrow$ $\\sqrt{1+y^{2}}$ = $-\\sqrt{1+x^{2}}$ + $\\frac{1}{2}\\log _{e}\\left |\\frac{\\sqrt{1+x^{2}}+1}{\\sqrt{1+x^{2}}-1}\\right |$ + C\n\n$\\Rightarrow$ $\\sqrt{1+y^{2}}+\\sqrt{1+x^{2}}=\\frac{1}{2}\\log _{e}\\left (\\frac{\\sqrt{1+x^{2}}+1}{\\sqrt{1+x^{2}}-1}\\right )+C$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-7aBmgaMU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) of the region \nA = {(x, y) : |x| + |y| $\\leq$ $1, 2y^{2}$ $\\geq$ |x|}",
+  "options": [
+   "$\\frac{1}{6}$",
+   "$\\frac{5}{6}$",
+   "$\\frac{1}{3}$",
+   "$\\frac{7}{6}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\nFor point of intersection \n\nx + y = 1 $\\Rightarrow$ x = 1 – y\n\n$y^{2} =$ $\\frac{x}{2}$ $\\Rightarrow$ $2y^{2}$\n = x\n\n$2y^{2}$\n = 1 – y $\\Rightarrow$ $2y^{2}$\n + y – 1 = 0\n\n$\\Rightarrow$ (2y – 1) (y + 1) = 0\n\n$\\Rightarrow$ y = $\\frac{1}{2}$ or -1\n\nTotal area = $4\\int\\limits _{0}^{\\frac{1}{2}}\\left [(1-x)-\\left (\\sqrt{\\frac{x}{2}}\\right )\\right ]dx$\n\n= $4\\left [x-\\frac{x^{2}}{2}-\\frac{1}{\\sqrt{2}}\\frac{x^{3/2}}{3/2}\\right ]_{0}^{\\frac{1}{2}}$\n\n= $4\\left [\\frac{1}{2}-\\frac{1}{8}-\\frac{\\sqrt{2}}{3}\\left (\\frac{1}{2}\\right )^{3/2}\\right ]$\n\n= 4 $\\times$ $\\frac{5}{24}$ = $\\frac{5}{6}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-6th-september-morning-slot/7aBmgaMUOgZkTjOAaljgy2xukfuuu3jm-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 6th September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-eCdigtUa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a , b, c , d and p be any non zero distinct real numbers such that\n\n$(a^{2} + b^{2} + c^{2})p^{2} – 2(ab + bc + cd)p + (b^{2} + c^{2} + d^{2}) = 0$. Then :",
+  "options": [
+   "a, c, p are in G.P.",
+   "a, b, c, d are in G.P.",
+   "a, b, c, d are in A.P.",
+   "a, c, p are in A.P."
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(a^{2} + b^{2} + c^{2})p^{2} – 2(ab + bc + cd)p + (b^{2} + c^{2} + d^{2}) = 0$\n\n$\\Rightarrow$ $(a^{2}p^{2}$\n– 2abp $+ b^{2}$\n$) + (b^{2}p^{2}$\n – 2bcp $+ c^{2}$\n$) + (c^{2}$\n$p^{2}$\n– 2cdp $+ d^{2}) = 0$\n\n$\\Rightarrow$ $(ap – b)^{2}$\n $+ (bp – c)^{2}$\n $+ (cp – d)^{2}$\n = 0\n\nNote : If sum of two or more positive quantity is zero then they are all zero.\n\n$\\therefore$ ap – b = 0 and bp – c = 0 and cp – d = 0\n \n\np = $\\frac{b}{a}$ = $\\frac{c}{b}$ = $\\frac{d}{c}$\n\nor $\\frac{b}{a}$ = $\\frac{c}{b}$ = $\\frac{d}{c}$\n\n$\\therefore$ a, b, c, d are in G.P.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-peQrKRXg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two families with three members each and one family with four members are to be seated in a row.\nIn how many ways can they be seated so that the same family members are not separated?",
+  "options": [
+   "2! 3! 4!",
+   "$(3!)^{3}.(4!)$",
+   "$3! (4!)^{3}$",
+   "$(3!)^{2}.(4!)$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$F_{1}$ $\\to$ 3 members\n\n$F_{2}$ $\\to$ 3 members\n\n$F_{3}$ $\\to$ 4 members\n\nTotal arrangements of three families = 3!\n\nArrangement between members of $F_{1}$ family = 3!\n\nArrangement between members of $F_{2}$ family = 3!\n\nArrangement between members of $F_{3}$ family = 4!\n\n$\\therefore$ Total numbers of ways can they be seated so that the same family members are not separated\n\n= 3! $\\times$ 3! $\\times$ 3!  $\\times$ 4!\n\n$= (3!)^{3}.(4!)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-zkhEzaGY",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The values of $λ$ and $μ$ for which the system of linear equations\n\nx + y + z = 2\n\nx + 2y + 3z = 5\n\nx + 3y + $λ$z = $μ$\n\nhas infinitely many solutions are, respectively:",
+  "options": [
+   "6 and 8",
+   "5 and 8",
+   "5 and 7",
+   "4 and 9"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For infinite many solutions\n\n$D = D_{1} = D_{2} = D_{3} = 0$\n\nNow D = $\\left |\\begin{array}{lll} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 3 & λ \\end{array}\\right |$ = 0\n\n$\\Rightarrow$ 1. (2$λ$ – 9) –1.($λ$ – 3) + 1.(3 – 2) = 0\n\n$\\Rightarrow$ $λ$ = 5\n\nNow $D_{1} =$ $\\left |\\begin{array}{lll} 2 & 1 & 1 \\\\ 5 & 2 & 3 \\\\ μ & 3 & 5 \\end{array}\\right |$ = 0\n\n$\\Rightarrow$ 2(10 – 9) –1(25 – 3$μ$) + 1(15 – 2$μ$) = 0\n\n$\\Rightarrow$ $μ$ = 8",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-hqjDMffU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let m and M be respectively the minimum and maximum values of\n\n$\\left |\\begin{array}{lll} \\cos ^{2}x & 1+\\sin ^{2}x & \\sin 2x \\\\ 1+\\cos ^{2}x & \\sin ^{2}x & \\sin 2x \\\\ \\cos ^{2}x & \\sin ^{2}x & 1+\\sin 2x \\end{array}\\right |$\n\nThen the ordered pair (m, M) is equal to :",
+  "options": [
+   "(–3, –1)",
+   "(–4, –1)",
+   "(1, 3)",
+   "(–3, 3)"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left |\\begin{array}{lll} \\cos ^{2}x & 1+\\sin ^{2}x & \\sin 2x \\\\ 1+\\cos ^{2}x & \\sin ^{2}x & \\sin 2x \\\\ \\cos ^{2}x & \\sin ^{2}x & 1+\\sin 2x \\end{array}\\right |$\n\n$R_{1}$ $\\to$ $R_{1} – R_{2}, R_{2}$ $\\to$ $R_{2} – R_{3}$\n\n$\\left |\\begin{array}{lll} -1 & 1 & 0 \\\\ 1 & 0 & -1 \\\\ \\cos ^{2}x & \\sin ^{2}x & 1+\\sin 2x \\end{array}\\right |$\n\n$= –1(\\sin ^{2}$\n$x) – 1(1 + \\sin 2x + \\cos ^{2}$\nx)\n\n= - sin2x - 2\n\n$\\therefore$ minimum value when sin2x = 1\n\nm = - 2 - 1 = -3\n\n$\\therefore$ Maximum value when sin2x = –1\n\n M = -2 + 1 = -1\n\n$\\therefore$ (m, M) = (–3, –1)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-jWtl9wTY",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A ray of light coming from the point (2, $2\\sqrt{3}$) is incident at an angle $30^{o}$ on the line x = 1 at the\npoint A. The ray gets reflected on the line x = 1 and meets x-axis at the point B. Then, the line AB\npasses through the point :",
+  "options": [
+   "(3, -$\\sqrt{3}$)",
+   "(4, -$\\sqrt{3}$)",
+   "$\\left (4,-\\frac{\\sqrt{3}}{2}\\right )$",
+   "$\\left (3,-\\frac{1}{\\sqrt{3}}\\right )$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nEquation of reflected Ray P'B :\n\ny - 2$\\sqrt{3}$ $= \\tan  120^{o} (x - 0)$\n\n$\\Rightarrow$ $\\sqrt{3}$x + y = 2$\\sqrt{3}$\n\n(3, -$\\sqrt{3}$) satisfy the line.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-6th-september-morning-slot/jWtl9wTYgDrlkS0x00jgy2xukfuvjkza-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 6th September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-2gXd4NRS",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Out of 11 consecutive natural numbers if three numbers are selected at random (without repetition), then the probability that they are in A.P. with positive common difference, is :",
+  "options": [
+   "$\\frac{10}{99}$",
+   "$\\frac{5}{33}$",
+   "$\\frac{15}{101}$",
+   "$\\frac{5}{101}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Out of 11 consecutive natural numbers either\n6 even and 5 odd numbers or 5 even and 6\nodd numbers.\n\nLet, E = Even\n\nO = Odd\n\nCase-1 :\n\nE, O, E, O, E, O, E, O, E, O, E\n\n2b = a + c $\\Rightarrow$ Even\n\n$\\Rightarrow$ Both a and c should be either even or odd.\n\nP = $\\frac{{}^{6}C_{2}+{}^{5}C_{2}}{{}^{11}C_{3}}$ = $\\frac{5}{33}$\n\nCase -2 :\n\nO, E, O, E, O, E, O, E, O, E, O\n\nP = $\\frac{{}^{5}C_{2}+{}^{6}C_{2}}{{}^{11}C_{3}}$ = $\\frac{5}{33}$\n\nTotal probability = $\\frac{1}{2}\\times \\frac{5}{33}$ + $\\frac{1}{2}\\times \\frac{5}{33}$ = $\\frac{5}{33}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-o26Zk0Ad",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If f(x + y) = f(x)f(y) and $\\sum\\limits _{x=1}^{\\infty }f(x)=2$ , x, y $\\in$ N, where N is the set of all natural number, then the\nvalue of\n$\\frac{f(4)}{f(2)}$ is :",
+  "options": [
+   "$\\frac{2}{3}$",
+   "$\\frac{1}{9}$",
+   "$\\frac{1}{3}$",
+   "$\\frac{4}{9}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "f(x + y) = f(x)f(y)\n\n$\\sum\\limits _{x=1}^{\\infty }f(x)=2$\n\n$\\Rightarrow$ f(1) + f(2) + f(3) + ........$\\infty$ = 2 ....(1)\n\nOn f(x + y) = f(x) f(y)\n\n* Put x = 1, y = 1\n\n$f(2) = (f(1))^{2}$\n\n* Put x = 2, y = 1\n\n$f(3) = f(2). f(1) = f((1))^{3}$\n\n* Put x = 2, y = 2\n\n$f(4) = f((2))^{2} = f((1))^{4}$\n\nNow put these values in equation (1)\n\n $f(1) + f((1))^{2} + f((1))^{3} + ....... = 2$\n\n$\\Rightarrow$ $\\frac{f(1)}{1-f(1)}$ = 2\n\n$\\Rightarrow$ f(1) = $\\frac{2}{3}$\n\nNow f(2) = $\\left (\\frac{2}{3}\\right )^{2}$\n\nand f(4) = $\\left (\\frac{2}{3}\\right )^{4}$\n\n$\\therefore$ $\\frac{f(4)}{f(2)}$\n\n= $\\frac{\\left (\\frac{2}{3}\\right )^{4}}{\\left (\\frac{2}{3}\\right )^{2}}$ = $\\frac{4}{9}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-cYkeSxyb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If {p} denotes the fractional part of the number p, then\n\n$\\left \\{\\frac{3^{200}}{8}\\right \\}$, is equal to :",
+  "options": [
+   "$\\frac{5}{8}$",
+   "$\\frac{7}{8}$",
+   "$\\frac{1}{8}$",
+   "$\\frac{3}{8}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left \\{\\frac{3^{200}}{8}\\right \\}$\n\n= $\\left \\{\\frac{\\left (3^{2}\\right )^{100}}{8}\\right \\}$\n\n= $\\left \\{\\frac{(1+8)^{100}}{8}\\right \\}$\n\n= $\\left \\{\\frac{1+{}^{100}C_{1}.8+{}^{100}C_{2}.8^{2}+....+{}^{100}C_{100}.8^{100}}{8}\\right \\}$\n\n= $\\left \\{\\frac{1+8K}{8}\\right \\}$\n\n= $\\left \\{\\frac{1}{8}+K\\right \\}$ where K $\\in$ Integer\n\n$\\therefore$ Fractional part = $\\frac{1}{8}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-eWTJ6Slz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{x\\to 1}⎛⎝⎜\\frac{\\int\\limits _{0}^{(x-1)2}t\\cos \\left (t^{2}\\right )dt}{(x-1)\\sin (x-1)}⎞⎠⎟$",
+  "options": [
+   "is equal to 0",
+   "is equal to $\\frac{1}{2}$",
+   "does not exist",
+   "is equal to $-\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 1}⎛⎝⎜\\frac{\\int\\limits _{0}^{(x-1)2}t\\cos \\left (t^{2}\\right )dt}{(x-1)\\sin (x-1)}⎞⎠⎟\\left (\\frac{0}{0}\\right )$\n\nApply L Hospital Rule \n\n= $\\lim _{x\\to 1}\\frac{2(x-1).(x-1)^{2}\\cos (x-1)^{4}-0}{(x-1).\\cos (x-1)+\\sin (x-1)}$ $\\left (\\frac{0}{0}\\right )$\n\n= $\\lim _{x\\to 1}\\frac{2(x-1)^{3}\\cos (x-1)^{4}}{(x-1).\\left [\\cos (x-1)+\\frac{\\sin (x-1)}{(x-1)}\\right ]}$\n\n= $\\lim _{x\\to 1}\\frac{2(x-1)^{2}\\cos (x-1)^{4}}{\\cos (x-1)+\\frac{\\sin (x-1)}{(x-1)}}$\n\non taking limit\n\n= $\\frac{0}{1+1}$ = 0",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-oPM41URz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\sum\\limits _{i=1}^{n}(x_{i}-a)=n$ and $\\sum\\limits _{i=1}^{n}(x_{i}-a)^{2}=na$\n\n(n, a > 1) then the standard deviation of n\n\nobservations $x_{1}$\n, $x_{2}$\n, ..., $x_{n}$\n is :",
+  "options": [
+   "$a$ – 1",
+   "$n\\sqrt{a-1}$",
+   "$\\sqrt{n(a-1)}$",
+   "$\\sqrt{a-1}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "S.D = $⎷\\frac{\\sum\\limits _{i=1}^{n}(x_{i}-a)}{n}-⎛⎝⎜\\frac{\\sum\\limits _{i=1}^{n}(x_{i}-a)}{n}⎞⎠⎟^{2}$\n\n= $\\sqrt{\\frac{na}{n}-\\left (\\frac{n}{n}\\right )^{2}}$\n\n= $\\sqrt{a-1}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-fpfAhxHa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $α$ and $β$ be two roots of the equation\n $x^{2} – 64x + 256 = 0$. Then the value of\n\n$\\left (\\frac{α^{3}}{β^{5}}\\right )^{1/8}+\\left (\\frac{β^{3}}{α^{5}}\\right )^{1/8}$ is :",
+  "options": [
+   "1",
+   "3",
+   "2",
+   "4"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x^{2} – 64x + 256 = 0$\n\n$α$ + $β$ = 64, $αβ$ = 256\n\n$\\left (\\frac{α^{3}}{β^{5}}\\right )^{1/8}+\\left (\\frac{β^{3}}{α^{5}}\\right )^{1/8}$\n\n= $\\frac{α^{\\dfrac{3}{8}}}{β^{\\dfrac{5}{8}}}+\\frac{β^{\\dfrac{3}{8}}}{α^{\\dfrac{5}{8}}}$\n\n= $\\frac{α+β}{(αβ)^{\\dfrac{5}{8}}}$\n\n= $\\frac{64}{(256)^{\\dfrac{5}{8}}}$\n\n= 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-FFP4KNct",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $I_{1} =$ $\\int\\limits _{0}^{1}\\left (1-x^{50}\\right )^{100}dx$ and\n\n$I_{2} =$ $\\int\\limits _{0}^{1}\\left (1-x^{50}\\right )^{101}dx$ such \nthat $I_{2}$\n = $αI_{1}$\nthen $α$\nequals to :",
+  "options": [
+   "$\\frac{5051}{5050}$",
+   "$\\frac{5050}{5051}$",
+   "$\\frac{5050}{5049}$",
+   "$\\frac{5049}{5050}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I_{2} =$ $\\int\\limits _{0}^{1}\\left (1-x^{50}\\right )^{101}dx$\n\n$I_{2} =$ $\\int\\limits _{0}^{1}\\left (1-x^{50}\\right )\\left (1-x^{50}\\right )^{100}dx$\n\n$I_{2} =$ $\\int\\limits _{0}^{1}\\left (1-x^{50}\\right )^{100}dx-\\int\\limits _{0}^{1}x^{50}\\left (1-x^{50}\\right )^{100}dx$\n\n$I_{2} = I_{1} -$ $\\int\\limits _{0}^{1}x.x^{49}\\left (1-x^{50}\\right )^{100}dx$\n\nNow apply IBP\n\n$I_{2} = I_{1} -$ \n$\\left [x\\int\\limits _{0}^{1}x^{49}\\left (1-x^{50}\\right )^{100}dx-\\int \\frac{d(x)}{dx}.\\int \\frac{d(x)}{dx}\\int\\limits _{0}^{1}x^{49}\\left (1-x^{50}\\right )^{100}dx\\right ]$\n\nLet $(1 – x^{50}) = t$\n\n$\\Rightarrow$ $-50x^{49}dx = dt$\n\n$I_{2} = I_{1} -$ \n$\\left [x.\\left (-\\frac{1}{50}\\right )\\frac{\\left (1-x^{50}\\right )^{101}}{101}\\right ]_{0}^{1}$ - $-\\int\\limits _{0}^{1}\\left (-\\frac{1}{50}\\right )\\frac{\\left (1-x^{50}\\right )^{101}}{101}dx$\n\n$= I_{1} - 0 -$ $-\\frac{1}{50}.\\frac{1}{101}I_{2}$\n\n$I_{2} = I_{1} -$ $\\frac{1}{5050}I_{2}$\n\n$\\Rightarrow$ $I_{2} +$ $\\frac{1}{5050}I_{2}$ $= I_{1}$\n\n$\\Rightarrow$ $\\frac{5051}{5050}I_{2}$ $= I_{1}$\n\n$\\Rightarrow$ $I_{2} =$ $\\frac{5050}{5051}I_{1}$\n\nGiven $I_{2}$\n = $αI_{1}$\n\n$\\therefore$ $α$ = $\\frac{5050}{5051}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-vyIvUkH6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\vec{a}$\nand $\\vec{b}$\nare unit vectors, then the greatest value of\n\n$\\sqrt{3}\\left |\\vec{a}+\\vec{b}\\right |+\\left |\\vec{a}-\\vec{b}\\right |$ $is_____$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let angle between $\\vec{a}$ and $\\vec{b}$\n be $θ$.\n\n$\\sqrt{3}\\left |\\vec{a}+\\vec{b}\\right |+\\left |\\vec{a}-\\vec{b}\\right |$\n\n= $\\sqrt{3}\\left (\\sqrt{1+1+2\\cos θ}\\right )$ + $\\left (\\sqrt{1+1-2\\cos θ}\\right )$\n\n= $\\sqrt{3}\\left (\\sqrt{2+2\\cos θ}\\right )$ + $\\left (\\sqrt{2-2\\cos θ}\\right )$\n\n= $\\sqrt{6}\\left (\\sqrt{1+\\cos θ}\\right )$ + $\\sqrt{2}\\left (\\sqrt{1-\\cos θ}\\right )$\n\n= $\\sqrt{6}\\left (\\sqrt{2\\cos ^{2}\\frac{θ}{2}}\\right )$ + $\\sqrt{2}\\left (\\sqrt{2\\sin ^{2}\\frac{θ}{2}}\\right )$\n\n= $2\\sqrt{3}\\left |\\cos \\frac{θ}{2}\\right |$ + 2$\\left |\\sin \\frac{θ}{2}\\right |$\n\n$\\leq$ $\\sqrt{\\left (2\\sqrt{3}\\right )^{2}+(2)^{2}}$ = 4\n\nNote : |x| = $\\sqrt{x^{2}}$\n\n|x - 1| = $\\sqrt{(x-1)^{2}}$\n\n|sin x| = $\\sqrt{\\sin ^{2}x}$\n\nThat is why $\\sqrt{\\sin ^{2}\\frac{θ}{2}}$ = $\\left |\\sin \\frac{θ}{2}\\right |$ and $\\sqrt{\\cos ^{2}\\frac{θ}{2}}$ = $\\left |\\cos \\frac{θ}{2}\\right |$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-k2z9XqI4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let f : R $\\to$ R be defined as\n\n$f(x)=\\left \\{\\begin{array}{ll} x^{5}\\sin \\left (\\frac{1}{x}\\right )+5x^{2}, & x<0 \\\\ 0, & x=0 \\\\ x^{5}\\cos \\left (\\frac{1}{x}\\right )+λx^{2}, & x>0 \\end{array} \\right.$\n\nThe value of $λ$ for which f ''(0) exists, is $_______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "If $g(x) = x^{5}\\sin \\left (\\frac{1}{x}\\right )$\n\nand $h(x) = x^{5}\\cos \\left (\\frac{1}{x}\\right )$\n\nthen g''(0) = 0 and h''(0) = 0\n\nSo, $f''(0^{+}$\n$) = g''(0^{+}$\n) + 10 = 10\n\nand $f''(0^{–}) = h''(0^{–}) + 2λ$ $= f''(0^{+})$\n\n$\\Rightarrow$ 2$λ$ = 10\n\n$\\Rightarrow$ $λ$ = 5",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-3iz5nbJt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Set A has m elements and set B has n elements. If the total number of subsets of A is 112 more\nthan the total number of subsets of B, then the value of m.n is $______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 28.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-06 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 6th September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Number of subsets of $A = 2^{m}$\n\nNumber of subsets of $B = 2^{n}$\n\nGiven $= 2^{m} – 2^{n}$\n = 112\n\n$\\therefore$ $m = 7, n = 4 (2^{7} – 2^{4}$\n = 112)\n\n$\\therefore$ m $\\times$ n = 7 $\\times$ 4 = 28",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 6th September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
