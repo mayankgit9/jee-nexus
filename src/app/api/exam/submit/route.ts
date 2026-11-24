@@ -4,6 +4,7 @@ import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 import { gradeAnswer } from '@/lib/exam'
 import type { ExamPatternConfig } from '@/lib/types'
 
+
 /**
  * POST /api/exam/submit — final submission.
  * Server-authoritative: uses the stored endsAt; grading happens entirely server-side.
@@ -93,28 +94,39 @@ export async function POST(req: NextRequest) {
       )
     )
 
-    // Single transaction over a single client: on Workers every db.* Proxy
-    // access opens a fresh connection (subrequest cap 50/invocation — a fully
-    // answered 75-question mock could not submit with per-answer updates).
+    // Single client, two statements: a batched VALUES UPDATE for all graded
+    // answers (one round trip — per-answer updates through the db Proxy each
+    // opened a fresh connection and would exceed the 50-subrequest Workers
+    // cap on a fully-answered 75-question mock) + the attempt status update.
+    // $executeRawUnsafe with numbered placeholders: Prisma.join() does not
+    // expand inside $executeRaw on the WASM engine (renders as a single $1).
     const prisma = dbClient()
-    await prisma.$transaction([
-      ...gradeUpdates.map((g) =>
-        prisma.examAttemptAnswer.update({
-          where: { id: g.id },
-          data: { isCorrect: g.isCorrect, marksAwarded: g.marks },
-        })
-      ),
-      prisma.examAttempt.update({
-        where: { id: attempt.id },
-        data: {
-          status: expired ? 'expired' : 'submitted',
-          submittedAt: new Date(),
-          totalMarks: total,
-          maxMarks: max,
-          timeSpentSeconds,
-        },
-      }),
-    ])
+    if (gradeUpdates.length > 0) {
+      const tuples: string[] = []
+      const params: unknown[] = []
+      gradeUpdates.forEach((g, i) => {
+        const b = i * 3
+        tuples.push(`($${b + 1}::text, $${b + 2}::boolean, $${b + 3}::float8)`)
+        params.push(g.id, g.isCorrect, g.marks)
+      })
+      await prisma.$executeRawUnsafe(
+        `UPDATE exam_attempt_answers AS a
+         SET is_correct = v.ic, marks_awarded = v.m
+         FROM (VALUES ${tuples.join(', ')}) AS v(id, ic, m)
+         WHERE a.id = v.id`,
+        ...params
+      )
+    }
+    await prisma.examAttempt.update({
+      where: { id: attempt.id },
+      data: {
+        status: expired ? 'expired' : 'submitted',
+        submittedAt: new Date(),
+        totalMarks: total,
+        maxMarks: max,
+        timeSpentSeconds,
+      },
+    })
 
     return Response.json({
       attemptId: attempt.id,
