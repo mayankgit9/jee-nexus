@@ -1,0 +1,1123 @@
+[
+ {
+  "publicId": "PYQ-2020-HFfm172s",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Using screw gauge of pitch 0.1 cm and\n50 divisions on its circular scale, the thickness\nof an object is measured. It should correctly be\nrecorded as",
+  "options": [
+   "2.123 cm",
+   "2.124 cm",
+   "2.125 cm",
+   "2.121 cm"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Using a screw gauge of pitch 0.1 cm and 50 divisions on its circular scale, the thickness of an object is measured as:\n\nMeasurement = (Main scale reading) + (Circular scale reading × Least count)\n\nwhere the least count is calculated as the pitch of the screw gauge divided by the number of divisions on the circular scale:\n\nLeast count = (Pitch of screw gauge) / (Number of circular scale divisions)\n\nLeast count = $\\frac{0.1}{50}$ = 0.002 cm\n\nNow if we multiply division of circular scale with least count then we get $0^{th}$ digit of fraction part even. \n\nHere only option B has $0^{th}$ digit of fraction part even.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-uIhcEzFu",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Model a torch battery of length $l$ to be made up\nof a thin cylindrical bar of radius ‘a’ and a\nconcentric thin cylindrical shell of radius ‘b’\nfilled in between with an electrolyte of\nresistivity $ρ$ (see figure). If the battery is\nconnected to a resistance of value R, the\nmaximum Joule heating in R will take place for :\n\n[IMG]",
+  "options": [
+   "$R=\\frac{2ρ}{πl}\\ln \\left (\\frac{b}{a}\\right )$",
+   "$R=\\frac{ρ}{πl}\\ln \\left (\\frac{b}{a}\\right )$",
+   "$R=\\frac{ρ}{2πl}\\ln \\left (\\frac{b}{a}\\right )$",
+   "$R=\\frac{ρ}{2πl}\\left (\\frac{b}{a}\\right )$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "In this coaxial cylindrical battery, the current flows radially through the electrolyte between the inner cylindrical electrode of radius $a$ and the outer cylindrical shell of radius $b$, all along the length $l$.\n\nConsider a thin coaxial cylindrical shell of electrolyte at a radial distance $r$ (where $a\\leq r\\leq b$), of radial thickness $dr$ and axial length $l$.\n\n\n[IMG]\n\n\nThe curved surface area of this shell, perpendicular to the radial flow of current at radius $r$, is $A(r)=2πrl$.\n\nThe resistance of a uniform conductor of length $dL$ along the direction of the current and cross-sectional area $A$ is $dR_{\\text{int}}=\\dfrac{ρdL}{A}$.\n\nHere the path length along the radial current is $dL=dr$ and the area perpendicular to the current is $A(r)=2πrl$, so the internal resistance of this thin shell is\n\n$dr_{\\text{int}}=\\frac{ρdr}{2πrl}$\n\nSince the radial current passes through every concentric cylindrical shell from $r=a$ to $r=b$, all these shells are in series, so the total internal resistance $r_{\\text{int}}$ of the battery is the integral of $dr_{\\text{int}}$ from $r=a$ to $r=b$.\n\n$r_{\\text{int}}=\\int\\limits _{a}^{b}\\frac{ρdr}{2πrl}=\\frac{ρ}{2πl}\\int\\limits _{a}^{b}\\frac{1}{r}dr$\n\n$r_{\\text{int}}=\\frac{ρ}{2πl}[\\ln r]_{a}^{b}=\\frac{ρ}{2πl}(\\ln b-\\ln a)=\\frac{ρ}{2πl}\\ln \\left (\\frac{b}{a}\\right )$\n\nNow let the battery, of emf $E$ and internal resistance $r_{\\text{int}}$, be connected across the external resistor $R$. By Ohm's law, the current in the circuit is $I=\\dfrac{E}{R+r_{\\text{int}}}$.\n\nBy Joule's law of heating, the rate of heat generation (power $P$) in the external resistor $R$ is\n\n$P=I^{2}R=\\left (\\frac{E}{R+r_{\\text{int}}}\\right )^{2}R=\\frac{E^{2}R}{\\left (R+r_{\\text{int}}\\right )^{2}}$\n\nFor the value of $R$ that maximises $P$, $\\dfrac{dP}{dR}=0$.\n\n$\\frac{dP}{dR}=E^{2}\\frac{d}{dR}\\left [R\\left (R+r_{\\text{int}}\\right )^{-2}\\right ]=0$\n\n$E^{2}\\left [(1)\\left (R+r_{\\text{int}}\\right )^{-2}+R(-2)\\left (R+r_{\\text{int}}\\right )^{-3}(1)\\right ]=0$\n\n$E^{2}\\left (R+r_{\\text{int}}\\right )^{-3}\\left [\\left (R+r_{\\text{int}}\\right )-2R\\right ]=0$\n\n$r_{\\text{int}}-R=0\\Rightarrow R=r_{\\text{int}}$\n\nThe power $P$ is zero at $R=0$ and tends to zero as $R\\to \\infty$, so this single stationary point is the maximum.\n\n$R=r_{\\text{int}}=\\frac{ρ}{2πl}\\ln \\left (\\frac{b}{a}\\right )$\n\nTherefore, the Joule heating in $R$ is maximum when $R=\\dfrac{ρ}{2πl}\\ln \\left (\\dfrac{b}{a}\\right )$.\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/uIhcEzFu1YbjYBk0Kvjgy2xukf148qlr-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/uIhcEzFu1YbjYBk0Kvjgy2xukf148qlr-1.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-WSwHvNT1",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Moment of inertia of a cylinder of mass M,\nlength L and radius R about an axis passing\nthrough its centre and perpendicular to the\naxis of the cylinder is\n I = $M\\left (\\frac{R^{2}}{4}+\\frac{L^{2}}{12}\\right )$. If such a\ncylinder is to be made for a given mass of a\nmaterial, the ratio $\\frac{L}{R}$ for it to have minimum\npossible I is",
+  "options": [
+   "$\\frac{3}{2}$",
+   "$\\sqrt{\\frac{3}{2}}$",
+   "$\\sqrt{\\frac{2}{3}}$",
+   "$\\frac{2}{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nGiven I = $M\\left (\\frac{R^{2}}{4}+\\frac{L^{2}}{12}\\right )$\n\nM = $ρ$.V = $ρπR^{2}L$\n\n$\\Rightarrow$ $R^{2} =$ $\\frac{M}{ρπL}$\n\n$\\therefore$ I = $M\\left (\\frac{M}{4ρπL}+\\frac{L^{2}}{12}\\right )$\n\n$\\Rightarrow$ $\\frac{dI}{dL}$ = $M\\left (\\frac{M}{4ρπ}\\left (-\\frac{1}{L^{2}}\\right )-\\frac{2L}{12}\\right )$\n\nFor minimum I, $\\frac{dI}{dL}=0$\n\n$\\therefore$ $M\\left (\\frac{M}{4ρπ}\\left (-\\frac{1}{L^{2}}\\right )-\\frac{2L}{12}\\right )$ = 0\n\n$\\Rightarrow$ $\\frac{M^{2}}{4ρπL^{2}}=\\frac{2LM}{12}$\n\n$\\Rightarrow$ $\\frac{M}{4ρπL^{2}}=\\frac{L}{6}$\n\n$\\Rightarrow$ $\\frac{ρπR^{2}L}{4ρπL^{2}}=\\frac{L}{6}$\n\n$\\Rightarrow$ $\\frac{R^{2}}{L^{2}}=\\frac{2}{3}$\n\n$\\Rightarrow$ $\\frac{R}{L}=\\sqrt{\\frac{2}{3}}$\n\n$\\Rightarrow$ $\\frac{L}{R}=\\sqrt{\\frac{3}{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/WSwHvNT1JkSyc3iWsGjgy2xukf14dc5f-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-8mkVsgrB",
+  "subjectKey": "physics",
+  "chapterKey": "physics:dual-nature-of-matter",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "When the wavelength of radiation falling on a metal is changed from 500 nm to 200 nm, the\nmaximum kinetic energy of the photoelectrons becomes three times larger. The work function of\nthe metal is close to :",
+  "options": [
+   "1.02 eV",
+   "0.81 eV",
+   "0.61 eV",
+   "0.52 eV"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "dual nature of radiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$K_{1} =$ $\\frac{hc}{500}-𝜙_{0}$\n\n$K_{2} =$ $\\frac{hc}{200}-𝜙_{0}$\n\n$\\because$ $K_{2} = 3K_{1}$\n\n$\\Rightarrow$ $3\\left [\\frac{hc}{500}-𝜙_{0}\\right ]=\\left [\\frac{hc}{200}-𝜙_{0}\\right ]$\n\n$\\Rightarrow$ $𝜙_{0}$ = 0.61 eV",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-khhPnOKu",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-waves",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The magnetic field of a plane electromagnetic wave is\n\n$\\vec{B}=3\\times 10^{-8}\\sin [200π(y+ct)]\\hat{i}$ T\n\nwhere c = 3 $\\times$ $10^{8}$\n $ms^{–1}$ is the speed of light.\nThe corresponding electric field is :",
+  "options": [
+   "$\\vec{E}=-10^{-6}\\sin [200π(y+ct)]\\widehat{k}$ V/m",
+   "$\\vec{E}=-9\\sin [200π(y+ct)]\\widehat{k}$ V/m",
+   "$\\vec{E}=9\\sin [200π(y+ct)]\\widehat{k}$ V/m",
+   "$\\vec{E}=3\\times 10^{-8}\\sin [200π(y+ct)]\\widehat{k}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $\\vec{B}=3\\times 10^{-8}\\sin [200π(y+ct)]\\hat{i}$ T\n\n$\\therefore$ $E_{0} = CB_{0}$\n\n$= 3 × 10^{8}$\n $× 3 × 10^{–8} = 9 V/m$\n\nWe know, $\\left (\\vec{E}\\times \\vec{B}\\right )||\\vec{C}$\n\nAnd here $\\widehat{B}=\\hat{i}&\\widehat{C}=-\\hat{j}$\n\n$\\therefore$ $\\widehat{E}=-\\widehat{k}$\n\nSo, $\\vec{E}=-9\\sin [200π(y+ct)]\\widehat{k}$ V/m",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-z0jSA3yd",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A charged particle carrying charge 1 $μ$C is moving\n with velocity $\\left (2\\hat{i}+3\\hat{j}+4\\widehat{k}\\right )$ $ms^{–1}$. If an external\n\nmagnetic field of $\\left (5\\hat{i}+3\\hat{j}-6\\widehat{k}\\right )× 10^{–3} T$ exists in the region where the particle is moving then the\n\nforce on the particle is $\\vec{F}$\n $× 10^{–9} N$. The vector $\\vec{F}$\nis :",
+  "options": [
+   "$-0.30\\hat{i}+0.32\\hat{j}-0.09\\widehat{k}$",
+   "$-300\\hat{i}+320\\hat{j}-90\\widehat{k}$",
+   "$-30\\hat{i}+32\\hat{j}-9\\widehat{k}$",
+   "$-3.0\\hat{i}+3.2\\hat{j}-0.9\\widehat{k}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$\\vec{V}$ = $\\left (2\\hat{i}+3\\hat{j}+4\\widehat{k}\\right )$ $ms^{–1}$\n\n$\\vec{B}$ = $\\left (5\\hat{i}+3\\hat{j}-6\\widehat{k}\\right )× 10^{–3} T$\n\nq = 1 $μ$C\n\n$\\vec{F}=q\\left (\\vec{V}\\times \\vec{B}\\right )$\n\n= $10^{-6}\\times 10^{-3}\\times \\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\widehat{k} \\\\ 2 & 3 & 4 \\\\ 5 & 3 & -6 \\end{array}\\right |$\n\n= ($-30\\hat{i}+32\\hat{j}-9\\widehat{k}$) $\\times$ $10^{-9}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-44MzeCC1",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A 750 Hz, 20 V (rms) source is connected to a\nresistance of 100 $\\Omega$, an inductance of 0.1803 H\nand a capacitance of 10 $μ$F all in series. The\ntime in which the resistance (heat capacity\n$2 J/^{o}C)$ will get heated by $10^{o}C. ($assume no loss\nof heat to the surroudnings) is close to :",
+  "options": [
+   "348 s",
+   "418 s",
+   "245 s",
+   "365 s"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "alternating current"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f = 750 Hz, V_{$rms} = 20 V,\n\nR = 100 $\\Omega$, L = 0.1803 H,\n\nC = 10$μ$ F, S = 2 J/°C\n\n|Z| = $\\sqrt{R^{2}+(X_{L}-X_{C})^{2}}$\n\n= $\\sqrt{R^{2}+\\left (ωL-\\frac{1}{ωC}\\right )^{2}}$\n\n= $\\sqrt{R^{2}+\\left (2πfL-\\frac{1}{2πfC}\\right )^{2}}$\n\n= $\\sqrt{(100)^{2}+\\left (2\\times 3.14\\times 750\\times 0.1803-\\frac{1}{2\\times 3.14\\times 750\\times 10^{-5}}\\right )^{2}}$\n\n = 834 $\\Omega$\n\nIn AC, power $(P) = i_{$rms$}V_{$rms} cos $𝜙$\n\n and $i_{$rms} = $\\frac{V_{rms}}{|Z|}$\n\nPower factor (cos $𝜙$) = $\\frac{R}{|Z|}$\n\n$\\therefore$ P = $\\frac{V_{rms}}{|Z|}.V_{rms}.\\frac{R}{|Z|}$\n\n= $\\left (\\frac{V_{rms}}{|Z|}\\right )^{2}R$\n\n= $\\left (\\frac{20}{834}\\right )^{2}\\times 100$\n\n= 0.0575 J/S\n\nAlso, H = Pt = S$\\Deltaθ$\n\n$\\Rightarrow$ t = $\\frac{2(10)}{0.0575}$ = 348 sec",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-6z2uwDk0",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A balloon filled with helium $(32^{o}C$ and 1.7 atm.)\nbursts. Immediately afterwards the expansion\nof helium can be considered as",
+  "options": [
+   "Irreversible adiabatic",
+   "Reversible adiabatic",
+   "Irreversible isothermal",
+   "Reversible isothermal"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Bursting of helium ballon is irreversible adiabatic because Energy can not be restored.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-WCbuQ6qz",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Pressure inside two soap bubbles are 1.01 and 1.02 atmosphere, respectively. The ratio of their\nvolumes is :",
+  "options": [
+   "4 : 1",
+   "8 : 1",
+   "2 : 1",
+   "0.8 : 1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$P_{in}=P_{0}+\\frac{4T}{R_{1}}$\n\n$\\Rightarrow 1.01=1+\\frac{4T}{R_{1}}$\n\n$\\Rightarrow \\frac{4T}{R_{1}}=0.01$\n\n$1.02=1+\\frac{4T}{R_{2}}$\n\n$\\Rightarrow \\frac{4T}{R_{2}}=0.02$\n\n$\\therefore \\frac{R_{2}}{R_{1}}=\\frac{1}{2}$\n\n$\\Rightarrow R_{1}=2R_{2}$\n\n$\\frac{V_{1}}{V_{2}}=\\frac{R_{1}^{3}}{R_{2}^{3}}=\\frac{8R_{2}^{3}}{R_{2}^{3}}=\\frac{8}{1}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-jMy0gsVS",
+  "subjectKey": "physics",
+  "chapterKey": "physics:gravitation",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A satellite is moving in a low nearly circular orbit around the earth. Its radius is roughly equal to\nthat of the earth’s radius $R_{e}$\n. By firing rockets attached to it, its speed is instantaneously increased\nin the direction of its motion so that it become $\\sqrt{\\frac{3}{2}}$\n times larger. Due to this the farthest distance\nfrom the centre of the earth that the satellite reaches is R. Value of R is :",
+  "options": [
+   "$2R_{e}$",
+   "$3R_{e}$",
+   "$4R_{e}$",
+   "$2.5R_{e}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 51,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "gravitation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "In the low circular orbit, $v_{0}=\\sqrt{\\dfrac{GM}{R_{e}}}$; after firing, the speed is $v=\\sqrt{\\dfrac{3}{2}}v_{0}$, perpendicular to the radius.\n\n\n[IMG]\n\nAt the farthest point, at distance $R$ (marked $R_{\\max }$), the velocity $v^{'}$ is again perpendicular to the radius, so conservation of angular momentum gives\n\n$v^{'}=\\dfrac{vR_{e}}{R}=\\sqrt{\\dfrac{3}{2}}\\dfrac{v_{0}R_{e}}{R}$\n\nConservation of energy per unit mass, with $v_{0}^{2}=\\dfrac{GM}{R_{e}}$:\n\n$-\\dfrac{GM}{R_{e}}+\\dfrac{1}{2}\\cdot \\dfrac{3}{2}\\cdot \\dfrac{GM}{R_{e}}=-\\dfrac{GM}{R}+\\dfrac{1}{2}\\cdot \\dfrac{3}{2}\\cdot \\dfrac{GM}{R_{e}}\\cdot \\dfrac{R_{e}^{2}}{R^{2}}$\n\nDividing by $GM$:\n\n$-\\dfrac{1}{4R_{e}}=-\\dfrac{1}{R}+\\dfrac{3R_{e}}{4R^{2}}$\n\nMultiplying by $4R^{2}R_{e}$:\n\n$R^{2}-4R_{e}R+3R_{e}^{2}=0\\Rightarrow (R-R_{e})(R-3R_{e})=0$\n\nThe root $R=R_{e}$ is the firing point (the nearest point), so the farthest distance is $R=3R_{e}$.\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/jMy0gsVS8L9Ul6e15Zjgy2xukf16efbg-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-E4yjF5kL",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In the circuit shown in the figure, the total charge is 750 $μ$C and the voltage across capacitor $C_{2}$\n is\n20 V. Then the charge on capacitor $C_{2}$\n is :\n\n[IMG]",
+  "options": [
+   "160 $μ$C",
+   "450 $μ$C",
+   "590 $μ$C",
+   "650 $μ$C"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 52,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "capacitor"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n $Q_{2} = CV = 8$ $\\times$ 20 = 160 $μ$C \n\n$Q_{1} = 750 - 160 = 590$ $μ$C",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/E4yjF5kLSlxDZBoWYWjgy2xukf16jr4m-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/E4yjF5kLSlxDZBoWYWjgy2xukf16jr4m-1.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-SdtVDvgJ",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An elliptical loop having resistance R, of semi major axis a, and semi minor axis b is placed in\nmagnetic field as shown in the figure. If the loop is rotated about the x-axis with angular frequency\n$ω$, the average power loss in the loop due to Joule heating is :\n\n[IMG]",
+  "options": [
+   "$\\frac{πabBω}{R}$",
+   "$\\frac{π^{2}a^{2}b^{2}B^{2}ω^{2}}{R}$",
+   "$\\frac{π^{2}a^{2}b^{2}B^{2}ω^{2}}{2R}$",
+   "Zero"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 53,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic induction"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The area of an ellipse with semi-major axis $a$ and semi-minor axis $b$ is $A=πab$.\n\nAt time $t=0$ the elliptical loop lies in the $xy$-plane, so its area vector $⃗{A}$ (normal to the plane of the loop) points along the $z$-axis, parallel to the uniform magnetic field $⃗{B}=B\\hat{k}$ (angle $θ=0$).\n\n\n[IMG]\n\n\nWhen the loop rotates about the $x$-axis with constant angular frequency $ω$, the angle $θ$ between the area vector $⃗{A}$ (normal to the loop) and the fixed magnetic field $⃗{B}$ increases linearly with time $t$,\n\n$θ(t)=ωt$\n\nThe magnetic flux through the elliptical loop at any instant $t$ is the dot product of $⃗{B}$ and $⃗{A}$,\n\n$\\Phi (t)=⃗{B}\\cdot ⃗{A}=BA\\cos θ=B(πab)\\cos (ωt)$\n\nBy Faraday's law of electromagnetic induction, the instantaneous emf $e(t)$ induced in the loop is the negative of the time rate of change of the magnetic flux,\n\n$e(t)=-\\frac{d\\Phi }{dt}=-\\frac{d}{dt}[πabB\\cos (ωt)]$\n\nSince $π$, $a$, $b$ and $B$ are constants, $e(t)=-πabB[-ω\\sin (ωt)]=πabBω\\sin (ωt)$.\n\nBy Ohm's law, the instantaneous induced current in the closed loop of resistance $R$ is $i(t)=\\dfrac{e(t)}{R}=\\dfrac{πabBω}{R}\\sin (ωt)$.\n\nBy Joule's law of heating, the instantaneous power dissipated as heat in the loop at time $t$ is\n\n$P(t)=[i(t)]^{2}R=\\left (\\frac{πabBω}{R}\\sin (ωt)\\right )^{2}R=\\frac{π^{2}a^{2}b^{2}B^{2}ω^{2}}{R}\\sin ^{2}(ωt)$\n\nThe average power loss over one complete rotation, of period $T=\\dfrac{2π}{ω}$, is\n\n$P_{\\text{avg}}=\\frac{1}{T}\\int\\limits _{0}^{T}P(t)dt=\\frac{π^{2}a^{2}b^{2}B^{2}ω^{2}}{R}\\left [\\frac{1}{T}\\int\\limits _{0}^{T}\\sin ^{2}(ωt)dt\\right ]$\n\nThe average value of $\\sin ^{2}(ωt)$ over one full period $T$ is $\\dfrac{1}{2}$, so\n\n$P_{\\text{avg}}=\\left (\\frac{π^{2}a^{2}b^{2}B^{2}ω^{2}}{R}\\right )\\times \\frac{1}{2}=\\frac{π^{2}a^{2}b^{2}B^{2}ω^{2}}{2R}$\n\nTherefore, the average power loss in the loop due to Joule heating is $\\dfrac{π^{2}a^{2}b^{2}B^{2}ω^{2}}{2R}$.\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/SdtVDvgJi6waffHOI8jgy2xukf22whdt-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/SdtVDvgJi6waffHOI8jgy2xukf22whdt-1.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-PMQIGV1V",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electronic-devices",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "When a diode is forward biased, it has a\nvoltage drop of 0.5 V. The safe limit of current\nthrough the diode is 10 mA. If a battery of emf\n1.5 V is used in the circuit, the value of\nminimum resistance to be connected in series\nwith the diode so that the current does not\nexceed the safe limit is",
+  "options": [
+   "50 $\\Omega$",
+   "200 $\\Omega$",
+   "300 $\\Omega$",
+   "100 $\\Omega$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 54,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electronic devices"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n1.5 – 0.5 – R $\\times$ $10^{–2}$\n = 0\n\n$\\Rightarrow$ R = 100 $\\Omega$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/PMQIGV1VZ0s4XAiblrjgy2xukf22zwt6-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-UVhA9cbd",
+  "subjectKey": "physics",
+  "chapterKey": "physics:waves",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A uniform thin rope of length 12 m and mass 6 kg hangs vertically from a rigid support and a block\nof mass 2 kg is attached to its free end. A transverse short wavetrain of wavelength 6 cm is\nproduced at the lower end of the rope. What is the wavelength of the wavetrain (in cm) when it\nreaches the top of the rope ?",
+  "options": [
+   "12",
+   "3",
+   "9",
+   "6"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 55,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$T_{1} = 2g$\n\n$T_{2} = 8g$ \n\nV = $\\sqrt{\\frac{T}{μ}}$\n\n$\\therefore$ V $\\propto$ $\\sqrt{T}$\n\nAlso V = f$λ$\n\n$\\therefore$ $V_{1} = f_{1}λ_{1}$\n\nand $V_{2} = f_{2}λ_{2}$\n\nWe know frequency of sources are same.\n\n$\\therefore$ $f_{1} = f_{2}$\n\nSo $\\sqrt{\\frac{T_{1}}{T_{2}}}=\\frac{λ_{1}}{λ_{2}}$\n\n$\\Rightarrow$ $\\sqrt{\\frac{2g}{8g}}=\\frac{6}{λ_{2}}$\n\n$\\Rightarrow$ $λ_{2}$ = 12 cm",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/UVhA9cbd0cmeABRTkWjgy2xukf237ezt-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-9nLXMWfG",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A block of mass m = 1 kg slides with velocity v = 6 m/s on a frictionless horizontal surface and\ncollides with a uniform vertical rod and sticks to it as shown. The rod is pivoted about O and swings\nas a result of the collision making angle $θ$ before momentarily coming to rest. If the rod has mass\nM = 2 kg, and length $l$ = 1 m, the value of $θ$ is approximately :\n\n(take $g = 10 m/s^{2})$\n\n[IMG]",
+  "options": [
+   "$63^{o}$",
+   "$69^{o}$",
+   "$55^{o}$",
+   "$49^{o}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 56,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nApplying Angular momentum conservation\n\nmv$l$ = $\\left (\\frac{Ml^{2}}{3}+ml^{2}\\right )ω$\n\n$\\Rightarrow$ $ω=\\frac{1\\times 6\\times 1}{\\frac{2}{3}+1}$ = $\\frac{18}{5}$\n\nNow, using energy conservation\n\n$\\frac{1}{2}Iω^{2}=(m+M)gh$\n\n$\\Rightarrow$ $\\frac{1}{2}\\left (\\frac{Ml^{2}}{3}+ml^{2}\\right )ω^{2}=(m+M)gx_{COM}(1-\\cos θ)$\n\n$\\Rightarrow$ $\\frac{1}{2}\\left (\\frac{2}{3}+1\\right )\\left (\\frac{18}{5}\\right )^{2}=(m+M)g\\times \\frac{M\\times \\frac{l}{2}+ml}{(M+m)}(1-\\cos θ)$\n\n$\\Rightarrow$ $\\frac{1}{2}\\times \\frac{5}{3}\\times \\frac{18\\times 18}{25}=10\\times \\left (2\\times \\frac{1}{2}+1\\right )(1-\\cos θ)$\n\n$\\Rightarrow$ $\\frac{5}{6}\\times \\frac{18\\times 18}{25}=20(1-\\cos θ)$\n\n$\\Rightarrow$ $(1-\\cos θ)=\\frac{18}{5}\\times \\frac{3}{20}$\n\n$\\Rightarrow$ $\\cos θ=1-\\frac{27}{50}$\n\n$\\Rightarrow$ $\\cos θ=\\frac{23}{50}$\n\n$\\Rightarrow$ $θ$ $\\simeq$ $63^{o}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/9nLXMWfGmnJhXCL0uDjgy2xukf23ezdn-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/9nLXMWfGmnJhXCL0uDjgy2xukf23ezdn-1.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-JJ4KnW2Z",
+  "subjectKey": "physics",
+  "chapterKey": "physics:wave-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In a Young’s double slit experiment, light of\n500 nm is used to produce an interference\npattern. When the distance between the slits\nis 0.05 mm, the angular width (in degree) of\nthe fringes formed on the distance screen is\nclose to",
+  "options": [
+   "$0.17^{o}$",
+   "$1.7^{o}$",
+   "$0.57^{o}$",
+   "$0.07^{o}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 57,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "wave optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$β$ = $\\frac{λD}{d}$\n\nand $θ$ = $\\frac{β}{D}$\n\n$\\Rightarrow$ $θ$ = $\\frac{λ}{d}$\n\n= $\\frac{500\\times 10^{-9}}{0.05\\times 10^{-3}}$\n\n= 0.01 rad\n\n$= 0.57^{o}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-gHQvNc1Z",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Magnitude of magnetic field (in SI units) at the\ncentre of a hexagonal shape coil of side 10 cm,\n50 turns and carrying current I (Ampere) in\nunits of $\\frac{μ_{0}I}{π}$ is :",
+  "options": [
+   "250$\\sqrt{3}$",
+   "5$\\sqrt{3}$",
+   "500$\\sqrt{3}$",
+   "50$\\sqrt{3}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 58,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\tan 30=\\frac{x}{d}$\n\n$d=\\frac{x}{\\tan 30}$\n\n$d=\\frac{5\\times 10^{-2}}{\\frac{1}{\\sqrt{3}}}$\n\n$d=5\\sqrt{3}\\times 10^{-2}$\n\nFor one part of the wire with N turns,\n\n$B=\\frac{μ_{0}IN}{4πd}(\\sin θ_{1}+\\sin θ_{2})$\n\nFor 6 identical parts of the wire,\n\n$B_{net}=6B$\n\n$=\\frac{6μ_{0}IN}{4πd}(\\sin 30+\\sin 30)$\n\n$=\\frac{μ_{0}I}{π}\\left (\\frac{6\\times 50}{4\\times 5\\sqrt{3}\\times 10^{-2}}\\right )\\left (2\\times \\frac{1}{2}\\right )$\n\n$=500\\sqrt{3}\\left (\\frac{μ_{0}I}{π}\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/gHQvNc1ZLPP8aXrrRLjgy2xukf24nnfz-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-YB1fHHIU",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinetic-theory",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "[IMG]\n\nConsider a gas of triatomic molecules. The\nmolecules are assumed to be triangular and\nmade of massless rigid rods whose vertices\nare occupied by atoms. The internal energy of\na mole of the gas at temperature T is :",
+  "options": [
+   "$\\frac{3}{2}RT$",
+   "$\\frac{9}{2}RT$",
+   "$\\frac{5}{2}RT$",
+   "3RT"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 59,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "kinetic theory of gases"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Degree of freedom (f) = 3 + 3 = 6 and n = 1\n\nU = $\\frac{f}{2}nRT$\n\n= $\\frac{6}{2}\\times 1\\times RT$\n\n= 3RT",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/YB1fHHIUFrxgNzeheIjgy2xukf24rxlm-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-Lxf5pRnS",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two isolated conducting spheres $S_{1}$ and $S_{2}$ of\nradius $\\frac{2}{3}R$ and $\\frac{1}{3}R$ have 12 $μ$C and –3 $μ$C\ncharges, respectively, and are at a large\ndistance from each other. They are now\nconnected by a conducting wire. A long time\nafter this is done the charges on $S_{1}$ and $S_{2}$ are\nrespectively :",
+  "options": [
+   "4.5 $μ$C on both",
+   "+4.5 $μ$C and –4.5 $μ$C",
+   "6 $μ$C and 3 $μ$C",
+   "3 $μ$C and 6 $μ$C"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 60,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$q_{1} + q_{2} = 12 - 3 = 9$ $μ$C  .....(1)\n\nand $V_{1} = V_{2}$\n\n$\\Rightarrow$ $\\frac{Kq_{1}}{\\frac{2R}{3}}=\\frac{Kq_{2}}{\\frac{R}{3}}$\n\n$\\Rightarrow$ $q_{1} = 2q_{2} .....(2)$\n\nNow putting the value of (2) in (1), we get\n\n$2q_{2} + q_{2} = 9$\n\n$\\Rightarrow$ $3q_{2} = 9$\n\n$\\Rightarrow$ $q_{2} = 3$ $μ$C\n\n$\\Rightarrow$ $q_{1} = 6$ $μ$C",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/Lxf5pRnSBvfie61Wjbjgy2xukf24x8ce-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-ZFeFZkrk",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A bakelite beaker has volume capacity of 500 cc at $30^{o}C$. When it is partially filled with Vm\n volume\n(at $30^{o}C)$ of mercury, it is found that the unfilled volume of the beaker remains constant as\ntemperature is varied. If $γ_{(beaker)}$ $= 6 × 10^{–6} ^{o}C^{–1}$ and $γ_{(mercury)}$ $= 1.5 × 10^{–4} ^{o}C^{–1}$, where $γ$ is the\ncoefficient of volume expansion, then $V_{m}$\n (in cc) is close to $____$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 20.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 61,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermal properties of matter"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\Delta$V = V$γ\\Delta$T\n\n$\\therefore$ $V_{1}γ_{1}$ $= V_{2}γ_{2}$\n\n$\\Rightarrow$ 500 $\\times$ 6 $\\times$ $10^{-6} = V_{m}$\n $\\times$ 1.5 $\\times$ $10^{-4}$\n\n$\\Rightarrow$ $V_{m} =$ $\\frac{500\\times 6\\times 10^{-6}}{1.5\\times 10^{-4}}$\n\n$\\Rightarrow$ $V_{m} = 20 cc$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-K2CFt4Ew",
+  "subjectKey": "physics",
+  "chapterKey": "physics:work-energy-power",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A cricket ball of mass 0.15 kg is thrown\nvertically up by a bowling machine so that it\nrises to a maximum height of 20 m after leaving\nthe machine. If the part pushing the ball applies\na constant force F on the ball and moves\nhorizontally a distance of 0.2 m while launching\nthe ball, the value of F (in N) is $(g = 10 ms^{–2})$\n$____$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 150.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 62,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "work power and energy"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Initial velocity, v = $\\sqrt{2gh}$\n\n= $\\sqrt{2\\times 10\\times 20}$\n\n= 20 m/s\n\nNow work done by the machine,\n\n$W_{F} =$ $\\Delta$k\n\n$\\Rightarrow$ F.d = $\\Delta$k\n\n$\\Rightarrow$ F = $\\frac{\\Delta k}{d}$\n\n= $\\frac{\\frac{1}{2}\\times 0.15\\times 400-0}{0.2}$\n\n= 150 N",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-JYidkRMz",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "When a long glass capillary tube of radius\n0.015 cm is dipped in a liquid, the liquid rises\nto a height of 15 cm within it. If the contact angle\nbetween the liquid and glass to close to $0^{o}$, the\nsurface tension of the liquid, in milliNewton m–1,\nis [$ρ_{(liquid)}$ = 900 kgm$^{–3}, g = 10 ms^{–2}$] \n(Give answer\nin closest integer$) _____$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 101.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 63,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Capillary rise\n\nh = $\\frac{2T\\cos θ}{ρgr}$\n\n$\\Rightarrow$ T = $\\frac{ρgrh}{2\\cos θ}$\n\n= $\\frac{(900)(10)\\left (15\\times 10^{-5}\\right )\\left (15\\times 10^{-2}\\right )}{2}$\n\n= 1012.5 $\\times$ $10^{–4}$\n\n$= 101.25 × 10^{–3}$\n= 101.25 mN/m\n\n$\\simeq$ 101.00 mN/m",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-bEtWbedA",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A person of 80 kg mass is standing on the rim\nof a circular platform of mass 200 kg rotating\nabout its axis at 5 revolutions per minute (rpm).\nThe person now starts moving towards the\ncentre of the platform. What will be the\nrotational speed (in rpm) of the platform when\nthe person reaches its centre $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 9.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 64,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I_{1}ω_{1}=I_{2}ω_{2}$\n\n$\\Rightarrow$ $\\left (\\frac{MR^{2}}{2}+mR^{2}\\right )ω_{1}=\\frac{MR^{2}}{2}ω_{2}$\n\n$\\Rightarrow$ $\\left (1+\\frac{2mR^{2}}{MR^{2}}\\right )ω_{1}=ω_{2}$\n\n$\\Rightarrow$ $\\left (1+\\frac{2\\times 80}{200}\\right )ω_{1}=ω_{2}$\n\n$\\Rightarrow$ $ω_{2}=(1.8)ω_{1}$\n\n$\\Rightarrow$ 2$πf_{2} = 2πf_{1}$ $\\times$ 1.8\n\n$\\Rightarrow$ $f_{2} = 5$ $\\times$ 1.8 = 9",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-njpf6SIB",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "An observer can see through a small hole on the side of a jar (radius 15 cm) at a point at height of\n15 cm from the bottom (see figure). The hole is at a height of 45 cm. When the jar is filled with a\nliquid up to a height of 30 cm the same observer can see the edge at the bottom of the jar. If the\nrefractive index of the liquid is N/100, where N is an integer, the value of N is $_____$.\n\n[IMG]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 158.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 65,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\ntan r = $\\frac{15}{30}$ = $\\frac{1}{2}$\n\nsin r = $\\frac{1}{\\sqrt{5}}$\n\n$1\\sin  45^{o} =$ $μ$sin r\n\n$\\Rightarrow$ $\\frac{1}{\\sqrt{2}}=μ\\left (\\frac{1}{\\sqrt{5}}\\right )$\n\n$\\Rightarrow$ $μ$ = $\\sqrt{\\frac{5}{2}}$ = 1.58\n\n$μ=\\frac{N}{100}$ = 1.58\n\n$\\Rightarrow$ N = 158",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/njpf6SIBDC1Cs7j6VRjgy2xukf25ck7u-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/njpf6SIBDC1Cs7j6VRjgy2xukf25ck7u-1.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

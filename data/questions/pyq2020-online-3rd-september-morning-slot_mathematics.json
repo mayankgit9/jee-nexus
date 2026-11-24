@@ -1,0 +1,969 @@
+[
+ {
+  "publicId": "PYQ-2020-bsMRfGHL",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A dice is thrown two times and the sum of the\nscores appearing on the die is observed to be\na multiple of 4. Then the conditional probability\nthat the score 4 has appeared atleast once is :",
+  "options": [
+   "$\\frac{1}{8}$",
+   "$\\frac{1}{9}$",
+   "$\\frac{1}{4}$",
+   "$\\frac{1}{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 19,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let A is the event for getting score a multiple\nof 4.\n\nSo, A = { (1, 3), (3, 1), (2, 2), (2, 6), (6, 2),\n(3, 5), (5, 3), (4, 4), (6, 6) } = 09\n\nn(A) = 9\n\nB : Score of 4 has appeared at least once.\n\nB = {(4, 4)}\n\nSo, Required probability = $\\frac{1}{9}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-fMrt9F3W",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The lines\n\n$\\vec{r}=\\left (\\hat{i}-\\hat{j}\\right )+l\\left (2\\hat{i}+\\widehat{k}\\right )$ and \n\n$\\vec{r}=\\left (2\\hat{i}-\\hat{j}\\right )+m\\left (\\hat{i}+\\hat{j}+\\widehat{k}\\right )$",
+  "options": [
+   "do not intersect for any values of $l$ and m",
+   "intersect for all values of $l$ and m",
+   "intersect when $l$ = 2 and m = $\\frac{1}{2}$",
+   "intersect when $l$ = 1 and m = 2"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 20,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A general point of the first line is $(1+2l,-1,l)$ and of the second line is $(2+m,-1+m,m)$.\n\nAt a common point the coordinates agree:\n\n$1+2l=2+m,-1=-1+m,l=m$\n\nThe second equation gives $m=0$, and the third then gives $l=0$.\n\nWith these values $1+2l=1$ while $2+m=2$, so the first equation fails. The three equations have no common solution, so the lines do not intersect for any values of $l$ and $m$ (their directions $2\\hat{i}+\\hat{k}$ and $\\hat{i}+\\hat{j}+\\hat{k}$ are not parallel, so the lines are skew).\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-SAyayGIQ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A hyperbola having the transverse axis of\nlength\n$\\sqrt{2}$ has the same foci as that of the ellipse\n$3x^{2} + 4y^{2} = 12$, then this hyperbola does not\npass through which of the following points?",
+  "options": [
+   "$\\left (1,-\\frac{1}{\\sqrt{2}}\\right )$",
+   "$\\left (\\sqrt{\\frac{3}{2}},\\frac{1}{\\sqrt{2}}\\right )$",
+   "$\\left (-\\sqrt{\\frac{3}{2}},1\\right )$",
+   "$\\left (\\frac{1}{\\sqrt{2}},0\\right )$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Ellipse : $\\frac{x^{2}}{4}+\\frac{y^{2}}{3}=1$\n\neccentricity = $\\sqrt{1-\\frac{3}{4}}=\\frac{1}{2}$\n\n$\\therefore$ foci = ($\\pm$ 1, 0)\n\nfor hyperbola, given $2a=\\sqrt{2}\\Rightarrow a=\\frac{1}{\\sqrt{2}}$\n\n$\\therefore$ hyperbola will be\n\n$\\frac{x^{2}}{1/2}-\\frac{y^{2}}{b^{2}}=1$\n\neccentricity = $\\sqrt{1+2b^{2}}$\n\n$\\therefore$ foci $=\\left (\\pm \\sqrt{\\frac{1+2b^{2}}{2}},0\\right )$\n\n$\\because$ Ellipse and hyperbola have same foci\n\n$\\Rightarrow \\sqrt{\\frac{1+2b^{2}}{2}}=1$\n\n$\\Rightarrow b^{2}=\\frac{1}{2}$\n\n$\\therefore$ Equation of hyperbola : $\\frac{x^{2}}{1/2}-\\frac{y^{2}}{1/2}=1$\n\n$\\Rightarrow$ $x^{2}-y^{2}=\\frac{1}{2}$\n\nClearly $\\left (\\sqrt{\\frac{3}{2}},\\frac{1}{\\sqrt{2}}\\right )$ does not lie on it.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-gHNdC9wB",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) of the region\n\n{ (x, y) : 0 $\\leq$ y $\\leq$ $x^{2} + 1, 0$ $\\leq$ y $\\leq$ x + 1,\n\n $\\frac{1}{2}$ $\\leq$ x $\\leq$ 2 } is :",
+  "options": [
+   "$\\frac{79}{16}$",
+   "$\\frac{79}{24}$",
+   "$\\frac{23}{6}$",
+   "$\\frac{23}{16}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n$A=\\int\\limits _{\\frac{1}{2}}^{1}(x^{2}+1)dx+\\int\\limits _{1}^{2}(x+1)dx$\n\n= $\\left [\\frac{x^{3}}{3}+x\\right ]_{\\frac{1}{2}}^{1}+\\left [\\frac{x^{2}}{2}+x\\right ]_{1}^{2}$\n\n$=\\left (\\frac{4}{3}-\\frac{13}{24}\\right )+\\left (4-\\frac{3}{2}\\right )$\n\n$=\\frac{19}{24}+\\frac{5}{2}$\n\n$=\\frac{79}{24}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/gHNdC9wBr4VGCvWafkjgy2xukf0p4kl4-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-p6030E7I",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the first term of an A.P. is 3 and the sum of\nits first 25 terms is equal to the sum of its next\n15 terms, then the common difference of this\nA.P. is :",
+  "options": [
+   "$\\frac{1}{4}$",
+   "$\\frac{1}{5}$",
+   "$\\frac{1}{7}$",
+   "$\\frac{1}{6}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "First 25 terms = a, a + d, .......,a + 24d\n\nNext 15 terms = a + 25d, a + 26d, ......, a + 39d\n\n$\\therefore$ $\\frac{25}{2}[2a+24d]=\\frac{15}{2}[2(a+25d)+14d]$\n\n$\\Rightarrow$ 50a + 600d = 15 [2a + 50d + 14d]\n\n$\\Rightarrow$ 20a + 600d = 960d\n\n$\\Rightarrow$ 60 = 360d\n\n$\\Rightarrow$ d = $\\frac{1}{6}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-L76uaJ1G",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let P be a point on the parabola, $y^{2}$\n = 12x and\nN be the foot of the perpendicular drawn from\nP on the axis of the parabola. A line is now\ndrawn through the mid-point M of PN, parallel\nto its axis which meets the parabola at Q. If the\ny-intercept of the line NQ is $\\frac{4}{3}$,\n then :",
+  "options": [
+   "MQ = $\\frac{1}{3}$",
+   "PN = 4",
+   "PN = 3",
+   "MQ = $\\frac{1}{4}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nLet $P = (3t^{2}$\n , 6t) ; $N = (3t^{2}$\n, 0)\n\n$M = (3t^{2}$\n, 3t)\n\nLet point Q = (h, 3t) which lies on the parabola $y^{2} = 12x$\n\n$\\therefore$ $9t^{2} = 12h$\n\n$\\Rightarrow$ h = $\\frac{3t^{2}}{4}$\n\nEquation of NQ\n\ny - 0 = $\\frac{3t}{\\frac{3t2}{4}-3t^{2}}\\left (x-3t^{2}\\right )$\n\n$\\Rightarrow$ y = $\\frac{-4}{3t}\\left (x-3t^{2}\\right )$\n\nFor y-intercept of NQ, x = 0\n\n$\\therefore$ y = 4t\n\nGiven y-intercept of the line NQ is $\\frac{4}{3}$\n\n$\\therefore$ 4t = $\\frac{4}{3}$\n\n$\\Rightarrow$ t = $\\frac{1}{3}$\n\n$\\therefore$ MQ = $\\frac{9t^{2}}{4}$ = $\\frac{1}{4}$\n\nPN = 6t = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/L76uaJ1Go15PoOPVJXjgy2xukf0pks9k-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-CFSOgEQF",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For the frequency distribution :\n\nVariate (x) :      $x_{1}$   $x_{2}$   $x_{3}$\n ....  $x_{15}$\n\nFrequency (f) : $f_{1}$\n   $f_{2}$\n  $f_{3}$\n...... $f_{15}$\n\nwhere 0  0, the standard deviation cannot be :",
+  "options": [
+   "6",
+   "1",
+   "4",
+   "2"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "If variate varries from m to M then variance\n\n$σ^{2}\\leq \\frac{1}{4}(M-m)^{2}$\n\n(M = upper bound of value of any random variable,\n\n m = Lower bound of value of any random variable)\n\nHere M = 10 and m = 0\n\n$\\therefore$ $σ^{2}\\leq \\frac{1}{4}(10-0)^{2}$\n\n$\\Rightarrow$ $σ^{2}\\leq 25$\n\n$\\Rightarrow$ $-5\\leq σ\\leq 5$\n\n$\\therefore$ $σ$ $\\neq$ 6",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-9sxJlaYO",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\int\\limits _{-π}^{π}|π-|x||dx$ is equal to :",
+  "options": [
+   "$π^{2}$",
+   "2$π^{2}$",
+   "$\\sqrt{2}π^{2}$",
+   "$\\frac{π^{2}}{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{-π}^{π}|π-|x||dx$\n\n= $2\\int\\limits _{0}^{π}|π-|x||dx$ [As it is even function]\n\n= $2\\int\\limits _{0}^{π}(π-x)dx$\n\n= $2\\left [πx-\\frac{x^{2}}{2}\\right ]_{0}^{π}$\n\n= $π^{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-B2HRGK7d",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider the two sets :\n\nA = {m $\\in$ R : both the roots of\n $x^{2}$\n – (m + 1)x + m + 4 = 0 are real} \n\nand B = [–3, 5).\n\nWhich of the following is not true?",
+  "options": [
+   "A $\\cap$ B = {–3}",
+   "B – A = (–3, 5)",
+   "A $\\cup$ B = R",
+   "A - B = ($-\\infty$, $-$3) $\\cup$ (5, $\\infty$)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "As roots are real so, $D\\geq 0$\n\n$(m+1)^{2}-4(m+4)\\geq 0$\n\n$\\Rightarrow m^{2}-2m-15\\geq 0$\n\n$\\Rightarrow$ $(m-5)(m+3)\\geq 0$\n\n$m\\in \\qquad$($-\\infty$, $-$3] $\\cup$ [5, $\\infty$)\n\n$A=(-\\infty$, $-$3] $\\cup$ [5, $\\infty$)\n\nGiven B = [$-$3, 5)\nNow, let's examine the options.\n\nOption A : A ∩ B = {–3}\nThe intersection of sets A and B would be the set of elements common to both sets. In this case, the only common element is -3. So, option A is true.\n\nOption B : B – A = (–3, 5)\nThe subtraction (or difference) of sets A from B is the set of elements that are in B but not in A. B is [–3, 5), and A is (-∞, -3] U [5, ∞). Subtracting A from B would leave an open interval (-3, 5), not including -3 and 5. So, option B is also true.\n\nOption C : A ∪ B = R\nThe union of sets A and B is the set of elements that are in A, or B, or both. Here, A U B would cover all real numbers. So, option C is true.\n\nOption D : A - B = (-∞, -3) ∪ (5, ∞)\nThe subtraction (or difference) of set B from A is the set of elements that are in A but not in B. B is [–3, 5), and A is (-∞, -3] U [5, ∞). Subtracting B from A would leave (-∞, -3) U [5, ∞), which contains 5 (5 is in A but not in B), so it is not (-∞, -3) ∪ (5, ∞). So, option D is not true.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-xrX2b9Gp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $y^{2} + \\log _{e} (\\cos ^{2}x) = y$, \n$x\\in \\left (-\\frac{π}{2},\\frac{π}{2}\\right )$, then :",
+  "options": [
+   "|y''(0)| = 2",
+   "|y'(0)| + |y''(0)| = 3",
+   "y''(0) = 0",
+   "|y'(0)| + |y\"(0)| = 1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $y^{2} + \\log _{e} (\\cos ^{2}x) = y .....(1)$\n\nPut x  = 0, we get\n\n$y^{2} + \\log _{e} (1) = y$\n\n$\\Rightarrow$ $y^{2} = y$\n\n$\\Rightarrow$ y = 0, 1\n\nDifferentiating (1) we get\n\n2yy' + $\\frac{2}{\\cos x}(-\\sin x)$ = y'\n\n$\\Rightarrow$ 2yy' - 2tanx = y'  ....(2)\n\nFrom (2) when x = 0, y = 0 then y'(0) = 0\n\nFrom (2) when x = 0, y = 1 then \n\n2y' = y'\n\n$\\Rightarrow$ y'(0) = 0\n\nAgain differentiating (2) we get\n\n$2(y')^{2}$\n $+ 2yy'' – 2\\sec ^{2}x = y''$\n\nfrom (2) when x = 0, y = 0, y’(0) = 0 then\n\ny”(0) = -2\n\nAlso from (2) when x = 0, y = 1, y’(0) = 0 then\n\ny”(0) = 2\n\n$\\therefore$ |y''(0)| = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-5qPzYxvB",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The function, $f(x) = (3x – 7)x^{2/3}, x$ $\\in$ R, is\nincreasing for all x lying in :",
+  "options": [
+   "$(-\\infty ,0)\\cup \\left (\\frac{3}{7},\\infty \\right )$",
+   "$(-\\infty ,0)\\cup \\left (\\frac{14}{15},\\infty \\right )$",
+   "$\\left (-\\infty ,\\frac{14}{15}\\right )$",
+   "$\\left (-\\infty ,\\frac{14}{15}\\right )\\cup (0,\\infty )$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x) = (3x – 7)x^{2/3}$\n\nf’(x) = $(3x-7)\\frac{2}{3x^{1/3}}+x^{\\frac{2}{3}}.3$\n\n= $\\frac{6x-14+9x}{3x^{1/3}}$\n\n= $\\frac{15x-14}{3x^{1/3}}$\n\nAs f(x) increasing so f'(x) > 0\n\n$\\therefore$ $\\frac{15x-14}{3x^{1/3}}$ > 0\n\n[IMG]\n\n\n$\\therefore$ x $\\in$ $(-\\infty ,0)\\cup \\left (\\frac{14}{15},\\infty \\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/5qPzYxvBb1sYWL6hEVjgy2xukf0vzp5w-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-KcZ71wer",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $(2.^{1}P_{0}$\n $– 3.^{2}P_{1} + 4.^{3}P_{2}$ .... up to\n$51^{th}$ term)\n + (1! – 2! + 3! – ..... up to $51^{th}$ term)\nis equal to :",
+  "options": [
+   "1",
+   "1 + (51)!",
+   "1 – 51(51)!",
+   "1 + (52)!"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(2.^{1}P_{0}$\n $– 3.^{2}P_{1} + 4.^{3}P_{2}$ .... up to\n$51^{th}$ term)\n + (1! – 2! + 3! – ..... up to $51^{th}$ term)\n\n= ( 2.1! - 3.2! + 4.3! - ....+ 52.51!)\n\n+ ( 1! – 2! + 3! – ..... + (51)! )\n\n= (2! - 3! + 4! .....+ 52! )\n\n+ ( 1! - 2! + 3! - 4! + .....+ 51! )\n\n= 1 + (52)!",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-HLdljjor",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\Delta$ = $\\left |\\begin{array}{lll} x-2 & 2x-3 & 3x-4 \\\\ 2x-3 & 3x-4 & 4x-5 \\\\ 3x-5 & 5x-8 & 10x-17 \\end{array}\\right |$ =\n\n$Ax^{3} + Bx^{2} + Cx + D$, then B + C is equal to :",
+  "options": [
+   "-1",
+   "-3",
+   "9",
+   "1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\Delta$ = $\\left |\\begin{array}{lll} x-2 & 2x-3 & 3x-4 \\\\ 2x-3 & 3x-4 & 4x-5 \\\\ 3x-5 & 5x-8 & 10x-17 \\end{array}\\right |$\n\n$R_{2}$ $\\to$ $R_{2} – R_{1}$ \n\n$R_{3}$ $\\to$ $R_{3} – R_{2}$\n\n= $\\left |\\begin{array}{lll} x-2 & 2x-3 & 3x-4 \\\\ x-1 & x-1 & x-1 \\\\ x-2 & 2(x-2) & 6(x-2) \\end{array}\\right |$\n\n= $(x-1)(x-2)\\left |\\begin{array}{lll} x-2 & 2x-3 & 3x-4 \\\\ 1 & 1 & 1 \\\\ 1 & 2 & 6 \\end{array}\\right |$\n\n$C_{1}$ $\\to$ $C_{1} - C_{2}$\n\n$C_{2}$ $\\to$ $C_{2} - C_{3}$\n\n= $(x-1)(x-2)\\left |\\begin{array}{lll} -x+1 & -x+1 & 3x-4 \\\\ 0 & 0 & 1 \\\\ -1 & -4 & 6 \\end{array}\\right |$\n\n= -(x - 1)(x - 2)[-4(1 - x) + 1(1 - x)]\n\n$= -(x^{2} - 3x + 2)$[3x - 3]\n\n$= -3x^{3} + 9x^{2} - 6x + 3x^{2} - 9x + 6$\n\n$= -3x^{3} + 12x^{2} - 15x + 6 = Ax^{3} + Bx^{2} + Cx + D$\n\n$\\therefore$ A = -3, B = 12, C = -15\n\n$\\therefore$ B + C = 12 – 15 = – 3",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-tmiZPxBR",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The solution curve of the differential equation,\n\n$(1 + e^{-x})(1 + y^{2})\\frac{dy}{dx}$ $= y^{2}$,\n\nwhich passes through\nthe point (0, 1), is :",
+  "options": [
+   "$y^{2} + 1 = y\\left (\\log _{e}\\left (\\frac{1+e^{-x}}{2}\\right )+2\\right )$",
+   "$y^{2} + 1 = y\\left (\\log _{e}\\left (\\frac{1+e^{x}}{2}\\right )+2\\right )$",
+   "$y^{2} = 1 +$ $y\\log _{e}\\left (\\frac{1+e^{-x}}{2}\\right )$",
+   "$y^{2} = 1 +$ $y\\log _{e}\\left (\\frac{1+e^{x}}{2}\\right )$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $(1 + e^{-x})(1 + y^{2})\\frac{dy}{dx}$ $= y^{2}$\n\n$\\Rightarrow$ $\\left (\\frac{y^{2}+1}{y^{2}}\\right )dy=\\frac{e^{x}dx}{e^{x}+1}$\n\nIntegrating both sides,\n\n$\\int \\left (\\frac{y^{2}+1}{y^{2}}\\right )dy=\\int \\frac{e^{x}dx}{e^{x}+1}$\n\n$\\Rightarrow$ $y-\\frac{1}{y}=\\ln |e^{x}+1|+c$\n\nIt passes through (0, 1)\n\n$\\Rightarrow$ c = $-\\ln 2$\n\n$\\Rightarrow$ $y^{2}-1=yln\\left (\\frac{e^{x}+1}{2}\\right )$\n\n$\\Rightarrow$ $y^{2}=1+yln\\left (\\frac{e^{x}+1}{2}\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-dPu5jf9E",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the number of integral terms in the expansion\n\nof $(3^{1/2} + 5^{1/8})^{n}$ is exactly 33, then the least value\nof n is :",
+  "options": [
+   "264",
+   "256",
+   "128",
+   "248"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "General term of the expression,\n\n$T_{r+1}={}^{n}C_{r}\\left (3^{\\frac{1}{2}}\\right )^{n-r}\\left (5^{\\frac{1}{8}}\\right )^{r}$\n\n$={}^{n}C_{r}(3)^{\\frac{n-r}{2}}(5)^{\\frac{r}{8}}$\n\nWe will get integral term when $\\frac{n-r}{2}$ and $\\frac{r}{8}$ are integer\n\n$\\therefore$ (1) n $-$ r is multiple of 2\n\n$\\Rightarrow$ n $-$ r = 0, 2, 4, ......\n\n(2) r is multiple of 8\n\n$\\Rightarrow$ r = 0, 8, 16, .......\n\nFrom this two conditions common values are = 0, 8, 16, ....... which will becomes integral terms.\n\nGiven that there are 33 integral terms.\n\nHere first integral term at $0^{th}$ position.\n\nSecond integral term at $8^{th}$ position.\n\n$\\therefore$ $33^{th}$ integral term will be at = 0 + (33 $-$ 1)8 = 256\n\nSo, there should be at least 256 terms.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-8XBpeSuA",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $α$ and $β$ are the roots of the equation\n\n$x^{2}$\n + px + 2 = 0 and $\\frac{1}{α}$ and $\\frac{1}{β}$ are the\n roots of\nthe equation $2x^{2}$\n + 2qx + 1 = 0, then\n\n$\\left (α-\\frac{1}{α}\\right )\\left (β-\\frac{1}{β}\\right )\\left (α+\\frac{1}{β}\\right )\\left (β+\\frac{1}{α}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{9}{4}\\left (9-q^{2}\\right )$",
+   "$\\frac{9}{4}\\left (9+q^{2}\\right )$",
+   "$\\frac{9}{4}\\left (9-p^{2}\\right )$",
+   "$\\frac{9}{4}\\left (9+p^{2}\\right )$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α$ and $β$ are the roots of the \n\nequation\n$x^{2}$\n + px + 2 = 0\n\n$\\therefore$ $α+β=-p,αβ=2$\n\n$\\frac{1}{α}$ and $\\frac{1}{β}$ are the roots of\nthe \n\nequation $2x^{2}$\n + 2qx + 1 = 0\n\n$\\therefore$ $\\frac{1}{α}+\\frac{1}{β}=-q,\\frac{1}{αβ}=\\frac{1}{2}$\n\n$\\Rightarrow$ $\\frac{α+β}{αβ}=-q\\Rightarrow \\frac{-p}{2}=-q$\n\n$\\Rightarrow p=2q$\n\n$\\left (α+\\frac{1}{β}\\right )\\left (β+\\frac{1}{α}\\right )=αβ+\\frac{1}{αβ}+2$ $=2+\\frac{1}{2}+2=\\frac{9}{2}$\n\n$\\left (α-\\frac{1}{α}\\right )\\left (β-\\frac{1}{β}\\right )=αβ+\\frac{1}{αβ}-\\frac{α}{β}-\\frac{β}{α}$\n\n$=2+\\frac{1}{2}-\\left [\\frac{α^{2}+β^{2}}{αβ}\\right ]=\\frac{5}{2}-\\left [\\frac{(α+β)^{2}-2αβ}{αβ}\\right ]$\n\n$=\\frac{5}{2}-\\left [\\frac{p^{2}-4}{2}\\right ]$\n\n$=\\frac{9-p^{2}}{2}$\n\n$\\left (α-\\frac{1}{α}\\right )\\left (β-\\frac{1}{β}\\right )\\left (α+\\frac{1}{β}\\right )\\left (β+\\frac{1}{α}\\right )=\\left (\\frac{9-p^{2}}{2}\\right )\\left (\\frac{9}{2}\\right )$\n\n$=\\frac{9}{4}(9-p^{2})$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-wcEtMRsa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let [t] denote the greatest integer\n$\\leq$ t. If for some\n\n$λ$ $\\in$ R - {1, 0}, $\\lim _{x\\to 0}\\left |\\frac{1-x+|x|}{λ-x+[x]}\\right |$ = L, then L is\nequal to :",
+  "options": [
+   "1",
+   "2",
+   "0",
+   "$\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Here $\\lim _{x\\to 0}\\left |\\frac{1-x+|x|}{λ-x+[x]}\\right |=L$\n\nHere L.H.L. $\\lim _{h\\to 0^{-}}\\left |\\frac{1+h+h}{λ+h-1}\\right |=\\left |\\frac{1}{λ-1}\\right |$\n\nR.H.L. = $\\lim _{h\\to 0^{+}}\\left |\\frac{1-h+h}{λ-h+0}\\right |=\\left |\\frac{1}{λ}\\right |$\n\n$\\because$ Limit exists. Hence L.H.L. = R.H.L.\n\n$\\Rightarrow$ $|λ-1|=|λ|$\n\n$\\Rightarrow$ $λ=\\frac{1}{2}$ \n\n$\\therefore$ L = $\\frac{1}{|λ|}$ = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-UKJTY6Dg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "2$π$ - $\\left (\\sin ^{-1}\\frac{4}{5}+\\sin ^{-1}\\frac{5}{13}+\\sin ^{-1}\\frac{16}{65}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{7π}{4}$",
+   "$\\frac{5π}{4}$",
+   "$\\frac{3π}{2}$",
+   "$\\frac{π}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2π-\\left (\\sin ^{-1}\\frac{4}{5}+\\sin ^{-1}\\frac{5}{13}+\\sin ^{-1}\\frac{16}{65}\\right )$\n\n$=2π-\\left (\\tan ^{-1}\\frac{4}{3}+\\tan ^{-1}\\frac{5}{12}+\\tan ^{-1}\\frac{16}{63}\\right )$\n\n$=2π-\\left \\{\\tan ^{-1}\\left (\\frac{\\frac{4}{3}+\\frac{5}{12}}{1-\\frac{4}{3}.\\frac{5}{12}}\\right )+\\tan ^{-1}\\frac{16}{63}\\right \\}$\n\n$=2π-\\left (\\tan ^{-1}\\frac{63}{16}+\\tan ^{-1}\\frac{16}{63}\\right )$\n\n= $2π-\\left (\\tan ^{-1}\\frac{63}{16}+\\cot ^{-1}\\frac{63}{16}\\right )$\n\n$=2π-\\frac{π}{2}$\n\n$=\\frac{3π}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-qXMCpQCn",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let A = $\\left [\\begin{array}{ll} x & 1 \\\\ 1 & 0 \\end{array}\\right ]$, x $\\in$ R and $A^{4} =$ [$a_{ij}$].\n\nIf\n$a_{11} = 109$, then $a_{22}$ is equal to $_______$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 10.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A^{2}=\\left [\\begin{array}{ll} x & 1 \\\\ 1 & 0 \\end{array}\\right ]\\left [\\begin{array}{ll} x & 1 \\\\ 1 & 0 \\end{array}\\right ]=\\left [\\begin{array}{ll} x^{2}+1 & x \\\\ x & 1 \\end{array}\\right ]$\n\n$A^{4}=\\left [\\begin{array}{ll} x^{2}+1 & x \\\\ x & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} x^{2}+1 & x \\\\ x & 1 \\end{array}\\right ]$\n\n$=\\left [\\begin{array}{ll} (x^{2}+1)^{2}+x^{2} & x(x^{2}+1)+x \\\\ x(x^{2}+1)+x & x^{2}+1 \\end{array}\\right ]$\n\nGiven $(x^{2}+1)^{2}+x^{2}=109$\n\nLet $x^{2}+1$ = t\n\n$t^{2}+t-1=109$\n\n$\\Rightarrow$ (t $-$ 10) (t + 11) = 0\n\n$\\therefore$ $t = 10 = x^{2} + 1 = a_{22}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-2x9c5HPz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\lim _{x\\to 0}\\left \\{\\frac{1}{x^{8}}\\left (1-\\cos \\frac{x^{2}}{2}-\\cos \\frac{x^{2}}{4}+\\cos \\frac{x^{2}}{2}\\cos \\frac{x^{2}}{4}\\right )\\right \\}$ $= 2^{-k}$\n\nthen the value of k is $_______$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 0}\\left \\{\\frac{1}{x^{8}}\\left (1-\\cos \\frac{x^{2}}{2}-\\cos \\frac{x^{2}}{4}+\\cos \\frac{x^{2}}{2}\\cos \\frac{x^{2}}{4}\\right )\\right \\}=2^{-k}$\n\n$\\Rightarrow$ $\\lim _{x\\to 0}\\frac{\\left (1-\\cos \\frac{x2}{2}\\right )}{4\\left (\\frac{x2}{2}\\right )^{2}}\\frac{\\left (1-\\cos \\frac{x2}{4}\\right )}{16\\left (\\frac{x2}{4}\\right )^{2}}$ = $2^{-k}$\n\n$\\Rightarrow$ $\\lim _{x\\to 0}\\frac{2\\sin ^{2}\\frac{x2}{4}}{16\\left (\\frac{x2}{4}\\right )^{2}}\\times \\frac{2\\sin ^{2}\\frac{x2}{8}}{64\\left (\\frac{x2}{8}\\right )^{2}}$ $= 2^{-k}$\n\n$\\Rightarrow$ $\\frac{1}{8}\\times \\frac{1}{32}=2^{-k}$\n\n$\\Rightarrow$ $2^{-8} = 2^{-k}$ \n\n$\\Rightarrow$ k = 8",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-EfmKOioH",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The diameter of the circle, whose centre lies on\nthe line x + y = 2 in the first quadrant and which\ntouches both the lines x = 3 and y = 2, is\n$_______$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\because$ center lies on x + y = 2 and in $1^{st}$ quadrant center = ($α$, 2 $-$ $α$)\n\nwhere $α$ > 0 and 2 $-$ $α$ > 0 $\\Rightarrow$ 0 < $α$ < 2\n\n$\\because$ circle touches x = 3 and y = 2\n\n$\\therefore$ $\\frac{|α-3|}{1}=r$\n\nand $\\frac{|2-(2-α)|}{1}=r$\n\n$\\Rightarrow \\quad |α|=r$\n\n$\\therefore$ $|α-3|=|α|$\n\n$\\Rightarrow$ $α^{2}-6α+9=α^{2}$\n\n$\\Rightarrow α=\\frac{3}{2}$\n\n$\\therefore$ $r=\\frac{3}{2}$\n\n$\\Rightarrow$ 2r = 3 = diameter.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-3rd-september-morning-slot/EfmKOioHmsuvP1wBRvjgy2xukf0zcypw-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 3rd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-jvyQgYbo",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The value of $(0.16)^{\\log _{2.5}\\left (\\frac{1}{3}+\\frac{1}{3 2}+....to\\infty \\right )}$ is equal to $______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $(0.16)^{\\log _{2.5}\\left (\\frac{1}{3}+\\frac{1}{3 2}+....to\\infty \\right )}$\n\nAs sum of GP upto infinity = $\\frac{a}{1-r}$\n\n$\\therefore$ $\\frac{1}{3}+\\frac{1}{3^{2}}+\\frac{1}{3^{3}}+....\\infty$ = $\\frac{\\frac{1}{3}}{1-\\frac{1}{3}}$ = $\\frac{1}{2}$\n\n$\\therefore$ $(0.16)^{\\log _{2.5}\\left (\\frac{1}{3}+\\frac{1}{3 2}+....to\\infty \\right )}$\n\n= $(0.16)^{\\log _{2.5}\\left (\\frac{1}{2}\\right )}$\n\n= $\\left (\\frac{16}{100}\\right )^{\\log _{2.5}\\left (\\frac{1}{2}\\right )}$\n\n= $\\left (\\frac{4}{10}\\right )^{\\log _{2.5}\\left (\\frac{1}{2}\\right )}$\n\n= $\\left [\\left (\\frac{10}{4}\\right )^{-2}\\right ]^{\\log _{2.5}\\left (\\frac{1}{2}\\right )}$\n\n= $\\left [(2.5)^{-2}\\right ]^{\\log _{2.5}\\left (\\frac{1}{2}\\right )}$\n\n= $(2.5)^{-2\\log _{2.5}\\left (\\frac{1}{2}\\right )}$\n\n= $\\left (\\frac{1}{2}\\right )^{-2}$ = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-DLDIcZtF",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\left (\\frac{1+i}{1-i}\\right )^{\\frac{m}{2}}=\\left (\\frac{1+i}{i-1}\\right )^{\\frac{n}{3}}=1$, (m, n\n$\\in$ N) then the\ngreatest common divisor of the least values of\nm and n is $_______$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-03 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 3rd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (\\frac{1+i}{1-i}\\right )^{m/2}=\\left (\\frac{1+i}{i-1}\\right )^{n/3}=1$\n\n$\\Rightarrow \\left (\\frac{(1+i)^{2}}{2}\\right )^{m/2}=\\left (\\frac{(1+i)^{2}}{-2}\\right )^{n/3}=1$\n\n$\\Rightarrow (i)^{m/2}=(-i)^{n/3}=1$ $= i^{4}$ [ As $i^{4} = 1$]\n\n$\\Rightarrow \\frac{m}{2}=4k_{1}and\\frac{n}{3}=4k_{2}$\n\n$\\Rightarrow$ $m = 8 k_{1}$ and $n = 12 k_{2}$\n\nLeast value of m = 8 and n = 12.\n\n$\\therefore$ GCD (8, 12) = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 3rd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
