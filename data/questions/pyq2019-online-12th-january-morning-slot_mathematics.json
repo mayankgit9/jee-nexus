@@ -1,0 +1,1013 @@
+[
+ {
+  "publicId": "PYQ-2019-ElZ6Uyxu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The maximum area (in sq. units) of a rectangle having its base on the x-axis and its other two vertices on the parabola, $y = 12 – x^{2}$  such that the rectangle lies inside the parabola, is :",
+  "options": [
+   "36",
+   "20$\\sqrt{2}$",
+   "18$\\sqrt{3}$",
+   "32"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nf (a) = 2a(12 $-$ $a)^{2}$\n\nf '(a) = 2(12 $-$ $3a^{2})$\n\nMaximum at a = 2\n\nmaximum area = f(2) = 32",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-12th-january-morning-slot/ElZ6UyxucQlC2uTZyf0kk-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 12th January Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-e5HmDrCr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In a random experiment, a fair die is rolled until two fours are obtained in succession. The probability that the experiment will end in the fifth throw of the die is equal to :",
+  "options": [
+   "$\\frac{200}{6^{5}}$",
+   "$\\frac{225}{6^{5}}$",
+   "$\\frac{150}{6^{5}}$",
+   "$\\frac{175}{6^{5}}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The experiment ends at the fifth throw exactly when throws 4 and 5 are both fours and no two successive fours occur earlier.\n\nThrows 4 and 5 are fours in $1\\times 1$ way.\n\nThrow 3 must not be a four, otherwise the experiment would already end at throw 4: $5$ ways.\n\nThrows 1 and 2 must not both be fours: $6^{2}-1=35$ ways. With throw 3 not a four, no other pair of successive fours is possible among throws 1 to 3.\n\n$P=\\dfrac{35\\times 5\\times 1\\times 1}{6^{5}}=\\dfrac{175}{6^{5}}$\n\nAllowing no four at all in throws 1 to 3 gives only $5^{3}=125$, which misses sequences with a single earlier four such as 4, 1, 2, 4, 4.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-WCJJppkq",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let S = {1, 2, 3, … , 100}. The number of non-empty subsets A of S such that the product of elements in A is even is :",
+  "options": [
+   "$2^{50} – 1$",
+   "$2^{50} (2^{50}$ $-$ 1)",
+   "$2^{100}$ $-$ 1",
+   "$2^{50} + 1$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "S = {1,2,3, . . . .100}\n\n= Total non empty subsets-subsets with product of element is odd\n\n$= 2^{100}$ $-$ 1 $-$ 1[$(2^{50}$ $-$ 1)]\n\n$=  2^{100}$ $-$ $2^{50}$\n\n$=  2^{50} (2^{50}$ $-$ 1)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-2kgwaW5s",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{z-α}{z+α}(α\\in R)$ is a purely imaginary number and | z | = 2, then a value of $α$ is :",
+  "options": [
+   "$\\frac{1}{2}$",
+   "$\\sqrt{2}$",
+   "2",
+   "1"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{z-α}{z+α}+\\frac{z–-α}{z–+α}=0$\n\n$zz–+zα-αz–-α^{2}+zz–-zα+z–α-α^{2}=0$\n\n$|z|^{2}=α^{2},$  $a=\\pm 2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-WJSwZSmn",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f and g be continuous functions on [0, a] such that f(x) = f(a – x) and g(x) + g(a – x) = 4, then $\\int\\limits _{0}^{a}$f(x) g(x) dx is equal to :",
+  "options": [
+   "4$\\int\\limits _{0}^{a}$f(x)dx",
+   "$-$ 3$\\int\\limits _{0}^{a}$f(x)dx",
+   "$\\int\\limits _{0}^{a}$f(x)dx",
+   "2$\\int\\limits _{0}^{a}$f(x)dx"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\mathrm{I}=\\int\\limits _{0}^{a}f(x)g(x)dx$\n\n$\\mathrm{I}=\\int\\limits _{0}^{a}f(a-x)g(a-x)dx$\n\n$\\mathrm{I}=\\int\\limits _{0}^{a}f(x)(4-g(x\\quad )dx$\n\n$\\mathrm{I}=4\\int\\limits _{0}^{a}f(x)dx-\\mathrm{I}$\n\n$\\Rightarrow \\mathrm{I}=2\\int\\limits _{0}^{a}f(x)dx$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-8ItKCdun",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A ratio of the 5th term from the beginning to the 5th term from the end in the binomial expansion of $\\left (2^{1/3}+\\frac{1}{2(3)^{1/3}}\\right )^{10}$ is :",
+  "options": [
+   "1 : $2(6)^{1/3}$",
+   "1 : $4(6)^{1/3}$",
+   "$2(36)^{1/3}$ : 1",
+   "$4(36)^{1/3}$ : 1"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{T_{5}}{T_{5}^{1}}=\\frac{{}^{10}C_{4}\\left (2^{1/3}\\right )^{10-4}\\left (\\frac{1}{2(3)1/3}\\right )^{4}}{{}^{10}C_{4}\\left (\\frac{1}{2\\left (3 1/3\\right )}\\right )^{10-4}\\left (2^{1/3}\\right )^{4}}=4.(36)^{1/3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-7NBZ9LCV",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the vertices of a hyperbola be at (–2, 0) and (2, 0) and one of its foci be at (–3, 0), then which one of the following points does not lie on this hyperbola?",
+  "options": [
+   "$\\left (6,5\\sqrt{2}\\right )$",
+   "$\\left (2\\sqrt{6},5\\right )$",
+   "$\\left (-6,2\\sqrt{10}\\right )$",
+   "$\\left (4,\\sqrt{15}\\right )$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nae = 3,  e = $\\frac{3}{2}$,  $b^{2} = 4\\left (\\frac{9}{4}-1\\right )$,  $b^{2}  = 5$\n\n$\\frac{x^{2}}{4}-\\frac{y^{2}}{5}=1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-12th-january-morning-slot/7NBZ9LCV3YKefkvN211Fe-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 12th January Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-6iCyo9ds",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the sum of the deviations of 50 observations from 30 is 50, then the mean of these observations is :",
+  "options": [
+   "31",
+   "50",
+   "51",
+   "30"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sum\\limits _{i=1}^{50}(x_{i}-30)=50$\n\n$\\sum x_{i}-50\\times 30=50$\n\n$\\sum x_{i}=50+50\\times 30$\n\nMean $=x–=\\frac{\\sum x_{i}}{n}=\\frac{50\\times 30+50}{50}$\n\n$=30+1=31$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-m4gBqYct",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution of the differential equation, x$\\frac{dy}{dx}$ $+ y = x \\log _{e} x,  (x > 1)$.  If $2y(2) = \\log _{e} 4$ $-$ 1, then y(e) is equal to :",
+  "options": [
+   "$-\\frac{e}{2}$",
+   "$-\\frac{e^{2}}{2}$",
+   "$\\frac{e^{2}}{4}$",
+   "$\\frac{e}{4}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}+\\frac{y}{x}=\\ell nx$\n\n$e^{\\int \\frac{1}{x}dx}=x$\n\n$xy=\\int x\\ell nx+C$\n\n$\\ell nx\\frac{x^{2}}{2}-\\int \\frac{1}{x}.\\frac{x^{2}}{2}$\n\n$xy=\\frac{x^{2}}{2}\\ell nx-\\frac{x^{2}}{4}+C,$\n\nfor   $2y(2)=2\\ell n2-1$\n\n$\\Rightarrow$  $C=0$\n\n$y=\\frac{x}{2}\\ell nx-\\frac{x}{4}$\n\n$y(e)=\\frac{e}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-59dUaVXa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Considering only the principal values of inverse functions, the set\n\nA = { x $\\geq$ 0: $\\tan ^{-1}(2x) + \\tan ^{-1}(3x) =$ $\\frac{π}{4}$}",
+  "options": [
+   "contains two elements",
+   "contains more than two elements",
+   "is an empty set",
+   "is a singleton"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\tan ^{-1}(2x) + \\tan ^{-1}(3x) =$ $π$/4\n\n$\\Rightarrow \\quad \\frac{5x}{1-6x^{2}}$ = 1\n\n$\\Rightarrow$  $6x^{2} + 5x$ $-$ 1 = 0\n\nx = $-$1  or  x = $\\frac{1}{6}$\n\nx = $\\frac{1}{6}$\n\n$\\because$  x  >  0",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-Fnn2C32p",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The product of three consecutive terms of a G.P. is 512. If 4 is added to each of the first and the second of these terms, the three terms now form an A.P. Then the sum of the original three terms of the given G.P. is :",
+  "options": [
+   "36",
+   "28",
+   "32",
+   "24"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let terms are $\\frac{a}{r},a,ar\\to G.P$\n\n$\\therefore$  $a^{3}$ = 512  $\\Rightarrow$ a = 8\n\n$\\frac{8}{r}+4,12,8r\\to A.P.$\n\n24 = $\\frac{8}{r}+4+8r$\n\nr = 2, r = $\\frac{1}{2}$\n\nr = 2(4, 8, 16)\n\nr = $\\frac{1}{2}$ (16, 8, 4)\n\nSum = 28",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-ltTrASeb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For x > 1,  if  $(2x)^{2y} = 4e^{2x-2y}$,  \n\nthen  $(1 + \\log _{e} 2x)^{2}$ $\\frac{dy}{dx}$ is equal to :",
+  "options": [
+   "$\\frac{x\\log _{e}2x-\\log _{e}2}{x}$",
+   "$\\log _{e} 2x$",
+   "$x \\log _{e}  2x$",
+   "$\\frac{x\\log _{e}2x+\\log _{e}2}{x}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(2x)^{2y} = 4e^{2x-2y}$\n\n2y$\\ell$n2x = $\\ell$n4 + 2x $-$ 2y\n\ny = $\\frac{x+\\ell n2}{1+\\ell n2x}$\n\ny ' = $\\frac{(1+\\ell n2x)-(x+\\ell n2)\\frac{1}{x}}{(1+\\ell n2x)^{2}}$\n\ny '$(1+\\ell n2x)^{2}=\\left [\\frac{x\\ell n2x-\\ell n2}{x}\\right ]$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-zqvZ0QAt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the straight line, 2x – 3y + 17 = 0 is perpendicular to the line passing through the points (7, 17) and (15, $β$), then $β$ equals :",
+  "options": [
+   "$\\frac{35}{3}$",
+   "$-$ 5",
+   "$-$ $\\frac{35}{3}$",
+   "5"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{17-β}{-8}\\times \\frac{2}{3}=-1$\n\n$β$ = 5",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-1dTbUwB1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) of the region bounded by the parabola, $y = x^{2} + 2$ and the lines, y = x + 1, x = 0 and x = 3, is",
+  "options": [
+   "$\\frac{15}{4}$",
+   "$\\frac{15}{2}$",
+   "$\\frac{21}{2}$",
+   "$\\frac{17}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nRequired area \n\n$=\\int\\limits _{0}^{3}\\left (x^{2}+2\\right )dx-\\frac{1}{2}.5.3=9+6-\\frac{15}{2}$\n\n$=\\frac{15}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-12th-january-morning-slot/1dTbUwB1nv6yAQrJbYghx-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 12th January Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-ZhCzqfek",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{x\\to π/4}\\frac{\\cot ^{3}x-\\tan x}{\\cos \\left (x+\\frac{π}{4}\\right )}$ is :",
+  "options": [
+   "$8\\sqrt{2}$",
+   "4",
+   "$4\\sqrt{2}$",
+   "8"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to π/4}\\frac{\\cot ^{3}x-\\tan x}{\\cos \\left (x+\\frac{π}{4}\\right )}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{\\frac{1}{\\tan 3x}-\\tan x}{\\cos \\left (x+\\frac{π}{4}\\right )}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{1-\\tan ^{4}x}{\\left (\\tan ^{3}x\\right )\\cos \\left (x+\\frac{π}{4}\\right )}$\n\n=$\\lim _{x\\to \\frac{π}{4}}\\frac{\\left (1-\\tan ^{2}x\\right )\\left (1+\\tan ^{2}x\\right )}{\\left (\\tan ^{3}x\\right )\\cos \\left (x+\\frac{π}{4}\\right )}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{\\left (1-\\tan ^{2}x\\right )\\left (1+\\tan ^{2}\\frac{π}{4}\\right )}{\\left (\\tan ^{3}\\frac{π}{4}\\right )\\cos \\left (x+\\frac{π}{4}\\right )}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{\\left (1-\\tan ^{2}x\\right )(1+1)}{1.\\cos \\left (x+\\frac{π}{4}\\right )}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{2\\left (1-\\tan ^{2}x\\right )}{\\left (\\frac{\\cos x-\\sin x}{\\sqrt{2}}\\right )}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{2\\sqrt{2}\\left (1-\\frac{\\sin 2x}{\\cos 2x}\\right )}{(\\cos x-\\sin x)}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{2\\sqrt{2}\\left (\\cos ^{2}x-\\sin ^{2}x\\right )}{\\cos ^{2}x(\\cos x-\\sin x)}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{2\\sqrt{2}(\\cos x+\\sin x)(\\cos x-\\sin x)}{\\cos ^{2}x(\\cos x-\\sin x)}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{2\\sqrt{2}(\\cos x+\\sin x)}{\\cos ^{2}x}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{2\\sqrt{2}\\left (\\cos \\frac{π}{4}+\\sin \\frac{π}{4}\\right )}{\\cos ^{2}\\frac{π}{4}}$\n\n= $\\frac{2\\sqrt{2}\\left (\\frac{1}{\\sqrt{2}}+\\frac{1}{\\sqrt{2}}\\right )}{\\frac{1}{2}}$\n\n= $\\frac{2\\sqrt{2}\\left (\\frac{2}{\\sqrt{2}}\\right )}{\\frac{1}{2}}$\n\n= 8\n\nOther Method :\n\n$\\lim _{x\\to π/4}\\frac{\\cot ^{3}x-\\tan x}{\\cos \\left (x+\\frac{π}{4}\\right )}$\n\nThis is in $\\frac{0}{0}$ form so L' Hospital rule is applicable.\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{3\\cot ^{3}x\\left (-\\cos ec^{2}x\\right )-\\sec ^{2}x}{-\\sin \\left (x+\\frac{π}{4}\\right )}$\n\n= $\\frac{3\\times 1\\left (-\\left (\\sqrt{2}\\right )^{2}\\right )-\\left (\\sqrt{2}\\right )^{2}}{-1}$\n\n= $\\frac{-6-2}{-1}$ = 8",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-00UBMw9x",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let S be the set of all points in (–$π$, $π$) at which the function, f(x) = min{sin x, cos x} is not differentiable. Then S is a subset of which of the following ?",
+  "options": [
+   "$\\left \\{-\\frac{π}{2},-\\frac{π}{4},\\frac{π}{4},\\frac{π}{2}\\right \\}$",
+   "$\\left \\{-\\frac{3π}{4},-\\frac{π}{2},\\frac{π}{2},\\frac{3π}{4}\\right \\}$",
+   "$\\left \\{-\\frac{π}{4},0,\\frac{π}{4}\\right \\}$",
+   "$\\left \\{-\\frac{3π}{4},-\\frac{π}{4},\\frac{3π}{4},\\frac{π}{4}\\right \\}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The complete solution is shown in the original exam figure.\n\n[IMG]",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-12th-january-morning-slot/00UBMw9xgFLk3qTNH0S2d-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 12th January Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-k0vrHx9K",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The integral $\\intcos(\\log _{e} x) dx$  is equal to : (where C is a constant of integration)",
+  "options": [
+   "$\\frac{x}{2}$[$\\sin (\\log _{e} x)$ $-$ $\\cos (\\log _{e} x)$] + C",
+   "x[$\\cos (\\log _{e} x) + \\sin (\\log _{e} x)$] + C",
+   "$\\frac{x}{2}$[$\\cos (\\log _{e} x) + \\sin (\\log _{e} x)$] + C",
+   "x[$\\cos (\\log _{e} x)$ $-$ $\\sin (\\log _{e} x)$] + C"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\mathrm{I}=\\int \\cos (\\ell nx)dx$\n\n$\\mathrm{I}=\\cos (\\ln x).x+\\int \\sin (\\ell nx)dx$\n\n$\\mathrm{I}=\\cos (\\ell nx)x+\\left [\\sin (\\ell nx).x-\\int \\cos (\\ell nx)dx\\right ]$\n\n$\\mathrm{I}=\\frac{x}{2}[\\sin (\\ell nx)+\\cos (\\ell nx)]+C$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-1wm32XZz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An ordered pair ($α$, $β$) for which the system of linear equations \n\n(1 + $α$) x + $β$y + z = 2 \n\n$α$x + (1 + $β$)y + z = 3 \n\n$α$x + $β$y + 2z = 2 \n\nhas a unique solution, is :",
+  "options": [
+   "(–3, 1)",
+   "(1, –3)",
+   "(–4, 2)",
+   "(2, 4)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For unique solution\n\n$\\Delta$  $\\neq$ 0  $\\Rightarrow$ $\\left |\\begin{array}{lll} 1+α & β & 1 \\\\ α & 1+β & 1 \\\\ α & β & 2 \\end{array}\\right |\\neq 0$\n\n$\\left |\\begin{array}{lll} 1 & -1 & 0 \\\\ 0 & 1 & -1 \\\\ α & β & 2 \\end{array}\\right |\\neq 0\\Rightarrow α+β\\neq -2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-nvMc3eov",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The maximum value of  3cos$θ$ + 5sin $\\left (θ-\\frac{π}{6}\\right )$ for any real value of $θ$ is :",
+  "options": [
+   "$\\sqrt{34}$",
+   "$\\sqrt{31}$",
+   "$\\sqrt{19}$",
+   "$\\frac{\\sqrt{79}}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "y = 3cos$θ$ + 5 $\\left (\\sin θ\\frac{\\sqrt{3}}{2}-\\cos θ\\frac{1}{2}\\right )$\n\n$\\frac{5\\sqrt{3}}{2}$ sin$θ$ + $\\frac{1}{2}$cos$θ$\n\n$y_{\\max } =$ $\\sqrt{\\frac{75}{4}+\\frac{1}{4}}$ = $\\sqrt{19}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-BVviBGTP",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let P = $\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 3 & 1 & 0 \\\\ 9 & 3 & 1 \\end{array}\\right ]$ and Q = [$q_{ij}$] be two 3 $\\times$ 3 matrices such that $Q – P^{5} = I_{3}$.  \n\nThen  $\\frac{q_{21}+q_{31}}{q_{32}}$ is equal  to :",
+  "options": [
+   "15",
+   "9",
+   "135",
+   "10"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$P=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 3 & 1 & 0 \\\\ 9 & 3 & 1 \\end{array}\\right ]$\n\n$P^{2}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 3+3 & 1 & 0 \\\\ 9+9+9 & 3+3 & 1 \\end{array}\\right ]$\n\n$P^{3}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 3+3+3 & 1 & 0 \\\\ 6.9 & 3+3+3 & 1 \\end{array}\\right ]$\n\n$P^{n}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 3n & 1 & 0 \\\\ \\frac{n(n+1)}{2}3^{2} & 3n & 1 \\end{array}\\right ]$\n\n$P^{5}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 5.3 & 1 & 0 \\\\ 15.9 & 5.3 & 1 \\end{array}\\right ]$\n\n$Q=P^{5}+\\mathrm{I}_{3}$\n\n$Q=\\left [\\begin{array}{lll} 2 & 0 & 0 \\\\ 15 & 2 & 0 \\\\ 135 & 15 & 2 \\end{array}\\right ]$\n\n$\\frac{q_{21}+q_{31}}{q_{32}}=\\frac{15+135}{15}=10$\n\nAliter\n\n$P=⎛⎝⎜\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{array}⎞⎠⎟+⎛⎝⎜\\begin{array}{lll} 0 & 0 & 0 \\\\ 3 & 0 & 0 \\\\ 9 & 3 & 0 \\end{array}⎞⎠⎟$\n\n$P=\\mathrm{I}+X$\n\n$X=⎛⎝⎜\\begin{array}{lll} 0 & 0 & 0 \\\\ 3 & 0 & 0 \\\\ 9 & 3 & 0 \\end{array}⎞⎠⎟$\n\n$X^{2}=⎛⎝⎜\\begin{array}{lll} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 9 & 0 & 0 \\end{array}⎞⎠⎟$\n\n$X^{3}=0$\n\n$P^{5}=\\mathrm{I}+5X+10X^{2}$\n\n$Q=P^{5}+\\mathrm{I}=2\\mathrm{I}+5X+10X^{2}$\n\n$Q=⎛⎝⎜\\begin{array}{lll} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 2 \\end{array}⎞⎠⎟+⎛⎝⎜\\begin{array}{lll} 0 & 0 & 0 \\\\ 15 & 0 & 0 \\\\ 45 & 15 & 0 \\end{array}⎞⎠⎟+⎛⎝⎜\\begin{array}{lll} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 90 & 0 & 0 \\end{array}⎞⎠⎟$\n\n$\\Rightarrow \\quad Q=⎛⎝⎜\\begin{array}{lll} 2 & 0 & 0 \\\\ 15 & 2 & 0 \\\\ 135 & 15 & 2 \\end{array}⎞⎠⎟$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-YIRrhh12",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $λ$ be the ratio of the roots of the quadratic equation in $x, 3m^{2}x^{2} + m(m – 4)x + 2 = 0$, then the least value of m for which $λ+\\frac{1}{λ}=1,$ is",
+  "options": [
+   "$-2+\\sqrt{2}$",
+   "4$-$3$\\sqrt{2}$",
+   "2 $-$ $\\sqrt{3}$",
+   "4 $-$ 2$\\sqrt{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$3m^{2}x^{2} + m(m$ $-$ 4) x + 2 = 0\n\n$λ+\\frac{1}{λ}=1,\\frac{α}{β}+\\frac{β}{α}=1,α^{2}+β^{2}=αβ$\n\n($α$ + $β)^{2} = 3αβ$\n\n$\\left (-\\frac{m(m-4)}{3m^{2}}\\right )^{2}=\\frac{3(2)}{3m^{2}},\\frac{(m-4)^{2}}{9m^{2}}=\\frac{6}{3m}$\n\n$(m-4)^{2}=18,m=4\\pm \\sqrt{18,}4\\pm 3\\sqrt{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-INEmnq65",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let P(4, –4) and Q(9, 6) be two points on the parabola, $y^{2} = 4x$ and let X be any point on the arc POQ of this parabola, where O is the vertex of this parabola, such that the area of $\\Delta$PXQ is maximum. Then this maximum area (in sq. units) is :",
+  "options": [
+   "$\\frac{625}{4}$",
+   "$\\frac{125}{4}$",
+   "$\\frac{75}{2}$",
+   "$\\frac{125}{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$y^{2} = 4x$\n\n2yy' = 4\n\ny ' = $\\frac{1}{t}=2,$   $t=\\frac{1}{2}$\n\nArea = $\\frac{1}{2}\\left |\\begin{array}{lll} \\frac{1}{4} & 1 & 1 \\\\ 9 & 6 & 1 \\\\ 4 & -4 & 1 \\end{array}\\right |=\\frac{125}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-12th-january-morning-slot/INEmnq65GsBAbnWypAlve-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 12th January Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-d9rYjwxl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider three boxes, each containing, 10 balls labelled 1, 2, … , 10. Suppose one ball is randomly drawn from each of the boxes. Denote by $n_{i}$, the label of the ball drawn from the $i^{th}$ box, (i = 1, 2, 3). Then, the number of ways in which the balls can be chosen such that $n_{1} < n_{2} < n_{3}$ is :",
+  "options": [
+   "164",
+   "240",
+   "82",
+   "120"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-12 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 12th January Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Number of ways $= ^{10}C_{3} = 120$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 12th January Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

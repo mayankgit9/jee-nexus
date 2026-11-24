@@ -1,0 +1,953 @@
+[
+ {
+  "publicId": "PYQ-2019-3h3PJW4w",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{α}=3\\hat{i}+\\hat{j}$ and $\\vec{β}=2\\hat{i}-\\hat{j}+3\\widehat{k}$\n. If $\\vec{β}=\\vec{β}_{1}-\\vec{β_{2}}$,\nwhere $\\vec{β}_{1}$\nis parallel to $\\vec{α}$ and $\\vec{β_{2}}$\nis perpendicular\nto $\\vec{α}$ , then $\\vec{β}_{1}\\times \\vec{β_{2}}$ \nis equal to",
+  "options": [
+   "$3\\hat{i}-9\\hat{j}-5\\widehat{k}$",
+   "$\\frac{1}{2}$($-3\\hat{i}+9\\hat{j}+5\\widehat{k}$)",
+   "$-3\\hat{i}+9\\hat{j}+5\\widehat{k}$",
+   "$\\frac{1}{2}$($3\\hat{i}-9\\hat{j}+5\\widehat{k}$)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $\\vec{α}=3\\hat{i}+\\hat{j}$\n\n$\\vec{β}=2\\hat{i}-\\hat{j}+3\\widehat{k}$\n\n$\\vec{β}_{1}$\nis parallel to $\\vec{α}$\n\n$\\therefore$ $\\vec{β}_{1}$ = $λ$ $\\vec{α}$\n\n$\\Rightarrow$ $\\vec{β}_{1}$ = $3λ\\hat{i}+λ\\hat{j}$\n\n$\\vec{β_{2}}$\nis perpendicular\nto $\\vec{α}$\n\n$\\vec{β_{2}}$ . $\\vec{α}$ = 0\n\nLet $\\vec{β_{2}}$ = $x\\hat{i}+y\\hat{j}+z\\widehat{k}$\n\n$\\therefore$ ($x\\hat{i}+y\\hat{j}+z\\widehat{k}$).($3\\hat{i}+\\hat{j}$) = 0\n\n$\\Rightarrow$ 3x + y = 0\n\n$\\Rightarrow$ y = -3x\n\n$\\therefore$ $\\vec{β_{2}}$ = $x\\hat{i}-3x\\hat{j}+z\\widehat{k}$\n\nGiven $\\vec{β}=\\vec{β}_{1}-\\vec{β_{2}}$\n\n$\\Rightarrow$ $(2\\hat{i}-\\hat{j}+3\\widehat{k}$) = ($3λ\\hat{i}+λ\\hat{j}$) - ($x\\hat{i}-3x\\hat{j}+z\\widehat{k}$)\n\n= $(3λ-x)\\hat{i}+(λ+3x)\\hat{j}-z\\widehat{k}$\n\n$\\therefore$ 3$λ$ - x = 2 ...(1)\n\n$λ$ + 3x = -1.....(2)\n\nz = -3\n\nSolving (1) and (2), we get\n\n$λ$ = $\\frac{1}{2}$ and x = $-\\frac{1}{2}$\n\n$\\therefore$ $\\vec{β}_{1}$ = $\\frac{3}{2}\\hat{i}+\\frac{1}{2}\\hat{j}$\n\nand $\\vec{β_{2}}$ = $-\\frac{1}{2}\\hat{i}+\\frac{3}{2}\\hat{j}-3\\widehat{k}$\n\n$\\vec{β}_{1}\\times \\vec{β}_{2}=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\widehat{k} \\\\ \\frac{3}{2} & \\frac{1}{2} & 0 \\\\ -\\frac{1}{2} & \\frac{3}{2} & -3 \\end{array}\\right |$\n\n= $\\frac{1}{2}$($-3\\hat{i}+9\\hat{j}+5\\widehat{k}$)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-AZI26JLd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\int\\limits _{0}^{π/2}\\frac{\\sin ^{3}x}{\\sin x+\\cos x}dx$ is",
+  "options": [
+   "$\\frac{π-2}{8}$",
+   "$\\frac{π-2}{4}$",
+   "$\\frac{π-1}{2}$",
+   "$\\frac{π-1}{4}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "I = $\\int\\limits _{0}^{π/2}\\frac{\\sin ^{3}x}{\\sin x+\\cos x}dx$ .....(1)\n\n$\\Rightarrow$ I = $\\int\\limits _{0}^{\\frac{π}{2}}\\frac{\\cos ^{3}x}{\\sin x+\\cos x}dx$ ......(2)\n\nAdding those two\n\n2I = $\\int\\limits _{0}^{\\frac{π}{2}}\\frac{\\sin ^{3}x+\\cos ^{3}x}{\\sin x+\\cos x}dx$\n\n= $\\int\\limits _{0}^{\\frac{π}{2}}\\frac{(\\sin x+\\cos x)\\left (\\sin ^{2}x+\\cos ^{2}x-\\sin x\\cos x\\right )}{\\sin x+\\cos x}dx$\n\n= $\\int\\limits _{0}^{\\frac{π}{2}}\\left (\\sin ^{2}x+\\cos ^{2}x-\\sin x\\cos x\\right )dx$\n\n= $\\int\\limits _{0}^{\\frac{π}{2}}\\left (1-\\frac{\\sin 2x}{2}\\right )dx$\n\n= $\\left [x+\\frac{\\cos 2x}{4}\\right ]_{0}^{\\frac{π}{2}}$\n\n= $\\left (\\frac{π}{2}-\\frac{1}{4}\\right )-\\left (\\frac{1}{4}\\right )$\n\n$\\therefore$ 2I = $\\left (\\frac{π}{2}-\\frac{1}{2}\\right )$\n\n$\\therefore$ I = $\\frac{π-1}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-H7ek3Bud",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If ƒ(x) is a non-zero polynomial of degree four,\nhaving local extreme points at x = –1, 0, 1; then\nthe set \n\nS = {x $\\in$ R : ƒ(x) = ƒ(0)}\n\nContains exactly :",
+  "options": [
+   "four rational numbers.",
+   "four irrational numbers.",
+   "two irrational and one rational number.",
+   "two irrational and two rational numbes."
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Local extreme points of f(x) is at x = –1, 0, 1.\n\n$\\therefore$ f'(x) = 0 has three solutions x = –1, 0, 1.\n\n$\\therefore$ f'(x) = k(x + 1)x(x - 1)\n\n$\\int f^{'}(x)dx=\\int k(x+1)x(x-1)dx$\n\nf(x) = $k\\left [\\frac{x^{4}}{4}-\\frac{x^{2}}{2}\\right ]+C$\n\nAlso given that\n\nƒ(x) = ƒ(0)\n\n$\\therefore$ $k\\left [\\frac{x^{4}}{4}-\\frac{x^{2}}{2}\\right ]+C$ = C\n\n$\\Rightarrow$ $\\frac{x^{2}}{2}\\left (\\frac{x^{2}}{2}-1\\right )$ = 0\n\n$\\Rightarrow$ x = 0, $-\\sqrt{2}$, $\\sqrt{2}$\n\n$\\therefore$ x has two irrational and one rational value.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-Gf3bGbvx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the standard deviation of the numbers\n–1, 0, 1, k is $\\sqrt{5}$ where k > 0, then k is equal to",
+  "options": [
+   "2$\\sqrt{6}$",
+   "$\\sqrt{6}$",
+   "$2\\sqrt{\\frac{5}{6}}$",
+   "$2\\sqrt{\\frac{10}{3}}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "standard deviation = $\\sqrt{5}$\n\n$\\therefore$ Variance = $\\left (\\sqrt{5}\\right )^{2}$ = 5\n\nAlso variance = $\\frac{\\sum x_{i}^{2}}{N}-μ^{2}$\n\nWhere $μ$ = Mean = $\\frac{-1+0+1+k}{4}$ = $\\frac{k}{4}$\n\n$\\therefore$ Variance = $\\frac{(-1)^{2}+0+1^{2}+k^{2}}{4}$ - $\\frac{k^{2}}{16}$\n\n$\\Rightarrow$ 5 = $\\frac{2+k^{2}}{4}$ - $\\frac{k^{2}}{16}$\n\n$\\Rightarrow$ $8 + 3k^{2} = 80$\n\n$\\Rightarrow$ $k^{2} = 24 = 2\\sqrt{6}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-BSbow338",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "All the points in the set\n\n$S=\\left \\{\\frac{α+i}{α-i}:α\\in R\\right \\}(i=\\sqrt{-1})$ lie on a :",
+  "options": [
+   "straight line whose slope is –1",
+   "straight line whose slope is 1.",
+   "circle whose radius is 1.",
+   "circle whose radius is $\\sqrt{2}$ ."
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let h + ik = $\\frac{α+i}{α-i}$\n\n= $\\frac{(α+i)(α+i)}{(α-i)(α+i)}$\n\n= $\\frac{\\left (α^{2}-1\\right )+2iα}{α^{2}+1}$\n\n$\\therefore$ h = $\\frac{α^{2}-1}{α^{2}+1}$ and k = $\\frac{2α}{α^{2}+1}$\n\nBy squaring and adding we get\n\n$h^{2} + k^{2} = 1$\n\n$\\therefore$ This is circle whose radius is 1.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-E1UPnoGM",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let ƒ(x) = 15 – |x – 10|; x $\\in$ R. Then the set\nof all values of x, at which the function,\ng(x) = ƒ(ƒ(x)) is not differentiable, is :",
+  "options": [
+   "{10,15}",
+   "{5,10,15,20}",
+   "{10}",
+   "{5,10,15}"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "ƒ(x) = 15 – |x – 10|\n\ng(x) = ƒ(ƒ(x)) = 15 – |ƒ(x) – 10|\n\n= 15 – |15 – |x – 10| – 10|\n\n= 15 – |5 – |x – 10||\n\nAs this is a linear expression so it is non differentiable when value inside the modulus is zero.\n\nSo non differentiable when\n\nx – 10 = 0 $\\Rightarrow$ x = 10\n\nand 5 – |x – 10| = 0\n\n$\\Rightarrow$ |x – 10| = 5\n\n$\\Rightarrow$ x - 10 = $\\pm$ 5\n\n$\\Rightarrow$ x = 5, 15\n\n$\\therefore$ g(x) is not differentiable at x = 5, 10, 15.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-ASH34Yki",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let p, q $\\in$ R. If 2 - $\\sqrt{3}$ is a root of the quadratic\nequation, $x^{2} + px + q = 0$, then :",
+  "options": [
+   "$p^{2} – 4q – 12 = 0$",
+   "$q^{2} – 4p – 16 = 0$",
+   "$q^{2} + 4p + 14 = 0$",
+   "$p^{2} – 4q + 12 = 0$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "If a quadratic equation with rational coefficient has one irrational root then other root will be the conjugate of the irrational root.\n\nHere $x^{2} + px + q = 0$ has one root 2 - $\\sqrt{3}$.\n\n$\\therefore$ Other root will be 2 + $\\sqrt{3}$.\n\nSum of the roots = -p = 4\n\nand product of the roots = q = 1\n\nYou can see $p^{2} – 4q – 12 = 0$ satisfy value of p = -4 and q = 1.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-11zVmn3h",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Slope of a line passing through P(2, 3) and\nintersecting the line, x + y = 7 at a distance of\n4 units from P, is :",
+  "options": [
+   "$\\frac{\\sqrt{7}-1}{\\sqrt{7}+1}$",
+   "$\\frac{\\sqrt{5}-1}{\\sqrt{5}+1}$",
+   "$\\frac{1-\\sqrt{5}}{1+\\sqrt{5}}$",
+   "$\\frac{1-\\sqrt{7}}{1+\\sqrt{7}}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nWe know parametric form of straight line is\n\n$\\frac{x-x_{1}}{\\cos θ}=\\frac{y-y_{1}}{\\sin θ}=r$\n\n$\\Rightarrow$ $\\frac{x-2}{\\cos θ}=\\frac{y-3}{\\sin θ}=4$\n\n$\\therefore$ x = 2 + 4cos$θ$\n\ny = 3 + 4sin$θ$\n\n$\\therefore$ Point A = (2 + 4cos$θ$, 3 + 4sin$θ$)\n\nPoint A lies on line x + y = 7,\n\n$\\therefore$ (2 + 4cos$θ$) + (3 + 4sin$θ$) = 7\n\n$\\Rightarrow$ sin$θ$ + cos$θ$ = $\\frac{1}{2}$\n\n$\\Rightarrow$ $\\sin ^{2}θ+\\cos ^{2}θ$ + 2sin$θ$cos$θ$ = $\\frac{1}{4}$\n\n$\\Rightarrow$ 1 + sin 2$θ$ = $\\frac{1}{4}$\n\n$\\Rightarrow$ sin 2$θ$ = $-\\frac{3}{4}$\n\n$\\Rightarrow$ $\\frac{2\\tan θ}{1+\\tan ^{2}θ}$ = $-\\frac{3}{4}$\n\n$\\Rightarrow$ $3\\tan ^{2}θ$ + 8tan$θ$ + 3 = 0\n\n$\\Rightarrow$ tan$θ$ = $\\frac{-8\\pm 2\\sqrt{7}}{6}$\n\nSo slope = $\\frac{-8\\pm 2\\sqrt{7}}{6}$\n\nBy checking each options,\n\nSlope = $\\frac{1-\\sqrt{7}}{1+\\sqrt{7}}$\n\nAs $\\frac{1-\\sqrt{7}}{1+\\sqrt{7}}$ = $\\frac{\\left (1-\\sqrt{7}\\right )^{2}}{1-7}$ = $\\frac{8-2\\sqrt{7}}{-6}$ = $\\frac{-8+2\\sqrt{7}}{6}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-morning-slot/11zVmn3h8n66ftAlElPXW-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-ynFU9TI4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A committee of 11 members is to be formed from\n8 males and 5 females. If m is the number of ways\nthe committee is formed with at least 6 males and\nn is the number of ways the committee is formed\nwith at least 3 females, then :",
+  "options": [
+   "n = m – 8",
+   "m = n = 78",
+   "m + n = 68",
+   "m = n = 68"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "At least 6 males means in the committee there can be 6 males or 7 males or 8 males.\n\n$\\therefore$ m = ${}^{8}C_{6}\\times {}^{5}C_{5}+{}^{8}C_{7}\\times {}^{5}C_{4}+{}^{8}C_{8}\\times {}^{5}C_{3}$ = 78\n\nAt least 3 females means in the committee there can be 3 females or 4 females or 5 females.\n\n$\\therefore$ n = ${}^{5}C_{3}\\times {}^{8}C_{8}+{}^{5}C_{4}\\times {}^{8}C_{7}+{}^{5}C_{5}\\times {}^{8}C_{6}$ = 78\n\nSo, m = n = 78",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-3TQ0nlDr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the fourth term in the binomial expansion of $\\left (\\frac{2}{x}+x^{\\log _{8}x}\\right )^{6}$\n (x > 0) is $20 × 8^{7}$, then a value of\nx is :",
+  "options": [
+   "$8^{–2}$",
+   "$8^{2}$",
+   "$8^{3}$",
+   "8"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (\\frac{2}{x}+x^{\\log _{8}x}\\right )^{6}$\n\nGiven $T_{4} = 20 × 8^{7}$\n\n$\\Rightarrow$ ${}^{6}C_{3}\\left (\\frac{2}{x}\\right )^{3}\\left (x^{\\log _{8}x}\\right )^{3}$ $= 20 × 8^{7}$\n\n$\\Rightarrow$ 20$\\times\\frac{8}{x^{3}}\\times x^{3\\log _{8}x}$ $= 20 × 8^{7}$\n\n$\\Rightarrow$ $x^{3\\log _{8}x-3}$ $= 8^{6}$\n\nTaking $\\log _{8}$ both side\n\n$\\Rightarrow$ ($3\\log _{8}x-3$) $\\times$ $\\log _{8}x$ = 6\n\n$\\Rightarrow$ $3(\\log _{8}x)^{2}$ - 3$\\log _{8}x$ = 6\n\n$\\Rightarrow$ $(\\log _{8}x)^{2}$ - $\\log _{8}x$ = 2\n\n$\\Rightarrow$ ($\\log _{8}x$ - 2)($\\log _{8}x$ + 1) = 0\n\n$\\Rightarrow$ $\\log _{8}x$ = 2 or $\\log _{8}x$ = -1\n\n$\\Rightarrow$ $x = 8^{2}$ or x = $\\frac{1}{8}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-gfALgYQ9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The solution of the differential equation\n\n$x\\frac{dy}{dx}+2y$ $= x^{2} (x$ $\\neq$ 0) with y(1) = 1, is :",
+  "options": [
+   "$y=\\frac{4}{5}x^{3}+\\frac{1}{5x^{2}}$",
+   "$y=\\frac{3}{4}x^{2}+\\frac{1}{4x^{2}}$",
+   "$y=\\frac{x^{2}}{4}+\\frac{3}{4x^{2}}$",
+   "$y=\\frac{x^{3}}{5}+\\frac{1}{5x^{2}}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x\\frac{dy}{dx}+2y$ $= x^{2}$\n\n$\\Rightarrow$ $\\frac{dy}{dx}+\\left (\\frac{2}{x}\\right )y=x$\n\n$\\therefore$ I.F = $e^{\\int \\frac{2}{x}dx}$ $= x^{2}$\n\n$\\therefore$ The solution is\n\n$yx^{2} =$ $\\int x^{3}dx$\n\n$\\Rightarrow$ $yx^{2} =$ $\\frac{x^{4}}{4}+C$ .....(1)\n\nAs y(1) = 1\n\n$\\therefore$ when x = 1 then y = 1.\n\nPutting the value of x and y in equation (1), we get\n\n 1 = $\\frac{1}{4}+C$\n\n$\\Rightarrow$ C = $\\frac{3}{4}$\n\n$\\therefore$ Required solution\n\n$yx^{2} =$ $\\frac{x^{4}}{4}+\\frac{3}{4}$\n\n$\\Rightarrow$ $y=\\frac{x^{2}}{4}+\\frac{3}{4x^{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-QtWndUPN",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The integral $\\int \\mathrm{s}\\mathrm{e}\\mathrm{c}^{2/3}\\mathrm{x}\\mathrm{c}\\mathrm{o}\\mathrm{s}\\mathrm{e}\\mathrm{c}^{4/3}\\mathrm{x}\\mathrm{d}\\mathrm{x}$ is equal to\n(Hence C is a constant of integration)",
+  "options": [
+   "$-3/4 \\tan  ^{- 4 / 3} x + C$",
+   "$3\\tan ^{–1/3}x + C$",
+   "$–3\\cot ^{–1/3}x+ C$",
+   "$- 3\\tan ^{–1/3}x + C$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int \\sec ^{\\frac{2}{3}}x\\cos ec^{\\frac{4}{3}}xdx$\n\n= $\\int \\frac{\\sec ^{\\dfrac{2}{3}}x}{\\cos ec^{\\dfrac{2}{3}}x}\\cos ec^{2}xdx$\n\n= $\\int \\frac{1}{\\cot ^{\\dfrac{2}{3}}x}\\cos ec^{2}xdx$\n\nLet $\\cot  x = t^{3}$\n\n$\\Rightarrow$ - cosec$^{2}x dx = 3t^{2}dt$\n\n= $-3\\int \\frac{t^{2}dt}{t^{2}}$\n\n= -3t + C\n\n= -3$\\cot ^{\\frac{1}{3}}x$ + C\n\n= -3$\\tan ^{-\\frac{1}{3}}x$ + C",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-9YvLd5bx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the sum of the first n terms of a non-constant\n$A.P., a_{1}, a_{2}, a_{3}$, ..... be $50n+\\frac{n(n-7)}{2}A$, where\nA is a constant. If d is the common difference of\nthis A.P., then the ordered pair $(d, a_{50})$ is equal to",
+  "options": [
+   "(A, 50+45A)",
+   "(50, 50+45A)",
+   "(A, 50+46A)",
+   "(50, 50+46A)"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$S_{n} =$ $50n+\\frac{n(n-7)}{2}A$\n\nWe know, $n^{th}$ tem\n\n$T_{n} = S_{n} - S_{n - 1}$\n\n= $50n+\\frac{n(n-7)}{2}A$ - $50(n-1)-\\frac{(n-1)(n-8)}{2}A$\n\n= 50 + $\\frac{A}{2}\\left [n^{2}-7n-n^{2}+9n-8\\right ]$\n\n= 50 + A(n - 4)\n\nWe also know, common difference\n\n$d = T_{n} - T_{n - 1}$\n\n= 50 + A(n - 4) - 50 - A(n - 5)\n\n= A\n\nAnd $T_{50} = 50 + A(50 - 4)$\n\n= 50 + 46A\n\n$\\therefore$ $(d, a_{50}) = (A, 50+46A)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-1YN4VE8z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) of the region\n\nA = {(x, y) : $x^{2}$ $\\leq$ y $\\leq$ x + 2} is",
+  "options": [
+   "$\\frac{31}{6}$",
+   "$\\frac{10}{3}$",
+   "$\\frac{13}{6}$",
+   "$\\frac{9}{2}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Parabola : $x^{2} = y$ \n\nStraight line : y = x + 2\n\n$\\therefore$ $x^{2} = x + 2$\n\n$\\Rightarrow$ $x^{2} - x - 2 = 0$\n\nx = -1, 2\n\n$\\therefore$ y = 1, 4\n\n\n[IMG]\n\n\nRequired area = $\\int\\limits _{-1}^{2}\\left [(x+2)-x^{2}\\right ]dx$\n\n= $\\left [\\frac{x^{2}}{2}+2x-\\frac{x^{3}}{3}\\right ]_{-1}^{2}$\n\n= $\\left (2+4-\\frac{8}{3}\\right )-\\left (\\frac{1}{2}-2+\\frac{1}{3}\\right )$\n\n= $\\frac{9}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-morning-slot/1YN4VE8zviTQTiOCB718hoxe66ijvwoz4p3-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-vZDInSnd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\sum\\limits _{k=1}^{10}f(a+k)=16\\left (2^{10}-1\\right )$ where the function\nƒ satisfies \n\nƒ(x + y) = ƒ(x)ƒ(y) for all natural\nnumbers x, y and ƒ(1) = 2. then the natural\nnumber 'a' is",
+  "options": [
+   "2",
+   "16",
+   "4",
+   "3"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given ƒ(1) = 2\n\n and ƒ(x + y) = ƒ(x)ƒ(y)\n\nWhen x = 1 and y = 1 then,\n\nƒ(1 + 1) = ƒ(1)ƒ(1)\n\n$\\Rightarrow$ $f(2) = (f(1))^{2} = 2^{2}$\n\nAlso when x = 2 and y = 1 then,\n\nƒ(2 + 1) = ƒ(2)ƒ(1)\n\n$\\Rightarrow$ $f(3) = 2^{3}$\n\n$\\therefore$ Similarly $f(4) = 2^{4}$\n\n.\n\n.\n\n.\n\n.\n\n$f(x) = 2^{x}$\n\n$\\therefore$ $f(a + k) = 2^{a + k}$\n\nNow given,\n\n$\\sum\\limits _{k=1}^{10}f(a+k)=16\\left (2^{10}-1\\right )$\n\n$\\Rightarrow$ $\\sum\\limits _{k=1}^{10}2^{a+k}$ = $16\\left (2^{10}-1\\right )$\n\n$\\Rightarrow$ $2^{a+1}+2^{a+2}+....+2^{a+10}$ = $16\\left (2^{10}-1\\right )$\n\n$\\Rightarrow$ $2^{a}\\left [2+2^{2}+....+2^{10}\\right ]$ =  $16\\left (2^{10}-1\\right )$\n\n$\\Rightarrow$ $2^{a}\\times \\frac{2\\left (2^{10}+1\\right )}{2-1}$ = $16\\left (2^{10}-1\\right )$\n\n$\\Rightarrow$ $2^{a}=8$\n\n$\\Rightarrow$ $a$ = 3",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-MGCkKbAW",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α$ and $β$ be the roots of the equation\n$x^{2} + x + 1 = 0$. Then for y $\\neq$ 0 in R,\n\n$\\left |\\begin{array}{lll} y+1 & α & β \\\\ α & y+β & 1 \\\\ β & 1 & y+α \\end{array}\\right |$\nis equal to",
+  "options": [
+   "$y(y^{2} – 1)$",
+   "$y(y^{2} – 3)$",
+   "$y^{3}$",
+   "$y^{3} – 1$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α$ and $β$ are the roots of the equation\n$x^{2} + x + 1 = 0$.\n\n$\\therefore$ $α$ = $ω$ and $β$ = $ω^{2}$\n\n$\\left |\\begin{array}{lll} y+1 & α & β \\\\ α & y+β & 1 \\\\ β & 1 & y+α \\end{array}\\right |$\n\n= $\\left |\\begin{array}{lll} y+1 & ω & ω^{2} \\\\ ω & y+ω^{2} & 1 \\\\ ω^{2} & 1 & y+ω \\end{array}\\right |$\n\n$C_{1}$ $\\to$ $C_{1} + C_{2} + C_{3}$\n\n= $\\left |\\begin{array}{lll} y+1+ω+ω^{2} & ω & ω^{2} \\\\ y+1+ω+ω^{2} & y+ω^{2} & 1 \\\\ y+1+ω+ω^{2} & 1 & y+ω \\end{array}\\right |$\n\n= $\\left |\\begin{array}{lll} y & ω & ω^{2} \\\\ y & y+ω^{2} & 1 \\\\ y & 1 & y+ω \\end{array}\\right |$\n\nAs $1+ω+ω^{2}$ = 0\n\n= $y\\left |\\begin{array}{lll} 1 & ω & ω^{2} \\\\ 1 & y+ω^{2} & 1 \\\\ 1 & 1 & y+ω \\end{array}\\right |$\n\n$R_{2}$ $\\to$ $R_{2} - R_{1}$\n\n$R_{3}$ $\\to$ $R_{3} - R_{1}$\n\n= $y\\left |\\begin{array}{lll} 1 & ω & ω^{2} \\\\ 0 & y+ω^{2}-ω & 1-ω^{2} \\\\ 0 & 1-ω & y+ω-ω^{2} \\end{array}\\right |$\n\n= y$\\left [\\left (y+ω^{2}-ω\\right )\\left (y+ω-ω^{2}\\right )-\\left (1-ω^{2}\\right )(1-ω)\\right ]$\n\n$= y(y^{2}) = y^{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-FtUibW67",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Four persons can hit a target correctly with\nprobabilities\n$\\frac{1}{2}$, $\\frac{1}{3}$, $\\frac{1}{4}$ and\n$\\frac{1}{8}$ respectively. If all hit\nat the target independently, then the probability that\nthe target would be hit, is :",
+  "options": [
+   "$\\frac{25}{32}$",
+   "$\\frac{25}{192}$",
+   "$\\frac{1}{192}$",
+   "$\\frac{7}{32}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let four persons are A, B, C and D.\n\nProbability of hitting a target by them,\n\nP(A) = $\\frac{1}{2}$\n\nP(B) = $\\frac{1}{3}$\n\nP(C) = $\\frac{1}{4}$\n\nP(D) = $\\frac{1}{8}$\n\nProbability of hitting target at least once = 1 - Probability of not hitting by anybody\n\nP(Hit) = 1 - $P\\left (A–\\cap B–\\cap C–\\cap D–\\right )$\n\n= 1 - $P\\left (A–\\right ).P\\left (B–\\right ).P\\left (C–\\right ).P\\left (D–\\right )$\n\n= 1 - $\\frac{1}{2}.\\frac{2}{3}.\\frac{3}{4}.\\frac{7}{8}$\n\n= $\\frac{25}{32}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-96UfPZHX",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\cos ^{2}10° – \\cos 10°\\cos 50° + \\cos ^{2}50°$ is",
+  "options": [
+   "$\\frac{3}{2}+\\cos 20^{o}$",
+   "$\\frac{3}{4}$",
+   "$\\frac{3}{2}(1+\\cos 20^{o})$",
+   "$\\frac{3}{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cos ^{2}10° – \\cos 10°\\cos 50° + \\cos ^{2}50°$\n\n= $\\frac{1}{2}$[ $2\\cos ^{2}10° – 2\\cos 10°\\cos 50° + 2\\cos ^{2}50°$]\n\n= $\\frac{1}{2}$[ 1 + cos20° - cos60° - cos40° + 1 + cos100°]\n\n= $\\frac{1}{2}$[ 2 - $\\frac{1}{2}$ + cos20° + cos100° - cos40°]\n\n= $\\frac{1}{2}$[ $\\frac{3}{2}$ + 2cos60°cos40° - cos40°]\n\n= $\\frac{1}{2}$[ $\\frac{3}{2}$ + cos40° - cos40°]\n\n= $\\frac{3}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-8fazrTws",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the function ƒ defined on , $\\left (\\frac{π}{6},\\frac{π}{3}\\right )$ by\n$f(x)=\\left \\{\\begin{array}{ll} \\frac{\\sqrt{2}\\mathrm{cosx}-1}{\\cot x-1}, & x\\neq \\frac{π}{4} \\\\ k, & x=\\frac{π}{4} \\end{array} \\right.$\nis continuous, then\nk is equal to",
+  "options": [
+   "1",
+   "1 / $\\sqrt{2}$",
+   "$\\frac{1}{2}$",
+   "2"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to \\frac{π}{4}}\\frac{\\sqrt{2}\\cos x-1}{\\cot x-1}$ = f($\\frac{π}{4}$) = k\n\n$\\lim _{x\\to \\frac{π}{4}}\\frac{\\sqrt{2}\\cos x-1}{\\cot x-1}$ ($\\frac{0}{0}$ form) = k\n\n$\\Rightarrow$ $\\lim _{x\\to \\frac{π}{4}}\\frac{-\\sqrt{2}\\sin x}{-\\cos ec^{2}x}$ (Using L Hospital Rule)\n\n$\\Rightarrow$ $\\lim _{x\\to \\frac{π}{4}}\\sqrt{2}\\sin ^{3}x$ = k\n\n$\\Rightarrow$ k = $\\sqrt{2}\\left (\\frac{1}{\\sqrt{2}}\\right )^{3}$ = $\\frac{1}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-FDEz8mcR",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\left [\\begin{array}{ll} 1 & 1 \\\\ 0 & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 1 & 2 \\\\ 0 & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 1 & 3 \\\\ 0 & 1 \\end{array}\\right ]$....$\\left [\\begin{array}{ll} 1 & n-1 \\\\ 0 & 1 \\end{array}\\right ]=\\left [\\begin{array}{ll} 1 & 78 \\\\ 0 & 1 \\end{array}\\right ]$, \n\nthen  the inverse of  $\\left [\\begin{array}{ll} 1 & n \\\\ 0 & 1 \\end{array}\\right ]$ is",
+  "options": [
+   "$\\left [\\begin{array}{ll} 1 & 0 \\\\ 12 & 1 \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} 1 & 0 \\\\ 13 & 1 \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} 1 & -13 \\\\ 0 & 1 \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} 1 & -12 \\\\ 0 & 1 \\end{array}\\right ]$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given\n\n$\\left [\\begin{array}{ll} 1 & 1 \\\\ 0 & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 1 & 2 \\\\ 0 & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 1 & 3 \\\\ 0 & 1 \\end{array}\\right ]$....$\\left [\\begin{array}{ll} 1 & n-1 \\\\ 0 & 1 \\end{array}\\right ]=\\left [\\begin{array}{ll} 1 & 78 \\\\ 0 & 1 \\end{array}\\right ]$\n\n$\\Rightarrow$ $\\left [\\begin{array}{ll} 1 & 3 \\\\ 0 & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 1 & 3 \\\\ 0 & 1 \\end{array}\\right ].....\\left [\\begin{array}{ll} 1 & n-1 \\\\ 0 & 1 \\end{array}\\right ]$ = $\\left [\\begin{array}{ll} 1 & 78 \\\\ 0 & 1 \\end{array}\\right ]$\n\n$\\Rightarrow$ $\\left [\\begin{array}{ll} 1 & 6 \\\\ 0 & 1 \\end{array}\\right ].....\\left [\\begin{array}{ll} 1 & n-1 \\\\ 0 & 1 \\end{array}\\right ]$ = $\\left [\\begin{array}{ll} 1 & 78 \\\\ 0 & 1 \\end{array}\\right ]$\n\n$\\Rightarrow$ $\\left [\\begin{array}{ll} 1 & 1+2+3 \\\\ 0 & 1 \\end{array}\\right ].....\\left [\\begin{array}{ll} 1 & n-1 \\\\ 0 & 1 \\end{array}\\right ]$ = $\\left [\\begin{array}{ll} 1 & 78 \\\\ 0 & 1 \\end{array}\\right ]$\n\n.\n\n.\n\n.\n\n.\n\n$\\Rightarrow$ $\\left [\\begin{array}{ll} 1 & 1+2+3+....+(n-1) \\\\ 0 & 1 \\end{array}\\right ]$ = $\\left [\\begin{array}{ll} 1 & 78 \\\\ 0 & 1 \\end{array}\\right ]$\n\nBy comparing both sides we get,\n\n1 + 2 + 3 + ........+ (n - 1) = 78\n\n$\\Rightarrow$ $\\frac{n(n-1)}{2}$ = 78\n\n$\\Rightarrow$ n = 13, - 12(not possible)\n\n$\\therefore$ The inverse of  $\\left [\\begin{array}{ll} 1 & 13 \\\\ 0 & 1 \\end{array}\\right ]$ = $\\left [\\begin{array}{ll} 1 & -13 \\\\ 0 & 1 \\end{array}\\right ]$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-rtn4tbqm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If one end of a focal chord of the parabola,\n$y^{2} = 16x$ is at (1, 4), then the length of this focal\nchord is :",
+  "options": [
+   "24",
+   "20",
+   "25",
+   "22"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nFor this parabola $y^{2} = 16x$,\n\na = 4\n\nHere PQ is focal cord.\n\nLet $P(at_{1}^{2}, 2at_{1})$ and $Q(at_{2}^{2}, 2at_{2})$.\n\nGiven P(1, 4),\n\n$\\therefore$ $at_{1}^{2} = 1$\n\n$\\Rightarrow$ $4t_{1}^{2} = 1$\n\n$\\Rightarrow$ $t_{1}^{2} =$ $\\frac{1}{4}$\n\n$\\Rightarrow$ $t_{1} =$ $\\frac{1}{2}$\n\nIn parabola if the parameter of one end point of the focal cord is $t_{1}$ then parameter of the other end point $t_{2} =$ $-\\frac{1}{t_{1}}$\n\nHere parameter for point $Q t_{2} = - 2$\n\n$\\therefore$ Length of focal cord \n\n|PQ| = a$(t_{1}-t_{2})^{2}$ = 4$\\left (\\frac{1}{2}+2\\right )^{2}$ = 25",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-9th-april-morning-slot/rtn4tbqmzmPGU6Czgf18hoxe66ijvwpvxez-0.jpg",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 9th April Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-dfuBeaBm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the function ƒ : R – {1, –1} $\\to$ A defined by \n\nƒ(x) = $\\frac{x^{2}}{1-x^{2}}$ , is surjective, then A is equal to",
+  "options": [
+   "R – (–1, 0)",
+   "R – {–1}",
+   "R – [–1, 0)",
+   "[0, $\\infty$)"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-04-09 09:30",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 9th April Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let ƒ(x) = $\\frac{x^{2}}{1-x^{2}}$ = y\n\n$\\Rightarrow$ $y\\left (1-x^{2}\\right )=x^{2}$\n\n$\\Rightarrow$ $x^{2}=\\frac{y}{1+y}$\n\nAs $x^{2}$ is always $\\geq$ 0.\n\n$\\therefore$ $\\frac{y}{1+y}$ $\\geq$ 0\n\n y $\\in$ $(-\\infty ,-1)\\cup [0,\\infty )$\n\nFor surjective function co-domain = Range\n\n$\\therefore$ A is R – [–1, 0).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 9th April Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
