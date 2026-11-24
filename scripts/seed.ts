@@ -34,6 +34,15 @@ async function seedTaxonomy() {
   console.log(`taxonomy: subjects=${tax.subjects.length} chapters=${chapters}`)
 }
 
+interface SeedImage {
+  url: string
+  altText: string
+  caption: string | null
+  attribution: string | null
+  isOriginalExamImage: boolean
+  kind: string // question | solution
+}
+
 interface SeedQuestion {
   publicId: string
   subjectKey: string
@@ -49,6 +58,7 @@ interface SeedQuestion {
   sourceYear: number
   sourceShift: string
   tags: string[]
+  images?: SeedImage[]
   solution: {
     keyConcept: string
     formulas: string[]
@@ -105,6 +115,17 @@ async function seedQuestions() {
           verificationStatus: 'needs_review', // seed data is never auto-verified
           tags: q.tags ?? [],
           contentHash: hash,
+          images: {
+            create: (q.images ?? []).map((im, idx) => ({
+              kind: im.kind === 'solution' ? 'solution' : 'question',
+              url: im.url,
+              altText: im.altText ?? 'Exam figure',
+              caption: im.caption ?? null,
+              attribution: im.attribution ?? null,
+              isOriginalExamImage: im.isOriginalExamImage ?? false,
+              order: idx,
+            })),
+          },
           options: {
             create: (q.options || []).map((text, idx) => ({
               idx,
@@ -142,6 +163,8 @@ async function main() {
     questions: await db.question.count(),
     options: await db.questionOption.count(),
     solutions: await db.solution.count(),
+    images: await db.questionImage.count(),
+    originalExamImages: await db.questionImage.count({ where: { isOriginalExamImage: true } }),
   }
   console.log('DB state:', counts)
 }

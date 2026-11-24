@@ -295,7 +295,9 @@ def convert_paper(slug, batch_name=None):
             stats["images"] += len(paths)
             item["images"] = [
                 {
-                    "url": "/" + p,
+                    # files live in public/pyq/... but Next serves public/ at
+                    # the site root, so the URL must NOT include /public
+                    "url": "/" + p.removeprefix("public/"),
                     "altText": f"Original exam figure ({paper_title})",
                     "caption": None,
                     "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
