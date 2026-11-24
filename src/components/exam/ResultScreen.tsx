@@ -41,6 +41,13 @@ export function ResultScreen({ data, onBack }: { data: ResultView; onBack: () =>
   const correct = data.review.filter((r) => r.yourAnswer.isCorrect === true).length
   const accuracy = attempted > 0 ? Math.round((correct / attempted) * 100) : 0
   const [openSolutions, setOpenSolutions] = useState<Record<string, boolean>>({})
+  const [filter, setFilter] = useState<'all' | 'wrong' | 'unattempted' | 'correct'>('all')
+  const filteredReview = data.review.filter((r) =>
+    filter === 'all' ? true
+      : filter === 'wrong' ? r.yourAnswer.isCorrect === false
+        : filter === 'unattempted' ? r.yourAnswer.isCorrect === null
+          : r.yourAnswer.isCorrect === true
+  )
 
   return (
     <div className="mx-auto max-w-4xl">
@@ -80,15 +87,42 @@ export function ResultScreen({ data, onBack }: { data: ResultView; onBack: () =>
         </Card>
       </motion.div>
 
-      <h2 className="mt-8 text-lg font-semibold">Question-wise review</h2>
+      <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
+        <h2 className="text-lg font-semibold">Question-wise review</h2>
+        <div className="flex flex-wrap gap-1.5">
+          {([
+            ['all', `All ${totalQ}`],
+            ['wrong', `Incorrect ${attempted - correct}`],
+            ['unattempted', `Skipped ${totalQ - attempted}`],
+            ['correct', `Correct ${correct}`],
+          ] as const).map(([key, label]) => (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setFilter(key)}
+              className={cn('rounded-lg border px-3 py-1.5 text-xs font-medium transition-colors',
+                filter === key
+                  ? 'border-primary bg-primary/15 text-primary'
+                  : 'border-border text-muted-foreground hover:border-primary/40')}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
       <div className="mt-3 space-y-3">
-        {data.review.map((r, i) => {
+        {filteredReview.length === 0 && (
+          <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+            Nothing in this category — nice work.
+          </p>
+        )}
+        {filteredReview.map((r) => {
           const open = !!openSolutions[r.examQuestionId]
           return (
             <Card key={r.examQuestionId}>
               <CardContent className="p-5">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
-                  <span>Q{i + 1} · {r.question.publicId} · {r.question.chapterName}</span>
+                  <span>Q{r.order + 1} · {r.question.publicId} · {r.question.chapterName}</span>
                   <span className={cn('font-bold',
                     r.yourAnswer.marksAwarded > 0 ? 'text-emerald-400' : r.yourAnswer.marksAwarded < 0 ? 'text-rose-400' : 'text-muted-foreground')}>
                     {r.yourAnswer.marksAwarded > 0 ? '+' : ''}{r.yourAnswer.marksAwarded} marks
