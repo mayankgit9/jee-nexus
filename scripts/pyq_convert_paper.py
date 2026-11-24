@@ -36,7 +36,8 @@ IMG_DIR = "public/pyq"
 OUT_DIR = "data/questions"
 
 SUBJECT_MAP = {"physics": "physics", "chemistry": "chemistry", "mathematics": "mathematics"}
-TYPE_MAP = {"mcq": "mcq_single", "mcqm": "mcq_multi", "numerical": "numerical"}
+TYPE_MAP = {"mcq": "mcq_single", "mcqm": "mcq_multi", "numerical": "numerical",
+            "integer": "numerical"}
 DIFF_MAP = {"easy": "easy", "medium": "medium", "hard": "hard", None: "medium"}
 
 
@@ -231,6 +232,23 @@ def convert_paper(slug, batch_name=None):
                 correct_idx.append("ABCDEFGH".index(c))
             except ValueError:
                 pass
+        # numerical (integer) answer: '6' / '6.25' / '2.13TO2.16' (accept range)
+        numerical_answer = None
+        numerical_tol = None
+        if qtype == "numerical":
+            raw_ans = en.get("answer") or ""
+            raw_ans = str(raw_ans).strip()
+            if raw_ans:
+                mto = re.match(r"^([\d.]+)\s*(?:TO|to)\s*([\d.]+)$", raw_ans)
+                if mto:
+                    lo, hi = float(mto.group(1)), float(mto.group(2))
+                    numerical_answer = round((lo + hi) / 2, 6)
+                    numerical_tol = round((hi - lo) / 2, 6)
+                else:
+                    try:
+                        numerical_answer = float(raw_ans)
+                    except ValueError:
+                        pass
 
         item = {
             "publicId": f"PYQ-{year}-{qid[:8]}",
@@ -241,8 +259,8 @@ def convert_paper(slug, batch_name=None):
             "text": text,
             "options": options,
             "correctOptions": correct_idx if qtype != "numerical" else None,
-            "numericalAnswer": None,
-            "numericalTolerance": None,
+            "numericalAnswer": numerical_answer,
+            "numericalTolerance": numerical_tol,
             "difficulty": DIFF_MAP.get(q.get("difficulty"), "medium"),
             "sourceExam": "JEE Main",
             "sourceYear": year,
