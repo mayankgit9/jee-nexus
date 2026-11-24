@@ -5,6 +5,90 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-25 (night) — Continuous improvement session · Hyperdrive cache bug + exam engine fixes
+
+User directive: keep working autonomously (health checks, bug hunting, features,
+UI). All changes below are committed, pushed AND deployed to
+https://jee-nexus-app.jee-nexus.workers.dev.
+
+### Bug 5 — Hyperdrive query cache stale reads (P2002 storm on /api/exam/list)
+- Symptom: exam/list 500'd for EVERY request in a ~60s window after the first
+  call, then healed. Local wrangler dev (direct pg) never reproduced.
+- Diagnosis chain: added structured error logging to jsonError (workerd's
+  console serializer drops Prisma error message lines — only stacks survived
+  in observability) → deployed → reproduced → logs showed
+  `P2002 unique constraint failed on examPattern.create` while the row
+  existed → findFirst was returning a stale EMPTY result.
+- Root cause: **Hyperdrive's query cache** (enabled by default on the
+  jee-nexus-db config). The first empty SELECT was cached; Prisma's
+  transactional INSERT didn't invalidate it; every request in the TTL window
+  re-attempted the create and died on the unique constraint. This silently
+  affected ALL read-after-write flows (bookmarks, stats, exam generation) —
+  stale reads for up to a minute.
+- Fixes (both):
+  1. Hyperdrive config PATCH `caching.disabled=true` (pooling was always the
+     real win; read-after-write correctness matters more than a 60s cache)
+  2. `ensureDefaultPatterns` findFirst→create replaced with upsert (also
+     closes the concurrent-request race)
+- Verified: delete pattern row → 8/8 exam/list 200s across the create window
+  (previously 1×200 then 5×500).
+
+### Bug 6 — Workers subrequest cap killed full-length mock generation
+- Symptom: POST /api/exam/list {kind: full_length} → 500 after 18s, leaving a
+  published PARTIAL exam (45/75 questions) in the DB.
+- Root cause: per-question `examQuestion.create()` loop = 75 sequential
+  INSERTs, each a fresh Prisma client through Hyperdrive → Workers'
+  50-subrequest-per-invocation cap.
+- Fix: build rows in memory, single `createMany()` → 75-question mock now
+  generates in ~4s. Orphan/partial exams cleaned from prod DB.
+
+### CBT engine — full live E2E verified (twice)
+- `scripts/cbt_e2e_live.py`: signup → generate custom exam → start → autosave
+  the DB-known CORRECT answers via /api/exam/answer → submit → **12/12 marks**.
+- `scripts/mock_e2e_live.py`: full-length 75Q mock → answered 30 (correct +
+  deliberately wrong) → submit → grading exact (30 answered, 45 unattempted,
+  partial marking for multi-correct intact, 80/300).
+
+### UX — attempt-first question browsing (was: instant answer spoiler)
+- PYQ library & bookmarks opened every question with the answer revealed
+  (empty-submit pre-fetch). Now: active inputs + "Submit answer" (grades,
+  records attempt when logged in) + secondary "Just show solution"
+  (answer-less fetch — solution without grading, no attempt row; the endpoint
+  already distinguished both cases).
+- QuestionCard: new `allowReveal` prop; PyqView/BookmarksView drop the
+  pre-fetch and dead result state.
+
+### UX — honest, data-driven UI
+- HomeView: year grid now from /api/pyq with per-year counts (was hardcoded
+  2019–2026 incl. empty years); hero counter says "previous-year questions"
+  not "verified-solution questions" (imported ≠ expert-verified).
+- PracticeView: year filter chips data-driven (same fix).
+- MockView: misleading "bank needs more questions" → "Generate full-length
+  mock" button (kind=full_length on demand, warnings surfaced honestly).
+- exam/list: custom-timed exams report config.durationMinutes (start route's
+  source), not the pattern default.
+
+### Ops
+- `deploy_app_cloudflare.sh`: export
+  CLOUDFLARE_HYPERDRIVE_LOCAL_CONNECTION_STRING_HYPERDRIVE (opennextjs-cloudflare
+  deploy evaluates bindings via getPlatformProxy; the guard refused to boot
+  Hyperdrive without it — deploy was failing).
+- `jsonError`: structured single-line error logs (name/code/msg/meta/stack)
+  — production 500s are now diagnosable.
+- New tooling: `scripts/live_endpoint_audit.py` (all-endpoint sweep —
+  note: CF bot protection 403s default urllib UA; browser UA needed),
+  `scripts/cf_error_msgs.py` / `cf_error_all.py` (message-line extraction),
+  `scripts/cbt_e2e_live.py`, `scripts/mock_e2e_live.py`,
+  `scripts/check_patterns.mjs`.
+- Cron loop registered (3×/day 02:00/10:00/18:00 IST): health check →
+  import verification → bug hunt → deploy.
+
+### Question bank
+- GitHub Actions import run 45456385788 in progress toward 6,333 questions
+  (2019: 1,092 ✓ · 2020: 979 ✓ · 2021 growing at last check ≈2,900 total).
+
+---
+
 ## 2026-11-25 — M20 · Production diagnosis + full go-live runbook (execution blocked on credentials)
 
 ### Diagnosis — why the user's website never updates
