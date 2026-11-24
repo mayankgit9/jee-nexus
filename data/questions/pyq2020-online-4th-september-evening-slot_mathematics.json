@@ -1,0 +1,783 @@
+[
+ {
+  "publicId": "PYQ-2020-r4m8c8M3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Suppose the vectors $x_{1}, x_{2}$ and $x_{3}$ are the \nsolutions of the system of linear equations,\n Ax = b when the vector b on the right side is equal to $b_{1}, b_{2}$ and $b_{3}$ respectively. if\n\n$x_{1}=\\left [\\begin{array}{l} 1 \\\\ 1 \\\\ 1 \\end{array}\\right ]$, $x_{2}=\\left [\\begin{array}{l} 0 \\\\ 2 \\\\ 1 \\end{array}\\right ]$, $x_{3}=\\left [\\begin{array}{l} 0 \\\\ 0 \\\\ 1 \\end{array}\\right ]$\n\n$b_{1}=\\left [\\begin{array}{l} 1 \\\\ 0 \\\\ 0 \\end{array}\\right ]$, $b_{2}=\\left [\\begin{array}{l} 0 \\\\ 2 \\\\ 0 \\end{array}\\right ]$ and $b_{3}=\\left [\\begin{array}{l} 0 \\\\ 0 \\\\ 2 \\end{array}\\right ]$, \nthen the determinant of A is equal to :",
+  "options": [
+   "$\\frac{3}{2}$",
+   "4",
+   "2",
+   "$\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let A = $\\left [\\begin{array}{lll} a_{1} & a_{2} & a_{3} \\\\ a_{4} & a_{5} & a_{6} \\\\ a_{7} & a_{8} & a_{9} \\end{array}\\right ]$\n\nFor $Ax_{1} = b_{1}$ :\n\n$\\Rightarrow$ $\\left [\\begin{array}{lll} a_{1} & a_{2} & a_{3} \\\\ a_{4} & a_{5} & a_{6} \\\\ a_{7} & a_{8} & a_{9} \\end{array}\\right ]\\left [\\begin{array}{l} 1 \\\\ 1 \\\\ 1 \\end{array}\\right ]=\\left [\\begin{array}{l} 1 \\\\ 0 \\\\ 0 \\end{array}\\right ]$\n\n$\\therefore$ $a_{1}+a_{2}+a_{3}=1$ ....(1)\n\n$a_{4}+a_{5}+a_{6}=0$ ......(2)\n\n$a_{7}+a_{8}+a_{9}=0$ .....(3)\n\nFor $Ax_{2} = b_{2}$ :\n\n$\\left [\\begin{array}{lll} a_{1} & a_{2} & a_{3} \\\\ a_{4} & a_{5} & a_{6} \\\\ a_{7} & a_{8} & a_{9} \\end{array}\\right ]\\left [\\begin{array}{l} 0 \\\\ 2 \\\\ 1 \\end{array}\\right ]=\\left [\\begin{array}{l} 0 \\\\ 2 \\\\ 0 \\end{array}\\right ]$\n\n$\\therefore$ $2a_{2}+a_{3}=0$ .....(4)\n\n$2a_{5}+a_{6}=2$ ....(5)\n\n$2a_{8}+a_{9}=0$ ....(6)\n\nFor $Ax_{3} = b_{3}$ :\n\n$\\left [\\begin{array}{lll} a_{1} & a_{2} & a_{3} \\\\ a_{4} & a_{5} & a_{6} \\\\ a_{7} & a_{8} & a_{9} \\end{array}\\right ]\\left [\\begin{array}{l} 0 \\\\ 0 \\\\ 1 \\end{array}\\right ]=\\left [\\begin{array}{l} 0 \\\\ 0 \\\\ 2 \\end{array}\\right ]$\n\n$\\therefore$ $a_{3}=0$\n\n$a_{6}=0$\n\n$a_{9}=2$\n\nPutting value of $a_{3}$ in equation (4), we get\n\n$a_{2}$ = 0\n\nPutting value of $a_{6}$ in equation (5), we get\n\n$a_{5}$ = 1\n\nPutting value of $a_{9}$ in equation (6), we get\n\n$a_{8}$ = -1\n\nPutting value of $a_{2}$ and $a_{3}$ in equation (1), we get\n\n$a_{1}$ = 1\n\nPutting value of $a_{5}$ and $a_{6}$ in equation (2), we get\n\n$a_{4}$ = -1\n\nPutting value of $a_{8}$ and $a_{9}$ in equation (3), we get\n\n$a_{7}$ = -1\n\n$\\therefore$ A = $\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ -1 & 1 & 0 \\\\ -1 & -1 & 2 \\end{array}\\right ]$\n\nSo, |A| = 2(1) = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-5MdWZd7K",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If a and b are real numbers such that\n $(2+α)^{4}=a+bα$ \nwhere $α=\\frac{-1+i\\sqrt{3}}{2}$  then a + b is\nequal to :",
+  "options": [
+   "33",
+   "9",
+   "24",
+   "57"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α=ω$ as given $α=\\frac{-1+i\\sqrt{3}}{2}$\n\n$\\Rightarrow (2+ω)^{4}=a+bω(ω^{3}=1)$\n\n$\\Rightarrow 2^{4}+4.2^{3}ω+6.2^{2}ω^{2}+4.2.ω^{3}+ω^{4}=a+bω$\n\n$\\Rightarrow 16+32ω+24ω^{2}+8+ω=a+bω$\n\n$\\Rightarrow 24+24ω^{2}+33ω=a+bω$\n\n$\\Rightarrow -24ω+33ω=a+bω$\n\n$\\Rightarrow a=0,b=9$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-NQ1pUMPu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f:(0,\\infty )\\to (0,\\infty )$ be a differentiable function such that f(1) = e and \n$\\lim _{t\\to x}\\frac{t^{2}f^{2}(x)-x^{2}f^{2}(t)}{t-x}=0$.  If f(x) = 1, then x is equal to :",
+  "options": [
+   "$\\frac{1}{e}$",
+   "e",
+   "$\\frac{1}{2e}$",
+   "2e"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{t\\to x}\\frac{t^{2}f^{2}(x)-x^{2}f^{2}(t)}{t-x}=0$\n\n(Using L'Hospital's Rule)\n\n$\\Rightarrow \\lim _{t\\to x}\\frac{2tf^{2}(x)-2x^{2}f(t).f^{'}(t)}{1}=0$\n\n$\\Rightarrow$ $2xf^{2}(x) - 2x^{2}.f(x).f'(x) = 0$\n\n$\\Rightarrow$ 2xf(x){f(x) - xf'(x)} = 0 \n\n[x $\\neq$ 0, f(x) $\\neq$ 0 as given \nfunction $f:(0,\\infty )\\to (0,\\infty )$ only takes positive value as input and output]\n\n$\\Rightarrow f(x)=xf^{'}(x)$\n\n$\\Rightarrow \\frac{f^{'}(x)}{f(x)}=\\frac{1}{x}$\n\nIntegrating w.r.t x, we get\n\n$\\Rightarrow lnf(x)=lnx+lnC$\n\n$\\Rightarrow f(x)=Cx$\n\n$\\because$ f(1) = e\n\n$\\Rightarrow C=e;sof(x)=ex$\n\nWhen f(x) = 1 = ex\n\n$\\Rightarrow x=\\frac{1}{e}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-kAHFV06Z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The minimum value of $2^{$sinx$} + 2^{$cosx} is :",
+  "options": [
+   "$2^{-1+\\sqrt{2}}$",
+   "$2^{1-\\frac{1}{\\sqrt{2}}}$",
+   "$2^{1-\\sqrt{2}}$",
+   "$2^{-1+\\frac{1}{\\sqrt{2}}}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Using AM $\\geq$ GM\n\n$\\Rightarrow \\frac{2^{\\sin x}+2^{\\cos x}}{2}\\geq \\sqrt{2^{\\sin x}.2^{\\cos x}}$\n\n$\\Rightarrow 2^{\\sin x}+2^{\\cos x}\\geq 2^{1+\\left (\\frac{\\sin x+\\cos x}{2}\\right )}$\n\n$\\Rightarrow \\min (2^{\\sin x}+2^{\\cos x})=2^{1-\\frac{1}{\\sqrt{2}}}$\n\nAs we know range of sin x + cos x is :\n\n$-\\sqrt{2}$ $\\leq$ sin x + cos x $\\leq$ $\\sqrt{2}$.\n\nSo Minimum value of sin x + cos x = $-\\sqrt{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-QxqEuxDf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the perpendicular bisector of the line segment joining the points P(1 ,4) and Q(k, 3) has y-intercept equal to –4, then a value of k is :",
+  "options": [
+   "$\\sqrt{14}$",
+   "-4",
+   "–2",
+   "$\\sqrt{15}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$m_{PQ}=\\frac{4-3}{1-k}$\n\n$\\therefore$ Slope of perpendicular bisector of PQ, $m_{⊥}=k-1$\n\nmid point of PQ = $\\left (\\frac{k+1}{2},\\frac{7}{2}\\right )$\n\nequation of perpendicular bisector\n\n$y-\\frac{7}{2}=(k-1)\\left (x-\\frac{k+1}{2}\\right )$\n\nfor y intercept put x = 0\n\n$y=\\frac{7}{2}-\\left (\\frac{k^{2}-1}{2}\\right )=-4$\n\n$\\frac{k^{2}-1}{2}=\\frac{15}{2}\\Rightarrow k=\\pm 4$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-HBKNx1NQ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) of the largest rectangle ABCD whose vertices A and B lie on the x-axis and vertices C and D lie on the parabola, $y = x^{2}–1$ below the x-axis, is :",
+  "options": [
+   "$\\frac{1}{3\\sqrt{3}}$",
+   "$\\frac{2}{3\\sqrt{3}}$",
+   "$\\frac{4}{3\\sqrt{3}}$",
+   "$\\frac{4}{3}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nArea (A) = 2t. (1$-t^{2})$\n\n(0 < t < 1)\n\nA = 2t $-$ $2t^{3}$\n\n$\\frac{dA}{dt}=2-6t^{2}$ = 0\n\n$\\Rightarrow$ $t=\\pm\\frac{1}{\\sqrt{3}}$\n\n$\\therefore$ $A_{\\max }=|\\frac{2}{\\sqrt{3}}\\left (1-\\frac{1}{3}\\right )|=\\frac{4}{3\\sqrt{3}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-4th-september-evening-slot/HBKNx1NQFioVfmrFstjgy2xukfahe3zt-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 4th September Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-fCbDUKne",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The integral \n$\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{3}}\\tan ^{3}x.\\sin ^{2}3x\\left (2\\sec ^{2}x.\\sin ^{2}3x+3\\tan x.\\sin 6x\\right )dx$\n\nis equal to:",
+  "options": [
+   "$-\\frac{1}{9}$",
+   "$-\\frac{1}{18}$",
+   "$\\frac{7}{18}$",
+   "$\\frac{9}{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\nI = $\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{3}}\\tan ^{3}x.\\sin ^{2}3x\\left (2\\sec ^{2}x.\\sin ^{2}3x+3\\tan x.\\sin 6x\\right )dx$\n\n$I=\\int\\limits _{π/6}^{π/3}(2.\\tan ^{3}x\\sec ^{2}x\\sin ^{4}3x+3\\tan ^{4}x\\sin ^{2}3x.2\\sin 3xcos3x)dx$\n\n$=\\frac{1}{2}\\int\\limits _{π/6}^{π/3}(4\\tan ^{3}x\\sec ^{2}x\\sin ^{4}3x+3.4\\tan ^{4}x\\sin ^{3}3xcos3x)dx$\n\n$=\\frac{1}{2}\\int\\limits _{π/6}^{π/3}\\frac{d}{dx}\\left (\\tan ^{4}x\\sin ^{4}3x\\right )dx$\n\n$=\\frac{1}{2}\\left [\\tan ^{4}x\\sin ^{4}3x\\right ]_{π/6}^{π/3}$\n\n$=\\frac{1}{2}\\left [9.(0)-\\frac{1}{3}.\\frac{1}{3}(1)\\right ]=-\\frac{1}{18}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-9Mw6Lbj0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of equations\n\nx+y+z=2\n\n2x+4y–z=6\n\n3x+2y+$λ$z=$μ$\n\nhas infinitely many solutions, then",
+  "options": [
+   "2$λ$ - $μ$ = 5",
+   "$λ$ - 2$μ$ = -5",
+   "2$λ$ + $μ$ = 14",
+   "$λ$ + 2$μ$ = 14"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$D=0\\left |\\begin{array}{lll} 1 & 1 & 1 \\\\ 2 & 4 & -1 \\\\ 3 & 2 & λ \\end{array}\\right |=0$\n\n$\\Rightarrow$ $(4λ+2)-1(2λ+3)+1(4-12)=0$\n\n$\\Rightarrow$ $4λ+2$ $-2λ-3-$8$=0$\n\n$\\Rightarrow$ $2λ=9\\Rightarrow λ=\\frac{9}{2}$\n\n$D_{x}=\\left |\\begin{array}{lll} 2 & 1 & 1 \\\\ 6 & 4 & -1 \\\\ μ & 2 & -9/2 \\end{array}\\right |=0$\n\n$\\Rightarrow μ=5$\n\nBy checking all the options we find (C) is correct \n\n$2λ+μ=14$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-WIVZ5wah",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In a game two players A and B take turns in throwing a pair of fair dice starting with player A and total of scores on the two dice, in each throw is noted. A wins the game if he throws a total of 6 before B throws a total of 7 and B wins the game if he throws a total of 7 before A throws a total of six. The game stops as soon as either of the players wins. The probability of A winning the game is :",
+  "options": [
+   "$\\frac{5}{6}$",
+   "$\\frac{5}{31}$",
+   "$\\frac{31}{61}$",
+   "$\\frac{30}{61}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Sum total 6 = {(1,5)(2,4)(3,3)(4,2)(5,1)}\n\n$P(6)=\\frac{5}{36}$\n\nSum total 7 = {(1,6)(2,5)(3,4)(4,3)(5,2)(6,1)}\n\n$P(7)=\\frac{6}{36}$  = $\\frac{1}{6}$\n\nGame ends and A wins if A throws 6 in $1^{st}$\nthrow or A don’t throw 6 in $1^{st}$ throw, B don’t\nthrow 7 in $1^{st}$ throw and then A throw 6 in his\n2\n$^{nd}$ chance and so on.\n\nP(A) = A + $A–B–A$ + $A–B–A–B–A$\n\n= $\\frac{5}{36}+\\left (\\frac{31}{36}\\right )\\left (\\frac{30}{36}\\right )\\left (\\frac{5}{36}\\right )+$ ..... $\\infty$\n\n= $\\frac{\\frac{5}{36}}{1-\\left (\\frac{31}{36}\\right )\\left (\\frac{30}{36}\\right )}$\n\n= $\\frac{5\\times 36}{36\\times 36-31\\times 30}$\n\n= $\\frac{30}{61}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-fskTSdIf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The function \n$f(x)=\\left \\{\\begin{array}{ll} \\frac{π}{4}+\\tan ^{-1}x, & |x|\\leq 1 \\\\ \\frac{1}{2}(|x|-1), & |x|>1 \\end{array} \\right.$ is :",
+  "options": [
+   "continuous on R–{–1} and differentiable on R–{–1, 1}",
+   "both continuous and differentiable on R–{1}",
+   "both continuous and differentiable on R–{–1}",
+   "continuous on R–{1} and differentiable on R–{–1, 1}"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\left \\{\\begin{array}{ll} \\frac{π}{4}+\\tan ^{-1}x, & x\\in [-1,1] \\\\ \\frac{1}{2}(x-1), & x>1 \\\\ \\frac{1}{2}(-x-1), & x<-1 \\end{array} \\right.$\n\nAt x = 1\n\nL.H.L = $\\lim _{x\\to 1^{-}}\\left (\\frac{π}{4}+\\tan ^{-1}x\\right )$ = $\\frac{π}{4}+\\frac{π}{4}$ = $\\frac{π}{2}$\n\nf(1) = $\\frac{π}{4}+\\tan ^{-1}x$ = $\\frac{π}{4}+\\frac{π}{4}$ = $\\frac{π}{2}$\n\nR.H.L = $\\lim _{x\\to 1^{+}}\\left (\\frac{1}{2}(x-1)\\right )$ = 0\n\nAs L.H.L $\\neq$ R.H.L so function is discontinuous $\\Rightarrow$ non differentiable.\n\nAt x = -1\n\nL.H.L = $\\lim _{x\\to -1^{-}}\\left (\\frac{1}{2}(-x-1)\\right )$ = $\\frac{1}{2}(-(-1)-1)$ = 0\n\nf(-1) = $\\frac{π}{4}+\\tan ^{-1}(-1)$ = $\\frac{π}{4}-\\frac{π}{4}$ = 0\n\nR.H.L = $\\lim _{x\\to -1^{+}}\\left (\\frac{π}{4}+\\tan ^{-1}x\\right )$ \n\n= $\\frac{π}{4}+\\tan ^{-1}(-1)$ = $\\frac{π}{4}-\\frac{π}{4}$ = 0\n\nAs L.H.L = f(-1) = R.H.L so function is continuous.\n\n$f^{'}(x)=\\left \\{\\begin{array}{ll} \\frac{1}{1+x^{2}}, & x\\in [-1,1] \\\\ \\frac{1}{2}, & x>1 \\\\ -\\frac{1}{2}, & x<-1 \\end{array} \\right.$\n\nFor differentiability at x = –1\n\nL.H.D = $-\\frac{1}{2}$\n\nR.H.D. = $\\frac{1}{2}$\n\nSo, non differentiable at x = –1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-CQkbH0sd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The solution of the differential equation \n\n$\\frac{dy}{dx}-\\frac{y+3x}{\\log _{e}(y+3x)}+3=0$ is:\n\n(where c is a constant of integration)",
+  "options": [
+   "$x-\\frac{1}{2}(\\log _{e}(y+3x))^{2}=C$",
+   "$y+3x-\\frac{1}{2}(\\log _{e}x)^{2}=C$",
+   "$x – \\log _{e}(y+3x) = C$",
+   "$x – 2\\log _{e}(y+3x) = C$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}-\\frac{y+3x}{\\ln (y+3x)}+3=0$\n\nLet $\\ln (y+3x)=t$\n\n$\\frac{1}{y+3x}.\\left (\\frac{dy}{dx}+3\\right )=\\frac{dt}{dx}$\n\n$\\Rightarrow \\left (\\frac{dy}{dx}+3\\right )=\\frac{y+3x}{\\ln (y+3x)}$\n\n$\\therefore$ $(y+3x)\\frac{dt}{dx}=\\frac{y+3x}{t}$\n\n$\\Rightarrow tdt=dx$\n\n$\\frac{t^{2}}{2}=x+c$\n\n$\\frac{1}{2}(\\ln (y+3x))^{2}=x+c$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-PAZAL0qE",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $λ\\neq 0$  be in R. If $α$ and $β$ are the roots of the \nequation, $x^{2} - x + 2λ$ = 0 and $α$ and $γ$ are the roots of \nthe equation, $3x^{2}-10x+27λ=0$, then $\\frac{βγ}{λ}$  is equal to:",
+  "options": [
+   "36",
+   "9",
+   "27",
+   "18"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α$ and $β$ are the roots of the \nequation $x^{2} - x + 2λ$ = 0 .....(1)\n\n$\\therefore$ $α+β=1,αβ=2λ$\n\n$α$ and $γ$ are the roots of \nthe equation, $3x^{2}-10x+27λ=0$ ......(2)\n\n$\\therefore$ $α+γ$ = $\\frac{10}{3}$, $αγ$ = $\\frac{27λ}{3}$ = 9$λ$\n\nMultiplying equation (1) by 3 and subtracting form equation (2) we get\n\n-7x + 21$λ$ = 0\n\n$\\Rightarrow$ x = 3$λ$\n\n$\\therefore$ $α$ = 3$λ$\n\nAs $α$ is root of equation (1) so\n\n$α^{2}$ - $α$ +  2$λ$ = 0\n\n$\\Rightarrow$ 9$λ^{2}$ - 3$λ$ +  2$λ$ = 0\n\n$\\Rightarrow$ $λ$ = $\\frac{1}{9}$\n\n$\\Rightarrow$ $α$ = 3$\\times$ $\\frac{1}{9}$ = $\\frac{1}{3}$\n\nAlso $αβ=2λ$ = $\\frac{2}{9}$\n\n$\\Rightarrow$ $β$ = $\\frac{2}{3}$\n\nAlso $αγ$  = 9$λ$ = 9$\\times$ $\\frac{1}{9}$ = 1\n\n$\\Rightarrow$ $γ$ = 3\n\n$\\therefore$ $\\frac{βγ}{λ}$ = $\\frac{\\frac{2}{3}.3}{\\frac{1}{9}}$ = 18",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-1p4U7IKh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\cup _{i=1}^{50}X_{i}=\\cup _{i=1}^{n}Y_{i}=T$  where each $X_{i}$ contains 10 elements and each $Y_{i}$ contains 5 elements. If each element of the set T is an element of exactly 20 of sets $X_{i}$’s and exactly 6 of sets $Y_{i}$’s, then n is equal to :",
+  "options": [
+   "30",
+   "50",
+   "15",
+   "45"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cup _{i=1}^{50}X_{i}=$ $X_{1}, X_{2},....., X_{50} = 50$ sets. Given each sets having 10 elements.\n\nSo total elements = 50 $\\times$ 10\n\n$\\cup _{i=1}^{n}Y_{i}=$ $Y_{1}, Y_{2},....., Y_{n} = n$ sets. Given each sets having 5 elements.\n\nSo total elements = 5 $\\times$ n\n\nNow each element of set T contains exactly 20 of sets $X_{i}$.\n\nSo number of effective elements in set T = $\\frac{50\\times 10}{20}$\n\nAlso each element of set T contains exactly 6 of sets $Y_{i}$.\n\nSo number of effective elements in set T = $\\frac{5\\times n}{6}$\n\n$\\therefore$ $\\frac{50\\times 10}{20}$ = $\\frac{5\\times n}{6}$\n\n$\\Rightarrow$ n = 30",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-cFq6eDhg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a_{1}, a_{2}$, ..., an be a given A.P. whose\n common difference is an integer and \n$S_{n} = a_{1} + a_{2} + .... + a_{n}$. If $a_{1} = 1, a_{n} = 300$ and 15 $\\leq$ n $\\leq$ 50, then \nthe ordered pair $(S_{n-4}, a_{n–4})$ is equal to:",
+  "options": [
+   "(2480, 249)",
+   "(2480, 248)",
+   "(2490, 248)",
+   "(2490, 249)"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$a_{n}=a_{1}+(n-1)d$\n\n$\\Rightarrow 300=1+(n-1)d$\n\n$\\Rightarrow (n-1)d=299=13\\times 23$\n\nsince, n $\\in$[15, 50]\n\n$\\therefore$ n = 24 and d = 13\n\n$a_{n-4}=a_{20}=1+19\\times 13=248$\n\n$\\Rightarrow a_{n-4}=248$\n\n$S_{n-4}=\\frac{20}{2}\\{1+248\\}=2490$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-P3rIEyoJ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let {x} and [x] denote the fractional part of x and \nthe greatest integer $\\leq$ x respectively of a real\n number x. If $\\int\\limits _{0}^{n}\\{x\\}dx,\\int\\limits _{0}^{n}[x]dx$ and $10(n^{2} – n)$, \n$(n\\in N,n>1)$  are three consecutive terms of a G.P., then n is equal $to_____$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 21.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{0}^{n}\\{x\\}dx=n\\int\\limits _{0}^{1}xdx=n\\left (\\frac{x^{2}}{2}\\right )_{0}^{1}=\\frac{n}{2}$\n\n[As period of {x} = 1]\n\n$\\int\\limits _{0}^{n}[x]dx=\\int\\limits _{0}^{1}0dx+\\int\\limits _{1}^{2}1dx+...+\\int\\limits _{n-1}^{n}(n-1)dx$\n\n= 1 + 2 + 3 + ....+ (n - 1)\n\n= $\\frac{n(n-1)}{2}$\n\nAs $\\frac{n}{2}$, $\\frac{n(n-1)}{2}$, $10(n^{2} – n)$ are in GP.\n\n$\\therefore$ $\\left [\\frac{n(n-1)}{2}\\right ]^{2}=\\frac{n}{2}\\times 10\\left (n^{2}-n\\right )$\n\n$\\Rightarrow$ $n^{2}$\n = 21n\n\n$\\Rightarrow$ n = 21",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-SLjj7ptO",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A test consists of 6 multiple choice questions, each having 4 alternative answers of which only one is correct. The number of ways, in which a candidate answers all six questions such that exactly four of the answers are correct, is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 135.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Select any 4 questions in $^{6}C_{4}$\n ways which are\ncorrect.\n\nAnswering right option for each question is possible in 1 way.\n\nSo ways of choosing right option for 4 questions $= 1.1.1.1 = (1)^{4}$\n\nNumber of ways of choosing wrong option for each question = 3\n\nSo ways of choosing wrong option for 2 questions $= (3)^{2}$\n\n$\\therefore$ Required number of ways $= ^{6}C_{4}.(1)^{4}.(3)^{2} = 135$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-XDKiZVSm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\vec{a}=2\\hat{i}+\\hat{j}+2\\widehat{k}$,  then the value of\n\n$\\left |\\hat{i}\\times \\left (\\vec{a}\\times \\hat{i}\\right )\\right |^{2}+\\left |\\hat{j}\\times \\left (\\vec{a}\\times \\hat{j}\\right )\\right |^{2}+\\left |\\widehat{k}\\times \\left (\\vec{a}\\times \\widehat{k}\\right )\\right |^{2}$ is equal $to____$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 18.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $\\vec{a}=x\\hat{i}+y\\hat{j}+z\\widehat{k}$\n\nNow $\\hat{i}\\times \\left (\\vec{a}\\times \\hat{i}\\right )=\\left (\\hat{i}.\\hat{i}\\right )\\vec{a}-\\left (\\hat{i}.\\vec{a}\\right )\\hat{i}$\n\n= $y\\hat{j}+z\\widehat{k}$\n\nSimilarly $\\hat{j}\\times \\left (\\vec{a}\\times \\hat{j}\\right )=x\\hat{i}+z\\widehat{k}$\n\n$\\widehat{k}\\times \\left (\\vec{a}\\times \\widehat{k}\\right )=x\\hat{i}+y\\hat{j}$\n\nNow $\\left |y\\hat{j}+z\\widehat{k}\\right |^{2}+\\left |x\\hat{i}+z\\widehat{k}\\right |^{2}+\\left |x\\hat{i}+y\\hat{j}\\right |^{2}$\n\n= $2(x^{2}+y^{2}+z^{2})$\n\nGiven $\\vec{a}=2\\hat{i}+\\hat{j}+2\\widehat{k}$\n\n$\\therefore$ x = 2, y = 1, z = 2\n\n= 2(4 + 1 + 4) = 18",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-xYtfGalt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let PQ be a diameter of the circle $x^{2} + y^{2} = 9$. If $α$ and $β$ are the lengths of the perpendiculars from P and Q on the straight line,\n x + y = 2 respectively, then the maximum value of $αβ$  is $_____$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 7.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $P(3\\cos θ,3\\sin θ)$\n\n$Q(-3\\cos θ,-3\\sin θ)$\n\n$α=\\left |\\frac{3\\cos θ+3\\sin θ-2}{\\sqrt{2}}\\right |$\n\n$β=\\left |\\frac{-3\\cos θ-3\\sin θ-2}{\\sqrt{2}}\\right |$\n\n$αβ=\\left |\\frac{(3\\cos θ+3\\sin θ)^{2}-4}{2}\\right |$\n\n$=\\left |\\frac{5+9\\sin 2θ}{2}\\right |$\n\n$αβ_{\\max }=\\frac{5+9}{2}=7$ (when sin2$θ$ = 1)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-W5XhsmDl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the variance of the following frequency\ndistribution :\n\nClass         : 10–20 20–30 30–40\n\nFrequency :    2          x          2\n\nis 50, then x is equal $to____$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-04 15:00",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 4th September Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x_{i} =$ midpoint of class interval\n\n\n[IMG]\n\n\nVariance($σ^{2})=\\frac{\\sum f_{i}(x_{i}-\\bar{x})^{2}}{\\sum f_{i}}$\n\nAlso, $\\bar{x}=\\frac{\\sum f_{i}x_{i}}{\\sum f_{i}}$\n\n= $\\frac{30+25x+70}{2+2+x}$ = 25\n\nGiven, Variance = 50\n\n$\\therefore$ 50 = $\\frac{200+0+200}{2+2+x}$\n\n$\\Rightarrow$ x = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 4th September Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-4th-september-evening-slot/W5XhsmDlO7rM78PkXxjgy2xukfal3yve-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 4th September Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]
