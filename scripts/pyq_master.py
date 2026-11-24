@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pyq_crawl_paper import list_papers, crawl_paper
 
 BATCH_PREFIX = "pyq"
-COMMIT_EVERY = int(os.environ.get("COMMIT_EVERY", "5"))
+COMMIT_EVERY = int(os.environ.get("COMMIT_EVERY", "2"))
 
 
 def converted_batches(slug):
