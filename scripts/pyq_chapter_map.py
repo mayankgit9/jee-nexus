@@ -420,18 +420,33 @@ CH_MAP = {
 }
 
 
+# chapters whose examside slug maps to the OTHER subject's namespace:
+# (slug, subject) -> correct taxonomy key
+CROSS_SUBJECT = {
+    ("vector-algebra", "physics"): "physics:kinematics",  # vector mechanics
+    ("vector", "physics"): "physics:kinematics",
+    ("vectors", "physics"): "physics:kinematics",
+    ("mathematical-tools", "physics"): "physics:units-and-measurements",
+    ("units-and-dimensions", "mathematics"): "mathematics:sets-relations-functions",
+    ("statistics", "physics"): "physics:experimental-skills",
+    ("probability", "physics"): "physics:experimental-skills",
+    ("elasticity", "mathematics"): "mathematics:sets-relations-functions",
+    ("solution", "mathematics"): "mathematics:sets-relations-functions",
+}
+
+
 def map_chapter(examside_chapter, subject):
     """examside chapter slug + subject -> taxonomy key (or None)."""
     if not examside_chapter:
         return None
+    cross = CROSS_SUBJECT.get((examside_chapter, subject))
+    if cross:
+        return cross
     key = CH_MAP.get(examside_chapter)
     if key:
-        # subject disambiguation for shared names (thermodynamics)
-        if key.split(":")[0] != subject:
-            # chapter belongs to the other subject's namespace; remap
-            alt = f"{subject}:{examside_chapter}"
-            return CH_MAP.get(examside_chapter) if key.split(":")[0] == subject else _subject_fix(examside_chapter, subject)
-        return key
+        if key.split(":")[0] == subject:
+            return key
+        return _subject_fix(examside_chapter, subject)
     return _subject_fix(examside_chapter, subject)
 
 

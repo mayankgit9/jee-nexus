@@ -1,0 +1,953 @@
+[
+ {
+  "publicId": "PYQ-2019-SLAMDiu8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The solution of the differential equation, \n\n$\\frac{dy}{dx}$ $= (x – y)^{2}$, when y(1) = 1, is :",
+  "options": [
+   "$-$ $\\log _{e}$ $\\left |\\frac{1+x-y}{1-x+y}\\right |$ = x + y $-$ 2",
+   "$\\log _{e}$  $\\left |\\frac{2-x}{2-y}\\right |$ = x $-$ y",
+   "$\\log _{e}$ $\\left |\\frac{2-y}{2-x}\\right |$ = 2(y $-$ 1)",
+   "$-$ $\\log _{e}$ $\\left |\\frac{1-x+y}{1+x-y}\\right |$ = 2(x $-$ 1)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "x $-$ y = t \n\n$\\Rightarrow$ $\\frac{dy}{dx}=1-\\frac{dt}{dx}$\n\n$\\Rightarrow$  1 $-$ $\\frac{dt}{dx}$ $= t^{2}$ $\\Rightarrow$  $\\int \\frac{dt}{1-t^{2}}$ = $\\int 1dx$\n\n$\\Rightarrow$  $\\frac{1}{2}\\ell n\\left (\\frac{1+t}{1-t}\\right )=x+λ$\n\n$\\Rightarrow$  $\\frac{1}{2}\\ell n\\left (\\frac{1+x-y}{1-x+y}\\right )=x+λ$ given y(1) = 1\n\n$\\Rightarrow$  $\\frac{1}{2}\\ell n(1)=1+λ\\Rightarrow λ=-1$\n\n$\\Rightarrow$  $\\ell n\\left (\\frac{1+x-y}{1-x+y}\\right )$ = 2(x $-$ 1)\n\n$\\Rightarrow$  $-\\ell n\\left (\\frac{1-x+y}{1+x-y}\\right )$ = 2(x $-$ 1)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-ei04ZJBa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let K be the set of all real values of x where the function f(x) = sin |x| – |x| + 2(x – $π$) cos |x| is not differentiable. Then the set K is equal to :",
+  "options": [
+   "{0, $π$}",
+   "$𝜙$ (an empty set)",
+   "{ r }",
+   "{0}"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "f(x) = sin$|x|-|x|$ + 2(x $-$ $π$) cosx\n\n$\\because$  sin$|x|$ $-$ $|x|$ is differentiable function at c = 0\n\n$\\therefore$  k = $𝜙$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-0WUFs0GD",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of functions f from {1, 2, 3, ...., 20} onto {1, 2, 3, ...., 20} such that f(k) is a multiple of 3,\nwhenever k is a multiple of 4, is :",
+  "options": [
+   "$6^{5}$ $\\times$ (15)!",
+   "$5^{6}$ $\\times$ 15",
+   "(15)! $\\times$ 6!",
+   "5! $\\times$ 6!"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given that $f(k)$ is a multiple of 3 whenever $k$ is a multiple of 4, we need to consider how to map elements from the domain {1, 2, 3, ..., 20} to the codomain {1, 2, 3, ..., 20} following this rule.\n\n1. We first consider the subset of the domain that consists of multiples of 4: {4, 8, 12, 16, 20}. There are 5 elements in this subset.\n\n2. We then consider the subset of the codomain that consists of multiples of 3: {3, 6, 9, 12, 15, 18}. There are 6 elements in this subset.\n\n3. According to the given condition, each of the 5 multiples of 4 must be mapped to a multiple of 3. This can be done in ${}^{6}C_{5}\\cdot 5!=6!$ ways, considering that there are 6 options for each of the 5 multiples of 4 (each choice constitutes a combination), and we then consider the permutations of these 5 choices.\n\n4. The remaining 15 elements in the domain (20 original elements minus the 5 multiples of 4) can be mapped onto the remaining 15 elements in the codomain (20 original elements minus the 6 multiples of 3, plus one multiple of 3 that has been assigned to a multiple of 4). This can be done in $15!$ ways.\n\nSo, combining these two cases, the total number of onto functions $f$ is $6!\\times 15!$, which corresponds to option C.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-jMQGhZPX",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $19^{th}$ term of a non-zero A.P. is zero, then its $(49^{th}$ term) : $(29^{th}$ term) is :",
+  "options": [
+   "2 : 1",
+   "4 : 1",
+   "1 : 3",
+   "3 : 1"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "a + 18d = 0        . . . . .(1)\n\n$\\frac{a+48d}{a+28d}=\\frac{-18d+48d}{-18d+28d}=\\frac{3}{1}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-ogP6rmBU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let z be a complex number such that |z| + z = 3 + i (where i = $\\sqrt{-1}$).  Then |z| is equal to :",
+  "options": [
+   "$\\frac{\\sqrt{34}}{3}$",
+   "$\\frac{5}{3}$",
+   "$\\frac{5}{4}$",
+   "$\\frac{\\sqrt{41}}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$|z|+z=3+i$\n\n$z=3-|z|+i$\n\nLet  $3-|z|=a\\Rightarrow |z|=(3-a)$\n\n$\\Rightarrow z=a+i\\Rightarrow |z|=\\sqrt{a^{2}+1}$\n\n$\\Rightarrow 9+a^{2}-6a=a^{2}+1\\Rightarrow a=\\frac{8}{6}=\\frac{4}{3}$\n\n$\\Rightarrow |z|=3-\\frac{4}{3}=\\frac{5}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-UrxNTlit",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α$ and $β$ be the roots of the quadratic equation $x^{2}$\n sin $θ$ – x(sin $θ$ cos $θ$ + 1) + cos $θ$ = 0 (0 < $θ$ $< 45^{o})$, and $α$ < $β$. Then $\\sum\\limits _{n=0}^{\\infty }\\left (α^{n}+\\frac{(-1)^{n}}{β^{n}}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{1}{1+\\cos θ}+\\frac{1}{1-\\sin θ}$",
+   "$\\frac{1}{1-\\cos θ}+\\frac{1}{1+\\sin θ}$",
+   "$\\frac{1}{1-\\cos θ}-\\frac{1}{1+\\sin θ}$",
+   "$\\frac{1}{1+\\cos θ}-\\frac{1}{1-\\sin θ}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "D = (1 + sin$θ$ cos$θ)^{2}$ $-$ 4sin$θ$cos$θ$ = (1 $-$ sin$θ$ cos$θ)^{2}$\n\n$\\Rightarrow$  roots are $β$ = cosec$θ$ and $α$ = cos$θ$\n\n$\\sum\\limits _{n=0}^{\\infty }\\left (α^{n}+\\left (-\\frac{1}{β}\\right )^{n}\\right )=\\sum\\limits _{n=0}^{\\infty }(\\cos θ)^{n}+\\sum\\limits _{n=0}^{n}(-\\sin θ)^{n}$\n\n$=\\frac{1}{1-\\cos θ}+\\frac{1}{1+\\sin θ}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-o5MdSV4O",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If  $\\left |\\begin{array}{lll} a-b-c & 2a & 2a \\\\ 2b & b-c-a & 2b \\\\ 2c & 2c & c-a-b \\end{array}\\right |$ \n\n      $= (a + b + c) (x + a + b + c)^{2}, x$ $\\neq$ 0,\n\nthen x is equal to :",
+  "options": [
+   "–2(a + b + c)",
+   "2(a + b + c)",
+   "abc",
+   "–(a + b + c)"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left |\\begin{array}{lll} a-b-c & 2a & 2a \\\\ 2b & b-c-a & 2b \\\\ 2c & 2c & c-a-b \\end{array}\\right |$ \n\n$R_{1}$ $\\to$ $R_{1} + R_{2} + R_{3}$\n\n$=\\left |\\begin{array}{lll} a+b+c & a+b+c & a+b+c \\\\ 2b & b-c-a & 2b \\\\ 2c & 2c & c-a-b \\end{array}\\right |$\n\n$=(a+b+c)\\left |\\begin{array}{lll} 1 & 0 & 0 \\\\ 2b & -(a+b+c) & 0 \\\\ 2c & 2c & c-a-b \\end{array}\\right |$\n\n$=$ $(a + b + c) (a + b + c)^{2}$\n\n$\\Rightarrow$  x $=$ $-$ 2(a + b + c)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-M9bWcFHc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{x\\to 0}\\frac{x\\cot (4x)}{\\sin ^{2}x\\cot ^{2}(2x)}$ is equal to :",
+  "options": [
+   "0",
+   "4",
+   "1",
+   "2"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 0}\\frac{x\\tan ^{2}2x}{\\tan 4x\\sin ^{2}x}=\\lim _{x\\to 0}\\frac{x\\left (\\frac{\\tan 2 2x}{4x2}\\right )4x^{2}}{\\left (\\frac{\\tan 4x}{4x}\\right )4x\\left (\\frac{\\sin 2x}{x2}\\right )x^{2}}=1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-mdpcBn9f",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area (in sq. units) in the first quadrant bounded by the parabola, $y = x^{2} + 1$, the tangent to it at the point (2, 5) and the coordinate axes is :",
+  "options": [
+   "$\\frac{8}{3}$",
+   "$\\frac{14}{3}$",
+   "$\\frac{187}{24}$",
+   "$\\frac{37}{24}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nArea $=\\int\\limits _{0}^{2}\\left (x^{2}+1\\right )dx-\\frac{1}{2}\\left (\\frac{5}{4}\\right )(5)=\\frac{37}{24}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-11th-january-evening-slot/mdpcBn9fdbD5jQ5ut30AV-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 11th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-xn6ue9zH",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If   $\\int \\frac{x+1}{\\sqrt{2x-1}}dx$ = f(x) $\\sqrt{2x-1}$ + C, where C is a constant of integration, then f(x) is equal to :",
+  "options": [
+   "$\\frac{2}{3}$ (x $-$ 4)",
+   "$\\frac{1}{3}$ (x + 4)",
+   "$\\frac{1}{3}$ (x + 1)",
+   "$\\frac{2}{3}$ (x + 2)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sqrt{2x-1}=t\\Rightarrow 2x-1=t^{2}\\Rightarrow 2dx=2t.dt$\n\n$\\int \\frac{x+1}{\\sqrt{2x-1}}dx=\\int \\frac{\\frac{t2+1}{2}+1}{t}tdt=\\int \\frac{t^{2}+3}{2}dt$\n\n$=\\frac{1}{2}\\left (\\frac{t^{3}}{3}+3t\\right )=\\frac{t}{6}\\left (t^{2}+9\\right )+c$\n\n$=\\sqrt{2x-1}\\left (\\frac{2x-1+9}{6}\\right )+c=\\sqrt{2x-1}\\left (\\frac{x+4}{3}\\right )+c$\n\n$\\Rightarrow f(x)=\\frac{x+4}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-pBqVHNcx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a function f : (0, $\\infty$) $\\to$ (0, $\\infty$) be defined by f(x) = $\\left |1-\\frac{1}{x}\\right |$. Then f is :",
+  "options": [
+   "not injective but it is surjective",
+   "neither injective nor surjective",
+   "injective only",
+   "both injective as well as surjective"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\left |1-\\frac{1}{x}\\right |=\\frac{|x-1|}{x}=\\left \\{\\begin{array}{ll} \\frac{1-x}{x} & 0<x\\leq 1 \\\\ \\frac{x-1}{x} & x\\geq 1 \\end{array} \\right.$\n\n\n[IMG]\n\n\n$\\Rightarrow$  f(x) is not injective\n\nbut range of function is $[0,\\infty )$\n\nRemarks :  If co-domain is $[0,\\infty )$, then f(x) will be surjective.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-11th-january-evening-slot/pBqVHNcxP55bNHm9oo93G-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 11th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-XB56wgM0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f(x) = $\\frac{x}{\\sqrt{a^{2}+x^{2}}}-\\frac{d-x}{\\sqrt{b^{2}+(d-x)^{2}}},$ x $\\in$ R, where a, b and d are non-zero real constants. Then :",
+  "options": [
+   "f is an increasing function of x",
+   "f is neither increasing nor decreasing function of x",
+   "f ' is not a continuous function of x",
+   "f is a decreasing function of x"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\frac{x}{\\sqrt{a^{2}+x^{2}}}-\\frac{d-x}{\\sqrt{b^{2}+(d-x)^{2}}}$\n\n$f^{'}(x)=\\frac{a^{2}}{(a^{2}+x^{2})^{3/2}}+\\frac{b^{2}}{\\left (b^{2}+(d-x)^{2}\\right )^{3/2}}>0\\forall x\\in R$\n\nf(x) is an increasing function.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-vnub8GmP",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The integral  $\\int\\limits _{π/6}^{π/4}\\frac{dx}{\\sin 2x\\left (\\tan ^{5}x+\\cot ^{5}x\\right )}$  equals :",
+  "options": [
+   "$\\frac{π}{40}$",
+   "$\\frac{1}{20}\\tan ^{-1}\\left (\\frac{1}{9\\sqrt{3}}\\right )$",
+   "$\\frac{1}{10}\\left (\\frac{π}{4}-\\tan ^{-1}\\left (\\frac{1}{9\\sqrt{3}}\\right )\\right )$",
+   "$\\frac{1}{5}\\left (\\frac{π}{4}-\\tan ^{-1}\\left (\\frac{1}{3\\sqrt{3}}\\right )\\right )$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "I $=$ $\\int\\limits _{π/6}^{π/4}\\frac{dx}{\\sin 2x\\left (\\tan ^{5}x+\\cot ^{5}x\\right )}$\n\n$\\mathrm{I}=\\frac{1}{2}\\int\\limits _{π/6}^{π/4}\\frac{\\tan ^{4}x\\sec ^{2}xdx}{\\left (1+\\tan ^{10}x\\right )}$   Put $\\tan ^{5}x$ $=$ t\n\n$\\mathrm{I}=\\frac{1}{10}\\int\\limits _{\\left (\\frac{1}{\\sqrt{3}}\\right )^{5}}^{1}\\frac{dt}{1+t^{2}}=\\frac{1}{10}\\left (\\frac{π}{4}-\\tan ^{-1}\\frac{1}{9\\sqrt{3}}\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-N4CHAkYa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the length of the latus rectum of an ellipse with its major axis along x-axis and centre at the origin, be 8. If the distance between the foci of this ellipse is equal to the length of its minor axis, then which one of the following points lies on it?",
+  "options": [
+   "$\\left (4\\sqrt{2},2\\sqrt{3}\\right )$",
+   "$\\left (4\\sqrt{3},2\\sqrt{3}\\right )$",
+   "$\\left (4\\sqrt{3},2\\sqrt{2}\\right )$",
+   "$\\left (4\\sqrt{2},2\\sqrt{2}\\right )$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{2b^{2}}{a}=8$ and  2ae $=$ 2b\n\n$\\Rightarrow$  $\\frac{b}{a}$ = e  and 1 $-$ $e^{2} = e^{2}$ $\\Rightarrow$ e $=$ $\\frac{1}{\\sqrt{2}}$\n\n$\\Rightarrow$  b = 4$\\sqrt{2}$  and  a $=$ 8\n\nSo equation of ellipse is $\\frac{x^{2}}{64}+\\frac{y^{2}}{32}=1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-udGNmB5e",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If a hyperbola has length of its conjugate axis equal to 5 and the distance between its foci is 13, then the\neccentricity of the hyperbola is :",
+  "options": [
+   "$\\frac{13}{6}$",
+   "2",
+   "$\\frac{13}{12}$",
+   "$\\frac{13}{8}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "2b = 5  and  2ae  = 13\n\n$b^{2} = a^{2}(e^{2}$ $-$ 1) $\\Rightarrow$  $\\frac{25}{4}$ = $\\frac{169}{4}$ $-$ $a^{2}$\n\n$\\Rightarrow$  a $=$ 6 $\\Rightarrow$  e $=$ $\\frac{13}{12}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-miWACwbO",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let  S = {1, 2, . . .  . . ., 20}. A subset B of S is said to be \"nice\", if the sum of the elements of B is 203. Then the probability that a randomly chosen subset of S is \"nice\" is :",
+  "options": [
+   "$\\frac{5}{2^{20}}$",
+   "$\\frac{7}{2^{20}}$",
+   "$\\frac{4}{2^{20}}$",
+   "$\\frac{6}{2^{20}}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We can solve this problem by counting the number of \"nice\" subsets in the set S = {1, 2, $\\ldots$, 20 }, and then dividing that number by the total number of possible subsets of S.\n\nThe sum of all elements in S is :\n\n1 + 2 + $\\ldots$ + 20 = $\\frac{20\\times 21}{2}$ = 210\n\nSince a \"nice\" subset must sum to 203, the elements not in the subset must sum to 210 - 203 = 7.\n\nNow we need to find the ways to make the sum of 7 using the elements of S. The combinations are :\n\n1. 7\n2. 1 + 6\n3. 2 + 5\n4. 3 + 4\n5. 1 + 2 + 4\n6. 1 + 3 + 3(This doesn't work since 3 is repeated)\n7. 2 + 2 + 3(This doesn't work since 2 is repeated)\n\nSo, there are 5 \"nice\" subsets.\n\nSince the set S has 20 elements, there are $2^{20}$ possible subsets (including the empty set and the set itself). The probability of randomly choosing a \"nice\" subset is therefore :\n\n\n[IMG]",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2019-online-11th-january-evening-slot/miWACwbOxOgzdWPOMnhck-0.png",
+    "altText": "Original exam figure (JEE Main 2019 (Online) 11th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2019-GNsf4xF6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let x, y be positive real numbers and m, n positive integers. The maximum value of the expression $\\frac{x^{m}y^{n}}{(1+x^{2m})(1+y^{2n})}$ is :",
+  "options": [
+   "$\\frac{1}{2}$",
+   "$\\frac{1}{4}$",
+   "$\\frac{m+n}{6mn}$",
+   "1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{x^{m}y^{n}}{(1+x^{2m})(1+y^{2n})}=\\frac{1}{\\left (x^{m}+\\frac{1}{xm}\\right )\\left (y^{n}+\\frac{1}{yn}\\right )}\\leq \\frac{1}{4}$\n\nusing AM $\\geq$ GM",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-U1UOPS1l",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\sqrt{3}\\hat{i}+\\hat{j},$    $\\hat{i}+\\sqrt{3}\\hat{j}$  and   $β\\hat{i}+(1-β)\\hat{j}$ respectively be the position vectors of the points A, B and C with respect to the origin O. If the distance of C from the bisector of the acute angle between OA and OB is  $\\frac{3}{\\sqrt{2}}$, then the sum of all possible values of $β$ is :",
+  "options": [
+   "4",
+   "1",
+   "2",
+   "3"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Angle bisector is x $-$ y = 0\n\n$\\Rightarrow$  $\\frac{|β-(1-β)|}{\\sqrt{2}}=\\frac{3}{\\sqrt{2}}$\n\n$\\Rightarrow$  $|2β-1|=3$\n\n$\\Rightarrow$  $β$ = 2 or $-$ 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-0fOD1sLd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "All x satisfying the inequality $(\\cot ^{–1}$\n$x)^{2}– 7(\\cot ^{–1} x) + 10 > 0$, lie in the interval :",
+  "options": [
+   "(cot 2, $\\infty$)",
+   "(–$\\infty$, cot 5) $\\cup$ (cot 2, $\\infty$)",
+   "(cot 5, cot 4)",
+   "(– $\\infty$, cot 5) $\\cup$ (cot 4, cot 2)"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cot ^{-1} x > 5 ($not possible, as 0  cot2, i.e. x $\\in$ (cot 2, $\\infty$)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-MiEqnyGd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A circle cuts a chord of length 4a on the x-axis and passes through a point on the y-axis, distant 2b from the origin. Then the locus of the centre of this circle, is :",
+  "options": [
+   "an ellipse",
+   "a parabola",
+   "a hyperbola",
+   "a straight line"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let equation of circle is \n\n$x^{2} + y^{2} + 2gx + 2fy + c = 0$, it passes through (0, 2b)\n\n$\\Rightarrow$  $0 + 4b^{2} + 2g$ $\\times$ 0 + 2f $\\times$ 2b + c = 0\n\n$\\Rightarrow$  $4b^{2} + 4bf + c = 0$       . . .     (i)\n\n$2\\sqrt{g^{2}-c}=4a$      . . . (ii)\n\n$g^{2}$ $-$ $c = 4a^{2}$ $\\Rightarrow$ c = $\\left (g^{2}-4a^{2}\\right )$\n\nPutting in equation (1)\n\n$\\Rightarrow$  $4b^{2} + 4bf + g^{2}$ $-$ $4a^{2} = 0$\n\nCentre of the circle is (x, y) = ($-$g, $-$f), so g = $-$x and f = $-$y:\n\n$\\Rightarrow$  $x^{2}$ $-$ $4by + 4(b^{2}$ $-$ $a^{2}) = 0$, it represents a parabola.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-DpbIaKmU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If in a parallelogram ABDC, the coordinates of A, B and C are respectively (1, 2), (3, 4) and (2, 5), then the\nequation of the diagonal AD is :",
+  "options": [
+   "5x + 3y – 11 = 0",
+   "5x – 3y + 1 = 0",
+   "3x – 5y + 7 = 0",
+   "3x + 5y – 13 = 0"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "co-ordinates of point D are (4, 7)\n\n$\\Rightarrow$  line AD is 5x $-$ 3y + 1 = 0",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2019-aqj3lPSr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the area of the triangle whose one vertex is at the vertex of the parabola, $y^{2} + 4(x – a^{2}) = 0$ and the othertwo vertices are the points of intersection of the parabola and y-axis, is 250 sq. units, then a value of 'a' is :",
+  "options": [
+   "$5\\sqrt{5}$",
+   "$(10)^{2/3}$",
+   "$5\\left (2^{1/3}\\right )$",
+   "5"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2019,
+  "sourceDate": "2019-01-11 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2019 (Online) 11th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Vertex is $(a^{2}, 0)$\n\n$y^{2}$ $=$ $-$(x $-$ $a^{2})$  and  x $=$ 0 $\\Rightarrow$  (0, $\\pm$ 2a)\n\nArea of triangle is $=\\frac{1}{2}.4a.(a^{2}) = 250$\n\n$\\Rightarrow$  $a^{3} = 125$   or  a = 5",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2019 (Online) 11th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
