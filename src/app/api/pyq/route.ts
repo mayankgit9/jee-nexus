@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server'
-import { db } from '@/lib/db'
+import { db, dbClient } from '@/lib/db'
 import { getSessionUser, jsonError } from '@/lib/auth'
 import { toPublicQuestion } from '@/lib/questions'
 import { Prisma } from '@prisma/client'
@@ -16,15 +16,18 @@ export async function GET(req: NextRequest) {
     const sp = req.nextUrl.searchParams
     const yearParam = sp.get('year')
     const user = await getSessionUser()
+    // one client/connection for the whole request (fresh-client-per-access
+    // Proxy semantics would pay ~300ms TCP+auth per query through Hyperdrive)
+    const prisma = dbClient()
 
     // ---- Year overview ----
     if (!yearParam) {
-      const rows = await db.question.groupBy({
+      const rows = await prisma.question.groupBy({
         by: ['sourceYear', 'subjectId'],
         where: { verificationStatus: { not: 'rejected' } },
         _count: { _all: true },
       })
-      const subjects = await db.subject.findMany({ select: { id: true, key: true, name: true } })
+      const subjects = await prisma.subject.findMany({ select: { id: true, key: true, name: true } })
       const subjById = new Map(subjects.map((s) => [s.id, s]))
 
       const years = new Map<number, { total: number; subjects: Record<string, number> }>()
@@ -49,7 +52,7 @@ export async function GET(req: NextRequest) {
     // ---- Subject -> chapter breakdown for a year ----
     const subjectParam = sp.get('subject')
     if (!subjectParam) {
-      const chapters = await db.chapter.findMany({
+      const chapters = await prisma.chapter.findMany({
         where: { questions: { some: { sourceYear: year, verificationStatus: { not: 'rejected' } } } },
         include: {
           subject: true,
@@ -61,7 +64,7 @@ export async function GET(req: NextRequest) {
       // user progress per chapter (if logged in)
       const progressByChapter = new Map<string, { attempted: number; correct: number }>()
       if (user) {
-        const attempts = await db.attempt.findMany({
+        const attempts = await prisma.attempt.findMany({
           where: { userId: user.id, question: { sourceYear: year } },
           select: { isCorrect: true, question: { select: { chapterId: true } } },
         })
@@ -112,8 +115,8 @@ export async function GET(req: NextRequest) {
     const pageSize = 10
 
     const [total, questions] = await Promise.all([
-      db.question.count({ where }),
-      db.question.findMany({
+      prisma.question.count({ where }),
+      prisma.question.findMany({
         where,
         include: {
           subject: true,

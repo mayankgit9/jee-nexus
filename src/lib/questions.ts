@@ -1,6 +1,6 @@
 // JEE NEXUS — question serialization + selection services
 import { createHash } from 'crypto'
-import { db } from '@/lib/db'
+import { db, dbClient } from '@/lib/db'
 import type { Prisma, Difficulty, QuestionType } from '@prisma/client'
 import type { PublicQuestion, QuestionSolution } from '@/lib/types'
 
@@ -121,10 +121,15 @@ export async function selectRandomQuestions(f: RandomFilters): Promise<PublicQue
     where.id = { notIn: f.excludeQuestionIds }
   }
 
+  // One client/connection for the whole selection (the db Proxy opens a
+  // fresh connection per access — ~300ms each through Hyperdrive; this
+  // function makes up to 3 sequential queries).
+  const prisma = dbClient()
+
   // Repeat avoidance for logged-in users (unless revision requested)
   if (f.userId && f.includeAttempted === false) {
     const since = new Date(Date.now() - 1000 * 60 * 60 * 24 * 14)
-    const recentAttempts = await db.attempt.findMany({
+    const recentAttempts = await prisma.attempt.findMany({
       where: { userId: f.userId, createdAt: { gte: since } },
       select: { questionId: true },
       take: 800,
@@ -140,7 +145,7 @@ export async function selectRandomQuestions(f: RandomFilters): Promise<PublicQue
 
   // Candidate pool (bounded), then Fisher–Yates sample in JS.
   // (SQLite has no stable Prisma-level random ordering; pool+sample is robust and testable.)
-  const pool = await db.question.findMany({
+  const pool = await prisma.question.findMany({
     where,
     select: { id: true },
     take: 500,
@@ -153,7 +158,7 @@ export async function selectRandomQuestions(f: RandomFilters): Promise<PublicQue
     .slice(0, count)
     .map((x) => x.q.id)
 
-  const questions = await db.question.findMany({
+  const questions = await prisma.question.findMany({
     where: { id: { in: shuffled } },
     include: {
       subject: true,

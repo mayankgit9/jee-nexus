@@ -1,4 +1,4 @@
-import { db } from '@/lib/db'
+import { db, dbClient } from '@/lib/db'
 import { requireUser, jsonError } from '@/lib/auth'
 
 /** Performance statistics dashboard data — merges practice attempts AND
@@ -6,16 +6,19 @@ import { requireUser, jsonError } from '@/lib/auth'
 export async function GET() {
   try {
     const user = await requireUser()
+    // one client for the whole dashboard payload (Proxy = fresh connection
+    // per access; this route makes 8+ queries)
+    const prisma = dbClient()
 
     const [total, correct, bySubjectRaw, recent, bookmarkCount, examAnswers, examAttemptsRaw] = await Promise.all([
-      db.attempt.count({ where: { userId: user.id } }),
-      db.attempt.count({ where: { userId: user.id, isCorrect: true } }),
-      db.attempt.groupBy({
+      prisma.attempt.count({ where: { userId: user.id } }),
+      prisma.attempt.count({ where: { userId: user.id, isCorrect: true } }),
+      prisma.attempt.groupBy({
         by: ['questionId'],
         where: { userId: user.id },
         _count: { _all: true },
       }),
-      db.attempt.findMany({
+      prisma.attempt.findMany({
         where: { userId: user.id },
         orderBy: { createdAt: 'desc' },
         take: 10,
@@ -25,11 +28,11 @@ export async function GET() {
           },
         },
       }),
-      db.bookmark.count({ where: { userId: user.id } }),
+      prisma.bookmark.count({ where: { userId: user.id } }),
       // graded CBT answers (only submitted/expired attempts carry grades);
       // unanswered rows are skipped in JS below — Json-null filtering in
       // Prisma has DbNull/JsonNull subtleties not worth relying on here.
-      db.examAttemptAnswer.findMany({
+      prisma.examAttemptAnswer.findMany({
         where: {
           examAttempt: { userId: user.id, status: { in: ['submitted', 'expired'] } },
         },
@@ -55,11 +58,11 @@ export async function GET() {
         },
         take: 5000,
       }),
-      db.examAttempt.count({ where: { userId: user.id, status: { in: ['submitted', 'expired'] } } }),
+      prisma.examAttempt.count({ where: { userId: user.id, status: { in: ['submitted', 'expired'] } } }),
     ])
 
     // Subject-wise breakdown via question joins
-    const attempts = await db.attempt.findMany({
+    const attempts = await prisma.attempt.findMany({
       where: { userId: user.id },
       select: {
         isCorrect: true,
@@ -153,7 +156,7 @@ export async function GET() {
 
     // daily activity (last 14 days) — practice + exam answers
     const dayCounts = new Map<string, number>()
-    const recentAttemptsForDays = await db.attempt.findMany({
+    const recentAttemptsForDays = await prisma.attempt.findMany({
       where: { userId: user.id, createdAt: { gte: new Date(Date.now() - 1000 * 60 * 60 * 24 * 14) } },
       select: { createdAt: true },
     })
