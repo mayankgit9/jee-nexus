@@ -1,0 +1,781 @@
+[
+ {
+  "publicId": "PYQ-2020-teMqBnHZ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let\n$α$ > 0,\n$β$ > 0 be such that\n\n$α^{3}$ + $β^{2}$ = 4. If the\nmaximum value of the term independent of x in\n\nthe binomial expansion of\n$\\left (αx^{\\frac{1}{9}}+βx^{-\\frac{1}{6}}\\right )^{10}$\nis 10k,\n\nthen k is equal to :",
+  "options": [
+   "176",
+   "336",
+   "352",
+   "84"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 20,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "General term\n\n$T_{r + 1} = ^{10}C_{r}α^{10-r}.(x)^{\\frac{10-r}{9}}.β^{r}(x)^{-\\frac{r}{6}}$\n\n$= ^{10}C_{r}α^{10-r}β^{r}.(x)^{\\frac{10-r}{9}-\\frac{r}{6}}$\n\nIf $T_{r + 1}$ is independent of x\n\n$\\therefore$ $\\frac{10-r}{9}-\\frac{r}{6}$ = 0\n\n$\\Rightarrow$ r = 4\n\n$\\therefore$ $T_{5} = ^{10}C_{4}$ $α^{6}β^{4}$\n\nAlso given, $α^{3}$ + $β^{2}$ = 4\n\nBy AM-GM inequality\n\n$\\frac{α^{3}+β^{2}}{2}\\geq \\left (α^{3}β^{2}\\right )^{\\frac{1}{2}}$\n\n$\\Rightarrow$ $(2)^{2}$ $\\geq$ $α^{3}β^{2}$\n\n$\\Rightarrow$ $α^{6}β^{4}$ $\\leq$ 16\n\n$\\therefore$ $10k = ^{10}C_{4} (16)$\n\n$\\Rightarrow$ k = 336",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-IDBHWW16",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If a function f(x) defined by\n\n$f(x)=\\left \\{\\begin{array}{ll} ae^{x}+be^{-x}, & -1\\leq x<1 \\\\ cx^{2}, & 1\\leq x\\leq 3 \\\\ ax^{2}+2cx, & 3<x\\leq 4 \\end{array} \\right.$\n\nbe continuous for some $a$, b, c $\\in$ R and f'(0) + f'(2) = e, then the value of $a$ is :",
+  "options": [
+   "$\\frac{e}{e^{2}-3e-13}$",
+   "$\\frac{1}{e^{2}-3e+13}$",
+   "$\\frac{e}{e^{2}-3e+13}$",
+   "$\\frac{e}{e^{2}+3e+13}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given function,\n\n$f(x)=\\left \\{\\begin{array}{ll} ae^{x}+be^{-x}, & -1\\leq x<1 \\\\ cx^{2}, & 1\\leq x\\leq 3 \\\\ ax^{2}+2cx, & 3<x\\leq 4 \\end{array} \\right.$\n\nFor continuity at x = 1 \n\n$\\lim _{x\\to 1^{-}}f(x)=\\lim _{x\\to 1^{+}}f(x)$\n\n$\\Rightarrow$ $ae+be^{-1}=c$\n\n$\\Rightarrow$ b = ce - $ae^{2} .....(1)$\n\nFor continuity at x = 3\n\n$\\lim _{x\\to 3^{-}}f(x)=\\lim _{x\\to 3^{+}}f(x)$\n\n$\\Rightarrow$ 9c = 9a + 6c\n\n$\\Rightarrow$ c = 3a .......(2)\n\nAlso given, f'(0) + f'(2) = e\n\n$\\Rightarrow$ $(ae^{x}$\n– be$^{–x}$\n$)_{x=0} + (2cx)_{x=2} = e$\n\n$\\Rightarrow$ a – b + 4c = e  ........(3)\n\nFrom (1), (2) & (3)\n\n$a – 3ae + ae^{2}$\n + 12a = e\n\n$\\Rightarrow$  $a(e^{2}$\n + 13 – 3e) = e\n\n$\\Rightarrow$ a = $\\frac{e}{e^{2}-3e+13}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-ddcEu6sJ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Box I contains 30 cards numbered 1 to 30 and\nBox II contains 20 cards numbered 31 to 50. A\nbox is selected at random and a card is drawn\nfrom it. The number on the card is found to be\na non-prime number. The probability that the\ncard was drawn from Box I is :",
+  "options": [
+   "$\\frac{8}{17}$",
+   "$\\frac{2}{3}$",
+   "$\\frac{2}{5}$",
+   "$\\frac{4}{17}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $B_{1}$ be the event where Box-I is selected.\n\nAnd $B_{2}$ be the event where Box-II is selected.\n\n$P(B_{1}) = P(B_{2}) =$ $\\frac{1}{2}$\n\nLet E be the event where selected card is non prime.\n\nFor $B_{1}$ : Prime numbers: {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}\n\nFor $B_{2}$ : Prime numbers: {31, 37, 41, 43, 47}\n\n$P(E) = P(B_{1})$ $\\times$ $P\\left (\\frac{E}{B_{1}}\\right )$ $+  P(B_{2})$ $\\times$ $P\\left (\\frac{E}{B_{2}}\\right )$\n\n= $\\frac{1}{2}\\times \\frac{20}{30}$ + $\\frac{1}{2}\\times \\frac{15}{20}$\n\nRequired probability :\n\n$P\\left (\\frac{B_{1}}{E}\\right )$ = $\\frac{P(B_{2}).P\\left (\\frac{E}{B1}\\right )}{P(E)}$\n\n= $\\frac{\\frac{1}{2}\\times \\frac{20}{30}}{\\frac{1}{2}\\times \\frac{20}{30}+\\frac{1}{2}\\frac{15}{20}}$\n\n= $\\frac{\\frac{2}{3}}{\\frac{2}{3}+\\frac{3}{4}}$\n\n= $\\frac{8}{17}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-d6xFyNgE",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Area (in sq. units) of the region outside\n\n$\\frac{|x|}{2}+\\frac{|y|}{3}=1$ and inside the ellipse $\\frac{x^{2}}{4}+\\frac{y^{2}}{9}=1$ is :",
+  "options": [
+   "$6(4-π)$",
+   "$3(4-π)$",
+   "$6(π-2)$",
+   "$3(π-2)$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nArea of Ellipse = $π$ab = 6$π$\n\n$\\therefore$ Required area = Area of ellipse\n– 4 (Area of triangle OAB)\n\n= 6$π$ - $4\\left (\\frac{1}{2}\\times 2\\times 3\\right )$\n\n= 6$π$ - 12\n\n= $6(π-2)$ sq.units",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-2nd-september-morning-slot/d6xFyNgEj2CmZ6SHmgjgy2xukewn1vf0-0.png",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 2nd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-xYS1FKI1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let S be the set of all $λ$ $\\in$ R for which the system\nof linear equations\n\n2x – y + 2z = 2\n\nx – 2y +\n$λ$z = –4\n\nx +\n$λ$y + z = 4\n\nhas no solution. Then the set S :",
+  "options": [
+   "contains more than two elements.",
+   "contains exactly two elements.",
+   "is a singleton.",
+   "is an empty set."
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For no solution :\n\n$\\Delta$ = 0 and $\\Delta_{1}$/$\\Delta_{2}$/$\\Delta_{3}$ $\\neq$ 0\n\n$\\Delta$ = $\\left |\\begin{array}{lll} 2 & -1 & 2 \\\\ 1 & -2 & λ \\\\ 1 & λ & 1 \\end{array}\\right |$ = 0\n\n$\\Rightarrow$ 2(–2 – $λ^{2}$) + 1 (1 – $λ$) + 2($λ$ + 2) = 0\n\n$\\Rightarrow$ –2$λ^{2}$\n+ $λ$ + 1 = 0\n\n$\\Rightarrow$ $λ$ = 1, $-\\frac{1}{2}$\n\nWhen $λ$ = 1\n\n2x – y + 2z = 2 ...(1)\n\nx – 2y + z = –4 ...(2)\n\nx + y + z = 4 ...(3)\n\nAdding (2) and (3), we get\n\n2x – y + 2z = 0 (contradiction) hence no solution.\n\n$\\therefore$ $λ$ = 1 belongs to set S.\n\nWhen $λ$ = $-\\frac{1}{2}$\n\n2x – y + 2z = 2 ...(1)\n\nx – 2y $-\\frac{1}{2}$z\n = –4 ...(2)\n\nx $-\\frac{1}{2}$y\n + z = 4 ...(3)\n\n(1) and (3) contradict each other, hence no\nsolution.\n\n$\\therefore$ $λ$ = $-\\frac{1}{2}$ belongs to set S.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-Awf3Xo25",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let A be a 2 $\\times$ 2 real matrix with entries from\n{0, 1} and |A|\n$\\neq$ 0. Consider the following two\nstatements :\n\n(P) If A $\\neq$ $I_{2}$\n, then |A| = –1\n\n(Q) If |A| = 1, then tr(A) = 2,\n\nwhere $I_{2}$\n denotes 2 $\\times$ 2 identity matrix and tr(A)\ndenotes the sum of the diagonal entries of A. Then :",
+  "options": [
+   "(P) is true and (Q) is false",
+   "Both (P) and (Q) are false",
+   "Both (P) and (Q) are true",
+   "(P) is false and (Q) is true"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let A = $\\left [\\begin{array}{ll} a & b \\\\ c & d \\end{array}\\right ]$, where a, b, c, d $\\in$ {0, 1}\n\n$\\Rightarrow$ |A| =  ad – bc\n\n$\\therefore$ ad = 0 or 1 and bc = 0 or 1\n\nSo possible values of |A| are 1, 0 or –1\n\n(P) If A $\\neq$ $I_{2}$\n then |A| can be 1 or –1 (e.g. A = $\\left [\\begin{array}{ll} 1 & 1 \\\\ 0 & 1 \\end{array}\\right ]$ has |A| = 1), so (P) is false\n\n(Q) If |A| = 1 then ad = 1 and bc = 0\n\n$\\Rightarrow$ a = d = 1 $\\Rightarrow$ Tr(A) = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-F9aA9i4Q",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution of the differential\nequation,\n\n$\\frac{2+\\sin x}{y+1}.\\frac{dy}{dx}=-\\cos x$, y > 0,y(0) = 1.\n If y($π$) = a and $\\frac{dy}{dx}$ at x =\n$π$ is b, then the ordered pair\n(a, b) is equal to :",
+  "options": [
+   "(2, 1)",
+   "$\\left (2,\\frac{3}{2}\\right )$",
+   "(1, -1)",
+   "(1, 1)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{2+\\sin x}{y+1}.\\frac{dy}{dx}=-\\cos x$\n\n$\\Rightarrow$ $\\int \\frac{dy}{y+1}=\\int \\frac{(-\\cos x)dx}{2+\\sin x}$\n\n$\\Rightarrow$ $\\ln |y+1|=-\\ln |2+\\sin x|+\\ln c$\n\n$\\Rightarrow$ $\\ln |(y+1)(2+\\sin x)|=\\ln c$\n\nAs y(0) = 1\n\n$\\therefore$ $\\ln |(1+1)(2+0)|=\\ln c$\n\n$\\Rightarrow$ $\\therefore$ c = 4\n\n$\\therefore$ $(y+1)(2+\\sin x)$ = 4\n\n$\\Rightarrow$ y = $\\frac{2-\\sin x}{2+\\sin x}$\n\nGiven y($π$) = a\n\n$\\therefore$ y($π$) = $\\frac{2-\\sin π}{2+\\sin π}$ = 1 = a\n\n$\\frac{dy}{dx}=\\frac{(2+\\sin x)(-\\cos x)-(2-\\sin x).(\\cos x)}{(2+\\sin x)^{2}}$\n\n$\\Rightarrow$ $\\frac{dy}{dx}\\left |_{x=π}= \\right.$ 1 = b\n\nSo, (a, b) = (1, 1)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-CxpoxX2u",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let X = {x\n$\\in$ N : 1\n$\\leq$ x\n$\\leq$ 17} and\n\nY = {ax + b: x\n$\\in$ X and a, b $\\in$ R, a > 0}. If mean\n\nand variance of elements of Y are 17 and 216\n\nrespectively then a + b is equal to :",
+  "options": [
+   "7",
+   "9",
+   "-7",
+   "-27"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Mean of X = $\\frac{\\sum\\limits _{x=1}^{17}x}{17}$ = $\\frac{17\\times 18}{17\\times 2}$ = 9\n\nMean of Y = $\\frac{\\sum\\limits _{x=1}^{17}(ax+b)}{17}$ = 17\n\n$\\Rightarrow$ $a\\frac{\\sum\\limits _{x=1}^{17}x}{17}+b$ = 17\n\n$\\Rightarrow$ 9a + b = 17 ....(1)\n\nGiven Var(Y) = 216\n\n$\\Rightarrow$ $\\frac{\\sum\\limits _{x=1}^{17}(ax+b)^{2}}{17}-(17)^{2}$ = 216\n\n$\\Rightarrow$ $\\sum\\limits _{x=1}^{17}(ax+b)^{2}$ = 8585\n\n$\\Rightarrow$ $(a + b)^{2} + (2a + b)^{2} +....+ (17a + b)^{2} = 8585$\n\n$\\Rightarrow$ $105a^{2} + b^{2} + 18ab = 505 ....(2)$\n\nFrom equation (1) & (2)\n\na = 3 & b = -10\n\n$\\therefore$ a + b = –7",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-vQfn0SPL",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let\n$α$ and\n$β$ be the roots of the equation\n\n$5x^{2} + 6x – 2 = 0$. If $S_{n}$\n =\n$α^{n}$ +\n$β^{n}$, n = 1, 2, 3....,\nthen :",
+  "options": [
+   "$5S_{6}$\n $+ 6S_{5}$\n $= 2S_{4}$",
+   "$5S_{6}$\n $+ 6S_{5}$\n $+ 2S_{4} = 0$",
+   "$6S_{6}$\n $+ 5S_{5}$\n $+ 2S_{4} = 0$",
+   "$6S_{6}$\n $+ 5S_{5}$\n $= 2S_{4}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α$ and\n$β$ be the roots of the equation\n\n$5x^{2} + 6x – 2 = 0$.\n\n$\\Rightarrow$ 5$α^{2}$ + 6$α$ - 2 = 0\n\n$\\Rightarrow$ 5$α^{n + 2}$ + 6$α^{n + 2}$ - 2$α^{n}$ = 0  ......(1)\n\n(By multiplying $α^{n}$)\n\nSimilarly 5$β^{n + 2}$ + 6$β^{n + 2}$ - 2$β^{n}$ = 0  ......(2)\n\nBy adding (1) & (2)\n\n$5S_{n+2} + 6S_{n+1} – 2S_{n} = 0$\n\nFor n = 4\n\n$5S_{6}$\n $+ 6S_{5}$\n $= 2S_{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-uh9zBvgd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If R = {(x, y) : x, y\n$\\in$ $Z, x^{2} + 3y^{2}$\n$\\leq$ 8} is a relation\non the set of integers Z, then the domain of $R^{–1}$ is :",
+  "options": [
+   "{0, 1}",
+   "{–2, –1, 1, 2}",
+   "{–1, 0, 1}",
+   "{–2, –1, 0, 1, 2}"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given R = {(x, y) : x, y\n$\\in$ $Z, x^{2} + 3y^{2}$\n$\\leq$ 8}\n\nSo R =  {(0,1), (0,–1), (1,0), (–1,0), (1,1), (1,-1)\n\n(-1,1), (-1,-1), (2,0), (-2,0), (-2,0), (2,1), (2,-1), (-2,1), (-2,-1)}\n\n$\\Rightarrow$ R : { -2, -1, 0, 1, 2} $\\to$ {-1, 0, 1}\n\n$\\therefore$ $R^{-1}$ : {-1, 0, 1} $\\to$ { -2, -1, 0, 1, 2}\n\n$\\therefore$ Domain of $R^{–1} = {-1, 0, 1}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-rg1izz7V",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The sum of the first three terms of a G.P. is S and\ntheir product is 27. Then all such S lie in :",
+  "options": [
+   "[-3, $\\infty$)",
+   "(-$\\propto$, 9]",
+   "(-$\\propto$, -9] $\\cup$ [-3, $\\infty$)",
+   "(-$\\propto$, -3] $\\cup$ [9, $\\infty$)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let three terms of G.P. are $\\frac{a}{r}$, a, ar\n\n$\\therefore$ $a\\left (\\frac{1}{r}+1+r\\right )$ = S ...(1)\n\nand $a^{3}$\n = 27\n\n$\\Rightarrow$ a = 3\n\n$\\therefore$ $3\\left (\\frac{1}{r}+1+r\\right )$ = S\n\n$\\Rightarrow$ $\\frac{1}{r}+r=\\frac{S}{3}-1$\n\n$\\Rightarrow$ As $\\frac{1}{r}+r\\geq 2$ or $\\frac{1}{r}+r\\leq -2$\n\n$\\therefore$ $\\frac{S}{3}-1\\geq 2$ or $\\frac{S}{3}-1\\leq -2$\n\n$\\Rightarrow$ $\\frac{S}{3}\\geq 3$ or $\\frac{S}{3}\\leq -1$\n\n$\\Rightarrow$ S $\\geq$ 9 or S$\\leq$ -3\n\n$\\therefore$ S $\\in$ (-$\\propto$, -3] $\\cup$ [9, $\\infty$)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-nLj5VndT",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The domain of the function\n\nf(x) = $\\sin ^{-1}\\left (\\frac{|x|+5}{x^{2}+1}\\right )$ is (–\n$\\infty$, -a]$\\cup$[a, $\\infty$). Then a is equal to :",
+  "options": [
+   "$\\frac{\\sqrt{17}-1}{2}$",
+   "$\\frac{1+\\sqrt{17}}{2}$",
+   "$\\frac{\\sqrt{17}}{2}+1$",
+   "$\\frac{\\sqrt{17}}{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "f(x) = $\\sin ^{-1}\\left (\\frac{|x|+5}{x^{2}+1}\\right )$\n\n$\\therefore$ $-1\\leq \\frac{|x|+5}{x^{2}+1}\\leq 1$\n\nSince |x| + 5 & $x^{2}$\n + 1 is always positive\n\nSo $\\frac{|x|+5}{x^{2}+1}\\geq 0$\n\nThat means this inequality $-1\\leq \\frac{|x|+5}{x^{2}+1}$ always right. So we can ignore it.\n\nSo for domain : \n\n$\\frac{|x|+5}{x^{2}+1}\\leq 1$\n\n$\\Rightarrow$ $x^{2}-|x|-4\\geq 0$\n\n$\\Rightarrow$ $\\left (|x|-\\frac{1-\\sqrt{17}}{2}\\right )\\left (|x|-\\frac{1+\\sqrt{17}}{2}\\right )\\geq 0$\n\n$\\Rightarrow$ |x| $\\geq$ $\\frac{1+\\sqrt{17}}{2}$ or |x| $\\leq$ $\\frac{1-\\sqrt{17}}{2}$\n\nAs $\\frac{1-\\sqrt{17}}{2}$ is \n[IMG]\n\n\nx $\\in$ $\\left (-\\infty ,-\\frac{1+\\sqrt{17}}{2}\\right )\\cup \\left (\\frac{1+\\sqrt{17}}{2},\\infty \\right )$\n\nSo, a = $\\frac{1+\\sqrt{17}}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-2nd-september-morning-slot/nLj5VndTCR1FFqA1CBjgy2xukewsg59s-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 2nd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-LLy49LlJ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of \n\n$\\left (\\frac{1+\\sin \\frac{2π}{9}+i\\cos \\frac{2π}{9}}{1+\\sin \\frac{2π}{9}-i\\cos \\frac{2π}{9}}\\right )^{3}$ is :",
+  "options": [
+   "$\\frac{1}{2}\\left (\\sqrt{3}-i\\right )$",
+   "-$\\frac{1}{2}\\left (\\sqrt{3}-i\\right )$",
+   "$-\\frac{1}{2}\\left (1-i\\sqrt{3}\\right )$",
+   "$\\frac{1}{2}\\left (1-i\\sqrt{3}\\right )$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (\\frac{1+\\sin \\frac{2π}{9}+i\\cos \\frac{2π}{9}}{1+\\sin \\frac{2π}{9}-i\\cos \\frac{2π}{9}}\\right )^{3}$\n\n= $\\left (\\frac{1+\\sin \\left (\\frac{π}{2}-\\frac{5π}{18}\\right )+i\\cos \\left (\\frac{π}{2}-\\frac{5π}{18}\\right )}{1+\\sin \\left (\\frac{π}{2}-\\frac{5π}{18}\\right )-i\\cos \\left (\\frac{π}{2}-\\frac{5π}{18}\\right )}\\right )^{3}$\n\n= $\\left (\\frac{1+\\cos \\left (\\frac{5π}{18}\\right )+i\\sin \\left (\\frac{5π}{18}\\right )}{1+\\cos \\left (\\frac{5π}{18}\\right )-i\\sin \\left (\\frac{5π}{18}\\right )}\\right )^{3}$\n\n= $\\left (\\frac{2\\cos ^{2}\\left (\\frac{5π}{36}\\right )+2i\\sin \\left (\\frac{5π}{36}\\right )\\cos \\left (\\frac{5π}{36}\\right )}{2\\cos ^{2}\\left (\\frac{5π}{36}\\right )-2i\\sin \\left (\\frac{5π}{36}\\right )\\cos \\left (\\frac{5π}{36}\\right )}\\right )^{3}$\n\n= $\\left (\\frac{\\cos \\left (\\frac{5π}{36}\\right )+i\\sin \\left (\\frac{5π}{36}\\right )}{\\cos \\left (\\frac{5π}{36}\\right )-i\\sin \\left (\\frac{5π}{36}\\right )}\\right )^{3}$\n\n= $\\left (\\frac{e^{i\\dfrac{5π}{36}}}{e^{-i\\dfrac{5π}{36}}}\\right )^{3}$\n\n= $\\left (e^{i\\frac{5π}{18}}\\right )^{3}$\n\n= $e^{i\\frac{5π}{18}\\times 3}$ = $e^{i\\frac{5π}{6}}$\n\n= $\\cos \\frac{5π}{6}+i\\sin \\frac{5π}{6}$\n\n= $-\\frac{\\sqrt{3}}{2}+\\frac{i}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-Bss5ARx9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If p(x) be a polynomial of degree three that has\na local maximum value 8 at x = 1 and a local\nminimum value 4 at x = 2; then p(0) is equal to :",
+  "options": [
+   "6",
+   "12",
+   "-12",
+   "-24"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since p(x) has relative extreme at\n\nx = 1 & 2\n\nso p'(x) = 0 at x = 1 & 2\n\n$\\therefore$ Let p'(x) = A(x – 1) (x – 2)\n\n$\\Rightarrow$ p(x) = $\\int A\\left (x^{2}-3x+2\\right )dx$\n\n$\\Rightarrow$ p(x) = $A\\left (\\frac{x^{2}}{3}-3x^{2}+2x\\right )$ + C ...(1)\n\nAs P(1) = 8\n\nFrom (1)\n\n$8=A\\left (\\frac{1}{3}-\\frac{3}{2}+2\\right )+C$\n\n$\\Rightarrow$ 8 = $\\frac{5A}{6}+C$\n\n$\\Rightarrow$ 48 = 5A + 5C ...(2)\n\nAlso P(2) = 4\n\nFrom (1)\n\n$4=A\\left (\\frac{8}{3}-6+4\\right )+C$\n\n$\\Rightarrow$ 4 = $\\frac{2A}{3}+C$\n\n$\\Rightarrow$ 12 = 2A + 3C  ......(3)\n\nForm (3) & (4), C = –12, A = 24\n\nNow p(0) = C = -12",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-xOohIAUZ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The integral $\\int\\limits _{0}^{2}||x-1|-x|dx$\n is equal $to______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.5,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{0}^{2}||x-1|-x|dx$\n\n= $\\int\\limits _{0}^{1}|-(x-1)-x|dx$ + $+\\int\\limits _{1}^{2}|(x-1)-x|dx$\n\n= $\\int\\limits _{0}^{1}|1-x-x|dx+\\int\\limits _{1}^{2}dx$\n\n= $\\int\\limits _{0}^{1}|1-2x|dx+\\int\\limits _{1}^{2}dx$\n\n= $\\int\\limits _{0}^{\\frac{1}{2}}(1-2x)dx+\\int\\limits _{\\frac{1}{2}}^{1}(2x-1)dx+\\int\\limits _{1}^{2}dx$\n\n= $\\left [x-x^{2}\\right ]_{0}^{\\frac{1}{2}}+\\left [x-x^{2}\\right ]_{\\frac{1}{2}}^{1}+(2-1)$\n\n= $\\left (\\frac{1}{2}-\\frac{1}{4}\\right )+\\left [(1-1)-\\left (\\frac{1}{4}-\\frac{1}{2}\\right )\\right ]+1$\n\n= $\\frac{3}{2}$ = 1.5",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-wxnynWl5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\vec{a}$, $\\vec{b}$ and $\\vec{c}$ be three unit vectors such that\n\n$\\left |\\vec{a}-\\vec{b}\\right |^{2}$ + $\\left |\\vec{a}-\\vec{c}\\right |^{2}$ = 8.\n\nThen $\\left |\\vec{a}+2\\vec{b}\\right |^{2}$ + $\\left |\\vec{a}+2\\vec{c}\\right |^{2}$ is equal to $______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $\\left |\\vec{a}\\right |=\\left |\\vec{b}\\right |=\\left |\\vec{c}\\right |=1$\n\n$\\left |\\vec{a}-\\vec{b}\\right |^{2}$ + $\\left |\\vec{a}-\\vec{c}\\right |^{2}$ = 8\n\n$\\Rightarrow$ $\\left |\\vec{a}\\right |^{2}+\\left |\\vec{b}\\right |^{2}-2\\vec{a}.\\vec{b}+\\left |\\vec{a}\\right |^{2}+\\left |\\vec{c}\\right |^{2}-2\\vec{a}.\\vec{c}$ = 8\n\n$\\Rightarrow$ $\\vec{a}.\\vec{b}+\\vec{a}.\\vec{c}$ = -2\n\nNow, $\\left |\\vec{a}+2\\vec{b}\\right |^{2}$ + $\\left |\\vec{a}+2\\vec{c}\\right |^{2}$\n\n= $\\left |\\vec{a}\\right |^{2}+4\\left |\\vec{b}\\right |^{2}+4\\vec{a}.\\vec{b}+\\left |\\vec{a}\\right |^{2}+4\\left |\\vec{c}\\right |^{2}+4\\vec{a}.\\vec{c}$\n\n= 10 + 4$\\left (\\vec{a}.\\vec{b}+\\vec{a}.\\vec{c}\\right )$\n\n= 10 + 4(-2)\n\n= 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-N2Vlnkwa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\lim _{x\\to 1}\\frac{x+x^{2}+x^{3}+...+x^{n}-n}{x-1}$ = 820,\n\n(n $\\in$ N) then\nthe value of n is equal to $_______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 40.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 1}\\frac{x+x^{2}+x^{3}+...+x^{n}-n}{x-1}$ = 820\n\nAs it is $\\left (\\frac{0}{0}\\right )$ form, Apply L'Hospital's Rule.\n\n$\\lim _{x\\to 1}\\left (\\frac{1+2x+3x^{2}+...+nx^{n-1}}{1}\\right )$ = 820\n\n$\\Rightarrow$ 1 + 2 + 3 + .....+ n = 820\n\n$\\Rightarrow$ $\\frac{n(n+1)}{2}$ = 820\n\n$\\Rightarrow$ $n^{2} + n – 1640 = 0$\n\n$\\Rightarrow$ (n – 40)(n + 41) = 0\n\nSince n $\\in$ N, so n = 40.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-k3m0N9G0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the letters of the word 'MOTHER' be permuted\nand all the words so formed (with or without\nmeaning) be listed as in a dictionary, then the\nposition of the word 'MOTHER' is $______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 309.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-09-02 09:00",
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 2nd September Morning Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The complete solution is shown in the original exam figure.\n\n[IMG]\n\n\n[IMG]\n\n\n[IMG]\n\n\n[IMG]",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 2nd September Morning Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-2nd-september-morning-slot/k3m0N9G0xSwL4wln7Cjgy2xukewtoyf9-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 2nd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/public/pyq/jee-main-2020-online-2nd-september-morning-slot/k3m0N9G0xSwL4wln7Cjgy2xukewtoyf9-1.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 2nd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/public/pyq/jee-main-2020-online-2nd-september-morning-slot/k3m0N9G0xSwL4wln7Cjgy2xukewtoyf9-2.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 2nd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/public/pyq/jee-main-2020-online-2nd-september-morning-slot/k3m0N9G0xSwL4wln7Cjgy2xukewtoyf9-3.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 2nd September Morning Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

@@ -1,0 +1,806 @@
+[
+ {
+  "publicId": "PYQ-2020-605rQcjA",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let [t] denote the greatest integer $\\leq$ t\nand $\\lim _{x\\to 0}x\\left [\\frac{4}{x}\\right ]=A$. \nThen the function,\nf(x) = [$x^{2}$]sin($π$x) is discontinuous, when x is\nequal to :",
+  "options": [
+   "$\\sqrt{A+1}$",
+   "$\\sqrt{A+5}$",
+   "$\\sqrt{A+21}$",
+   "$\\sqrt{A}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A = $\\lim _{x\\to 0}x\\left [\\frac{4}{x}\\right ]$ \n\n= $\\lim _{x\\to 0}x\\left (\\frac{4}{x}-\\left \\{\\frac{4}{x}\\right \\}\\right )$\n\n= $\\lim _{x\\to 0}\\left (4-\\left \\{\\frac{4}{x}\\right \\}\\right )$\n\n= 4\n\nNow, when x = $\\sqrt{A+1}$ = $\\sqrt{5}$, f(x) = [$x^{2}$]sin($π$x) is discontinuous at this non integer point.\n\nBut at x = 2, 3 and 5, f(x) is continuous.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-smoZSqPn",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The following system of linear equations\n\n7x + 6y – 2z = 0\n\n3x + 4y + 2z = 0\n\nx – 2y – 6z = 0, has",
+  "options": [
+   "no solution",
+   "infinitely many solutions, (x, y, z) satisfying\ny = 2z",
+   "infinitely many solutions, (x, y, z) satisfying\nx = 2z",
+   "only the trivial solution"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given\n\n7x + 6y – 2z = 0 .......(1)\n\n3x + 4y + 2z = 0 ......(2)\n\nx – 2y – 6z = 0 .......(3)\n\n$\\Delta$ = $\\left |\\begin{array}{lll} 7 & 6 & -2 \\\\ 3 & 4 & 2 \\\\ 1 & -2 & -6 \\end{array}\\right |$\n\n=  7(–24 + 4) – 6(–18 – 2) – 2(–6 – 4) = 0\n\n$\\therefore$ $\\Delta$ = 0\n\nThe system of equation has infinite non-trival solution.\n\nAlso adding equation (1) and 3$\\times$(3), we get\n\n10x = 20z\n\n$\\Rightarrow$ x = 2z",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-JDlJzbuL",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $x=2\\sin θ-\\sin 2θ$ and $y=2\\cos θ-\\cos 2θ$,\n\n$θ\\in [0,2π]$, then $\\frac{d^{2}y}{dx^{2}}$ at $θ$ = $π$ is :",
+  "options": [
+   "$\\frac{3}{8}$",
+   "$\\frac{3}{2}$",
+   "$\\frac{3}{4}$",
+   "-$\\frac{3}{4}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x=2\\sin θ-\\sin 2θ$\n\n$\\Rightarrow$ $\\frac{dx}{dθ}$ = $2\\cos θ-2\\cos 2θ$\n\n$y=2\\cos θ-\\cos 2θ$\n\n$\\Rightarrow$ $\\frac{dy}{dθ}$ = –2sin$θ$ + 2sin2$θ$\n\n$\\frac{dy}{dx}=\\frac{\\frac{dy}{dθ}}{\\frac{dx}{dθ}}$ = $\\frac{\\sin 2θ-\\sin θ}{\\cos θ-\\cos 2θ}$\n\nThis expression is simplified by recognizing that $\\sin 2θ=2\\sin θ\\cos θ$ and $\\cos 2θ=2\\cos ^{2}θ-1$, leading to the expression:\n\n$\\frac{dy}{dx}=\\frac{2\\sin \\frac{θ}{2}\\cdot \\cos \\frac{3θ}{2}}{2\\sin \\frac{θ}{2}\\cdot \\sin \\frac{3θ}{2}}=\\cot \\frac{3θ}{2}$\n\nThis is the rate of change of y with respect to x, as a function of θ.\n\nNext, we differentiate this function with respect to θ to find $\\frac{d^{2}y}{dx^{2}}$, yielding :\n\n$\\frac{d^{2}y}{dx^{2}}=\\frac{d}{dθ}\\left (\\frac{dy}{dx}\\right )\\frac{dθ}{dx}=-\\frac{3}{2}\\mathrm{cosec}^{2}\\frac{3θ}{2}\\cdot \\frac{dθ}{dx}$\n\nHere, $\\frac{dθ}{dx}$ is the reciprocal of $\\frac{dx}{dθ}$, so the equation becomes :\n\n$\\frac{d^{2}y}{dx^{2}}=\\frac{-\\frac{3}{2}\\mathrm{cosec}^{2}\\frac{3θ}{2}}{2(\\cos θ-\\cos 2θ)}$\n\nFinally, we evaluate this expression at $θ=π$, yielding :\n\n$\\frac{d^{2}y}{dx^{2}}(π)=\\frac{-3}{4(-1-1)}=\\frac{3}{8}$\n\nTherefore, the correct answer is (A) $\\frac{3}{8}$.\n\nAlternate Method :\n\nFirst, let's find the derivatives of x and y with respect to θ :\n\n1) $\\frac{dx}{dθ}=2\\cos θ-2\\cos 2θ$\n\n2) $\\frac{dy}{dθ}=-2\\sin θ+2\\sin 2θ$\n\nWe know that $\\frac{dy}{dx}=\\frac{\\frac{dy}{dθ}}{\\frac{dx}{dθ}}$\n\nSo, we substitute 1) and 2) into this equation :\n\nWe have \n\n$\\frac{dy}{dx}=\\frac{-2\\sin θ+2\\sin 2θ}{2\\cos θ-2\\cos 2θ}=\\frac{\\sin 2θ-\\sin θ}{\\cos θ-\\cos 2θ}$\n\nFor simplification, let's denote the numerator as $N=\\sin 2θ-\\sin θ$ and the denominator as $D=\\cos θ-\\cos 2θ$.\n\nWe have to compute $\\frac{d}{dθ}(\\frac{dy}{dx})$ which is $\\frac{d}{dθ}(\\frac{N}{D})$.\n\nWe can use the quotient rule for differentiation, which states that if we have a function of the form $\\frac{u}{v}$, then its derivative is given by $\\frac{vu^{'}-uv^{'}}{v^{2}}$. \n\nSo here, $N^{'}=2\\cos 2θ-\\cos θ$ and $D^{'}=-\\sin θ+2\\sin 2θ$.\n\nApplying the quotient rule :\n\n$\\frac{d}{dθ}(\\frac{dy}{dx})=\\frac{DN^{'}-ND^{'}}{D^{2}}$ \n\nSubstituting the expressions for $N^{'}$, $D^{'}$, $N$, and $D$ we get :\n\n$\\frac{d}{dθ}(\\frac{dy}{dx})=\\frac{(\\cos θ-\\cos 2θ)(2\\cos 2θ-\\cos θ)-(\\sin 2θ-\\sin θ)(-\\sin θ+2\\sin 2θ)}{(\\cos θ-\\cos 2θ)^{2}}$\n\nNow $\\frac{d^{2}y}{dx^{2}}=\\frac{d}{dx}\\left (\\frac{dy}{dx}\\right )=\\frac{d}{dθ}\\left (\\frac{dy}{dx}\\right )\\times \\frac{dθ}{dx}$\n\n=  $\\frac{(\\cos θ-\\cos 2θ)(2\\cos 2θ-\\cos θ)-(\\sin 2θ-\\sin θ)(-\\sin θ+2\\sin 2θ)}{(\\cos θ-\\cos 2θ)^{2}}\\times \\frac{1}{(2\\cos θ-2\\cos 2θ)}$\n\n$\\begin{array}{ll} \\therefore \\dfrac{d^{2}y}{dx^{2}}\\left |_{θ=π} & =\\dfrac{(-1-1)(2+1)-(0-0)(-0+0)}{2(-1-1)^{3}} \\\\  \\\\ =\\dfrac{-2\\times 3}{-2\\times 8}=\\dfrac{3}{8} \\end{array} \\right.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-zmYqIAqG",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a, b $\\in$ R, a $\\neq$ 0 be such that the equation,\n$ax^{2} – 2bx + 5 = 0$ has a repeated root $α$, which\nis also a root of the equation, $x^{2} – 2bx – 10 = 0$.\nIf $β$ is the other root of this equation, then\n$α^{2}$ + $β^{2}$ is equal to :",
+  "options": [
+   "28",
+   "24",
+   "26",
+   "25"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Roots of equation $ax^{2}$\n– 2bx + 5 = 0 are $α$, $α$.\n\n$\\therefore$ $α$ + $α$ = $\\frac{2b}{a}$\n\n$\\Rightarrow$ 2$α$ = $\\frac{2b}{a}$\n\n$\\Rightarrow$ $α$ = $\\frac{b}{a}$ ....(1)\n\nand $α^{2}$ = $\\frac{5}{a}$ ....(2)\n\nFrom (1) and (2), we get\n\n$\\frac{b^{2}}{a^{2}}=\\frac{5}{a}$\n\n$\\Rightarrow$ $b^{2} = 5a$\n\n$α$, $β$ are the roots  of equation $x^{2}$\n– 2bx – 10 = 0\n\n$\\therefore$ $α$ + $β$ = 2b\n\nand $αβ$ = -10\n\nAs $α$ is a root of the equation $x^{2}$\n– 2bx – 10 = 0.\n\n$\\therefore$ $α^{2}$ - 2b$α$ - 10 = 0\n\n$\\Rightarrow$ $\\frac{b^{2}}{a^{2}}-\\frac{2b^{2}}{a}-10=0$\n\n$\\Rightarrow$ $\\frac{5a}{a^{2}}-\\frac{10a}{a}-10=0$\n\n$\\Rightarrow$ $\\frac{5}{a}-10-10=0$\n\n$\\Rightarrow$ $a$ = $\\frac{1}{4}$\n\n$\\Rightarrow$ $α^{2}$ = 20\n\n$αβ$ = -10\n\n$\\Rightarrowβ^{2}$ = 5\n\n$\\therefore$ $α^{2}+β^{2}$ = 20 + 5 = 25",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-P3CagPVm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given : $f(x)=\\left \\{\\begin{array}{ll} x\\quad \\quad , & 0\\leq x<\\frac{1}{2} \\\\ \\frac{1}{2}\\quad , & x=\\frac{1}{2} \\\\ 1-x, & \\frac{1}{2}<x\\leq 1 \\end{array} \\right.$\n\nand $g(x)=\\left (x-\\frac{1}{2}\\right )^{2},x\\in R$ \n\nThen the area\n(in sq. units) of the region bounded by the\ncurves, y = ƒ(x) and y = g(x) between the lines,\n2x = 1 and 2x = $\\sqrt{3}$, is :",
+  "options": [
+   "$\\frac{1}{2}+\\frac{\\sqrt{3}}{4}$",
+   "$\\frac{1}{2}-\\frac{\\sqrt{3}}{4}$",
+   "$\\frac{1}{3}+\\frac{\\sqrt{3}}{4}$",
+   "$\\frac{\\sqrt{3}}{4}-\\frac{1}{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nRequired area = Area of trepezium ABCD –\nArea of parabola between x = $\\frac{1}{2}$ and x = $\\frac{\\sqrt{3}}{2}$\n\n= Area of trepezium ABCD - $\\int\\limits _{\\frac{1}{2}}^{\\frac{\\sqrt{3}}{2}}\\left (x-\\frac{1}{2}\\right )^{2}dx$\n\n= $\\frac{1}{2}\\left (\\frac{\\sqrt{3}}{2}-\\frac{1}{2}\\right )\\left (\\frac{1}{2}+1-\\frac{\\sqrt{3}}{2}\\right )$ - $\\frac{1}{3}\\left [\\left (x-\\frac{1}{2}\\right )^{3}\\right ]_{\\frac{1}{2}}^{\\frac{\\sqrt{3}}{2}}$\n\n= $\\frac{1}{2}\\left (\\frac{\\sqrt{3}-1}{2}\\right )\\left (\\frac{3-\\sqrt{3}}{2}\\right )$ $-\\frac{1}{3}\\left [\\left (\\frac{\\sqrt{3}-1}{2}\\right )^{3}-0\\right ]$\n\n= $\\frac{\\sqrt{3}}{4}-\\frac{1}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-9th-january-evening-slot/P3CagPVm1jMSVgFFUg7k9k2k5kgx0xy-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 9th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-F1meBFGP",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A random variable X has the following\nprobability distribution :\n\n  \n    X:\n    1\n    2\n    3\n    4\n    5\n  \n  \n    P(X):\n    $K^{2}$\n    2K\n    K\n    2K\n    $5K^{2}$\n  \n\nThen P(X > 2) is equal to :",
+  "options": [
+   "$\\frac{1}{6}$",
+   "$\\frac{7}{12}$",
+   "$\\frac{1}{36}$",
+   "$\\frac{23}{36}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sum\\limits _{i=1}^{5}P(X)$ = 1\n\n$\\Rightarrow$ $K^{2}$\n $+ 2K + K + 2K + 5K^{2}$\n = 1\n\n$\\Rightarrow$ $6K^{2}$\n + 5K – 1 = 0\n\n$\\Rightarrow$ (6K - 1)(k + 1) = 0\n\n$\\Rightarrow$ K = $\\frac{1}{6}$ and K = -1(rejected)\n\n$\\therefore$ P(X $>$ 2)\n\n$=  K + 2K + 5K^{2}$\n\n= $\\frac{1}{6}+\\frac{2}{6}+\\frac{5}{36}$\n\n= $\\frac{23}{36}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-2IgmuZ8G",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $x=\\sum\\limits _{n=0}^{\\infty }(-1)^{n}\\tan ^{2n}θ$ and  $y=\\sum\\limits _{n=0}^{\\infty }\\cos ^{2n}θ$\n\n for\n0 < $θ$ < $\\frac{π}{4}$, then :",
+  "options": [
+   "x(1 + y) = 1",
+   "y(1 – x) = 1",
+   "y(1 + x) = 1",
+   "x(1 – y) = 1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x=\\sum\\limits _{n=0}^{\\infty }(-1)^{n}\\tan ^{2n}θ$\n\n$= 1 – \\tan ^{2}θ$ $+ \\tan ^{4}θ$ + ...\n\n= $\\frac{1}{1+\\tan ^{2}θ}$ $= \\cos ^{2}$ $θ$ ....(1)\n\n$y=\\sum\\limits _{n=0}^{\\infty }\\cos ^{2n}θ$\n\n$=  1 + \\cos ^{2}$\n$θ$ $+ \\cos ^{4}$\n$θ$ $+ \\cos ^{6}$\n$θ$ + ....\n\n= $\\frac{1}{1-\\cos ^{2}θ}$ = $\\frac{1}{\\sin ^{2}θ}$\n\n$\\Rightarrow$ $\\sin ^{2}$ $θ$ = $\\frac{1}{y}$ ...(2)\n\nAdding (1) and (2), we get, \n\nx + $\\frac{1}{y}$ $= \\sin ^{2}$ $θ$ $+ \\cos ^{2}$ $θ$\n\n$\\Rightarrow$ x + $\\frac{1}{y}$ = 1\n\n$\\Rightarrow$ y(1 – x) = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-ccqUxwJr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a function ƒ : [0, 5] $\\to$ R be continuous,\nƒ(1) = 3 and F be defined as :\n\n$F(x)=\\int\\limits _{1}^{x}t^{2}g(t)dt$ , where $g(t)=\\int\\limits _{1}^{t}f(u)du$ \n\nThen for the function F, the point x = 1 is :",
+  "options": [
+   "a point of inflection.",
+   "a point of local maxima.",
+   "a point of local minima.",
+   "not a critical point."
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$F(x)=\\int\\limits _{1}^{x}t^{2}g(t)dt$\n\n$\\Rightarrow$ $F'(x) = x^{2}g(x) = x^{2}\\int\\limits _{1}^{t}f(u)du$\n\n$\\therefore$ F'(1) = (1)(0) = 0\n\nNow, $F''(x) = 2xg(x) + x^{2}g'(x)$\n\nF''(1) = 2g(1) + g'(1) = 0 + g'(1) = 3\n\n[ As g'(t) = f(t); g'(1) = f'(1) = 3 ]\n\nSo, at x = 1, F'(1) = 0 and F\"(1) = 3 > 0\n\n$\\therefore$ For the function f(x), x = 1 is a point of local minima.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-izhPmlai",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If 10 different balls are to be placed in 4 distinct\nboxes at random, then the probability that two\nof these boxes contain exactly 2 and 3 balls is :",
+  "options": [
+   "$\\frac{965}{2^{11}}$",
+   "$\\frac{965}{2^{10}}$",
+   "$\\frac{945}{2^{11}}$",
+   "$\\frac{945}{2^{10}}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Total ways of distribution $= 4^{10} = 2^{20}$\n\nNumber of ways selecting two boxes out of four $= ^{4}C_{2}$\n\nThen number of ways selecting 5 balls out of $10 = ^{10}C_{5}$\n\nThen no of ways of distributing 5 balls into two groups of 2 balls and 3 balls $= ^{5}C_{3}.2$!\n\nThen number of ways to distributing remaining balls into two boxes $= 2^{5}$\n\nNumber of ways placing exactly 2 and 3 balls in two of these boxes \n\n$= ^{4}C_{2}$ $\\times$ $^{10}C_{5}$ $\\times$ $^{5}C_{3}.2$! $\\times$ $2^{5}$\n\n= $\\frac{6.252.10.2.2^{5}}{2^{20}}$\n\n= $\\frac{945}{2^{10}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-0lH3KaKf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If A = {x $\\in$ R : |x| < 2} and B = {x $\\in$ R : |x – 2| $\\geq$ 3};\nthen :",
+  "options": [
+   "A – B = [–1, 2)",
+   "A $\\cup$ B = R – (2, 5)",
+   "A $\\cap$ B = (–2, –1)",
+   "B – A = R – (–2, 5)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A : x $\\in$ (–2, 2); \n\nB : x $\\in$ (–$\\infty$, –1] $\\cup$ [5, $\\infty$)\n\n$\\Rightarrow$ B – A = R – (–2, 5)\n\n\n[IMG]",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-9th-january-evening-slot/0lH3KaKfqfK9WMpOSp7k9k2k5kheoi8-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 9th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-7QEBB1pQ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{dy}{dx}=\\frac{xy}{x^{2}+y^{2}}$; y(1) = 1; then a value of x\nsatisfying y(x) = e is :",
+  "options": [
+   "$\\sqrt{2}e$",
+   "$\\frac{1}{2}\\sqrt{3}e$",
+   "$\\frac{e}{\\sqrt{2}}$",
+   "$\\sqrt{3}e$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}=\\frac{xy}{x^{2}+y^{2}}$\n\nLet y = vx\n\n$\\therefore$ $\\frac{dy}{dx}$ = v + x.$\\frac{dv}{dx}$\n\n$\\Rightarrow$  v + x.$\\frac{dv}{dx}$ = $\\frac{x(vx)}{x^{2}+v^{2}x^{2}}$ = $\\frac{v}{1+v^{2}}$\n\n$\\Rightarrow$ x.$\\frac{dv}{dx}$ = $\\frac{v}{1+v^{2}}$ - v = $\\frac{v-v-v^{3}}{1+v^{2}}$ = $-\\frac{v^{3}}{1+v^{2}}$\n\n$\\Rightarrow$ $\\int \\frac{1+v^{2}}{v^{3}}dv=-\\int \\frac{dx}{x}$\n\n$\\Rightarrow$ $-\\frac{1}{2v^{2}}+\\log v$ = $-\\log x+C$\n\n$\\Rightarrow$ $-\\frac{1}{2}\\frac{x^{2}}{y^{2}}+\\log \\left (\\frac{y}{x}\\right )$ = $-\\log x+C$ ......(1)\n\nputting x = 1, y = 1 we get\n\n$\\Rightarrow$ C = $-\\frac{1}{2}$\n\nFrom eq. (1)\n\n$-\\frac{1}{2}\\frac{x^{2}}{y^{2}}+\\log \\left (\\frac{y}{x}\\right )$ = $-\\log x-\\frac{1}{2}$\n\nPut y = e\n\n$-\\frac{1}{2}\\frac{x^{2}}{e^{2}}+\\log \\left (\\frac{e}{x}\\right )$ = $-\\log x-\\frac{1}{2}$\n\n$\\Rightarrow$  $x^{2} = 3e^{2}$\n\n$\\Rightarrow$  x = $\\pm$3$\\sqrt{e}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-7CoM1UAK",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\int \\frac{dθ}{\\cos ^{2}θ(\\tan 2θ+\\sec 2θ)}=λ\\tan θ+2\\log _{e}|f(θ)|+C$\n\nwhere C is a constant of integration, then the\nordered pair ($λ$, ƒ($θ$)) is equal to :",
+  "options": [
+   "(–1, 1 – tan$θ$)",
+   "(1, 1 + tan$θ$)",
+   "(–1, 1 + tan$θ$)",
+   "(1, 1 – tan$θ$)"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "I = $\\int \\frac{dθ}{\\cos ^{2}θ(\\tan 2θ+\\sec 2θ)}$\n\n= $\\int \\frac{\\sec ^{2}θdθ}{\\frac{2\\tan θ}{1-\\tan 2θ}+\\frac{1+\\tan 2θ}{1-\\tan 2θ}}$\n\n= $\\int \\frac{\\left (1-\\tan ^{2}θ\\right )\\sec ^{2}θdθ}{(1+\\tan θ)^{2}}$\n\ntan$θ$ = t $\\Rightarrow$ $\\sec ^{2}$ $θ$ d$θ$ = dt\n\n= $\\int \\frac{\\left (1-t^{2}\\right )dt}{(1+t)^{2}}$\n\n= $\\int \\frac{(1-t)(1+t)dt}{(1+t)^{2}}$\n\n= $\\int \\frac{(1-t)}{(1+t)}dt$\n\n= $\\int \\left (\\frac{1}{(1+t)}-\\frac{t}{(1+t)}\\right )dt$\n\n= $\\log _{e}|1+t|$ - $\\int \\left (\\frac{1+t}{(1+t)}-\\frac{1}{(1+t)}\\right )dt$\n\n= $\\log _{e}|1+t|$ - t + $\\log _{e}|1+t|$ + C\n\n= 2$\\log _{e}|1+t|$ - t + C\n\n= 2$\\log _{e}|1+\\tan θ|$ - tan $θ$ + C\n\n$\\therefore$ $λ$ = -1 and ƒ($θ$) = 1 + tan$θ$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-lOLmjWCd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If z be a complex number satisfying\n|Re(z)| + |Im(z)| = 4, then |z| cannot be :",
+  "options": [
+   "$\\sqrt{10}$",
+   "$\\sqrt{7}$",
+   "$\\sqrt{\\frac{17}{2}}$",
+   "$\\sqrt{8}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let z = x + iy\n\ngiven that |Re(z)| + |Im(z)| = 4\n\n$\\therefore$ |x| + |y| = 4\n\n[IMG]\n\n\nMaximum value of |z| = 4\n\nMinimum value of |z| = perpendicular distance of line AB from (0, 0) = $2\\sqrt{2}$\n\n$\\therefore$ |z| $\\in$ $\\left [2\\sqrt{2},4\\right ]$\n\n$\\therefore$ |z| cannot be $\\sqrt{7}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/public/pyq/jee-main-2020-online-9th-january-evening-slot/lOLmjWCdgMiaiJ2BWW7k9k2k5khn9k5-0.jpg",
+    "altText": "Original exam figure (JEE Main 2020 (Online) 9th January Evening Slot)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2020-ClPz4ye6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In the expansion of $\\left (\\frac{x}{\\cos θ}+\\frac{1}{x\\sin θ}\\right )^{16}$, if $\\ell _{1}$ is\nthe least value of the term independent of x\nwhen $\\frac{π}{8}\\leq θ\\leq \\frac{π}{4}$ and $\\ell _{2}$ is the least value of the\nterm independent of x when $\\frac{π}{16}\\leq θ\\leq \\frac{π}{8}$, then\nthe ratio $\\ell _{2}$ : $\\ell _{1}$ is equal to :",
+  "options": [
+   "8 : 1",
+   "16 : 1",
+   "1 : 8",
+   "1 : 16"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T_{r + 1} = ^{16}C_{r}\\left (\\frac{x}{\\cos θ}\\right )^{16-r}\\left (\\frac{1}{x\\sin θ}\\right )^{r}$\n\n$= ^{16}C_{r}(x)^{16-2r}\\times \\frac{1}{(\\cos θ)^{16-r}(\\sin θ)^{r}}$\n\nterm is independent of x when\n\n$\\therefore$ 16 – 2r = 0\n\n$\\Rightarrow$ r = 8\n\n$T_{9} = ^{16}C_{8}$ $\\times$ $\\frac{1}{\\cos ^{8}θ\\sin ^{8}θ}$\n\n$= ^{16}C_{8}$ $\\times$ $\\frac{2^{8}}{(\\sin 2θ)^{8}}$\n\nIf $θ\\in \\left [\\frac{π}{8},\\frac{π}{4}\\right ]$ then $2θ\\in \\left [\\frac{π}{4},\\frac{π}{2}\\right ]$\n\nIn the range $\\left [\\frac{π}{4},\\frac{π}{2}\\right ]$, sin 2$θ$ is increasing. \n\nAnd value of $T_{9}$ is least when sin 2$θ$ is maximum.\n\nAnd sin 2$θ$ is maximum in the range $\\left [\\frac{π}{4},\\frac{π}{2}\\right ]$ \nwhen 2$θ$ = $\\frac{π}{2}$\n\n$\\therefore$ $l_{1}$ $= ^{16}C_{8}$ $\\times$ $2^{8}$\n\nAgainIf $θ\\in \\left [\\frac{π}{16},\\frac{π}{8}\\right ]$ then $2θ\\in \\left [\\frac{π}{8},\\frac{π}{4}\\right ]$\n\nIn the range $\\left [\\frac{π}{8},\\frac{π}{4}\\right ]$, sin 2$θ$ is increasing. \n\nAnd value of $T_{9}$ is least when sin 2$θ$ is maximum.\n\nAnd sin 2$θ$ is maximum in the range $\\left [\\frac{π}{8},\\frac{π}{4}\\right ]$ \nwhen 2$θ$ = $\\frac{π}{4}$\n\n$\\therefore$ $l_{2}$ $= ^{16}C_{8}$ $\\times$ $\\frac{2^{8}}{\\left (\\frac{1}{\\sqrt{2}}\\right )^{8}}$\n\n $= ^{16}C_{8}$ $\\times$ $2^{8}2^{4}$\n\n$\\therefore$ $\\frac{l_{2}}{l_{1}}$ = $\\frac{2^{4}}{1}$ = $\\frac{16}{1}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-94MqkDoV",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a_{n}$ be the $n^{th}$ term of a G.P. of positive terms.\n\n$\\sum\\limits _{n=1}^{100}a_{2n+1}=200$ and $\\sum\\limits _{n=1}^{100}a_{2n}=100$,\n \n\nthen $\\sum\\limits _{n=1}^{200}a_{n}$ is equal to :",
+  "options": [
+   "150",
+   "175",
+   "225",
+   "300"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sum\\limits _{n=1}^{100}a_{2n+1}=200$\n\n$\\Rightarrow$ $a_{3} + a_{5} + a_{7} + .... + a_{201} = 200$\n\n$\\Rightarrow$ $ar^{2}\\frac{\\left (r^{200}-1\\right )}{(r^{2}-1)}$ = 200 ....(1)\n\n$\\sum\\limits _{n=1}^{100}a_{2n}=100$\n\n$\\Rightarrow$ $a_{2} + a_{4} + a_{6} + ... + a_{200} = 100$\n\n$\\Rightarrow$ $ar\\frac{\\left (r^{200}-1\\right )}{(r^{2}-1)}$ = 100  ....(2)\n\ndividing (1) by (2)\n\nwe get, r = 2\n\nadding both  (1) and (2), we get\n\n$a_{2} + a_{3} + a_{4} + a_{5} + ..... + a_{201} = 300$\n\n$\\Rightarrow$ $r(a_{1} + a_{2} + ..... + a_{200}) = 300$\n\n$\\Rightarrow$ $a_{1} + a_{2} + ..... + a_{200} =$ $\\frac{300}{r}$\n\n$\\Rightarrow$ $\\sum\\limits _{n=1}^{200}a_{n}$ = $\\frac{300}{2}$ = 150",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-DdF7R8tT",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let ƒ and g be differentiable functions on R\nsuch that fog is the identity function. If for some\na, b $\\in$ R, g'(a) = 5 and g(a) = b, then ƒ'(b) is\nequal to :",
+  "options": [
+   "1",
+   "5",
+   "$\\frac{2}{5}$",
+   "$\\frac{1}{5}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given the function composition f(g(x)) is the identity function, it means f(g(x)) = x for all x.\n\n$\\Rightarrow$ ƒ'(g(x)) g'(x) = 1\n\nput x = a\n\n$\\Rightarrow$ ƒ'(b) g'(a) = 1\n\n$\\Rightarrow$ ƒ'(b) = $\\frac{1}{5}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-WbC8tVOv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of terms common to the two A.P.'s\n3, 7, 11, ....., 407 and 2, 9, 16, ....., 709 is $______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 14.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "First A.P. is 3, 7, 11, 15, 19, 23, ..... 407\n\n$d_{1} = 4$\n\nSecond A.P. is 2, 9, 16, 23, ..... 709\n\n$d_{2} = 7$\n\nFirst common term = 23\n\nCommon difference of new A.P using the common terms of the two given A.P's is d = L.C.M. (4, 7) = 28\n\nLast term $\\leq$ 407\n\n$\\Rightarrow$  23 + (n – 1) (28) $\\leq$ 407\n\n$\\Rightarrow$ n $\\leq$ 14.7\n\n$\\therefore$ n = 14",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-uxkbzvwh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\vec{a}$, $\\vec{b}$ and $\\vec{c}$ be three vectors such that $\\left |\\vec{a}\\right |=\\sqrt{3}$,\n$\\left |\\vec{b}\\right |=5,\\vec{b}.\\vec{c}=10$ and the angle between  $\\vec{b}$ and $\\vec{c}$\nis $\\frac{π}{3}$. If $\\vec{a}$ is perpendicular to the vector $\\vec{b}\\times \\vec{c}$ , then $\\left |\\vec{a}\\times \\left (\\vec{b}\\times \\vec{c}\\right )\\right |$ is equal to $_____$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 30.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $\\left |\\vec{a}\\right |=\\sqrt{3}$,\n$\\left |\\vec{b}\\right |=5$\n\nGiven $\\vec{b}.\\vec{c}=10$\n\nAnd the angle between  $\\vec{b}$ and $\\vec{c}$\nis $\\frac{π}{3}$\n\n$\\therefore$ $bc\\cos \\frac{π}{3}$ = 10\n\n$\\Rightarrow$ c = 4\n\n$\\vec{a}$ is perpendicular to the vector $\\vec{b}\\times \\vec{c}$\n\n$\\therefore$ $\\vec{a}.\\left (\\vec{b}\\times \\vec{c}\\right )$ = 0 and  angle between them is $\\frac{π}{2}$\n\nNow $\\left |\\vec{a}\\times \\left (\\vec{b}\\times \\vec{c}\\right )\\right |$\n\n= $\\left |\\vec{a}\\right |\\left |\\vec{b}\\times \\vec{c}\\right |\\sin \\frac{π}{2}$\n\n= $\\left |\\vec{a}\\right |$.$\\left |\\vec{b}\\right |.\\left |\\vec{c}\\right |\\sin \\frac{π}{3}$.1\n\n= $\\sqrt{3}\\times 5\\times 4\\times \\frac{\\sqrt{3}}{2}$\n\n= 30",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2020-gIWxzoGl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the curves, $x^{2} – 6x + y^{2} + 8 = 0$ and\n\n$x^{2} – 8y + y^{2} + 16 – k = 0, (k > 0)$ touch each other\nat a point, then the largest value of k is $______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 36.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2020,
+  "sourceDate": "2020-01-09 14:30",
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2020 (Online) 9th January Evening Slot via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$C_{1}$ : $x^{2} + y^{2} – 6x +  + 8 = 0$\n\n$C_{1}(3, 0)$ and $r_{1} = 1$\n\n$C_{2}$ : $x^{2} + y^{2} – 8y + 16 – k = 0$\n\n$C_{2}(0, 4)$ and $r_{2} =$ $\\sqrt{k}$\n\nTwo circles touch each other\n\n$\\therefore$  $C_{1}C_{2} = | r_{1}$ $\\pm$ $r_{2} |$\n\n$\\Rightarrow$ 5 = | 1 $\\pm$ $\\sqrt{k}$ |\n\n$\\therefore$ 1 + $\\sqrt{k}$ = 5 or $\\sqrt{k}$ - 1 = 5\n\n$\\Rightarrow$ k = 16 or k = 36\n\nSo largest value of k = 36.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2020 (Online) 9th January Evening Slot"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
