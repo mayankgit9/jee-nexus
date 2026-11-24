@@ -5,6 +5,47 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-25 — M20 · Production diagnosis + full go-live runbook (execution blocked on credentials)
+
+### Diagnosis — why the user's website never updates
+- The live app **https://jee-nexus-app.jee-nexus.workers.dev** has served an
+  empty shell since the M12 deploy: every DB-backed endpoint (`/api/pyq`,
+  `/api/taxonomy`, `/api/stats`, exam flows) returns **500**, only `/` and
+  `/api/auth/me` respond. Root cause: the Worker was uploaded **without a
+  `DATABASE_URL` secret** (documented in M12 as a known blocker — the Supabase
+  `jee_app` password was never available in-session; `.secrets/` was lost to a
+  sandbox reset). The sandbox preview updates because it runs against the
+  rebuilt embedded-Postgres DB (M16), so "preview updates, website doesn't".
+- Supabase itself is UP (REST gateway answers 401, session pooler accepts TCP)
+  — it is purely a missing-secret problem, plus 26 unpushed local commits
+  (M16-M19: embedded-PG runtime, image seeding, 90-paper PYQ archive,
+  verifier/test fixes) and a stale Worker build.
+
+### Go-live runbook (all staged in-repo, one command once credentials exist)
+- `scripts/set_secrets.py` (new): plumbs the Supabase password into BOTH the
+  GitHub Actions `DATABASE_URL` secret (public-key + libsodium sealed box via
+  API, pynacl) and the Cloudflare Worker `DATABASE_URL` secret (CF API PUT) —
+  no interactive wrangler prompt, no management PAT needed.
+- `scripts/make_live.sh` (upgraded): push → set_secrets → deploy app →
+  dispatch `import-pyq` workflow → verify live endpoints, in that order.
+- `scripts/upsert_taxonomy.ts` (new) + `import-pyq.yml` step: idempotent
+  taxonomy sync before import so `chemistry:salt-analysis` (added M17) exists
+  on the live DB — `jee_app` has insert/update grants (0003), no SB_PAT
+  needed. `supabase/migrations/0006_salt_analysis.sql` mirrors it for the
+  SQL-endpoint path.
+- Required inputs (all lost in the sandbox reset): `GH_PAT`
+  (`.secrets/tokens.env`), `CLOUDFLARE_API_TOKEN` (`.secrets/cloudflare.env`,
+  Workers Scripts:Edit), `SUPABASE_DB_PASSWORD`
+  (`.secrets/supabase_db.env`, Supabase dashboard → Project Settings →
+  Database). Then: `bash scripts/make_live.sh`.
+
+### Also in this entry
+- `tests/browser/pyq.spec.ts`: question-detail chapter assertion now matches
+  ANY taxonomy chapter (was hardcoded to 4 chapters; real 2023 data made it
+  flaky). Suite 12/12 green.
+
+---
+
 ## 2026-11-23 — M13 · Question bank batch 3 — authored & verified (import pending DB access)
 
 ### Implemented

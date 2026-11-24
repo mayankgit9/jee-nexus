@@ -41,6 +41,8 @@ jobs:
           total = sum(len(json.load(open(f))) for f in files)
           print(f'PYQ batches: {len(files)} files, {total} real exam questions ready')
           EOF
+      - name: Sync taxonomy (idempotent upsert of subjects/chapters)
+        run: bunx tsx scripts/upsert_taxonomy.ts
       - name: Start dev server against live Supabase (NO seeding)
         run: |
           bun run dev &

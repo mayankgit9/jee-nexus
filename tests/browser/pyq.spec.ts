@@ -1,4 +1,9 @@
 import { test, expect, type Page } from '@playwright/test'
+import { readFileSync } from 'fs'
+
+function escapeRegExp(s: string) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
 
 // JEE NEXUS — PYQ library browser test: year grid → subject → chapter → question detail.
 // The year GRID cards contain "N questions"; home-page year shortcut chips do not —
@@ -42,7 +47,12 @@ test('pyq: navigate year → subject → question detail', async ({ page }) => {
   await questionRow.click()
   await expect(page.getByRole('button', { name: /back to list/i })).toBeVisible({ timeout: 20_000 })
   await expect(page.getByText(/JEE Main 2023/).first()).toBeVisible()
-  await expect(page.getByText(/Gravitation|Kinematics|Current Electricity|Semiconductors/i).first()).toBeVisible()
+  // the chapter chip shows SOME taxonomy chapter name (question set is real
+  // PYQ data, so the chapter varies — match any chapter from taxonomy.json)
+  const chapters = (JSON.parse(readFileSync('data/taxonomy.json', 'utf-8')).subjects as { chapters: { name: string }[] }[])
+    .flatMap((s) => s.chapters.map((c) => c.name))
+  const anyChapter = new RegExp(`^(?:${chapters.map(escapeRegExp).join('|')})$`, 'i')
+  await expect(page.locator('[data-slot="chip"], [class*="chip"], span', { hasText: anyChapter }).first()).toBeVisible({ timeout: 15_000 })
 })
 
 test('pyq: chapter filter from breakdown', async ({ page }) => {

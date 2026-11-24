@@ -25,7 +25,7 @@ CF_TOKEN=""
 GH_PAT="${GH_PAT:-}"
 CF_TOKEN="${CLOUDFLARE_API_TOKEN:-}"
 
-echo "=== 1/2 GitHub: push + trigger live PYQ import ==="
+echo "=== 1/4 GitHub: push all local commits ==="
 if [ -n "$GH_PAT" ]; then
   git remote set-url origin "https://x-access-token:${GH_PAT}@github.com/${REPO}.git"
   if git push -q origin main 2>/dev/null || git push -u origin main 2>&1 | grep -viE 'token|x-access'; then
@@ -34,6 +34,25 @@ if [ -n "$GH_PAT" ]; then
     echo "WARNING: push failed"
   fi
   git remote set-url origin "https://github.com/${REPO}.git"
+else
+  echo "SKIPPED: no GH_PAT in .secrets/tokens.env"
+fi
+
+echo ""
+echo "=== 2/4 Secrets: plumb Supabase password to GitHub Actions + Worker ==="
+python3 scripts/set_secrets.py || true
+
+echo ""
+echo "=== 3/4 Cloudflare: deploy latest app ==="
+if [ -n "$CF_TOKEN" ]; then
+  bash scripts/deploy_app_cloudflare.sh
+else
+  echo "SKIPPED: no CLOUDFLARE_API_TOKEN in .secrets/cloudflare.env"
+fi
+
+echo ""
+echo "=== 4/4 GitHub: dispatch live PYQ import ==="
+if [ -n "$GH_PAT" ]; then
   echo "Dispatching import-pyq workflow (live DB import, confirm=IMPORT)..."
   HTTP=$(curl -s -o /tmp/wf_dispatch.json -w "%{http_code}" -X POST \
     -H "Authorization: Bearer ${GH_PAT}" \
@@ -51,12 +70,12 @@ else
 fi
 
 echo ""
-echo "=== 2/2 Cloudflare: deploy latest app ==="
-if [ -n "$CF_TOKEN" ]; then
-  bash scripts/deploy_app_cloudflare.sh
-else
-  echo "SKIPPED: no CLOUDFLARE_API_TOKEN in .secrets/cloudflare.env"
-fi
+echo "=== verify live site ==="
+sleep 20
+for ep in "/api/pyq" "/api/taxonomy"; do
+  code=$(curl -s -m 30 -o /tmp/live_ep.json -w "%{http_code}" "https://jee-nexus-app.jee-nexus.workers.dev$ep")
+  echo "GET $ep -> $code $(head -c 100 /tmp/live_ep.json)"
+done
 
 echo ""
 echo "=== summary ==="
