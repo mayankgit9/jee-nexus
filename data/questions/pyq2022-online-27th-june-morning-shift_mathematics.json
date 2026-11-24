@@ -1,0 +1,937 @@
+[
+ {
+  "publicId": "PYQ-2022-1l57ntha",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area of the polygon, whose vertices are the non-real roots of the equation $z–=iz^{2}$ is :",
+  "options": [
+   "$\\frac{3\\sqrt{3}}{4}$",
+   "$\\frac{3\\sqrt{3}}{2}$",
+   "$\\frac{3}{2}$",
+   "$\\frac{3}{4}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 20,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$z–=iz^{2}$\n\nLet $z=x+iy$\n\n$x-iy=i(x^{2}-y^{2}+2xiy)$\n\n$x-iy=i(x^{2}-y^{2})-2xy$\n\n$\\therefore$ $x=-2yx$ or $x^{2}-y^{2}=-y$\n\n$x=0$ or $y=-\\frac{1}{2}$\n\nCase - I\n\n$x=0$\n\n$-y^{2}=-y$\n\n$y=0,1$\n\nCase - II\n\n$y=-\\frac{1}{2}$\n\n$\\Rightarrow x^{2}-\\frac{1}{4}=\\frac{1}{2}\\Rightarrow x=\\pm \\frac{\\sqrt{3}}{2}$\n\n$z=\\left \\{0,i,\\frac{\\sqrt{3}}{2}-\\frac{i}{2},\\frac{-\\sqrt{3}}{2}-\\frac{i}{2}\\right \\}$\n\nArea of polygon $=\\frac{1}{2}\\left |\\begin{array}{lll} 0 & 1 & 1 \\\\ \\frac{\\sqrt{3}}{2} & \\frac{-1}{2} & 1 \\\\ \\frac{-\\sqrt{3}}{2} & \\frac{-1}{2} & 1 \\end{array}\\right |$\n\n$=\\frac{1}{2}\\left |-\\sqrt{3}-\\frac{\\sqrt{3}}{2}\\right |=\\frac{3\\sqrt{3}}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57nuni",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the system of linear equations \n$x+2y+z=2$, \n$αx+3y-z=α$, \n$-αx+y+2z=-α$ \nbe inconsistent. Then $α$ is equal to :",
+  "options": [
+   "$\\frac{5}{2}$",
+   "$-\\frac{5}{2}$",
+   "$\\frac{7}{2}$",
+   "$-\\frac{7}{2}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x+2y+z=2$\n\n$αx+3y-z=α$\n\n$-αx+y+2z=-α$\n\n$\\Delta =\\left |\\begin{array}{lll} 1 & 2 & 1 \\\\ α & 3 & -1 \\\\ -α & 1 & 2 \\end{array}\\right |=1(6+1)-2(2α-α)+1(α+3α)$\n\n$=7+2α$\n\n$\\Delta =0\\Rightarrow α=-\\frac{7}{2}$\n\n$\\Delta _{1}=\\left |\\begin{array}{lll} 2 & 2 & 1 \\\\ α & 3 & -1 \\\\ -α & 1 & 2 \\end{array}\\right |=14+2α\\neq 0$ for $α=-\\frac{7}{2}$\n\n$\\therefore$ For no solution $α=-\\frac{7}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57nygj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$x=\\sum\\limits _{n=0}^{\\infty }a^{n},y=\\sum\\limits _{n=0}^{\\infty }b^{n},z=\\sum\\limits _{n=0}^{\\infty }c^{n}$, where a, b, c are in A.P. and |a| < 1, |b| < 1, |c| < 1, abc $\\neq$ 0, then :",
+  "options": [
+   "x, y, z are in A.P.",
+   "x, y, z are in G.P.",
+   "$\\frac{1}{x}$, $\\frac{1}{y}$, $\\frac{1}{z}$ are in A.P.",
+   "$\\frac{1}{x}$ + $\\frac{1}{y}$ + $\\frac{1}{z}$ = 1 $-$ (a + b + c)"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x=\\sum\\limits _{n=0}^{\\infty }a^{n}=\\frac{1}{1-a};y=\\sum\\limits _{n=0}^{\\infty }b^{n}=\\frac{1}{1-b};z=\\sum\\limits _{n=0}^{\\infty }c^{n}=\\frac{1}{1-c}$\n\nNow,\n\na, b, c $\\to$ AP\n\n1 $-$ a, 1 $-$ b, 1 $-$ c $\\to$ AP\n\n$\\frac{1}{1-a},\\qquad \\frac{1}{1-b},\\frac{1}{1-c}\\to HP$\n\nx, y, z $\\to$ HP\n\n$\\therefore$ $\\frac{1}{x},\\frac{1}{y},\\frac{1}{z}\\to AP$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57o3wa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a be an integer such that $\\lim _{x\\to 7}\\frac{18-[1-x]}{[x-3a]}$ exists, where [t] is greatest integer $\\leq$ t. Then a is equal to :",
+  "options": [
+   "$-$6",
+   "$-$2",
+   "2",
+   "6"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 7}\\frac{18-[1-x]}{[x-3a]}$ exist & $a\\in I$.\n\n$=\\lim _{x\\to 7}\\frac{17-[-x]}{[x]-3a}$ exist\n\n$RHL=\\lim _{x\\to 7^{+}}\\frac{17-[-x]}{[x]-3a}=\\frac{25}{7-3a}$ $\\left [a\\neq \\frac{7}{3}\\right ]$\n\n$LHL=\\lim _{x\\to 7^{-}}\\frac{17-[-x]}{[x]-3a}=\\frac{24}{6-3a}$ $[a\\neq 2]$\n\nFor limit to exist\n\n$LHL=RHL$\n\n$\\frac{25}{7-3a}=\\frac{24}{6-3a}$\n\n$\\Rightarrow \\frac{25}{7-3a}=\\frac{8}{2-a}$\n\n$\\therefore$ $a=-6$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57o4z2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of distinct real roots of $x^{4}$ $-$ 4x + 1 = 0 is :",
+  "options": [
+   "4",
+   "2",
+   "1",
+   "0"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=x^{4}-4x+1=0$\n\n$f^{'}(x)=4x^{3}-4$\n\n$=4(x-1)(x^{2}+1+x)$\n\n \n[IMG]\n \n\n$\\Rightarrow$ Two solution",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-27th-june-morning-shift/1l57o4z2c-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 27th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l57o8xu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\cos ^{-1}\\left (\\frac{y}{2}\\right )=\\log _{e}\\left (\\frac{x}{5}\\right )^{5},|y|<2$, then :",
+  "options": [
+   "$x^{2}y^{''}+xy^{'}-25y=0$",
+   "$x^{2}y^{''}-xy^{'}-25y=0$",
+   "$x^{2}y^{''}-xy^{'}+25y=0$",
+   "$x^{2}y^{''}+xy^{'}+25y=0$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cos ^{-1}\\left (\\frac{y}{2}\\right )=\\log _{e}\\left (\\frac{x}{5}\\right )^{5}|y|<2$\n\nDifferentiating on both side\n\n$-\\frac{1}{\\sqrt{1-\\left (\\frac{y}{2}\\right )^{2}}}\\times \\frac{y^{'}}{2}=\\frac{5}{\\frac{x}{5}}\\times \\frac{1}{5}$\n\n$\\frac{-xy^{'}}{2}=5\\sqrt{1-\\left (\\frac{y}{2}\\right )^{2}}$\n\nSquare on both side\n\n$\\frac{x^{2}y{}^{'2}}{4}=25\\left (\\frac{4-y^{2}}{4}\\right )$\n\nDiff on both side\n\n$2xy{}^{'2}+2y^{'}y^{''}x^{2}=-25\\times 2yy^{'}$\n\n$xy^{'}+y^{''}x^{2}+25y=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57o9pt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\int \\frac{(x^{2}+1)e^{x}}{(x+1)^{2}}dx=f(x)e^{x}+C$, where C is a constant, then $\\frac{d^{3}f}{dx^{3}}$ at x = 1 is equal to :",
+  "options": [
+   "$-\\frac{3}{4}$",
+   "$\\frac{3}{4}$",
+   "$-\\frac{3}{2}$",
+   "$\\frac{3}{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=\\int \\frac{e^{x}(x^{2}+1)}{(x+1)^{2}}dx=f(x)e^{x}+c$\n\n$=\\int \\frac{e^{x}(x^{2}-1+1+1)}{(x+1)^{2}}dx$\n\n$=\\int e^{x}\\left [\\frac{x-1}{x+1}+\\frac{2}{(x+1)^{2}}\\right ]dx$\n\n$=e^{x}\\left (\\frac{x-1}{x+1}\\right )+c$\n\n$\\therefore$ $f(x)=\\frac{x-1}{x+1}$\n\n$f(x)=1-\\frac{2}{x+1}$\n\n$f^{'}(x)=2\\left (\\frac{1}{x+1}\\right )^{2}$\n\n$f^{''}(x)=-4\\left (\\frac{1}{x+1}\\right )^{3}$\n\n$f^{'''}(x)=\\frac{12}{(x+1)^{4}}$\n\nfor $x=1$\n\n$f^{'''}(1)=\\frac{12}{2^{4}}=\\frac{12}{16}=\\frac{3}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57oc7k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of the integral \n\n$\\int\\limits _{-2}^{2}\\frac{|x^{3}+x|}{(e^{x|x|}+1)}dx$ is equal to :",
+  "options": [
+   "$5e^{2}$",
+   "$3e^{-2}$",
+   "4",
+   "6"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=\\int\\limits _{-2}^{2}\\frac{|x^{3}+x|}{e^{x|x|}+1}dx$ ..... (i)\n\n$I=\\int\\limits _{-2}^{2}\\frac{|x^{3}+x|}{e^{-x|x|}+1}dx$ ..... (ii)\n\n$2I=\\int\\limits _{-2}^{2}|x^{3}+x|dx$\n\n$2I=2\\int\\limits _{0}^{2}(x^{3}+x)dx$\n\n$I=\\int\\limits _{0}^{2}(x^{3}+x)dx$\n\n$\\left. =\\frac{x^{4}}{4}+\\frac{x^{2}}{2}\\right ]_{0}^{2}$\n\n$=\\left (\\frac{16}{4}+\\frac{4}{2}\\right )-0$\n\n$=4+2=6$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57od20",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{dy}{dx}+\\frac{2^{x-y}(2^{y}-1)}{2^{x}-1}=0$, x, y > 0, y(1) = 1, then y(2) is equal to :",
+  "options": [
+   "$2+\\log _{2}3$",
+   "$2+\\log _{3}2$",
+   "$2-\\log _{3}2$",
+   "$2-\\log _{2}3$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}+\\frac{2^{x-y}(2^{y}-1)}{2^{x}-1}=0$, x, y > 0, y(1) = 1\n\n$\\frac{dy}{dx}=-\\frac{2^{x}(2^{y}-1)}{2^{y}(2^{x}-1)}$\n\n$\\int \\frac{2^{y}}{2^{y}-1}dy=-\\int \\frac{2^{x}}{2^{x}-1}dx$\n\n$=\\frac{\\log _{e}(2^{y}-1)}{\\log _{e}2}=-\\frac{\\log _{e}(2^{x}-1)}{\\log _{e}2}+\\frac{\\log _{e}c}{\\log _{e}2}$\n\n$=|(2^{y}-1)(2^{x}-1)|=c$\n\n$\\because$ $y(1)=1$\n\n$\\therefore$ $c=1$\n\n$=|(2^{y}-1)(2^{x}-1)|=1$\n\nFor $x=2$\n\n$|(2^{y}-1)3|=1$\n\n$2^{y}-1=\\frac{1}{3}\\Rightarrow 2y=\\frac{4}{3}$\n\nTaking log to base 2.\n\n$\\therefore$ $y=2-\\log _{2}3$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57oesz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In an isosceles triangle ABC, the vertex A is (6, 1) and the equation of the base BC is 2x + y = 4. Let the point B lie on the line x + 3y = 7. If ($α$, $β$) is the centroid of $\\Delta$ABC, then 15($α$ + $β$) is equal to :",
+  "options": [
+   "39",
+   "41",
+   "51",
+   "63"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\left. \\begin{array}{l} 2x+y=4 \\\\ 2x+6y=14 \\end{array}\\right \\}y=2,x=1$\n\nB(1, 2)\n\nLet C(k, 4 $-$ 2k)\n\nNow $AB^{2}=AC^{2}$\n\n$5^{2}+(-1)^{2}=(6-k)^{2}+(-3+2k)^{2}$\n\n$\\Rightarrow 5k^{2}-24k+19=0$\n\n$(5k-19)(k-1)=0\\Rightarrow k=\\frac{19}{5}$\n\n$C\\left (\\frac{19}{5},-\\frac{18}{5}\\right )$\n\nCentroid ($α$, $β$)\n\n$α=\\frac{6+1+\\frac{19}{5}}{3}=\\frac{18}{5}$\n\n$β=\\frac{1+2-\\frac{18}{5}}{3}=-\\frac{1}{5}$\n\nNow $15(α+β)$\n\n$15\\left (\\frac{17}{5}\\right )=51$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-27th-june-morning-shift/1l57oeszr-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 27th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l57oi7d",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the eccentricity of an ellipse $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$, $a>b$, be $\\frac{1}{4}$. If this ellipse passes through the point $\\left (-4\\sqrt{\\frac{2}{5}},3\\right )$, then $a^{2}+b^{2}$ is equal to :",
+  "options": [
+   "29",
+   "31",
+   "32",
+   "34"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$\n\n$\\Rightarrow \\frac{\\left (-4\\sqrt{\\frac{2}{5}}\\right )^{2}}{a^{2}}+\\frac{9}{b^{2}}=1$\n\n$\\Rightarrow \\frac{32}{5a^{2}}+\\frac{9}{b^{2}}=1$ ..... (i)\n\n$a^{2}(1-e^{2})=b^{2}$\n\n$a^{2}\\left (1-\\frac{1}{16}\\right )=b^{2}$\n\n$15a^{2}=16b^{2}\\Rightarrow a^{2}=\\frac{16b^{2}}{15}$\n\nFrom (i)\n\n$\\frac{6}{b^{2}}+\\frac{9}{b^{2}}=1\\Rightarrow b^{2}=15$ & $a^{2}=16$\n\n$a^{2}+b^{2}=15+16=31$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57oj6h",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If two straight lines whose direction cosines are given by the relations $l+m-n=0$, $3l^{2}+m^{2}+cnl=0$ are parallel, then the positive value of c is :",
+  "options": [
+   "6",
+   "4",
+   "3",
+   "2"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given that the direction cosines satisfy $l+m-n=0$, we find that $n=l+m$.\n\nThe other equation is $3l^{2}+m^{2}+cnl=0$, and substituting $n=l+m$ gives $3l^{2}+m^{2}+cl(l+m)=0$.\n\nThis simplifies to $(3+c)l^{2}+clm+m^{2}=0$.\n\nAs the lines are parallel, they share the same direction ratios, so we can express $l$ in terms of $m$, say $l=km$. Substituting this into our equation gives $(3+c)(km)^{2}+ckm^{2}+m^{2}=0$.\n\nThis simplifies to $m^{2}[k^{2}(3+c)+kc+1]=0$.\n\nSince $m\\neq 0$, we must have $k^{2}(3+c)+kc+1=0$. Here, we consider the ratio $k=\\frac{l}{m}$ to be constant, since the lines are parallel. The equation then becomes a quadratic equation in $k$.\n\nAs the lines are parallel, the discriminant of the quadratic equation must be equal to zero for the equation to have equal roots. Hence, the discriminant $D=(c^{2}-4(3+c))=0$.\n\nSolving this quadratic equation gives $c^{2}-4c-12=0$. \n\nFactoring this equation gives $(c-6)(c+2)=0$.\n\nSolving for $c$ gives $c=6,-2$. \n\nHowever, we are looking for the positive value of $c$, so $c=6$.\n\nTherefore, the correct answer is 6",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57okaz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{a}=\\hat{i}+\\hat{j}-\\widehat{k}$ and $\\vec{c}=2\\hat{i}-3\\hat{j}+2\\widehat{k}$. Then the number of vectors $\\vec{b}$ such that $\\vec{b}\\times \\vec{c}=\\vec{a}$ and $|\\vec{b}|\\in$ {1, 2, ........, 10} is :",
+  "options": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $⃗{b}\\times ⃗{c}=⃗{a}$ to hold, $⃗{a}$ must be perpendicular to $⃗{c}$, because $⃗{b}\\times ⃗{c}$ is perpendicular to $⃗{c}$:\n\n$⃗{c}\\cdot (⃗{b}\\times ⃗{c})=0\\Rightarrow ⃗{c}\\cdot ⃗{a}=0$\n\nFor the given vectors:\n\n$⃗{a}\\cdot ⃗{c}=(1)(2)+(1)(-3)+(-1)(2)=2-3-2=-3\\neq 0$\n\nSo no vector $⃗{b}$ satisfies $⃗{b}\\times ⃗{c}=⃗{a}$, whatever its magnitude, and the number of such vectors is 0.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57onrr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Five numbers $x_{1},x_{2},x_{3},x_{4},x_{5}$ are randomly selected from the numbers 1, 2, 3, ......., 18 and are arranged in the increasing order $(x_{1}<x_{2}<x_{3}<x_{4}<x_{5})$. The probability that $x_{2}=7$ and $x_{4}=11$ is :",
+  "options": [
+   "$\\frac{1}{136}$",
+   "$\\frac{1}{72}$",
+   "$\\frac{1}{68}$",
+   "$\\frac{1}{34}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "No. of ways to select and arrange $\\mathrm{x}_{1},\\mathrm{x}_{2},\\mathrm{x}_{3},\\mathrm{x}_{4},\\mathrm{x}_{5}$ from $1,2,3$.......18\n\n$\\begin{array}{lllll} \\mathrm{n}(\\mathrm{s})={}^{18}\\mathrm{C}_{5} \\\\  \\\\ \\begin{array}{lllll} x_{1} & (x_{2})_{7} & x_{3} & (x_{4})_{11} & x_{5} \\end{array} \\\\  \\\\ \\mathrm{n}(\\mathrm{E})={}^{6}\\mathrm{C}_{1}\\times {}^{3}\\mathrm{C}_{1}\\times {}^{7}\\mathrm{C}_{1} \\\\  \\\\ P(E)=\\dfrac{6\\times 3\\times 7}{{}^{18}C_{5}} \\\\  \\\\ \\dfrac{1}{17\\times 4}=\\dfrac{1}{68} \\\\  \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57oq18",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\cos \\left (\\frac{2π}{7}\\right )+\\cos \\left (\\frac{4π}{7}\\right )+\\cos \\left (\\frac{6π}{7}\\right )$ is equal to :",
+  "options": [
+   "$-$1",
+   "$-\\frac{1}{2}$",
+   "$-\\frac{1}{3}$",
+   "$-\\frac{1}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cos \\frac{2π}{7}+\\cos \\frac{4π}{7}+\\cos \\frac{6π}{7}=\\frac{\\sin 3\\left (\\frac{π}{7}\\right )}{\\sin \\frac{π}{7}}\\cos \\frac{\\left (\\frac{2π}{7}+\\frac{6π}{7}\\right )}{2}$\n\n$=\\frac{\\sin \\left (\\frac{3π}{7}\\right ).\\cos \\left (\\frac{4π}{7}\\right )}{\\sin \\left (\\frac{π}{7}\\right )}$\n\n$=\\frac{2\\sin \\frac{4π}{7}\\cos \\frac{4π}{7}}{2\\sin \\frac{π}{7}}$\n\n$=\\frac{\\sin \\left (\\frac{8π}{7}\\right )}{2\\sin \\frac{π}{7}}=\\frac{-\\sin \\frac{π}{7}}{2\\sin \\frac{π}{7}}=\\frac{-1}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57ou1o",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\sin ^{-1}\\left (\\sin \\frac{2π}{3}\\right )+\\cos ^{-1}\\left (\\cos \\frac{7π}{6}\\right )+\\tan ^{-1}\\left (\\tan \\frac{3π}{4}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{11π}{12}$",
+   "$\\frac{17π}{12}$",
+   "$\\frac{31π}{12}$",
+   "$-\\frac{3π}{4}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sin ^{-1}\\left (\\frac{\\sqrt{3}}{2}\\right )+\\cos ^{-1}\\left (\\frac{-\\sqrt{3}}{2}\\right )+\\tan ^{-1}(-1)$\n\n$=\\frac{π}{3}+\\frac{5π}{6}-\\frac{π}{4}$\n\n$=\\frac{4π+10π-3π}{12}=\\frac{11π}{12}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57ovyt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let f : R $\\to$ R be a function defined by $f(x)=\\frac{2e^{2x}}{e^{2x}+e}$. Then $f\\left (\\frac{1}{100}\\right )+f\\left (\\frac{2}{100}\\right )+f\\left (\\frac{3}{100}\\right )+.....+f\\left (\\frac{99}{100}\\right )$ is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 99.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$f(x)=\\frac{2e^{2x}}{e^{2x}+e}$\n\n$\\therefore$ $f(1-x)=\\frac{2e^{2(1-x)}}{e^{2(1-x)}+e}$\n\n$=\\frac{2.\\frac{e2}{e2x}}{\\frac{e2}{e2x}+e}$\n\n$=\\frac{2e^{2}}{e^{2}+e^{2x}.e}$\n\n$=\\frac{2e^{2}}{e(e+e^{2x})}$\n\n$=\\frac{2e}{e+e^{2x}}$\n\n$\\therefore$ $f(x)+f(1-x)=\\frac{2e^{2x}}{e^{2x}+e}+\\frac{2e}{e^{2x}+e}$\n\n$=\\frac{2(e^{2x}+e)}{e^{2x}+e}$\n\n$=2$ ...... (1)\n\nNow,\n\n$f\\left (\\frac{1}{100}\\right )+f\\left (\\frac{99}{100}\\right )$\n\n$=f\\left (\\frac{1}{100}\\right )+f\\left (1-\\frac{1}{100}\\right )$\n\n$=2$ [as $f(x)+f(1-x)=2$]\n\nSimilarly,\n\n$f\\left (\\frac{2}{100}\\right )+f\\left (1-\\frac{2}{100}\\right )=2$\n\n$\\vdots$\n\n$f\\left (\\frac{49}{100}\\right )+f\\left (1-\\frac{49}{100}\\right )=2$\n\n$\\therefore$ Total sum $=49\\times 2$\n\nRemaining term $=f\\left (\\frac{50}{100}\\right )=f\\left (\\frac{1}{2}\\right )$\n\nPut $x=\\frac{1}{2}$ in equation (1), we get\n\n$f\\left (\\frac{1}{2}\\right )+f\\left (1-\\frac{1}{2}\\right )=2$\n\n$\\Rightarrow 2f\\left (\\frac{1}{2}\\right )=2$\n\n$\\Rightarrow f\\left (\\frac{1}{2}\\right )=1$\n\n$\\therefore$ Sum $=49\\times 2+1=99$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57oztw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the sum of all the roots of the equation \n\n$e^{2x}-11e^{x}-45e^{-x}+\\frac{81}{2}=0$ is $\\log _{e}p$, then p is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 45.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given that\n\n$e^{2x}-11e^{x}-45e^{-x}+\\frac{81}{2}=0$\n\n$\\Rightarrow 2e^{3x}-22e^{2x}-90+81e^{x}=0$\n\n$\\Rightarrow 2(e^{x})^{3}-22(e^{x})^{2}+81e^{x}-90=0$\n\nLet $e^{x}=y$\n\n$\\Rightarrow 2y^{3}-22y^{2}+81y-90=0$\n\nProduct of roots $(y_{1},y_{2},y_{3})$\n\n$y_{1}\\cdot y_{2}\\cdot y_{3}=\\frac{-(-90)}{2}=45$\n\nLet $x_{1},x_{2}$, and $x_{3}$ be roots of given equation\n\n$\\Rightarrow e^{x_{1}}\\cdot e^{x_{2}}\\cdot e^{x_{3}}=45$\n\n$\\Rightarrow e^{x_{1}+x_{2}+x_{3}}=45$\n\n$\\Rightarrow x_{1}+x_{2}+x_{3}=\\log _{e}45=\\log _{e}p$\n\n$\\Rightarrow p=45$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57p1hn",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of ways, 16 identical cubes, of which 11 are blue and rest are red, can be placed in a row so that between any two red cubes there should be at least 2 blue cubes, is $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 56.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "First we arrange 5 red cubes in a row and assume\n$x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$ and $x_{6}$ number of blue cubes\nbetween them\n\n\n[IMG]\n\n\nHere, $x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}=11$ and $x_{2},x_{3},x_{4},x_{5}\\geq 2$\n\nSo $x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}=3$\n\nNo. of solutions $={}^{8}C_{5}=56$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-27th-june-morning-shift/1l57p1hn1-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 27th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l57p2f1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the coefficient of $x^{10}$ in the binomial expansion of $\\left (\\frac{\\sqrt{x}}{5^{\\dfrac{1}{4}}}+\\frac{\\sqrt{5}}{x^{\\dfrac{1}{3}}}\\right )^{60}$ is $5^{k}\\quad .l$, where l, k $\\in$ N and l is co-prime to 5, then k is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given Binomial Expansion\n\n$=\\left (\\frac{\\sqrt{x}}{5^{\\dfrac{1}{4}}}+\\frac{\\sqrt{5}}{x^{\\dfrac{1}{3}}}\\right )^{60}$\n\n$\\therefore$ General term\n\n$T_{r+1}={}^{60}C_{r}.\\left (\\frac{x^{1/2}}{5^{1/4}}\\right )^{60-r}.\\left (\\frac{5^{1/2}}{x^{1/3}}\\right )^{r}$\n\n$={}^{60}C_{r}.5^{\\left (\\frac{r}{4}-15+\\frac{r}{2}\\right )}.x^{\\left (30-\\frac{r}{2}-\\frac{r}{3}\\right )}$\n\n$={}^{60}C_{r}.5^{\\left (\\frac{3r-60}{4}\\right )}.x^{\\left (\\frac{180-5r}{6}\\right )}$\n\nFor $x^{10}$ term,\n\n$\\frac{180-5r}{6}=10$\n\n$\\Rightarrow 5r=120$\n\n$\\Rightarrow r=24$\n\n$\\therefore$ Coefficient of $x^{10}={}^{60}C_{24}.5^{\\left (\\frac{3\\times 24-60}{4}\\right )}$\n\n$={}^{60}C_{24}.5^{3}$\n\n$=\\frac{60!}{24!36!}.5^{3}$\n\nIt is given that,\n\n$\\frac{60!}{24!36!}.5^{3}=5^{k}.l$ ...... (1)\n\nAlso given that, l is coprime to 5 means l can't be multiple of 5. So we have to find all the factors of 5 in 60!, 24! and 36!\n\n[Note : Formula for exponent or degree of prime number in n!.\n\nExponent of p in $n!=⌊\\frac{n}{p}⌋+⌊\\frac{n}{p^{2}}⌋+⌊\\frac{n}{p^{3}}⌋+$ ..... until 0 comes\n\nhere p is a prime number. ]\n\n$\\therefore$ Exponent of 5 in 60!\n\n$=⌊\\frac{60}{5}⌋+⌊\\frac{60}{5^{2}}⌋+⌊\\frac{60}{5^{3}}⌋+$ .....\n\n$=12+2+0+$ .....\n\n$=14$\n\nExponent of 5 in 24!\n\n$=⌊\\frac{24}{5}⌋+⌊\\frac{24}{5^{2}}⌋+⌊\\frac{24}{5^{3}}⌋+$ ......\n\n$=4+0+0$ ......\n\n$=4$\n\nExponent of 5 in 36!\n\n$=⌊\\frac{36}{5}⌋+⌊\\frac{36}{5^{2}}⌋+⌊\\frac{36}{5^{3}}⌋+$ .......\n\n$=7+1+0$ ......\n\n$=8$\n\n$\\therefore$ From equation (1), exponent of 5 overall\n\n$\\frac{5^{14}}{5^{4}.5^{8}}.5^{3}=5^{k}$\n\n$\\Rightarrow 5^{5}=5^{k}$\n\n$\\Rightarrow k=5$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l57p3c3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let\n$A_{1}=\\left \\{(x,y):|x|\\leq y^{2},|x|+2y\\leq 8\\right \\}$ and\n\n$A_{2}=\\{(x,y):|x|+|y|\\leq k\\}$. If 27 (Area $A_{1}) = 5 ($Area $A_{2})$, then k is equal to :",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nRequired area (above x-axis)\n\n$A_{1}=2\\int\\limits _{0}^{4}\\left (\\frac{8-x}{2}-\\sqrt{x}\\right )dx$\n\n$=2\\left (16-\\frac{16}{4}-\\frac{8}{3/2}\\right )=\\frac{40}{3}$\n\nand $A_{2}=4\\left (\\frac{1}{2}.k^{2}\\right )=2k^{2}$\n\n\n[IMG]\n\n\n$\\therefore$ $27\\quad .\\frac{40}{3}=5.(2k^{2})$\n\n$\\Rightarrow$ k = 6",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-27th-june-morning-shift/1l57p3c3w-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 27th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2022-online-27th-june-morning-shift/1l57p3c3w-1.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 27th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l57p6r2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A rectangle R with end points of one of its sides as (1, 2) and (3, 6) is inscribed in a circle. If the equation of a diameter of the circle is 2x $-$ y + 4 = 0, then the area of R is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 16.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 27th June Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nAs slope of line joining (1, 2) and (3, 6) is 2 given diameter is parallel to side\n\n$\\therefore$ $a=\\sqrt{(3-1)^{2}+(6-2)^{2}}=\\sqrt{20}$\n\nand $b/2=\\frac{4}{\\sqrt{5}}\\Rightarrow b=\\frac{8}{\\sqrt{5}}$\n\nArea $=ab=2\\sqrt{5}.\\frac{8}{\\sqrt{5}}=16$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 27th June Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-27th-june-morning-shift/1l57p6r2o-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 27th June Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

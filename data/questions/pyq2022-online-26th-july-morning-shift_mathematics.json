@@ -1,0 +1,871 @@
+[
+ {
+  "publicId": "PYQ-2022-1l6ggcf4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : R $\\to$ R be a continuous function such that $f(3x)-f(x)=x$. If $f(8)=7$, then $f(14)$ is equal to :",
+  "options": [
+   "4",
+   "10",
+   "11",
+   "16"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $g(x)=f(x)-\\dfrac{x}{2}$. Then\n\n$g(3x)-g(x)=f(3x)-f(x)-\\frac{3x}{2}+\\frac{x}{2}=x-x=0$\n\nso $g(x)=g\\left (\\dfrac{x}{3}\\right )$, and repeating, $g(x)=g\\left (\\dfrac{x}{3^{n}}\\right )$ for every $n$.\n\nAs $n\\to \\infty$, $\\dfrac{x}{3^{n}}\\to 0$, and continuity of $g$ gives $g(x)=g(0)=c$, a constant. So $f(x)=\\dfrac{x}{2}+c$.\n\nFrom $f(8)=4+c=7$, $c=3$, so\n\n$f(14)=\\frac{14}{2}+3=10$\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6ggfmy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let O be the origin and A be the point $z_{1}=1+2i$. If B is the point $z_{2}$, $\\mathrm{Re}(z_{2})<0$, such that OAB is a right angled isosceles triangle with OB as hypotenuse, then which of the following is NOT true?",
+  "options": [
+   "$\\arg z_{2}=π-\\tan ^{-1}3$",
+   "$\\arg (z_{1}-2z_{2})=-\\tan ^{-1}\\frac{4}{3}$",
+   "$|z_{2}|=\\sqrt{10}$",
+   "$|2z_{1}-z_{2}|=5$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\frac{z_{2}-0}{(1+2i)-0}=\\frac{|OB|}{|OA|}e^{\\frac{iπ}{4}}$\n\n$\\Rightarrow \\frac{z_{2}}{1+2i}=\\sqrt{2}e^{\\frac{iπ}{4}}$\n\nOR $z_{2}=(1+2i)(1+i)$\n\n$=-1+3i$\n\n$\\arg z_{2}=π-\\tan ^{-1}3$\n\n$|z_{2}|=\\sqrt{10}$\n\n$z_{1}-2z_{2}=(1+2i)+2-6i=3-4i$\n\n$\\arg (z_{1}-2z_{2})=-\\tan ^{-1}\\frac{4}{3}$\n\n$|2z_{1}-z_{2}|=|2+4i+1-3i|=|3+i|=\\sqrt{10}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-26th-july-morning-shift/1l6ggfmy6-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 26th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l6ggh9j",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of linear equations.\n\n$8x+y+4z=-2$\n\n$x+y+z=0$\n\n$λx-3y=μ$\n\nhas infinitely many solutions, then the distance of the point $\\left (λ,μ,-\\frac{1}{2}\\right )$ from the plane $8x+y+4z+2=0$ is :",
+  "options": [
+   "$3\\sqrt{5}$",
+   "4",
+   "$\\frac{26}{9}$",
+   "$\\frac{10}{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\Delta =\\left |\\begin{array}{lll} 8 & 1 & 4 \\\\ 1 & 1 & 1 \\\\ λ & -3 & 0 \\end{array}\\right |$\n\n$=8(3)-1(-λ)+4(-3-λ)$\n\n$=24+λ-12-4λ$\n\n$=12-3λ$\n\nSo for $λ=4$, it is having infinitely many solutions.\n\n$\\Delta _{x}=\\left |\\begin{array}{lll} -2 & 1 & 4 \\\\ 0 & 1 & 1 \\\\ μ & -3 & 0 \\end{array}\\right |$\n\n$=-2(3)-1(-μ)+4(-μ)$\n\n$=-6-3μ=0$\n\nFor $μ=-2$\n\nDistance of $(4,-2,\\frac{-1}{2})$ from $8x+y+4z+2=0$\n\n$=\\frac{32-2-2+2}{\\sqrt{64+1+16}}=\\frac{10}{3}$ units",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6ggjss",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The odd natural number a, such that the area of the region bounded by $y = 1, y = 3, x = 0, x = y^{a}$ is $\\frac{364}{3}$, is equal to :",
+  "options": [
+   "3",
+   "5",
+   "7",
+   "9"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\mathrm{a}$ is an odd natural number and\n\n$\\left |\\int\\limits _{1}^{3}y^{a}dy\\right |=\\frac{364}{3}$\n\n$\\Rightarrow \\left |\\frac{1}{a+1}\\left (y^{a+1}\\right )_{1}^{3}\\right |=\\frac{364}{3}$\n\n$\\Rightarrow \\frac{3^{a+1}-1}{a+1}=\\pm \\frac{364}{3}$\n\nSolving with $(-)$ sign,\n\n$\\frac{3^{a+1}-1}{a+1}=\\frac{364}{3}\\Rightarrow (a=5)$\n\nSolving with $(+)$ sign,\n\n$\\frac{3^{a+1}-1}{a+1}=\\frac{-364}{3}$, No a exist\n\n$\\therefore$ $(a=5)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gglr6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider two $G.Ps. 2, 2^{2}, 2^{3}$, ..... and $4, 4^{2}, 4^{3}$, .... of 60 and n terms respectively. If the geometric mean of all the 60 + n terms is $(2)^{\\frac{225}{8}}$, then $\\sum\\limits _{k=1}^{n}k(n-k)$ is equal to :",
+  "options": [
+   "560",
+   "1540",
+   "1330",
+   "2600"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $G.P's 2, 2^{2}, 2^{3}, .... 60$ terms\n\n$4, 4^{2}, ....  n$ terms\n\nNow, G.M $=2^{\\frac{225}{8}}$\n\n$\\left (2.2^{2}...4.4^{2}...\\right )^{\\frac{1}{60+n}}=2^{\\frac{225}{8}}$\n\n$\\left (2^{\\frac{n2+n+1830}{60+n}}\\right )=2^{\\frac{225}{8}}$\n\n$\\Rightarrow \\frac{n^{2}+n+1830}{60+n}=\\frac{225}{8}$\n\n$\\Rightarrow 8n^{2}-217n+1140=0$\n\n$n=\\frac{57}{8},20,$ so $n=20$\n\n$\\therefore$ $\\sum\\limits _{k=1}^{20}k(20-k)=20\\times \\frac{20\\times 21}{2}-\\frac{20\\times 21\\times 41}{6}$\n\n$=\\frac{20\\times 21}{2}\\left [20-\\frac{41}{3}\\right ]=1330$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6ggon0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the function $f(x)=\\left \\{\\begin{array}{lll} \\frac{\\log _{e}(1-x+x^{2})+\\log _{e}(1+x+x^{2})}{\\sec x-\\cos x} & , & x\\in \\left (\\frac{-π}{2},\\frac{π}{2}\\right )-\\{0\\} \\\\ k & , & x=0 \\end{array} \\right.$ is continuous at x = 0, then k is equal to:",
+  "options": [
+   "1",
+   "$-$1",
+   "e",
+   "0"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\left \\{\\begin{array}{lll} \\frac{\\log _{e}(1-x+x^{2})+\\log _{e}(1+x+x^{2})}{\\sec x-\\cos x} & , & x\\in \\left (\\frac{-π}{2},\\frac{π}{2}\\right )-\\{0\\} \\\\ k & , & x=0 \\end{array} \\right.$\n\nfor continuity at $x=0$\n\n$\\lim _{x\\to 0}f(x)=k$\n\n$\\therefore$ $k=\\lim _{x\\to 0}\\frac{\\log _{e}(x^{4}+x^{2}+1)}{\\sec x-\\cos x}\\left (\\frac{0}{0}\\mathrm{form}\\right )$\n\n$=\\lim _{x\\to 0}\\frac{\\cos x\\log _{e}(x^{4}+x^{2}+1)}{\\sin ^{2}x}$\n\n$=\\lim _{x\\to 0}\\frac{\\log _{e}(x^{4}+x^{2}+1)}{x^{2}}$\n\n$=\\lim _{x\\to 0}\\frac{\\ln (1+x^{2}+x^{4})}{x^{2}+x^{4}}.\\frac{x^{2}+x^{4}}{x^{2}}$\n\n$=1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6ggrtz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $f(x)=\\left \\{\\begin{array}{lll} x+a & , & x\\leq 0 \\\\ |x-4| & , & x>0 \\end{array} \\right.$ and $g(x)=\\left \\{\\begin{array}{lll} x+1 & , & x<0 \\\\ (x-4)^{2}+b & , & x\\geq 0 \\end{array} \\right.$ are continuous on R, then $(gof)(2)+(fog)(-2)$ is equal to :",
+  "options": [
+   "$-$10",
+   "10",
+   "8",
+   "$-$8"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\left \\{\\begin{array}{lll} x+a & , & x\\leq 0 \\\\ |x-4| & , & x>0 \\end{array} \\right.$ and $g(x)=\\left \\{\\begin{array}{lll} x+1 & , & x<0 \\\\ (x-4)^{2}+b & , & x\\geq 0 \\end{array} \\right.$\n\n$\\because$ $f(x)$ and $g(x)$ are continuous on R\n\n$\\therefore$ $a=4$ and $b=1-16=-15$\n\nthen $(gof)(2)+(fog)(-2)$\n\n$=g(2)+f(-1)$\n\n$=-11+3=-8$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gh1jf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=\\left \\{\\begin{array}{ll} x^{3}-x^{2}+10x-7, & x\\leq 1 \\\\ -2x+\\log _{2}(b^{2}-4), & x>1 \\end{array} \\right.$.\n\nThen the set of all values of b, for which f(x) has maximum value at x = 1, is :",
+  "options": [
+   "($-$6, $-$2)",
+   "(2, 6)",
+   "$[-6,-2)\\cup (2,6]$",
+   "$\\left [-\\sqrt{6},-2\\right )\\cup \\left (2,\\sqrt{6}\\right ]$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\left \\{\\begin{array}{ll} x^{3}-x^{2}+10x-7, & x\\leq 1 \\\\ -2x+\\log _{2}(b^{2}-4), & x>1 \\end{array} \\right.$\n\nIf $f(x)$ has maximum value at $x=1$ then $f(1+)\\leq f(1)$\n\n$-2+\\log _{2}(b^{2}-4)\\leq 1-1+10-7$\n\n$\\log _{2}(b^{2}-4)\\leq 5$\n\n$0<b^{2}-4\\leq 32$\n\n(i) $b^{2}-4>0\\Rightarrow b\\in (-\\infty ,-2)\\cup (2,\\infty )$\n\n(ii) $b^{2}-36\\leq 0\\Rightarrow b\\in [-6,6]$\n\nIntersection of above two sets\n\n$b\\in [-6,-2)\\cup (2,6]$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gifyn",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{dy}{dx}+2y\\tan x=\\sin x,0<x<\\frac{π}{2}$ and $y\\left (\\frac{π}{3}\\right )=0$, then the maximum value of $y(x)$ is :",
+  "options": [
+   "$\\frac{1}{8}$",
+   "$\\frac{3}{4}$",
+   "$\\frac{1}{4}$",
+   "$\\frac{3}{8}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}+2y\\tan x=\\sin x$\n\nwhich is a first order linear differential equation.\n\nIntegrating factor (I. F.) $=e^{\\int 2\\tan xdx}$\n\n$=e^{2\\ln |\\sec x|}=\\sec ^{2}x$\n\nSolution of differential equation can be written as\n\n$y~.\\quad \\sec ^{2}x=\\int \\sin x\\qquad .\\sec ^{2}xdx=\\int \\sec x.\\tan xdx$\n\n$y\\sec ^{2}x=\\sec x+C$\n\n$y\\left (\\frac{π}{3}\\right )=0,0=\\sec \\frac{π}{3}+C\\Rightarrow C=-2$\n\n$y=\\frac{\\sec x-2}{\\sec ^{2}x}=\\cos x-2\\cos ^{2}x$\n\n$=\\frac{1}{8}-2\\left (\\cos x-\\frac{1}{4}\\right )^{2}$\n\n$y_{\\max }=\\frac{1}{8}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gijng",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A point $P$ moves so that the sum of squares of its distances from the points $(1,2)$ and $(-2,1)$ is 14. Let $f(x,y)=0$ be the locus of $\\mathrm{P}$, which intersects the $x$-axis at the points $\\mathrm{A}$, $\\mathrm{B}$ and the $y$-axis at the points C, D. Then the area of the quadrilateral ACBD is equal to :",
+  "options": [
+   "$\\frac{9}{2}$",
+   "$\\frac{3\\sqrt{17}}{2}$",
+   "$\\frac{3\\sqrt{17}}{4}$",
+   "9"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let point $P:(h,k)$\n\n$(h-1)^{2}+(k-2)^{2}+(h+2)^{2}+(k-1)^{2}=14$\n\n$2h^{2}+2k^{2}+2h-6k-4=0$\n\nLocus of $P:x^{2}+y^{2}+x-3y-2=0$\n\nIntersection with x-axis,\n\n$x^{2}+x-2=0$\n\n$\\Rightarrow x=-2,1$\n\nIntersection with y-axis,\n\n$y^{2}-3y-2=0$\n\n$\\Rightarrow y=\\frac{3\\pm \\sqrt{17}}{2}$\n\nArea of the quadrilateral ACBD is\n\n$=\\frac{1}{2}(|x_{1}|+|x_{2}|)(|y_{1}|+|y_{2}|)$\n\n$=\\frac{1}{2}\\times 3\\times \\sqrt{17}=\\frac{3\\sqrt{17}}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gio0a",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The length of the perpendicular from the point $(1,-2,5)$ on the line passing through $(1,2,4)$ and parallel to the line $x+y-z=0=x-2y+3z-5$ is :",
+  "options": [
+   "$\\sqrt{\\frac{21}{2}}$",
+   "$\\sqrt{\\frac{9}{2}}$",
+   "$\\sqrt{\\frac{73}{2}}$",
+   "1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n \n\nThe line $x+y-z=0=x-2y+3z-5$ is parallel to the vector\n\n$\\vec{b}=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\widehat{k} \\\\ 1 & 1 & -1 \\\\ 1 & -2 & 3 \\end{array}\\right |=(1,-4,-3)$\n\nEquation of the line through $P(1,2,4)$ and parallel to $\\vec{b}$\n\n$\\frac{x-1}{1}=\\frac{y-2}{-4}=\\frac{z-4}{-3}$\n\nLet $N\\equiv (λ+1,-4λ+2,-3λ+4)$\n\n$QN\\leftarrow =(λ,-4λ+4,-3λ-1)$\n\n$QN\\leftarrow$ is perpendicular to $\\vec{b}$\n\n$\\Rightarrow (λ,-4λ+4,-3λ-1).(1,-4,-3)=0$\n\n$\\Rightarrow λ=\\frac{1}{2}$\n\nHence $QN\\leftarrow =\\left (\\frac{1}{2},2,\\frac{-5}{2}\\right )$ and $\\left |QN\\leftarrow \\right |=\\sqrt{\\frac{21}{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-26th-july-morning-shift/1l6gio0a1-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 26th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l6giq99",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{\\mathrm{a}}=α\\hat{i}+\\hat{j}-\\hat{k}$ and $\\vec{\\mathrm{b}}=2\\hat{i}+\\hat{j}-α\\hat{k},α>0$. If the projection of $\\vec{\\mathrm{a}}\\times \\vec{\\mathrm{b}}$ on the vector $-\\hat{i}+2\\hat{j}-2\\hat{k}$ is 30, then $α$ is equal to :",
+  "options": [
+   "$\\frac{15}{2}$",
+   "8",
+   "$\\frac{13}{2}$",
+   "7"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given : $\\vec{a}=(α,1,-1)$ and $\\vec{b}=(2,1,-α)$\n\n$\\vec{c}=\\vec{a}\\times \\vec{b}=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\widehat{k} \\\\ α & 1 & -1 \\\\ 2 & 1 & -α \\end{array}\\right |$\n\n$=(-α+1)\\hat{i}+(α^{2}-2)\\hat{j}+(α-2)\\widehat{k}$\n\nProjection of $\\vec{c}$ on $\\vec{d}=-\\hat{i}+2\\hat{j}-2\\widehat{k}$\n\n$=\\left |\\vec{c}.\\frac{\\vec{d}}{|d|}\\right |=30$ {Given}\n\n$\\Rightarrow \\quad =\\left |\\frac{α-1-4+2α^{2}-2α+4}{\\sqrt{1+4+4}}\\right |=30$\n\nOn solving $α=\\frac{-13}{2}$ (Rejected as $α>0$)\n\nand $α=7$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6givpj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{E}_{1},\\mathrm{E}_{2},\\mathrm{E}_{3}$ be three mutually exclusive events such that $\\mathrm{P}(\\mathrm{E}_{1})=\\frac{2+3\\mathrm{p}}{6},\\mathrm{P}(\\mathrm{E}_{2})=\\frac{2-\\mathrm{p}}{8}$ and $\\mathrm{P}(\\mathrm{E}_{3})=\\frac{1-\\mathrm{p}}{2}$. If the maximum and minimum values of $\\mathrm{p}$ are $\\mathrm{p}_{1}$ and $\\mathrm{p}_{2}$, then $(\\mathrm{p}_{1}+\\mathrm{p}_{2})$ is equal to :",
+  "options": [
+   "$\\frac{2}{3}$",
+   "$\\frac{5}{3}$",
+   "$\\frac{5}{4}$",
+   "1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Each probability lies in $[0,1]$:\n\n$0\\leq \\dfrac{2+3p}{6}\\leq 1\\Rightarrow -\\dfrac{2}{3}\\leq p\\leq \\dfrac{4}{3}$\n\n$0\\leq \\dfrac{2-p}{8}\\leq 1\\Rightarrow -6\\leq p\\leq 2$\n\n$0\\leq \\dfrac{1-p}{2}\\leq 1\\Rightarrow -1\\leq p\\leq 1$\n\nFor mutually exclusive events, $P(E_{1})+P(E_{2})+P(E_{3})=P(E_{1}\\cup E_{2}\\cup E_{3})\\leq 1$:\n\n$\\dfrac{2+3p}{6}+\\dfrac{2-p}{8}+\\dfrac{1-p}{2}=\\dfrac{26-3p}{24}\\leq 1\\Rightarrow p\\geq \\dfrac{2}{3}$\n\nCombining, $\\dfrac{2}{3}\\leq p\\leq 1$, so $p_{1}=1$ and $p_{2}=\\dfrac{2}{3}$.\n\n$p_{1}+p_{2}=1+\\dfrac{2}{3}=\\dfrac{5}{3}$\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gj38z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\tan \\left (2\\tan ^{-1}\\frac{1}{5}+\\sec ^{-1}\\frac{\\sqrt{5}}{2}+2\\tan ^{-1}\\frac{1}{8}\\right )$ is equal to :",
+  "options": [
+   "1",
+   "2",
+   "$\\frac{1}{4}$",
+   "$\\frac{5}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\tan \\left (2\\tan ^{-1}\\frac{1}{5}+\\sec ^{-1}\\frac{\\sqrt{5}}{2}+2\\tan ^{-1}\\frac{1}{8}\\right )$\n\n$=\\tan \\left (2\\tan ^{-1}\\left (\\frac{\\frac{1}{5}+\\frac{1}{8}}{1-\\frac{1}{5}.\\frac{1}{8}}\\right )+\\sec ^{-1}\\frac{\\sqrt{5}}{2}\\right )$\n\n$=\\tan \\left [2\\tan ^{-1}\\frac{1}{3}+\\tan ^{-1}\\frac{1}{2}\\right ]$\n\n$=\\tan \\left [\\tan ^{-1}\\frac{\\frac{2}{3}}{1-\\frac{1}{9}}+\\tan ^{-1}\\frac{1}{2}\\right ]$\n\n$=\\tan \\left [\\tan ^{-1}\\frac{3}{4}+\\tan ^{-1}\\frac{1}{2}\\right ]$\n\n$=\\tan \\left [\\tan ^{-1}\\frac{\\frac{3}{4}+\\frac{1}{2}}{1-\\frac{3}{8}}\\right ]=\\tan \\left [\\tan ^{-1}\\frac{\\frac{5}{4}}{\\frac{5}{8}}\\right ]$\n\n$=\\tan [\\tan ^{-1}2]=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gj9sd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If for some $\\mathrm{p},\\mathrm{q},\\mathrm{r}\\in 𝐑$, not all have same sign, one of the roots of the equation $\\left (\\mathrm{p}^{2}+\\mathrm{q}^{2}\\right )x^{2}-2\\mathrm{q}(\\mathrm{p}+\\mathrm{r})x+\\mathrm{q}^{2}+\\mathrm{r}^{2}=0$ is also a root of the equation $x^{2}+2x-8=0$, then $\\frac{\\mathrm{q}^{2}+\\mathrm{r}^{2}}{\\mathrm{p}^{2}}$ is equal to $____________$,",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 272.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let roots of\n\n \n[IMG]\n \n\n$\\therefore$ $α$ + $β$ > 0 and $αβ$ > 0\n\nAlso, it has a common root with $x^{2}+2x-8=0$\n\n$\\therefore$ The common root between above two equations is 4.\n\n$\\Rightarrow 16(p^{2}+q^{2})-8q(p+r)+q^{2}+r^{2}=0$\n\n$\\Rightarrow (16p^{2}-8pq+q^{2})+(16q^{2}-8qr+r^{2})=0$\n\n$\\Rightarrow (4p-q)^{2}+(4q-r)^{2}=0$\n\n$\\Rightarrow q=4p$ and $r=16p$\n\n$\\therefore$ $\\frac{q^{2}+r^{2}}{p^{2}}=\\frac{16p^{2}+256p^{2}}{p^{2}}=272$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-26th-july-morning-shift/1l6gj9sdd-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 26th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2022-1l6gjakn",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of 5-digit natural numbers, such that the product of their digits is 36 , is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 180.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Factors of $36 = 2^{2} . 3^{2} . 1$\n\nFive-digit combinations can be\n\n(1, 2, 2, 3, 3) (1, 4, 3, 3, 1), (1, 9, 2, 2, 1)\n\n(1, 4, 9, 1, 1) (1, 2, 3, 6, 1) (1, 6, 6, 1, 1)\n\ni.e., total numbers\n\n$\\frac{5!}{2!2!}+\\frac{5!}{2!2!}+\\frac{5!}{2!2!}+\\frac{5!}{3!}+\\frac{5!}{2!}+\\frac{5!}{3!2!}$\n\n$=(30\\times 3)+20+60+10=180$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gje0t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of distinct real roots of the equation $x^{5}\\left (x^{3}-x^{2}-x+1\\right )+x\\left (3x^{3}-4x^{2}-2x+4\\right )-1=0$ is $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x^{8}-x^{7}-x^{6}+x^{5}+3x^{4}-4x^{3}-2x^{2}+4x-1=0$\n\n$\\Rightarrow x^{7}(x-1)-x^{5}(x-1)+3x^{3}(x-1)-x(x^{2}-1)+2x(1-x)+(x-1)=0$\n\n$\\Rightarrow (x-1)(x^{7}-x^{5}+3x^{3}-x(x+1)-2x+1)=0$\n\n$\\Rightarrow (x-1)(x^{7}-x^{5}+3x^{3}-x^{2}-3x+1)=0$\n\n$\\Rightarrow (x-1)(x^{5}(x^{2}-1)+3x(x^{2}-1)-1(x^{2}-1))=0$\n\n$\\Rightarrow (x-1)(x^{2}-1)(x^{5}+3x-1)=0$\n\n$\\therefore$ $x=\\pm 1$ are roots of above equation and $x^{5}+3x-1$ is a monotonic term hence vanishs at exactly one value of x other than 1 or $-$1.\n\n$\\therefore$ 3 real roots.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gjh7x",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\mathrm{n}(2\\mathrm{n}+1)\\int\\limits _{0}^{1}(1-x^{\\mathrm{n}})^{2\\mathrm{n}}\\mathrm{d}x=1177\\int\\limits _{0}^{1}(1-x^{\\mathrm{n}})^{2\\mathrm{n}+1}\\mathrm{d}x$, then $\\mathrm{n}\\in 𝐍$ is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 24.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{0}^{1}(1-x^{n})^{2n+1}dx=\\int\\limits _{0}^{1}1~.\\quad (1-x^{n})^{2n+1}dx$\n\n$=\\left [(1-x^{n})^{2n+1}.x\\right ]_{0}^{1}-\\int\\limits _{0}^{1}x.\\quad (2n+1)(1-x^{n})^{2n}.-nx^{n-1}dx$\n\n$=n(2n+1)\\int\\limits _{0}^{1}(1-(1-x^{n}))(1-x^{n})^{2n}dx$\n\n$=n(2n+1)\\int\\limits _{0}^{1}(1-x^{n})^{2n}dx-n(2n+1)\\int\\limits _{0}^{1}(1-x^{n})^{2n+1}dx$\n\n$(1+n(2n+1))\\int\\limits _{0}^{1}(1-x^{n})^{2n+1}dx=n(2n+1)\\int\\limits _{0}^{1}(1-x^{n})^{2n}dx$\n\n$(2n^{2}+n+1)\\int\\limits _{0}^{1}(1-x^{n})^{2n+1}dx=1177\\int\\limits _{0}^{1}(1-x^{n})^{2n+1}dx$\n\n$\\therefore$ $2n^{2}+n+1=1177$\n\n$2n^{2}+n-1176=0$\n\n$\\therefore$ $n=24$ or $-\\frac{49}{2}$\n\n$\\therefore$ $n=24$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gjlh7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The equations of the sides $\\mathrm{AB},\\mathrm{BC}$ and $\\mathrm{CA}$ of a triangle $\\mathrm{ABC}$ are $2x+y=0,x+\\mathrm{p}y=15\\mathrm{a}$ and $x-y=3$ respectively. If its orthocentre is $(2,a),-\\frac{1}{2}<\\mathrm{a}<2$, then $\\mathrm{p}$ is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Vertex A is the intersection of $2x+y=0$ and $x-y=3$, so $A=(1,-2)$.\n\n$AH⟂BC$: slope of $AH=\\dfrac{a+2}{2-1}=a+2$ and slope of $BC=-\\dfrac{1}{p}$, so $(a+2)\\left (-\\dfrac{1}{p}\\right )=-1\\Rightarrow p=a+2$, i.e. $a=p-2$.\n\nVertex C: putting $x=y+3$ in $x+py=15a$ gives $y=\\dfrac{15a-3}{p+1}=\\dfrac{15p-33}{p+1}$ and $x=y+3=\\dfrac{18p-30}{p+1}$.\n\n$CH⟂AB$, and $AB$ has slope $-2$, so the slope of $CH$ is $\\dfrac{1}{2}$:\n\n$\\dfrac{\\dfrac{15p-33}{p+1}-(p-2)}{\\dfrac{18p-30}{p+1}-2}=\\dfrac{15p-33-(p-2)(p+1)}{16p-32}=\\dfrac{-p^{2}+16p-31}{16p-32}=\\dfrac{1}{2}$\n\n$-2p^{2}+32p-62=16p-32\\Rightarrow p^{2}-8p+15=0\\Rightarrow p=3\\text{or}5$\n\n$p=5$ gives $a=3$, outside $-\\dfrac{1}{2}<a<2$; $p=3$ gives $a=1$, which is allowed.\n\nHence, the answer is 3.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gjnyu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let the function $f(x)=2x^{2}-\\log _{\\mathrm{e}}x,x>0$, be decreasing in $(0,\\mathrm{a})$ and increasing in $(\\mathrm{a},4)$. A tangent to the parabola $y^{2}=4ax$ at a point $\\mathrm{P}$ on it passes through the point $(8\\mathrm{a},8\\mathrm{a}-1)$ but does not pass through the point $\\left (-\\frac{1}{a},0\\right )$. If the equation of the normal at $P$ is : $\\frac{x}{α}+\\frac{y}{β}=1$, then $α+β$ is equal to $________________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 45.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f^{'}(x)=\\frac{4x^{2}-1}{x}$ so f(x) is decreasing in $\\left (0,\\frac{1}{2}\\right )$ and increasing in $\\left (\\frac{1}{2},\\infty \\right )\\Rightarrow a=\\frac{1}{2}$\n\nTangent at $y^{2}=2x\\Rightarrow y=mx+\\frac{1}{2m}$\n\nIt is passing through $(4,3)$\n\n$3=4m+\\frac{1}{2m}\\Rightarrow m=\\frac{1}{2}$ or $\\frac{1}{4}$\n\nSo tangent may be\n\n$y=\\frac{1}{2}x+1$ or $y=\\frac{1}{4}x+2$\n\nBut $y=\\frac{1}{2}x+1$ passes through $(-2,0)$ so rejected.\n\nEquation of normal\n\n$y=-4x-2\\left (\\frac{1}{2}\\right )(-4)-\\frac{1}{2}(-4)^{3}$\n\nor $y=-4x+4+32$\n\nor $\\frac{x}{9}+\\frac{y}{36}=1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2022-1l6gjpve",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\mathrm{Q}$ and $\\mathrm{R}$ be two points on the line $\\frac{x+1}{2}=\\frac{y+2}{3}=\\frac{z-1}{2}$ at a distance $\\sqrt{26}$ from the point $P(4,2,7)$. Then the square of the area of the triangle $PQR$ is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 153.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2022,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$L:\\frac{x+1}{2}=\\frac{y+2}{3}=\\frac{2-1}{2}$\n\n \n[IMG]\n \n\nLet $T(2t-1,3t-2,2t+1)$\n\n$\\because$ $PT⊥^{r}QR$\n\n$\\therefore$ $2(2t-5)+3(3t-4)+2(2t-6)=0$\n\n$17t=34$\n\n$\\therefore$ $t=2$\n\nSo $T(3,4,5)$\n\n$\\therefore$ $PT=\\sqrt{1+4+4}=3$\n\n$\\therefore$ $QT=\\sqrt{26-9}=\\sqrt{17}$\n\n$\\therefore$ Area of $\\Delta PQR=\\frac{1}{2}\\times 2\\sqrt{17}\\times 3=3\\sqrt{17}$\n\n$\\therefore$ Square of $ar(\\Delta PQR)=153$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2022-online-26th-july-morning-shift/1l6gjpve9-0.png",
+    "altText": "Original exam figure (JEE Main 2022 (Online) 26th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

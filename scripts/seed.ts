@@ -96,6 +96,18 @@ async function seedQuestions() {
         skipped++
         continue
       }
+      // mirror admin-import validation: ungradeable questions (bonus MCQs
+      // dropped by NTA / numericals without an official answer) stay in the
+      // archive files but are not seeded
+      const isBonus = (q.tags ?? []).includes('bonus-dropped-by-nta')
+      const ungradeable =
+        (q.type !== 'numerical' && (!q.correctOptions || q.correctOptions.length === 0) && !isBonus) ||
+        (q.type === 'numerical' && !isBonus && (q.numericalAnswer == null || q.numericalAnswer === ''))
+      if (ungradeable) {
+        console.warn(`  !! ${q.publicId}: no answer key (bonus/ungradeable) — skipped`)
+        skipped++
+        continue
+      }
 
       await db.question.create({
         data: {

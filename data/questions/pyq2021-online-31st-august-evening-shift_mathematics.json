@@ -1,0 +1,818 @@
+[
+ {
+  "publicId": "PYQ-2021-1ktk3cn9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $α$ + $β$ + $γ$ = 2$π$, then the system of equations \n\nx + (cos $γ$)y + (cos $β$)z = 0\n\n(cos $γ$)x + y + (cos $α$)z = 0\n\n(cos $β$)x  + (cos $α$)y + z = 0\n\nhas :",
+  "options": [
+   "no solution",
+   "infinitely many solution",
+   "exactly two solutions",
+   "a unique solution"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $α$ + $β$ + $γ$ = 2$π$\n\n$\\Delta =\\left |\\begin{array}{lll} 1 & \\cos γ & \\cos β \\\\ \\cos γ & 1 & \\cos α \\\\ \\cos β & \\cos α & 1 \\end{array}\\right |$\n\n$=1-\\cos ^{2}α-\\cos γ(\\cos γ-\\cos α\\cos β)+\\cos β(\\cos α\\cos γ-\\cos β)$\n\n$=1-\\cos ^{2}α-\\cos ^{2}β-\\cos ^{2}γ+2\\cos α\\cos β\\cos γ$\n\n$=\\sin ^{2}α-\\cos ^{2}β-\\cos γ(\\cos γ-2\\cos α\\cos β)$\n\n$=-\\cos (α+β)\\cos (α-β)-\\cos γ(\\cos (2π-(α-β))-2\\cos α\\cos β)$\n\n$=-\\cos (2π-γ)\\cos (α-β)-\\cos γ(\\cos (α+β)-2\\cos α\\cos β)$\n\n$=-\\cos γ\\cos (α-β)+\\cos γ(\\cos α\\cos β+\\sin α\\sin β)$\n\n$=-\\cos γ\\cos (α-β)+\\cos γ\\cos (α-β)$\n\n$=0$\n\nSo, the system of equation has infinitely many solutions.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk4rt9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The domain of the function\n\n$f(x)=\\sin ^{-1}\\left (\\frac{3x^{2}+x-1}{(x-1)^{2}}\\right )+\\cos ^{-1}\\left (\\frac{x-1}{x+1}\\right )$ is :",
+  "options": [
+   "$\\left [0,\\frac{1}{4}\\right ]$",
+   "$[-2,0]\\cup \\left [\\frac{1}{4},\\frac{1}{2}\\right ]$",
+   "$\\left [\\frac{1}{4},\\frac{1}{2}\\right ]\\cup \\{0\\}$",
+   "$\\left [0,\\frac{1}{2}\\right ]$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\sin ^{-1}\\left (\\frac{3x^{2}+x-1}{(x-1)^{2}}\\right )+\\cos ^{-1}\\left (\\frac{x-1}{x+1}\\right )$\n\n$-1\\leq \\frac{x-1}{x+1}\\leq 1\\Rightarrow 0\\leq x<\\infty$ .... (1)\n\n$-1\\leq \\frac{3x^{2}+x-1}{(x-1)^{2}}\\leq 1\\Rightarrow x\\in \\left [\\frac{-1}{4},\\frac{1}{2}\\right ]\\cup \\{0\\}$ .... (2)\n\n(1) & (2)\n\n$\\Rightarrow$ Domain = $\\left [\\frac{1}{4},\\frac{1}{2}\\right ]\\cup \\{0\\}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk4uzq",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let S = {1, 2, 3, 4, 5, 6}. Then the probability that a randomly chosen onto function g from S to S satisfies g(3) = 2g(1) is :",
+  "options": [
+   "$\\frac{1}{10}$",
+   "$\\frac{1}{15}$",
+   "$\\frac{1}{5}$",
+   "$\\frac{1}{30}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "g(3) = 2g(1) can be defined in 3 ways\n\nnumber of onto functions in this condition = 3 $\\times$ 4!\n\nTotal number of onto functions = 6!\n\nRequired probability = $\\frac{3\\times 4!}{6!}=\\frac{1}{10}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk52hw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : N $\\to$ N be a function such that f(m + n) = f(m) + f(n) for every m, n$\\in$N. If f(6) = 18, then f(2) . f(3) is equal to :",
+  "options": [
+   "6",
+   "54",
+   "18",
+   "36"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "f(m + n) = f(m) + f(n)\n\nPut m  = 1, n = 1\n\nf(2) = 2f(1)\n\nPut m = 2, n = 1\n\nf(3) = f(2) + f(1) = 3f(1)\n\nPut m = 3, n = 3\n\nf(6) = 2f(3) $\\Rightarrow$ f(3) = 9\n\n$\\Rightarrow$ f(1) = 3, f(2) = 6\n\nf(2) . f(3) = 6 $\\times$ 9 = 54",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk6iv5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $α=\\lim _{x\\to \\frac{π}{4}}\\frac{\\tan ^{3}x-\\tan x}{\\cos \\left (x+\\frac{π}{4}\\right )}$ and $β=\\lim _{x\\to 0}(\\cos x)^{\\cot x}$ are the roots of the equation, $ax^{2} + bx$ $-$ 4 = 0, then the ordered pair (a, b) is :",
+  "options": [
+   "(1, $-$3)",
+   "($-$1, 3)",
+   "($-$1, $-$3)",
+   "(1, 3)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α=\\lim _{x\\to \\frac{π}{4}}\\frac{\\tan ^{3}x-\\tan x}{\\cos \\left (x+\\frac{π}{4}\\right )};\\frac{0}{0}$ form\n\nUsing L Hospital rule\n\n$α=\\lim _{x\\to \\frac{π}{4}}\\frac{3\\tan ^{2}x\\sec ^{2}x-\\sec ^{2}x}{-\\sin \\left (x+\\frac{π}{4}\\right )}$\n\n$α$ = $-$4\n\n$β=\\lim _{x\\to 0}(\\cos x)^{\\cot x}=e^{\\lim _{x\\to 0}\\frac{(\\cos x-1)}{\\tan x}}$\n\n$β=e^{\\lim _{x\\to 0}\\frac{-(1-\\cos x)}{x2}.\\frac{x2}{\\left (\\dfrac{\\tan x}{x}\\right )x}}$\n\n$β=e^{\\lim _{x\\to 0}\\left (\\frac{-1}{2}\\right ).\\frac{x}{1}}=e^{0}\\Rightarrow β=1$\n\n$α$ = $-$4; $β$ = 1\n\nIf $ax^{2} + bx$ $-$ 4 = 0 are the roots then\n\n16a $-$ 4b $-$ 4 = 0 & a + b $-$ 4 = 0\n\n$\\Rightarrow$ a = 1 & b = 3",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk7432",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The locus of mid-points of the line segments joining ($-$3, $-$5) and the points on the ellipse $\\frac{x^{2}}{4}+\\frac{y^{2}}{9}=1$ is :",
+  "options": [
+   "$9x^{2}+4y^{2}+18x+8y+145=0$",
+   "$36x^{2}+16y^{2}+90x+56y+145=0$",
+   "$36x^{2}+16y^{2}+108x+80y+145=0$",
+   "$36x^{2}+16y^{2}+72x+32y+145=0$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "General point on $\\frac{x^{2}}{4}+\\frac{y^{2}}{9}=1$ is A(2cos$θ$, 3sin$θ$)\n\ngiven B($-$3, $-$5)\n\nmidpoint $C\\left (\\frac{2\\cos θ-3}{2},\\frac{3\\sin θ-5}{2}\\right )$\n\n$h=\\frac{2\\cos θ-3}{2};k=\\frac{3\\sin θ-5}{2}$\n\n$\\Rightarrow \\left (\\frac{2h+3}{2}\\right )^{2}+\\left (\\frac{2k+5}{3}\\right )^{2}=1$\n\n$\\Rightarrow 36x^{2}+16y^{2}+108x+80y+145=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk7ci6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{dy}{dx}=\\frac{2^{x}y+2^{y}.2^{x}}{2^{x}+2^{x+y}\\log _{e}2}$, y(0) = 0, then for y = 1, the value of x lies in the interval :",
+  "options": [
+   "(1, 2)",
+   "$\\left (\\frac{1}{2},1\\right ]$",
+   "(2, 3)",
+   "$\\left (0,\\frac{1}{2}\\right ]$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}=\\frac{2^{x}(y+2^{y})}{2^{x}(1+2^{y}\\ln 2)}$\n\n$\\Rightarrow \\int \\frac{(1+2^{y}\\ln 2)}{(y+2^{y})}dy=\\int dx$\n\n$\\Rightarrow \\ln |y+2^{y}|=x+c$\n\nx = 0; y = 0 $\\Rightarrow$ c = 0\n\n$\\Rightarrow x=\\ln |y+2^{y}|$\n\n$\\Rightarrow$ at y = 1, x = ln3\n\n$\\because$ $3\\in (e,e^{2})\\Rightarrow x\\in (1,2)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk8vcg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $y\\frac{dy}{dx}=x\\left [\\frac{y^{2}}{x^{2}}+\\frac{𝜙\\left (\\frac{y2}{x2}\\right )}{𝜙^{'}\\left (\\frac{y2}{x2}\\right )}\\right ]$, x > 0, $𝜙$ > 0, and y(1) = $-$1, then $𝜙\\left (\\frac{y^{2}}{4}\\right )$ is equal to :",
+  "options": [
+   "4 $𝜙$ (2)",
+   "4$𝜙$ (1)",
+   "2 $𝜙$ (1)",
+   "$𝜙$ (1)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let, $y=tx$\n\n$\\frac{dy}{dx}=t+x\\frac{dt}{dx}$\n\n$\\therefore$ $tx\\left (t+x\\frac{dt}{dx}\\right )=x\\left (t^{2}+\\frac{φ(t^{2})}{φ^{'}(t^{2})}\\right )$\n\n$t^{2}+xt\\frac{dt}{dx}=t^{2}+\\frac{φ(t^{2})}{φ^{'}(t^{2})}$\n\n$\\int \\frac{tφ^{'}(t^{2})}{φ(t^{2})}dt=\\int \\frac{dx}{x}$\n\nLet $φ(t^{2})=p$\n\n$\\therefore$ $φ^{'}(t^{2})2tdt=dp$\n\n$\\Rightarrow \\int \\frac{dy}{2p}=\\int \\frac{dx}{x}$\n\n$\\frac{1}{2}\\ln φ(t^{2})=\\ln x+\\ln c$\n\n$φ(t^{2})=x^{2}k$\n\n$φ\\left (\\frac{y^{2}}{x^{2}}\\right )=kx^{2},φ(1)=k$\n\n$φ\\left (\\frac{y^{2}}{4}\\right )=4φ(1)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk9308",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The sum of the roots of the equation \n\n$x+1-2\\log _{2}(3+2^{x})+2\\log _{4}(10-2^{-x})=0$, is :",
+  "options": [
+   "$\\log _{2} 14$",
+   "$\\log _{2} 11$",
+   "$\\log _{2} 12$",
+   "$\\log _{2} 13$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x+1-2\\log _{2}(3+2^{x})+2\\log _{4}(10-2^{-x})=0$\n\n$\\log _{2}(2^{x+1})-\\log _{2}(3+2^{x})^{2}+\\log _{2}(10-2^{-x})=0$\n\n$\\log _{2}\\left (\\frac{2^{x+1}.(10-2^{-x})}{(3+2^{x})^{2}}\\right )=0$\n\n$\\frac{2(10.2^{-x}-1)}{(3+2^{x})^{2}}=1$\n\n$\\Rightarrow 20.2^{x}-2=9+2^{2x}+6.2^{x}$\n\n$\\therefore$ $(2^{x})^{2}-14(2^{x})+11=0$\n\nRoots are $2^{x1}$ & $2^{x2}$\n\n$\\therefore$ $2^{x1} . 2^{x2} = 11$\n\n$x_{1} + x_{2} = \\log _{2}(11)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk9aap",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If z is a complex number such that $\\frac{z-i}{z-1}$ is purely imaginary, then the minimum value of | z $-$ (3 + 3i) | is :",
+  "options": [
+   "$2\\sqrt{2}-1$",
+   "$3\\sqrt{2}$",
+   "$6\\sqrt{2}$",
+   "$2\\sqrt{2}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{z-i}{z-1}$ is purely imaginary number\n\nLet $z=x+iy$\n\n$\\therefore$ $\\frac{x+i(y-1)}{(x-1)+i(y)}\\times \\frac{(x-1)-iy}{(x-1)-iy}$\n\n$\\Rightarrow \\frac{x(x-1)+y(y-1)+i(-y-x+1)}{(x-1)^{2}+y^{2}}$ is purely imaginary number\n\n$\\Rightarrow x(x-1)+y(y-1)=0$\n\n$\\Rightarrow \\left (x-\\frac{1}{2}\\right )^{2}+\\left (y-\\frac{1}{2}\\right )^{2}=\\frac{1}{2}$\n\n \n[IMG]\n \n\n$\\therefore$ $|z-(3+3i)|_{\\min }=|PC|-\\frac{1}{\\sqrt{2}}$\n\n$=\\frac{5}{\\sqrt{2}}-\\frac{1}{\\sqrt{2}}=2\\sqrt{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-31st-august-evening-shift/1ktk9aapu-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 31st August Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktk9gc8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a_{1}, a_{2}, a_{3}$, ..... be an A.P. If $\\frac{a_{1}+a_{2}+....+a_{10}}{a_{1}+a_{2}+....+a_{p}}=\\frac{100}{p^{2}}$, p $\\neq$ 10, then $\\frac{a_{11}}{a_{10}}$ is equal to :",
+  "options": [
+   "$\\frac{19}{21}$",
+   "$\\frac{100}{121}$",
+   "$\\frac{21}{19}$",
+   "$\\frac{121}{100}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{\\frac{10}{2}(2a_{1}+9d)}{\\frac{p}{2}(2a_{1}+(p-1)d)}=\\frac{100}{p^{2}}$\n\n$(2a_{1}+9d)p=10(2a_{1}+(p-1)d)$\n\n$9dp=20a_{1}-2pa_{1}+10d(p-1)$\n\n$9p=(20-2p)\\frac{a_{1}}{d}+10(p-1)$\n\n$\\frac{a_{1}}{d}=\\frac{(10-p)}{2(10-p)}=\\frac{1}{2}$\n\n$\\therefore$ $\\frac{a_{11}}{a_{10}}=\\frac{a_{1}+10d}{a_{1}+9d}=\\frac{\\frac{1}{2}+10}{\\frac{1}{2}+9}=\\frac{21}{19}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktk9nxg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let A be the set of all points ($α$, $β$) such that the area of triangle formed by the points (5, 6), (3, 2) and ($α$, $β$) is 12 square units. Then the least possible length of a line segment joining the origin to a point in A, is :",
+  "options": [
+   "$\\frac{4}{\\sqrt{5}}$",
+   "$\\frac{16}{\\sqrt{5}}$",
+   "$\\frac{8}{\\sqrt{5}}$",
+   "$\\frac{12}{\\sqrt{5}}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For the triangle with vertices $(5,6)$, $(3,2)$ and $(α,β)$:\n\n$\\dfrac{1}{2}\\left |\\right |\\begin{array}{lll} 5 & 6 & 1 \\\\ 3 & 2 & 1 \\\\ α & β & 1 \\end{array}\\left |\\right |=12$\n\nThe determinant is $5(2-β)-6(3-α)+(3β-2α)=4α-2β-8$, so $|4α-2β-8|=24$.\n\nHence $2α-β=16$ or $2α-β=-8$: the set A is the union of the parallel lines $2x-y-16=0$ and $2x-y+8=0$.\n\nThe shortest segment from the origin to a point of A is the smaller of the perpendicular distances from the origin to these lines, $\\dfrac{16}{\\sqrt{5}}$ and $\\dfrac{8}{\\sqrt{5}}$, which is $\\dfrac{8}{\\sqrt{5}}$.\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktka5va",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If [x] is the greatest integer $\\leq$ x, then \n\n$π^{2}\\int\\limits _{0}^{2}\\left (\\sin \\frac{πx}{2}\\right )(x-[x])^{[x]}dx$ is equal to :",
+  "options": [
+   "2($π$ $-$ 1)",
+   "4($π$ $-$ 1)",
+   "4($π$ + 1)",
+   "2($π$ + 1)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=π^{2}\\int\\limits _{0}^{2}\\sin \\left (\\frac{πx}{2}\\right )(x-[x])^{[x]}dx$\n\n$=π^{2}\\int\\limits _{0}^{1}\\sin \\left (\\frac{πx}{2}\\right )x^{0}dx+π^{2}\\int\\limits _{1}^{2}\\sin \\left (\\frac{πx}{2}\\right )(x-1)dx$\n\n$=π^{2}\\left [\\frac{-2}{π}\\cos \\frac{πx}{2}\\right ]_{0}^{1}+π^{2}\\left [(x-1)\\frac{2}{π}\\left (-\\cos \\frac{πx}{2}\\right )\\right ]_{1}^{2}+π^{2}\\int\\limits _{1}^{2}\\frac{2}{π}\\cos \\frac{πx}{2}dx$\n\n$=π^{2}\\left (\\frac{2}{π}\\right )+\\frac{2π^{2}}{π}(1-0)+2π.\\frac{2}{π}\\left (\\sin \\frac{πx}{2}\\right )\\left |_{1}^{2} \\right.$\n\n$=2π+2π+4(0-1)=4π-4=4(π-1)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktkac2u",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The mean and variance of 7 observations are 8 and 16 respectively. If two observations are 6 and 8, then the variance of the remaining 5 observations is :",
+  "options": [
+   "$\\frac{92}{5}$",
+   "$\\frac{134}{5}$",
+   "$\\frac{536}{25}$",
+   "$\\frac{112}{5}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $6, 8, x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$ be the observations.\n\nNow, $\\frac{x_{1}+x_{2}+....+x_{5}+14}{7}=8$\n\n$\\Rightarrow \\sum\\limits _{i=1}^{5}x_{i}=42$ .... (1)\n\nAlso, $\\frac{x_{1}^{2}+x_{2}^{2}+...x_{5}^{2}+8^{2}+6^{2}}{7}-64=16$\n\n$\\Rightarrow \\sum\\limits _{i=1}^{5}x_{i}^{2}=560-100=460$ ..... (2)\n\nSo variance of $x_{1}, x_{2}, ......., x_{5}$\n\n$=\\frac{460}{5}-\\left (\\frac{42}{5}\\right )^{2}=\\frac{2300-1764}{25}=\\frac{536}{25}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktkde0y",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the coefficient of $a^{7}b^{8}$ in the expansion of $(a + 2b + 4ab)^{10}$ is $K.2^{16}$, then K is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 315.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{10!}{α!β!γ!}a^{α}(2b)^{β}.(4ab)^{γ}$\n\n$\\frac{10!}{α!β!γ!}a^{α+γ}.b^{β+γ}.2^{β}.4^{γ}$\n\n$α+β+γ=10$ ..... (1)\n\n$α+γ=7$ .... (2)\n\n$β+γ=8$ ..... (3)\n\n$(2)+(3)-(1)\\Rightarrow γ=5$\n\n$α=2$\n\n$β=3$\n\nso coefficients = $\\frac{10!}{2!3!5!}2^{3}.2^{10}$\n\n$=\\frac{10\\times 9\\times 8\\times 7\\times 6\\times 5!}{2\\times 3\\times 2\\times 5!}\\times 2^{13}$\n\n$=315\\times 2^{16}\\Rightarrow k=315$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktkdo86",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of 4-digit numbers which are neither multiple of 7 nor multiple of 3 is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5143.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A = 4-digit numbers divisible by 3\n\nA = 1002, 1005, ....., 9999.\n\n9999 = 1002 + (n $-$ 1)3\n\n$\\Rightarrow$ (n $-$ 1)3 = 8997 $\\Rightarrow$ n = 3000\n\nB = 4-digit numbers divisible by 7\n\nB = 1001, 1008, ......., 9996\n\n$\\Rightarrow$ 9996 = 1001 + (n $-$ 1)7\n\n$\\Rightarrow$ n = 1286\n\nA $\\cap$ B = 1008, 1029, ....., 9996\n\n9996 = 1008 + (n $-$ 1)21\n\n$\\Rightarrow$ n = 429\n\nSo, no divisible by either 3 or 7\n\n= 3000 + 1286 $-$ 429 = 3857\n\ntotal 4-digits numbers = 9000\n\nrequired numbers = 9000 $-$ 3857 = 5143",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktke5n0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\int \\frac{\\sin x}{\\sin ^{3}x+\\cos ^{3}x}dx=$ \n\n$α\\log _{e}|1+\\tan x|+β\\log _{e}|1-\\tan x+\\tan ^{2}x|+γ\\tan ^{-1}\\left (\\frac{2\\tan x-1}{\\sqrt{3}}\\right )+C$, where C is constant of integration, then the value of $18(α+β+γ^{2})$ is $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$=\\int \\frac{\\frac{\\sin x}{\\cos 3x}}{1+\\tan ^{3}x}dx=\\int \\frac{\\tan x.\\sec ^{2}x}{(\\tan x+1)(1+\\tan ^{2}x-\\tan x)}dx$\n\nLet $\\tan x=t\\Rightarrow \\sec ^{2}x.dx=dt$\n\n$=\\int \\frac{t}{(t+1)(t^{2}-t+1)}dt$\n\n$=\\int \\left (\\frac{A}{t+1}+\\frac{B(2t-1)}{t^{2}-t+1}+\\frac{C}{t^{2}-t+1}\\right )dt$\n\n$\\Rightarrow A(t^{2}-t+1)+B(2t-1)(t+1)+C(t+1)=t$\n\n$\\Rightarrow t^{2}(A+2B)+t(-A+B+C)+A-B+C=t$\n\n$\\therefore$ $A+2B=0$ ..... (1)\n\n$-A+B+C=1$ ... (2)\n\n$A-B+C=0$ ... (3)\n\n$\\Rightarrow C=\\frac{1}{2}\\Rightarrow A-B=-\\frac{1}{2}$ ... (4)\n\n$A+2B=0$\n\n$A-B=-\\frac{1}{2}$\n\n$\\Rightarrow$ $3B=\\frac{1}{2}\\Rightarrow B=\\frac{1}{6}$\n\n$A=-\\frac{1}{3}$\n\n$I=-\\frac{1}{3}\\int \\frac{dt}{1+t}+\\frac{1}{6}\\int \\frac{2t-1}{t^{2}-t+1}dt+\\frac{1}{2}\\int \\frac{dt}{t^{2}-t+1}$\n\n$=-\\frac{1}{3}\\ln |(1+\\tan x)|+\\frac{1}{6}\\ln |\\tan ^{2}x-\\tan x+1|+\\frac{1}{2}.\\frac{2}{\\sqrt{3}}\\tan ^{-1}\\left (\\frac{\\left (\\tan x-\\frac{1}{2}\\right )}{\\frac{\\sqrt{3}}{2}}\\right )$\n\n$=-\\frac{1}{3}\\ln |(1+\\tan x)|+\\frac{1}{6}\\ln |\\tan ^{2}x-\\tan x+1|+\\frac{1}{\\sqrt{3}}\\tan ^{-1}\\left (\\frac{2\\tan x-1}{\\sqrt{3}}\\right )+C$\n\n$α=-\\frac{1}{3},β=\\frac{1}{6},γ=\\frac{1}{\\sqrt{3}}$\n\n$18(α+β+γ^{2})=18\\left (-\\frac{1}{3}+\\frac{1}{6}+\\frac{1}{3}\\right )=3$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktkekk3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of elements in the set $\\left \\{A=\\left (\\begin{array}{ll} a & b \\\\ 0 & d \\end{array}\\right ):a,b,d\\in \\{-1,0,1\\}and(I-A)^{3}=I-A^{3}\\right \\}$, where I is 2 $\\times$ 2 identity matrix, is :",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(I-A)^{3}=I^{3}-A^{3}-3A(I-A)=I-A^{3}$\n\n$\\Rightarrow 3A(I-A)=0$ or $A^{2}=A$\n\n$\\Rightarrow \\left [\\begin{array}{ll} a^{2} & ab+bd \\\\ 0 & d^{2} \\end{array}\\right ]=\\left [\\begin{array}{ll} a & b \\\\ 0 & d \\end{array}\\right ]$\n\n$\\Rightarrow a^{2}=a,b(a+d-1)=0,d^{2}=d$\n\nIf b $\\neq$ 0, a + d = 1 $\\Rightarrow$ 4 ways\n\nIf b = 0, a = 0, 1 & d = 0, 1 $\\Rightarrow$ 4 ways\n\n$\\Rightarrow$ Total 8 matrices",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktkeocf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the line y = mx bisects the area enclosed by the lines x = 0, y = 0, x = $\\frac{3}{2}$ and the curve y = 1 + 4x $-$ $x^{2}$, then 12 m is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 26.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n \n\nAccording to the question,\n\n$\\frac{1}{2}\\int\\limits _{0}^{3/2}(1+4x-x^{2})dx=\\int\\limits _{0}^{3/2}mxdx$\n\n$\\Rightarrow \\frac{1}{2}\\left [\\left (x+2x^{2}-\\frac{x^{3}}{3}\\right )\\right ]_{0}^{3/2}=\\frac{m}{2}[x]_{0}^{3/2}\\Rightarrow \\frac{3}{2}+\\frac{9}{2}-\\frac{9}{8}=\\frac{9m}{4}$\n\n$\\Rightarrow$ m = 39/18 $\\Rightarrow$ 12m = 26",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-31st-august-evening-shift/1ktkeocfd-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 31st August Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktkevgz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let f(x) be a cubic polynomial with f(1) = $-$10, f($-$1) = 6, and has a local minima at x = 1, and f'(x) has a local minima at x = $-$1. Then f(3) is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 22.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $f(x) = ax^{3} + bx^{2} + cx + d$\n\n$f'(x) = 3ax^{2} + 2bx + c$ $\\Rightarrow$ f''(x) = 6ax + 2b\n\nf'(x) has local minima at x = $-$1, so\n\n$\\because$ f''($-$1) = 0 $\\Rightarrow$ $-$6a + 2b = 0 $\\Rightarrow$ b = 3a ..... (i)\n\nf(x) has local minima at x = 1\n\nf'(1) = 0\n\n$\\Rightarrow$ 3a + 6a + c = 0\n\n$\\Rightarrow$ c = $-$9a ..... (ii)\n\nf(1) = $-$10\n\n$\\Rightarrow$ $-$5a + d = $-$10 ..... (iii)\n\nf($-$1) = 6\n\n$\\Rightarrow$ 11a + d = 6 ..... (iv)\n\nSolving Eqs. (iii) and (iv)\n\na = 1, d = $-$5\n\nFrom Eqs. (i) and (ii),\n\nb = 3, c = $-$9\n\n$\\therefore$ $f(x) = x^{3} + 3x^{2}$ $-$ 9x $-$ 5\n\nSo, f(3) = 27 + 27 $-$ 27 $-$ 5 = 22",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

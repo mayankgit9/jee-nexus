@@ -1,0 +1,991 @@
+[
+ {
+  "publicId": "PYQ-2021-1ktio607",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of real roots of the equation \n\n$e^{4x}+2e^{3x}-e^{x}-6=0$ is :",
+  "options": [
+   "2",
+   "4",
+   "1",
+   "0"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $e^{x}=t>0$\n\n$f(t)=t^{4}+2t^{3}-t-6=0$\n\n$f^{'}(t)=4t^{3}+6t^{2}-1$\n\n\n[IMG]\n\n\n$f^{''}(t)=12t^{2}+12t>0$\n\n\n[IMG]\n\n\n$f(0)=-6,f(1)=-4,f(2)=24$\n\n$\\Rightarrow$ Number of real roots = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-31st-august-morning-shift/1ktio607h-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 31st August Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2021-online-31st-august-morning-shift/1ktio607h-1.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 31st August Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktiotbd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f be a non-negative function in [0, 1] and twice differentiable in (0, 1). If $\\int\\limits _{0}^{x}\\sqrt{1-(f^{'}(t))^{2}}dt=\\int\\limits _{0}^{x}f(t)dt$, $0\\leq x\\leq 1$ and f(0) = 0, then $\\lim _{x\\to 0}\\frac{1}{x^{2}}\\int\\limits _{0}^{x}f(t)dt$ :",
+  "options": [
+   "equals 0",
+   "equals 1",
+   "does not exist",
+   "equals $\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{0}^{x}\\sqrt{1-(f^{'}(t))^{2}}dt=\\int\\limits _{0}^{x}f(t)dt,0\\leq x\\leq 1$\n\ndifferentiating both the sides\n\n$\\sqrt{1-(f^{'}(x))^{2}}=f(x)$\n\n$\\Rightarrow 1-(f^{'}(x))^{2}=f^{2}(x)$\n\n$\\frac{f^{'}(x)}{\\sqrt{1-f^{2}(x)}}=1$\n\n$\\sin ^{-1}f(x)=x+C$\n\n$\\because$ $f(0)=0\\Rightarrow C=0\\Rightarrow f(x)=\\sin x$\n\nNow, $\\lim _{x\\to 0}\\frac{\\int\\limits _{0}^{x}\\sin tdt}{x^{2}}\\left (\\frac{0}{0}\\right )=\\frac{1}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktip5iv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{a}$ and $\\vec{b}$ be two vectors \nsuch that $\\left |2\\vec{a}+3\\vec{b}\\right |=\\left |3\\vec{a}+\\vec{b}\\right |$ and the angle between $\\vec{a}$ and $\\vec{b}$ is 60${}^{\\circ }$. If $\\frac{1}{8}\\vec{a}$ is a unit vector, then $\\left |\\vec{b}\\right |$ is equal to :",
+  "options": [
+   "4",
+   "6",
+   "5",
+   "8"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left |3\\vec{a}+\\vec{b}\\right |^{2}=\\left |2\\vec{a}+3\\vec{b}\\right |^{2}$\n\n$\\left (3\\vec{a}+\\vec{b}\\right ).\\left (3\\vec{a}+\\vec{b}\\right )=\\left (2\\vec{a}+3\\vec{b}\\right ).\\left (2\\vec{a}+3\\vec{b}\\right )$\n\n$9\\vec{a}.\\vec{a}+6\\vec{a}.\\vec{b}+\\vec{b}.\\vec{b}=4\\vec{a}.\\vec{a}+12\\vec{a}.\\vec{b}+9\\vec{b}.\\vec{b}$\n\n$5\\left |\\vec{a}\\right |^{2}-6\\vec{a}.\\vec{b}=8\\left |\\vec{b}\\right |^{2}$\n\n$5(8)^{2}-6.8.\\left |\\vec{b}\\right |\\cos 60^{\\circ }=8\\left |\\vec{b}\\right |^{2}$ $\\because$ $⎛⎝⎜\\begin{array}{l} \\frac{1}{8}\\left |\\vec{a}\\right |=1 \\\\ \\Rightarrow \\left |\\vec{a}\\right |=8 \\end{array}⎞⎠⎟$\n\n$40-3\\left |\\vec{b}\\right |=\\left |\\vec{b}\\right |^{2}$\n\n$\\Rightarrow \\left |\\vec{b}\\right |^{2}+3\\left |\\vec{b}\\right |-40=0$\n\n$\\left |\\vec{b}\\right |=-8$, $\\left |\\vec{b}\\right |=5$\n\n(rejected)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktipaq5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The function \n\n$f(x)=\\left |x^{2}-2x-3\\right |.e^{\\left |9x^{2}-12x+4\\right |}$ is not differentiable at exactly :",
+  "options": [
+   "four points",
+   "three points",
+   "two points",
+   "one point"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=|(x-3)(x+1)|.e^{(3x-2)^{2}}$\n\n$f(x)=\\left \\{\\begin{array}{lll} (x-3)(x+1).e^{(3x-2)^{2}} & ; & x\\in (3,\\infty ) \\\\ -(x-3)(x+1).e^{(3x-2)^{2}} & ; & x\\in [-1,3] \\\\ (x-3).(x+1).e^{(3x-2)^{2}} & ; & x\\in (-\\infty ,-1) \\end{array} \\right.$\n\nClearly, non-differentiable at x = $-$1 & x = 3.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktipg9j",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Three numbers are in an increasing geometric progression with common ratio r. If the middle number is doubled, then the new numbers are in an arithmetic progression with common difference d. If the fourth term of GP is $3 r^{2}$, then $r^{2}$ $-$ d is equal to :",
+  "options": [
+   "7 $-$ 7$\\sqrt{3}$",
+   "7 + $\\sqrt{3}$",
+   "7 $-$ $\\sqrt{3}$",
+   "7 + 3$\\sqrt{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let numbers be $\\frac{a}{r}$, a, ar $\\to$ G.P.\n\n$\\frac{a}{r}$, 2a, ar $\\to$ A.P. $\\Rightarrow$ 4a = $\\frac{a}{r}$ + ar $\\Rightarrow$ r + $\\frac{1}{r}$ = 4\n\nr = 2 $\\pm$ $\\sqrt{3}$\n\n$4^{th}$ term of $G.P. = 3r^{2}$ $\\Rightarrow$ $ar^{2} = 3r^{2}$ $\\Rightarrow$ a = 3\n\nr = 2 + $\\sqrt{3}$, a = 3, d = 2a $-$ $\\frac{a}{r}$ = 3$\\sqrt{3}$\n\n$r^{2}$ $-$ d = (2 + $\\sqrt{3})^{2}$ $-$ 3$\\sqrt{3}$\n\n= 7 + 4$\\sqrt{3}$ $-$ 3$\\sqrt{3}$\n\n= 7 + $\\sqrt{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktipm2v",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Which of the following is not correct for relation R on the set of real numbers ?",
+  "options": [
+   "(x, y) $\\in$ R $⇔$ 0 < |x| $-$ |y| $\\leq$ 1 is neither transitive nor symmetric.",
+   "(x, y) $\\in$ R $⇔$ 0 < |x $-$ y| $\\leq$ 1 is symmetric and transitive.",
+   "(x, y) $\\in$ R $⇔$ |x| $-$ |y| $\\leq$ 1 is reflexive but not symmetric.",
+   "(x, y) $\\in$ R $⇔$ |x $-$ y| $\\leq$ 1 is reflexive and symmetric."
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Note that (a, b) and (b, c) satisfy 0  1\n\nSo, (b) is correct.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktiptoz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The integral $\\int \\frac{1}{\\sqrt{4(x-1)^{3}(x+2)^{5}}}dx$ is equal to : (where C is a constant of integration)",
+  "options": [
+   "$\\frac{3}{4}\\left (\\frac{x+2}{x-1}\\right )^{\\frac{1}{4}}+C$",
+   "$\\frac{3}{4}\\left (\\frac{x+2}{x-1}\\right )^{\\frac{5}{4}}+C$",
+   "$\\frac{4}{3}\\left (\\frac{x-1}{x+2}\\right )^{\\frac{1}{4}}+C$",
+   "$\\frac{4}{3}\\left (\\frac{x-1}{x+2}\\right )^{\\frac{5}{4}}+C$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int \\frac{dx}{(x-1)^{3/4}(x+2)^{5/4}}$\n\n$=\\int \\frac{dx}{\\left (\\frac{x+2}{x-1}\\right )^{5/4}.(x-1)^{2}}$\n\nput $\\frac{x+2}{x-1}=t$\n\n$=-\\frac{1}{3}\\int \\frac{dt}{t^{5/4}}$\n\n$=\\frac{4}{3}.\\frac{1}{t^{1/4}}+C$\n\n$=\\frac{4}{3}\\left (\\frac{x-1}{x+2}\\right )^{1/4}+C$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktiq1mt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If p and q are the lengths of the perpendiculars from the origin on the lines,\n\nx cosec $α$ $-$ y sec $α$ = k cot 2$α$ and\n\nx sin$α$ + y cos$α$ = k sin2$α$\n\nrespectively, then $k^{2}$ is equal to :",
+  "options": [
+   "$4p^{2} + q^{2}$",
+   "$2p^{2} + q^{2}$",
+   "$p^{2} + 2q^{2}$",
+   "$p^{2} + 4q^{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "First line is $\\frac{x}{\\sin α}-\\frac{y}{\\cos α}=\\frac{k\\cos 2α}{\\sin 2α}$\n\n$\\Rightarrow x\\cos α-y\\sin α=\\frac{k}{2}\\cos 2α$ \n\n$\\Rightarrow p=\\left |\\frac{k}{2}\\cos 2α\\right |\\Rightarrow 2p=|k\\cos 2α|$ .... (i)\n\nsecond line is $x\\sin α+y\\cos α=k\\sin 2α$\n\n$\\Rightarrow q=|k\\sin 2α|$ .... (ii)\n\nHence, $4p^{2}+q^{2}=k^{2}$ (From (i) & (ii))",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktiq58t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "cosec18${}^{\\circ }$ is a root of the equation :",
+  "options": [
+   "$x^{2} + 2x$ $-$ 4 = 0",
+   "$4x^{2} + 2x$ $-$ 1 = 0",
+   "$x^{2}$ $-$ 2x + 4 = 0",
+   "$x^{2}$ $-$ 2x $-$ 4 = 0"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cos ec18^{\\circ }=\\frac{1}{\\sin 18^{\\circ }}=\\frac{4}{\\sqrt{5}-1}=\\sqrt{5}+1$\n\nLet $\\cos ec18^{\\circ }=x=\\sqrt{5}+1$\n\n$\\Rightarrow x-1=\\sqrt{5}$\n\nSquaring both sides, we get\n\n$x^{2}-2x+1=5$\n\n$\\Rightarrow x^{2}-2x-4=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktiqe5l",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the following system of linear equations\n\n2x + y + z = 5\n\nx $-$ y + z = 3\n\nx + y + az = b\n\nhas no solution, then :",
+  "options": [
+   "$a=-\\frac{1}{3},b\\neq \\frac{7}{3}$",
+   "$a\\neq \\frac{1}{3},b=\\frac{7}{3}$",
+   "$a\\neq -\\frac{1}{3},b=\\frac{7}{3}$",
+   "$a=\\frac{1}{3},b\\neq \\frac{7}{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Here $D=\\left |\\begin{array}{lll} 2 & 1 & 1 \\\\ 1 & -1 & 1 \\\\ 1 & 1 & a \\end{array}\\right |\\begin{array}{l} =2(-a-1)-1(a-1)+1(1+1) \\\\ =1-3a \\end{array}$\n\n$D_{3}=\\left |\\begin{array}{lll} 2 & 1 & 5 \\\\ 1 & -1 & 3 \\\\ 1 & 1 & b \\end{array}\\right |\\begin{array}{l} =2(-b-3)-1(b-3)+5(1+1) \\\\ =7-3b \\end{array}$\n\nfor $a=\\frac{1}{3},b\\neq \\frac{7}{3}$, system has no solutions.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktiqgay",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The length of the latus rectum of a parabola, whose vertex and focus are on the positive x-axis at a distance R and S (> R) respectively from the origin, is :",
+  "options": [
+   "4(S + R)",
+   "2(S $-$ R)",
+   "4(S $-$ R)",
+   "2(S + R)"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nV $\\to$ Vertex\n\nF $\\to$ focus\n\nVF = S $-$ R\n\nSo, latus rectum = 4(S $-$ R)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-31st-august-morning-shift/1ktiqgayf-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 31st August Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktiqpn6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the function \n$f(x)=\\left \\{\\begin{array}{lll} \\frac{1}{x}\\log _{e}\\left (\\frac{1+\\frac{x}{a}}{1-\\frac{x}{b}}\\right ) & , & x<0 \\\\ k & , & x=0 \\\\ \\frac{\\cos ^{2}x-\\sin ^{2}x-1}{\\sqrt{x^{2}+1}-1} & , & x>0 \\end{array} \\right.$ is continuous \n\nat x = 0, then $\\frac{1}{a}+\\frac{1}{b}+\\frac{4}{k}$ is equal to :",
+  "options": [
+   "$-$5",
+   "5",
+   "$-$4",
+   "4"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "If f(x) is continuous at x = 0, RHL = LHL = f(0)\n\n$\\lim _{x\\to 0^{+}}f(x)=\\lim _{x\\to 0^{+}}\\frac{\\cos ^{2}x-\\sin ^{2}x-1}{\\sqrt{x^{2}+1}-1}.\\frac{\\sqrt{x^{2}+1}+1}{\\sqrt{x^{2}+1}+1}$ (Rationalisation)\n\n$\\lim _{x\\to 0^{+}}-\\frac{2\\sin ^{2}x}{x^{2}}.\\left (\\sqrt{x^{2}+1}+1\\right )=-4$\n\n$\\lim _{x\\to 0^{-}}f(x)=\\lim _{x\\to 0^{-}}\\frac{1}{x}\\ln \\left (\\frac{1+\\frac{x}{a}}{1-\\frac{x}{b}}\\right )$\n\n$\\lim _{x\\to 0^{-}}\\frac{\\ln \\left (1+\\frac{x}{a}\\right )}{\\left (\\frac{x}{a}\\right ).a}+\\frac{\\ln \\left (1-\\frac{x}{b}\\right )}{\\left (-\\frac{x}{b}\\right ).b}=\\frac{1}{a}+\\frac{1}{b}$\n\nSo, $\\frac{1}{a}+\\frac{1}{b}=-4=k$\n\n$\\Rightarrow \\frac{1}{a}+\\frac{1}{b}+\\frac{4}{k}=-4-1=-5$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktiqwm6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{dy}{dx}=\\frac{2^{x+y}-2^{x}}{2^{y}}$, y(0) = 1, then y(1) is equal to :",
+  "options": [
+   "$\\log _{2}(2 + e)$",
+   "$\\log _{2}(1 + e)$",
+   "$\\log _{2}(2e)$",
+   "$\\log _{2}(1 + e^{2})$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}=\\frac{2^{x+y}-2^{x}}{2^{y}}$\n\n$2^{y}\\frac{dy}{dx}=2^{x}(2^{y}-1)$\n\n$\\int \\frac{2^{y}}{2^{y}-1}dy=\\int 2^{x}\\quad dx$\n\n$\\frac{\\ln (2^{y}-1)}{\\ln 2}=\\frac{2^{x}}{\\ln 2}+C$\n\n$\\Rightarrow \\log _{2}(2^{y}-1)=2^{x}\\log _{2}e+C$\n\n$\\because$ $y(0)=1\\Rightarrow 0=\\log _{2}e+C$\n\n$C=-\\log _{2}e$\n\n$\\Rightarrow \\log _{2}(2^{y}-1)=(2^{x}-1)\\log _{2}e$\n\nput x = 1, $\\log _{2}(2^{y}-1)=\\log _{2}e$\n\n$2^{y} = e + 1$\n\n$y = \\log _{2}(e + 1)$ Ans.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktir1jy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{x\\to 0}\\frac{\\sin ^{2}\\left (π\\cos ^{4}x\\right )}{x^{4}}$ is equal to :",
+  "options": [
+   "$π^{2}$",
+   "$2π^{2}$",
+   "$4π^{2}$",
+   "$4π$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since $\\sin (π-θ)=\\sin θ$,\n\n$\\sin \\left (π\\cos ^{4}x\\right )=\\sin \\left (π\\left (1-\\cos ^{4}x\\right )\\right )$\n\nand $1-\\cos ^{4}x=(1-\\cos ^{2}x)(1+\\cos ^{2}x)=\\sin ^{2}x(1+\\cos ^{2}x)$.\n\nLet $u=π\\sin ^{2}x(1+\\cos ^{2}x)$. As $x\\to 0$, $u\\to 0$ and $\\dfrac{u}{x^{2}}\\to π\\cdot 1\\cdot 2=2π$.\n\n$\\lim _{x\\to 0}\\frac{\\sin ^{2}(π\\cos ^{4}x)}{x^{4}}=\\lim _{x\\to 0}\\left (\\frac{\\sin u}{u}\\right )^{2}\\left (\\frac{u}{x^{2}}\\right )^{2}=1\\cdot (2π)^{2}=4π^{2}$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktirfw8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $a_{r}=\\cos \\frac{2rπ}{9}+i\\sin \\frac{2rπ}{9}$, r = 1, 2, 3, ....., i = $\\sqrt{-1}$, then\n the determinant $\\left |\\begin{array}{lll} a_{1} & a_{2} & a_{3} \\\\ a_{4} & a_{5} & a_{6} \\\\ a_{7} & a_{8} & a_{9} \\end{array}\\right |$ is equal to :",
+  "options": [
+   "$a_{2}a_{6}$ $-$ $a_{4}a_{8}$",
+   "$a_{9}$",
+   "$a_{1}a_{9}$ $-$ $a_{3}a_{7}$",
+   "$a_{5}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$a_{r}=e^{\\frac{i2πr}{9}}$, $r = 1, 2, 3, ......, a_{1}, a_{2}, a_{3}$, ..... are in G.P.\n\n$\\left |\\begin{array}{lll} a_{1} & a_{2} & a_{3} \\\\ a_{4} & a_{5} & a_{6} \\\\ a_{7} & a_{8} & a_{9} \\end{array}\\right |=\\left |\\begin{array}{lll} a_{1} & a_{1}^{2} & a_{1}^{3} \\\\ a_{1}^{4} & a_{1}^{5} & a_{1}^{6} \\\\ a_{1}^{7} & a_{1}^{8} & a_{1}^{9} \\end{array}\\right |$\n\n$=a_{1}\\qquad .a_{1}^{4}.a_{1}^{7}\\left |\\begin{array}{lll} 1 & a_{1} & a_{1}^{2} \\\\ 1 & a_{1} & a_{1}^{2} \\\\ 1 & a_{1} & a_{1}^{2} \\end{array}\\right |=0$\n\nNow, $a_{1}a_{9}-a_{3}a_{7}=a_{1}^{10}-a_{1}^{10}=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktirsga",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let [t] denote the greatest integer $\\leq$ t. Then the value of \n\n$8.\\int\\limits _{-\\frac{1}{2}}^{1}([2x]+|x|)dx$ is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=\\int\\limits _{-\\frac{1}{2}}^{1}([2x]+|x|)dx$\n\n$=\\int\\limits _{-1/2}^{1}[2x]dx+\\int\\limits _{-1/2}^{1}|x|dx$\n\n$=0+\\int\\limits _{-1/2}^{0}(-x)dx+\\int\\limits _{0}^{1}xdx$\n\n$=\\left (-\\frac{x^{2}}{2}\\right )_{-1/2}^{0}+\\left (\\frac{x^{2}}{2}\\right )_{0}^{1}$\n\n$=\\left (0+\\frac{1}{8}\\right )+\\frac{1}{2}$\n\n$=\\frac{5}{8}$\n\n$\\therefore$ 8I = 5",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktirzvl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A point z moves in the complex plane such that $\\arg \\left (\\frac{z-2}{z+2}\\right )=\\frac{π}{4}$, then the minimum value of $\\left |z-9\\sqrt{2}-2i\\right |^{2}$ is equal to $_______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 98.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $z=x+iy$\n\n$\\arg \\left (\\frac{x-2+iy}{x+2+iy}\\right )=\\frac{π}{4}$\n\n$\\arg (x-2+iy)-\\arg (x+2+iy)=\\frac{π}{4}$\n\n$\\tan ^{-1}\\left (\\frac{y}{x-2}\\right )-\\tan ^{-1}\\left (\\frac{y}{x+2}\\right )=\\frac{π}{4}$\n\n$\\frac{\\frac{y}{x-2}-\\frac{y}{x+2}}{1+\\left (\\frac{y}{x-2}\\right ).\\left (\\frac{y}{x+2}\\right )}=\\tan \\frac{π}{4}=1$\n\n$\\frac{xy+2y-xy+2y}{x^{2}-4+y^{2}}=1$\n\n$4y=x^{2}-4+y^{2}$\n\n$x^{2}+y^{2}-4y-4=0$\n\nlocus is a circle with center (0, 2) & radius = $2\\sqrt{2}$\n\n\n[IMG]\n\n\nmin. value = $(AP)^{2}=(OP-OA)^{2}$\n\n$=\\left (9\\sqrt{2}-2\\sqrt{2}\\right )^{2}$\n\n$=\\left (7\\sqrt{2}\\right )^{2}=98$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-31st-august-morning-shift/1ktirzvls-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 31st August Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktis8nu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If 'R' is the least value of 'a' such that the function $f(x) = x^{2} + ax + 1$ is increasing on [1, 2] and 'S' is the greatest value of 'a' such that the function $f(x) = x^{2} + ax + 1$ is decreasing on [1, 2], then \nthe value of |R $-$ S| is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x) = x^{2} + ax + 1$\n\nf'(x) = 2x + a\n\nwhen f(x) is increasing on [1, 2]\n\n2x + a $\\geq$ 0 $\\forall$ x$\\in$[1, 2]\n\na $\\geq$ $-$2x $\\forall$ x$\\in$[1, 2]\n\nR = $-$4\n\nwhen f(x) is decreasing on [1, 2]\n\n2x + a $\\leq$ 0 $\\forall$ x$\\in$[1, 2]\n\na $\\leq$ $-$2 $\\forall$ x$\\in$[1, 2]\n\nS = $-$2\n\n|R $-$ S| = | $-$4 + 2 | = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktise4j",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The mean of 10 numbers 7 $\\times$ 8, 10 $\\times$ 10, 13 $\\times$ 12, 16 $\\times$ 14, ....... is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 398.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "7 $\\times$ 8, 10 $\\times$ 10, 13 $\\times$ 12, 16 $\\times$ 14 ........\n\n$T_{n} = (3n + 4) (2n + 6) = 2(3n + 4) (n + 3)$\n\n$= 2(3n^{2} + 13n + 12) = 6n^{2} + 26n + 24$\n\n$S_{10} =$ $\\sum\\limits _{n=1}^{10}T_{n}=6\\sum\\limits _{n=1}^{10}n^{2}+26\\sum\\limits _{n=1}^{10}n+24\\sum\\limits _{n=1}^{10}1$\n\n$=\\frac{6(10\\times 11\\times 21)}{6}+26\\times \\frac{10\\times 11}{2}+24\\times 10$\n\n$=10\\times 11(21+13)+240$\n\n= 3980\n\nMean $=\\frac{S_{10}}{10}=\\frac{3980}{10}=398$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktislky",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the variable line 3x + 4y = $α$ lies between the two \ncircles (x $-$ $1)^{2} + (y$ $-$ $1)^{2} = 1$ \nand (x $-$ $9)^{2} + (y$ $-$ $1)^{2} = 4$, without intercepting a chord on either circle, then the sum of all the integral values of $α$ is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 165.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nBoth centers should lie on either side of the line as well as line can be tangent to circle.\n\n(3 + 4 $-$ $α$) . (27 + 4 $-$ $α$) < 0\n\n(7 $-$ $α$) . (31 $-$ $α$) < 0 $\\Rightarrow$ $α$ $\\in$ (7, 31) ....... (1)\n\n$d_{1} =$ distance of (1, 1) from line\n\n$d_{2} =$ distance of (9, 1) from line\n\n$d_{1}\\geq r_{1}\\Rightarrow \\frac{|7-α|}{5}\\geq 1\\Rightarrow α\\in (-\\infty ,2]\\cup [12,\\infty )$ .... (2)\n\n$d_{2}\\geq r_{2}\\Rightarrow \\frac{|31-α|}{5}\\geq 2\\Rightarrow α\\in (-\\infty ,21]\\cup [41,\\infty )$ ....(3)\n\n(1) $\\cap$ (2) $\\cap$ (3) $\\Rightarrow$ $α$ $\\in$ [12, 21]\n\nSum of integers = 165",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-31st-august-morning-shift/1ktislkyb-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 31st August Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktisnby",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of six letter words (with or without meaning), formed using all the letters of the word 'VOWELS', so that all the consonants never come together, is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 576.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Total possible words = 6! = 720\n\nWhen 4 consonants are together (V, W, L, S)\n\nsuch cases = 3! ⋅ 4! = 144\n\nAll consonants should not be together\n\n= Total $-$ All consonants together,\n\n= 6! $-$ 3! 4! = 576",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktisti2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $x𝜙(x)=\\int\\limits _{5}^{x}(3t^{2}-2𝜙^{'}(t))dt$, x > $-$2, and $𝜙$(0) = 4, then $𝜙$(2) is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x𝜙(x)=\\int\\limits _{5}^{x}3t^{2}-2𝜙^{'}(t)dt$\n\n$x𝜙(x)=x^{3}-125-2[𝜙(x)-𝜙(5)]$\n\n$x𝜙(x)=x^{3}-125-2𝜙(x)+2𝜙(5)$\n\n$𝜙(0)=4\\Rightarrow 𝜙(5)=\\frac{133}{2}$\n\n$𝜙(x)=\\frac{x^{3}+8}{x+2}$\n\n$𝜙(2)=4$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktisyc5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\left (\\frac{3^{6}}{4^{4}}\\right )k$ is the term, independent of x, in the binomial expansion of $\\left (\\frac{x}{4}-\\frac{12}{x^{2}}\\right )^{12}$, then k is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 55.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (\\frac{x}{4}-\\frac{12}{x^{2}}\\right )^{12}$\n\n$T_{r+1}=(-1)^{r}.{}^{12}C_{r}\\left (\\frac{x}{4}\\right )^{12-r}\\left (\\frac{12}{x^{2}}\\right )^{r}$\n\n$T_{r+1}=(-1)^{r}.{}^{12}C_{r}\\left (\\frac{1}{4}\\right )^{12-r}(12)^{r}.(x)^{12-3r}$\n\nTerm independent of x $\\Rightarrow$ 12 $-$ 3r = 0 $\\Rightarrow$ r = 4\n\n$T_{5}=(-1)^{r}.{}^{12}C_{r}\\left (\\frac{1}{4}\\right )^{8}(12)^{4}=\\frac{3^{6}}{4^{4}}.k$\n\n$\\Rightarrow$ k = 55",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktit2n7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "An electric instrument consists of two units. Each unit must function independently for the instrument to operate. The probability that the first unit functions is 0.9 and that of the second unit is 0.8. The instrument is switched on and it fails to operate. If the probability that only the first unit failed and second unit is functioning is p, then 98 p is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 28.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 31st August Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I_{1} =$ first unit is functioning\n\n$I_{2} =$ second unit is functioning\n\n$P(I_{1}) = 0.9, P(I_{2}) = 0.8$\n\nP($I_{1}–$) = 0.1, P($I_{2}–$) = 0.2\n\n$P=\\frac{0.8\\times 0.1}{0.1\\times 0.2+0.9\\times 0.2+0.1\\times 0.8}=\\frac{8}{28}$\n\n$98P=\\frac{8}{28}\\times 98=28$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 31st August Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

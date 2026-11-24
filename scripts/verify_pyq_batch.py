@@ -58,18 +58,24 @@ def main():
             check(f"{qid} balanced math $", q.get("text", "").count("$") % 2 == 0,
                   q.get("text", "")[:80])
             if q.get("type") == "numerical":
-                check(f"{qid} numericalAnswer", q.get("numericalAnswer") is not None, "")
+                check(f"{qid} numericalAnswer",
+                      q.get("numericalAnswer") is not None, "")
             else:
                 opts = q.get("options") or []
                 check(f"{qid} options>=2", len(opts) >= 2, str(len(opts)))
                 check(f"{qid} options nonempty", all(isinstance(o, str) and o.strip() for o in opts), "")
                 co = q.get("correctOptions") or []
-                check(f"{qid} correctOptions nonempty", len(co) >= 1, str(co))
-                check(f"{qid} correctOptions range", all(isinstance(c, int) and 0 <= c < len(opts) for c in co), str(co))
-                if q.get("type") == "mcq_single":
-                    check(f"{qid} single has 1 correct", len(co) == 1, str(co))
-                if q.get("type") == "mcq_multi":
-                    check(f"{qid} multi >=2 correct", len(co) >= 2, str(co))
+                # NTA-dropped bonus questions legitimately have no key
+                is_bonus = "bonus-dropped-by-nta" in (q.get("tags") or [])
+                if is_bonus:
+                    check(f"{qid} bonus has no key (dropped by NTA)", len(co) == 0, str(co))
+                else:
+                    check(f"{qid} correctOptions nonempty", len(co) >= 1, str(co))
+                    check(f"{qid} correctOptions range", all(isinstance(c, int) and 0 <= c < len(opts) for c in co), str(co))
+                    if q.get("type") == "mcq_single":
+                        check(f"{qid} single has 1 correct", len(co) == 1, str(co))
+                    if q.get("type") == "mcq_multi":
+                        check(f"{qid} multi >=2 correct", len(co) >= 2, str(co))
                 for i, o in enumerate(opts):
                     check(f"{qid} opt{i} balanced $", o.count("$") % 2 == 0, o[:60])
             sol = q.get("solution")

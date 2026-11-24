@@ -1,0 +1,913 @@
+[
+ {
+  "publicId": "PYQ-2021-1krxgdh6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The point P (a, b) undergoes the following three transformations successively :\n\n(a) reflection about the line y = x.\n\n(b) translation through 2 units along the positive direction of x-axis.\n\n(c) rotation through angle $\\frac{π}{4}$ about the origin in the anti-clockwise direction.\n\nIf the co-ordinates of the final position of the point P are $\\left (-\\frac{1}{\\sqrt{2}},\\frac{7}{\\sqrt{2}}\\right )$, then the value of 2a + b is equal to :",
+  "options": [
+   "13",
+   "9",
+   "5",
+   "7"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Image of A(a, b) along y = x is B(b, a). Translating it 2 units it becomes C(b + 2, a).\n\nNow, applying rotation theorem\n\n$-\\frac{1}{\\sqrt{2}}+\\frac{7}{\\sqrt{2}}i=((b+2)+ai)\\left (\\cos \\frac{π}{4}+i\\sin \\frac{π}{4}\\right )$\n\n$-\\frac{1}{\\sqrt{2}}+\\frac{7}{\\sqrt{2}}i=\\left (\\frac{b+2}{\\sqrt{2}}-\\frac{a}{\\sqrt{2}}\\right )+i\\left (\\frac{b+2}{\\sqrt{2}}+\\frac{a}{\\sqrt{2}}\\right )$\n\n$\\Rightarrow$ b $-$ a + 2 = $-$1 ......(i)\n\nand b + 2 + a = 7 ...... (ii)\n\n$\\Rightarrow$ a = 4; b = 1\n\n$\\Rightarrow$ 2a + b = 9",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krxgk2j",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A possible value of 'x', for which the ninth term in the expansion of $\\left \\{3^{\\log _{3}\\sqrt{25^{x-1}+7}}+3^{\\left (-\\frac{1}{8}\\right )\\log _{3}(5^{x-1}+1)}\\right \\}^{10}$ in the increasing powers of $3^{\\left (-\\frac{1}{8}\\right )\\log _{3}(5^{x-1}+1)}$ is equal to 180, is :",
+  "options": [
+   "0",
+   "$-$1",
+   "2",
+   "1"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The first term of the binomial is $3^{\\log _{3}\\sqrt{25^{x-1}+7}}=\\sqrt{25^{x-1}+7}$ and the second is $3^{-\\frac{1}{8}\\log _{3}\\left (5^{x-1}+1\\right )}=\\left (5^{x-1}+1\\right )^{-1/8}$.\n\nIn increasing powers of the second term, $T_{r+1}={}^{10}C_{r}\\left (\\sqrt{25^{x-1}+7}\\right )^{10-r}\\left (5^{x-1}+1\\right )^{-r/8}$, so the ninth term ($r=8$) is\n\n$T_{9}={}^{10}C_{8}\\left (25^{x-1}+7\\right )\\left (5^{x-1}+1\\right )^{-1}=180$\n\nSince ${}^{10}C_{8}=45$, putting $t=5^{x-1}$ (so $25^{x-1}=t^{2}$):\n\n$\\dfrac{t^{2}+7}{t+1}=4\\Rightarrow t^{2}-4t+3=0\\Rightarrow t=1\\text{or}t=3$\n\n$t=1$ gives $5^{x-1}=1$, i.e. $x=1$; $t=3$ gives $x=1+\\log _{5}3$, which is not among the options.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krxhvhx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : R $\\to$ R be defined as $f(x+y)+f(x-y)=2f(x)f(y),f\\left (\\frac{1}{2}\\right )=-1$. Then, the value of $\\sum\\limits _{k=1}^{20}\\frac{1}{\\sin (k)\\sin (k+f(k))}$ is equal to :",
+  "options": [
+   "cosec$^{2}(21) \\cos (20) \\cos (2)$",
+   "$\\sec ^{2}(1) \\sec (21) \\cos (20)$",
+   "cosec$^{2}(1)$ cosec(21) sin(20)",
+   "$\\sec ^{2}(21) \\sin (20) \\sin (2)$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "f(x) = cos$λ$x\n\n$\\because$ $f\\left (\\frac{1}{2}\\right )$ = $-$1\n\nSo, $-$1 = cos$\\frac{λ}{2}$\n\n$\\Rightarrow$ $λ$ = 2$π$\n\nThus f(x) = cos2$π$x\n\nNow k is natural number\n\nThus f(k) = 1\n\n$\\sum\\limits _{k=1}^{20}\\frac{1}{\\sin k\\sin (k+1)}=\\frac{1}{\\sin 1}\\sum\\limits _{k=1}^{20}\\left [\\frac{\\sin ((k+1)-k)}{\\sin k.\\sin (k+1)}\\right ]$\n\n$=\\frac{1}{\\sin 1}\\sum\\limits _{k=1}^{20}(\\cot k-\\cot (k+1)$)\n\n$=\\frac{\\cot 1-\\cot 21}{\\sin 1}=\\cos ec^{2}1\\cos ec(21).\\sin 20$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krxi95j",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let C be the set of all complex numbers. Let\n\n$S_{1} = {z\\in$C : |z $-$ 2| $\\leq$ 1} and \n\n$S_{2} = {z\\in$C : z(1 + i) + $z–$(1 $-$ i) $\\geq$ 4}.\n\nThen, the maximum value of $\\left |z-\\frac{5}{2}\\right |^{2}$ for z$\\inS_{1}$ $\\cap$ $S_{2}$ is equal to :",
+  "options": [
+   "$\\frac{3+2\\sqrt{2}}{4}$",
+   "$\\frac{5+2\\sqrt{2}}{2}$",
+   "$\\frac{3+2\\sqrt{2}}{2}$",
+   "$\\frac{5+2\\sqrt{2}}{4}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "|t $-$ 2| $\\leq$ 1\n\nPut t = x + iy\n\n\n[IMG]\n\n\n(x $-$ $2)^{2} + y^{2}$ $\\leq$ 1\n\nAlso, t(1 + i) + $t–$(1 $-$ i) $\\geq$ 4\n\nx $-$ y $\\geq$ 2\n\nLet point on circle be A(2 + cos$θ$, sin$θ$)\n\n$θ\\in \\left [-\\frac{3π}{4},\\frac{π}{4}\\right ]$\n\n$(AP)^{2}=\\left (2+\\cos θ-\\frac{5}{2}\\right )^{2}+\\sin θ$\n\n$=\\cos ^{2}θ-\\cos θ+\\frac{1}{4}+\\sin ^{2}θ$\n\n$=\\frac{5}{4}-\\cos θ$\n\nFor $(AP)^{2}$ maximum $θ=-\\frac{3π}{4}$\n\n$(AP)^{2}=\\frac{5}{4}+\\frac{1}{\\sqrt{2}}=\\frac{5\\sqrt{2}+4}{4\\sqrt{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-27th-july-evening-shift/1krxi95ji-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 27th July Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1krxj7yr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\tan \\left (\\frac{π}{9}\\right ),x,\\tan \\left (\\frac{7π}{18}\\right )$ are in arithmetic progression and $\\tan \\left (\\frac{π}{9}\\right ),y,\\tan \\left (\\frac{5π}{18}\\right )$ are also in arithmetic progression, then $|x-2y|$ is equal to :",
+  "options": [
+   "4",
+   "3",
+   "0",
+   "1"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since $\\dfrac{π}{9}=20^{\\circ }$, $\\dfrac{7π}{18}=70^{\\circ }$ and $\\dfrac{5π}{18}=50^{\\circ }$, the two arithmetic progressions give\n\n$2x=\\tan 20^{\\circ }+\\tan 70^{\\circ },2y=\\tan 20^{\\circ }+\\tan 50^{\\circ }$\n\nso\n\n$x-2y=\\dfrac{\\tan 70^{\\circ }-\\tan 20^{\\circ }-2\\tan 50^{\\circ }}{2}$\n\nAs $70^{\\circ }=20^{\\circ }+50^{\\circ }$,\n\n$\\tan 70^{\\circ }=\\dfrac{\\tan 20^{\\circ }+\\tan 50^{\\circ }}{1-\\tan 20^{\\circ }\\tan 50^{\\circ }}\\Rightarrow \\tan 70^{\\circ }-\\tan 70^{\\circ }\\tan 20^{\\circ }\\tan 50^{\\circ }=\\tan 20^{\\circ }+\\tan 50^{\\circ }$\n\nSince $\\tan 70^{\\circ }=\\cot 20^{\\circ }$, $\\tan 70^{\\circ }\\tan 20^{\\circ }=1$, so $\\tan 70^{\\circ }-\\tan 50^{\\circ }=\\tan 20^{\\circ }+\\tan 50^{\\circ }$, that is, $\\tan 70^{\\circ }-\\tan 20^{\\circ }-2\\tan 50^{\\circ }=0$.\n\nTherefore $x-2y=0$ and $|x-2y|=0$.\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krxjeee",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the mean and variance of the frequency distribution\n\n$\\begin{array}{lllll} x: & x_{1}=2 & x_{2}=6 & x_{3}=8 & x_{4}=9 \\\\ f: & 4 & 4 & α & β \\end{array}$\n\nbe 6 and 6.8 respectively. If $x_{3}$ is changed from 8 to 7, then the mean for the new data will be :",
+  "options": [
+   "4",
+   "5",
+   "$\\frac{17}{3}$",
+   "$\\frac{16}{3}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given 32 + 8$α$ + 9$β$ = (8 + $α$ + $β$) $\\times$ 6\n\n$\\Rightarrow$ 2$α$ + 3$β$ = 16 ..... (i)\n\nAlso, 4 $\\times$ 16 + 4 $\\times$ $α$ + 9$β$ = (8 + $α$ + $β$) $\\times$ 6.8\n\n$\\Rightarrow$ 640 + 40$α$ + 90$β$ = 544 + 68$α$ + 68$β$\n\n$\\Rightarrow$ 28$α$ $-$ 22$β$ = 96\n\n$\\Rightarrow$ 14$α$ $-$ 11$β$ = 48 ..... (ii)\n\nfrom (i) & (ii)\n\n$α$ = 5 & $β$ = 2\n\nSo, new mean = $\\frac{32+35+18}{15}=\\frac{85}{15}=\\frac{17}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krxjjxg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area of the region bounded by y $-$ x = 2 and $x^{2} = y$ is equal to :",
+  "options": [
+   "$\\frac{16}{3}$",
+   "$\\frac{2}{3}$",
+   "$\\frac{9}{2}$",
+   "$\\frac{4}{3}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\ny $-$ $x = 2, x^{2} = y$\n\nNow, $x^{2} = 2 + x$\n\n$\\Rightarrow$ $x^{2}$ $-$ x $-$ 2 = 0\n\n$\\Rightarrow$ (x + 1)(x $-$ 2) = 0\n\nArea = $\\int\\limits _{-1}^{2}(2+x-x^{2})$\n\n$=\\left |2x+\\frac{x^{2}}{2}-\\frac{x^{3}}{3}\\right |_{-1}^{2}$\n\n$=\\left (4+2-\\frac{8}{3}\\right )-\\left (-2+\\frac{1}{2}+\\frac{1}{3}\\right )$\n\n$=6-3+2-\\frac{1}{2}=\\frac{9}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-27th-july-evening-shift/1krxjjxgo-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 27th July Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1krxjweg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution of the differential \n\nequation (x $-$ $x^{3})dy = (y + yx^{2}$ $-$ $3x^{4})dx, x > 2$. If y(3) = 3, then y(4) is equal to :",
+  "options": [
+   "4",
+   "12",
+   "8",
+   "16"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(x-x^{3})dy=(y+yx^{2}-3x^{4})dx$\n\n$\\Rightarrow xdy-ydx=(yx^{2}-3x^{4})dx+x^{3}dy$\n\n$\\Rightarrow \\frac{xdy-ydx}{x^{2}}=(ydx+xdy)-3x^{2}dx$\n\n$\\Rightarrow d\\left (\\frac{y}{x}\\right )=d(xy)-d(x^{3})$\n\nIntegrate\n\n$\\Rightarrow \\frac{y}{x}=xy-x^{3}+c$\n\ngiven y(3) = 3\n\n$\\Rightarrow \\frac{3}{3}=3\\times 3-3^{3}+c$\n\n$\\Rightarrow c=19$\n\n$\\therefore$ $\\frac{y}{x}=xy-x^{3}+19$\n\nat $x=4,\\frac{y}{4}=4y-64+19$\n\n$15y=4\\times 45$\n\n$\\Rightarrow y=12$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krxkdox",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of \n\n$\\lim _{x\\to 0}\\left (\\frac{x}{\\sqrt{8 1-\\sin x}-\\sqrt{8 1+\\sin x}}\\right )$ is equal to :",
+  "options": [
+   "0",
+   "4",
+   "$-$4",
+   "$-$1"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 0}\\left (\\frac{x}{\\sqrt{8 1-\\sin x}-\\sqrt{8 1+\\sin x}}\\right )$\n\n= $\\lim _{x\\to 0}\\frac{x}{\\left [(1-\\sin x)^{\\dfrac{1}{8}}-(1+\\sin x)^{\\dfrac{1}{8}}\\right ]}\\times \\left [\\frac{(1-\\sin x)^{\\dfrac{1}{8}}+(1+\\sin x)^{\\dfrac{1}{8}}}{(1-\\sin x)^{\\dfrac{1}{8}}+(1+\\sin x)^{\\dfrac{1}{8}}}\\right ]$\n\n= $\\lim _{x\\to 0}\\frac{x\\left [(1-\\sin x)^{\\dfrac{1}{8}}+(1+\\sin x)^{\\dfrac{1}{8}}\\right ]}{\\left [(1-\\sin x)^{\\dfrac{1}{4}}-(1+\\sin x)^{\\dfrac{1}{4}}\\right ]}\\times \\left [\\frac{(1-\\sin x)^{\\dfrac{1}{4}}+(1+\\sin x)^{\\dfrac{1}{4}}}{(1-\\sin x)^{\\dfrac{1}{4}}+(1+\\sin x)^{\\dfrac{1}{4}}}\\right ]$\n\n= $\\lim _{x\\to 0}\\frac{x[2][2]}{\\left [(1-\\sin x)^{\\dfrac{1}{2}}-(1+\\sin x)^{\\dfrac{1}{2}}\\right ]}\\times \\left [\\frac{(1-\\sin x)^{\\dfrac{1}{2}}+(1+\\sin x)^{\\dfrac{1}{2}}}{(1-\\sin x)^{\\dfrac{1}{2}}+(1+\\sin x)^{\\dfrac{1}{2}}}\\right ]$\n\n= $\\lim _{x\\to 0}\\frac{x[2][2][2]}{[(1-\\sin x)-(1+\\sin x)]}$\n\n$=\\lim _{x\\to 0}\\left (-\\frac{1}{2}\\right )(2)(2)(2)$ \n\n = -4\n\n$\\because$ $\\left \\{\\lim _{x\\to 0}\\frac{\\sin x}{x}=1\\right \\}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krxkmgz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two sides of a parallelogram are along the lines 4x + 5y = 0 and 7x + 2y = 0. If the equation of one of the diagonals of the parallelogram is 11x + 7y = 9, then other diagonal passes through the point :",
+  "options": [
+   "(1, 2)",
+   "(2, 2)",
+   "(2, 1)",
+   "(1, 3)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Both the lines pass through origin.\n\n\n[IMG]\n\n\npoint D is equal to intersection of 4x + 5y = 0 & 11x + 7y = 9\n\nSo, coordinates of point $D=\\left (\\frac{5}{3},-\\frac{4}{3}\\right )$\n\nAlso, point B is point of intersection of 7x + 2y = 0 and 11x + 7y = 9\n\nSo, coordinates of point $B=\\left (-\\frac{2}{3},\\frac{7}{3}\\right )$\n\ndiagonals of parallelogram intersect at middle let middle point of B, D\n\n$\\Rightarrow \\left (\\frac{\\frac{5}{3}-\\frac{2}{3}}{2},\\frac{\\frac{-4}{3}+\\frac{7}{3}}{2}\\right )=\\left (\\frac{1}{2},\\frac{1}{2}\\right )$\n\nequation of diagonal AC\n\n$\\Rightarrow (y-0)=\\frac{\\frac{1}{α}-0}{\\frac{1}{α}-0}(x-0)$\n\n$y=x$\n\ndiagonal AC passes through (2, 2)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-27th-july-evening-shift/1krxkmgz3-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 27th July Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1krxkxou",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α=\\max _{x\\in R}\\{8^{2\\sin 3x}.4^{4\\cos 3x}\\}$ and $β=\\min _{x\\in R}\\{8^{2\\sin 3x}.4^{4\\cos 3x}\\}$. If $8x^{2}+bx+c=0$ is a quadratic equation whose roots are $α^{1/5}$ and $β^{1/5}$, then the value of c $-$ b is equal to :",
+  "options": [
+   "42",
+   "47",
+   "43",
+   "50"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α=\\max _{x\\in R}\\{8^{2\\sin 3x}.4^{4\\cos 3x}\\}$\n\n$=\\max \\{2^{6\\sin 3x}.2^{8\\cos 3x}\\}$\n\n$=\\max \\{2^{6\\sin 3x+8\\cos 3x}\\}$\n\nand $β=\\min \\{8^{2\\sin 3x}.4^{4\\cos 3x}\\}=\\min \\{2^{6\\sin 3x+8\\cos 3x}\\}$\n\nNow range of $6\\sin 3x+8\\cos 3x$\n\n$=\\left [-\\sqrt{6^{2}+8^{2}},+\\sqrt{6^{2}+8^{2}}\\right ]=[-10,10]$\n\n$α$ $= 2^{10}$ & $β$ $= 2^{-10}$\n\nSo, $α^{1/5}$ $= 2^{2} = 4$\n\n$\\Rightarrow$ $β^{1/5}$ $= 2^{-2} = 1/4$\n\nquadratic $8x^{2} + bx + c = 0$\n\n$-\\frac{b}{8}=\\frac{17}{4}$ $\\Rightarrow$ b = -34\n\n$\\frac{c}{8}=1$ $\\Rightarrow$ c = 8\n\n$\\therefore$ c – b = 8 + 34 = 42",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krxlb5j",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f:[0,\\infty )\\to [0,3]$ be a function defined by \n\n$f(x)=\\left \\{\\begin{array}{ll} \\max \\{\\sin t:0\\leq t\\leq x\\}, & 0\\leq x\\leq π \\\\ 2+\\cos x, & x>π \\end{array} \\right.$\n\nThen which of the following is true?",
+  "options": [
+   "f is continuous everywhere but not differentiable exactly at one point in (0, $\\infty$)",
+   "f is differentiable everywhere in (0, $\\infty$)",
+   "f is not continuous exactly at two points in (0, $\\infty$)",
+   "f is continuous everywhere but not differentiable exactly at two points in (0, $\\infty$)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $0\\leq x\\leq π$, the largest value of $\\sin t$ on $[0,x]$ is $\\sin x$ while $\\sin$ is increasing, and equals $1$ once $t=\\dfrac{π}{2}$ lies in the interval. So\n\n$f(x)=\\left \\{\\begin{array}{ll} \\sin x, & 0\\leq x\\leq \\dfrac{π}{2} \\\\ 1, & \\dfrac{π}{2}<x\\leq π \\\\ 2+\\cos x, & x>π \\end{array} \\right.$\n\nAt $x=\\dfrac{π}{2}$: both pieces give the value $1$, so $f$ is continuous. The left derivative is $\\cos \\dfrac{π}{2}=0$ and the right derivative is $0$, so $f$ is differentiable there.\n\nAt $x=π$: $f(π)=1$ and $\\lim _{x\\to π^{+}}(2+\\cos x)=2-1=1$, so $f$ is continuous. The left derivative is $0$ and the right derivative is $-\\sin π=0$, so $f$ is differentiable there.\n\nEach piece is differentiable inside its own interval, so $f$ is differentiable at every point of $(0,\\infty )$.\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krxllil",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let N be the set of natural numbers and a relation R on N be defined by $R=\\{(x,y)\\in N\\times N:x^{3}-3x^{2}y-xy^{2}+3y^{3}=0\\}$. Then the relation R is :",
+  "options": [
+   "symmetric but neither reflexive nor transitive",
+   "reflexive but neither symmetric nor transitive",
+   "reflexive and symmetric, but not transitive",
+   "an equivalence relation"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x^{3}-3x^{2}y-xy^{2}+3y^{3}=0$\n\n$\\Rightarrow x(x^{2}-y^{2})-3y(x^{2}-y^{2})=0$\n\n$\\Rightarrow (x-3y)(x-y)(x+y)=0$\n\nNow, x = y $\\forall$(x, y) $\\in$N $\\times$ N so reflexive but not symmetric & transitive.\n\nSee, (3, 1) satisfies but (1, 3) does not. Also (3, 1) & (1, $-$1) satisfies but (3, $-$1) does not.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kryesde",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider a circle C which touches the y-axis at (0, 6) and cuts off an intercept $6\\sqrt{5}$ on the x-axis. Then the radius of the circle C is equal to :",
+  "options": [
+   "$\\sqrt{53}$",
+   "9",
+   "8",
+   "$\\sqrt{82}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$r=\\sqrt{6^{2}+\\left (3\\sqrt{5}\\right )^{2}}$\n\n$=\\sqrt{36+45}=9$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-27th-july-evening-shift/1kryesdeh-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 27th July Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1kryf7cd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : (a, b) $\\to$ R be twice differentiable function such that $f(x)=\\int\\limits _{a}^{x}g(t)dt$ for a differentiable function g(x). If f(x) = 0 has exactly five distinct roots in (a, b), then g(x)g'(x) = 0 has at least :",
+  "options": [
+   "twelve roots in (a, b)",
+   "five roots in (a, b)",
+   "seven roots in (a, b)",
+   "three roots in (a, b)"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\int\\limits _{a}^{x}g(t)dt$\n\n$\\Rightarrow$ f′(x) = g(x)\n\n$\\Rightarrow$ f′'(x) = g'(x)\n\nGiven, g(x).g'(x) = 0\n\n$\\Rightarrow$ f′(x).f′'(x) = 0\n\nAlso given f(x) has exactly 5 roots.\n\nSo from Rolle's theorem we can say,\n\nf′(x) has 4 roots and f′'(x) has 3 roots.\n\n$\\therefore$ f′(x).f′'(x) = 0 has 4 + 3 = 7 roots.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kryfpff",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the real part of the complex number $z=\\frac{3+2i\\cos θ}{1-3i\\cos θ},θ\\in \\left (0,\\frac{π}{2}\\right )$ is zero, then the value of $\\sin ^{2}3θ$ $+ \\cos ^{2}θ$ is equal to $_______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Re $(z)=\\frac{3-6\\cos ^{2}θ}{1+9\\cos ^{2}θ}=0$\n\n$\\Rightarrow$ $θ$ = $\\frac{π}{4}$\n\nHence, $\\sin ^{2}3θ$ $+ \\cos ^{2}θ$ = 1.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kryg955",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\int\\limits _{0}^{π}(\\sin ^{3}x)e^{-\\sin ^{2}x}dx=α-\\frac{β}{e}\\int\\limits _{0}^{1}\\sqrt{t}e^{t}dt$, then $α$ + $β$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=2\\int\\limits _{0}^{π/2}\\sin ^{3}xe^{-\\sin ^{2}x}dx$\n\n$=2\\int\\limits _{0}^{π/2}\\sin xe^{-\\sin ^{2}x}dx+\\int\\limits _{0}^{π/2}\\cos x_{I}\\qquad e^{-\\sin ^{2}x}(-\\sin 2x)_{II}dx=2\\int\\limits _{0}^{π/2}\\sin xe^{-\\sin ^{2}x}dx+\\left [\\cos xe^{-\\sin ^{2}x}\\right ]_{0}^{π/2}+\\int\\limits _{0}^{π/2}\\sin xe^{-\\sin ^{2}x}dx$\n\n$=3\\int\\limits _{0}^{π/2}\\sin xe^{-\\sin ^{2}x}dx-1$\n\n$=\\frac{3}{2}\\int\\limits _{-1}^{0}\\frac{e^{α}dα}{\\sqrt{1+α}}-1$ (Put $-\\sin ^{2}x = t)$\n\n$=\\frac{3}{2e}\\int\\limits _{0}^{1}\\frac{e^{x}}{\\sqrt{x}}dx-1$ (put 1 + $α$ = x)\n\n$=\\frac{3}{2e}\\int\\limits _{0}^{1}e^{x}_{II}\\frac{1}{\\sqrt{x}}_{II}dx-1$\n\n$=2-\\frac{3}{e}\\int\\limits _{0}^{1}e^{x}\\sqrt{x}dx$\n\nHence, $α$ + $β$ = 5",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krygctu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of real roots of the equation $e^{4x}$ $-$ $e^{3x}$ $-$ $4e^{2x}$ $-$ $e^{x} + 1 = 0$ is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$t^{4}$ $-$ $t^{3}$ $-$ $4t^{2}$ $-$ $t + 1 = 0, e^{x} = t > 0$\n\n$\\Rightarrow t^{2}-t-4-\\frac{1}{t}+\\frac{1}{t^{2}}=0$\n\n$\\Rightarrow α^{2}-α-6=0,α=t+\\frac{1}{t}\\geq 2$\n\n$\\Rightarrow α=3,-2$ (reject)\n\n$\\Rightarrow t+\\frac{1}{t}=3$\n\n$\\Rightarrow$ The number of real roots = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krygiv8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let y = y(x) be the solution of the differential equation $dy = e^{αx + y} dx$; $α$ $\\in$ N. If $y(\\log _{e}2) = \\log _{e}2$ and $y(0) = \\log _{e}\\left (\\frac{1}{2}\\right )$, then the value of $α$ is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int e^{-y}dy=\\int e^{αx}dx$\n\n$\\Rightarrow -e^{-y}=\\frac{e^{αx}}{α}+c$ ..... (i)\n\nPut (x, y) = (ln2, ln2)\n\n$\\frac{-1}{2}=\\frac{2^{α}}{α}+C$ ..... (ii)\n\nPut (x, y) $\\equiv$ (0, $-$ln2) in (i)\n\n$-2=\\frac{1}{α}+C$ ..... (iii)\n\n(ii) $-$ (iii)\n\n$\\frac{2^{α}-1}{α}=\\frac{3}{2}$\n\n$\\Rightarrow$ $α$ = 2 (as $α$ $\\in$ N)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krygm1e",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let n be a non-negative integer. Then the number of divisors of the form \"4n + 1\" of the number $(10)^{10} . (11)^{11} . (13)^{13}$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 924.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$N = 2^{10}$ $\\times$ $5^{10}$ $\\times$ $11^{11}$ $\\times$ $13^{13}$\n\nNow, power of 2 must be zero,\n\npower of 5 can be anything,\n\npower of 13 can be anything\n\nBut, power of 11 should be even.\n\nSo, required number of divisors is \n\n1 $\\times$ 11 $\\times$ 14 $\\times$ 6 = 924",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krygqgj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let A = {n $\\in$ $N | n^{2}$ $\\leq$ n + 10,000}, B = {3k + 1 | k$\\in$ N} and C = {2k | k$\\in$N}, then the sum of all the elements of the set A $\\cap$(B $-$ C) is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 832.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "B $-$ C $\\equiv$ {7, 13, 19, ......, 97, .......}\n\nNow, $n^{2}$ $-$ n $\\leq$ 100 $\\times$ 100\n\n$\\Rightarrow$ n(n $-$ 1) $\\leq$ 100 $\\times$ 100\n\n$\\Rightarrow$ A = {1, 2, ......., 100}.\n\nSo, A$\\cap$(B $-$ C) = {7, 13, 19, ......., 97}\n\nHence, sum = $\\frac{16}{2}(7+97)=832$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krygt7f",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $A=\\left [\\begin{array}{lll} 1 & 1 & 1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{array}\\right ]$ and $M = A + A^{2} + A^{3} + ....... + A^{20}$, then the sum of all the elements of the matrix M is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2020.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 27th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A^{n}=\\left [\\begin{array}{lll} 1 & n & \\frac{n^{2}+n}{2} \\\\ 0 & 1 & n \\\\ 0 & 0 & 1 \\end{array}\\right ]$\n\nSo, required sum\n\n$=20\\times 3+2\\times \\left (\\frac{20\\times 21}{2}\\right )+\\sum\\limits _{r=1}^{20}\\left (\\frac{r^{2}+r}{2}\\right )$\n\n$=60+420+105+35\\times 41=2020$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 27th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
