@@ -97,6 +97,30 @@ function ExamListView({ list, history, loggedIn, onStart, onOpenResult, onRequir
   const [ctMinutes, setCtMinutes] = useState(30)
   const [creating, setCreating] = useState(false)
   const [warnings, setWarnings] = useState<string[]>([])
+  const [generatingFull, setGeneratingFull] = useState(false)
+
+  const exams = list.data?.exams ?? []
+  const hasDefault = exams.some((e) => e.kind === 'full_length')
+
+  const generateFullLength = async () => {
+    if (!loggedIn) { onRequireAuth(); return }
+    setGeneratingFull(true)
+    try {
+      const r = await api<{ examId: string; warnings: string[] }>('/api/exam/list', {
+        title: 'JEE Main Full-Length Mock',
+        kind: 'full_length',
+      })
+      list.reload()
+      toast({
+        title: 'Full-length mock created',
+        description: r.warnings.length ? r.warnings.join(' ') : '75 questions · 180 minutes, straight from the PYQ bank.',
+      })
+    } catch (e) {
+      toast({ title: 'Could not create mock', description: (e as Error).message, variant: 'destructive' })
+    } finally {
+      setGeneratingFull(false)
+    }
+  }
 
   const createCustom = async () => {
     setCreating(true)
@@ -119,9 +143,6 @@ function ExamListView({ list, history, loggedIn, onStart, onOpenResult, onRequir
       setCreating(false)
     }
   }
-
-  const exams = list.data?.exams ?? []
-  const hasDefault = exams.some((e) => e.kind === 'full_length')
 
   return (
     <div className="mx-auto max-w-4xl">
@@ -151,10 +172,14 @@ function ExamListView({ list, history, loggedIn, onStart, onOpenResult, onRequir
       {list.data && (
         <div className="space-y-3">
           {!hasDefault && (
-            <p className="rounded-xl border border-dashed border-border p-4 text-sm text-muted-foreground">
-              No full-length mock available yet — the question bank needs more questions per subject.
-              Create a custom test below with the questions currently available.
-            </p>
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-dashed border-border p-4">
+              <p className="min-w-0 flex-1 text-sm text-muted-foreground">
+                No full-length mock yet — generate one from the live PYQ bank (fresh question mix every time you create a new one).
+              </p>
+              <Button variant="outline" onClick={generateFullLength} disabled={generatingFull}>
+                {generatingFull ? 'Generating…' : 'Generate full-length mock'}
+              </Button>
+            </div>
           )}
           {exams.map((e) => (
             <Card key={e.id} className="transition-colors hover:border-primary/40">

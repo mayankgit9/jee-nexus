@@ -80,6 +80,7 @@ export async function generateExam(input: GenerateExamInput): Promise<{ examId: 
   })
 
   let order = 0
+  const rows: { examId: string; questionId: string; order: number; section: string; sectionOrder: number }[] = []
   for (let s = 0; s < sectionKeys.length; s++) {
     const sk = sectionKeys[s]
     const where = {
@@ -97,13 +98,16 @@ export async function generateExam(input: GenerateExamInput): Promise<{ examId: 
       )
     }
     for (const qid of chosen) {
-      await db.examQuestion.create({
-        data: { examId: exam.id, questionId: qid, order: order++, section: sk, sectionOrder: s },
-      })
+      rows.push({ examId: exam.id, questionId: qid, order: order++, section: sk, sectionOrder: s })
     }
   }
 
-  const total = await db.examQuestion.count({ where: { examId: exam.id } })
+  // Single multi-row INSERT: per-row create() calls blew past the Workers
+  // subrequest cap (50/invocation) for full-length 75-question exams —
+  // "Too many subrequests by single Worker invocation".
+  await db.examQuestion.createMany({ data: rows })
+
+  const total = rows.length
   if (total === 0) {
     await db.exam.delete({ where: { id: exam.id } })
     throw new Error('No questions available for this exam configuration')

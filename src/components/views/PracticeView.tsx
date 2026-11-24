@@ -15,7 +15,7 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { QuestionCard } from '@/components/QuestionCard'
 import type { PublicQuestion, SubmittedResult, SubjectKey } from '@/lib/types'
-import { api } from '@/lib/client'
+import { api, useApi } from '@/lib/client'
 import { toast } from '@/hooks/use-toast'
 
 interface TaxonomySubject {
@@ -24,8 +24,6 @@ interface TaxonomySubject {
   chapters: { key: string; name: string; unit: string | null; questionCount: number }[]
 }
 
-const YEARS = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019]
-
 interface Props {
   taxonomy: TaxonomySubject[] | null
   loggedIn: boolean
@@ -33,6 +31,13 @@ interface Props {
 }
 
 export function PracticeView({ taxonomy, loggedIn, onRequireAuth }: Props) {
+  // Only offer years that actually have imported questions (the PYQ overview
+  // is the source of truth; hardcoded chips offered empty years like 2026).
+  const pyqYears = useApi<{ years: { year: number }[] }>('/api/pyq')
+  const YEARS = useMemo(
+    () => (pyqYears.data?.years ?? []).map((y) => y.year).sort((a, b) => b - a),
+    [pyqYears.data]
+  )
   const [subject, setSubject] = useState<string>('all')
   const [chapters, setChapters] = useState<string[]>([])
   const [years, setYears] = useState<number[]>([])
@@ -273,6 +278,7 @@ export function PracticeView({ taxonomy, loggedIn, onRequireAuth }: Props) {
           <div>
             <Label className="text-sm font-semibold">Years <span className="font-normal text-muted-foreground">(optional)</span></Label>
             <div className="mt-2 flex flex-wrap gap-2">
+              {YEARS.length === 0 && <span className="text-sm text-muted-foreground">Loading years…</span>}
               {YEARS.map((y) => (
                 <button
                   key={y}
