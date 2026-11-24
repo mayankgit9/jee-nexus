@@ -1,0 +1,955 @@
+[
+ {
+  "publicId": "PYQ-2021-1ktcxxct",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let [t] denote the greatest integer less than or equal to t. Let \nf(x) = x $-$ [x], g(x) = 1 $-$ x + [x], and h(x) = min{f(x), g(x)}, x $\\in$ [$-$2, 2]. Then h is :",
+  "options": [
+   "continuous in [$-$2, 2] but not differentiable at more than \nfour points in ($-$2, 2)",
+   "not continuous at exactly three points in [$-$2, 2]",
+   "continuous in [$-$2, 2] but not differentiable at exactly \nthree points in ($-$2, 2)",
+   "not continuous at exactly four points in [$-$2, 2]"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "With $\\{x\\}=x-[x]\\in [0,1)$, $f(x)=\\{x\\}$ and $g(x)=1-\\{x\\}$, so\n\n$h(x)=\\min (\\{x\\},1-\\{x\\})=\\left \\{\\begin{array}{ll} \\{x\\}, & 0\\leq \\{x\\}\\leq \\dfrac{1}{2} \\\\ 1-\\{x\\}, & \\dfrac{1}{2}<\\{x\\}<1 \\end{array} \\right.$\n\nOn each interval $[n,n+1]$, $h$ rises with slope 1 from 0 at $x=n$ to $\\dfrac{1}{2}$ at $x=n+\\dfrac{1}{2}$, then falls with slope $-1$ to 0 at $x=n+1$.\n\n\n[IMG]\n\nInside each $(n,n+1)$, $h$ is continuous. At an integer $n$, $h(n)=\\min (0,1)=0$; as $x\\to n^{+}$, $\\{x\\}\\to 0$ so $h\\to 0$, and as $x\\to n^{-}$, $1-\\{x\\}\\to 0$ so $h\\to 0$. Hence $h$ is continuous on $[-2,2]$, which rules out (B) and (D).\n\nThe slope changes from $-1$ to $1$ at every integer and from $1$ to $-1$ at every half-integer. In $(-2,2)$ these are $-1,0,1$ and $-\\dfrac{3}{2},-\\dfrac{1}{2},\\dfrac{1}{2},\\dfrac{3}{2}$, so $h$ is not differentiable at 7 points, more than four.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-26th-august-evening-shift/1ktcxxctq-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th August Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktcy6d7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=⎛⎝⎜\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 0 \\end{array}⎞⎠⎟$. Then $A^{2025}$ $-$ $A^{2020}$ is equal to :",
+  "options": [
+   "$A^{6}$ $-$ A",
+   "$A^{5}$",
+   "$A^{5}$ $-$ A",
+   "$A^{6}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 0 \\end{array}\\right ]\\Rightarrow A^{2}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 1 & 1 & 1 \\\\ 1 & 0 & 0 \\end{array}\\right ]$\n\n$A^{3}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 2 & 1 & 1 \\\\ 1 & 0 & 0 \\end{array}\\right ]\\Rightarrow A^{4}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 3 & 1 & 1 \\\\ 1 & 0 & 0 \\end{array}\\right ]$\n\n$A^{n}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ n-1 & 1 & 1 \\\\ 1 & 0 & 0 \\end{array}\\right ]$\n\n$A^{2025}-A^{2020}=\\left [\\begin{array}{lll} 0 & 0 & 0 \\\\ 5 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array}\\right ]$\n\n$A^{6}-A=\\left [\\begin{array}{lll} 0 & 0 & 0 \\\\ 5 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array}\\right ]$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktcydsz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The local maximum value of the function $f(x)=\\left (\\frac{2}{x}\\right )^{x^{2}}$, x > 0, is",
+  "options": [
+   "$\\left (2\\sqrt{e}\\right )^{\\frac{1}{e}}$",
+   "$\\left (\\frac{4}{\\sqrt{e}}\\right )^{\\frac{e}{4}}$",
+   "$(e)^{\\frac{2}{e}}$",
+   "1"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\left (\\frac{2}{x}\\right )^{x^{2}}$ ; x > 0\n\n$\\ln f(x)=x^{2}(\\ln 2-\\ln x)$\n\n$f^{'}(x)=f(x)\\{-x+(\\ln 2-\\ln x)2x\\}$\n\n$f^{'}(x)=f(x)⏟_{+}.x⏟_{+}(2\\ln 2-2\\ln x-1)_{g(x)}$\n\n$g(x)=2\\ln ^{2}-2\\ln x-1$\n\n$=\\ln \\frac{4}{x^{2}}-1=0\\Rightarrow x=\\frac{2}{\\sqrt{e}}$\n\n \n[IMG]\n \n\n$LM=\\frac{2}{\\sqrt{e}}$\n\nLocal maximum value = $\\left (\\frac{2}{2/\\sqrt{e}}\\right )^{\\frac{4}{e}}=e^{\\frac{2}{e}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-26th-august-evening-shift/1ktcydszh-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th August Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktcym1c",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the value of the integral \n$\\int\\limits _{0}^{5}\\frac{x+[x]}{e^{x-[x]}}dx=αe^{-1}+β$, where $α$, $β$ $\\in$ R, 5$α$ + 6$β$ = 0, and [x] denotes the greatest integer less than or equal to x; then the value of ($α$ + $β)^{2}$ is equal to :",
+  "options": [
+   "100",
+   "25",
+   "16",
+   "36"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=\\int\\limits _{0}^{5}\\frac{x+[x]}{e^{x-[x]}}dx=αe^{-1}+β$\n\n$I=\\int\\limits _{0}^{1}\\frac{x}{e^{x}}dx+\\int\\limits _{1}^{2}\\frac{x+1}{e^{x-1}}dx+\\int\\limits _{2}^{3}\\frac{x+2}{e^{x-2}}dx+\\int\\limits _{3}^{4}\\frac{x+3}{e^{x-3}}dx+\\int\\limits _{4}^{5}\\frac{x+4}{e^{x-4}}dx$\n\nLet $I=I_{1}+I_{2}+I_{3}+I_{4}+I_{5}$\n\nHere, $I_{2}=\\int\\limits _{1}^{2}\\frac{x+1}{e^{x-1}}dx$ Put $x=t+1\\Rightarrow dx=dt$\n\n$=\\int\\limits _{0}^{1}\\frac{t+2}{e^{t}}dt=\\int\\limits _{0}^{1}\\frac{t}{e^{t}}dt+\\int\\limits _{0}^{1}\\frac{2}{e^{t}}dt$\n\n$I_{2}=I_{1}+2\\int\\limits _{0}^{1}e^{-t}dt=I_{1}+2(1-e^{-1})$\n\nSimilarly,\n\n$I_{3}=I_{1}+4(1-e^{-1})$\n\n$I_{4}=I_{1}+6(1-e^{-1})$\n\n$I_{5}=I_{1}+8(1-e^{-1})$\n\n$I=I_{1}+I_{2}+I_{3}+I_{4}+I_{5}=5I_{1}+(2+4+6+8)(1-e^{-1})$\n\n$=5I_{1}+20(1-e^{-1})$\n\n$I_{1}=\\int\\limits _{0}^{1}xe^{-1}dx=-[e^{-x}(x+1)_{0}^{1}=1-2e^{-1}$\n\n$\\therefore$ $5I_{1}+20(1-e^{-1})=5(1-2e^{-1})+20(1-e^{-1})=25-30e^{-1}$\n\n$\\therefore$ $α$ = $-$30, $β$ = 25\n\nAlso it satisfy $5α+6β=0$\n\nNow, $(α+β)^{2}=(-30+25)^{2}=(-5)^{2}=25$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktcz25f",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y(x) be the solution of the differential equation \n\n$2x^{2} dy + (e^{y}$ $-$ 2x)dx = 0, x > 0. If y(e) = 1, then y(1) is equal to :",
+  "options": [
+   "0",
+   "2",
+   "$\\log _{e} 2$",
+   "$\\log _{e} (2e)$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2x^{2}dy+(e^{y}-2x)dx=0$\n\n$\\frac{dy}{dx}+\\frac{e^{y}-2x}{2x^{2}}=0\\Rightarrow \\frac{dy}{dx}+\\frac{e^{y}}{2x^{2}}-\\frac{1}{x}=0$\n\n$e^{-y}\\frac{dy}{dx}-\\frac{e^{-y}}{x}=-\\frac{1}{2x^{2}}\\Rightarrow$ Put $e^{-y}=z$\n\n$\\frac{-dz}{dx}-\\frac{z}{x}=-\\frac{1}{2x^{2}}\\Rightarrow xdz+zdx=\\frac{dx}{2x}$\n\n$d(xz)=\\frac{dx}{2x}\\Rightarrow xz=\\frac{1}{2}\\log _{e}x+c$\n\n$xe^{-y}=\\frac{1}{2}\\log _{e}x+c$, passes through (e, 1)\n\n$\\Rightarrow C=\\frac{1}{2}$\n\n$xe^{-y}=\\frac{\\log _{e}ex}{2}$\n\n$e^{-y}=\\frac{1}{2}\\Rightarrow y=\\log _{e}2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktczv71",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The domain of the function $\\mathrm{cosec}^{-1}\\left (\\frac{1+x}{x}\\right )$ is :",
+  "options": [
+   "$\\left (-1,-\\frac{1}{2}\\right ]\\cup (0,\\infty )$",
+   "$\\left [-\\frac{1}{2},0\\right )\\cup [1,\\infty )$",
+   "$\\left (-\\frac{1}{2},\\infty \\right )-\\{0\\}$",
+   "$\\left [-\\frac{1}{2},\\infty \\right )-\\{0\\}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{1+x}{x}\\in (-\\infty ,-1]\\cup [1,\\infty )$\n\n$\\frac{1}{x}\\in (-\\infty ,-2]\\cup [0,\\infty )$\n\n$x\\in \\left [-\\frac{1}{2},0\\right )\\cup (0,\\infty )$\n\n$x\\in \\left [-\\frac{1}{2},\\infty \\right )-\\{0\\}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd01kj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A fair die is tossed until six is obtained on it. Let x be the number of required tosses, then the conditional probability P(x $\\geq$ 5 | x > 2) is :",
+  "options": [
+   "$\\frac{125}{216}$",
+   "$\\frac{11}{36}$",
+   "$\\frac{5}{6}$",
+   "$\\frac{25}{36}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "P(x $\\geq$ 5 | x > 2) = $\\frac{P(x\\geq 5)}{P(x>2)}$\n\n= $\\frac{\\left (\\frac{5}{6}\\right )^{4}.\\frac{1}{6}+\\left (\\frac{5}{6}\\right )^{5}.\\frac{1}{6}+.......+\\infty }{\\left (\\frac{5}{6}\\right )^{2}.\\frac{1}{6}+\\left (\\frac{5}{6}\\right )^{3}.\\frac{1}{6}+......+\\infty }$\n\n=$\\frac{\\frac{\\left (\\dfrac{5}{6}\\right )4.\\dfrac{1}{5}}{1-\\dfrac{5}{6}}}{\\frac{\\left (\\dfrac{5}{6}\\right )2.\\dfrac{1}{6}}{1-\\dfrac{5}{6}}}=\\left (\\frac{5}{6}\\right )^{2}=\\frac{25}{36}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd06px",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\sum\\limits _{r=1}^{50}\\tan ^{-1}\\frac{1}{2r^{2}}=p$, then the value of tan p is :",
+  "options": [
+   "$\\frac{101}{102}$",
+   "$\\frac{50}{51}$",
+   "100",
+   "$\\frac{51}{50}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sum\\limits _{r=1}^{50}\\tan ^{-1}\\left (\\frac{2}{4r^{2}}\\right )=\\sum\\limits _{r=1}^{50}\\tan ^{-1}\\left (\\frac{(2r+1)-(2r-1)}{1+(2r+1)(2r-1)}\\right )$\n\n= $\\sum\\limits _{r=1}^{50}\\tan ^{-1}(2r+1)-\\tan ^{-1}(2r-1)$\n\n= $\\tan ^{-1}(101)-\\tan ^{-1}1=\\tan ^{-1}\\frac{50}{51}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd0dr8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two fair dice are thrown. The numbers on them are taken as $λ$ and $μ$, and a system of linear equations\n\nx + y + z = 5\n\nx + 2y + 3z = $μ$ \n\nx + 3y + $λ$z = 1\n\nis constructed. If p is the probability that the system has a unique solution and q is the probability that the system has no solution, then :",
+  "options": [
+   "$p=\\frac{1}{6}$ and $q=\\frac{1}{36}$",
+   "$p=\\frac{5}{6}$ and $q=\\frac{5}{36}$",
+   "$p=\\frac{5}{6}$ and $q=\\frac{1}{36}$",
+   "$p=\\frac{1}{6}$ and $q=\\frac{5}{36}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$D\\neq 0\\Rightarrow \\left |\\begin{array}{lll} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 3 & λ \\end{array}\\right |\\neq 0\\Rightarrow λ\\neq 5$\n\nFor no solution D = 0 $\\Rightarrow$ $λ$ = 5\n\n$D_{1}=\\left |\\begin{array}{lll} 1 & 1 & 5 \\\\ 1 & 2 & μ \\\\ 1 & 3 & 1 \\end{array}\\right |\\neq 0\\Rightarrow μ\\neq 3$\n\n$p=\\frac{5}{6}$\n\n$q=\\frac{1}{6}\\times \\frac{5}{6}=\\frac{5}{36}$\n\nOption (b).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd0j2l",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The locus of the mid points of the chords of the hyperbola $x^{2}$ $-$ $y^{2} = 4$, which touch the parabola $y^{2} = 8x$, is :",
+  "options": [
+   "$y^{3}(x$ $-$ $2) = x^{2}$",
+   "$x^{3}(x$ $-$ $2) = y^{2}$",
+   "$y^{2}(x$ $-$ $2) = x^{3}$",
+   "$x^{2}(x$ $-$ $2) = y^{3}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $(h,k)$ be the midpoint of a chord of $x^{2}-y^{2}=4$. By $T=S_{1}$, the chord is $hx-ky=h^{2}-k^{2}$, i.e.\n\n$y=\\frac{h}{k}x-\\frac{h^{2}-k^{2}}{k}$\n\nThe line $y=mx+c$ touches $y^{2}=8x$ (here $a=2$) when $c=\\dfrac{2}{m}$.\n\nWith $m=\\dfrac{h}{k}$ and $c=\\dfrac{k^{2}-h^{2}}{k}$:\n\n$\\frac{k^{2}-h^{2}}{k}=\\frac{2k}{h}\\Rightarrow h(k^{2}-h^{2})=2k^{2}\\Rightarrow k^{2}(h-2)=h^{3}$\n\nSo the locus is $y^{2}(x-2)=x^{3}$.\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd1gy9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of \n\n$2\\sin \\left (\\frac{π}{8}\\right )\\sin \\left (\\frac{2π}{8}\\right )\\sin \\left (\\frac{3π}{8}\\right )\\sin \\left (\\frac{5π}{8}\\right )\\sin \\left (\\frac{6π}{8}\\right )\\sin \\left (\\frac{7π}{8}\\right )$ is :",
+  "options": [
+   "$\\frac{1}{4\\sqrt{2}}$",
+   "$\\frac{1}{4}$",
+   "$\\frac{1}{8}$",
+   "$\\frac{1}{8\\sqrt{2}}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2\\sin \\left (\\frac{π}{8}\\right )\\sin \\left (\\frac{2π}{8}\\right )\\sin \\left (\\frac{3π}{8}\\right )\\sin \\left (\\frac{5π}{8}\\right )\\sin \\left (\\frac{6π}{8}\\right )\\sin \\left (\\frac{7π}{8}\\right )$\n\n$2\\sin ^{2}\\frac{π}{8}\\sin ^{2}\\frac{2π}{8}\\sin ^{2}\\frac{3π}{8}$\n\n$\\sin ^{2}\\frac{π}{8}\\sin ^{2}\\frac{3π}{8}$\n\n$\\sin ^{2}\\frac{π}{8}\\cos ^{2}\\frac{π}{8}$\n\n$\\frac{1}{4}\\sin ^{2}\\left (\\frac{π}{4}\\right )=\\frac{1}{8}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd1lmo",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\left (\\sqrt{3}+i\\right )^{100}=2^{99}(p+iq)$, then p and q are roots of the equation :",
+  "options": [
+   "$x^{2}-\\left (\\sqrt{3}-1\\right )x-\\sqrt{3}=0$",
+   "$x^{2}+\\left (\\sqrt{3}+1\\right )x+\\sqrt{3}=0$",
+   "$x^{2}+\\left (\\sqrt{3}-1\\right )x-\\sqrt{3}=0$",
+   "$x^{2}-\\left (\\sqrt{3}+1\\right )x+\\sqrt{3}=0$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (2e^{iπ/6}\\right )^{100}=2^{99}(p+iq)$\n\n$2^{100}\\left (\\cos \\frac{50π}{3}+i\\sin \\frac{50π}{3}\\right )=2^{99}(p+iq)$\n\n$p+iq=2\\left (\\cos \\frac{2π}{3}+i\\sin \\frac{2π}{3}\\right )$\n\np = $-$1, q = $\\sqrt{3}$\n\n$x^{2}-(\\sqrt{3}-1)x-\\sqrt{3}=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd1se6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A hall has a square floor of dimension 10 m $\\times$ 10 m (see the figure) and vertical walls. If the angle GPH between the diagonals AG and BH is $\\cos ^{-1}\\frac{1}{5}$, then the height of the hall (in meters) is :\n\n\n[IMG]",
+  "options": [
+   "5",
+   "2$\\sqrt{10}$",
+   "5$\\sqrt{3}$",
+   "5$\\sqrt{2}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A(\\hat{j})\\qquad .B(10\\hat{i})$\n\n$H(h\\hat{j}+10\\widehat{k})$\n\n$G(10\\hat{i}+h\\hat{j}+10\\widehat{k})$\n\n$AG\\leftarrow =10\\hat{i}+h\\hat{j}+10\\widehat{k}$\n\n$BH\\leftarrow =-10\\hat{i}+h\\hat{j}+10\\widehat{k}$\n\n$\\cos θ=\\frac{AG\\leftarrow BH\\leftarrow }{\\left |AG\\leftarrow \\right |\\left |BH\\leftarrow \\right |}$\n\n$\\frac{1}{5}=\\frac{h^{2}}{h^{2}+200}$\n\n$4h^{2}=200\\Rightarrow h=5\\sqrt{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-26th-august-evening-shift/1ktd1se61-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th August Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktd2e88",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\int\\limits _{-\\frac{π}{2}}^{\\frac{π}{2}}\\left (\\frac{1+\\sin ^{2}x}{1+π^{\\sin x}}\\right )dx$ is",
+  "options": [
+   "$\\frac{π}{2}$",
+   "$\\frac{5π}{4}$",
+   "$\\frac{3π}{4}$",
+   "$\\frac{3π}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=\\int\\limits _{0}^{\\frac{π}{2}}\\frac{(1+\\sin ^{2}x)}{(1+π^{\\sin x})}+\\frac{π^{\\sin x}(1+\\sin ^{2}x)}{(1+π^{\\sin x})}dx$\n\n$I=\\int\\limits _{0}^{\\frac{π}{2}}(1+\\sin ^{2}x)dx$\n\n$I=\\frac{π}{2}+\\frac{π}{2}.\\frac{1}{2}=\\frac{3π}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd2kui",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A circle C touches the line x = 2y at the point (2, 1) and intersects the circle \n\n$C_{1}$ : $x^{2} + y^{2} + 2y$ $-$ 5 = 0 at two points P and Q such that PQ is a diameter of $C_{1}$. Then the diameter of C is :",
+  "options": [
+   "$7\\sqrt{5}$",
+   "15",
+   "$\\sqrt{285}$",
+   "$4\\sqrt{15}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "(x $-$ $2)^{2} + (y$ $-$ $1)^{2} +$ $λ$(x $-$ 2y) = 0\n\nC : $x^{2} + y^{2} + x(λ$ $-$ 4) + y($-$2 $-$2$λ$) + 5 = 0\n\n$C_{1}$ : $x^{2} + y^{2} + 2y$ $-$ 5 = 0\n\n$S_{1}$ $-$ $S_{2} = 0 ($Equation of PQ)\n\n($λ$ $-$ 4)x $-$ (2$λ$ + 4)y + 10 = 0 Passes through (0, $-$1)\n\n$\\Rightarrow$ $λ$ = $-$7\n\nC : $x^{2} + y^{2}$ $-$ 11x + 12y + 5 = 0\n\nRadius = $\\frac{\\sqrt{245}}{2}$\n\nDiameter = $7\\sqrt{5}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd2oyn",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{x\\to 2}\\left (\\sum\\limits _{n=1}^{9}\\frac{x}{n(n+1)x^{2}+2(2n+1)x+4}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{9}{44}$",
+   "$\\frac{5}{24}$",
+   "$\\frac{1}{5}$",
+   "$\\frac{7}{36}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$S=\\lim _{x\\to 2}\\sum\\limits _{n=1}^{9}\\frac{x}{n(n+1)x^{2}+2(2n+1)x+4}$\n\n$S=\\sum\\limits _{n=1}^{9}\\frac{2}{4(n^{2}+3n+2)}=\\frac{1}{2}\\sum\\limits _{n=1}^{9}\\left (\\frac{1}{n+1}-\\frac{1}{n+2}\\right )$\n\n$S=\\frac{1}{2}\\left (\\frac{1}{2}-\\frac{1}{11}\\right )=\\frac{9}{44}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd2u4n",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The sum of all 3-digit numbers less than or equal to 500, that are formed without using the digit \"1\" and they all are multiple of 11, is $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 7744.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "209, 220, 231, ..........., 495\n\nSum = $\\frac{27}{2}$(209 + 495) = 9504\n\nNumber containing 1 at unit place $\\begin{array}{lll} 2– & 3– & 1– \\\\ 3– & 4– & 1– \\\\ 4– & 5– & 1– \\end{array}$\n\nNumber containing 1 at $10^{th}$ place $\\begin{array}{lll} 3– & 1– & 9– \\\\ 4– & 1– & 8– \\end{array}$\n\nRequired = 9504 $-$ (231 + 341 + 451 + 319 + 418)\n\n= 7744",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd2yfd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let a and b respectively be the points of local maximum and local minimum of the function $f(x) = 2x^{3}$ $-$ $3x^{2}$ $-$ 12x. If A is the total area of the region bounded by y = f(x), the x-axis and the lines x = a and x = b, then 4A is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 114.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f'(x) = 6x^{2}$ $-$ 6x $-$ 12 = 6(x $-$ 2) (x + 1)\n\nPoint = (2, $-$20) & ($-$1, 7)\n\n\n[IMG]\n\n$A=\\int\\limits _{-1}^{0}(2x^{3}-3x^{2}-12x)dx+\\int\\limits _{0}^{2}(12x+3x^{2}-2x^{3})dx$\n\n$A=\\left (\\frac{x^{4}}{2}-x^{3}-6x^{2}\\right )_{-1}^{0}+\\left (6x^{2}+x^{3}-\\frac{x^{4}}{2}\\right )_{0}^{2}$\n\n4A = 114",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-26th-august-evening-shift/1ktd2yfdk-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th August Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktd3i9x",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the projection of the vector $\\hat{i}+2\\hat{j}+\\widehat{k}$ on the sum of the two vectors $2\\hat{i}+4\\hat{j}-5\\widehat{k}$ and $-λ\\hat{i}+2\\hat{j}+3\\widehat{k}$ is 1, then $λ$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\vec{a}=\\hat{i}+2\\hat{j}+\\widehat{k}$\n\n$\\vec{b}=(2-λ)\\hat{i}+6\\hat{j}-2\\widehat{k}$\n\n$\\frac{\\vec{a}.\\vec{b}}{|\\vec{b}|}=1,\\vec{a}.\\vec{b}=12-λ$\n\n$\\left (\\vec{a}\\quad .\\vec{b}\\right )=|\\vec{b}|^{2}$\n\n$λ^{2}$ $-$ 24$λ$ + 144 = $λ^{2}$ $-$ 4$λ$ + 4 + 40\n\n20$λ$ = 100 $\\Rightarrow$ $λ$ = 5",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd3ojt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $a_{1}, a_{2}, ......., a_{10}$ be an AP with common difference $-$ 3 and $b_{1}, b_{2}, ........., b_{10}$ be a GP with common ratio 2. Let $c_{k} = a_{k} + b_{k}, k = 1, 2, ......, 10$. If $c_{2} = 12$ and $c_{3} = 13$, then $\\sum\\limits _{k=1}^{10}c_{k}$ is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2021.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$a_{1},a_{2},a_{3},\\ldots ,a_{10}$ are in AP common difference $=-3$\n\n $b_{1},b_{2},b_{3},\\ldots ,b_{10}$ are in GP common ratio $=2$\n\n Since, $c_{k}=a_{k}+b_{k},k=1,2,3\\ldots \\ldots ,10$\n\n$\\therefore c_{2}=a_{2}+b_{2}=12$\n\n$c_{3}=a_{3}+b_{3}=13$\n\nNow, $\\mathrm{C}_{3}-\\mathrm{C}_{2}=1$\n\n$\\begin{array}{ll} \\Rightarrow  & (a_{3}-a_{2})+(b_{3}-b_{2})\\neq 1\\Rightarrow -3+(2b_{2}-b_{2})\\neq 1 \\\\ \\Rightarrow  & b_{2}=4 \\\\ \\therefore  & a_{2}=8 \\end{array}$\n\nSo, AP is $11,8,5,\\ldots$.\n\nNow, $\\sum\\limits _{k=1}^{10}C_{k}=\\sum\\limits _{k=1}^{10}a_{k}+\\sum\\limits _{k=1}^{10}b_{k}$\n\n$\\begin{array}{l} =\\left (\\dfrac{10}{2}\\right )[22+9(-3)]+2\\left (\\dfrac{2^{10}-1}{2-1}\\right ) \\\\ =5(22-27)+2(1023)=2046-25 \\\\ =2021 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd4mp2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $λ$ $\\neq$ 0 be in R. If $α$ and $β$ are the roots of the equation $x^{2}$ $-$ x + 2$λ$ = 0, and $α$ and $γ$ are the roots of equation $3x^{2}$ $-$ 10x + 27$λ$ = 0, then $\\frac{βγ}{λ}$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 18.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "3$α^{2}$ $-$ 10$α$ + 27$λ$ = 0 ..... (1)\n\n$α^{2}$ $-$ $α$ + 2$λ$ = 0 ...... (2)\n\n(1) $-$ 3(2) gives\n\n$-$7$α$ + 21$λ$ = 0 $\\Rightarrow$ $α$ = 3$λ$\n\nPut $α$ = 3$λ$ in equation (2) we get\n\n9$λ^{2}$ $-$ 3$λ$ + 2$λ$ = 0\n\n9$λ^{2}$ = $λ$ $\\Rightarrow$ $λ$ = $\\frac{1}{9}$ as $λ$ $\\neq$ 0\n\nNow, $α$ = 3$λ$ $\\Rightarrow$ $α$ = $\\frac{1}{3}$ \n\n$α$ + $β$ = 1 $\\Rightarrow$ $β$ = 2/3\n\n$α$ + $γ$ = $\\frac{10}{3}$ $\\Rightarrow$ $γ$ = 3\n\n$\\frac{βγ}{λ}=\\frac{\\frac{2}{3}\\times 3}{\\frac{1}{9}}=18$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd4qfu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let the mean and variance of four numbers 3, 7, x and y(x > y) be 5 and 10 respectively. Then the mean of four numbers 3 + 2x, 7 + 2y, x + y and x $-$ y is $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 12.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$5=\\frac{3+7+x+y}{4}\\Rightarrow x+y=10$\n\nVar(x) = $10=\\frac{3^{2}+7^{2}+x^{2}+y^{2}}{4}-25$\n\n$140=49+9+x^{2}+y^{2}$\n\n$x^{2}+y^{2}=82$\n\nx + y = 10\n\n$\\Rightarrow$ (x, y) = (9, 1)\n\nFour numbers are 21, 9, 10, 8\n\nMean = $\\frac{48}{4}$ = 12",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktd50jv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The least positive integer n such that $\\frac{(2i)^{n}}{(1-i)^{n-2}},i=\\sqrt{-1}$ is a positive integer, is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th August Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{(2i)^{n}}{(1-i)^{n-2}}=\\frac{(2i)^{n}}{(-2i)^{\\dfrac{n-2}{2}}}$\n\n$=\\frac{(2i)^{\\dfrac{n+2}{2}}}{(-1)^{\\dfrac{n-2}{2}}}=\\frac{2^{\\dfrac{n+2}{2}}.i^{\\dfrac{n+2}{2}}}{(-1)^{\\dfrac{n-2}{2}}}$\n\nThis is positive integer for n = 6",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th August Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

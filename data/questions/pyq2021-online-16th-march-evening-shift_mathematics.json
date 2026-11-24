@@ -1,0 +1,867 @@
+[
+ {
+  "publicId": "PYQ-2021-kpDSmbBY",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If y = y(x) is the solution of the differential equation \n\n$\\frac{dy}{dx}$ + (tan x) y = sin x, $0\\leq x\\leq \\frac{π}{3}$, with y(0) = 0, then $y\\left (\\frac{π}{4}\\right )$ equal to :",
+  "options": [
+   "$\\frac{1}{2}\\log _{e} 2$",
+   "$\\left (\\frac{1}{2\\sqrt{2}}\\right )$ $\\log _{e} 2$",
+   "$\\log _{e} 2$",
+   "$\\frac{1}{4}$ $\\log _{e} 2$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Integrating Factor $=e^{\\int \\tan xdx}=e^{\\ln (\\sec x)}=\\sec x$\n\n$y\\sec x=\\int (\\sin x)\\sec xdx=\\ln (\\sec x)+C$\n\n$y(0)=0\\Rightarrow C=0$\n\n$\\therefore$ $y=\\cos x\\ln |\\sec x|$\n\n$y\\left (\\frac{π}{4}\\right )=\\frac{1}{\\sqrt{2}}\\ln \\left (\\sqrt{2}\\right )=\\frac{1}{2\\sqrt{2}}\\ln 2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-mQLintGw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f be a real valued function, defined on R $-$ {$-$1, 1} and given by \n\n$f(x) = 3 \\log _{e}$ $\\left |\\frac{x-1}{x+1}\\right |-\\frac{2}{x-1}$.\n\nThen in which of the following intervals, function f(x) is increasing?",
+  "options": [
+   "($-\\infty$, $-$1) $\\cup$ $\\left ([\\frac{1}{2},\\infty )-\\{1\\}\\right )$",
+   "($-\\infty$, $\\infty$) $-$ {$-$1, 1)",
+   "($-\\infty$, $\\frac{1}{2}$] $-$ {$-$1}",
+   "($-$1, $\\frac{1}{2}$]"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x) = 3 \\log _{e}$ $\\left |\\frac{x-1}{x+1}\\right |-\\frac{2}{x-1}$\n\n$f^{'}(x)=\\frac{3(x+1)}{x-1}\\times \\frac{(x+1)-(x-1)}{(x+1)^{2}}+\\frac{2}{(x-1)^{2}}>0$\n\n$=\\frac{6}{x^{2}-1}+\\frac{2}{(x-1)^{2}}>0$\n\n$=\\frac{2(3(x-1)+(x+1))}{(x-1)^{2}(x+1)}=\\frac{4(2x-1)}{(x-1)^{2}(x+1)}>0$\n\n\n[IMG]\n\n\n$\\Rightarrow x\\in (-\\infty ,-1)\\cup \\left [\\frac{1}{2},\\infty )-\\{1\\} \\right.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-16th-march-evening-shift/mQLintGwdQfFf2qnw61kmiw0lr1-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 16th March Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-hkfGcy1F",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{a}$ = $\\hat{i}$ + 2$\\hat{j}$ $-$ 3$\\widehat{k}$ and $\\vec{b}=2\\hat{i}$ $-$ 3$\\hat{j}$ + 5$\\widehat{k}$. If $\\vec{r}$ $\\times$ $\\vec{a}$ = $\\vec{b}$ $\\times$ $\\vec{r}$, \n\n$\\vec{r}$ . $\\left (α\\hat{i}+2\\hat{j}+\\widehat{k}\\right )$ = 3 and $\\vec{r}\\quad .\\left (2\\hat{i}+5\\hat{j}-α\\widehat{k}\\right )$ = $-$1, $α$ $\\in$ R, then the \n\nvalue of $α$ + $\\left |\\vec{r}\\right |^{2}$ is equal to :",
+  "options": [
+   "13",
+   "11",
+   "9",
+   "15"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given  $\\vec{r}$ $\\times$ $\\vec{a}$ = $\\vec{b}$ $\\times$ $\\vec{r}$\n\n$\\Rightarrow$ $\\vec{r}\\times \\vec{a}=-\\vec{r}\\times \\vec{b}$\n\n$\\vec{r}\\times (\\vec{a}+\\vec{b})=0$\n\n$\\vec{r}||(\\vec{a}+\\vec{b})$\n\n$\\vec{r}=λ(\\vec{a}+\\vec{b})$\n\n$(\\vec{a}+\\vec{b}=3\\hat{i}-\\hat{j}+2\\widehat{k})$\n\n$\\because$ $\\vec{r}\\quad .(2\\hat{i}+5\\hat{j}-α\\widehat{k})=-1$\n\n$λ\\left [3\\hat{i}-\\hat{j}+2\\widehat{k}\\right ].\\left [2\\hat{i}+5\\hat{j}-α\\widehat{k}\\right ]=-1$\n\n$\\Rightarrow λ(6-5-2α)=-1$\n\n$λ(1-2α)=-1$ .... (1)\n\n$\\vec{r}\\quad .(α\\hat{i}+2\\hat{j}+\\widehat{k})=3$\n\n$λ(3\\hat{i}-\\hat{j}+2\\widehat{k}).(α\\hat{i}+2\\hat{j}+\\widehat{k})=3$\n\n$\\Rightarrow λ[3α-2+2]=3\\Rightarrow λα=1$ .... (2)\n\nFrom (1) & (2)\n\n$λ\\left [1-\\frac{2}{λ}\\right ]=-1$\n\n$λ-2=-1\\Rightarrow λ=1α=1$\n\n$\\vec{r}=3\\hat{i}-\\hat{j}+2\\widehat{k}$\n\n$α+|\\vec{r}|^{2}=1+14=15$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-ASltiYdr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the foot of the perpendicular from point (4, 3, 8) on the line $L_{1}:\\frac{x-a}{l}=\\frac{y-2}{3}=\\frac{z-b}{4}$, l $\\neq$ 0 is (3, 5, 7), then the shortest distance between the line $L_{1}$ and line $L_{2}:\\frac{x-2}{3}=\\frac{y-4}{4}=\\frac{z-5}{5}$ is equal to :",
+  "options": [
+   "$\\frac{1}{\\sqrt{6}}$",
+   "$\\frac{1}{2}$",
+   "$\\frac{1}{\\sqrt{3}}$",
+   "$\\sqrt{\\frac{2}{3}}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "(3, 5, 7) lie on given line $L_{1}$\n\n$\\frac{3-a}{l}=\\frac{3}{3}=\\frac{7-b}{4}$\n\n$\\frac{7-b}{4}=1\\Rightarrow b=3$\n\n$\\frac{3-a}{l}=1\\Rightarrow 3-a=l$\n\nM(4, 3, 8)\n\nN(3, 5, 7)\n\nDR'S of MN = (1, $-$2, 1)\n\nMN $⊥$ line $L_{1}$\n\n(1)(l) + ($-$2)(3) + 4(1) = 0\n\n$\\Rightarrow$ l = 2\n\na = 1\n\na = 1, b = 3, l = 2\n\n$\\frac{x-1}{2}=\\frac{y-2}{3}=\\frac{z-3}{4}$\n\n$\\frac{x-2}{3}=\\frac{y-4}{4}=\\frac{z-5}{5}$\n\n$A=<1,2,3>$\n\n$B=<2,4,5>$\n\n$AB\\leftarrow =<1,2,2>$\n\n$\\vec{p}=2\\hat{i}+3\\hat{j}+4\\widehat{k}$\n\n$\\vec{q}=3\\hat{i}+4\\hat{j}+5\\widehat{k}$\n\n$\\vec{p}\\quad \\times \\vec{q}=-\\hat{i}+2\\hat{j}-\\widehat{k}$\n\nShortest distance = $\\left |\\frac{AB\\leftarrow .(\\vec{p}\\times \\vec{q})}{|\\vec{p}\\times \\vec{q}|}\\right |=\\frac{1}{\\sqrt{6}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-I5Ortna4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider a rectangle ABCD having 5, 7, 6, 9 points in the interior of the line segments AB, CD, BC, DA respectively. Let $α$ be the number of triangles having these points from different sides as vertices and $β$ be the number of quadrilaterals having these points from different sides as vertices. Then ($β$ $-$ $α$) is equal to :",
+  "options": [
+   "717",
+   "795",
+   "1890",
+   "1173"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α={}^{6}C_{1}{}^{7}C_{1}{}^{9}C_{1}+{}^{5}C_{1}{}^{7}C_{1}{}^{9}C_{1}+{}^{5}C_{1}{}^{6}C_{1}{}^{9}C_{1}+{}^{5}C_{1}{}^{6}C_{1}{}^{7}C_{1}$\n\n$=378+315+270+210=1173$\n\n$β={}^{5}C_{1}{}^{6}C_{1}{}^{7}C_{1}{}^{9}C_{1}=1890$\n\n$\\therefore$ $β-α=1890-1173=717$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-5A659Mvl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : S $\\to$ S where S = (0, $\\infty$) be a twice differentiable function such that f(x + 1) = xf(x). If g : S $\\to$ R be defined as $g(x) = \\log _{e} f(x)$, then the value of |g''(5) $-$ g''(1)| is equal to :",
+  "options": [
+   "1",
+   "$\\frac{187}{144}$",
+   "$\\frac{197}{144}$",
+   "$\\frac{205}{144}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x+1)=xf(x)$\n\n$\\ln (f(x+1))=\\ln x+\\ln f(x)$\n\n$g(x+1)=\\ln x+g(x)$\n\n$g(x+1)-g(x)=\\ln x$ ..... (i)\n\n$g^{'}(x+1)-g^{'}(x)=\\frac{1}{x}$\n\n$g^{''}(x+1)-g^{''}(x)=\\frac{-1}{x^{2}}$\n\n$g^{''}(2)-g^{'}(1)=\\frac{-1}{1}$ .... (ii)\n\n$g^{''}(3)-g^{''}(2)=\\frac{-1}{4}$ .... (iii)\n\n$g^{''}(4)-g^{''}(3)=\\frac{-1}{9}$ ..... (iv)\n\n$g^{''}(5)-g^{''}(4)=\\frac{-1}{16}$ ....(v)\n\nAdding (ii), (iii), (iv) & (v)\n\n$g^{''}(5)-g^{''}(1)=-\\left (\\frac{1}{1}+\\frac{1}{4}+\\frac{1}{9}+\\frac{1}{16}\\right )=\\frac{-205}{144}$\n\n$|g^{''}(5)-g^{''}(1)|=\\frac{205}{144}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-67uyKNlE",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider the integral \n$I=\\int\\limits _{0}^{10}\\frac{[x]e^{[x]}}{e^{x-1}}dx$, \nwhere [x] denotes the greatest integer less than or equal to x. Then the value of I is equal to :",
+  "options": [
+   "45 (e $-$ 1)",
+   "45 (e + 1)",
+   "9 (e + 1)",
+   "9 (e $-$ 1)"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=\\int\\limits _{0}^{10}[x].e^{[x]+1-x}dx$\n\n$=\\int\\limits _{0}^{1}0~dx+\\int\\limits _{1}^{2}e^{2-x}dx+\\int\\limits _{2}^{3}2~.\\quad e^{3-x}dx+\\int\\limits _{3}^{4}3.e^{4-x}dx+.........+\\int\\limits _{9}^{10}9~e^{10-x}dx$\n\n$=-\\{(1-e)+2(1-e)+3(1-e)+.......+9(1-e)\\}$\n\n$=45(e-1)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-VXhDzKmE",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $C_{1}$ be the curve obtained by the solution of differential equation \n\n$2xy\\frac{dy}{dx}=y^{2}-x^{2},x>0$. Let the curve $C_{2}$ be the \n\nsolution of $\\frac{2xy}{x^{2}-y^{2}}=\\frac{dy}{dx}$. If both the curves pass through (1, 1), then the area enclosed by the curves $C_{1}$ and $C_{2}$ is equal to :",
+  "options": [
+   "$\\frac{π}{4}$ + 1",
+   "$π$ + 1",
+   "$π$ $-$ 1",
+   "$\\frac{π}{2}$ $-$ 1"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}=\\frac{y^{2}-x^{2}}{2xy}$\n\nPut $y=vx$\n\n$v+x\\frac{dv}{dx}=\\frac{v^{2}x^{2}-x^{2}}{2vx^{2}}=\\frac{v^{2}-1}{2v}$\n\n$x\\frac{dv}{dx}=\\frac{v^{2}-1-2v^{2}}{2v}=-\\frac{(v^{2}+1)}{2v}$\n\n$\\Rightarrow \\frac{2v}{v^{2}+1}dv=-\\frac{dx}{x}$\n\n$\\ln (v^{2}+1)=-\\ln x+\\ln c\\Rightarrow v^{2}+1=\\frac{c}{x}$\n\n$\\Rightarrow \\frac{y^{2}}{x^{2}}+1=\\frac{c}{x}\\Rightarrow x^{2}+y^{2}=cx$\n\nIt pass through (1, 1)\n\n$\\therefore$ $x^{2}+y^{2}-2x=0$\n\nSimilarly for second differential equation $\\frac{dy}{dx}=\\frac{2xy}{x^{2}-y^{2}}$\n\nEquation of curve is $x^{2} + y^{2}$ $-$ 2y = 0\n\nNow required area is \n\n\n[IMG]\n\n\n$=2\\int\\limits _{0}^{1}\\left (\\sqrt{2x-x^{2}}-x\\right )dx$\n\n$=(\\frac{π}{2}-1)$ sq. units",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-16th-march-evening-shift/VXhDzKmEPb3kiJilUw1kmiwnrph-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 16th March Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-r5s4VH5s",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $P(x) = x^{2} + bx + c$ be a quadratic polynomial with real coefficients such that $\\int\\limits _{0}^{1}P(x)dx$ = 1 and P(x) leaves remainder 5 when it is divided by (x $-$ 2). Then the value of 9(b + c) is equal to :",
+  "options": [
+   "9",
+   "11",
+   "7",
+   "15"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(x-2)Q(x)+5=x^{2}+bx+c$\n\nPut x = 2\n\n5 = 2b + c + 4 .... (1)\n\n$\\int\\limits _{0}^{1}(x^{2}+bx+c)dx=1$\n\n$\\Rightarrow \\frac{1}{3}+\\frac{b}{2}+c=1$\n\n$\\frac{b}{2}+c=\\frac{2}{3}$ .... (2)\n\nSolve (1) & (2)\n\n$b=\\frac{2}{9}$\n\n$c=\\frac{5}{9}$\n\n9(b + c) = 7",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-Cy64jNuK",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let A = {2, 3, 4, 5, ....., 30} and '$\\simeq$' be an equivalence relation on A $\\times$ A, defined by (a, b) $\\simeq$ (c, d), if and only if ad = bc. Then the number of ordered pairs which satisfy this equivalence relation with ordered pair (4, 3) is equal to :",
+  "options": [
+   "5",
+   "6",
+   "8",
+   "7"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "ad = bc\n\n(a, b) R (4, 3) $\\Rightarrow$ 3a = 4b\n\na = $\\frac{4}{3}$b\n\nb must be multiple of 3\n\nb = {3, 6, 9 ..... 30}\n\n(a, b) = {(4, 3), (8, 6), (12, 9), (16, 12), (20, 15), (24, 18), (28, 21)}\n\n$\\Rightarrow$ 7 ordered pair",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-ye1emd88",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The least value of |z| where z is complex number which satisfies the inequality $\\exp \\left (\\frac{(|z|+3)(|z|-1)}{||z|+1|}\\log _{e}2\\right )\\geq \\log _{\\sqrt{2}}|5\\sqrt{7}+9i|,i=\\sqrt{-1}$, is equal to :",
+  "options": [
+   "8",
+   "3",
+   "2",
+   "$\\sqrt{5}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let | z | = t, t $\\geq$ 0\n\n$e^{\\frac{(t+3)(t-1)}{t+1}\\log _{e}2}\\geq \\log _{\\sqrt{2}}16=8$ ($\\because$ t + 1 > 0)\n\n$2^{\\frac{(t+3)(t-1)}{t+1}}\\geq 2^{3}$\n\n$\\frac{(t+3)(t-1)}{t+1}\\geq 3$\n\n$t^{2}+2t-3\\geq 3t+3$\n\n$t^{2}-t-6\\geq 0$\n\n$t\\in (-\\infty ,-2)\\cup [3,\\infty )$ But t $\\geq$ 0\n\n$\\therefore$ $t\\in [3,\\infty )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-OthbyCL4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α$ $\\in$ R be such that the function $f(x)=\\left \\{\\begin{array}{ll} \\frac{\\cos ^{-1}(1-\\{x\\}^{2})\\sin ^{-1}(1-\\{x\\})}{\\{x\\}-\\{x\\}^{3}}, & x\\neq 0 \\\\ α, & x=0 \\end{array} \\right.$ is continuous at x = 0, where {x} = x $-$ [ x ], [ x ] is the greatest integer less than or equal to x. Then :",
+  "options": [
+   "no such $α$ exists",
+   "$α$ = 0",
+   "$α$ = $\\frac{π}{4}$",
+   "$α$ = $\\frac{π}{\\sqrt{2}}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$RHL=\\lim _{x\\to 0^{+}}\\frac{\\cos ^{-1}(1-x^{2})\\sin ^{-1}(1-x)}{x(1-x^{2})}$\n\n$=\\frac{π}{2}\\lim _{x\\to 0^{+}}\\frac{\\cos ^{-1}(1-x^{2})}{x}$\n\n$=\\frac{π}{2}\\lim _{x\\to 0^{+}}\\frac{-1}{\\sqrt{1-(1-x^{2})^{2}}}(-2x)$ (L' Hospital Rule)\n\n$=π\\lim _{x\\to 0^{+}}\\frac{x}{\\sqrt{2x^{2}-x^{4}}}=π\\lim _{x\\to 0^{+}}\\frac{1}{\\sqrt{2-x^{2}}}=\\frac{π}{\\sqrt{2}}$\n\n$LHL=\\lim _{x\\to 0^{-}}\\frac{\\cos ^{-1}(1-(1+x)^{2})\\sin ^{-1}(-x)}{(1+x)-(1+x)^{3}}$\n\n$=\\frac{π}{2}\\lim _{x\\to 0^{-}}\\frac{\\sin ^{-1}x}{(1-x)\\left [(1+x)^{2}-1\\right ]}=\\frac{π}{2}\\lim _{x\\to 0^{-}}\\frac{\\sin ^{-1}x}{x^{2}+2x}$\n\n$=\\frac{π}{2}\\left (\\frac{1}{2}\\right )=\\frac{π}{4}$\n\nAs LHL $\\neq$ RHL so f(x) is not continuous at x = 0",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-r1lgCyi2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given that the inverse trigonometric functions take principal values only. Then, the number of real values of x which satisfy \n\n$\\sin ^{-1}\\left (\\frac{3x}{5}\\right )+\\sin ^{-1}\\left (\\frac{4x}{5}\\right )=\\sin ^{-1}x$ is equal to :",
+  "options": [
+   "2",
+   "0",
+   "3",
+   "1"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sin ^{-1}\\frac{3x}{5}+\\sin ^{-1}\\frac{4x}{5}=\\sin ^{-1}x$\n\n$\\sin ^{-1}\\left (\\frac{3x}{5}\\sqrt{1-\\frac{16x^{2}}{25}}+\\frac{4x}{5}\\sqrt{1-\\frac{9x^{2}}{25}}\\right )=\\sin ^{-1}x$\n\n$\\frac{3x}{5}\\sqrt{1-\\frac{16x^{2}}{25}}+\\frac{4x}{5}\\sqrt{1-\\frac{9x^{2}}{25}}=x$\n\n$x=0$ or $3\\sqrt{25-16x^{2}}+4\\sqrt{25-9x^{2}}=25$\n\n$4\\sqrt{25-9x^{2}}=25-3\\sqrt{25-16x^{2}}$ \n\nSquaring we get\n\n$16(25-9x^{2})=625+9(25-16x^{2})-150\\sqrt{25-16x^{2}}$\n\n$400=625+225-150\\sqrt{25-16x^{2}}$\n\n$\\sqrt{25-16x^{2}}=3\\Rightarrow 25-16x^{2}=9$\n\n$\\Rightarrow x^{2}=1$\n\nPut x = 0, 1, $-$1 in the original equation\n\nWe see that all values satisfy the original equation.\n\nNumber of solution = 3",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-ZkMgZkef",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the lengths of intercepts on x-axis and y-axis made by the circle \n$x^{2} + y^{2} + ax + 2ay + c = 0, (a < 0)$ be 2$\\sqrt{2}$ and 2$\\sqrt{5}$, respectively. Then the shortest distance from origin to a tangent to this circle which is perpendicular to the line x + 2y = 0, is equal to :",
+  "options": [
+   "$\\sqrt{10}$",
+   "$\\sqrt{6}$",
+   "$\\sqrt{11}$",
+   "$\\sqrt{7}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2\\sqrt{\\frac{a^{2}}{4}-c}=2\\sqrt{2}$\n\n$\\sqrt{a^{2}-4c}=2\\sqrt{2}$\n\n$a^{2}-4c=8$ .... (1)\n\n$2\\sqrt{a^{2}-c}=2\\sqrt{5}$\n\n$a^{2}-c=5$ .... (2)\n\n$(2)-(1)$\n\n$3c=-3a\\Rightarrow c=-1$\n\n$a^{2}=4\\Rightarrow a=-2$  (Given a < 0)\n\nEquation of circle\n\n$x^{2}+y^{2}-2x-4y-1=0$\n\nEquation of tangent which is perpendicular to the line x + 2y = 0 is\n\n$2x-y+λ=0$\n\n$\\therefore$ p = r\n\n$\\left |\\frac{2-2+λ}{\\sqrt{5}}\\right |=\\sqrt{6}$\n\n$\\Rightarrow λ=\\pm \\sqrt{30}$\n\n$\\therefore$ Tangent $2x-y\\pm \\sqrt{30}=0$\n\nDistance from origin = $\\frac{\\sqrt{30}}{\\sqrt{5}}=\\sqrt{6}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-xo2beH5T",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let A($-$1, 1), B(3, 4) and C(2, 0) be given three points. \nA line y = mx, m > 0, intersects lines AC and BC at point P and Q respectively. Let $A_{1}$ and $A_{2}$ be the areas of $\\Delta$ABC and $\\Delta$PQC respectively, such that $A_{1} = 3A_{2}$, then the value of m is equal to :",
+  "options": [
+   "1",
+   "3",
+   "2",
+   "$\\frac{4}{15}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Area of triangle ABC:\n\n$A_{1}=\\dfrac{1}{2}|(-1)(4-0)+3(0-1)+2(1-4)|=\\dfrac{1}{2}|-4-3-6|=\\dfrac{13}{2}$\n\nLine AC is $y=-\\dfrac{1}{3}(x-2)$; with $y=mx$ it gives $P=\\left (\\dfrac{2}{3m+1},\\dfrac{2m}{3m+1}\\right )$.\n\nLine BC is $y=4(x-2)$; with $y=mx$ it gives $Q=\\left (\\dfrac{8}{4-m},\\dfrac{8m}{4-m}\\right )$.\n\nTriangles PQC and ABC share the angle at C, with P on line CA and Q on line CB, so\n\n$\\dfrac{A_{2}}{A_{1}}=\\left |\\dfrac{CP}{CA}\\right |\\cdot \\left |\\dfrac{CQ}{CB}\\right |,\\dfrac{CP}{CA}=\\dfrac{2-x_{P}}{2-(-1)}=\\dfrac{2m}{3m+1},\\dfrac{CQ}{CB}=\\dfrac{x_{Q}-2}{3-2}=\\dfrac{2m}{4-m}$\n\n$A_{1}=3A_{2}$ gives\n\n$\\dfrac{4m^{2}}{|(3m+1)(4-m)|}=\\dfrac{1}{3}\\Rightarrow 12m^{2}=\\left |-3m^{2}+11m+4\\right |$\n\nThe sign $12m^{2}=3m^{2}-11m-4$ gives $9m^{2}+11m+4=0$, which has no real root (discriminant $121-144<0$). The other sign gives\n\n$15m^{2}-11m-4=0\\Rightarrow (m-1)(15m+4)=0\\Rightarrow m=1\\text{or}-\\dfrac{4}{15}$\n\nSince $m>0$, $m=1$, with $P=\\left (\\dfrac{1}{2},\\dfrac{1}{2}\\right )$ and $Q=\\left (\\dfrac{8}{3},\\dfrac{8}{3}\\right )$.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-UBXmKU6x",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let A denote the event that a 6-digit integer formed by 0, 1, 2, 3, 4, 5, 6 without repetitions, be divisible by 3. Then probability of event A is equal to :",
+  "options": [
+   "$\\frac{4}{9}$",
+   "$\\frac{9}{56}$",
+   "$\\frac{11}{27}$",
+   "$\\frac{3}{7}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Total cases :\n\n$6–$ . $6–$ . $5–$ . $4–$ . $3–$ . $2–$\n\nn(s) = 6 . 6!\n\nFavourable cases :\n\nNumber divisible by 3 $\\equiv$ Sum of digits must be divisible by 3\n\nCase - I\n\n1, 2, 3, 4, 5, 6\n\nNumber of ways = 6!\n\nCase - II\n\n0, 1, 2, 4, 5, 6\n\nNumber of ways = 5 . 5!\n\nCase - III\n\n0, 1, 2, 3, 4, 5\n\nNumber of ways = 5 . 5!\n\nn(favourable) = 6! + 2 . 5 . 5!\n\n$P=\\frac{6!+2.5.5!}{6.6!}=\\frac{4}{9}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-SVaD9jBa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\frac{1}{16}$, a and b be in G.P. and $\\frac{1}{a}$, $\\frac{1}{b}$, 6 be in A.P., where a, b > 0. Then 72(a + b) is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 14.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$a^{2}=\\frac{b}{16}$ and $\\frac{2}{b}=\\frac{1}{a}+6$\n\nSolving, we get $a=\\frac{1}{12}$ or $a=-\\frac{1}{4}$ [rejected]\n\nif $a=\\frac{1}{12}\\Rightarrow b=\\frac{1}{9}$\n\n$\\therefore$ $72(a+b)=72\\left (\\frac{1}{12}+\\frac{1}{9}\\right )=14$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-OlbUl68m",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "For real numbers $α$, $β$, $γ$ and $δ$, if \n$\\int \\frac{(x^{2}-1)+\\tan ^{-1}\\left (\\frac{x2+1}{x}\\right )}{(x^{4}+3x^{2}+1)\\tan ^{-1}\\left (\\frac{x2+1}{x}\\right )}dx$\n\n $=α\\log _{e}\\left (\\tan ^{-1}\\left (\\frac{x^{2}+1}{x}\\right )\\right )+β\\tan ^{-1}\\left (\\frac{γ(x^{2}-1)}{x}\\right )+δ\\tan ^{-1}\\left (\\frac{x^{2}+1}{x}\\right )+C$ \n\nwhere C is an arbitrary constant, then the value of 10($α$ + $βγ$ + $δ$) is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int \\frac{(x^{2}-1)+\\tan ^{-1}\\left (\\frac{x2+1}{x}\\right )}{(x^{4}+3x^{2}+1)\\tan ^{-1}\\left (\\frac{x2+1}{x}\\right )}dx$\n\n= $\\int \\frac{x^{2}-1}{(x^{4}+3x^{2}+1)\\tan ^{-1}\\left (\\frac{x2+1}{x}\\right )}dx+\\int \\frac{1}{x^{4}+3x^{2}+1}dx$\n\nLet, $I_{1}=\\int \\frac{1-\\frac{1}{x2}}{\\left [\\left (x+\\frac{1}{x}\\right )^{2}+1\\right ]\\tan ^{-1}\\left (x+\\frac{1}{x}\\right )}dx$\n\nand $I_{2}=\\int \\frac{dx}{x^{4}+3x^{2}+1}$\n\n$\\tan ^{-1}\\left (x+\\frac{1}{x}\\right )=t$\n\n$I_{1}=\\int \\frac{dt}{t}$\n\n$I_{1}=\\ln (t)=\\ln \\left |\\tan ^{-1}\\left (x+\\frac{1}{x}\\right )\\right |$\n\nNow\n\n$I_{2}=\\int \\frac{dx}{x^{4}+3x^{2}+1}$\n\n$=\\frac{1}{2}\\int \\frac{(x^{2}+1)-(x^{2}-1)}{x^{4}+3x^{2}+1}dx$\n\n$=\\frac{1}{2}\\left [\\int \\frac{1+\\frac{1}{x2}}{x^{2}+3+\\frac{1}{x2}}dx-\\int \\frac{\\left (1-\\frac{1}{x2}\\right )}{x^{2}+3+\\frac{1}{x2}}dx\\right ]$\n\n$=\\frac{1}{2}\\left [\\int \\frac{1+\\frac{1}{x2}}{\\left [\\left (x-\\frac{1}{x}\\right )^{2}+5\\right ]}dx-\\int \\frac{1-\\frac{1}{x2}}{\\left [\\left (x+\\frac{1}{x}\\right )^{2}+1\\right ]}dx\\right ]$\n\nLet $x-\\frac{1}{x}=u$ and $x+\\frac{1}{x}=v$\n\n$=\\frac{1}{2}\\left [\\int \\frac{du}{u^{2}+\\left (\\sqrt{5}\\right )^{2}}-\\int \\frac{dv}{v^{2}+1}\\right ]$\n\n$I_{2}=\\frac{1}{2\\sqrt{5}}\\tan ^{-1}\\left (\\frac{x-\\frac{1}{x}}{\\sqrt{5}}\\right )-\\frac{1}{2}\\tan ^{-1}\\left (x+\\frac{1}{x}\\right )$\n\n$I=I_{1}+I_{2}=$\n\n$\\ln \\left |\\tan ^{-1}\\left (x+\\frac{1}{x}\\right )\\right |+\\frac{1}{2\\sqrt{5}}\\tan ^{-1}\\left (\\frac{x^{2}-1}{\\sqrt{5}x}\\right )-\\frac{1}{2}\\tan ^{-1}\\left (\\frac{x^{2}+1}{x}\\right )+C$\n\n$α=1,β=\\frac{1}{2\\sqrt{5}},γ=\\frac{1}{\\sqrt{5}},δ=-\\frac{1}{2}$\n\n$\\therefore$ $10(α+βγ+δ)=10\\left [1+\\frac{1}{10}-\\frac{1}{2}\\right ]$\n\n$=10\\left (\\frac{1}{10}+\\frac{1}{2}\\right )$\n\n$=1+5=6$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-dTxhqnR9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let f : R $\\to$ R and g : R $\\to$ R be defined as \n\n$f(x)=\\left \\{\\begin{array}{ll} x+a, & x<0 \\\\ |x-1|, & x\\geq 0 \\end{array} \\right.$ and \n\n$g(x)=\\left \\{\\begin{array}{ll} x+1, & x<0 \\\\ (x-1)^{2}+b, & x\\geq 0 \\end{array} \\right.$,\n\n where a, b are non-negative real numbers. If (gof) (x) is continuous for all x $\\in$ R, then a + b is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$g[f(x)]=\\left [\\begin{array}{ll} f(x)+1 & f(x)<0 \\\\ (f(x)-1)^{2}+b & f(x)\\geq 0 \\end{array} \\right.$\n\n$g[f(x)]=\\left [\\begin{array}{ll} x+a+1 & x+a<0&x<0 \\\\ |x-1|+1 & |x-1|<0&x\\geq 0 \\\\ (x+a-1)^{2}+b & x+a\\geq 0&x<0 \\\\ (|x-1|-1)^{2}+b & |x-1|\\geq 0&x\\geq 0 \\end{array} \\right.$\n\n$g[f(x)]=\\left [\\begin{array}{ll} x+a+1 & x\\in (-\\infty ,-a)&x\\in (-\\infty ,0) \\\\ |x-1|+1 & x\\in 𝜙 \\\\ (x+a-1)^{2}+b & x\\in [-a,\\infty )&x\\in [0,\\infty ) \\\\ (|x-1|-1)^{2}+b & x\\in R&x\\in [0,\\infty ) \\end{array} \\right.$\n\n$g[f(x)]=\\left [\\begin{array}{ll} x+a+1 & x\\in (-\\infty ,-a) \\\\ (x+a-1)^{2}+b & x\\in [-a,0) \\\\ (|x-1|-1)^{2}+b & x\\in [0,\\infty ) \\end{array} \\right.$\n\ng(f(x)) is continuous.\n\nAt x = $-$a\n\n$-a + a + 1 = (-a + a - 1)^{2} + b$\n\n$\\Rightarrow$ 1 = b + 1\n\n$\\Rightarrow$ b = 0\n\nat x = 0\n\n(a $-1)^{2} + b = (|0 - 1| - 1)^{2} + b$\n\n$\\Rightarrow$ (a $-1)^{2} + b = b$\n\n$\\Rightarrow$ a = 1\n\n$\\Rightarrow$ a + b = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-M8JH1kUr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Consider the statistics of two sets of observations as follows :\n\n  \n    \n    Size\n    Mean\n    Variance\n  \n\n  \n    Observation I\n    10\n    2\n    2\n  \n  \n    Observation II\n    n\n    3\n    1\n  \n\nIf the variance of the combined set of these two observations is $\\frac{17}{9}$, then the value of n is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For group - 1 : $\\frac{\\sum x_{i}}{10}=2\\Rightarrow \\sum x_{i}=20$\n\n$\\frac{\\sum x_{i}^{2}}{10}-(2)^{2}=2\\Rightarrow \\sum x_{i}^{2}=60$\n\nFor group - 2 : $\\frac{\\sum y_{i}}{n}=3\\Rightarrow \\sum y_{i}=3n$\n\n$\\frac{\\sum y_{i}^{2}}{n}-3^{2}=1\\Rightarrow \\sum y_{i}^{2}=10n$\n\nNow, combined variance\n\n$σ^{2}=\\frac{\\sum \\left (x_{i}^{2}+y_{i}^{2}\\right )}{10+n}-\\left (\\frac{\\sum (x_{i}+y_{i})}{10+n}\\right )^{2}$\n\n$\\Rightarrow \\frac{17}{9}=\\frac{60+10n}{10+n}-\\frac{(20+3n)^{2}}{(10+n)^{2}}$\n\n$\\Rightarrow$ $17 (n^{2} + 20n + 100) = 9(n^{2} + 40n + 200)$\n\n$\\Rightarrow$ $8n^{2}$ $-$ 20n $-$ 100 = 0\n\n$\\Rightarrow$ $2n^{2}$ $-$ 5n $-$ 25 = 0 $\\Rightarrow$ n = 5",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-VQhiXPYm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $A=\\left [\\begin{array}{l} a_{1} \\\\ a_{2} \\end{array}\\right ]$ and $B=\\left [\\begin{array}{l} b_{1} \\\\ b_{2} \\end{array}\\right ]$ be two 2 $\\times$ 1 matrices with real entries such that A = XB, where \n\n$X=\\frac{1}{\\sqrt{3}}\\left [\\begin{array}{ll} 1 & -1 \\\\ 1 & k \\end{array}\\right ]$, and k$\\in$R. \n\nIf $a_{1}^{2}$ + $a_{2}^{2}$ = $\\frac{2}{3}$(b${}_{1}^{2}$ + b${}_{2}^{2}$) and $(k^{2} + 1) b{}_{2}^{2}$ $\\neq$ $-2b_{1}b_{2}$, then the value of k is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$XB=A$\n\n$\\Rightarrow$ $\\frac{1}{\\sqrt{3}}\\left [\\begin{array}{ll} 1 & -1 \\\\ 1 & k \\end{array}\\right ]\\left [\\begin{array}{l} b_{1} \\\\ b_{2} \\end{array}\\right ]=\\left [\\begin{array}{l} a_{1} \\\\ a_{2} \\end{array}\\right ]$\n\n$\\Rightarrow$  $\\frac{1}{\\sqrt{3}}\\left [\\begin{array}{l} b_{1}-b_{2} \\\\ b_{1}+kb_{2} \\end{array}\\right ]=\\left [\\begin{array}{l} a_{1} \\\\ a_{2} \\end{array}\\right ]$\n\n$b_{1}-b_{2}=\\sqrt{3}a_{1}\\Rightarrow 3a_{1}^{2}=b_{1}^{2}+b_{2}^{2}-2b_{1}b_{2}$\n\n$b_{1}+kb_{2}=\\sqrt{3}a_{2}\\Rightarrow 3a_{2}^{2}=b_{1}^{2}+k^{2}b_{2}^{2}+2kb_{1}b_{2}$\n\n$3\\left (a_{1}^{2}+a_{2}^{2}\\right )=2b_{1}^{2}+\\left (k^{2}+1\\right )b_{2}^{2}+2b_{1}b_{2}(k-1)$\n\n$\\Rightarrow$ $a_{1}^{2}+a_{2}^{2}$ = $\\frac{2}{3}b_{1}^{2}+\\frac{\\left (k^{2}+1\\right )}{3}b_{2}^{2}+\\frac{2}{3}b_{1}b_{2}(k-1)$\n\nGiven $a_{1}^{2}$ + $a_{2}^{2}$ = $\\frac{2}{3}$(b${}_{1}^{2}$ + b${}_{2}^{2}$)\n\n$\\therefore$ $\\frac{2}{3}$(b${}_{1}^{2}$ + b${}_{2}^{2}$) = $\\frac{2}{3}b_{1}^{2}+\\frac{\\left (k^{2}+1\\right )}{3}b_{2}^{2}+\\frac{2}{3}b_{1}b_{2}(k-1)$\n\n$\\Rightarrow$ $\\frac{2}{3}b_{2}^{2}=\\frac{\\left (k^{2}+1\\right )}{3}b_{2}^{2}+\\frac{2}{3}b_{1}b_{2}(k-1)$\n\nComparing both sides, We get\n\n$\\frac{\\left (k^{2}+1\\right )}{3}=\\frac{2}{3}$\n\n$\\Rightarrow$ $k^{2} = 1$\n\n$\\Rightarrow$ k = $\\pm$ 1 ......(1)\n\nand $\\frac{2}{3}(k-1)=0$ $\\Rightarrow$ k = 1 ....(2)\n\nFrom (1) and (2),\n\nk = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

@@ -1,0 +1,862 @@
+[
+ {
+  "publicId": "PYQ-2021-PKaCFkWC",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a vector $α\\hat{i}+β\\hat{j}$ be obtained by rotating the vector $\\sqrt{3}\\hat{i}+\\hat{j}$ by an angle 45${}^{\\circ }$ about the origin in counterclockwise direction in the first quadrant. Then the area of triangle having vertices ($α$, $β$), (0, $β$) and (0, 0) is equal to :",
+  "options": [
+   "$\\frac{1}{\\sqrt{2}}$",
+   "$\\frac{1}{2}$",
+   "1",
+   "2$\\sqrt{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n($α$, $β$) $\\equiv$ (2 cos 75${}^{\\circ }$, 2 sin 75${}^{\\circ }$)\n\nArea = $\\frac{1}{2}$ (2 cos 75${}^{\\circ }$) (2 sin 75${}^{\\circ }$)\n\n= sin(150${}^{\\circ }$) = $\\frac{1}{2}$ square unit",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-16th-march-morning-shift/PKaCFkWCxapnmisq1O1kmhvprkw-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 16th March Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-2ZjqG1di",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $S_{k}=\\sum\\limits _{r=1}^{k}\\tan ^{-1}\\left (\\frac{6^{r}}{2^{2r+1}+3^{2r+1}}\\right )$. Then $\\lim _{k\\to \\infty }S_{k}$ is equal to :",
+  "options": [
+   "$\\cot ^{-1}\\left (\\frac{3}{2}\\right )$",
+   "$\\frac{π}{2}$",
+   "$\\tan ^{-1} (3)$",
+   "$\\tan ^{-1}\\left (\\frac{3}{2}\\right )$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$S_{k} =$ $\\sum\\limits _{r=1}^{k}\\tan ^{-1}\\left (\\frac{6^{r}(3-2)}{\\left (1+\\left (\\frac{3}{2}\\right )^{2r+1}\\right )2^{2r+1}}\\right )$\n\n= $\\sum\\limits _{r=1}^{k}\\tan ^{-1}\\left (\\frac{2^{r}.3^{r+1}-3^{r}2^{r+1}}{\\left (1+\\left (\\frac{3}{2}\\right )^{2r+1}\\right )2^{2r+1}}\\right )$\n\n= $\\sum\\limits _{r=1}^{k}\\tan ^{-1}\\left (\\frac{\\left (\\frac{3}{2}\\right )^{r+1}-\\left (\\frac{3}{2}\\right )^{r}}{1+\\left (\\frac{3}{2}\\right )^{r+1}\\left (\\frac{3}{2}\\right )^{r}}\\right )$\n\n= $\\sum\\limits _{r=1}^{k}\\left [\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{r+1}-\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{r}\\right ]$\n\n= $\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{2}-\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{1}$\n\n+ $\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{3}-\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{2}$\n\n+ $\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{4}-\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{3}$\n\n.\n\n.\n\n.\n\n+ $\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{k+1}-\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{k}$\n\n= $\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{k+1}-\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{1}$\n\n$\\therefore$ $\\lim _{k\\to \\infty }S_{k}$\n\n= $\\lim _{k\\to \\infty }\\left [\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{k+1}-\\tan ^{-1}\\left (\\frac{3}{2}\\right )^{1}\\right ]$\n\n= $\\tan ^{-1}(\\infty )-\\tan ^{-1}\\left (\\frac{3}{2}\\right )$\n\n= $\\frac{π}{2}-\\tan ^{-1}\\left (\\frac{3}{2}\\right )$\n\n= $\\cot ^{-1}\\left (\\frac{3}{2}\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-YtsOhjwJ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the position vectors of two points P and Q be 3$\\hat{i}$ $-$ $\\hat{j}$ + 2$\\widehat{k}$ and $\\hat{i}$ + 2$\\hat{j}$ $-$ 4$\\widehat{k}$, respectively. Let R and S be two points such that the direction ratios of lines PR and QS are (4, $-$1, 2) and ($-$2, 1, $-$2), respectively. Let lines PR and QS intersect at T. If the vector $TA\\leftarrow$ is perpendicular to both $PR\\leftarrow$ and $QS\\leftarrow$ and the length of vector $TA\\leftarrow$ is $\\sqrt{5}$ units, then the modulus of a position vector of A is :",
+  "options": [
+   "$\\sqrt{171}$",
+   "$\\sqrt{227}$",
+   "$\\sqrt{482}$",
+   "$\\sqrt{5}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\vec{p}=3\\hat{i}-\\hat{j}+2\\widehat{k}$ & $\\vec{Q}=\\hat{i}+2\\hat{j}-4\\widehat{k}$\n\n$\\vec{v}_{PR}=(4,-1,2)$ & $\\vec{v}_{QS}=(-2,1,-2)$\n\n\n[IMG]\n\n\n$L_{PR}:\\vec{r}=(3\\hat{i}-\\hat{j}+2\\widehat{k})+λ(4,-1,2)$\n\n$L_{QS}:\\vec{r}=(\\hat{i}+2\\hat{j}-4\\widehat{k})+μ(-2,1,-2)$\n\nNow T on PR = $\\langle 3+4λ,-1-λ,2+2λ\\rangle$\n\nSimilarly T on QS = (1 $-$ 2$μ$, 2 + $μ$, $-$4 $-$ 2$μ$)\n\nFor $λ$ & $μ$ : $\\left. \\begin{array}{l} 3+4λ=1-2μ\\Rightarrow μ+2λ=-1 \\\\ -1-λ=2+μ\\Rightarrow μ+λ=-3 \\end{array}\\right \\}\\begin{array}{l} λ=2 \\\\ μ=-5 \\end{array}$\n\n$\\Rightarrow$ T : (11, $-$3, 6)\n\nD.R. of TA = $\\vec{v}_{QS}$ $\\times$ $\\vec{v}_{PR}$\n\n= $\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\widehat{k} \\\\ -2 & 1 & -2 \\\\ 4 & -1 & 2 \\end{array}\\right |=0\\hat{i}-4\\hat{j}-2\\widehat{k}$\n\n$L_{TA}:\\vec{r}=\\left (11\\hat{i}-3\\hat{j}+6\\widehat{k}\\right )+λ(-4\\hat{j}-2\\widehat{k})$\n\nNow A = (11, $-$3 $-$4$λ$, 6 $-$ 2$λ$)\n\nGiven, TA = $\\sqrt{5}$\n\n$(-3+4λ+3)^{2}+(6+2λ-6)^{2}=5$\n\n$16λ^{2}+4λ^{2}=5$\n\n20$λ^{2}$ = 5\n\n$λ$ = $\\pm\\frac{1}{2}$\n\n$\\begin{array}{lll} A:(11,-3-2,6-1) & ; & A:(11,-3+2,6+1) \\\\ |A|=\\sqrt{121+25+25} & ; & |A|=\\sqrt{121+1+49} \\\\ =\\sqrt{171} & ; & \\sqrt{171} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-16th-march-morning-shift/YtsOhjwJ46iodfXK1u1kmhvwg6d-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 16th March Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-ElJhwaKk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of elements in the set {x $\\in$ R : (|x| $-$ 3) |x + 4| = 6} is equal to :",
+  "options": [
+   "4",
+   "2",
+   "3",
+   "1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Case 1 :\n\nx $\\leq$ $-$4\n\n($-$x $-$ 3)($-$x $-$ 4) = 6\n\n$\\Rightarrow$ (x + 3)(x + 4) = 6\n\n$\\Rightarrow$ $x^{2} + 7x + 6 = 0$\n\n$\\Rightarrow$ x = $-$1 or $-$6\n\nbut x $\\leq$ $-$4\n\nx = $-$6\n\nCase 2 :\n\nx $\\in$ ($-$4, 0)\n\n($-$x $-$ 3)(x + 4) = 6\n\n$\\Rightarrow$ $-x^{2}$ $-$ 7x $-$ 12 $-$ 6 = 0\n\n$\\Rightarrow$ $x^{2} + 7x + 18 = 0$\n\nD Case 3 :\n\nx $\\geq$ 0\n\n(x $-$ 3)(x + 4) = 6\n\n$\\Rightarrow$ $x^{2} + x$ $-$ 12 $-$ 6 = 0\n\n$\\Rightarrow$ $x^{2} + x$ $-$ 18 = 0\n\nx = $\\frac{-1\\pm \\sqrt{1+72}}{2}$\n\n$\\therefore$ x = $\\frac{\\sqrt{73}-1}{2}$ only",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-K1j14MVo",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a complex number z, |z| $\\neq$ 1, \n\nsatisfy $\\log _{\\frac{1}{\\sqrt{2}}}\\left (\\frac{|z|+11}{(|z|-1)^{2}}\\right )\\leq 2$. Then, the largest value of |z| is equal to $____________$.",
+  "options": [
+   "5",
+   "8",
+   "6",
+   "7"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{|z|+11}{(|z|-1)^{2}}\\geq \\frac{1}{2}$\n\n$2|z|+22\\geq (|z|-1)^{2}$\n\n$2|z|+22\\geq |z|^{2}-2|z|+1$\n\n$|z|^{2}-4|z|-21\\leq 0$\n\n$(|z|-7)(|z|+3)\\leq 0$\n\n$\\Rightarrow \\quad |z|\\leq 7$\n\n$\\therefore$ $|z|_{\\max }=7$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-C4InkmGv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=\\left [\\begin{array}{ll} i & -i \\\\ -i & i \\end{array}\\right ],i=\\sqrt{-1}$. Then, the system of linear equations $A^{8}\\left [\\begin{array}{l} x \\\\ y \\end{array}\\right ]=\\left [\\begin{array}{l} 8 \\\\ 64 \\end{array}\\right ]$ has :",
+  "options": [
+   "Exactly two solutions",
+   "Infinitely many solutions",
+   "A unique solution",
+   "No solution"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A=\\left [\\begin{array}{ll} i & -i \\\\ -i & i \\end{array}\\right ]$\n\n$A^{2}=\\left [\\begin{array}{ll} i & -i \\\\ -i & i \\end{array}\\right ]\\left [\\begin{array}{ll} i & -i \\\\ -i & i \\end{array}\\right ]=\\left [\\begin{array}{ll} -2 & 2 \\\\ 2 & -2 \\end{array}\\right ]=2\\left [\\begin{array}{ll} -1 & 1 \\\\ 1 & -1 \\end{array}\\right ]$\n\n$A^{4}=4\\left [\\begin{array}{ll} -1 & 1 \\\\ 1 & -1 \\end{array}\\right ]\\left [\\begin{array}{ll} -1 & 1 \\\\ 1 & -1 \\end{array}\\right ]=4\\left [\\begin{array}{ll} 2 & -2 \\\\ -2 & 2 \\end{array}\\right ]=8\\left [\\begin{array}{ll} 1 & -1 \\\\ -1 & 1 \\end{array}\\right ]$\n\n$A^{8}=64\\left [\\begin{array}{ll} 1 & -1 \\\\ -1 & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 1 & -1 \\\\ -1 & 1 \\end{array}\\right ]=64\\left [\\begin{array}{ll} 2 & -2 \\\\ -2 & 2 \\end{array}\\right ]=128\\left [\\begin{array}{ll} 1 & -1 \\\\ -1 & 1 \\end{array}\\right ]$\n\n$128\\left [\\begin{array}{ll} 1 & -1 \\\\ -1 & 1 \\end{array}\\right ]\\left [\\begin{array}{l} x \\\\ y \\end{array}\\right ]=\\left [\\begin{array}{l} 8 \\\\ 64 \\end{array}\\right ]$\n\n$128\\left [\\begin{array}{l} x-y \\\\ -x+y \\end{array}\\right ]=\\left [\\begin{array}{l} 8 \\\\ 64 \\end{array}\\right ]$\n\n$\\Rightarrow 128(x-y)=8$\n\n$\\Rightarrow x-y=\\frac{1}{16}$ .... (1)\n\nand $128(-x+y)=64\\Rightarrow x-y=\\frac{-1}{2}$ .... (2)\n\n$\\Rightarrow$ No solution (from eq. (1) & (2))",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-jHrylvcW",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If n is the number of irrational terms in the \nexpansion of $\\left (3^{1/4}+5^{1/8}\\right )^{60}$, then (n $-$ 1) is divisible by :",
+  "options": [
+   "30",
+   "8",
+   "7",
+   "26"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T_{r+1}={}^{60}C_{r}\\left (3^{1/4}\\right )^{60-r}\\left (5^{1/8}\\right )^{r}$\n\nrational if $\\frac{60-r}{4},\\frac{r}{8}$, both are whole numbers, $r\\in \\{0,1,2,......60\\}$\n\n$\\frac{60-r}{4}\\in W\\Rightarrow r\\in \\{0,4,8,....60\\}$\n\nand $\\frac{r}{8}\\in W\\Rightarrow r\\in \\{0,8,16,.....56\\}$\n\n$\\therefore$ Common terms $r\\in \\{0,8,16,.....56\\}$\n\nSo, 8 terms are rational\n\nThen Irrational terms = $61-8=53=n$\n\n$\\therefore$ $n-1=52=13\\times 2^{2}$\n\nFactors 1, 2, 4, 13, 26, 52",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-AvQIY4Ry",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The locus of the midpoints of the chord of the circle, $x^{2} + y^{2} = 25$ which is tangent to the hyperbola, $\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=1$ is :",
+  "options": [
+   "$(x^{2} + y^{2})^{2}$ $-$ $9x^{2} + 16y^{2} = 0$",
+   "$(x^{2} + y^{2})^{2}$ $-$ $9x^{2} + 144y^{2} = 0$",
+   "$(x^{2} + y^{2})^{2}$ $-$ $16x^{2} + 9y^{2} = 0$",
+   "$(x^{2} + y^{2})^{2}$ $-$ $9x^{2}$ $-$ $16y^{2} = 0$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "tangent of hyperbola\n\n$y=mx\\pm \\sqrt{9m^{2}-16}$ ..... (i)\n\nwhich is a chord of circle with mid-point (h, k)\n\nso equation of chord $T = S_{1}$\n\n$hx + ky = h^{2} + k^{2}$\n\n$y=-\\frac{hx}{k}+\\frac{h^{2}+k^{2}}{k}$ ..... (ii)\n\nby (i) and (ii)\n\n$m=-\\frac{h}{k}$ and $\\sqrt{9m^{2}-16}$ = $\\frac{h^{2}+k^{2}}{k}$\n\n$9\\frac{h^{2}}{k^{2}}-16=\\frac{\\left (h^{2}+k^{2}\\right )^{2}}{k^{2}}$\n\n$\\therefore$ Locus : $9x^{2}$ $-$ $16y^{2} = (x^{2} + y^{2})^{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-VY62ViQI",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the functions f : R $\\to$ R and g : R $\\to$ R be defined as :\n\n$f(x)=\\left \\{\\begin{array}{ll} x+2, & x<0 \\\\ x^{2}, & x\\geq 0 \\end{array} \\right.$ and \n\n$g(x)=\\left \\{\\begin{array}{ll} x^{3}, & x<1 \\\\ 3x-2, & x\\geq 1 \\end{array} \\right.$\n\nThen, the number of points in R where (fog) (x) is NOT differentiable is equal to :",
+  "options": [
+   "0",
+   "3",
+   "1",
+   "2"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$fog(x)=\\left \\{\\begin{array}{ll} x^{3}+2, & x\\leq 0 \\\\ x^{6}, & 0\\leq x\\leq 1 \\\\ (3x-2)^{2}, & x\\geq 1 \\end{array} \\right.$\n\n$\\because$ fog(x) is discontinuous at x = 0 then non-differentiable at x = 0\n\nNow, \n\nat x = 1\n\n$RHD=\\lim _{h\\to 0}\\frac{f(1+h)-f(1)}{h}=\\lim _{h\\to 0}\\frac{(3(1+h)-2)^{2}-1}{h}=6$\n\n$LHD=\\lim _{h\\to 0}\\frac{f(1-h)-f(1)}{-h}=\\lim _{h\\to 0}\\frac{(1-h)^{6}-1}{-h}=6$\n\nNumber of points of non-differentiability = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-0QmqJySy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider three observations a, b, and c such that b = a + c. If the standard deviation of a + 2, b + 2, c + 2 is d, then which of the following is true?",
+  "options": [
+   "$b^{2} = 3(a^{2} + c^{2}) + 9d^{2}$",
+   "$b^{2} = 3(a^{2} + c^{2})$ $-$ $9d^{2}$",
+   "$b^{2} = 3(a^{2} + c^{2} + d^{2})$",
+   "$b^{2} = a^{2} + c^{2} + 3d^{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For a, b, c\n\nmean = $x–=\\frac{a+b+c}{3}$\n\n$x–=\\frac{2b}{3}$\n\nWe know, S.D. of a + 2, b + 2, c + 2 = S.D. of a, b, c = d\n\n$d^{2}=\\frac{a^{2}+b^{2}+c^{2}}{3}-\\frac{4b^{2}}{9}$\n\n$b^{2}=3a^{2}+3c^{2}-9d^{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-17P9YSWU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The range of a$\\in$R for which the \n\nfunction f(x) = (4a $-$ $3)(x + \\log _{e} 5) + 2(a$ $-$ 7) cot$\\left (\\frac{x}{2}\\right )$ $\\sin ^{2}\\left (\\frac{x}{2}\\right )$, x $\\neq$ 2n$π$, n$\\in$N has critical points, is :",
+  "options": [
+   "[1, $\\infty$)",
+   "($-$3, 1)",
+   "$\\left [-\\frac{4}{3},2\\right ]$",
+   "($-\\infty$, $-$1]"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=(4a-3)(x+\\ln 5)+2(a-7)\\left (\\frac{\\cos \\frac{x}{2}}{\\sin \\frac{x}{2}}.\\sin ^{2}\\frac{x}{2}\\right )$\n\n$f(x)=(4a-3)(x+\\ln 5)+(a-7)\\sin x$\n\n$f^{'}(x)=(4a-3)+(a-7)\\cos x=0$\n\n$\\cos x=\\frac{-(4a-3)}{a-7}$\n\n$-1\\leq -\\frac{4a-3}{a-7}\\leq 1$\n\n$-1\\leq \\frac{4a-3}{a-7}\\leq 1$\n\n$\\frac{4a-3}{a-7}-1\\leq 0$ and $\\frac{4a-3}{a-7}+1\\geq 0$\n\n$\\Rightarrow \\frac{-4}{3}\\leq a\\leq 2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-mS2BpguX",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If for x $\\in$ $\\left (0,\\frac{π}{2}\\right )$, $\\log _{10}$sinx $+ \\log _{10}$cosx = $-$1 and $\\log _{10}($sinx + cosx) = $\\frac{1}{2}(\\log _{10} n$ $-$ 1), n > 0, then the value of n is equal to :",
+  "options": [
+   "16",
+   "9",
+   "12",
+   "20"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\log _{10}\\sin x+\\log _{10}\\cos x=-1,x\\in (0,π/2) \\\\  \\\\ \\log _{10}(\\sin x\\cos x)=-1 \\\\  \\\\ \\Rightarrow \\sin x\\cos x=10^{-1}=\\dfrac{1}{10} \\\\  \\\\ \\log _{10}(\\sin x+\\cos x)=\\dfrac{1}{2}(\\log _{10}n-1),n>0 \\\\  \\\\ 2\\log _{10}(\\sin x+\\cos x)=(\\log _{10}n-\\log _{10}10) \\\\  \\\\ \\Rightarrow \\log _{10}(\\sin x+\\cos x)^{2}=\\log _{10}(\\dfrac{n}{10}) \\\\  \\\\ \\Rightarrow (\\sin x+\\cos x)^{2}=\\dfrac{n}{10} \\\\  \\\\ \\Rightarrow \\sin ^{2}x+\\cos ^{2}x+2\\sin x\\cos x=\\dfrac{n}{10} \\\\  \\\\ \\Rightarrow 1+2(\\dfrac{1}{10})=\\dfrac{n}{10}\\Rightarrow \\dfrac{12}{10}=\\dfrac{n}{10} \\\\  \\\\ \\therefore n=12 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-lNV17llK",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A pack of cards has one card missing. Two cards are drawn randomly and are found to be spades. The probability that the missing card is not a spade, is :",
+  "options": [
+   "$\\frac{39}{50}$",
+   "$\\frac{3}{4}$",
+   "$\\frac{22}{425}$",
+   "$\\frac{52}{867}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Consider the events,\n\n$E_{1} =$ missing card is spade\n\n$E_{2} =$ missing card is not a spade\n\nA = Two spade cards are drawn\n\n$P(E_{1})=\\frac{1}{4}$\n\n$P(E_{2})=\\frac{3}{4}$\n\n$P\\left (\\frac{A}{E_{1}}\\right )=\\frac{{}^{12}C_{2}}{{}^{51}C_{2}}$\n\n$P\\left (\\frac{A}{E_{2}}\\right )=\\frac{{}^{13}C_{2}}{{}^{51}C_{2}}$\n\n$P\\left (\\frac{E_{2}}{A}\\right )=\\frac{P\\left (\\frac{A}{E2}\\right ).P(E_{2})}{P\\left (\\frac{A}{E1}\\right ).P(E_{1})+P\\left (\\frac{A}{E2}\\right ).P(E_{2})}$\n\n$=\\frac{\\frac{13C2}{51C2}.\\frac{3}{4}}{\\frac{12C2}{51C2}.\\frac{1}{4}+\\frac{13C2}{51C2}.\\frac{3}{4}}$\n\n= $\\frac{39}{50}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-14bMOFYl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If y = y(x) is the solution of the differential equation, \n\n$\\frac{dy}{dx}+2y\\tan x=\\sin x,y\\left (\\frac{π}{3}\\right )=0$, then the maximum value of the function y(x) over R is equal to:",
+  "options": [
+   "$\\frac{1}{8}$",
+   "8",
+   "$-\\frac{15}{4}$",
+   "$\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}+2\\tan x.y=\\sin x$\n\n$I.F.=e^{2\\ln (\\sec x)}=\\sec ^{2}x$\n\n$y.\\sec ^{2}x=\\int \\sin x\\sec ^{2}xdx=\\int \\tan x\\sec xdx+c$\n\n$y\\sec ^{2}x=\\sec x+c$\n\n$y=\\cos x+c\\cos ^{2}x$\n\n$x=\\frac{π}{3},y=0$\n\n$\\Rightarrow \\frac{1}{2}+\\frac{c}{4}\\Rightarrow c=-2$\n\n$\\therefore$ $y=\\cos x-2\\cos ^{2}x$\n\n$y=-2\\left (\\cos ^{2}x-\\frac{1}{2}\\cos x\\right )=-2\\left (\\left (\\cos x-\\frac{1}{4}\\right )^{2}-\\frac{1}{16}\\right )$\n\n$y=\\frac{1}{8}-2\\left (\\cos x-\\frac{1}{4}\\right )^{2}$\n\n$\\therefore$ $y_{\\max }=\\frac{1}{8}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-HhbaQBEe",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let the curve y = y(x) be the solution of the differential equation, $\\frac{dy}{dx}$ = 2(x + 1). If the numerical value of area bounded by the curve y = y(x) and x-axis is $\\frac{4\\sqrt{8}}{3}$, then the value of y(1) is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $\\frac{dy}{dx}$ = 2(x + 1)\n\nIntegrating both sides, we get\n\n$y=x^{2}+2x+c$\n\nLet the two roots of the quadratic equation $α$ and $β$\n\n\n[IMG]\n\n\nAs parabola intercept the x axis so D > 0\n\nFrom figure, AB = |$α$ - $β$| = $\\frac{\\sqrt{D}}{|a|}$ = $\\sqrt{D}$\n\nand BC = $-\\frac{D}{4a}$ = $-\\frac{D}{4}$\n\n$\\therefore$ Area of rectangle (ABCD) = AB $\\times$ BC = $\\sqrt{D}\\times \\frac{D}{4}$\n\nFrom property we know,\n\nArea of parabola with the x axis = $\\frac{2}{3}$(Area of rectangle)\n\n$\\Rightarrow$ $\\frac{4\\sqrt{8}}{3}$ = $\\frac{2}{3}\\times \\sqrt{D}\\times \\frac{D}{4}$\n\n$\\Rightarrow$ $D\\sqrt{D}$ = $8\\sqrt{8}$\n\n$\\Rightarrow$ D = 8\n\n$\\therefore$ $b^{2} - 4ac = 8$\n\n$\\Rightarrow$ 4 - 4c = 8\n\n$\\Rightarrow$ 1 $-$ c = 2 $\\Rightarrow$ c = $-$ 1\n\nEquation of $f(x) = x^{2} + 2x$ $-$ 1\n\n$\\therefore$ f(1) = 1 + 2 $-$ 1 = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-16th-march-morning-shift/HhbaQBEeiFLbPqxKu21kmhzaf0v-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 16th March Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-ZJfj298e",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let f : R $\\to$ R be a continuous function such that f(x) + f(x + 1) = 2, for all x$\\in$R. \n\nIf $I_{1}=\\int\\limits _{0}^{8}f(x)dx$ and $I_{2}=\\int\\limits _{-1}^{3}f(x)dx$, then the value of $I_{1} + 2I_{2}$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 16.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)+f(x+1)=2$ .... (i)\n\n$x\\to (x+1)$\n\n$f(x+1)+f(x+2)=2$ .... (ii)\n\nby (i) & (ii)\n\n$f(x)-f(x+2)=0$\n\n$f(x+2)=f(x)$\n\n$\\therefore$ f(x) is periodic with T = 2\n\n$I_{1}=\\int\\limits _{0}^{2\\times 4}f(x)dx=4\\int\\limits _{0}^{2}f(x)dx$\n\n$I_{2}=\\int\\limits _{-1}^{3}f(x)dx=\\int\\limits _{0}^{4}f(x+1)dx=\\int\\limits _{0}^{4}(2-f(x))dx$\n\n$\\Rightarrow$ $I_{2}=8-2\\int\\limits _{0}^{2}f(x)dx$\n\n$\\Rightarrow$ $I_{2}=8-\\frac{I_{1}}{2}$\n\n$\\Rightarrow$ $I_{1}+2I_{2}=16$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-kS6QZFld",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the normal to the curve y(x) = $\\int\\limits _{0}^{x}(2t^{2}-15t+10)dt$ at a point (a, b) is parallel to the line x + 3y = $-$5, a > 1, then the value of | a + 6b | is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 406.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Normal to the curve at point P(a, b) is parallel to the line x + 3y = $-$5.\n\n$m_{$normal} = $-\\frac{1}{3}$\n\n$\\therefore$ $m_{$tangent} = 3 = $\\frac{dy}{dx}$\n\nGiven y(x) = $\\int\\limits _{0}^{x}(2t^{2}-15t+10)dt$\n\n$\\Rightarrow$ $y'(x) = (2x^{2}$ $-$ 15x + 10)\n\nat point P(a, b)\n\n$3 = (2a^{2}$ $-$ 15a + 10)\n\n$\\Rightarrow$ $2a^{2}$ $-$ 15a + 7 = 0\n\n$\\Rightarrow$ $2a^{2}$ $-$ 14a $-$ a + 7 = 0\n\n$\\Rightarrow$ 2a(a $-$ 7) $-$ 1 (a $-$ 7) = 0\n\na = $\\frac{1}{2}$ or 7,\n\ngiven a > 1 $\\therefore$ a = 7\n\nAs P(a, b) lies on curve\n\n$\\therefore$ $b=\\int\\limits _{0}^{a}(2t^{2}-15t+10)dt$\n\n$b=\\int\\limits _{0}^{7}(2t^{2}-15t+10)dt$\n\n$6b=-413$\n\n$\\therefore$ $|a+6b|=406$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-y5OVsMxp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Consider an arithmetic series and a geometric series having four initial terms from the set {11, 8, 21, 16, 26, 32, 4}. If the last terms of these series are the maximum possible four digit numbers, then the number of common terms in these two series is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The four terms in A.P. are $11,16,21,26$ (common difference $5$) and the four terms in G.P. are $4,8,16,32$ (common ratio $2$).\n\nThe A.P. terms are $11+5k$; the largest four-digit one is $11+5\\times 1997=9996$. So the A.P. is $11,16,21,\\ldots ,9996$: every number from $11$ to $9996$ that leaves remainder $1$ on division by $5$.\n\nThe G.P. terms are $2^{m}$; the largest four-digit one is $2^{13}=8192$. So the G.P. is $2^{m}$ for $m=2,3,\\ldots ,13$.\n\nThe remainders of $2^{m}$ on division by $5$ repeat as $2,4,3,1$ for $m=1,2,3,4$, so $2^{m}$ leaves remainder $1$ only when $m$ is a multiple of $4$.\n\nFor $2\\leq m\\leq 13$ this gives $m=4,8,12$, i.e. the common terms $16,256,4096$, all lying between $11$ and $9996$.\n\nHence, the answer is 3.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-gr60nFEN",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\lim _{x\\to 0}\\frac{ae^{x}-b\\cos x+ce^{-x}}{x\\sin x}=2$, then a + b + c is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 0}\\frac{\\left \\{a\\left (1+x+\\frac{x2}{2!}+.....\\right )-b\\left (1-\\frac{x2}{2!}+\\frac{x4}{4!}......\\right )+c\\left (1-x+\\frac{x2}{2!}......\\right )\\right \\}}{x\\left (x-\\frac{x3}{3!}+.....\\right )}=2$\n\n$\\therefore$ $\\lim _{x\\to 0}\\frac{(a-b+c)+x(a-c)+x^{2}\\left (\\frac{a}{2}+\\frac{b}{2}+\\frac{c}{2}\\right )+....}{x^{2}\\left (1-\\frac{x2}{6}....\\right )}=2$\n\nFor this limit to exist\n\n a $-$ b + c = 0 & a $-$ c = 0\n\n& $\\frac{a}{2}+\\frac{b}{2}+\\frac{c}{2}=2$\n\n$\\Rightarrow$ a + b + c = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-LbJQB0EU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let z and $ω$ be two complex numbers such that $ω=zz–-2z+2,\\left |\\frac{z+i}{z-3i}\\right |=1$ and Re($ω$) has minimum value. Then, the minimum value of n $\\in$ N for which $ω^{n}$ is real, is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let z = x + iy\n\n| z + i | = | z $-$ 3i |\n\n$\\Rightarrow$ y = 1\n\nNow \n\n$ω$ $= x^{2} + y^{2}$ $-$ 2x $-$ 2iy + 2\n\n$ω$ $= x^{2} + 1$ $-$ 2x $-$ 2i + 2\n\nRe($ω) = x^{2}$ $-$ 2x + 3\n\nRe($ω$) = (x $-$ $1)^{2} + 2$\n\nRe($ω)_{\\min }$ at x = 1 $\\Rightarrow$ z = 1 + i\n\nNow, \n\n$ω$ = 1 + 1 $-$ 2 $-$ 2i + 2\n\n$ω$ = 2(1 $-$ i) = 2$\\sqrt{2}e^{i\\left (\\frac{-π}{4}\\right )}$\n\n$ω^{n}$ = 2$\\sqrt{2}e^{i\\left (\\frac{-nπ}{4}\\right )}$\n\nIf $ω^{n}$ is real $\\Rightarrow$ n = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-YI4Yw7Wd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The total number of 3 $\\times$ 3 matrices A having entries from the set {0, 1, 2, 3} such that the sum of all the diagonal entries of $AA^{T}$ is 9, is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 766.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 16th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$AA^{T}=\\left [\\begin{array}{lll} x & y & z \\\\ a & b & c \\\\ d & e & f \\end{array}\\right ]\\left [\\begin{array}{lll} x & a & d \\\\ y & b & e \\\\ z & c & f \\end{array}\\right ]$\n\n$=\\left [\\begin{array}{lll} x^{2}+y^{2}+z^{2} & ax+by+cz & dx+ey+fz \\\\ ax+by+cz & a^{2}+b^{2}+c^{2} & ad+be+cf \\\\ dx+ey+fz & ad+be+cf & d^{2}+e^{2}+f^{2} \\end{array}\\right ]$\n\n$Tr(AA^{T})=x^{2}+y^{2}+z^{2}+a^{2}+b^{2}+c^{2}+d^{2}+e^{2}+f^{2}=9$\n\nCase-I : Nine ones = 1 case\n\nCase-II : 8 zeroes and one entry is 3 =  $\\frac{9!}{8!}=9$ cases\n\nCase-III : Two 2’s, one 1’s and 6 zeroes = $\\frac{9!}{2!6!}=63\\times 4=252$\n\nCase IV : one 2, five 1, rest 0 $\\frac{9!}{5!3!}=63\\times 8=504$\n\n$\\therefore$ Total cases = 9 + 252 + 504 + 1 = 766",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 16th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

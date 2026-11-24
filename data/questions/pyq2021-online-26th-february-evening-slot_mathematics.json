@@ -1,0 +1,914 @@
+[
+ {
+  "publicId": "PYQ-2021-ZnqJ1UOM",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f(x) be a differentiable function at x = a with f'(a) = 2 and f(a) = 4. \n\nThen $\\lim _{x\\to a}\\frac{xf(a)-af(x)}{x-a}$ equals :",
+  "options": [
+   "4 $-$ 2a",
+   "2a + 4",
+   "a + 4",
+   "2a $-$ 4"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$L=\\lim _{x\\to a}\\frac{xf(a)-af(x)}{x-a}$ [$\\frac{0}{0}$ form] \n\nUsing L' Hospital rule we get\n\n$L=\\lim _{x\\to a}\\frac{f(a)-af^{'}(x)}{1}$\n\n$f(a)-af^{'}(a)=4-2a$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-pEYxJxih",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let A(1, 4) and B(1, $-$5) be two points. Let P be a point on the circle \n(x $-$ $1)^{2} + (y$ $-$ $1)^{2} = 1$ such that $(PA)^{2} + (PB)^{2}$ have maximum value, then the points, P, A and B lie on :",
+  "options": [
+   "a straight line",
+   "an ellipse",
+   "a parabola",
+   "a hyperbola"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "P be a point on $(x-1)^{2}+(y-1)^{2}=1$\n\nso $P(1+\\cos θ,1+\\sin θ)$\n\nA(1, 4), B(1, $-$5)\n\n$(PA)^{2}+(PB)^{2}$\n\n$=(\\cos θ)^{2}+(\\sin θ-3)^{2}+(\\cos θ)^{2}+(\\sin θ+6)^{2}$\n\n$=47+6\\sin θ$\n\nIt is maximum if $\\sin θ=1$\n\nWhen $\\sin θ=1,\\cos θ=0$\n\nSo P(1, 2), A(1, 4), B(1, $-$5)\n\nP, A, B are collinear points.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-GHIxtxm7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider the following system of equations :\n\nx + 2y $-$ 3z = a\n\n2x + 6y $-$ 11z = b\n\nx $-$ 2y + 7z = c,\n\nwhere a, b and c are real constants. Then the system of equations :",
+  "options": [
+   "has no solution for all a, b and c",
+   "has a unique solution when 5a = 2b + c",
+   "has infinite number of solutions when 5a = 2b + c",
+   "has a unique solution for all a, b and c"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$D=\\left |\\begin{array}{lll} 1 & 2 & -3 \\\\ 2 & 6 & -11 \\\\ 1 & -2 & 7 \\end{array}\\right |$\n\n= 20 $-$ 2(25) $-$3($-$10)\n\n= 20 $-$ 50 + 30 = 0\n\n$D_{1}=\\left |\\begin{array}{lll} a & 2 & -3 \\\\ b & 6 & -11 \\\\ c & -2 & 7 \\end{array}\\right |$\n\n= 20a $-$ 2(7b + 11c) $-$3($-$2b $-$ 6c)\n\n= 20a $-$ 14b $-$ 22c + 6b +18c\n\n= 20a $-$ 8b $-$ 4c\n\n= 4(5a $-$ 2b $-$ c)\n\n$D_{2}=\\left |\\begin{array}{lll} 1 & a & -3 \\\\ 2 & b & -11 \\\\ 1 & c & 7 \\end{array}\\right |$\n\n= 7b + 11c $-$ a(25) $-$3(2c $-$ b)\n\n= 7b + 11c $-$ 25a $-$ 6c + 3b\n\n= $-$25a + 10b + 5c\n\n= $-$5(5a $-$ 2b $-$ c)\n\n$D_{3}=\\left |\\begin{array}{lll} 1 & 2 & a \\\\ 2 & 6 & b \\\\ 1 & -2 & c \\end{array}\\right |$\n\n= 6c + 2b $-$ 2(2c $-$ b) $-$ 10a\n\n= $-$10a + 4b + 2c\n\n= $-$2(5a $-$ 2b $-$ c)\n\nfor infinite solution \n\n$D=D_{1}=D_{2}=D_{3}=0$\n\n$\\Rightarrow$ 5a = 2b + c",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-OjrcXgel",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A natural number has prime factorization given by $n = 2^{x}3^{y}5^{z}$, where y and z are such \nthat y + z = 5 and $y^{-1} + z^{-1} =$ $\\frac{5}{6}$, y > z. Then the number of odd divisors of n, including 1, is :",
+  "options": [
+   "11",
+   "6",
+   "12",
+   "6x"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "y + z = 5 ....... (1)\n\n$\\frac{1}{y}+\\frac{1}{z}=\\frac{5}{6}$\n\n$\\Rightarrow \\frac{y+z}{yz}=\\frac{5}{6}$\n\n$\\Rightarrow \\frac{5}{yz}=\\frac{5}{6}$\n\n$\\Rightarrow$ yz = 6\n\nAlso, (y $-$ $z)^{2} = (y + z)^{2}$ $-$ 4yz\n\n$\\Rightarrow$ (y $-$ $z)^{2} = (y + z)^{2}$ $-$ 4yz\n\n$\\Rightarrow$ (y $-$ $z)^{2} = 25$ $-$ 4(6) = 1\n\n$\\Rightarrow$ y $-$ z = 1 ..... (2)\n\nfrom (1) and (2), y = 3 and z = 2\n\nfor calculating odd divisor of $p = 2^{x} . 3^{y} . 5^{z}$\n\nx must be zero\n\n$P = 2^{0} . 3^{3} . 5^{2}$ \n\n$\\Rightarrow$ Total possible cases $= (3^{0}5^{0} + 3^{1}5^{0} + 3^{2}5^{0} + 3^{3}5^{0} + .... + 3^{3}5^{2})$\n\n$\\therefore$ Total odd divisors must be (3 + 1) ( 2 + 1) = 12",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-mbltkG0z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If 0 < a, b < 1, and $\\tan ^{-1}a + \\tan ^{-1}b =$ $\\frac{π}{4}$, then the value of \n\n$(a+b)-\\left (\\frac{a^{2}+b^{2}}{2}\\right )+\\left (\\frac{a^{3}+b^{3}}{3}\\right )-\\left (\\frac{a^{4}+b^{4}}{4}\\right )+.....$ is :",
+  "options": [
+   "$\\log _{e}$2",
+   "e",
+   "$\\log _{e}\\left (\\frac{e}{2}\\right )$",
+   "$e^{2}$ $-$ 1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\tan ^{-1}a + \\tan ^{-1}b =$ $\\frac{π}{4}$ 0 < a, b < 1\n\n$\\Rightarrow \\frac{a+b}{1-ab}=1$\n\na + b = 1 $-$ ab\n\n(a + 1)(b + 1) = 2\n\nNow $\\left [a-\\frac{a^{2}}{2}+\\frac{a^{3}}{3}+....\\right ]+\\left [b-\\frac{b^{2}}{2}+\\frac{b^{3}}{3}+....\\right ]$\n\n$=\\log _{e}(1+a)+\\log _{e}(1+b)$\n\n($\\because$ expansion of $\\log _{e}(1 + x))$\n\n$=\\log _{e}[(1+a)(1+b)]$\n\n$=\\log _{e}2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-U00iEUse",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=\\int\\limits _{0}^{x}e^{t}f(t)dt+e^{x}$ be a differentiable function for all x$\\in$R. Then f(x) equals :",
+  "options": [
+   "$e^{(e^{x-1})}$",
+   "$2e^{e^{x}}-1$",
+   "$2e^{e^{x}-1}-1$",
+   "$e^{e^{x}}-1$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\int\\limits _{0}^{x}e^{t}f(t)dt+e^{x}$ .... (1)\n\nDifferentiating both sides w.r.t. x\n\n$f^{'}(x)=e^{x}.f(x)+e^{x}$ (Using Newton-Leibnitz Theorem)\n\n$\\Rightarrow \\frac{f^{'}(x)}{f(x)+1}=e^{x}$\n\nIntegrating w.r.t. x\n\n$\\int \\frac{f^{'}(x)}{f(x)+1}dx=\\int e^{x}dx$\n\n$\\Rightarrow \\ln (f(x)+1)=e^{x}+c$\n\nPut x = 0\n\nln 2 = 1 + c ($\\because$ f(0) = 1, from equation (1))\n\n$\\therefore$ $\\ln (f(x)+1)=e^{x}+\\ln 2-1$\n\n$\\Rightarrow f(x)+1=2.e^{e^{x}-1}$\n\n$\\Rightarrow f(x)=2e^{e^{x}-1}-1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-VUYHG22O",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For x > 0, if $f(x)=\\int\\limits _{1}^{x}\\frac{\\log _{e}t}{(1+t)}dt$, then $f(e)+f\\left (\\frac{1}{e}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{1}{2}$",
+   "$-$1",
+   "0",
+   "1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\int\\limits _{1}^{x}\\frac{\\ln t}{1+t}dt$\n\nthen $f\\left (\\frac{1}{x}\\right )=\\int\\limits _{1}^{1/x}\\frac{\\ln t}{1+t}dt$\n\nLet $t=\\frac{1}{u}\\Rightarrow dt=-\\frac{1}{u^{2}}du$\n\n$\\Rightarrow f\\left (\\frac{1}{x}\\right )=\\int\\limits _{1}^{x}\\frac{\\ln \\frac{1}{u}}{1+\\frac{1}{u}}\\left (-\\frac{1}{u^{2}}\\right )dx$\n\n$f\\left (\\frac{1}{x}\\right )=\\int\\limits _{1}^{x}\\frac{\\ln u}{u(1+u)}du=\\int\\limits _{1}^{x}\\frac{\\ln t}{t(1+t)}dt$\n\n$\\therefore$ $f(x)+f\\left (\\frac{1}{x}\\right )=\\int\\limits _{1}^{x}\\ln t\\left (\\frac{1}{1+t}+\\frac{1}{t(1+t)}\\right )dt$\n\n$=\\int\\limits _{1}^{x}\\ln t\\left (\\frac{1}{1+t}+\\frac{1}{t}-\\frac{1}{t+1}\\right )dt$\n\n$=\\int\\limits _{1}^{x}\\frac{\\ln t}{t}dt=\\frac{1}{2}(\\ln x)^{2}$\n\n$\\therefore$ $f(e)+f\\left (\\frac{1}{e}\\right )=\\frac{1}{2}(\\ln e)^{2}=\\frac{1}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-ogppq1oh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=\\{1,2,3,....,10\\}$ and $f:A\\to A$ be defined as\n\n$f(k)=\\left \\{\\begin{array}{ll} k+1 & ifkisodd \\\\ k & ifkiseven \\end{array} \\right.$\n\nThen the number of possible functions $g:A\\to A$ such that $gof=f$ is :",
+  "options": [
+   "$5^{5}$",
+   "$10^{5}$",
+   "5!",
+   "$^{10}C_{5}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n \n\nf(1) = 2\n\nf(2) = 2\n\nf(3) = 4\n\nf(4) = 4\n\nf(5) = 6\n\nf(6) = 6\n\nf(7) = 8\n\nf(8) = 8\n\nf(9) = 10\n\nf(10) = 10\n\n$\\therefore$ f(1) = f(2) = 2\n\nf(3) = f(4) = 4\n\nf(5) = f(6) = 6\n\nf(7) = f(8) = 8\n\nf(9) = f(10) = 10\n\nGiven, g(f(x)) = f(x)\n\nwhen x = 1, g(f(1)) = f(1) $\\Rightarrow$ g(2) = 2\n\nwhen, x = 2, g(f(2)) = f(2) $\\Rightarrow$ g(2) = 2\n\n$\\therefore$ x = 1, 2, g(2) = 2\n\nSimilarly, at x = 3, 4, g(4) = 4\n\nat x = 5, 6, g(6) = 6\n\nat x = 7, 8, g(8) = 8\n\nat x = 9, 10, g(10) = 10\n\n \n[IMG]\n \n\nHere, you can see for even terms mapping is fixed. But for odd terms 1, 3, 5, 7, 9 we can map to any one of the 10 elements.\n\n$\\therefore$ For 1, number of functions = 10\n\nFor 3, number of functions = 10\n\n$\\begin{array}{ll}  & . \\\\  & . \\\\  & . \\\\  &  \\end{array}$\nfor 9, number of functions = 10\n\n$\\therefore$ Total number of functions = 10 $\\times$ 10 $\\times$ 10 $\\times$ 10 $\\times$ $10 = 10^{5}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-26th-february-evening-slot/ogppq1ohbkBSL5dMSx1kluwzw9x-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th February Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2021-online-26th-february-evening-slot/ogppq1ohbkBSL5dMSx1kluwzw9x-1.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th February Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-nVJQQ0RI",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A_{1}$ be the area of the region bounded by the curves y = sinx, y = cosx and y-axis in the first quadrant. Also, let $A_{2}$ be the area of the region bounded by the curves y = sinx, y = cosx, x-axis and x = $\\frac{π}{2}$ in the first quadrant. Then,",
+  "options": [
+   "$A_{1}:A_{2}=1:\\sqrt{2}$ and $A_{1}+A_{2}=1$",
+   "$A_{1}=A_{2}$ and $A_{1}+A_{2}=\\sqrt{2}$",
+   "$2A_{1}=A_{2}$ and $A_{1}+A_{2}=1+\\sqrt{2}$",
+   "$A_{1}:A_{2}=1:2$ and $A_{1}+A_{2}=1$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A_{1}+A_{2}=\\int\\limits _{0}^{π/2}\\cos x.dx=\\sin x|_{0}^{π/2}=1$\n\n\n[IMG]\n\n\n$A_{1}=\\int\\limits _{0}^{π/4}(\\cos x-\\sin x)dx=(\\sin x+\\cos x)\\left |_{0}^{π/4}=\\sqrt{2}-1 \\right.$\n\n$\\therefore$ $A_{2}=1-\\left (\\sqrt{2}-1\\right )=2-\\sqrt{2}$\n\n$\\therefore$ $\\frac{A_{1}}{A_{2}}=\\frac{\\sqrt{2}-1}{\\sqrt{2}\\left (\\sqrt{2}-1\\right )}=\\frac{1}{\\sqrt{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-26th-february-evening-slot/nVJQQ0RIj7eHctBMc91klux59dv-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th February Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-zig2fGHa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=\\sin ^{-1}x$ and $g(x)=\\frac{x^{2}-x-2}{2x^{2}-x-6}$. If $g(2)=\\lim _{x\\to 2}g(x)$, then the domain of the function fog is :",
+  "options": [
+   "$(-\\infty ,-2]\\cup \\left [-\\frac{4}{3},\\infty \\right )$",
+   "$(-\\infty ,-2]\\cup [-1,\\infty )$",
+   "$(-\\infty ,-2]\\cup \\left [-\\frac{3}{2},\\infty \\right )$",
+   "$(-\\infty ,-1]\\cup [2,\\infty )$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$g(2)=\\lim _{x\\to 2}\\frac{(x-2)(x+1)}{(2x+3)(x-2)}=\\frac{3}{7}$\n\nDomain of $fog(x)=\\sin ^{-1}(g(x))$\n\n$\\Rightarrow |g(x)|\\leq 1$\n\n$\\left |\\frac{x^{2}-x-2}{2x^{2}-x-6}\\right |\\leq 1$\n\n$\\left |\\frac{(x+1)(x-2)}{(2x+3)(x-2)}\\right |\\leq 1$\n\n$\\frac{x+1}{2x+3}\\leq 1$ and $\\frac{x+1}{2x+3}\\geq -1$\n\n$\\frac{x+1-2x-3}{2x+3}\\leq 0$ and $\\frac{x+1+2x+3}{2x+3}\\geq 0$\n\n$\\frac{x+2}{2x+3}\\geq 0$ and $\\frac{3x+4}{2x+3}\\geq 0$\n\n$x\\in (-\\infty ,-2]\\cup \\left [-\\frac{4}{3},\\infty \\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-0uHZpf1J",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : R $\\to$ R be defined as \n\n$f(x)=\\left \\{\\begin{array}{l} 2\\sin \\left (-\\frac{πx}{2}\\right ),ifx<-1 \\\\ |ax^{2}+x+b|,if-1\\leq x\\leq 1 \\\\ \\sin (πx),ifx>1 \\end{array} \\right.$ If f(x) is continuous on R, then a + b equals :",
+  "options": [
+   "$-$3",
+   "3",
+   "$-$1",
+   "1"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(-1^{-})=2$\n\n$f(-1^{+})=|a+b-1|$\n\n$|a+b-1|=2$ ... (i)\n\n$f(1^{-})=|a+b+1|$\n\n$f(1^{+})=0$\n\n$|a+b+1|=0\\Rightarrow a+b+1=0$\n\n$\\Rightarrow a+b=-1$ .... (ii)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-9DizyxVs",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the locus of the mid-point of the line segment from the point (3, 2) to a point on the circle, $x^{2} + y^{2} = 1$ is a circle of radius r, then r is equal to :",
+  "options": [
+   "$\\frac{1}{4}$",
+   "$\\frac{1}{2}$",
+   "1",
+   "$\\frac{1}{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let P(h, k) and point on the circle is (cos$θ$, sin$θ$)\n\n$\\therefore$ $\\frac{3+\\cos θ}{2}=h$ and $\\frac{2+\\sin θ}{2}=k$\n\ncos$θ$ = 2h $-$ 3 and sin$θ$ = 2h $-$ 2\n\nSquaring and adding we get\n\n$(2h-3)^{2}+(2h-2)^{2}=1$\n\n$\\Rightarrow 4x^{2}-12x+9+4y^{2}-8y+4=1$\n\n$\\Rightarrow 4x^{2}+4y^{2}-12x-8y+12=0$\n\n$\\Rightarrow x^{2}+y^{2}-3x-2y+3=0$\n\nRadius = $\\sqrt{\\frac{9}{4}+1-3}=\\frac{1}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-WE3Bfzab",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If vectors $\\vec{a_{1}}=x\\hat{i}-\\hat{j}+\\widehat{k}$ and $\\vec{a_{2}}=\\hat{i}+y\\hat{j}+z\\widehat{k}$ are collinear, then a possible unit vector parallel to the vector $x\\hat{i}+y\\hat{j}+z\\widehat{k}$ is :",
+  "options": [
+   "$\\frac{1}{\\sqrt{3}}\\left (\\hat{i}-\\hat{j}+\\widehat{k}\\right )$",
+   "$\\frac{1}{\\sqrt{2}}\\left (-\\hat{j}+\\widehat{k}\\right )$",
+   "$\\frac{1}{\\sqrt{2}}\\left (\\hat{i}-\\hat{j}\\right )$",
+   "$\\frac{1}{\\sqrt{3}}\\left (\\hat{i}+\\hat{j}-\\widehat{k}\\right )$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\vec{a_{2}}=λ\\vec{a_{1}}$\n\n$\\hat{i}+y\\hat{j}+z\\widehat{k}=λ(x\\hat{i}-\\hat{j}+\\widehat{k})$\n\n$1=λx,y=-λ,z=λ$\n\n$x\\hat{i}+y\\hat{j}+z\\widehat{k}=\\frac{1}{λ}\\hat{i}-λ\\hat{j}+λ\\widehat{k}$\n\nUnit vector $=\\frac{\\frac{1}{λ}\\hat{i}-λ\\hat{j}+λ\\widehat{k}}{\\sqrt{\\frac{1}{λ2}+λ^{2}+λ^{2}}}$\n\n$=\\frac{\\hat{i}-λ^{2}\\hat{j}+λ^{2}\\widehat{k}}{\\sqrt{1+2λ^{4}}}$\n\nLet $λ^{2}=1$, possible unit vector $=\\frac{\\hat{i}-\\hat{j}+\\widehat{k}}{\\sqrt{3}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-GJ1zE8Rk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A seven digit number is formed using digits 3, 3, 4, 4, 4, 5, 5. The probability, that number so formed is divisible by 2, is :",
+  "options": [
+   "$\\frac{1}{7}$",
+   "$\\frac{4}{7}$",
+   "$\\frac{6}{7}$",
+   "$\\frac{3}{7}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Digits = 3, 3, 4, 4, 4, 5, 5\n\nTotal 7 digit numbers = $\\frac{7!}{2!2!3!}$\n\nNumber of 7 digit number divisible by 2 $\\Rightarrow$ last digit = 4\n\n \n[IMG]\n \n\nNow 7 digit numbers which are divisible by 2 = $\\frac{6!}{2!2!2!}$\n\nRequired probability = $\\frac{\\frac{6!}{2!2!2!}}{\\frac{7!}{3!2!2!}}=\\frac{3}{7}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-26th-february-evening-slot/GJ1zE8RkCmDVd30zIh1kluxtvqr-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th February Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-UXHgHEDP",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The total number of 4-digit numbers whose greatest common divisor with 18 is 3, is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1000.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let N be the four digit number\n\ngcd(N, 18) = 3\n\nHence N is an odd integer which is divisible by 3 but not by 9.\n\n4 digit odd multiples of 3\n\n1005, 1011, ..........., 9999 $\\to$ 1500\n\n4 digit odd multiples of 9\n\n1017, 1035, ..........., 9999 $\\to$ 500\n\nHence number of such N = 1000",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-PxfQPOh5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the matrix $A=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 3 & 0 & -1 \\end{array}\\right ]$ satisfies the equation\n\n $A^{20}+αA^{19}+βA=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right ]$ for some real numbers $α$ and $β$, then $β$ $-$ $α$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A^{2}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 3 & 0 & -1 \\end{array}\\right ]\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 3 & 0 & -1 \\end{array}\\right ]=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right ]$\n\n$A^{3}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right ]\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 3 & 0 & -1 \\end{array}\\right ]=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 8 & 0 \\\\ 3 & 0 & -1 \\end{array}\\right ]$\n\n$A^{4}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right ]\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right ]=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 16 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right ]$\n\n$\\begin{array}{ll}  & . \\\\  & . \\\\  & . \\\\  & . \\\\  & . \\\\  & . \\end{array}$\n\n$A^{19}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 2^{19} & 0 \\\\ 3 & 0 & -1 \\end{array}\\right ],A^{20}=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 2^{20} & 0 \\\\ 0 & 0 & 1 \\end{array}\\right ]$\n\n$L.H.S.=A^{20}+αA^{19}+βA=$\n\n$\\left [\\begin{array}{lll} 1+α+β & 0 & 0 \\\\ 0 & 2^{20}+α2^{19}+2β & 0 \\\\ 3α+3β & 0 & 1-α-β \\end{array}\\right ]$\n\n$R.H.S.=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right ]$\n\n$\\Rightarrow α+β=0$ and $2^{20}+α2^{19}+2β=4$\n\n$\\Rightarrow 2^{20}+α(2^{19}-2)=4$\n\n$\\Rightarrow α=\\frac{4-2^{20}}{2^{19}-2}=-2$\n\n$\\Rightarrow β=2$\n\n$\\therefore$ $β-α=4$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-APggZAno",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $α$ and $β$ be two real numbers such that $α$ + $β$ = 1 and $αβ$ = $-$1. Let $p_{n} = (α)^{n} + (β)^{n}, p_{n-1} = 11$ and $p_{n+1} = 29$ for some integer n $\\geq$ 1. Then, the value of p${}_{n}^{2}$ is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 324.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $α$ + $β$ = 1, $αβ$ = $-$ 1\n\n$\\therefore$ Quadratic equation with roots $α$, $β$ is $x^{2}$ $-$ x $-$ 1 = 0\n\n$\\Rightarrow$ $α^{2}$ = $α$ + 1\n\nMultiplying both sides by $α^{n-1}$\n\n$α^{n+1}$ = $α^{n}$ + $α^{n-1}$ ......(1)\n\nSimilarly,\n\n$β^{n + 1}$ = $β^{n}$ + $β^{n - 1}$ ..... (2)\n\nAdding (1) & (2)\n\n$α^{n+1}+β^{n+1}=(α^{n}+β^{n})+(α^{n-1}+β^{n-1})$\n\n$\\Rightarrow$ $P_{n+1} = P_{n} + P_{n-1}$\n\n$\\Rightarrow$ $29 = P_{n} + 11 ($Given, $P_{n + 1} = 29, P_{n - 1} = 11)$\n\n$\\Rightarrow$ $P_{n} = 18$\n\n$\\therefore$ $P_{n}^{2}$ $= 18^{2} = 324$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-t3QY3WP7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let z be those complex numbers which satisfy\n\n| z + 5 | $\\leq$ 4 and z(1 + i) + $z–$(1 $-$ i) $\\geq$ $-$10, i = $\\sqrt{-1}$.\n\nIf the maximum value of $| z + 1 |^{2}$ is $α$ + $β\\sqrt{2}$, then the value of ($α$ + $β$) is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 48.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let, z = x + iy\n\nGiven, z(1 + i) + $z–$ (1 $-$ i) $\\geq$ $-$ 10\n\n$\\Rightarrow$ z + $z–$ + i (z $-$ $z–$) $\\geq$ $-$ 10\n\n$\\Rightarrow$ 2x + i (2iy) $\\geq$ $-$ 10\n\n$\\Rightarrow$ $x + i^{2} y$ $\\geq$ $-$ 5\n\n$\\Rightarrow$ x $-$ y $\\geq$ $-$ 5 ...... (1)\n\nAlso given, | z + 5 | $\\leq$ 4\n\n$\\Rightarrow$ | z $-$ ($-$5 + 0i) | $\\leq$ 4 ...... (2)\n\nIt represents a circle whose center at ($-$ 5, 0) and radius 4. z is inside of the circle.\n\n[IMG]\n\n\nFrom (1) and (2) z is the shaded region of the diagram.\n\nNow, | z + 1 | = | z $-$ ($-$1 + 0 i) | = distance of z from ($-$1, 0).\n\nClearly 'p' is the required position of 'z' when | z + 1 | is maximum.\n\n$\\therefore$ P $\\equiv$ ($-$5 $-$ 4 cos45${}^{\\circ }$, 0 $-$ 4sin45${}^{\\circ }$) = ($-$5$-$2$\\sqrt{2}$, $-$2$\\sqrt{2}$)\n\n$\\therefore$ $(PQ)^{2}|_{\\max } = 32 + 16\\sqrt{2}$\n\n$\\Rightarrow$ $α$ = 32\n\n$\\Rightarrow$ $β$ = 16\n\nThus, $α$ + $β$ = 48",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-26th-february-evening-slot/t3QY3WP7FQprViAD1n1kluybz0d-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th February Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-MYzMY4Fr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the arithmetic mean and geometric mean of the $p^{th}$ and $q^{th}$ terms of the \nsequence $-$16, 8, $-$4, 2, ...... satisfy the equation\n $4x^{2}$ $-$ 9x + 5 = 0, then p + q is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 10.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $4x^{2}-9x+5=0$\n\n$\\Rightarrow (x-1)(4x-5)=0$\n\n$\\Rightarrow$ A. M. $=\\frac{5}{4}$, G. M. = 1 (As A. M. $\\geq$ G. M)\n\nAgain, for the series\n\n$-$16, 8, $-$4, 2 ..........\n\n$p^{th}$ term $t_{p}=-16\\left (\\frac{-1}{2}\\right )^{p-1}$\n\n$q^{th}$ term $t_{p}=16\\left (\\frac{-1}{2}\\right )^{q-1}$\n\nNow, A. M. = $\\frac{t_{p}+t_{q}}{2}=\\frac{5}{4}$ & G. M. = $\\sqrt{t_{p}t_{q}}=1$\n\n$\\Rightarrow 16^{2}\\left (-\\frac{1}{2}\\right )^{p+q-2}=1$\n\n$\\Rightarrow (-2)^{8}=(-2)^{(p+q-2)}$\n\n$\\Rightarrow p+q=10$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-r6ZrOjQx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $I_{m,n}=\\int\\limits _{0}^{1}x^{m-1}(1-x)^{n-1}dx$, for m, $n\\geq 1$, and \n$\\int\\limits _{0}^{1}\\frac{x^{m-1}+x^{n-1}}{(1+x)^{m+n}}dx=αI_{m,n}α\\in R$, then $α$ equals $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I_{m,n}=\\int\\limits _{0}^{1}x^{m-1}.(1-x)^{n-1}dx$\n\nPut $x=\\frac{1}{y+1}\\Rightarrow dx=\\frac{-1}{(y+1)^{2}}dy$\n\n$1-x=\\frac{y}{y+1}$\n\n$\\therefore$ $I_{m,n}=\\int\\limits _{\\infty }^{0}\\frac{y^{n-1}}{(y+1)^{m+n}}(-1)dy=\\int\\limits _{0}^{\\infty }\\frac{y^{n-1}}{(y+1)^{m+n}}dy$ .... (i)\n\nSimilarly, $I_{m,n}=\\int\\limits _{0}^{1}x^{n-1}.(1-x)^{m-1}dx$\n\n$\\Rightarrow I_{m,n}=\\int\\limits _{0}^{\\infty }\\frac{y^{m-1}}{(y+1)^{m+n}}dy$ .... (ii)\n\nFrom (i) & (ii)\n\n$2I_{m,n}=\\int\\limits _{0}^{\\infty }\\frac{y^{m-1}+y^{n-1}}{(y+1)^{m+n}}dy$\n\n$\\Rightarrow 2I_{m,n}=\\int\\limits _{0}^{1}\\frac{y^{m-1}+y^{n-1}}{(y+1)^{m+n}}dy+\\int\\limits _{1}^{\\infty }\\frac{y^{m-1}+y^{n-1}}{(y+1)^{m+n}}dy=I_{1}+I_{2}$\n\nPut $y=\\frac{1}{z}$ in $I_{2}$\n\n$dy=-\\frac{1}{z^{2}}dz$\n\n$\\Rightarrow 2I_{m,n}=\\int\\limits _{0}^{1}\\frac{y^{m-1}+y^{n-1}}{(y+1)^{m+n}}dy+\\int\\limits _{1}^{0}\\frac{z^{m-1}+z^{n-1}}{(z+1)^{m+n}}(-dz)$\n\n$\\Rightarrow I_{m,n}=\\int\\limits _{0}^{1}\\frac{y^{m-1}+y^{n-1}}{(y+1)^{m+n}}dy\\Rightarrow α=1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-UDM8kSpb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $X_{1}, X_{2}, ......., X_{18}$ be eighteen observations such \nthat $\\sum\\limits _{i=1}^{18}(X_{i}-α)=36$ and $\\sum\\limits _{i=1}^{18}(X_{i}-β)^{2}=90$, where $α$ and $β$ are distinct real numbers. If the standard deviation of these observations is 1, then the value of | $α$ $-$ $β$ | is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $\\sum\\limits _{i=1}^{18}(x_{1}-α)=36$\n\n$\\Rightarrow \\sum x_{i}-18α=36$\n\n$\\Rightarrow \\sum x_{i}=18(α+2)$ .... (1)\n\nAlso, $\\sum\\limits _{i=1}^{18}(x_{1}-β)^{2}=90$\n\n$\\Rightarrow \\sum x_{i}^{2}+18β^{2}-2β\\sum x_{i}=90$\n\n$\\Rightarrow \\sum x_{i}^{2}+18β^{2}+2β\\times 18(α+2)=90$ (using equation (1))\n\n$\\Rightarrow \\sum x_{i}^{2}=90-18β^{2}+36β(α+2)$\n\nGiven, $σ^{2}=1\\Rightarrow \\frac{1}{18}\\sum x_{i}^{2}-\\left (\\frac{\\sum x_{i}}{18}\\right )^{2}=1$\n\n$=\\frac{1}{18}(90-18β^{2}+36αβ+72β)-\\left (\\frac{18(α+2)}{18}\\right )^{2}=1$\n\n$\\Rightarrow 90-18β^{2}+36αβ+72β-18(α+2)^{2}=18$\n\n$\\Rightarrow 5-β^{2}+2αβ+4β-(α+2)^{2}=1$\n\n$\\Rightarrow 5-β^{2}+2αβ+4β-α^{2}-4-4α=1$\n\n$\\Rightarrow α^{2}-β^{2}+2αβ+4β-4α=0$\n\n$\\Rightarrow (α-β)(α-β+4)=0$\n\n$\\Rightarrow α-β=-4$\n\n$\\therefore$ $|α-β|=4$ $(α\\neq β)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-jnHf1y8t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let a be an integer such that all the real roots of the polynomial \n$2x^{5} + 5x^{4} + 10x^{3} + 10x^{2} + 10x + 10$ lie in the interval (a, a + 1). Then, |a| is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let, $f(x)=2x^{5}+5x^{4}+10x^{3}+10x^{2}+10x+10$\n\n$\\Rightarrow f^{'}(x)=10(x^{4}+2x^{3}+3x^{2}+2x+1)$\n\n$=10\\left (x^{2}+\\frac{1}{x^{2}}+2\\left (x+\\frac{1}{x}\\right )+3\\right )$\n\n$=10\\left (\\left (x+\\frac{1}{x}\\right )^{2}+2\\left (x+\\frac{1}{x}\\right )+1\\right )$\n\n$=10\\left (\\left (x+\\frac{1}{x}\\right )+1\\right )^{2}>0;\\forall x\\in R$\n\n$\\therefore$ f(x) is strictly increasing function. Since, it is an odd degree polynomial it will have exactly one real root.\n\nNow, by observation.\n\n$f(-1)=3>0$\n\n$f(-2)=-64+80-80+40-20+10$\n\n$=-34<0$\n\n$\\Rightarrow f(x)$ has at least one root in $(-2,-1)\\equiv (a,a+1)$\n\n$\\Rightarrow a=-2$\n\n$\\Rightarrow$ |a| = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

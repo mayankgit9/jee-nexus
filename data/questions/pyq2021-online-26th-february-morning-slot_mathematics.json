@@ -1,0 +1,852 @@
+[
+ {
+  "publicId": "PYQ-2021-7j0Ea0Cx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The maximum value of the term independent of 't' in the expansion \nof $\\left (tx^{\\frac{1}{5}}+\\frac{(1-x)^{\\dfrac{1}{10}}}{t}\\right )^{10}$ where x$\\in$(0, 1) is :",
+  "options": [
+   "$\\frac{10!}{\\sqrt{3}(5!)^{2}}$",
+   "$\\frac{2.10!}{3\\sqrt{3}(5!)^{2}}$",
+   "$\\frac{10!}{3(5!)^{2}}$",
+   "$\\frac{2.10!}{3(5!)^{2}}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T_{r+1}={}^{10}C_{r}(tx^{1/5})^{10-r}\\left [\\frac{(1-x)^{1/10}}{t}\\right ]^{r}$\n\n$={}^{10}C_{r}t^{(10-2r)}\\times x^{\\frac{10-r}{5}}\\times (1-x)^{\\frac{r}{10}}$\n\n$\\Rightarrow 10-2r=0\\Rightarrow r=5$\n\n$\\therefore$ $T_{6}={}^{10}C_{5}\\times x\\sqrt{1-x}$\n\nAt maximum, $\\frac{dT_{6}}{dx}={}^{10}C_{5}\\left [\\sqrt{1-x}-\\frac{x}{2\\sqrt{1-x}}\\right ]=0$\n\n$\\Rightarrow$ $1-x=x/2\\Rightarrow 3x=2\\Rightarrow x=2/3$\n\n$T_{6}|_{\\max }=\\frac{10!}{5!5!}\\times \\frac{2}{3\\sqrt{3}}$ = $\\frac{2.10!}{3\\sqrt{3}(5!)^{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-raNEv8qH",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\lim _{h\\to 0}2\\left \\{\\frac{\\sqrt{3}\\sin \\left (\\frac{π}{6}+h\\right )-\\cos \\left (\\frac{π}{6}+h\\right )}{\\sqrt{3}h\\left (\\sqrt{3}\\cosh -\\sinh \\right )}\\right \\}$ is :",
+  "options": [
+   "$\\frac{4}{3}$",
+   "$\\frac{2}{3}$",
+   "$\\frac{3}{4}$",
+   "$\\frac{2}{\\sqrt{3}}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let L = $\\lim _{h\\to 0}2\\left \\{\\frac{\\sqrt{3}\\sin \\left (\\frac{π}{6}+h\\right )-\\cos \\left (\\frac{π}{6}+h\\right )}{\\sqrt{3}h\\left (\\sqrt{3}\\cosh -\\sinh \\right )}\\right \\}$\n\n$\\Rightarrow$ L = $\\lim _{h\\to 0}2\\times 2\\left \\{\\frac{\\frac{\\sqrt{3}}{2}\\sin \\left (\\frac{π}{6}+h\\right )-\\frac{1}{2}\\cos \\left (\\frac{π}{6}+h\\right )}{2\\sqrt{3}h\\left (\\frac{\\sqrt{3}}{2}\\cosh -\\frac{1}{2}\\sinh \\right )}\\right \\}$\n\n$\\Rightarrow$ L = $\\lim _{h\\to 0}2\\times 2\\left \\{\\frac{\\cos \\frac{π}{6}\\sin \\left (\\frac{π}{6}+h\\right )-\\sin \\frac{π}{6}\\cos \\left (\\frac{π}{6}+h\\right )}{2\\sqrt{3}h\\left (\\cos \\frac{π}{6}\\cosh -\\sin \\frac{π}{6}\\sinh \\right )}\\right \\}$\n\n$\\Rightarrow$ L = $\\lim _{h\\to 0}2\\times 2\\left \\{\\frac{\\sin \\left (\\frac{π}{6}+h-\\frac{π}{6}\\right )}{2\\sqrt{3}h\\cos \\left (h+\\frac{π}{6}\\right )}\\right \\}$\n\n$\\Rightarrow$ L = $\\frac{4}{2\\sqrt{3}}\\lim _{h\\to 0}\\left \\{\\frac{\\sin (h)}{h\\cos \\left (h+\\frac{π}{6}\\right )}\\right \\}$\n\n$\\Rightarrow$ L = $\\frac{4}{2\\sqrt{3}}\\times \\frac{2}{\\sqrt{3}}$ = $\\frac{4}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-BTVrgRhS",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let A be a symmetric matrix of order 2 with integer entries. If the sum of the diagonal elements of $A^{2}$ is 1, then the possible number of such matrices is :",
+  "options": [
+   "6",
+   "4",
+   "1",
+   "12"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $A=\\left [\\begin{array}{ll} a & b \\\\ b & c \\end{array}\\right ]$\n\n$A^{2}=\\left [\\begin{array}{ll} a & b \\\\ b & c \\end{array}\\right ]\\left [\\begin{array}{ll} a & b \\\\ b & c \\end{array}\\right ]=\\left [\\begin{array}{ll} a^{2}+b^{2} & ab+bc \\\\ ab+bc & c^{2}+b^{2} \\end{array}\\right ]$\n\n$=a^{2}+2b^{2}+c^{2}=1$\n\n$a=1,b=0,c=0$\n\n$a=0,b=0,c=1$\n\n$a=-1,b=0,c=0$\n\n$c=-1,b=0,a=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-NNxLSevD",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\int\\limits _{-π/2}^{π/2}\\frac{\\cos ^{2}x}{1+3^{x}}dx$ is :",
+  "options": [
+   "$2π$",
+   "$\\frac{π}{2}$",
+   "$4π$",
+   "$\\frac{π}{4}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $I=\\int\\limits _{-\\frac{π}{2}}^{\\frac{π}{2}}\\frac{\\cos ^{2}x}{1+3^{x}}dx$ .... (1)\n\nReplace x with $-$x,\n\n$\\therefore$ $I=\\int\\limits _{-\\frac{π}{2}}^{\\frac{π}{2}}\\frac{\\cos ^{2}x}{1+\\frac{1}{3x}}$ .... (2)\n\nAdding (1) and (2), we get,\n\n$2I=\\int\\limits _{-\\frac{π}{2}}^{\\frac{π}{2}}\\frac{\\cos ^{2}x+3^{x}\\cos ^{2}x}{1+3^{x}}dx$\n\n$=\\int\\limits _{-\\frac{π}{2}}^{\\frac{π}{2}}\\frac{\\cos ^{2}x(1+3^{x})}{1+3^{x}}dx$\n\n$=\\int\\limits _{-\\frac{π}{2}}^{\\frac{π}{2}}\\cos ^{2}xdx$\n\n[$\\cos ^{2}x$ is a even function as $f(x)=f(-x)$ for $\\cos ^{2}x$]\n\n$=2\\int\\limits _{0}^{\\frac{π}{2}}\\cos ^{2}xdx$\n\n$=2\\int\\limits _{0}^{\\frac{π}{2}}\\left (\\frac{1+\\cos 2x}{2}\\right )dx$\n\n$\\Rightarrow I=\\frac{1}{2}\\int\\limits _{0}^{\\frac{π}{2}}(1+\\cos 2x)dx$\n\n$=\\frac{1}{2}[x+\\sin 2x]_{0}^{\\frac{π}{2}}$\n\n$=\\frac{1}{2}\\left [\\frac{π}{2}-0\\right ]$\n\n$=\\frac{π}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-eNLKKMO5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of seven digit integers with sum of the digits equal to 10 and formed by using the digits 1, 2 and 3 only is :",
+  "options": [
+   "35",
+   "42",
+   "82",
+   "77"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "(I) First possibility is 1, 1, 1, 1, 1, 2, 3\n\nrequired number = $\\frac{7!}{5!}$ = 7 $\\times$ 6 = 42\n\n(II) Second possibility is 1, 1, 1, 1, 2, 2, 2\n\nrequired number = $\\frac{7!}{4!3!}=\\frac{7\\times 6\\times 5}{6}=35$\n\nTotal = 42 + 35 = 77",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-cS4oUt1t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let R = {(P, Q) | P and Q are at the same distance from the origin} be a relation, then the equivalence class of (1, $-$1) is the set :",
+  "options": [
+   "$S=\\{(x,y)|x^{2}+y^{2}=\\sqrt{2}\\}$",
+   "$S=\\{(x,y)|x^{2}+y^{2}=2\\}$",
+   "$S=\\{(x,y)|x^{2}+y^{2}=1\\}$",
+   "$S=\\{(x,y)|x^{2}+y^{2}=4\\}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given R = {(P, Q) | P and Q are at the same distance from the origin}.\n\nThen equivalence class of (1, $-$1) will contain all such points which lie on circumference of the circle of centre at origin and passing through point (1, $-$1).\n\ni.e., radius of circle = $\\sqrt{1^{2}+1^{2}}=\\sqrt{2}$\n\n$\\therefore$ Required equivalence class of (S)\n\n$=\\{(x,y)|x^{2}+y^{2}=2\\}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-xeclbysY",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\sum\\limits _{n=1}^{100}\\int\\limits _{n-1}^{n}e^{x-[x]}dx$, where [ x ] is the greatest integer $\\leq$ x, is :",
+  "options": [
+   "100e",
+   "100(e $-$ 1)",
+   "100(1 + e)",
+   "100(1 $-$ e)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sum\\limits _{n=1}^{100}\\int\\limits _{n-1}^{n}e^{x-[x]}dx$\n\nHere, $n-1\\leq x<n$\n\n$\\therefore$ $[x]=n-1$\n\n$\\therefore$ $\\int\\limits _{n-1}^{n}e^{x-(n-1)}dx$\n\n$=\\left [e^{x-(n-1)}\\right ]_{n-1}^{n}$\n\n$=e^{1}-e^{0}$\n\n$=e-1$\n\nNow, $\\sum\\limits _{n=1}^{100}(e-1)=100(e-1)$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-GnwOVu7c",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The intersection of three lines x $-$ y = 0, x + 2y = 3 and 2x + y = 6 is a :",
+  "options": [
+   "Right angled triangle",
+   "Equilateral triangle",
+   "None of the above",
+   "Isosceles triangle"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The given three lines are x $-$ y = 0, x + 2y = 3 and 2x + y = 6 then point of intersection,\n\nlines x $-$ y = 0 and x + 2y = 3 is (1, 1)\n\nlines x $-$ y = 0 and 2x + y = 6 is (2, 2)\n\nand lines x + 2y = 3 and 2x + y = 6 is (3, 0)\n\nThe triangle ABC has vertices A(1, 1), B(2, 2) and C(3, 0)\n\n$\\therefore$ AB = $\\sqrt{2}$, BC = $\\sqrt{5}$ and AC = $\\sqrt{5}$\n\n$\\therefore$ $\\Delta$ABC is isosceles",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-OavNaE5a",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In the circle given below, let OA = 1 unit, OB = 13 unit and PQ $⊥$ OB. Then, the area of the triangle PQB (in square units) is :\n\n\n[IMG]",
+  "options": [
+   "24$\\sqrt{2}$",
+   "24$\\sqrt{3}$",
+   "26$\\sqrt{2}$",
+   "26$\\sqrt{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nLet PA = AQ = $λ$\n\nOA . AB = AP . AQ\n\n$\\Rightarrow$ 1.12 = $λ$ . $λ$\n\n$\\Rightarrow$ $λ$ = 2$\\sqrt{3}$\n\nArea $\\Delta$PQB = $\\frac{1}{2}$ $\\times$ 2$λ$ $\\times$ AB\n\n$\\Delta$ = $\\frac{1}{2}$ . 4$\\sqrt{3}$ $\\times$ 12\n\n= 24$\\sqrt{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-26th-february-morning-slot/OavNaE5a4W4jEIN4sj1klugtqbo-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th February Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2021-online-26th-february-morning-slot/OavNaE5a4W4jEIN4sj1klugtqbo-1.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 26th February Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-5wV2M9p2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\left |\\begin{array}{lll} (a+1)(a+2) & a+2 & 1 \\\\ (a+2)(a+3) & a+3 & 1 \\\\ (a+3)(a+4) & a+4 & 1 \\end{array}\\right |$ is :",
+  "options": [
+   "$-$2",
+   "0",
+   "(a + 2)(a + 3)(a + 4)",
+   "(a + 1)(a + 2)(a + 3)"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $\\Delta$ = $\\left |\\begin{array}{lll} (a+1)(a+2) & a+2 & 1 \\\\ (a+2)(a+3) & a+3 & 1 \\\\ (a+3)(a+4) & a+4 & 1 \\end{array}\\right |$\n\n$R_{2}$ $\\to$ $R_{2}$ $-$ $R_{1}$ and $R_{3}$ $\\to$ $R_{3}$ $-$ $R_{1}$\n\n$\\Delta$ = $\\left |\\begin{array}{lll} (a+1)(a+2) & a+2 & 1 \\\\ (a+2)(a+3-a-1) & 1 & 0 \\\\ a^{2}+7a+12-a^{2}-3a-2 & 2 & 0 \\end{array}\\right |$\n\n$=\\left |\\begin{array}{lll} a^{2}+3a+2 & a+2 & 1 \\\\ 2(a+2) & 1 & 0 \\\\ 4a+10 & 2 & 0 \\end{array}\\right |$\n\n$=4(a+2)-4a-10$\n\n$=4a+8-4a-10=-2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-pVJ6lPiM",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{\\sin ^{-1}x}{a}=\\frac{\\cos ^{-1}x}{b}=\\frac{\\tan ^{-1}y}{c}$; $0<x<1$, \nthen the value of $\\cos \\left (\\frac{πc}{a+b}\\right )$ is :",
+  "options": [
+   "$\\frac{1-y^{2}}{2y}$",
+   "$\\frac{1-y^{2}}{y\\sqrt{y}}$",
+   "$1-y^{2}$",
+   "$\\frac{1-y^{2}}{1+y^{2}}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{\\sin ^{-1}x}{a}=\\frac{\\cos ^{-1}x}{b}=\\frac{\\tan ^{-1}y}{c}$\n\n$\\frac{\\sin ^{-1}x}{a}=\\frac{\\cos ^{-1}x}{b}=\\frac{\\sin ^{-1}x+\\cos ^{-1}x}{a+b}=\\frac{π}{2(a+b)}$\n\nNow, $\\frac{\\tan ^{-1}y}{c}=\\frac{π}{2(a+b)}$\n\n$2\\tan ^{-1}y=\\frac{πc}{a+b}$\n\n$\\Rightarrow \\cos \\left (\\frac{πc}{a+b}\\right )=\\cos (2\\tan ^{-1}y)=\\frac{1-y^{2}}{1+y^{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-cPe9u55d",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The maximum slope of the curve $y=\\frac{1}{2}x^{4}-5x^{3}+18x^{2}-19x$ occurs at the point :",
+  "options": [
+   "$\\left (3,\\frac{21}{2}\\right )$",
+   "(0, 0)",
+   "(2, 9)",
+   "(2, 2)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $y=\\frac{1}{2}x^{4}-5x^{3}+18x^{2}-19x$\n\n$\\frac{dy}{dx}=\\frac{1}{2}\\times 4x^{3}-15x^{2}+36x-19$\n\n$\\Rightarrow$ Slope M = $2x^{3}-15x^{2}+36x-19$\n\nAt max of slope $\\frac{dM}{dx}=0$\n\n$\\therefore$ $\\frac{dM}{dx}=6x^{2}-30x+36=0$\n\n$\\Rightarrow 6(x^{2}-5x+6)=0$\n\n$\\Rightarrow 6(x-2)(x-3)=0$\n\n$\\therefore$ $x=2,3$\n\nNow, $\\frac{d^{2}M}{dx^{2}}=6(2x-5)$\n\nat $x=2,\\frac{d^{2}M}{dx^{2}}=6(4-5)=-6<0$\n\n$\\therefore$ at x = 2 slope is maximum.\n\nAt x = 2,\n\ny = 8 - 40 + 72 - 38 = 2\n\n$\\therefore$ Required point = (2, 2)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-XwxnZARF",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The rate of growth of bacteria in a culture is proportional to the number of bacteria present and the bacteria count is 1000 at initial time t = 0. The number of bacteria is increased by 20% in 2 hours. If the population of bacteria is 2000 after $\\frac{k}{\\log _{e}\\left (\\frac{6}{5}\\right )}$ hours, then $\\left (\\frac{k}{\\log _{e}2}\\right )^{2}$ is equal to :",
+  "options": [
+   "16",
+   "8",
+   "2",
+   "4"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dx}{dt}\\propto x$\n\n$\\frac{dx}{dt}=λx$\n\n$\\int\\limits _{1000}^{x}\\frac{dx}{x}=\\int\\limits _{0}^{t}λdt$\n\n$\\ln x-\\ln 1000=λt$\n\n$\\ln \\left (\\frac{x}{1000}\\right )=λt$\n\nPut t = 2, x = 1200\n\n$\\ln \\left (\\frac{12}{10}\\right )=2λ\\Rightarrow λ=\\frac{1}{2}\\ln \\frac{6}{5}$\n\nNow, $\\ln \\left (\\frac{x}{1000}\\right )=\\frac{t}{2}\\ln \\left (\\frac{6}{5}\\right )$\n\n$x=1000e^{\\frac{t}{2}\\ln \\left (\\frac{6}{5}\\right )}$\n\n$x=2000$ at $t=\\frac{k}{\\ln \\left (\\frac{6}{5}\\right )}$\n\n$\\Rightarrow 2000=1000e^{\\frac{k}{2\\ln (6/5)}\\times \\ln (6/5)}$\n\n$\\Rightarrow 2=e^{k/2}$\n\n$\\Rightarrow \\ln 2=\\frac{k}{2}$\n\n$\\Rightarrow \\frac{k}{\\ln 2}=2$\n\n$\\Rightarrow \\left (\\frac{k}{\\ln 2}\\right )^{2}=4$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-9AKsFRmm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In an increasing geometric series, the sum of the second and the sixth term is $\\frac{25}{2}$ and the product of the third and fifth term is 25. Then, the sum of $4^{th}, 6^{th}$ and $8^{th}$ terms is equal to :",
+  "options": [
+   "30",
+   "32",
+   "26",
+   "35"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$a, ar, ar^{2}$, .....\n\n$T_{2}+T_{6}=\\frac{25}{2}\\Rightarrow ar(1+r^{4})=\\frac{25}{2}$\n\n$a^{2}r^{2}(1+r^{4})^{2}=\\frac{625}{4}$ .... (1)\n\n$T_{3}.T_{5}=25\\Rightarrow (ar^{2})(ar^{4})=25$\n\n$a^{2}r^{6}=25$ .....(2)\n\nOn dividing (1) by (2)\n\n$\\frac{(1+r^{4})^{2}}{r^{4}}=\\frac{25}{4}$\n\n$4r^{8}-14r^{4}+4=0$\n\n$(4r^{4}-1)(r^{4}-4)=0$\n\n$r^{4}=\\frac{1}{4},4\\Rightarrow r^{4}=4$ (an increasing geometric series)\n\n$a^{2}r^{6}=25\\Rightarrow (ar^{3})^{2}=25$\n\n$T_{4}+T_{6}+T_{8}=ar^{3}+ar^{5}+ar^{7}$\n\n$=ar^{3}(1+r^{2}+r^{4})$\n\n$=5(1+2+4)=35$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1gtnINHD",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The value of the integral $\\int\\limits _{0}^{π}|\\sin 2x|dx$ is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\text{Let}I=\\int\\limits _{0}^{π}|\\sin 2x|dx \\\\  \\\\ =2\\int\\limits _{0}^{π/2}|\\sin 2x|dx[\\because \\sin 2x\\text{is periodic function}] \\\\  \\\\ =2\\int\\limits _{0}^{π/2}\\sin 2xdx[\\sin 2x\\text{is positive in range}(0,π/2)] \\\\  \\\\ =2\\left [\\dfrac{-\\cos 2x}{2}\\right ]_{0}^{π/2} \\\\  \\\\ =-[\\cos π-\\cos 0]=-(-1-1)=2 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-Eqw2IGWk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of solutions of the equation $\\log _{4}(x$ $-$ $1) = \\log _{2}(x$ $-$ 3) is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "logarithm"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\log _{4}(x-1)=\\log _{2}(x-3)$\n\n$\\Rightarrow \\frac{1}{2}\\log _{2}(x-1)=\\log _{2}(x-3)$\n\n$\\Rightarrow \\log _{2}(x-1)^{1/2}=\\log _{2}(x-3)$\n\n$\\Rightarrow (x-1)^{1/2}=x-3$\n\n$\\Rightarrow x-1=x^{2}+9-6x$\n\n$\\Rightarrow x^{2}-7x+10=0$\n\n$\\Rightarrow (x-2)(x-5)=0$\n\n$\\Rightarrow x=2,5$\n\nBut x $\\neq$ 2 because it is not satisfying the domain of given equation $i.e. \\log _{2}(x$ $-$ 3) $\\to$ its domain x > 3\n\nfinally x is 5\n\n$\\therefore$ No. of solutions = 1.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-2aAWMYAQ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The sum of $162^{th}$ power of the roots of the equation $x^{3}$ $-$ $2x^{2} + 2x$ $-$ 1 = 0 is $________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x^{3}$ $-$ $2x^{2} + 2x$ $-$ 1 = 0\n\nx = 1 satisfying the equation\n\n$\\therefore$ x $-$ 1 is factor of \n\n$x^{3}$ $-$ $2x^{2} + 2x$ $-$ 1\n\n= (x $-$ $1) (x^{2}$ $-$ x + 1) = 0\n\nx = 1, $\\frac{1+i\\sqrt{3}}{2},\\frac{1-i\\sqrt{3}}{2}$\n\nx = 1, $-$ $ω^{2}$, $-ω$\n\nSum of $162^{th}$ power of roots\n\n$= (1)^{162} + (-ω^{2})^{162} + (-ω)^{162}$\n\n= 1 + ($ω)^{324} + (ω)^{162}$\n\n= 1 + 1 + 1 = 3",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-YTNLpgdL",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The area bounded by the curve y = || x $-$ 1 | $-$ 2 | and the line y = 2 is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Question is incomplete it should be area bounded\nby y = || x $-$ 1 | $-$ 2 | and y = 2.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-4Alko7gV",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The difference between degree and order of a differential equation that represents the family of curves given by $y^{2}=a\\left (x+\\frac{\\sqrt{a}}{2}\\right )$, a > 0 is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$y^{2}=a\\left (x+\\frac{\\sqrt{a}}{2}\\right )$\n\nDifferentiating both sides, we get\n\n$2yy^{'}=a$\n\n$y^{2}=2yy^{'}\\left (x+\\frac{\\sqrt{2yy^{'}}}{2}\\right )$\n\n$y=2y^{'}\\left (x+\\frac{\\sqrt{yy^{'}}}{\\sqrt{2}}\\right )$\n\n$y-2xy^{'}=\\sqrt{2}y^{'}\\sqrt{yy^{'}}$\n\n$\\left (y-2x\\frac{dy}{dx}\\right )^{2}=2y\\left (\\frac{dy}{dx}\\right )^{3}$\n\nD = 3 & O = 1\n\n$\\therefore$ D $-$ O = 3 $-$ 1 = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-pUtaxcN4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If y = y(x) is the solution of the equation \n\n$e^{\\sin y}\\cos y\\frac{dy}{dx}+e^{\\sin y}\\cos x=\\cos x$, y(0) = 0; then \n\n$1+y\\left (\\frac{π}{6}\\right )+\\frac{\\sqrt{3}}{2}y\\left (\\frac{π}{3}\\right )+\\frac{1}{\\sqrt{2}}y\\left (\\frac{π}{4}\\right )$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$e^{\\sin  y} \\cos  y\\frac{dy}{dx}$ $+ e^{\\sin  y} \\cos  x = \\cos  x$\n\nPut $e^{\\sin  y} = t$\n\n$e^{\\sin  y}$ $\\times$ cos y$\\frac{dy}{dx}$ = $\\frac{dt}{dx}$\n\n$\\Rightarrow$ $\\frac{dt}{dx}$ + t cos x = cos x\n\nI. F. = $e^{\\int \\cos xdx}=e^{\\sin x}$\n\nSolution of differential equation :\n\n$t.e^{\\sin x}=\\int e^{\\sin x}.\\cos xdx$\n\n$e^{\\sin y}.e^{\\sin x}=e^{\\sin x}+c$\n\nat x = 0, y = 0\n\n1 = 1 + c $\\Rightarrow$ c = 0\n\n$\\therefore$ $e^{\\sin  x + \\sin  y} = e^{\\sin  x}$\n\n$\\Rightarrow$ sin x + sin y = sin x\n\n$\\Rightarrow$ sin y = 0 $\\Rightarrow$ y = 0\n\n$\\Rightarrow y\\left (\\frac{π}{6}\\right )=0,y\\left (\\frac{π}{3}\\right )=0,y\\left (\\frac{π}{4}\\right )=0$\n\n$\\therefore$ $1+y\\left (\\frac{π}{6}\\right )+\\frac{\\sqrt{3}}{2}y\\left (\\frac{π}{3}\\right )+\\frac{1}{\\sqrt{2}}y\\left (\\frac{π}{4}\\right )$\n\n= 1 + 0 + 0 + 0 = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-x224fLDp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of integral values of 'k' for which the equation $3\\sin x+4\\cos x=k+1$ has a solution, k$\\in$R is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 11.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 26th February Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We know,\n\n$-\\sqrt{a^{2}+b^{2}}\\leq a\\cos x+b\\sin x\\leq \\sqrt{a^{2}+b^{2}}$\n\n$\\therefore$ $-\\sqrt{3^{2}+4^{2}}\\leq 3\\cos x+4\\sin x\\leq \\sqrt{3^{2}+4^{2}}$\n\n$-5\\leq k+1\\leq 5$\n\n$-6\\leq k\\leq 4$\n\n$\\therefore$ Set of integers = $-6,-5,-4,-3,-2,-1,0,1,2,3,4$ = Total 11 intergers.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 26th February Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

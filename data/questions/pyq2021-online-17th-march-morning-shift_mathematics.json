@@ -1,0 +1,827 @@
+[
+ {
+  "publicId": "PYQ-2021-2l8AfZuR",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In a triangle PQR, the co-ordinates of the points P and Q are ($-$2, 4) and (4, $-$2) respectively. If the equation of the perpendicular bisector of PR is 2x $-$ y + 2 = 0, then the centre of the circumcircle of the $\\Delta$PQR is :",
+  "options": [
+   "($-$1, 0)",
+   "(1, 4)",
+   "(0, 2)",
+   "($-$2, $-$2)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Mid point of $PQ\\equiv \\left (\\frac{-2+4}{2},\\frac{4-2}{2}\\right )\\equiv (1,1)$\n\nSlope of $PQ=\\frac{4+2}{-2-4}=-1$\n\nSlope of perpendicular bisector of PQ = 1\n\nEquation of perpendicular bisector of PQ \n\n$y-1=1(x-1)$\n\n$\\Rightarrow y=x$\n\nSolving with perpendicular bisector of PR,\n\n2x $-$ y + 2 = 0\n\nCircumcentre is ($-$2, $-$2)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-owmdXqRf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of \n$\\lim _{x\\to 0^{+}}\\frac{\\cos ^{-1}(x-[x]^{2}).\\sin ^{-1}(x-[x]^{2})}{x-x^{3}}$, where [ x ] denotes the greatest integer $\\leq$ x is :",
+  "options": [
+   "$π$",
+   "$\\frac{π}{4}$",
+   "$\\frac{π}{2}$",
+   "0"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 0^{+}}\\frac{\\cos ^{-1}\\left (x-[x]^{2}\\right ).\\sin ^{-1}\\left (x-[x]^{2}\\right )}{x-x^{3}}$\n\n$=\\lim _{x\\to 0^{+}}\\frac{\\cos ^{-1}x}{1-x^{2}}.\\frac{\\sin ^{-1}x}{x}$\n\n$=\\cos ^{-1}0=\\frac{π}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-o4pjeaV1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Which of the following statements is correct for the function g($α$) for $α$ $\\in$ R such that \n\n$g(α)=\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{3}}\\frac{\\sin ^{α}x}{\\cos ^{α}x+\\sin ^{α}x}dx$",
+  "options": [
+   "$g(α)$ is a strictly increasing function",
+   "$g(α)$ is an even function",
+   "$g(α)$ has an inflection point at $α$ = $-\\frac{1}{2}$",
+   "$g(α)$ is a strictly decreasing function"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$g(α)=\\int\\limits _{π/6}^{π/3}\\frac{\\sin ^{α}\\left (\\frac{π}{2}-x\\right )}{\\cos ^{α}\\left (\\frac{π}{2}-x\\right )+\\sin ^{α}\\left (\\frac{π}{2}-x\\right )}dx$\n\n$=\\int\\limits _{π/6}^{π/3}\\frac{\\cos ^{α}x}{\\sin ^{α}x+\\cos ^{α}x}dx$\n\n$\\therefore$ $2.g(α)=\\int\\limits _{π/6}^{π/3}\\frac{\\sin ^{α}x+\\cos ^{α}x}{\\sin ^{α}x+\\cos ^{α}x}dx=\\int\\limits _{π/6}^{π/3}dx=\\frac{π}{3}-\\frac{π}{6}=\\frac{π}{6}$\n\n$\\Rightarrow$ $g(α)=\\frac{π}{12}$ i.e. a constant function hence an even function.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-LuPXuk1H",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Which of the following is true for y(x) that satisfies the differential equation \n\n$\\frac{dy}{dx}$ = xy $-$ 1 + x $-$ y; y(0) = 0 :",
+  "options": [
+   "y(1) = 1",
+   "$y(1) = e^{-$\\frac{1}{2}} $-$ 1",
+   "$y(1) = e^{$\\frac{1}{2}} $-$ $e^{-$\\frac{1}{2}}",
+   "$y(1) = e^{$\\frac{1}{2}} $-$ 1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}=(x-1)y+(x-1)$\n\n$\\frac{dy}{dx}=(x-1)(y+1)$\n\n$\\frac{dy}{y+1}=(x-1)dx$\n\nIntegrating both sides, we get\n\n$\\ln (y+1)=\\frac{x^{2}}{2}-x+c$\n\n$x=0,y=0$\n\n$\\Rightarrow c=0$\n\n$\\therefore$ $\\ln (y+1)=\\frac{x^{2}}{2}-x$\n\nputting $x=1,\\ln (y+1)=\\frac{1}{2}-1=-\\frac{1}{2}$\n\n$y+1=e^{-\\frac{1}{2}}$\n\n$y=e^{-\\frac{1}{2}}-1$\n\n$\\therefore$ $y(1)=e^{-\\frac{1}{2}}-1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1nIy9Pld",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The sum of possible values of x for \n\n$\\tan ^{-1}(x + 1) + \\cot ^{-1}\\left (\\frac{1}{x-1}\\right )$ $= \\tan ^{-1}\\left (\\frac{8}{31}\\right )$ is :",
+  "options": [
+   "$-\\frac{32}{4}$",
+   "$-\\frac{33}{4}$",
+   "$-\\frac{31}{4}$",
+   "$-\\frac{30}{4}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The term $\\cot ^{-1}\\dfrac{1}{x-1}$ needs $x\\neq 1$, and $\\tan ^{-1}\\dfrac{8}{31}<\\dfrac{π}{4}$.\n\nFor $x>1$: $\\cot ^{-1}\\dfrac{1}{x-1}=\\tan ^{-1}(x-1)>0$ and $\\tan ^{-1}(x+1)>\\tan ^{-1}2>\\dfrac{π}{4}$, so the left side exceeds the right side and there is no solution.\n\nFor $x<1$: $\\dfrac{1}{x-1}<0$, so $\\cot ^{-1}\\dfrac{1}{x-1}=π+\\tan ^{-1}(x-1)$ and the equation becomes\n\n$\\tan ^{-1}(x+1)+\\tan ^{-1}(x-1)=\\tan ^{-1}\\frac{8}{31}-π.$\n\nThe right side lies in $\\left (-π,-\\dfrac{π}{2}\\right )$, which requires $x+1<0$, $x-1<0$ and $(x+1)(x-1)>1$, that is $x<-1$ and $x^{2}>2$.\n\nTaking the tangent of both sides:\n\n$\\frac{(x+1)+(x-1)}{1-(x^{2}-1)}=\\frac{8}{31}\\Rightarrow \\frac{2x}{2-x^{2}}=\\frac{8}{31}\\Rightarrow 4x^{2}+31x-8=0\\Rightarrow (x+8)(4x-1)=0.$\n\nOnly $x=-8$ satisfies $x<-1$, $x^{2}>2$; indeed $\\tan ^{-1}(-7)+\\tan ^{-1}(-9)=-π+\\tan ^{-1}\\dfrac{-16}{1-63}=\\tan ^{-1}\\dfrac{8}{31}-π$.\n\nAt $x=\\dfrac{1}{4}$ the left side is $\\tan ^{-1}\\dfrac{5}{4}+π-\\tan ^{-1}\\dfrac{3}{4}>π$, so $x=\\dfrac{1}{4}$ is not a solution.\n\nThe sum of the possible values is $-8=-\\dfrac{32}{4}$.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-5gwO0y8V",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $4+\\frac{1}{5+\\frac{1}{4+\\dfrac{1}{5+\\dfrac{1}{4+......\\infty }}}}$ is :",
+  "options": [
+   "2 + $\\frac{2}{5}\\sqrt{30}$",
+   "2 + $\\frac{4}{\\sqrt{5}}\\sqrt{30}$",
+   "5 + $\\frac{2}{5}\\sqrt{30}$",
+   "4  + $\\frac{4}{\\sqrt{5}}\\sqrt{30}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$y=4+\\frac{1}{5+\\frac{1}{y}}$\n\n$\\Rightarrow y=4+\\frac{y}{5y+1}$\n\n$\\Rightarrow 5y^{2}-20y-4=0$\n\n$\\Rightarrow y=\\frac{20\\pm \\sqrt{400+80}}{10}$\n\n$\\Rightarrow y=\\frac{20\\pm 4\\sqrt{30}}{10},y>0$\n\n$\\therefore$ $y=\\frac{10+2\\sqrt{30}}{5}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-3KiVygqD",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The inverse of $y=5^{\\log x}$ is :",
+  "options": [
+   "$x=5^{\\log y}$",
+   "$x=y^{\\frac{1}{\\log 5}}$",
+   "$x=5^{\\frac{1}{\\log y}}$",
+   "$x=y^{\\log 5}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$y=5^{\\log x}$\n\n$\\Rightarrow \\log y=\\log x.\\log 5$\n\n$\\Rightarrow \\log x=\\frac{\\log y}{\\log 5}=\\log _{5}y$\n\n$\\Rightarrow x=e^{\\log _{5}y}$\n\n$\\Rightarrow x=y^{\\log _{5}e}$\n\n$\\Rightarrow x=y^{\\frac{1}{\\log 5}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-sgzSQk4k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two dies are rolled. If both dices have six faces numbered 1, 2, 3, 5, 7 and 11, then the probability that the sum of the numbers on the top faces is less than or equal to 8 is :",
+  "options": [
+   "$\\frac{4}{9}$",
+   "$\\frac{1}{2}$",
+   "$\\frac{5}{12}$",
+   "$\\frac{17}{36}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "n(S) = 36\n\npossible ordered pair :\n\n (1, 1), (1, 2), (1, 3), (1, 5), (1, 7), \n(2, 1), (2, 2), (2, 3), (2, 5), \n(3, 1), (3, 2), (3, 3), (3, 5), \n(5, 1), (5, 2), (5, 3), \n(7, 1)\n\nNumber of favourable outcomes = 17\n\nProbability = $\\frac{17}{36}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-H3IeTt4K",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the fourth term in the expansion of $(x+x^{\\log _{2}x})^{7}$ is 4480, then the value of x where x$\\in$N is equal to :",
+  "options": [
+   "3",
+   "1",
+   "4",
+   "2"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T_{4} =$ ${}^{7}C_{3}x^{4}(x^{\\log _{2}x})^{3}=4480$\n\n$\\Rightarrow 35x^{4}(x^{\\log _{2}x})^{3}=4480$\n\n$\\Rightarrow x^{4}(x^{\\log _{2}x})^{3}=128$\n\ntake log w.r.t. base 2 we get,\n\n$4\\log _{2}x+3\\log _{2}(x^{\\log _{2}x})=\\log _{2}128$\n\nLet $\\log _{2}x=y$\n\n$4y+3y^{2}=7$\n\n$\\Rightarrow y=1,\\frac{-7}{3}$\n\n$\\Rightarrow \\log _{2}x=1,\\frac{-7}{3}$\n\n$\\Rightarrow$ $x=2,x=2^{-7/3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-cauxZPLY",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The system of equations kx + y + z = 1, x + ky + z = k and $x + y + zk = k^{2}$ has no solution if k is equal to :",
+  "options": [
+   "0",
+   "$-$1",
+   "$-$2",
+   "1"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$D=\\left |\\begin{array}{lll} k & 1 & 1 \\\\ 1 & k & 1 \\\\ 1 & 1 & k \\end{array}\\right |=0$\n\n$\\Rightarrow k(k^{2}-1)-(k-1)+(1-k)=0$\n\n$\\Rightarrow (k-1)(k^{2}+k-1-1)=0$\n\n$\\Rightarrow (k-1)(k^{2}+k-2)=0$\n\n$\\Rightarrow (k-1)(k-1)(k+2)=0$\n\n$\\Rightarrow k=1,k=-2$\n\nfor k = 1 equation identical so k = $-$2 for no solution.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-XyHNmjyU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In a school, there are three types of games to be played. Some of the students play two types of games, but none play all the three games. Which Venn diagrams can justify the above statement?\n\n\n[IMG]",
+  "options": [
+   "Q and R",
+   "None of these",
+   "P and R",
+   "P and Q"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "As none play all three games the intersection of all\nthree circles must be zero.\n\nHence none of P, Q, R justify the given statement",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-17th-march-morning-shift/XyHNmjyUgZXbsPIFQb1kmjb97ia-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 17th March Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-j9QMKExB",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\cot ^{-1}(α) = \\cot ^{-1} 2 + \\cot ^{-1} 8 + \\cot ^{-1} 18 + \\cot ^{-1} 32 +$ ...... upto 100 terms, then $α$ is :",
+  "options": [
+   "1.02",
+   "1.03",
+   "1.01",
+   "1.00"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cot ^{-1}(α)=\\cot ^{-1}2+\\cot ^{-1}8+\\cot ^{-1}18+\\cot ^{-1}32+....100$ terms\n\n$=\\tan ^{-1}\\frac{1}{2}+\\tan ^{-1}\\frac{1}{8}+\\tan ^{-1}\\frac{1}{18}+\\tan ^{-1}\\frac{1}{32}+....100$ term\n\n$=\\sum\\limits _{k=1}^{100}\\tan ^{-1}\\frac{1}{2k^{2}}$\n\n$=\\sum\\limits _{k=1}^{100}\\tan ^{-1}\\frac{2}{4k^{2}}=\\sum\\limits _{k=1}^{100}\\tan ^{-1}\\frac{(2k+1)-(2k-1)}{1+(2k-1)(2k+1)}$\n\n$=\\sum\\limits _{k=1}^{100}\\left (\\tan ^{-1}(2k+1)-\\tan ^{-1}(2k-1)\\right )$\n\n$=\\tan ^{-1}201-\\tan ^{-1}1$\n\n$=\\tan ^{-1}\\frac{200}{202}$\n\n$=\\cot ^{-1}(1.01)$\n\nHence $α=1.01$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-FlAz2Hmd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Team 'A' consists of 7 boys and n girls and Team 'B' has 4 boys and 6 girls. If a total of 52 single matches can be arranged between these two teams when a boy plays against a boy and a girl plays against a girl, then n is equal to :",
+  "options": [
+   "5",
+   "2",
+   "4",
+   "6"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Total matches between boys of both team = ${}^{7}C_{1}\\times {}^{4}C_{1}=28$\n\nTotal matches between girls of both team = ${}^{n}C_{1}{}^{6}C_{1}=6n$\n\nNow, 28 + 6n = 52\n\n$\\Rightarrow$ n = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-Y5JJ3LyD",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area of the triangle with vertices A(z), B(iz) and C(z + iz) is :",
+  "options": [
+   "1",
+   "$\\frac{1}{2}| z |^{2}$",
+   "$\\frac{1}{2}| z + iz |^{2}$",
+   "$\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nEach side length = |z|\n\nArea of $\\Delta$ = $\\frac{1}{2}$ (area of square)\n\n= $\\frac{1}{2}|z|^{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-17th-march-morning-shift/Y5JJ3LyDE1P4FfE39O1kmjbgw76-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 17th March Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-5UlwtPdm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $(2021)^{3762}$ is divided by 17, then the remainder is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "2021 = 17m - 2\n\n$(2021)^{3762} = (17m$ $-$ $2)^{3762} =$ multiple of $17 + 2^{3762}$\n\n= 17$λ$ $+ 2^{2} (2^{4})^{940}$\n\n= 17$λ$ + 4 (17 $-$ $1)^{940}$\n\n= 17$λ$ + 4 (17$μ$ + 1)\n\n= 17k + 4; (k $\\in$ I)\n\n$\\therefore$ Remainder = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-VDtLlmJE",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let there be three independent events $E_{1}, E_{2}$ and $E_{3}$. The probability that only $E_{1}$ occurs is $α$, only $E_{2}$ occurs is $β$ and only $E_{3}$ occurs is $γ$. Let 'p' denote the probability of none of events occurs that satisfies the equations \n($α$ $-$ 2$β$)p = $αβ$ and ($β$ $-$ 3$γ$)p = 2$βγ$. All the given probabilities are assumed to lie in the interval (0, 1).\n\nThen, $\\frac{ProbabilityofoccurrenceofE_{1}}{ProbabilityofoccurrenceofE_{3}}$ is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $P(E_{1}) = x, P(E_{2}) = y$ and $P(E_{3}) = z$\n\n$α$ = P$\\left (E_{1}\\cap E–_{2}\\cap E–_{3}\\right )$ = $P(E_{1}).P\\left (E–_{2}\\right ).P\\left (E–_{3}\\right )$\n\n$\\Rightarrow$ $α$ = x(1 $-$ y) (1 $-$ z)  ......(i)\n\nSimilarly\n\nβ = (1 – x).y(1 – z) ...(ii)\n\n$γ$ = (1 – x)(1 – y).z ...(iii)\n\np = (1 – x)(1 – y)(1 – z) ...(iv)\n\nFrom (i) and (iv)\n\n$\\frac{x}{1-x}=\\frac{α}{p}$\n\n$\\Rightarrow$ x = $\\frac{α}{α+p}$\n\nFrom (iii) and (iv)\n\n$\\frac{z}{1-z}=\\frac{γ}{p}$\n\n$\\Rightarrow$ z = $\\frac{γ}{γ+p}$\n\n$\\therefore$ $\\frac{P(E_{1})}{P(E_{3})}=\\frac{x}{z}=\\frac{\\frac{α}{α+p}}{\\frac{γ}{γ+p}}$ $=\\frac{\\frac{γ+p}{γ}}{\\frac{α+p}{α}}=\\frac{1+\\frac{p}{γ}}{1+\\frac{p}{α}}$ ..(v)\n\nAlso given,\n\n($α$ $-$ 2$β$)p = $αβ$ $\\Rightarrow$ $α$p = ($α$ + 2p)$β$ ....(vi)\n\n$β$ $-$ 3$γ$)p = 2$βγ$ $\\Rightarrow$ 3$γ$p = (p - 2$γ$)$β$ .....(vii)\n\nFrom (vi) and (vii),\n\n$\\frac{α}{3γ}=\\frac{α+2p}{p-2γ}$\n\n$\\Rightarrow$ p$α$ - 6p$γ$ = 5$γα$\n\n$\\Rightarrow$ $\\frac{p}{γ}-\\frac{6p}{α}=5$\n\n$\\Rightarrow$ $\\frac{p}{γ}+1=6\\left (\\frac{p}{α}+1\\right )$ ....(viii)\n\nNow from (v) and (viii),\n\n$\\frac{P(E_{1})}{P(E_{3})}$ = 6",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-9CTLjZBJ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The maximum value of z in the following equation $z = 6xy + y^{2}$, where 3x + 4y $\\leq$ 100 and 4x + 3y $\\leq$ 75 for x $\\geq$ 0 and y $\\geq$ 0 is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 904.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n3x + 4y $\\leq$ 100\n\n4x + 3y $\\leq$ 75\n\nx $\\geq$ 0, y $\\geq$ 0\n\nFeasible region is shown in the graph\n\nLet maximum value of $6xy + y^{2} = c$\n\nFor a solution with feasible region,\n\n$6xy + y^{2} = c$ and 4x + 3y = 75 must have at least one positive solution.\n\n$y^{2}+6y\\left (\\frac{75-3y}{4}\\right )-c=0$\n\n$\\Rightarrow \\frac{7}{2}y^{2}-\\frac{225}{2}y+c=0$\n\n$\\Rightarrow \\left (\\frac{225}{2}\\right )^{2}\\geq 4.\\frac{7}{2}.c$\n\n$\\Rightarrow c\\leq \\frac{225^{2}}{56}\\approx 904$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-17th-march-morning-shift/9CTLjZBJ0UzByUARrD1kmjbnx0l-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 17th March Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-AZS5ox5P",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If [ . ] represents the greatest integer function, then the value of \n\n$\\left |\\int\\limits _{0}^{\\sqrt{\\frac{π}{2}}}\\left [[x^{2}]-\\cos x\\right ]dx\\right |$ is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{0}^{\\sqrt{\\frac{π}{2}}}\\left [[x^{2}]-\\cos x\\right ]dx$\n\n$=\\int\\limits _{0}^{1}[-\\cos x]dx+\\int\\limits _{1}^{\\sqrt{\\frac{π}{2}}}[1-\\cos x]dx$\n\n= $\\int\\limits _{0}^{1}[-\\cos x]dx+\\int\\limits _{1}^{\\sqrt{\\frac{π}{2}}}1dx+\\int\\limits _{1}^{\\sqrt{\\frac{π}{2}}}[-\\cos x]dx$\n\nWhen 0 $\\leq$ x $\\leq$ 1 then -1 $\\leq$ -cosx $\\leq$ 0\n\n$\\therefore$ $[-\\cos x]$ = -1\n\nWhen 1 $\\leq$ x $\\leq$ $\\sqrt{\\frac{π}{2}}$ = 1.24 then -0.33 $\\leq$ -cosx $\\leq$ 0\n\n$\\therefore$ $[-\\cos x]$ = -1 (Integer value present in the left side of -0.33)\n\n$=-\\int\\limits _{0}^{1}dx+\\int\\limits _{1}^{\\sqrt{\\frac{π}{2}}}dx-\\int\\limits _{1}^{\\sqrt{\\frac{π}{2}}}dx$\n\n$=-(x)_{0}^{1}=-1$\n\n$\\therefore$ $\\left |\\int\\limits _{0}^{\\sqrt{\\frac{π}{2}}}\\left [[x^{2}]-\\cos x\\right ]dx\\right |$ = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-D1eT2RJT",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $f(x)=\\sin \\left (\\cos ^{-1}\\left (\\frac{1-2^{2x}}{1+2^{2x}}\\right )\\right )$ and its first derivative with respect to x is $-\\frac{b}{a}\\log _{e}2$ when x = 1, where a and b are integers, then the minimum value of $| a^{2}$ $-$ $b^{2} |$ is $____________$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 481.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\sin \\cos ^{-1}\\left (\\frac{1-(2^{x})^{2}}{1+(2^{x})^{2}}\\right )$\n\n$=\\sin (2\\tan ^{-1}2^{x})$\n\n$f^{'}(x)=\\cos (2\\tan ^{-1}2^{x}).2.\\frac{1}{1+(2^{x})^{2}}\\times 2^{x}.\\log _{e}2$\n\n$\\therefore$ $f^{'}(1)=\\cos (2\\tan ^{-1}2).\\frac{2}{1+4}\\times 2\\times \\log _{e}2$\n\n$\\Rightarrow f^{'}(1)=\\cos \\cos ^{-1}\\left (\\frac{1-2^{2}}{1+2^{2}}\\right ).\\frac{4}{5}\\log _{e}2$\n\n$=-\\frac{12}{25}\\log _{e}2$\n\n$\\Rightarrow a=25,b=12$\n\n$|a^{2}-b^{2}|=|625-144|=481$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-IiJVI2bm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the function $f(x)=\\frac{\\cos (\\sin x)-\\cos x}{x^{4}}$ is continuous at each point in its domain and $f(0)=\\frac{1}{k}$, then k is $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 0}f(x)=\\lim _{x\\to 0}\\frac{\\cos (\\sin x)-\\cos x}{x^{4}}$\n\n$\\Rightarrow$ $\\frac{1}{k}=\\lim _{x\\to 0}\\frac{2\\sin \\left (\\frac{\\sin x+x}{2}\\right )\\sin \\left (\\frac{x-\\sin x}{2}\\right )}{x^{4}}$\n\n= $\\lim _{x\\to 0}\\frac{2\\sin \\left (\\frac{x+\\sin x}{2}\\right )}{\\left (\\frac{x+\\sin x}{2}\\right )}\\times \\frac{\\sin \\left (\\frac{x-\\sin x}{2}\\right )}{\\left (\\frac{x-\\sin x}{2}\\right )}\\times \\frac{x^{2}-\\sin ^{2}x}{4x^{4}}$\n\n= $\\lim _{x\\to 0}2\\times 1\\times \\left (\\frac{x+\\sin x}{x}\\right )\\left (\\frac{x-\\sin x}{x^{3}}\\right )\\times \\frac{1}{4}$\n\n= $\\lim _{x\\to 0}2\\times 1\\times \\left (\\frac{1+\\cos x}{1}\\right )\\left (\\frac{1-\\cos x}{3x^{2}}\\right )\\times \\frac{1}{4}$\n\n= $\\lim _{x\\to 0}2\\times 1\\times \\left (\\frac{1+1}{1}\\right )\\left (\\frac{1-\\cos x}{3x^{2}}\\right )\\times \\frac{1}{4}$\n\n= $\\lim _{x\\to 0}2\\times 1\\times \\left (\\frac{1+1}{1}\\right )\\left (\\frac{1+\\sin x}{6x}\\right )\\times \\frac{1}{4}$\n\n= $2\\times 2\\times \\frac{1}{6}\\times \\frac{1}{4}$ = $\\frac{1}{6}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

@@ -81,7 +81,8 @@ def main():
             for im in imgs:
                 n_images += 1
                 url = im.get("url", "")
-                path = url.lstrip("/")
+                # URLs are root-relative (/pyq/...); files live in public/pyq/...
+                path = os.path.join("public", url.lstrip("/"))
                 check(f"{qid} img exists", os.path.exists(path) and os.path.getsize(path) > 100, path)
                 check(f"{qid} img altText", bool(im.get("altText")), "")
                 check(f"{qid} img original", im.get("isOriginalExamImage") is True, "")

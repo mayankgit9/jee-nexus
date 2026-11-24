@@ -125,6 +125,7 @@ CH_MAP = {
     "straight-lines": "mathematics:coordinate-geometry",
     "straight-line": "mathematics:coordinate-geometry",
     "straight-lines-and-pair-of-straight-lines": "mathematics:coordinate-geometry",
+    "salt-analysis": "chemistry:salt-analysis",
     "pair-of-straight-lines": "mathematics:coordinate-geometry",
     "point-and-straight-line": "mathematics:coordinate-geometry",
     "circle": "mathematics:circles",

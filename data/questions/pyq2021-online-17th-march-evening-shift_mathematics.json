@@ -1,0 +1,848 @@
+[
+ {
+  "publicId": "PYQ-2021-uTYPsLQs",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the sides AB, BC and CA of a triangle ABC have 3, 5 and 6 interior points respectively, then the total number of triangles that can be constructed using these points as vertices, is equal to :",
+  "options": [
+   "240",
+   "360",
+   "333",
+   "364"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nTotal number of triangles\n\n= ${}^{14}C_{3}-{}^{3}C_{3}-{}^{5}C_{3}-{}^{6}C_{3}$\n\n= 364 – 31 = 333",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-17th-march-evening-shift/uTYPsLQsZvZrwoOMNL1kmkl4mb8-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 17th March Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-2X5uWEUa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a computer program generate only the digits 0 and 1 to form a string of binary numbers with probability of occurrence of 0 at even places be $\\frac{1}{2}$ and probability of occurrence of 0 at the odd place be $\\frac{1}{3}$. Then the probability that '10' is followed by '01' is equal to :",
+  "options": [
+   "$\\frac{1}{18}$",
+   "$\\frac{1}{3}$",
+   "$\\frac{1}{9}$",
+   "$\\frac{1}{6}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "P(0 at even place) = $\\frac{1}{2}$\n\nP(0 at odd place) = $\\frac{1}{3}$\n\n P(1 at even place) = $\\frac{1}{2}$\n\nP(1 at odd place) = $\\frac{2}{3}$\n\nP(10 is followed by 01)\n\n= $\\left (\\frac{2}{3}\\times \\frac{1}{2}\\times \\frac{1}{3}\\times \\frac{1}{2}\\right )+\\left (\\frac{1}{2}\\times \\frac{1}{3}\\times \\frac{1}{2}\\times \\frac{2}{3}\\right )$\n\n= $\\frac{1}{18}+\\frac{1}{18}$\n\n= $\\frac{1}{9}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-Mf5aP7id",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : R $\\to$ R be defined as $f(x) = e^{-x}$sinx. If F : [0, 1] $\\to$ R is a differentiable function with that F(x) = $\\int\\limits _{0}^{x}f(t)dt$, then the value of $\\int\\limits _{0}^{1}(F^{'}(x)+f(x))e^{x}dx$ lies in the interval",
+  "options": [
+   "$\\left [\\frac{331}{360},\\frac{334}{360}\\right ]$",
+   "$\\left [\\frac{330}{360},\\frac{331}{360}\\right ]$",
+   "$\\left [\\frac{335}{360},\\frac{336}{360}\\right ]$",
+   "$\\left [\\frac{327}{360},\\frac{329}{360}\\right ]$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "F(x) = $\\int\\limits _{0}^{x}f(t)dt$\n\n$\\Rightarrow$ F'(x) = f(x) by Leibnitz theorem\n\nI = $\\int\\limits _{0}^{1}(F^{'}(x)+f(x))e^{x}dx=\\int\\limits _{0}^{1}2f(x)e^{x}dx$\n\n$I=\\int\\limits _{0}^{1}2\\sin xdx$\n\n$I=2(1-\\cos 1)$\n\n$=2\\left \\{1-\\left (1-\\frac{1^{2}}{2!}+\\frac{1^{4}}{4!}-\\frac{1}{6!}+...\\right )\\right \\}$\n\n$=2\\left \\{1-\\left (1-\\frac{1}{2}+\\frac{1}{24}\\right )\\right \\}<2(1-\\cos 1)<2\\left \\{1-\\left (1-\\frac{1}{2}+\\frac{1}{24}-\\frac{1}{720}\\right )\\right \\}$\n\n$\\frac{330}{360}<2(1-\\cos 1)<\\frac{331}{360}$\n\n$\\frac{330}{360}<1<\\frac{331}{360}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-tYCQViOY",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $S_{1}, S_{2}$ and $S_{3}$ be three sets defined as\n\n$S_{1} = {z\\in$C : |z $-$ 1| $\\leq$ $\\sqrt{2}$}\n\n$S_{2} = {z\\in$C : Re((1 $-$ i)z) $\\geq$ 1}\n\n$S_{3} = {z\\in$C : Im(z) $\\leq$ 1}\n\nThen the set $S_{1}$ $\\cap$ $S_{2}$ $\\cap$ $S_{3}$ :",
+  "options": [
+   "has exactly three elements",
+   "is a singleton",
+   "has infinitely many elements",
+   "has exactly two elements"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let, z = x + iy\n\n\n[IMG]\n\n\n$S_{1}$ $\\equiv$ (x $-$ $1)^{2} + y^{2}$ $\\leq$ 2 ..... (1)\n\n$S_{2}$ $\\equiv$ x + y $\\geq$ 1 ..... (2)\n\n$S_{3}$ $\\equiv$ y $\\leq$ 1 .... (3)\n\n$\\Rightarrow$ $S_{1}$ $\\cap$ $S_{2}$ $\\cap$ $S_{3}$ has infinitely many elements.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-17th-march-evening-shift/tYCQViOYWriDal2fUG1kmklebtf-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 17th March Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-y6Fc34Vq",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of solutions of the equation \n\n$\\sin ^{-1}\\left [x^{2}+\\frac{1}{3}\\right ]+\\cos ^{-1}\\left [x^{2}-\\frac{2}{3}\\right ]=x^{2}$, for x$\\in$[$-$1, 1], and [x] denotes the greatest integer less than or equal to x, is :",
+  "options": [
+   "0",
+   "Infinite",
+   "2",
+   "4"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "There are three cases possible for $x\\in [-1,1]$\n\nCase I : $x\\in \\left [-1,-\\sqrt{\\frac{2}{3}}\\right )$\n\n$\\therefore$ $\\sin ^{-1}(1)+\\cos ^{-1}(0)=x^{2}$\n\n$\\Rightarrow x^{2}=\\frac{π}{2}+\\frac{π}{2}=π$\n\n$\\Rightarrow x=\\pm \\sqrt{π}$ $\\to$ (Reject)\n\nCase II : $x\\in \\left (-\\sqrt{\\frac{2}{3}},\\sqrt{\\frac{2}{3}}\\right )$\n\n$\\therefore$ $\\sin ^{-1}(0)+\\cos ^{-1}(-1)=x^{2}$\n\n$\\Rightarrow 0+π=x^{2}$\n\n$\\Rightarrow x=\\pm \\sqrt{π}$ $\\to$ (Reject)\n\nCase III : $x\\in \\left (\\sqrt{\\frac{2}{3}},1\\right )$\n\n$\\therefore$ $\\sin ^{-1}(1)+\\cos ^{-1}(0)=x^{2}$\n\n$\\Rightarrow x^{2}=π\\Rightarrow x=\\pm \\sqrt{π}$ (Reject)\n\n$\\therefore$ No solution. Therefore, the correct answer is (1).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-zgBCh2wa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the curve y = y(x) is the solution of the differential equation\n\n $2(x^{2}+x^{5/4})dy-y(x+x^{1/4})dx=2x^{9/4}dx$, x > 0 which \n\npasses through the point $\\left (1,1-\\frac{4}{3}\\log _{e}2\\right )$, then the value of y(16) is equal to :",
+  "options": [
+   "$4\\left (\\frac{31}{3}-\\frac{8}{3}\\log _{e}3\\right )$",
+   "$\\left (\\frac{31}{3}-\\frac{8}{3}\\log _{e}3\\right )$",
+   "$\\left (\\frac{31}{3}+\\frac{8}{3}\\log _{e}3\\right )$",
+   "$4\\left (\\frac{31}{3}+\\frac{8}{3}\\log _{e}3\\right )$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dy}{dx}-\\frac{y}{2x}=\\frac{x^{9/4}}{x^{5/4}(x^{3/4}+1)}$\n\n$IF=e^{-\\int \\frac{dx}{2x}}=e^{-\\frac{1}{2}\\ln x}=\\frac{1}{x^{1/2}}$\n\n$y.x^{-1/2}=\\int \\frac{x^{9/4}.x^{-1/2}}{x^{5/4}(x^{3/4}+1)}dx$\n\n= $\\int \\frac{x^{1/2}}{(x^{3/4}+1)}dx$\n\nLet, $x=t^{4}\\Rightarrow dx=4t^{3}dt$\n\n= $\\int \\frac{t^{2}.4t^{3}dt}{(t^{3}+1)}$\n\n= $4\\int \\frac{t^{2}(t^{3}+1-1)}{(t^{3}+1)}d$\n\n= $4\\int t^{2}dt-4\\int \\frac{t^{2}}{t^{3}+1}dt$\n\n= $\\frac{4t^{3}}{3}-\\frac{4}{3}\\ln (t^{3}+1)+C$\n\n$yx^{-1/2}=\\frac{4x^{3/4}}{3}-\\frac{4}{3}\\ln (x^{3/4}+1)+C$\n\nIt passes through the point $\\left (1,1-\\frac{4}{3}\\log _{e}2\\right )$\n\n$\\therefore$ $1-\\frac{4}{3}\\log _{e}2=\\frac{4}{3}-\\frac{4}{3}\\log _{e}2+C$\n\n$\\Rightarrow C=-\\frac{1}{3}$\n\n$y=\\frac{4}{3}x^{5/4}-\\frac{4}{3}\\sqrt{x}\\ln (x^{3/4}+1)-\\frac{\\sqrt{x}}{3}$\n\n$y(16)=\\frac{4}{3}\\times 32-\\frac{4}{3}\\times 4\\ln 9-\\frac{4}{3}$\n\n$=\\frac{124}{3}-\\frac{32}{3}\\ln 3=4\\left (\\frac{31}{3}-\\frac{8}{3}\\ln 3\\right )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-tBRlCNOO",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the integral \n\n$\\int\\limits _{0}^{10}\\frac{[\\sin 2πx]}{e^{x-[x]}}dx=αe^{-1}+βe^{-\\frac{1}{2}}+γ$, where $α$, $β$, $γ$ are integers and [x] denotes the greatest integer less than or equal to x, then the value of $α$ + $β$ + $γ$ is equal to :",
+  "options": [
+   "0",
+   "10",
+   "20",
+   "25"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given integral\n\n$\\int\\limits _{0}^{10}\\frac{[\\sin 2πx]}{e^{x-[x]}}dx=10\\int\\limits _{0}^{1}\\frac{[\\sin 2πx]}{e^{\\{x\\}}}dx$ (using property of definite in.)\n\n$=10\\left [\\int\\limits _{0}^{1/2}0.dx+\\int\\limits _{1/2}^{1}\\frac{-1}{e^{x}}dx\\right ]$\n\n= $-10\\left [\\frac{e^{-x}}{-1}\\right ]_{1/2}^{1}=10\\left [e^{-1}-e^{-1/2}\\right ]$\n\n$=10e^{-1}-10e^{-1/2}$\n\ncomparing with the given relation,\n\n$α$ = 10, $β$ = $-$10, $γ$ = 0\n\n$α$ + $β$ + $γ$ = 0\n\nTherefore, the correct answer is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-7EgukTgH",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of the limit \n\n$\\lim _{θ\\to 0}\\frac{\\tan (π\\cos ^{2}θ)}{\\sin (2π\\sin ^{2}θ)}$ is equal to :",
+  "options": [
+   "0",
+   "$-\\frac{1}{2}$",
+   "$\\frac{1}{4}$",
+   "$-\\frac{1}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$\\lim _{θ\\to 0}\\frac{\\tan (π\\cos ^{2}θ)}{\\sin (2π\\sin ^{2}θ)}$\n\n$=\\lim _{θ\\to 0}\\frac{\\tan (π-π\\sin ^{2}θ)}{\\sin (2π\\sin ^{2}θ)}$ $\\therefore$ $\\left (\\cos ^{2}θ=1-\\sin ^{2}θ\\right )$\n\n$=\\lim _{θ\\to 0}\\frac{-\\tan (π\\sin ^{2}θ)}{\\sin (2π\\sin ^{2}θ)}$ $\\therefore$ $(\\tan (π-θ)=-\\tan θ)$\n\n$=\\lim _{θ\\to 0}\\frac{\\frac{-\\tan (π\\sin 2θ)}{π\\sin 2θ}}{\\frac{\\sin (2π\\sin 2θ)}{2π\\sin 2θ}\\times 2}\\left (\\begin{array}{l} Asθ\\to 0 \\\\ then\\qquad \\sin ^{2}θ\\to 0 \\end{array}\\right )$\n\n$=-\\frac{1}{2}.$ $\\because$ $⎛⎝⎜\\begin{array}{l} \\lim _{θ\\to 0}\\frac{\\tan θ}{θ}\\to 1 \\\\ &\\lim _{θ\\to 0}\\frac{\\sin θ}{θ}=1 \\end{array}⎞⎠⎟$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-4M0JODSl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider the function f : R $\\to$ R defined by \n\n$f(x)=\\left \\{\\begin{array}{l} \\left (2-\\sin \\left (\\frac{1}{x}\\right )\\right )|x|,x\\neq 0 \\\\ 0,\\quad x=0 \\end{array} \\right.$. Then f is :",
+  "options": [
+   "not monotonic on ($-\\infty$, 0) and (0, $\\infty$)",
+   "monotonic on (0, $\\infty$) only",
+   "monotonic on ($-\\infty$, 0) only",
+   "monotonic on ($-\\infty$, 0) $\\cup$ (0, $\\infty$)"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\left \\{\\begin{array}{lll} -\\left (2-\\sin \\frac{1}{x}\\right )x & , & x<0 \\\\ 0 & , & x=0 \\\\ \\left (2-\\sin \\frac{1}{x}\\right )x & , & x>0 \\end{array} \\right.$\n\n$f^{'}(x)=\\left \\{\\begin{array}{l} -x\\left (-\\cos \\frac{1}{x}\\right )\\left (-\\frac{1}{x^{2}}\\right )-\\left (2-\\sin \\frac{1}{x}\\right ),x<0 \\\\ x\\left (-\\cos \\frac{1}{x}\\right )\\left (-\\frac{1}{x^{2}}\\right )+\\left (2-\\sin \\frac{1}{x}\\right ),x>0 \\end{array} \\right.$\n\n= $\\left \\{\\begin{array}{l} -\\frac{1}{x}\\cos \\frac{1}{x}+\\sin \\frac{1}{x}-2,x<0 \\\\ \\frac{1}{x}\\cos \\frac{1}{x}-\\sin \\frac{1}{x}+2,x>0 \\end{array} \\right.$\n\n$\\therefore$ f'(x) is an oscillating function which is non-monotonic on ($-\\infty$, 0) and (0, $\\infty$).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-latsm1x3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\lim _{n\\to \\infty }\\frac{[r]+[2r]+...+[nr]}{n^{2}}$, where r is a non-zero real number and [r] denotes the greatest integer less than or equal to r, is equal to :",
+  "options": [
+   "r",
+   "$\\frac{r}{2}$",
+   "0",
+   "2r"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We know,\n\n(x $-$ 1) $\\leq$ [x] < x\n\n$\\therefore$ (r $-$ 1) $\\leq$ [r] < r \n\n(2r $-$ 1) $\\leq$ [2r] < 2r \n\n.\n\n.\n\n.\n\n(nr $-$ 1) $\\leq$ [nr] < nr\n\nAdding\n\n$\\frac{n(n+1)}{2}r-n\\leq [r]+[2r]+.......[nr]<\\frac{n(n+1)}{2}r$\n\n$\\frac{\\frac{n(n+1)}{2}r-n}{n^{2}}\\leq \\frac{[r]+[2r]+....+[nr]}{n^{2}}\\leq \\frac{\\frac{n(n+1)}{2}r}{n^{2}}$\n\n$\\lim _{n\\to \\infty }\\left (\\frac{\\frac{n(n+1)}{2}r-n}{n^{2}}\\right )\\leq L<\\lim _{n\\to \\infty }\\frac{n(n+1)}{2}r$\n\n$\\Rightarrow \\frac{r}{2}\\leq L<\\frac{r}{2}$\n\n$\\Rightarrow L=\\frac{r}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-A4GUzTtA",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If x, y, z are in arithmetic progression with common difference d, x $\\neq$ 3d, and the determinant of the matrix $\\left [\\begin{array}{lll} 3 & 4\\sqrt{2} & x \\\\ 4 & 5\\sqrt{2} & y \\\\ 5 & k & z \\end{array}\\right ]$ is zero, then the value of $k^{2}$ is :",
+  "options": [
+   "72",
+   "12",
+   "36",
+   "6"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left |\\begin{array}{lll} 3 & 4\\sqrt{2} & x \\\\ 4 & 5\\sqrt{2} & y \\\\ 5 & k & z \\end{array}\\right |=0$\n\n$R_{1}\\to R_{1}+R_{3}-2R_{2}$\n\n$\\Rightarrow$ $\\left |\\begin{array}{lll} 0 & 4\\sqrt{2}-k-10\\sqrt{2} & 0 \\\\ 4 & 5\\sqrt{2} & y \\\\ 5 & k & z \\end{array}\\right |=0$ { $\\because$ 2y = x + z}\n\n$\\Rightarrow (k-6\\sqrt{2})(4z-5y)=0$\n\n$\\Rightarrow$ k = $6\\sqrt{2}$ or 4z = 5y (Not possible $\\because$ x, y, z in A.P.)\n\nSo, $k^{2} = 72$\n\n$\\therefore$ Option (A)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-lFggJKW2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution of the differential equation \n\n$\\cos x(3\\sin x+\\cos x+3)dy=(1+y\\sin x(3\\sin x+\\cos x+3))dx,0\\leq x\\leq \\frac{π}{2},y(0)=0$. Then, $y\\left (\\frac{π}{3}\\right )$ is equal to :",
+  "options": [
+   "$2\\log _{e}\\left (\\frac{\\sqrt{3}+7}{2}\\right )$",
+   "$2\\log _{e}\\left (\\frac{3\\sqrt{3}-8}{4}\\right )$",
+   "$2\\log _{e}\\left (\\frac{2\\sqrt{3}+10}{11}\\right )$",
+   "$2\\log _{e}\\left (\\frac{2\\sqrt{3}+9}{6}\\right )$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cos x(3\\sin x+\\cos x+3)dy=(1+y\\sin x(3\\sin x+\\cos x+3))dx$ ..... (1)\n\n$(3\\sin x+\\cos x+3)(\\cos xdy-y\\sin xdx)=dx$\n\n$\\int d(y.\\cos x)=\\int \\frac{dx}{3\\sin x+\\cos x+3}$\n\n$y\\cos x=\\int \\frac{1}{3\\left (\\frac{2\\tan \\dfrac{x}{2}}{1+\\tan 2\\dfrac{x}{2}}\\right )+\\left (\\frac{1-\\tan 2\\dfrac{x}{2}}{1+\\tan 2\\dfrac{x}{2}}\\right )+3}$\n\n$y\\cos x=\\int \\frac{\\sec ^{2}\\frac{x}{2}}{6\\tan \\frac{x}{2}+1-\\tan ^{2}\\frac{x}{2}+3+3\\tan ^{2}\\frac{x}{2}}$\n\n$y\\cos x=\\int \\frac{\\sec ^{2}\\frac{x}{2}}{2\\tan ^{2}\\frac{x}{2}+6\\tan \\frac{x}{2}+4}=\\int \\frac{\\frac{1}{2}\\sec ^{2}\\frac{x}{2}dx}{\\tan ^{2}\\frac{x}{2}+3\\tan \\frac{x}{2}+2}$\n\n$y\\cos x=\\ln \\left |\\frac{\\tan \\frac{x}{2}+1}{\\tan \\frac{x}{2}+2}\\right |+c$\n\nPut x = 0 & y = 0\n\n$C=-\\ln \\left (\\frac{1}{2}\\right )=\\ln (2)$\n\n$y\\left (\\frac{π}{3}\\right )=2\\ln \\left |\\frac{1+\\sqrt{3}}{1+2\\sqrt{3}}\\right |+2\\ln 2$\n\n$=2\\ln \\left |\\frac{5+\\sqrt{3}}{11}\\right |+2\\ln 2$\n\n$=2\\ln \\left |\\frac{2\\sqrt{3}+10}{11}\\right |$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-KxeIvsh9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $A=\\left [\\begin{array}{ll} a & b \\\\ c & d \\end{array}\\right ]$ and $B=\\left [\\begin{array}{l} α \\\\ β \\end{array}\\right ]\\neq \\left [\\begin{array}{l} 0 \\\\ 0 \\end{array}\\right ]$ such that AB = B and a + d = 2021, then the value of ad $-$ bc is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2020.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The matrix $B=\\left [\\begin{array}{l} α \\\\ β \\end{array}\\right ]$ is a non-zero $2\\times 1$ column, so $AB$ is defined, and $AB=B$ gives $(A-I)B=O$.\n\nIf $A-I$ were invertible, $B=(A-I)^{-1}O=O$, which is not the case; so\n\n$\\det (A-I)=\\left |\\begin{array}{ll} a-1 & b \\\\ c & d-1 \\end{array}\\right |=(a-1)(d-1)-bc=0.$\n\nExpanding, $ad-bc-(a+d)+1=0$, so\n\n$ad-bc=(a+d)-1=2021-1=2020.$\n\nHence, the answer is 2020.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-3EvGB4JD",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let the coefficients of third, fourth and fifth terms in the expansion of $\\left (x+\\frac{a}{x^{2}}\\right )^{n},x\\neq 0$, be in the ratio 12 : 8 : 3. Then the term independent of x in the expansion, is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T_{r+1}={}^{n}C_{r}x^{n-r}.\\left (\\frac{a}{x^{2}}\\right )^{r}$\n\n$={}^{n}C_{r}a^{r}x^{n-3r}$\n\n$T_{3}={}^{n}C_{2}a^{2}x^{n-6}$, $T_{4}={}^{n}C_{3}a^{3}x^{n-9}$, $T_{5}={}^{n}C_{4}a^{4}x^{n-12}$\n\nNow, $\\frac{coefficientofT_{3}}{coefficientofT_{4}}=\\frac{{}^{n}C_{2}.a^{2}}{{}^{n}C_{3}.a^{3}}=\\frac{3}{a(n-2)}=\\frac{3}{2}$\n\n$\\Rightarrow a(n-2)=2$ .......... (i)\n\nand $\\frac{coefficientofT_{4}}{coefficientofT_{5}}=\\frac{{}^{n}C_{3}.a^{3}}{{}^{n}C_{4}.a^{4}}=\\frac{4}{a(n-3)}=\\frac{8}{3}$\n\n$\\Rightarrow a(n-3)=\\frac{3}{2}$ ........ (ii)\n\nby (i) and (ii) $n=6,a=\\frac{1}{2}$\n\nfor term independent of 'x'\n\n$n-3r=0\\Rightarrow r=\\frac{n}{3}\\Rightarrow r=\\frac{6}{3}=2$\n\n$T_{3}={}^{6}C_{2}\\left (\\frac{1}{2}\\right )^{2}x^{0}=\\frac{15}{4}=3.75\\approx 4$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-0EJF9pQu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let tan$α$, tan$β$ and tan$γ$; $α$, $β$, $γ$ $\\neq$ $\\frac{(2n-1)π}{2}$, n$\\in$N be the slopes of three line segments OA, OB and OC, respectively, where O is origin. If circumcentre of $\\Delta$ABC coincides with origin and its orthocentre lies on y-axis, then the value of $\\left (\\frac{\\cos 3α+\\cos 3β+\\cos 3γ}{\\cos α\\cos β\\cos γ}\\right )^{2}$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 144.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since orthocentre and circumcentre both lies on y-axis.\n\n$\\Rightarrow$ Centroid also lies on y-axis.\n\n$\\Rightarrow$ $\\sum \\cos α=0$\n\ncos$α$ + cos$β$ + cos$γ$ = 0\n\n$\\Rightarrow$ $\\cos ^{3}$ $α$ $+ \\cos ^{3}$ $β$ $+ \\cos ^{3}$ $γ$ = 3cos$α$cos$β$cos$γ$\n\n$\\therefore$ $\\frac{\\cos 3α+\\cos 3β+\\cos 3γ}{\\cos α\\cos β\\cos γ}$\n\n$=\\frac{4(\\cos ^{3}α+\\cos ^{3}β+\\cos ^{3}γ)-3(\\cos α+\\cos β+\\cos γ)}{\\cos α\\cos β\\cos γ}=12$\n\nthen, $\\left (\\frac{\\cos 3α+\\cos 3β+\\cos 3γ}{\\cos α\\cos β\\cos γ}\\right )^{2}=144$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-hnJwMJTU",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\vec{x}$ be a vector in the plane containing vectors $\\vec{a}=2\\hat{i}-\\hat{j}+\\widehat{k}$ and $\\vec{b}=\\hat{i}+2\\hat{j}-\\widehat{k}$. If the vector $\\vec{x}$ is perpendicular to $\\left (3\\hat{i}+2\\hat{j}-\\widehat{k}\\right )$ and its projection on $\\vec{a}$ is $\\frac{17\\sqrt{6}}{2}$, then the value of $|\\vec{x}|^{2}$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 486.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let, $\\vec{x}=k(\\vec{a}+λ\\vec{b})$\n\n$\\vec{x}$  is perpendicular to $3\\hat{i}+2\\hat{j}-\\widehat{k}$\n\nI. k{(2 + $λ$)3 + (2$λ$ $-$ 1)2 + (1 $-$ $λ$)($-$1) = 0\n\n$\\Rightarrow$ 8$λ$ + 3 = 0\n\n$λ=\\frac{-3}{8}$\n\nII. Also projection of $\\vec{x}$ on $\\vec{a}$ is $\\frac{17\\sqrt{6}}{2}$ therefore\n\n$\\frac{\\vec{x}.\\vec{a}}{|\\vec{a}|}=\\frac{17\\sqrt{6}}{2}$\n\n$\\Rightarrow k\\left \\{\\frac{(\\vec{a}+λ\\vec{b}).\\vec{a}}{\\sqrt{6}}\\right \\}=\\frac{17\\sqrt{6}}{2}$\n\n$\\Rightarrow k\\left \\{6+\\left (\\frac{3}{8}\\right )\\right \\}=\\frac{17\\times 6}{2}$\n\n$\\Rightarrow k=\\frac{51}{51}\\times 8$\n\nk = 8\n\n$\\therefore$ $\\vec{x}=8\\left (\\frac{13}{8}\\hat{i}-\\frac{14}{8}\\hat{j}+\\frac{11}{8}\\widehat{k}\\right )$\n\n$=13\\hat{i}-14\\hat{j}+11\\widehat{k}$\n\n$|\\vec{x}|^{2}=169+196+121=486$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-qAj5oXiZ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $I_{n}=\\int\\limits _{1}^{e}x^{19}(\\log |x|)^{n}dx$, where n$\\in$N. If $(20)I_{10} =$ $αI_{9} +$ $βI_{8}$, for natural numbers $α$ and $β$, then $α$ $-$ $β$ equals to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I_{n}=\\int\\limits _{1}^{e}x^{19}(\\ln x)^{n}.dx$\n\n$=(\\ln x)^{n}.\\frac{x^{20}}{20}\\left |_{1}^{e}-\\int\\limits _{1}^{e}n\\frac{(\\ln x)^{n-1}}{x}\\frac{x^{20}}{20}dx \\right.$\n\n$I_{n}=\\frac{e^{20}}{20}-\\frac{n}{20}(I_{n-1})$\n\n$20I_{n}=e^{20}-nI_{n-1}$\n\nPutting n = 10, we get\n\n$20I_{10}=(e^{20}-10I_{9})$ ...... (1)\n\nPutting n = 9, we get\n\n$20I_{9}=e^{20}-9I_{8}$ ....... (2) \n\nSubtracting (2) from (1), we get\n\n$20I_{10}=10I_{9}+9I_{8}$\n\nBy comparing with $(20)I_{10} =$ $αI_{9} +$ $βI_{8}$, we get\n\n$α$ = 10, $β$ = 9 $\\Rightarrow$ $α$ $-$ $β$ = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-J4wCNBxu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $1, \\log _{10}(4^{x}$ $-$ 2) and $\\log _{10}\\left (4^{x}+\\frac{18}{5}\\right )$ are in arithmetic progression for a real number x, then the value of the determinant $\\left |\\begin{array}{lll} 2\\left (x-\\frac{1}{2}\\right ) & x-1 & x^{2} \\\\ 1 & 0 & x \\\\ x & 1 & 0 \\end{array}\\right |$ is equal to :",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "1, $\\log _{10}(4^{x}-2),\\log _{10}\\left (4^{x}+\\frac{18}{5}\\right )$ in AP.\n\n$\\therefore$ 2$\\timeslog_{10}(4^{x}-2)=1+\\log _{10}\\left (4^{x}+\\frac{18}{5}\\right )$ \n\n$\\log _{10}(4^{x}-2)^{2}=\\log _{10}\\left (10.\\left (4^{x}+\\frac{18}{5}\\right )\\right )$\n\n$(4^{x}-2)^{2}=10.\\left (4^{x}+\\frac{18}{5}\\right )$\n\n$(4^{x})^{2}+4-4.4^{x}=10.4^{x}+36$\n\n$(4^{x})^{2}-14.4^{x}-32=0$\n\n$(4^{x})^{2}+2.4^{x}-16.4^{x}-32=0$\n\n$4^{x}(4^{x}+2)-16.(4^{x}+2)=0$\n\n$(4^{x}+2)(4^{x}-16)=0$\n\n$4^{x} = -2 ($Not Possible)\n\nOr $4^{x} = 16$\n\n$\\Rightarrow$ x = 2\n\nTherefore $\\left |\\begin{array}{lll} 2(x-1/2) & x-1 & x^{2} \\\\ 1 & 0 & x \\\\ x & 1 & 0 \\end{array}\\right |$\n\n$=\\left |\\begin{array}{lll} 3 & 1 & 4 \\\\ 1 & 0 & 2 \\\\ 2 & 1 & 0 \\end{array}\\right |$\n\n$=3(-2)-1(0-4)+4(1-0)$\n\n$=-6+4+4=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-IlkocwVJ",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Consider a set of 3n numbers having variance 4. In this set, the mean of first 2n numbers is 6 and the mean of the remaining n numbers is 3. A new set is constructed by adding 1 into each of first 2n numbers, and subtracting 1 from each of the remaining n numbers. If the variance of the new set is k, then 9k is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 68.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the first $2n$ numbers be $x_{1},\\ldots ,x_{2n}$ and the remaining $n$ numbers be $y_{1},\\ldots ,y_{n}$. Then $\\sum x_{i}=12n$ and $\\sum y_{i}=3n$, so the mean of all $3n$ numbers is $\\dfrac{15n}{3n}=5$.\n\nFrom the variance, $\\dfrac{\\sum x_{i}^{2}+\\sum y_{i}^{2}}{3n}-5^{2}=4\\Rightarrow \\sum x_{i}^{2}+\\sum y_{i}^{2}=87n$.\n\nMean of the new set: $\\dfrac{(12n+2n)+(3n-n)}{3n}=\\dfrac{16}{3}$.\n\nSum of squares of the new set:\n\n$\\sum (x_{i}+1)^{2}+\\sum (y_{i}-1)^{2}=\\sum x_{i}^{2}+\\sum y_{i}^{2}+2\\sum x_{i}-2\\sum y_{i}+2n+n=87n+24n-6n+3n=108n$\n\n$k=\\frac{108n}{3n}-\\left (\\frac{16}{3}\\right )^{2}=36-\\frac{256}{9}=\\frac{68}{9}$\n\nSo $9k=68$.\n\nHence, the answer is 68.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-axb7TtMH",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let f : [$-$1, 1] $\\to$ R be defined as $f(x) = ax^{2} + bx + c$ for all x$\\in$[$-$1, 1], where a, b, c$\\in$R such that f($-$1) = 2, f'($-$1) = 1 for x$\\in$($-$1, 1) the maximum value of f ''(x) is $\\frac{1}{2}$. If f(x) $\\leq$ $α$, x$\\in$[$-$1, 1], then the least value of $α$ is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=ax^{2}+bx+c$\n\n$f^{'}(x)=2ax+b,$\n\n$f^{''}(x)=2a$\n\nGiven, $f^{''}(-1)=\\frac{1}{2}$\n\n$\\Rightarrow a=\\frac{1}{4}$\n\n$f^{'}(-1)=1\\Rightarrow b-2a=1$\n\n$\\Rightarrow b=\\frac{3}{2}$\n\n$f(-1)=a-b+c=2$\n\n$\\Rightarrow c=\\frac{13}{4}$\n\nNow, $f(x)=\\frac{1}{4}(x^{2}+6x+13),x\\in [-1,1]$\n\n$f^{'}(x)=\\frac{1}{4}(2x+6)=0$\n\n$\\Rightarrow x=-3\\notin [-1,1]$\n\n$f(1)=5,f(-1)=2$\n\n$f(x)\\leq 5$\n\nSo, $α_{minimum}$ = 5",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-cffEOVLE",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let f : [$-$3, 1] $\\to$ R be given as \n\n$f(x)=\\left \\{\\begin{array}{l} \\min \\{(x+6),x^{2}\\},-3\\leq x\\leq 0 \\\\ \\max \\{\\sqrt{x},x^{2}\\},0\\leq x\\leq 1. \\end{array} \\right.$\n\nIf the area bounded by y = f(x) and x-axis is A, then the value of 6A is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 41.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 17th March Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nArea is $\\int\\limits _{-3}^{-2}(x+6)dx+\\int\\limits _{-2}^{0}x^{2}dx+\\int\\limits _{0}^{1}\\sqrt{x}dx=A$\n\n$=\\frac{7}{2}+\\left [\\frac{x^{3}}{3}\\right ]_{-2}^{0}+\\left [\\frac{2}{3}x^{3/2}\\right ]_{0}^{1}$\n\n$=\\frac{7}{2}+\\frac{8}{3}+\\frac{2}{3}=\\frac{41}{6}$\n\nSo, 6A = 41",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 17th March Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-17th-march-evening-shift/cffEOVLEI7ehYNp5lZ1kmko9iza-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 17th March Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

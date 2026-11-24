@@ -1,0 +1,950 @@
+[
+ {
+  "publicId": "PYQ-2021-1ktnzk3o",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let f : R $\\to$ R be a continuous function. Then $\\lim _{x\\to \\frac{π}{4}}\\frac{\\frac{π}{4}\\int\\limits _{2}^{\\sec 2x}f(x)dx}{x^{2}-\\frac{π2}{16}}$ is equal to :",
+  "options": [
+   "f (2)",
+   "2f (2)",
+   "2f $\\left (\\sqrt{2}\\right )$",
+   "4f (2)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to \\frac{π}{4}}\\frac{\\frac{π}{4}\\int\\limits _{2}^{\\sec 2x}f(x)dx}{x^{2}-\\frac{π2}{16}}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{π}{4}.\\frac{\\left [f(\\sec ^{2}x).2\\sec x.\\sec x\\tan x\\right ]}{2x}$\n\n= $\\lim _{x\\to \\frac{π}{4}}\\frac{π}{4}f(\\sec ^{2}x)\\sec ^{3}x.\\frac{\\sin x}{x}$\n\n= $\\frac{π}{4}f(2).\\left (\\sqrt{2}\\right )^{3}.\\frac{1}{\\sqrt{2}}\\times \\frac{4}{π}$\n\n= 2f (2)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktnznem",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\cos ^{-1}(\\cos (-5))+\\sin ^{-1}(\\sin (6))-\\tan ^{-1}(\\tan (12))$ is equal to :\n\n(The inverse trigonometric functions take the principal values)",
+  "options": [
+   "3$π$ $-$ 11",
+   "4$π$ $-$ 9",
+   "4$π$ $-$ 11",
+   "3$π$ + 1"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cos ^{-1}(\\cos (-5))+\\sin ^{-1}(\\sin (6))-\\tan ^{-1}(\\tan (12))$\n\n$=(2π-5)+(6-2π)-(12-4π)$\n\n$=4π-11$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktnzxwb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider the system of linear equations\n\n$-$x + y + 2z = 0\n\n3x $-$ ay + 5z = 1\n\n2x $-$ 2y $-$ az = 7\n\nLet $S_{1}$ be the set of all a$\\in$R for which the system is inconsistent and $S_{2}$ be the set of all a$\\in$R for which the system has infinitely many solutions. If $n(S_{1})$ and $n(S_{2})$ denote the number of elements in $S_{1}$ and $S_{2}$ respectively, then",
+  "options": [
+   "$n(S_{1}) = 2, n(S_{2}) = 2$",
+   "$n(S_{1}) = 1, n(S_{2}) = 0$",
+   "$n(S_{1}) = 2, n(S_{2}) = 0$",
+   "$n(S_{1}) = 0, n(S_{2}) = 2$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\Delta =\\left |\\begin{array}{lll} -1 & 1 & 2 \\\\ 3 & -a & 5 \\\\ 2 & -2 & -a \\end{array}\\right |$\n\n$=-1(a^{2}+10)-1(-3a-10)+2(-6+2a)$\n\n$=-a^{2}-10+3a+10-12+4a$\n\n$\\Delta =-a^{2}+7a-12$\n\n$\\Delta =-[a^{2}-7a+12]$\n\n$\\Delta =-[(a-3)(a-4)]$\n\n$\\Delta _{1}=\\left |\\begin{array}{lll} 0 & 1 & 2 \\\\ 1 & -a & 5 \\\\ 7 & -2 & -a \\end{array}\\right |$\n\n$=a+35-4+14a$\n\n= $15a+31$\n\nNow, $\\Delta _{1}=15a+31$\n\nFor inconsistent $\\Delta$ = 0 $\\therefore$ a = 3, a = 4 and for a = 3 and 4, $\\Delta_{1}$ $\\neq$ 0\n\n$n(S_{1}) = 2$\n\nFor infinite solution : $\\Delta$ = 0 and $\\Delta_{1}$ = $\\Delta_{2}$ = $\\Delta_{3}$ = 0\n\nNot possible\n\n$\\therefore$ $n(S_{2}) = 0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kto2k0k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two squares are chosen at random on a chessboard (see figure). The probability that they have a side in common is :\n\n\n[IMG]",
+  "options": [
+   "$\\frac{2}{7}$",
+   "$\\frac{1}{18}$",
+   "$\\frac{1}{7}$",
+   "$\\frac{1}{9}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Total ways of choosing square = ${}^{64}C_{2}$\n\n$=\\frac{64\\times 63}{2\\times 1}=32\\times 63$\n\nways of choosing two squares having common side = 2 (7 $\\times$ 8) = 112\n\nRequired probability $=\\frac{112}{32\\times 63}=\\frac{16}{32\\times 9}=\\frac{1}{18}$.\n\nAns. (b)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-1st-september-evening-shift/1kto2k0k0-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 1st September Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1kto2tuh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If y = y(x) is the solution curve of the differential equation $x^{2}dy+\\left (y-\\frac{1}{x}\\right )dx=0$ ; x > 0 and y(1) = 1, then $y\\left (\\frac{1}{2}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{3}{2}-\\frac{1}{\\sqrt{e}}$",
+   "$3+\\frac{1}{\\sqrt{e}}$",
+   "3 + e",
+   "3 $-$ e"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x^{2}dy+\\left (y-\\frac{1}{x}\\right )dx=0$ ; x > 0, y(1) = 1\n\n$x^{2}dy+\\frac{(xy-1)}{x}dx=0$\n\n$x^{2}dy=\\frac{(xy-1)}{x}dx$\n\n$\\frac{dy}{dx}=\\frac{1-xy}{x^{3}}$\n\n$\\frac{dy}{dx}=\\frac{1}{x^{3}}-\\frac{y}{x^{2}}$\n\n$\\frac{dy}{dx}+\\frac{1}{x^{2}}.y=\\frac{1}{x^{3}}$\n\nI.F. = $e^{\\int \\frac{1}{x2}dx}=e^{-\\frac{1}{x}}$\n\n$ye^{-\\frac{1}{x}}=\\int \\frac{1}{x^{3}}.e^{-\\frac{1}{x}}$\n\n$ye^{-\\frac{1}{x}}=e^{-\\frac{1}{x}}\\left (1+\\frac{1}{x}\\right )+C$\n\n$1.e^{-1}=e^{-1}(2)+C$\n\n$C=-e^{-1}=-\\frac{1}{e}$\n\n$ye^{-\\frac{1}{x}}=e^{-\\frac{1}{x}}\\left (1+\\frac{1}{x}\\right )-\\frac{1}{e}$\n\n$y\\left (\\frac{1}{2}\\right )=3-\\frac{1}{e}\\times e^{2}$\n\n$y\\left (\\frac{1}{2}\\right )=3-e$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kto3gif",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The function $f(x)=x^{3}-6x^{2}+ax+b$ is such that $f(2)=f(4)=0$. Consider two statements :\n\nStatement 1 : there exists $x_{1}, x_{2}$ $\\in(2, 4), x_{1} < x_{2}$, such that $f'(x_{1}) =$ $-$1 and $f'(x_{2}) = 0$.\n\nStatement 2 : there exists $x_{3}, x_{4}$ $\\in$ $(2, 4), x_{3} < x_{4}$, such that f is decreasing in $(2, x_{4})$, increasing in $(x_{4}, 4)$ and $2f^{'}(x_{3})=\\sqrt{3}f(x_{4})$.\n\nThen",
+  "options": [
+   "both Statement 1 and Statement 2 are true",
+   "Statement 1 is false and Statement 2 is true",
+   "both Statement 1 and Statement 2 are false",
+   "Statement 1 is true and Statement 2 is false"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=x^{3}-6x^{2}+ax+b$\n\n$f(2)=8-24+2a+b=0$\n\n$2a+b=16$ .... (1)\n\n$f(4)=64-96+4a+b=0$\n\n$4a+b=32$ .... (2)\n\nSolving (1) and (2)\n\na = 8, b = 0\n\n$f(x)=x^{3}-6x^{2}+8x$\n\n$f^{'}(x)=3x^{2}-12x+8$\n\n$f^{''}(x)=6x-12$\n\n$\\Rightarrow$ f'(x) is $↑$ for x > 2, and f'(x) is $↓$ for x  0 for x $\\in$ $(x_{4}, 4)$\n\n$x_{4}$ $\\in$ (3, 4)\n\n$f(x) = x^{3}$ $-$ $6x^{2} + 8x$\n\nf(3) = 27 $-$ 54 + 24 = $-$3\n\nf(4) = 64 $-$ 96 + 32 = 0\n\nFor $x_{4}(3, 4)$\n\n$f(x_{4})$  $-$4\n\n$2f'(x_{3}) >$ $-$8\n\nSo, $2f'(x_{3}) =$ $\\sqrt{3}$ $f(x_{4})$\n\nCorrect Ans. (a).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-1st-september-evening-shift/1kto3gifb-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 1st September Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1kto5yxz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $J_{n,m}=\\int\\limits _{0}^{\\frac{1}{2}}\\frac{x^{n}}{x^{m}-1}dx$, $\\forall$ n > m and n, m $\\in$ N. Consider a matrix $A=[a_{ij}]_{3\\times 3}$ where $a_{ij}=\\left \\{\\begin{array}{ll} J_{6+i,3}-J_{i+3,3}, & i\\leq j \\\\ 0, & i>j \\end{array} \\right.$. Then $\\left |adjA^{-1}\\right |$ is :",
+  "options": [
+   "$(15)^{2}$ $\\times$ $2^{42}$",
+   "$(15)^{2}$ $\\times$ $2^{34}$",
+   "$(105)^{2}$ $\\times$ $2^{38}$",
+   "$(105)^{2}$ $\\times$ $2^{36}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A = $\\left [\\begin{array}{lll} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \\end{array}\\right ]$\n\n$J_{6+i,3}-J_{i+3,3};i\\leq j$\n\n$=\\int\\limits _{0}^{\\frac{1}{2}}\\frac{x^{6+i}}{x^{3}-1}-\\int\\limits _{0}^{\\frac{1}{2}}\\frac{x^{i+3}}{x^{3}-1}$\n\n$=\\int\\limits _{0}^{1/2}\\frac{x^{i+3}(x^{3}-1)}{x^{3}-1}$\n\n$=\\frac{x^{3+i+1}}{3+i+1}=\\left (\\frac{x^{4+i}}{4+i}\\right )_{0}^{1/2}$\n\n$\\therefore$ $a_{ij}=J_{6+i,3}-J_{i+3,3}=\\frac{\\left (\\frac{1}{2}\\right )^{4+i}}{4+i}$\n\n$a_{11}=\\frac{\\left (\\frac{1}{2}\\right )^{5}}{5}=\\frac{1}{5.2^{5}}$\n\n$a_{12}=\\frac{1}{5.2^{5}}$\n\n$a_{13}=\\frac{1}{5.2^{5}}$\n\n$a_{22}=\\frac{1}{6.2^{6}}$\n\n$a_{23}=\\frac{1}{6.2^{6}}$\n\n$a_{33}=\\frac{1}{7.2^{7}}$\n\n$A=\\left [\\begin{array}{lll} \\frac{1}{5.2^{5}} & \\frac{1}{5.2^{5}} & \\frac{1}{5.2^{5}} \\\\ 0 & \\frac{1}{6.2^{6}} & \\frac{1}{6.2^{6}} \\\\ 0 & 0 & \\frac{1}{7.2^{7}} \\end{array}\\right ]$\n\n$|A|=\\frac{1}{5.2^{5}}\\left [\\frac{1}{6.2^{6}}\\times \\frac{1}{7.2^{7}}\\right ]$\n\n$|A|=\\frac{1}{210.2^{18}}$\n\n$\\left |adjA^{-1}\\right |=\\left |A^{-1}\\right |^{n-1}=\\left |A^{-1}\\right |^{2}=\\frac{1}{(|A|)^{2}}$\n\n$=(210.2^{18})^{2}$\n\n= $(105)^{2}\\times 2^{38}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kto652v",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area, enclosed by the curves $y=\\sin x+\\cos x$ and $y=|\\cos x-\\sin x|$ and the lines $x=0,x=\\frac{π}{2}$, is :",
+  "options": [
+   "$2\\sqrt{2}(\\sqrt{2}-1)$",
+   "$2(\\sqrt{2}+1)$",
+   "$4(\\sqrt{2}-1)$",
+   "$2\\sqrt{2}(\\sqrt{2}+1)$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A=\\int\\limits _{0}^{\\frac{π}{2}}((\\sin x+\\cos x)-|\\cos x-\\sin x|)dx$\n\n$A=\\int\\limits _{0}^{\\frac{π}{4}}((\\sin x+\\cos x)-(\\cos x-\\sin x))dx+\\int\\limits _{\\frac{π}{4}}^{\\frac{π}{2}}((\\sin x+\\cos x)-(\\sin x-\\cos x))dx$\n\n$A=2\\int\\limits _{0}^{\\frac{π}{4}}\\sin x\\qquad dx+2\\int\\limits _{\\frac{π}{4}}^{\\frac{π}{2}}\\cos x\\qquad dx$\n\n$A=-2\\left (\\frac{1}{\\sqrt{2}}-1\\right )+2\\left (1-\\frac{1}{\\sqrt{2}}\\right )$\n\n$A=4-2\\sqrt{2}=2\\sqrt{2}(\\sqrt{2}-1)$\n\nOption (a)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kto6ba4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The distance of line $3y-2z-1=0=3x-z+4$ from the point (2, $-$1, 6) is :",
+  "options": [
+   "$\\sqrt{26}$",
+   "$2\\sqrt{5}$",
+   "$2\\sqrt{6}$",
+   "$4\\sqrt{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$3y-2z-1=0=3x-z+4$\n\n$3y-2z-1=0$\n\nD.R's $\\Rightarrow$ (0, 3, $-$2)\n\n$3x-z+4$ = 0\n\nD.R's $\\Rightarrow$ (3, 0, $-$1)\n\nLet DR's of given line are a, b, c\n\nNow, 3b $-$ 2c = 0 & 3a $-$ c = 0\n\n$\\therefore$ 6a = 3b = 2c\n\na : b : c = 3 : 6 : 9\n\nAny point on line\n\n3K $-$ 1, 6K + 1, 9K + 1\n\nNow, 3(3K $-$ 1 $-$ 2) + 6(6K + 1 + 1) + 9(9K + 1 $-$ 6) = 0\n\n$\\Rightarrow$ K = $\\frac{1}{3}$\n\nPoint on line $\\Rightarrow$ (0, 3, 4)\n\nGiven point (2, $-$1, 6)\n\n$\\Rightarrow$ Distance = $\\sqrt{4+16+4}=2\\sqrt{6}$\n\nOption (c)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kto6yf2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of pairs (a, b) of real numbers, such that whenever $α$ is a root of the equation $x^{2} + ax + b = 0$, $α^{2}$ $-$ 2 is also a root of this equation, is :",
+  "options": [
+   "6",
+   "2",
+   "4",
+   "8"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Consider the equation $x^{2} + ax + b = 0$\n\nIt has two roots (not necessarily real $α$ & $β$)\n\nEither $α$ = $β$ or $α$ $\\neq$ $β$\n\nCase (1) If $α$ = $β$, then it is repeated root. Given that $α^{2}$ $-$ 2 is also a root\n\nSo, $α$ = $α^{2}$ $-$ 2 $\\Rightarrow$ ($α$ + 1)($α$ $-$ 2) = 0\n\n$\\Rightarrow$ $α$ = $-$1 or $α$ = 2\n\nWhen $α$ = $-$1 then (a, b) = (2, 1)\n\n$α$ = 2 then (a, b) = ($-$4, 4)\n\nCase (2) If $α$ $\\neq$ $β$\n\nThen\n\n(I) $α$ = $α^{2}$ $-$ 2 and $β$ = $β^{2}$ $-$ 2\n\nHence, (a, b) = ($-$($α$ + $β$), $αβ$)\n\n($-$1, $-$2)\n\n(II) $α$ = $β^{2}$ $-$ 2 and $β$ = $α^{2}$ $-$ 2\n\nThen $α$ $-$ $β$ = $β^{2}$ $-$ $α^{2}$ = ($β$ $-$ $α$) ($β$ + $α$)\n\nSince $α$ $\\neq$ $β$ we get $α$ + $β$ = $β^{2}$ + $α^{2}$ $-$ 4\n\n$α$ + $β$ = ($α$ + $β)^{2}$ $-$ 2$αβ$ $-$ 4\n\nThus $-$1 = 1 $-$2 $αβ$ $-$ 4 which implies\n\n$αβ$ = $-$1 Therefore (a, b) = ($-$($α$ + $β$), $αβ$)\n\n= (1, $-$1)\n\n(III) $α$ = $α^{2}$ $-$ 2 = $β^{2}$ $-$ 2 and $α$ $\\neq$ $β$\n\n$\\Rightarrow$ $α$ = $-$ $β$\n\nThus $α$ = 2, $β$ = $-$2\n\n$α$ = $-$1, $β$ = 1\n\nTherefore (a, b) = (0, $-$4) & (0, $-$1)\n\n(IV) $β$ = $α^{2}$ $-$ 2 = $β^{2}$ $-$ 2 and $α$ $\\neq$ $β$ is same as (III) Therefore we get 6 pairs of (a, b)\n\nWhich are (2, 1), ($-$4, 4), ($-$1, $-$2), (1, $-$1), (0, $-$4), (0, $-$1)\n\nOption (a)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kto82i3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $P_{1}, P_{2}, ......, P_{15}$ be 15 points on a circle. The number of distinct triangles formed by points $P_{i}, P_{j}, P_{k}$ such that i +j + k $\\neq$ 15, is :",
+  "options": [
+   "12",
+   "419",
+   "443",
+   "455"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The 15 points lie on a circle, so no three are collinear and the total number of triangles is ${}^{15}C_{3}=455$.\n\nTriangles with $i+j+k=15$ correspond to sets of distinct indices $i<j<k$ with sum 15:\n\nWith $i=1$: $\\{1,2,12\\},\\{1,3,11\\},\\{1,4,10\\},\\{1,5,9\\},\\{1,6,8\\}$, that is 5 sets.\n\nWith $i=2$: $\\{2,3,10\\},\\{2,4,9\\},\\{2,5,8\\},\\{2,6,7\\}$, that is 4 sets.\n\nWith $i=3$: $\\{3,4,8\\},\\{3,5,7\\}$, that is 2 sets.\n\nWith $i=4$: $\\{4,5,6\\}$, that is 1 set.\n\nNo set has $i\\geq 5$, since then $i+j+k\\geq 5+6+7=18$. So $5+4+2+1=12$ triangles have $i+j+k=15$.\n\nRequired number $=455-12=443$.\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kto99h4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The range of the function, \n\n$f(x)=\\log _{\\sqrt{5}}\\left (3+\\cos \\left (\\frac{3π}{4}+x\\right )+\\cos \\left (\\frac{π}{4}+x\\right )+\\cos \\left (\\frac{π}{4}-x\\right )-\\cos \\left (\\frac{3π}{4}-x\\right )\\right )$ is :",
+  "options": [
+   "$\\left (0,\\sqrt{5}\\right )$",
+   "[$-$2, 2]",
+   "$\\left [\\frac{1}{\\sqrt{5}},\\sqrt{5}\\right ]$",
+   "[0, 2]"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\log _{\\sqrt{5}}\\left (3+\\cos \\left (\\frac{3π}{4}+x\\right )+\\cos \\left (\\frac{π}{4}+x\\right )+\\cos \\left (\\frac{π}{4}-x\\right )-\\cos \\left (\\frac{3π}{4}-x\\right )\\right )$\n\n$f(x)=\\log _{\\sqrt{5}}\\left [3+2\\cos \\left (\\frac{π}{4}\\right )\\cos (x)-2\\sin \\left (\\frac{3π}{4}\\right )\\sin (x)\\right ]$\n\n$f(x)=\\log _{\\sqrt{5}}\\left [3+\\sqrt{2}(\\cos x-\\sin x)\\right ]$\n\nSince $-\\sqrt{2}\\leq \\cos x-\\sin x\\leq \\sqrt{2}$\n\n$\\Rightarrow \\log _{\\sqrt{5}}\\left [3+\\sqrt{2}\\left (-\\sqrt{2}\\right )\\leq f(x)\\leq \\log _{\\sqrt{5}}\\left [3+\\sqrt{2}\\left (\\sqrt{2}\\right )\\right ]\\right ]$\n\n$\\Rightarrow \\log _{\\sqrt{5}}(1)\\leq f(x)\\leq \\log _{\\sqrt{5}}(5)$\n\nSo, Range of f(x) is [0, 2]\n\nOption (d)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kto9lne",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a_{1}, a_{2}, ..........., a_{21}$ be an AP such that $\\sum\\limits _{n=1}^{20}\\frac{1}{a_{n}a_{n+1}}=\\frac{4}{9}$. If the sum of this AP is 189, then $a_{6}a_{16}$ is equal to :",
+  "options": [
+   "57",
+   "72",
+   "48",
+   "36"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sum\\limits _{n=1}^{20}\\frac{1}{a_{n}a_{n+1}}=\\sum\\limits _{n=1}^{20}\\frac{1}{a_{n}(a_{n}+d)}$\n\n$=\\frac{1}{d}\\sum\\limits _{n=1}^{20}\\left (\\frac{1}{a_{n}}-\\frac{1}{a_{n}+d}\\right )$\n\n$\\Rightarrow \\frac{1}{d}\\left (\\frac{1}{a_{1}}-\\frac{1}{a_{21}}\\right )=\\frac{4}{9}$ (Given)\n\n$\\Rightarrow \\frac{1}{d}\\left (\\frac{a_{21}-a_{1}}{a_{1}a_{21}}\\right )=\\frac{4}{9}$\n\n \\Rightarrow {1 \\over d}\\left$( {{{{a_1} + 20d - {a_1}}$ \\over ${{a_1}{a_{21}}}}$ \\right) = {4 \\over 9} \\Rightarrow ${a_1}{a_{21}} = 45....(1)Nowsumoffirst21terms=${{21} \\over $2}(2{a_1} + 20d) = 189$[MATH$_$FAILED]\\Rightarrow $a_{1} + 10d = 9 ..... (2)$\n\nFor equation (1) & (2) we get\n\n$a_{1} = 3$ & d = $\\frac{3}{5}$\n\nor $a_{1} = 15$ & d = $-\\frac{3}{5}$\n\nSo, $a_{6} . a_{16} = (a_{1} + 5d) (a_{1} + 15d)$\n\n$\\Rightarrow$ $a_{6}a_{16} = 72$\n\nOption (b)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1kto9vgy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The function f(x), that satisfies the condition\n $f(x)=x+\\int\\limits _{0}^{π/2}\\sin x.\\cos yf(y)dy$, is :",
+  "options": [
+   "$x+\\frac{2}{3}(π-2)\\sin x$",
+   "$x+(π+2)\\sin x$",
+   "$x+\\frac{π}{2}\\sin x$",
+   "$x+(π-2)\\sin x$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=x+\\int\\limits _{0}^{π/2}\\sin x\\cos yf(y)dy$\n\n$f(x)=x+\\sin x\\int\\limits _{0}^{π/2}\\cos y\\qquad f(y)dy_{K}$\n\n$\\Rightarrow f(x)=x+K\\sin x$\n\n$\\Rightarrow f(y)=y+K\\sin y$\n\nNow, $K=\\int\\limits _{0}^{π/2}y\\cos ydy_{ApplyIBP}+K\\int\\limits _{0}^{π/2}\\cos y\\sin ydy_{Put\\sin y=t}$\n\n$K=(y\\sin y)_{0}^{π/2}-\\int\\limits _{0}^{π/2}\\sin ydy+K\\int\\limits _{0}^{1}t~dt$\n\n$\\Rightarrow K=\\frac{π}{2}-1+K\\left (\\frac{1}{2}\\right )$\n\n$\\Rightarrow K=π-2$\n\nSo, $f(x)=x+(π-2)\\sin x$\n\nOption (d)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktoapak",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let X be a random variable with distribution.\n\n  \n    x\n    $-$2\n    $-$1\n    3\n    4\n    6\n  \n\n  \n    P(X = x)\n    $\\frac{1}{5}$\n    a\n    $\\frac{1}{3}$\n    $\\frac{1}{5}$\n    b\n  \n\nIf the mean of X is 2.3 and variance of X is $σ^{2}$, then 100 $σ^{2}$ is equal to :",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 781.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "x\n    $-$2\n    $-$1\n    3\n    4\n    6\n  \n\n  \n    P(X = x)\n    $\\frac{1}{5}$\n    a\n    $\\frac{1}{3}$\n    $\\frac{1}{5}$\n    b\n  \n\n$X–$ = 2.3\n\n$-$a + 6b = $\\frac{9}{10}$ ..... (1)\n\n$\\sum P_{i}=\\frac{1}{5}+a+\\frac{1}{3}+\\frac{1}{5}+b=1$\n\n$a+b=\\frac{4}{15}$ .... (2)\n\nFrom equation (1) and (2)\n\n$a=\\frac{1}{10},b=\\frac{1}{6}$\n\n$σ^{2}=\\sum p_{i}x_{i}^{2}-(X–)^{2}$\n\n$\\frac{1}{5}(4)+a(1)+\\frac{1}{3}(9)+\\frac{1}{5}(16)+b(36)-(2.3)^{2}$\n\n$=\\frac{4}{5}+a+3+\\frac{16}{5}+36b-(2.3)^{2}$\n\n$=4+a+3+36b-(2.3)^{2}$\n\n$=7+a+36b-(2.3)^{2}$\n\n$=7+\\frac{1}{10}+6-(2.3)^{2}$\n\n$=13+\\frac{1}{10}-\\left (\\frac{23}{10}\\right )^{2}$\n\n$=\\frac{131}{10}-\\left (\\frac{23}{10}\\right )^{2}$\n\n$=\\frac{1310-(23)^{2}}{100}$\n\n$=\\frac{1310-529}{100}$\n\n$σ^{2}=\\frac{781}{100}$\n\n$100σ^{2}=781$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktoau6k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $f(x)=x^{6}+2x^{4}+x^{3}+2x+3$, x $\\in$ R. Then the natural number n for which $\\lim _{x\\to 1}\\frac{x^{n}f(1)-f(x)}{x-1}=44$ is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 7.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=x^{6}+2x^{4}+x^{3}+2x+3$\n\n$\\lim _{x\\to 1}\\frac{x^{n}f(1)-f(x)}{x-1}=44$\n\n$\\lim _{x\\to 1}\\frac{9x^{n}-(x^{6}+2x^{4}+x^{3}+2x+3)}{x-1}=44$\n\n$\\lim _{x\\to 1}\\frac{9nx^{n-1}-(6x^{5}+8x^{3}+3x^{2}+2)}{1}=44$\n\n$\\Rightarrow$ 9n $-$ (19) = 44\n\n$\\Rightarrow$ 9n = 63\n\n$\\Rightarrow$ n = 7",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktoaywl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If for the complex numbers z satisfying | z $-$ 2 $-$ 2i | $\\leq$ 1, the maximum value of | 3iz + 6 | is attained at a + ib, then a + b is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "| z $-$ 2 $-$ 2i | $\\leq$ 1\n\n| x + iy $-$ 2 $-$ 2i | $\\leq$ 1\n\n|(x $-$ 2) + i(y $-$ 2)| $\\leq$ 1\n\n(x $-$ $2)^{2} + (y$ $-$ $2)^{2}$ $\\leq$ 1\n\n$| 3iz + 6 |_{\\max }$ at a + ib\n\n$|3i|\\left |z+\\frac{6}{3i}\\right |$\n\n$3|z-2i|_{\\max }$\n\n\n[IMG]\n\nFrom figure maximum distance at 3 + 2i\n\na + ib = 3 + 2i = a + b = 3 + 2 = 5 Ans.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-1st-september-evening-shift/1ktoaywlm-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 1st September Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktob4v4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let the points of intersections of the lines x $-$ y + 1 = 0, x $-$ 2y + 3 = 0 and 2x $-$ 5y + 11 = 0 are the mid points of the sides of a triangle $\\Delta$ABC. Then, the area of the $\\Delta$ABC is $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Intersection point of given lines are (1, 2), (7, 5), (2, 3)\n\n\n[IMG]\n\n$\\Delta =\\frac{1}{2}\\left |\\begin{array}{lll} 1 & 2 & 1 \\\\ 7 & 5 & 1 \\\\ 2 & 3 & 1 \\end{array}\\right |$\n\n$=\\frac{1}{2}[1(5-3)-2(7-2)+1(21-10)]$\n\n$=\\frac{1}{2}[2-10+11]$\n\n$\\Delta$DEF $=\\frac{1}{2}(3)=\\frac{3}{2}$\n\n$\\Delta$ABC = 4$\\Delta$DEF $=4\\left (\\frac{3}{2}\\right )=6$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-1st-september-evening-shift/1ktob4v4k-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 1st September Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1ktob9kl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let f(x) be a polynomial of degree 3 such that\n $f(k)=-\\frac{2}{k}$ for k = 2, 3, 4, 5. Then the value of 52 $-$ 10f(10) is equal to :",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 26.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $g(x)=xf(x)+2$. Since $f$ has degree 3, $g$ is a polynomial of degree 4.\n\nFor $k=2,3,4,5$: $g(k)=k\\left (-\\dfrac{2}{k}\\right )+2=0$, so $2,3,4,5$ are the four roots of $g$:\n\n$xf(x)+2=λ(x-2)(x-3)(x-4)(x-5)$\n\nAt $x=0$: $2=λ(-2)(-3)(-4)(-5)=120λ\\Rightarrow λ=\\dfrac{1}{60}$.\n\nAt $x=10$: $10f(10)+2=\\dfrac{1}{60}(8)(7)(6)(5)=28\\Rightarrow 10f(10)=26$.\n\n$52-10f(10)=52-26=26$\n\nHence, the answer is 26.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktobhmq",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "All the arrangements, with or without meaning, of the word FARMER are written excluding any word that has two R appearing together. The arrangements are listed serially in the alphabetic order as in the English dictionary. Then the serial number of the word FARMER in this list is $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 77.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The letters of FARMER in alphabetical order are A, E, F, M, R, R, and a word is left out when its two R's are adjacent.\n\nWords beginning with A: the letters E, F, M, R, R give $\\dfrac{5!}{2!}=60$ arrangements, of which $4!=24$ have the two R's together (RR taken as one block). This leaves $60-24=36$.\n\nWords beginning with E: in the same way, $36$.\n\nWords beginning with FAE: M, R, R can follow as MRR, RMR or RRM; only RMR keeps the R's apart, so $1$ word (FAERMR).\n\nWords beginning with FAM: E, R, R can follow as ERR, RER or RRE; only RER is allowed, so $1$ word (FAMRER).\n\nWords beginning with FARE: M and R follow in $2!=2$ ways (FAREMR, FARERM), neither with the R's together.\n\nWords beginning with FARM: E, R follow as ER or RE, and the first of these is FARMER itself.\n\n$\\text{Serial number}=36+36+1+1+2+1=77$\n\nHence, the answer is 77.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktoc2aa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\vec{a}=2\\hat{i}-\\hat{j}+2\\widehat{k}$ and $\\vec{b}=\\hat{i}+2\\hat{j}-\\widehat{k}$. Let a vector $\\vec{v}$ be in the plane containing $\\vec{a}$ and $\\vec{b}$. If $\\vec{v}$ is perpendicular to the vector $3\\hat{i}+2\\hat{j}-\\widehat{k}$ and its projection on $\\vec{a}$ is 19 units, then $\\left |2\\vec{v}\\right |^{2}$ is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1494.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\vec{a}=2\\hat{i}-\\hat{j}+2\\widehat{k}$\n\n$\\vec{b}=\\hat{i}+2\\hat{j}-\\widehat{k}$\n\n$\\vec{c}=3\\hat{i}+2\\hat{j}-\\widehat{k}$\n\n$\\vec{v}=x\\vec{a}+y\\vec{b}$\n\n$\\vec{v}\\left (3\\hat{i}+2\\hat{j}-\\widehat{k}\\right )=0$\n\n$\\vec{v}.\\widehat{a}=19$\n\n$\\vec{v}=λ\\vec{c}\\times \\left (\\vec{a}\\times \\vec{b}\\right )$\n\n$\\vec{v}=λ\\left [\\left (\\vec{c}.\\vec{b}\\right )\\vec{a}-\\left (\\vec{c}.\\vec{a}\\right )\\vec{b}\\right ]$\n\n$=λ[(3+4+1)\\left (2\\hat{i}-\\hat{j}+2\\widehat{k}\\right )-(6-2-2)\\left (\\hat{i}+2\\hat{j}-\\widehat{k}\\right )$\n\n$=λ[16\\hat{i}-8\\hat{j}+16\\widehat{k}-2\\hat{i}-4\\hat{j}+2\\widehat{k}]$\n\n$\\vec{v}=λ\\left [14\\hat{i}-12\\hat{j}+18\\widehat{k}\\right ]$\n\n$λ[14\\hat{i}-12\\hat{j}+18\\widehat{k}].\\frac{\\left (2\\hat{i}-\\hat{j}+2\\widehat{k}\\right )}{\\sqrt{4+1+4}}=19$\n\n$λ\\frac{[28+12+36]}{3}=19$\n\n$λ\\left (\\frac{76}{3}\\right )=19$\n\n$4λ=3\\Rightarrow λ=\\frac{3}{4}$\n\n$\\left |2\\vec{v}\\right |^{2}=\\left |2\\times \\frac{3}{4}(14\\hat{i}-12\\hat{j}+18\\widehat{k})\\right |^{2}$\n\n$\\frac{9}{4}\\times 4\\left (7\\hat{i}-6\\hat{j}+9\\widehat{k}\\right )^{2}$\n\n$=9(49+36+81)$\n\n$=9(166)$\n\n$=1494$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktoc7wu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let [t] denote the greatest integer $\\leq$ t. The number of points where the function $f(x)=[x]\\left |x^{2}-1\\right |+\\sin \\left (\\frac{π}{[x]+3}\\right )-[x+1],x\\in (-2,2)$ is not continuous is $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=[x]\\left |x^{2}-1\\right |+\\sin \\left (\\frac{π}{[x]+3}\\right )-[x+1]$\n\n$f(x)=\\left \\{\\begin{array}{ll} -2\\left |x^{2}-1\\right |+1, & -2<x<-1 \\\\ -\\left |x^{2}-1\\right |+1, & -1\\leq x<0 \\\\ \\sin \\frac{π}{3}-1, & 0\\leq x<1 \\\\ \\left |x^{2}-1\\right |+\\frac{1}{\\sqrt{2}}-2, & 1\\leq x<2 \\end{array} \\right.$\n\n$\\therefore$ at x = -1, $\\lim _{x\\to -1^{-}}f(x)=1$ and $\\lim _{x\\to -1^{+}}f(x)=1$\n\nHence continuous at x = –1\n\nSimilarly check at x = 0,\n\n$\\lim _{x\\to 0^{-}}f(x)=0$ and $\\lim _{x\\to 0^{+}}f(x)=\\frac{\\sqrt{3}}{2}-1$\n\nSo, f(x) discontinuous\nand at x = 0\n\n$\\lim _{x\\to 1^{-}}f(x)=\\frac{\\sqrt{3}}{2}-1$ and $\\lim _{x\\to 1^{+}}f(x)=\\frac{1}{\\sqrt{2}}-2$\n\nSo, f(x) discontinuous\nand at x = 1\n\nHence 2 points of discontinuity.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1ktocacr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A man starts walking from the point P($-$3, 4), touches the x-axis at R, and then turns to reach at the point Q(0, 2). The man is walking at a constant speed. If the man reaches the point Q in the minimum time, then $50\\left ((PR)^{2}+(RQ)^{2}\\right )$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1250.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 1st September Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nFor minimum $(PR+RQ)$\n\n$R$ lies on $PQ^{'}$ (where $Q^{'}$ is image of $Q$ in $X$-axis)\n\n$\\Rightarrow$ Equation of $PQ^{'}$ is\n\n$2x+y+2=0\\Rightarrow R(-1,0)$\n\n$\\therefore$ $50(PR^{2} + RQ^{2})$\n\n= 50(20 + 5)\n\n= 50(25)\n\n= 1250",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 1st September Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-1st-september-evening-shift/1ktocacrw-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 1st September Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

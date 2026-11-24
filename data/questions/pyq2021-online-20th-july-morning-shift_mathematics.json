@@ -1,0 +1,921 @@
+[
+ {
+  "publicId": "PYQ-2021-1krps0tc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a be a positive real number such that $\\int\\limits _{0}^{a}e^{x-[x]}dx=10e-9$ where [ x ] is the greatest integer less than or equal to x. Then a is equal to:",
+  "options": [
+   "$10-\\log _{e}(1+e)$",
+   "$10+\\log _{e}2$",
+   "$10+\\log _{e}3$",
+   "$10+\\log _{e}(1+e)$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "a > 0\n\nLet $n\\leq a<n+1,n\\in W$\n\n $a=\\begin{array}{lll} [a] & + & \\{a\\} \\\\ ⇓ &  & ⇓ \\\\ G.I.F. &  & Fractionalpart \\end{array}$\n\nHere [ a ] = n\n\nNow, $\\int\\limits _{0}^{a}e^{x-[x]}dx=10e-9$\n\n$\\Rightarrow \\int\\limits _{0}^{n}e^{\\{x\\}}dx+\\int\\limits _{n}^{a}e^{x-[x]}dx=10e-9$\n\n$\\therefore$ $n\\int\\limits _{0}^{1}e^{x}dx+\\int\\limits _{n}^{a}e^{x-n}dx=10e-9$\n\n$\\Rightarrow n(e-1)+(e^{a-n}-1)=10e-9$\n\n$\\therefore$ n = 0 and ${a} = \\log _{e} 2$\n\nSo, $a=[a]+\\{a\\}=(10+\\log _{e}2)$\n\n$\\Rightarrow$ Option (2) is correct.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpt023",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The mean of 6 distinct observations is 6.5 and their variance is 10.25. If 4 out of 6 observations are 2, 4, 5 and 7, then the remaining two observations are :",
+  "options": [
+   "10, 11",
+   "3, 18",
+   "8, 13",
+   "1, 20"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let other two numbers be a, (21 $-$ a)\n\nNow,\n\n$10.25=\\frac{(4+16+25+49+a^{2}+(21-a)^{2}}{6}-(6.5)^{2}$\n\n(Using formula for variance)\n\n$\\Rightarrow 6(10.25)+6(6.5)^{2}=94+a^{2}+(21-a)^{2}$\n\n$\\Rightarrow a^{2}+(21-a)^{2}=221$\n\n$\\therefore$ a = 10 and (21 $-$ a) = 21 $-$ 10 = 11\n\nSo, remaining two observations are 10, 11.\n\n$\\Rightarrow$ Option (1) is correct.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpt3zg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of the integral $\\int\\limits _{-1}^{1}\\log _{e}(\\sqrt{1-x}+\\sqrt{1+x})dx$ is equal to:",
+  "options": [
+   "$\\frac{1}{2}\\log _{e}2+\\frac{π}{4}-\\frac{3}{2}$",
+   "$2\\log _{e}2+\\frac{π}{4}-1$",
+   "$\\log _{e}2+\\frac{π}{2}-1$",
+   "$2\\log _{e}2+\\frac{π}{2}-\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{-1}^{1}\\log _{e}(\\sqrt{1-x}+\\sqrt{1+x})dx$\n\nWe know, $\\int\\limits _{-a}^{a}f(x)dx=2\\int\\limits _{0}^{a}f(x)dx$\n\nSo, $2\\int\\limits _{0}^{1}\\log _{e}(\\sqrt{1-x}+\\sqrt{1+x})dx$\n\n$l=2\\int\\limits _{0}^{1}\\log _{e}(\\sqrt{1-x}+\\sqrt{1+x}).1dx$\n\n$\\Rightarrow \\frac{l}{2}=\\log _{e}(\\sqrt{1-x}+\\sqrt{1+x}).x]_{0}^{1}-\\int\\limits _{0}^{1}\\frac{\\frac{1}{2\\sqrt{1+x}}-\\frac{1}{2\\sqrt{1-x}}}{\\sqrt{1-x}+\\sqrt{1+x}}.xdx$\n\n$\\Rightarrow \\frac{l}{2}=\\log _{e}\\sqrt{2}-\\frac{1}{2}\\int\\limits _{0}^{1}\\left (\\frac{\\sqrt{1-x}-\\sqrt{1+x}}{\\sqrt{1-x}+\\sqrt{1+x}}\\right )\\frac{x}{\\sqrt{1-x^{2}}}dx$\n\n$\\Rightarrow \\frac{l}{2}=\\log _{e}\\sqrt{2}-\\frac{1}{2}\\int\\limits _{0}^{1}\\left (\\frac{(1-x)+(1+x)-2\\sqrt{1-x^{2}}}{(1-x)-(1+x)}\\right )\\frac{x}{\\sqrt{1-x^{2}}}dx$\n\n$\\Rightarrow \\frac{l}{2}=\\log _{e}\\sqrt{2}-\\frac{1}{2}\\int\\limits _{0}^{1}\\frac{2(1-\\sqrt{1-x^{2}})}{-2x}.\\frac{x}{\\sqrt{1-x^{2}}}dx$\n\n$\\Rightarrow \\frac{l}{2}=\\log _{e}\\sqrt{2}+\\frac{1}{2}\\int\\limits _{0}^{1}\\left (\\frac{1}{\\sqrt{1-x^{2}}}-1\\right )dx$\n\n$\\Rightarrow \\frac{l}{2}=\\log _{e}\\sqrt{2}+\\frac{1}{2}[\\sin ^{-1}x-x]_{0}^{1}$\n\n$\\Rightarrow \\frac{l}{2}=\\log _{e}\\sqrt{2}+\\frac{1}{2}\\left (\\frac{π}{2}-1\\right )$\n\n$\\therefore$ $l=\\log _{e}2+\\frac{π}{2}-1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpth9p",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $α$ and $β$ are the distinct roots of the equation $x^{2}+(3)^{1/4}x+3^{1/2}=0$, then the value of $α^{96}(α^{12}-1)+β^{96}(β^{12}-1)$ is equal to :",
+  "options": [
+   "56 $\\times$ $3^{25}$",
+   "56 $\\times$ $3^{24}$",
+   "52 $\\times$ $3^{24}$",
+   "28 $\\times$ $3^{25}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "As, $(α^{2}+\\sqrt{3})=-(3)^{1/4}.α$\n\n$\\Rightarrow (α^{4}+2\\sqrt{3}α^{2}+3)=\\sqrt{3}α^{2}$ (On squaring)\n\n$\\therefore$ $(α^{4}+3)=(-)\\sqrt{3}α^{2}$\n\n$\\Rightarrow α^{8}+6α^{4}+9=3α^{4}$ (Again squaring)\n\n$\\therefore$ $α^{8}+3α^{4}+9=0$\n\n$\\Rightarrow α^{8}=-9-3α^{4}$\n\n(Multiply by $α^{4}$)\n\nSo, $α^{12}=-9α^{4}-3α^{8}$\n\n$\\therefore$ $α^{12}=-9α^{4}-3(-9-3α^{4})$\n\n$\\Rightarrow α^{12}=-9α^{4}+27+9α^{4}$\n\nHence, $α^{12}=27$\n\n$\\Rightarrow (α^{12})^{8}=(27)^{8}$\n\n$\\Rightarrow α^{96}=(3)^{24}$\n\nSimilarly $β^{96}=(3)^{24}$\n\n$\\therefore$ $α^{96}(α^{12}-1)+β^{96}(β^{12}-1)=(3)^{24}\\times 52$\n\n$\\Rightarrow$ Option (3) is correct.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krptnjc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=\\left [\\begin{array}{ll} 2 & 3 \\\\ a & 0 \\end{array}\\right ]$, a$\\in$R be written as P + Q where P is a symmetric matrix and Q is skew symmetric matrix. If det(Q) = 9, then the modulus of the sum of all possible values of determinant of P is equal to :",
+  "options": [
+   "36",
+   "24",
+   "45",
+   "18"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A=\\left [\\begin{array}{ll} 2 & 3 \\\\ a & 0 \\end{array}\\right ]$, $A^{T}=\\left [\\begin{array}{ll} 2 & a \\\\ 3 & 0 \\end{array}\\right ]$\n\n$A=\\frac{A+A^{T}}{2}+\\frac{A-A^{T}}{2}$\n\nLet $P=\\frac{A+A^{T}}{2}$ and $Q=\\frac{A-A^{T}}{2}$\n\n$Q=\\left (\\begin{array}{ll} 0 & \\frac{3-a}{2} \\\\ \\frac{a-3}{2} & 0 \\end{array}\\right )$\n\nDet (Q) = 9\n\n$0-\\left (\\frac{3-a}{2}\\right )\\left (\\frac{a-3}{2}\\right )=9$\n\n$\\Rightarrow \\left (\\frac{a-3}{2}\\right )^{2}=9\\Rightarrow (a-3)^{2}=36$\n\n$a-3=\\pm 6\\Rightarrow a=9,-3$\n\n$P=\\left [\\begin{array}{ll} 2 & \\frac{a+3}{2} \\\\ \\frac{a+3}{2} & 0 \\end{array}\\right ]$\n\n$P=\\left [\\begin{array}{ll} 2 & 6 \\\\ 6 & 0 \\end{array}\\right ]$ or $\\left [\\begin{array}{ll} 2 & 0 \\\\ 0 & 0 \\end{array}\\right ]$\n\n | P | = - 36 or 0\n\n$\\therefore$ | $-$36 + 0 | = 36",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpubj4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If z and $ω$ are two complex numbers such that $|zω|=1$ and $\\arg (z)-\\arg (ω)=\\frac{3π}{2}$, then $\\arg \\left (\\frac{1-2z–ω}{1+3z–ω}\\right )$ is :\n\n(Here arg(z) denotes the principal argument of complex number z)",
+  "options": [
+   "$\\frac{π}{4}$",
+   "$-\\frac{3π}{4}$",
+   "$-\\frac{π}{4}$",
+   "$\\frac{3π}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "As $|zω|=1$\n\n$\\Rightarrow$ If $|z|=r$, then $|ω|=\\frac{1}{r}$\n\nLet $\\arg (z)=θ$\n\n$\\therefore$ $\\arg (ω)=\\left (θ-\\frac{3π}{2}\\right )$\n\nSo, $z=re^{iθ}$\n\n$\\Rightarrow z–=re^{iθ}$\n\n$ω=\\frac{1}{r}e^{i\\left (θ-\\frac{3π}{2}\\right )}$\n\nNow, consider\n\n$\\frac{1-2z–ω}{1+3z–ω}=\\frac{1-2e^{i\\left (-\\dfrac{3π}{2}\\right )}}{1+3e^{i\\left (-\\dfrac{3π}{2}\\right )}}=\\left (\\frac{1-2i}{1+3i}\\right )$\n\n$=\\frac{(1-2i)(1-3i)}{(1+3i)(1-3i)}=-\\frac{1}{2}(1+i)$\n\n$\\therefore$ $prin\\arg \\left (\\frac{1-2z–ω}{1+3z–ω}\\right )$\n\n$=prin\\arg \\left (\\frac{1-2z–ω}{1+3z–ω}\\right )$\n\n$=\\left (-\\frac{1}{2}(1+i)\\right )$\n\n$=-\\left (π-\\frac{π}{4}\\right )=\\frac{-3π}{4}$\n\nSo, option (2) is correct.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpv18s",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let [ x ] denote the greatest integer $\\leq$ x, where x $\\in$ R. If the domain of the real valued function $f(x)=\\sqrt{\\frac{|[x]|-2}{|[x]|-3}}$ is ($-$ $\\infty$, a) $\\cup$ [b, c) $\\cup$ [4, $\\infty$), a < b < c, then the value of a + b + c is :",
+  "options": [
+   "8",
+   "1",
+   "$-$2",
+   "$-$3"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For domain,\n\n$\\frac{|[x]|-2}{|[x]|-3}$ $\\geq$ 0\n\nCase I :\n\nWhen $|[x]|-2$ $\\geq$ 0\n\nand $|[x]|-3$ > 0\n\n$\\therefore$ x $\\in$ ($-$ $\\infty$, $-$3) $\\cup$ [4, $\\infty$) ...... (1)\n\nCase II :\n\nWhen $|[x]|-2$ $\\leq$ 0\n\nand $|[x]|-3$ < 0\n\n$\\therefore$ x $\\in$ [$-$2, 3) ..... (2)\n\nSo, from (1) and (2) we get\n\nDomain of function\n\n= ($-$ $\\infty$, $-$3) $\\cup$ [$-$2, 3) $\\cup$ [4, $\\infty$)\n\n$\\therefore$ (a + b + c) = $-$3 + ($-$2) + 3 = $-$2 (a < b < c)\n\n$\\Rightarrow$ Option (3) is correct.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpvi53",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution of the differential equation $x\\tan \\left (\\frac{y}{x}\\right )dy=\\left (y\\tan \\left (\\frac{y}{x}\\right )-x\\right )dx$, $-1\\leq x\\leq 1$, $y\\left (\\frac{1}{2}\\right )=\\frac{π}{6}$. Then the area of the region bounded by the curves x = 0, $x=\\frac{1}{\\sqrt{2}}$ and y = y(x) in the upper half plane is :",
+  "options": [
+   "$\\frac{1}{8}(π-1)$",
+   "$\\frac{1}{12}(π-3)$",
+   "$\\frac{1}{4}(π-2)$",
+   "$\\frac{1}{6}(π-1)$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The equation gives\n\n$\\dfrac{dy}{dx}=\\dfrac{y\\tan (y/x)-x}{x\\tan (y/x)}=\\dfrac{y}{x}-\\cot \\left (\\dfrac{y}{x}\\right )$\n\nWith $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$, so $x\\dfrac{dv}{dx}=-\\cot v$, that is $\\tan v\\qquad dv=-\\dfrac{dx}{x}$.\n\nIntegrating, $\\ln |\\sec v|=-\\ln |x|+c$. At $x=\\dfrac{1}{2}$, $v=\\dfrac{π/6}{1/2}=\\dfrac{π}{3}$ and $\\sec v=2$, so $\\ln 2=\\ln 2+c$ and $c=0$.\n\nHence $\\cos \\left (\\dfrac{y}{x}\\right )=|x|$, and on $0<x\\leq \\dfrac{1}{\\sqrt{2}}$ the solution through $\\left (\\dfrac{1}{2},\\dfrac{π}{6}\\right )$ is $y=x\\cos ^{-1}x\\geq 0$, which lies in the upper half plane.\n\n$\\text{Area}=\\int\\limits _{0}^{1/\\sqrt{2}}x\\cos ^{-1}xdx=\\left [\\dfrac{x^{2}}{2}\\cos ^{-1}x\\right ]_{0}^{1/\\sqrt{2}}+\\dfrac{1}{2}\\int\\limits _{0}^{1/\\sqrt{2}}\\dfrac{x^{2}}{\\sqrt{1-x^{2}}}dx$\n\nThe first term is $\\dfrac{1}{4}\\times \\dfrac{π}{4}=\\dfrac{π}{16}$. With $x=\\sin θ$, $\\int\\limits _{0}^{1/\\sqrt{2}}\\dfrac{x^{2}}{\\sqrt{1-x^{2}}}dx=\\int\\limits _{0}^{π/4}\\sin ^{2}θdθ=\\left [\\dfrac{θ}{2}-\\dfrac{\\sin 2θ}{4}\\right ]_{0}^{π/4}=\\dfrac{π}{8}-\\dfrac{1}{4}$.\n\n$\\text{Area}=\\dfrac{π}{16}+\\dfrac{π}{16}-\\dfrac{1}{8}=\\dfrac{π-1}{8}$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpwaqe",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=[a_{ij}]$ be a 3 $\\times$ 3 matrix, where $a_{ij}=\\left \\{\\begin{array}{lll} 1 & , & ifi=j \\\\ -x & , & if|i-j|=1 \\\\ 2x+1 & , & otherwise. \\end{array} \\right.$\n\nLet a function f : R $\\to$ R be defined as f(x) = det(A). Then the sum of maximum and minimum values of f on R is equal to:",
+  "options": [
+   "$-\\frac{20}{27}$",
+   "$\\frac{88}{27}$",
+   "$\\frac{20}{27}$",
+   "$-\\frac{88}{27}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$A=\\left [\\begin{array}{lll} 1 & -x & 2x+1 \\\\ -x & 1 & -x \\\\ 2x+1 & -x & 1 \\end{array}\\right ]$\n\n$|A|=4x^{3}-4x^{2}-4x=f(x)$\n\n$f^{'}(x)=4(3x^{2}-2x-1)=0$\n\n$\\Rightarrow x=1;x=\\frac{-1}{3}$\n\n$\\therefore$ $f(1)=-4;f\\left (-\\frac{1}{3}\\right )=\\frac{20}{27}$\n\nSum $=-4+\\frac{20}{7}=-\\frac{88}{27}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpwpsl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of real roots of the equation $\\tan ^{-1}\\sqrt{x(x+1)}+\\sin ^{-1}\\sqrt{x^{2}+x+1}=\\frac{π}{4}$ is :",
+  "options": [
+   "1",
+   "2",
+   "4",
+   "0"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\tan ^{-1}\\sqrt{x(x+1)}+\\sin ^{-1}\\sqrt{x^{2}+x+1}=\\frac{π}{4}$\n\nFor equation to be defined,\n\n$x^{2} + x$ $\\geq$ 0\n\n$\\Rightarrow$ $x^{2} + x + 1$ $\\geq$ 1\n\n$\\therefore$ Only possibility that the equation is defined \n\n$x^{2} + x = 0$ $\\Rightarrow$ x = 0; x = $-$1\n\nNone of these values satisfy\n\n$\\therefore$ No of roots = 0",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpwxwm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution of the differential equation $e^{x}\\sqrt{1-y^{2}}dx+\\left (\\frac{y}{x}\\right )dy=0$, y(1) = $-$1. Then the value of $(y(3))^{2}$ is equal to :",
+  "options": [
+   "1 $-$ $4e^{3}$",
+   "1 $-$ $4e^{6}$",
+   "$1 + 4e^{3}$",
+   "$1 + 4e^{6}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$e^{x}\\sqrt{1-y^{2}}dx+\\frac{y}{x}dy=0$\n\n$\\Rightarrow e^{x}\\sqrt{1-y^{2}}dx=\\frac{-y}{x}dy$\n\n$\\Rightarrow \\int \\frac{-y}{\\sqrt{1-y^{2}}}dy=\\int\\limits _{II}^{e^{x}}{}_{1}^{x}dx$\n\n$\\Rightarrow \\sqrt{1-y^{2}}=e^{x}(x-1)+c$\n\nGiven : At x = 1, y = $-$1\n\n$\\Rightarrow$ 0 = 0 + c $\\Rightarrow$ c = 0\n\n$\\therefore$ $\\sqrt{1-y^{2}}=e^{x}(x-1)$\n\nAt x = 3 \n\n$1-y^{2}=(e^{3}2)^{2}\\Rightarrow y^{2}=1-4e^{6}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpzb31",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let 'a' be a real number such that the function $f(x) = ax^{2} + 6x$ $-$ 15, x $\\in$ R is increasing in $\\left (-\\infty ,\\frac{3}{4}\\right )$ and decreasing in $\\left (\\frac{3}{4},\\infty \\right )$. Then the function $g(x) = ax^{2}$ $-$ 6x + 15,  x$\\in$R has a :",
+  "options": [
+   "local maximum at x = $-$ $\\frac{3}{4}$",
+   "local minimum at x = $-\\frac{3}{4}$",
+   "local maximum at x = $\\frac{3}{4}$",
+   "local minimum at x = $\\frac{3}{4}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{-B}{2A}=\\frac{3}{4}$\n\n$\\Rightarrow \\frac{-(6)}{2a}=\\frac{3}{4}$\n\n$\\Rightarrow a=\\frac{-6\\times 4}{6}\\Rightarrow a=-4$\n\n$\\therefore$ $g(x)=-4x^{2}-6x+15$\n\nLocal max. at $x=\\frac{-B}{2A}=-\\frac{(-6)}{2(-4)}$\n\n$=\\frac{-3}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpzg12",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a function f : R $\\to$ R be defined as $f(x)=\\left \\{\\begin{array}{lll} \\sin x-e^{x} & if & x\\leq 0 \\\\ a+[-x] & if & 0<x<1 \\\\ 2x-b & if & x\\geq 1 \\end{array} \\right.$ \n\nwhere [ x ] is the greatest integer less than or equal to x. If f is continuous on R, then (a + b) is equal to:",
+  "options": [
+   "4",
+   "3",
+   "2",
+   "5"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Continuous x = 0\n\n$f(0^{+}) = f(0^{-})$ $\\Rightarrow$ a $-$ 1 = 0 $-$ $e^{0}$\n\n$\\Rightarrow$ a = 0\n\nContinuous at x  = 1\n\n$f(1^{+}) = f(1^{-})$\n\n$\\Rightarrow$ 2(1) $-$ b = a + ($-$1)\n\n$\\Rightarrow$ b = 2 $-$ a + 1 $\\Rightarrow$ b = 3\n\n$\\therefore$ a + b = 3",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpzjgt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Words with or without meaning are to be formed using all the letters of the word EXAMINATION. The probability that the letter M appears at the fourth position in any such word is :",
+  "options": [
+   "$\\frac{1}{66}$",
+   "$\\frac{1}{11}$",
+   "$\\frac{1}{9}$",
+   "$\\frac{2}{11}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "AAEIIMNNOTX\n\n----------------M----------------\n\nTotal words with M at fourth Place = $\\frac{10!}{2!2!2!}$\n\nTotal words = $\\frac{11!}{2!2!2!}$\n\nRequired probability = $\\frac{10!}{11!}$ = $\\frac{1}{11}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krpzo9s",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The probability of selecting integers a$\\in$[$-$ 5, 30] such that $x^{2} + 2(a + 4)x$ $-$ 5a + 64 > 0, for all x$\\in$R, is :",
+  "options": [
+   "$\\frac{7}{36}$",
+   "$\\frac{2}{9}$",
+   "$\\frac{1}{6}$",
+   "$\\frac{1}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "D < 0\n\n$\\Rightarrow$ $4(a + 4)^{2}$ $-$ 4($-$5a + 64) < 0\n\n$\\Rightarrow$ $a^{2} + 16 + 8a + 5a$ $-$ 64 < 0\n\n$\\Rightarrow$ $a^{2} + 13a$ $-$ 48 < 0\n\n$\\Rightarrow$ (a + 16) (a $-$ 3) < 0\n\n$\\Rightarrow$ a $\\in$ ($-$16, 3)\n\n$\\therefore$ Possible a : {$-$5, $-$4, ............., 3}\n\n$\\therefore$ Required probability = $\\frac{8}{36}$ = $\\frac{2}{9}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krq02ye",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\vec{a}$, $\\vec{b}$, $\\vec{c}$ be three mutually perpendicular vectors of the same magnitude and equally inclined at an angle $θ$, with the vector $\\vec{a}$ + $\\vec{b}$ + $\\vec{c}$. Then $36\\cos ^{2}2θ$ is equal to $___________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left |\\vec{a}+\\vec{b}+\\vec{c}\\right |^{2}=\\left |\\vec{a}\\right |^{2}+\\left |\\vec{b}\\right |^{2}+\\left |\\vec{c}\\right |^{2}+2(\\vec{a}.\\vec{b}+\\vec{a}.\\vec{c}+\\vec{b}.\\vec{c})=3$\n\n$\\Rightarrow \\left |\\vec{a}+\\vec{b}+\\vec{c}\\right |=\\sqrt{3},\\vec{a}.(\\vec{a}+\\vec{b}+\\vec{c})=\\left |\\vec{a}+\\vec{b}+\\vec{c}\\right |\\cos θ$\n\n$\\Rightarrow 1=\\sqrt{3}\\cos θ$\n\n$\\Rightarrow \\cos 2θ=-\\frac{1}{3}$\n\n$\\Rightarrow 36\\cos ^{2}2θ=4$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krq0auj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $A=⎛⎝⎜\\begin{array}{lll} 1 & -1 & 0 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 1 \\end{array}⎞⎠⎟$ and $B = 7A^{20}$ $-$ $20A^{7} + 2I$, where I is an identity matrix of order 3 $\\times$ 3. If B = [$b_{ij}$], then $b_{13}$is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 910.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $A=⎛⎝⎜\\begin{array}{lll} 1 & -1 & 0 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 1 \\end{array}⎞⎠⎟=I+C$\n\nwhere, $I=⎛⎝⎜\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{array}⎞⎠⎟,C=⎛⎝⎜\\begin{array}{lll} 0 & -1 & 0 \\\\ 0 & 0 & -1 \\\\ 0 & 0 & 0 \\end{array}⎞⎠⎟$\n\n$C^{2}=⎛⎝⎜\\begin{array}{lll} 0 & 0 & 1 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array}⎞⎠⎟,$\n\n$C^{3}=⎛⎝⎜\\begin{array}{lll} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array}⎞⎠⎟=C^{4}=C^{5}=........$\n\n$B=7A^{20}-20A^{7}+2I$\n\n$=7(I+C)^{20}+20(I+C)^{7}+2I$\n\n$=7(I+20C+{}^{20}C_{2}C^{2})-20(I+7C+{}^{7}C_{2}C^{2})+2I$\n\n So\n\n$b_{13}=7\\times {}^{20}C_{2}C^{2}-20\\times {}^{7}C_{2}=910$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krq0nwd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of rational terms in the binomial expansion of $\\left (4^{\\frac{1}{4}}+5^{\\frac{1}{6}}\\right )^{120}$ is $_______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 21.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (4^{\\frac{1}{4}}+5^{\\frac{1}{6}}\\right )^{120}$\n\n$T_{r+1}={}^{120}C_{r}(2^{1/2})^{120-r}(5)^{r/6}$\n\nfor rational terms r = 6$λ$ \n\n0 $\\leq$ r $\\leq$ 120\n\nSo total no of terms are 21.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krq0xpc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the shortest distance between the lines $\\vec{r_{1}}=α\\hat{i}+2\\hat{j}+2\\widehat{k}+λ(\\hat{i}-2\\hat{j}+2\\widehat{k})$, $λ$ $\\in$ R, $α$ > 0 and $\\vec{r_{2}}=-4\\hat{i}-\\widehat{k}+μ(3\\hat{i}-2\\hat{j}-2\\widehat{k})$, $μ$ $\\in$ R is 9, then $α$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "If $\\vec{r}=\\vec{a}+λ\\vec{b}$ and $\\vec{r}=\\vec{c}+λ\\vec{d}$ then shortest distance between two lines is \n\n$L=\\frac{(\\vec{a}-\\vec{c}).(\\vec{b}\\times \\vec{d})}{|b\\times d|}$\n\n$\\therefore$ $\\vec{a}-\\vec{c}=((α+4)\\hat{i}+2\\hat{j}+3\\widehat{k})$\n\n$\\frac{\\vec{b}\\times \\vec{d}}{|b\\times d|}=\\frac{(2\\hat{i}+2\\hat{j}+\\widehat{k})}{3}$\n\n$\\therefore$ $((α+4)\\hat{i}+2\\hat{j}+3\\widehat{k}).\\frac{(2\\hat{i}+2\\hat{j}+\\widehat{k})}{3}=9$\n\nor $α$ = 6",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krq14l9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let T be the tangent to the ellipse E : $x^{2} + 4y^{2} = 5$ at the point P(1, 1). If the area of the region bounded by the tangent T, ellipse E, lines x = 1 and x = $\\sqrt{5}$ is $α\\sqrt{5}$ + $β$ + $γ$ $\\cos ^{-1}\\left (\\frac{1}{\\sqrt{5}}\\right )$, then |$α$  + $β$ + $γ$| is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.25,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\nE : $x^{2} + 4y^{2} = 5$\n\nTangent at P : x + 4y = 5\n\nRequired area\n\n$=\\int\\limits _{1}^{\\sqrt{5}}\\left (\\frac{5-x}{4}-\\frac{\\sqrt{5-x^{2}}}{2}\\right )dx$\n\n$=\\left [\\frac{5x}{4}-\\frac{x^{2}}{8}-\\frac{x}{4}\\sqrt{5-x^{2}}-\\frac{5}{2}\\sin ^{-1}\\frac{x}{\\sqrt{5}}\\right ]_{1}^{\\sqrt{5}}$\n\n$=\\frac{5}{4}\\sqrt{5}-\\frac{5}{4}-\\frac{5}{4}\\cos ^{-1}\\left (\\frac{1}{\\sqrt{5}}\\right )$\n\nIf we assume $α$, $β$, $γ$, $\\in$ Q (Not given in question) then $α$ = $\\frac{5}{4}$, $β$ = $-\\frac{5}{4}$ & $γ$ = $-\\frac{5}{4}$\n\n|$α$ + $β$ + $γ$| = 1.25",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-20th-july-morning-shift/1krq14l9w-0.png",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 20th July Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1krq1a1s",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let a, b, c, d in arithmetic progression with common difference $λ$. If $\\left |\\begin{array}{lll} x+a-c & x+b & x+a \\\\ x-1 & x+c & x+b \\\\ x-b+d & x+d & x+c \\end{array}\\right |=2$, then value of $λ^{2}$ is equal to $________________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left |\\begin{array}{lll} x+a-c & x+b & x+a \\\\ x-1 & x+c & x+b \\\\ x-b+d & x+d & x+c \\end{array}\\right |=2$\n\n$C_{2}\\to C_{2}-C_{3}$\n\n$\\Rightarrow \\left |\\begin{array}{lll} x-2λ & λ & x+a \\\\ x-1 & λ & x+b \\\\ x+2λ & λ & x+c \\end{array}\\right |=2$\n\n$R_{2}\\to R_{2}-R_{1},R_{3}\\to R_{3}-R_{1}$\n\n$\\Rightarrow \\left |\\begin{array}{lll} x-2λ & 1 & x+a \\\\ 2λ-1 & 0 & λ \\\\ 4λ & 0 & 2λ \\end{array}\\right |=2$\n\n$\\Rightarrow 1(4λ^{2}-4λ^{2}+2λ)=2$\n\n$\\Rightarrow λ^{2}=1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krq1dvg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "There are 15 players in a cricket team, out of which 6 are bowlers, 7 are batsman and 2 are wicketkeepers. The number of ways, a team of 11 players be selected from them so as to include at least 4 bowlers, 5 batsman and 1 wicketkeeper, is $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 777.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "15 : Players\n\n6 : Bowlers\n\n7 : Batsman\n\n2 : Wicket keepers\n\nTotal number of ways for :\n\nat least 4 bowler, 5 batsman & 1 wicket keeper\n\n= ${}^{6}C_{4}({}^{7}C_{6}\\times {}^{2}C_{1}+{}^{7}C_{5}\\times {}^{2}C_{2})+{}^{6}C_{5}\\times {}^{7}C_{5}\\times {}^{2}C_{1}$\n\n$=777$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krq1tmc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the value of $\\lim _{x\\to 0}(2-\\cos x\\sqrt{\\cos 2x})^{\\left (\\frac{x+2}{x2}\\right )}$ is equal to $e^{a}$, then a is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 20th July Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{x\\to 0}(2-\\cos x\\sqrt{\\cos 2x})^{\\frac{x+2}{x2}}$\n\nform : $1^{$\\infty} $=e^{\\lim _{x\\to 0}\\left (\\frac{1-\\cos x\\sqrt{\\cos 2x}}{x2}\\right )\\times (x+2)}$\n\nNow, $\\lim _{x\\to 0}\\frac{1-\\cos x\\sqrt{\\cos 2x}}{x^{2}}=\\lim _{x\\to 0}\\frac{\\sin x\\sqrt{\\cos 2x}-\\cos x\\times \\frac{1}{2\\sqrt{\\cos 2x}}\\times (-2\\sin 2x)}{2x}$ (by L' Hospital Rule)\n\n$\\lim _{x\\to 0}\\frac{\\sin x\\cos 2x+\\sin 2x.\\cos x}{2x}=\\frac{1}{2}+1=\\frac{3}{2}$\n\nSo, $e^{\\lim _{x\\to 0}\\left (\\frac{1-\\cos x\\sqrt{\\cos 2x}}{x2}\\right )(x+2)}$\n\n$=e^{\\frac{3}{2}\\times 2}=e^{3}$\n\n$\\Rightarrow$ a = 3",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 20th July Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

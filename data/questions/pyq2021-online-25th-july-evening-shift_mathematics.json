@@ -1,0 +1,935 @@
+[
+ {
+  "publicId": "PYQ-2021-1krz59pd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The sum of all those terms which are rational numbers in the \n\nexpansion of $(2^{1/3} + 3^{1/4})^{12}$ is :",
+  "options": [
+   "89",
+   "27",
+   "35",
+   "43"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T_{r+1}={}^{12}C_{r}\\left (2^{1/3}\\right )^{r}.\\left (3^{1/4}\\right )^{12-r}$\n\n$T_{r + 1}$ will be rational number when r = 0, 3, 6, 9, 12 & r = 0, 4, 8, 12\n\n$\\Rightarrow$ r = 0, 12\n\n$T_{1} + T_{13} = 1$ $\\times$ $3^{3} + 1$ $\\times$ $2^{4}$ $\\times$ 1\n\n= 27 + 16 = 43",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krz5gy7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The first of the two samples in a group has 100 items with mean 15 and standard deviation 3. If the whole group has 250 items with mean 15.6 and standard deviation $\\sqrt{13.44}$, then the standard deviation of the second sample is :",
+  "options": [
+   "8",
+   "6",
+   "4",
+   "5"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$n_{1} = 100$\n\nm = 250\n\n$X–_{1}$ = 15\n\n$X–$ = 15.6\n\n$V_{1}(x) = 9$\n\nVar(x) = 13.44\n\n$σ^{2}=\\frac{n_{1}σ_{1}^{2}+n_{2}σ_{2}^{2}}{n_{1}+n_{2}}+\\frac{n_{1}n_{2}}{(n_{1}+n_{2})^{2}}(x–_{1}-x–_{2})^{2}$\n\n$n_{2} = 150$, $x–_{2}$ $= 16, V_{2}(x) =$ $σ_{2}$\n\n$13.44=\\frac{100\\times 9+150\\times σ_{2}^{2}}{250}+\\frac{100\\times 150}{(250)^{2}}\\times 1$\n\n$\\Rightarrow$ $σ_{2}^{2}$ = 16 $\\Rightarrow$ $σ_{2}$ = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzlm5l",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $f(x)=\\left \\{\\begin{array}{ll} \\int\\limits _{0}^{x}(5+|1-t|)dt, & x>2 \\\\ 5x+1, & x\\leq 2 \\end{array} \\right.$, then",
+  "options": [
+   "f(x) is not continuous at x = 2",
+   "f(x) is everywhere differentiable",
+   "f(x) is continuous but not differentiable at x = 2",
+   "f(x) is not differentiable at x = 1"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\int\\limits _{0}^{1}(5+(1-t))dt+\\int\\limits _{1}^{x}(5+(t-1))dt$\n\n$=6-\\frac{1}{2}+\\left (4t+\\frac{t^{2}}{2}\\right )\\left |_{1}^{x} \\right.$\n\n$=\\frac{11}{2}+4x+\\frac{x^{2}}{2}-4-\\frac{1}{2}$\n\n$=\\frac{x^{2}}{2}+4x-1$\n\n$f(2^{+})=2+8+1=11$\n\n$f(2)=f(2^{-})=5\\times 2+1=11$\n\n$\\Rightarrow$ continuous at x = 2\n\nClearly differentiable at x = 1\n\nLf' (2) = 5\n\nRf' (2) = 6\n\n$\\Rightarrow$ Not differentiable at x = 2",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzlrpj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the greatest value of the term independent of 'x' in the \n\nexpansion of $\\left (x\\sin α+a\\frac{\\cos α}{x}\\right )^{10}$ is $\\frac{10!}{(5!)^{2}}$, then the value of 'a' is equal to :",
+  "options": [
+   "$-$1",
+   "1",
+   "$-$2",
+   "2"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T_{r+1}={}^{10}C_{r}(x\\sin α)^{10-r}\\left (\\frac{a\\cos α}{x}\\right )^{r}$\n\nr = 0, 1, 2, ......., 10\n\n$T_{r + 1}$ will be independent of x when 10 $-$ 2r = 0 $\\Rightarrow$ r = 5\n\n$T_{6}={}^{10}C_{5}(x\\sin α)^{5}\\times \\left (\\frac{a\\cos α}{x}\\right )^{5}$\n\n$={}^{10}C_{5}\\times a^{5}\\times \\frac{1}{2^{5}}(\\sin 2α)^{5}$\n\nwill be greatest when sin2$α$ = 1\n\n$\\Rightarrow {}^{10}C_{5}\\frac{a^{5}}{2^{5}}={}^{10}C_{5}\\Rightarrow a=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzm14o",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\cot \\frac{π}{24}$ is :",
+  "options": [
+   "$\\sqrt{2}+\\sqrt{3}+2-\\sqrt{6}$",
+   "$\\sqrt{2}+\\sqrt{3}+2+\\sqrt{6}$",
+   "$\\sqrt{2}-\\sqrt{3}-2+\\sqrt{6}$",
+   "$3\\sqrt{2}-\\sqrt{3}-\\sqrt{6}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\cot θ=\\frac{1+\\cos 2θ}{\\sin 2θ}=\\frac{1+\\left (\\frac{\\sqrt{3}+1}{2\\sqrt{2}}\\right )}{\\left (\\frac{\\sqrt{3}-1}{2\\sqrt{2}}\\right )}$\n\n$θ=\\frac{π}{24}$\n\n$\\Rightarrow \\cot \\left (\\frac{π}{24}\\right )=\\frac{1+\\left (\\frac{\\sqrt{3}+1}{2\\sqrt{2}}\\right )}{\\left (\\frac{\\sqrt{3}-1}{2\\sqrt{2}}\\right )}$\n\n$=\\frac{\\left (2\\sqrt{2}+\\sqrt{3}+1\\right )}{\\left (\\sqrt{3}-1\\right )}\\times \\frac{\\left (\\sqrt{3}+1\\right )}{\\left (\\sqrt{3}+1\\right )}$\n\n$=\\frac{2\\sqrt{6}+2\\sqrt{2}+3+\\sqrt{3}+\\sqrt{3}+1}{2}$\n\n$=\\sqrt{6}+\\sqrt{2}+\\sqrt{3}+2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzmg68",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The lowest integer which is greater \n\nthan $\\left (1+\\frac{1}{10^{100}}\\right )^{10^{100}}$ is $______________$.",
+  "options": [
+   "3",
+   "4",
+   "2",
+   "1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $P=\\left (1+\\frac{1}{10^{100}}\\right )^{10^{100}}$\n\nLet $x=10^{100}$\n\n$\\Rightarrow P=\\left (1+\\frac{1}{x}\\right )^{x}$\n\n$\\Rightarrow P=1+(x)\\left (\\frac{1}{x}\\right )+\\frac{(x)(x-1)}{\\left |2–}.\\frac{1}{x^{2}}+\\frac{(x)(x-1)(x-2)}{\\right |3–}.\\frac{1}{x^{3}}+....$\n\n(upto $10^{100} + 1$ terms)\n\n$\\Rightarrow P=1+1+\\left (\\frac{1}{\\left |2–}-\\frac{1}{\\right |2–x^{2}}\\right )+\\left (\\frac{1}{\\left |3–}-...\\right )+... \\right.$ so on\n\n$\\Rightarrow P=2+\\left (Positivevaluelessthan\\frac{1}{\\left |2–}+\\frac{1}{\\right |3–}+\\frac{1}{\\left |4–}+...\\right ) \\right.$\n\nAlso $e=1+\\frac{1}{\\left |1–}+\\frac{1}{\\right |2–}+\\frac{1}{\\left |3–}+\\frac{1}{\\right |4–}+...$\n\n$\\Rightarrow \\frac{1}{\\left |2–}+\\frac{1}{\\right |3–}+\\frac{1}{\\left |4–}+...=e-2 \\right.$\n\n$\\Rightarrow$ P = 2 + (positive value less than e $-$ 2)\n\n$\\Rightarrow$ P $\\in$ (2, 3)\n\n$\\Rightarrow$ least integer value of P is 3",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzmibs",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of the \n\nintegral $\\int\\limits _{-1}^{1}\\log \\left (x+\\sqrt{x^{2}+1}\\right )dx$ is :",
+  "options": [
+   "2",
+   "0",
+   "$-$1",
+   "1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $I=\\int\\limits _{-1}^{1}\\log \\left (x+\\sqrt{x^{2}+1}\\right )dx$\n\n$\\because$ $\\log \\left (x+\\sqrt{x^{2}+1}\\right )$ is an odd function\n\n$\\therefore$ I = 0",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzmlys",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a, b and c be distinct positive numbers. If the vectors $a\\hat{i}+a\\hat{j}+c\\widehat{k},\\hat{i}+\\widehat{k}$ and $c\\hat{i}+c\\hat{j}+b\\widehat{k}$ are co-planar, then c is equal to :",
+  "options": [
+   "$\\frac{2}{\\frac{1}{a}+\\frac{1}{b}}$",
+   "$\\frac{a+b}{2}$",
+   "$\\frac{1}{a}+\\frac{1}{b}$",
+   "$\\sqrt{ab}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Because vectors are coplanar\n\nHence, $\\left |\\begin{array}{lll} a & a & c \\\\ 1 & 0 & 1 \\\\ c & c & b \\end{array}\\right |=0$\n\n$\\Rightarrow c^{2}=ab\\Rightarrow c=\\sqrt{ab}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzmnrs",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If [x] be the greatest integer less than or equal to x, \n\nthen $\\sum\\limits _{n=8}^{100}\\left [\\frac{(-1)^{n}n}{2}\\right ]$ is equal to :",
+  "options": [
+   "0",
+   "4",
+   "$-$2",
+   "2"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sum\\limits _{n=8}^{100}\\left [\\frac{(-1)^{n}n}{2}\\right ]$\n\n= [4] + [-4.5] + [5] + [-5.5] + [6] +..... + [-49.5] + [50]\n\n= 4 - 5 + 5 - 6 + 6 ......-50 + 50\n\n = 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzmszl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of distinct real roots \n\nof $\\left |\\begin{array}{lll} \\sin x & \\cos x & \\cos x \\\\ \\cos x & \\sin x & \\cos x \\\\ \\cos x & \\cos x & \\sin x \\end{array}\\right |=0$ in the interval $-\\frac{π}{4}\\leq x\\leq \\frac{π}{4}$ is :",
+  "options": [
+   "4",
+   "1",
+   "2",
+   "3"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left |\\begin{array}{lll} \\sin x & \\cos x & \\cos x \\\\ \\cos x & \\sin x & \\cos x \\\\ \\cos x & \\cos x & \\sin x \\end{array}\\right |=0,-\\frac{π}{4}\\leq x\\leq \\frac{π}{4}$\n\nApply : $R_{1}\\to R_{1}-R_{2}$ & $R_{2}\\to R_{2}-R_{3}$\n\n$\\Rightarrow$ $\\left |\\begin{array}{lll} \\sin x-\\cos x & \\cos x-\\sin x & 0 \\\\ 0 & \\sin x-\\cos x & \\cos x-\\sin x \\\\ \\cos x & \\cos x & \\sin x \\end{array}\\right |=0$\n\n$\\Rightarrow$ $(\\sin x-\\cos x)^{2}\\left |\\begin{array}{lll} 1 & -1 & 0 \\\\ 0 & 1 & -1 \\\\ \\cos x & \\cos x & \\sin x \\end{array}\\right |=0$\n\n$\\Rightarrow$ $(\\sin x-\\cos x)^{2}(\\sin x+2\\cos x)=0$\n\n$\\therefore$ $x=\\frac{π}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzmy5a",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\left |\\vec{a}\\right |=2,\\left |\\vec{b}\\right |=5$ and $\\left |\\vec{a}\\times \\vec{b}\\right |$ = 8, then $\\left |\\vec{a}.\\vec{b}\\right |$ is equal to :",
+  "options": [
+   "6",
+   "4",
+   "3",
+   "5"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left |\\vec{a}\\right |=2,\\left |\\vec{b}\\right |=5$\n\n$\\left |\\vec{a}\\times \\vec{b}\\right |=\\left |\\vec{a}\\right |\\left |\\vec{b}\\right |\\sin θ=\\pm 8$\n\n$\\sin θ=\\pm \\frac{4}{5}$\n\n$\\therefore$ $\\vec{a}.\\vec{b}=\\left |\\vec{a}\\right |\\left |\\vec{b}\\right |\\cos θ$\n\n$=10.\\left (\\pm \\frac{3}{5}\\right )=\\pm 6$\n\n$\\left |\\vec{a}.\\vec{b}\\right |=6$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzn03g",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of real solutions of the equation, $x^{2}$ $-$ |x| $-$ 12 = 0 is :",
+  "options": [
+   "2",
+   "3",
+   "1",
+   "4"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$|x|^{2}$ $-$ |x| $-$ 12 = 0\n\n$\\Rightarrow$ (|x| + 3)(|x| $-$ 4) = 0\n\n$\\Rightarrow$ |x| = 4 \n\n$\\Rightarrow$ x = $\\pm$4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzn2o7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider function f : A $\\to$ B and g : B $\\to$ C (A, B, C $\\subseteq$ R) such that (gof$)^{-1}$ exists, then :",
+  "options": [
+   "f and g both are one-one",
+   "f and g both are onto",
+   "f is one-one and g is onto",
+   "f is onto and g is one-one"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\therefore$ (gof$)^{-1}$ exist $\\Rightarrow$ gof is bijective\n\n$\\Rightarrow$ 'f' must be one-one and 'g' must be ONTO.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzn7q3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $P=\\left [\\begin{array}{ll} 1 & 0 \\\\ \\frac{1}{2} & 1 \\end{array}\\right ]$, then $P^{50}$ is :",
+  "options": [
+   "$\\left [\\begin{array}{ll} 1 & 0 \\\\ 25 & 1 \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} 1 & 50 \\\\ 0 & 1 \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} 1 & 25 \\\\ 0 & 1 \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} 1 & 0 \\\\ 50 & 1 \\end{array}\\right ]$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$P=\\left [\\begin{array}{ll} 1 & 0 \\\\ \\frac{1}{2} & 1 \\end{array}\\right ]$\n\n$P^{2}=\\left [\\begin{array}{ll} 1 & 0 \\\\ \\frac{1}{2} & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 1 & 0 \\\\ \\frac{1}{2} & 1 \\end{array}\\right ]=\\left [\\begin{array}{ll} 1 & 0 \\\\ 1 & 1 \\end{array}\\right ]$\n\n$P^{3}=\\left [\\begin{array}{ll} 1 & 0 \\\\ 1 & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 1 & 0 \\\\ \\frac{1}{2} & 1 \\end{array}\\right ]=\\left [\\begin{array}{ll} 1 & 0 \\\\ \\frac{3}{2} & 1 \\end{array}\\right ]$\n\n$P^{4}=\\left [\\begin{array}{ll} 1 & 0 \\\\ 1 & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 1 & 0 \\\\ 1 & 1 \\end{array}\\right ]=\\left [\\begin{array}{ll} 1 & 0 \\\\ 2 & 1 \\end{array}\\right ]$\n\n$\\vdots$\n\n$\\therefore$ $P^{50}=\\left [\\begin{array}{ll} 1 & 0 \\\\ 25 & 1 \\end{array}\\right ]$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzncxy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let X be a random variable such that the probability function of a distribution is given by $P(X=0)=\\frac{1}{2},P(X=j)=\\frac{1}{3^{j}}(j=1,2,3,...,\\infty )$. Then the mean of the distribution and P(X is positive and even) respectively are :",
+  "options": [
+   "$\\frac{3}{8}$ and $\\frac{1}{8}$",
+   "$\\frac{3}{4}$ and $\\frac{1}{8}$",
+   "$\\frac{3}{4}$ and $\\frac{1}{9}$",
+   "$\\frac{3}{4}$ and $\\frac{1}{16}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Mean = $\\sum X_{i}P_{i}=\\sum\\limits _{r=0}^{\\infty }r.\\frac{1}{3^{r}}=\\frac{3}{4}$\n\nP(X is even) $=\\frac{1}{3^{2}}+\\frac{1}{3^{4}}+...\\infty$\n\n$=\\frac{\\frac{1}{9}}{1-\\frac{1}{9}}=\\frac{1/9}{8/9}=\\frac{1}{8}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzq59s",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If ${}^{n}P_{r}={}^{n}P_{r+1}$ and ${}^{n}C_{r}={}^{n}C_{r-1}$, then the value of r is equal to :",
+  "options": [
+   "1",
+   "4",
+   "2",
+   "3"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "${}^{n}P_{r}={}^{n}P_{r+1}\\Rightarrow \\frac{n!}{(n-r)!}=\\frac{n!}{(n-r-1)!}$\n\n$\\Rightarrow (n-r)=1$ .....(1)\n\n${}^{n}C_{r}={}^{n}C_{r-1}$\n\n$\\Rightarrow \\frac{n!}{r!(n-r)!}=\\frac{n!}{(r-1)!(n-r+1)!}$\n\n$\\Rightarrow \\frac{1}{r(n-r)!}=\\frac{1}{(n-r+1)(n-r)!}$\n\n$\\Rightarrow n-r+1=r$\n\n$\\Rightarrow n+1=2r$ ..... (2)\n\nFrom (1) and (2), $2r-1-r=1\\Rightarrow r=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzqf05",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let y = y(x) be the solution of the differential \n\nequation xdy $= (y + x^{3}$ cosx)dx with y($π$) = 0, then $y\\left (\\frac{π}{2}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{π^{2}}{4}+\\frac{π}{2}$",
+   "$\\frac{π^{2}}{2}+\\frac{π}{4}$",
+   "$\\frac{π^{2}}{2}-\\frac{π}{4}$",
+   "$\\frac{π^{4}}{4}-\\frac{π}{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$xdy=(y+x^{3}\\cos x)dx$\n\n$\\Rightarrow$ $xdy=ydx+x^{3}\\cos xdx$\n\n$\\Rightarrow$ $\\frac{xdy-ydx}{x^{2}}=\\frac{x^{3}coxdx}{x^{2}}$\n\n$\\Rightarrow$ $\\frac{d}{dx}\\left (\\frac{y}{x}\\right )=\\int x\\cos xdx$\n\n$\\Rightarrow \\frac{y}{x}=x\\sin x-\\int 1.\\sin xdx$\n\n$\\Rightarrow$ $\\frac{y}{x}=x\\sin x+\\cos x+C$\n\n$\\Rightarrow 0=-1+C\\Rightarrow C=1,x=π,y=0$\n\nso, $\\frac{y}{x}=x\\sin x+\\cos x+1$\n\n$y=x^{2}\\sin x+x\\cos x+x$\n\n$x=\\frac{π}{2}$\n\n$y\\left (\\frac{π}{2}\\right )=\\frac{π^{2}}{4}+\\frac{π}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzqujt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Consider the function\n\nwhere P(x) is a polynomial such that P'' (x) is always a constant and P(3) = 9. If f(x) is continuous at x = 2, then P(5) is equal to $_____________$.\n[IMG]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 39.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\left \\{\\begin{array}{ll} \\frac{P(x)}{\\sin (x-2)}, & x\\neq 2 \\\\ 7, & x=2 \\end{array} \\right.$\n\nP''(x) = const. $\\Rightarrow$ P(x) is a 2 degree polynomial\n\nf(x) is cont. at x = 2\n\n$f(2^{+}) = f(2^{-})$\n\n$\\lim _{x\\to 2^{+}}\\frac{P(x)}{\\sin (x-2)}=7$\n\n$\\lim _{x\\to 2^{+}}\\frac{(x-2)(ax+b)}{\\sin (x-2)}=7\\Rightarrow 2a+b=7$\n\nP(x) = (x $-$ 2)(ax + b)\n\nP(3) = (3 $-$ 2)(3a + b) = 9 $\\Rightarrow$ 3a + b = 9\n\na = 2, b = 3\n\nP(5) = (5 $-$ 2)(2 $\\times$ 5 + 3) = 3 $\\times$ 13 = 39",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2021-online-25th-july-evening-shift/1krzqujtw-0.jpg",
+    "altText": "Original exam figure (JEE Main 2021 (Online) 25th July Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2021-1krzqy3t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The equation of a circle is $Re(z^{2}) + 2(Im(z))^{2} + 2Re(z) = 0$, where z = x + iy. A line which passes through the center of the given circle and the vertex of the parabola, $x^{2}$ $-$ 6x $-$ y + 13 = 0, has y-intercept equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Equation of circle is $(x^{2}$ $-$ $y^{2}) + 2y^{2} + 2x = 0$\n\n$x^{2} + y^{2} + 2x = 0$\n\nCentre : ($-$1, 0)\n\nParabola : $x^{2}$ $-$ 6x $-$ y + 13 = 0\n\n(x $-$ $3)^{2} = y$ $-$ 4\n\nVertex : (3, 4)\n\nEquation of line $\\equiv y-0=\\frac{4-0}{3+1}(x+1)$\n\n$y=x+1$\n\ny-intercept = 1",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzrafm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\left (\\vec{a}+3\\vec{b}\\right )$ is perpendicular to $\\left (7\\vec{a}-5\\vec{b}\\right )$ and $\\left (\\vec{a}-4\\vec{b}\\right )$ is perpendicular to $\\left (7\\vec{a}-2\\vec{b}\\right )$, then the angle between $\\vec{a}$ and $\\vec{b}$ (in degrees) is $_______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 60.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (\\vec{a}+3\\vec{b}\\right )⊥\\left (7\\vec{a}-5\\vec{b}\\right )$\n\n$\\therefore$ $\\left (\\vec{a}+3\\vec{b}\\right ).\\left (7\\vec{a}-5\\vec{b}\\right )=0$\n\n$\\Rightarrow$ $7\\left |\\vec{a}\\right |^{2}-15\\left |\\vec{b}\\right |^{2}+16\\vec{a}.\\vec{b}=0$ ....(1)\n\nAlso, $\\left (\\vec{a}-4\\vec{b}\\right ).\\left (7\\vec{a}-2\\vec{b}\\right )=0$\n\n$\\Rightarrow$ $7\\left |\\vec{a}\\right |^{2}+8\\left |\\vec{b}\\right |^{2}-30\\vec{a}.\\vec{b}=0$ .....(2)\n\nEquation (1) × 30\n\n$210\\left |\\vec{a}\\right |^{2}-450\\left |\\vec{b}\\right |^{2}+480\\vec{a}.\\vec{b}=0$ ....(3)\n\nEquation (2) × 16\n\n$112\\left |\\vec{a}\\right |^{2}+128\\left |\\vec{b}\\right |^{2}-480\\vec{a}.\\vec{b}=0$ .....(4)\n\nfrom (3) & (4)\n\n$322\\left |\\vec{a}\\right |^{2}=322\\left |\\vec{b}\\right |^{2}$\n\n$\\Rightarrow$ $\\left |\\vec{a}\\right |^{2}=\\left |\\vec{b}\\right |^{2}$\n\n$\\Rightarrow$ $\\left |\\vec{a}\\right |=\\left |\\vec{b}\\right |$\n\nFrom equation (2),\n\n$15\\left |\\vec{a}\\right |=30\\vec{a}.\\vec{b}$\n\n$\\Rightarrow$ $15\\left |\\vec{a}\\right |^{2}=30\\left |\\vec{a}\\right |.\\left |\\vec{b}\\right |\\cos θ$\n\n$\\cos θ=\\frac{15}{30}=\\frac{1}{2}$\n\n$\\therefore$ $θ=60^{\\circ }$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzrgqr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If a + b + c = 1, ab + bc + ca = 2 and abc = 3, then the value of $a^{4} + b^{4} + c^{4}$ is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 13.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(a + b + c)^{2} = 1$\n\n$\\Rightarrow$ $a^{2}$\n $+ b^{2}$\n $+ c^{2}$\n + 2(ab + bc + ca) = 1\n\n$\\Rightarrow$ $a^{2} + b^{2}$\n $+ c^{2} = – 3$ ….(i)\n\n$\\Rightarrow$ ab + bc + ca = 2 ….(ii)\n \n\nSquaring of equation (ii),\n\n$\\Rightarrow$ $a^{2}b^{2}$\n $+ b^{2}c^{2}$\n $+ c^{2}a^{2}$\n $+ 2(ab^{2}c + bc^{2}a + ca^{2}b) = 4$\n\n$\\Rightarrow$ $a^{2}b^{2}$\n $+ b^{2}c^{2}$\n $+ c^{2}a^{2}$\n + 2abc(a + b + c) = 4\n\n$\\Rightarrow$ $a^{2}b^{2}$\n $+ b^{2}c^{2}$\n $+ c^{2}a^{2}$\n + 6 = 4\n\n$\\Rightarrow$ $a^{2}b^{2}$\n $+ b^{2}c^{2}$\n $+ c^{2}a^{2} = – 2$ ….(iii)\n \n\nSquaring of equation (i),\n\n$\\Rightarrow$ $a^{4}$\n $+ b^{4}$\n $+ c^{4}$\n $+ 2(a^{2}b^{2}$\n $+ b^{2}c^{2}$\n $+ c^{2}a^{2}) = 9$\n\n$\\Rightarrow$ $a^{4}$\n $+ b^{4}$\n $+ c^{4} – 4 = 9$\n\n$\\Rightarrow$ $a^{4}$\n $+ b^{4}$\n $+ c^{4}$\n = 13",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzrj7a",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A fair coin is tossed n-times such that the probability of getting at least one head is at least 0.9. Then the minimum value of n is $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "P(Head) = $\\frac{1}{2}$\n\n1 $-$ P(All tail) $\\geq$ 0.9\n\n$1-\\left (\\frac{1}{2}\\right )^{n}$ $\\geq$ 0.9\n\n$\\Rightarrow \\left (\\frac{1}{2}\\right )^{n}\\leq \\frac{1}{10}$\n\n$\\Rightarrow$ $n_{\\min } = 4$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2021-1krzrliu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the co-efficient of $x^{7}$ and $x^{8}$ in the expansion of $\\left (2+\\frac{x}{3}\\right )^{n}$ are equal, then the value of n is equal to $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 55.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2021,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2021 (Online) 25th July Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "${}^{n}C_{7}2^{n-7}\\frac{1}{3^{7}}={}^{n}C_{8}2^{n-8}\\frac{1}{3^{8}}$\n\n$\\Rightarrow$ n $-$ 7 = 48 $\\Rightarrow$ n = 55",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2021 (Online) 25th July Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]
