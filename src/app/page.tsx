@@ -20,6 +20,7 @@ import { cn } from '@/lib/utils'
 interface TaxonomySubject {
   key: SubjectKey
   name: string
+  icon: string
   questionCount: number
   chapters: { key: string; name: string; unit: string | null; questionCount: number }[]
 }

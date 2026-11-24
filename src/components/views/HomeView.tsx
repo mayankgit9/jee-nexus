@@ -2,7 +2,8 @@
 
 // JEE NEXUS — home view
 import { motion } from 'framer-motion'
-import { Dice5, ArrowRight, Library, Target, Flame, BookMarked, Activity, ChevronRight } from 'lucide-react'
+import { Dice5, ArrowRight, Library, Target, Flame, BookMarked, Activity, ChevronRight, Atom, FlaskConical, Sigma } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -11,7 +12,7 @@ import type { SessionUser, SubjectKey } from '@/lib/types'
 import { useApi, navigate, SUBJECT_COLORS, formatDuration } from '@/lib/client'
 import { cn } from '@/lib/utils'
 
-interface TaxonomySubject { key: SubjectKey; name: string; questionCount: number; chapters: { questionCount: number }[] }
+interface TaxonomySubject { key: SubjectKey; name: string; icon: string; questionCount: number; chapters: { questionCount: number }[] }
 
 interface PyqOverview {
   years: { year: number; total: number }[]
@@ -27,6 +28,8 @@ interface StatsData {
   } | null
 }
 
+const SUBJECT_ICONS: Record<string, LucideIcon> = { Atom, FlaskConical, Sigma }
+
 export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonomy: TaxonomySubject[] | null }) {
   const stats = useApi<StatsData>(user ? '/api/stats' : null)
   const pyq = useApi<PyqOverview>('/api/pyq')
@@ -40,8 +43,9 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
       <div className="nexus-grid-bg rounded-3xl border border-border bg-card/40 px-6 py-12 text-center sm:px-12 sm:py-16">
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs text-primary">
-            <Flame className="h-3.5 w-3.5" />
-            {totalQuestions.toLocaleString()} previous-year questions · growing daily
+            <Flame className="h-3.5 w-3.5 shrink-0" />
+            <span className="whitespace-nowrap">{totalQuestions.toLocaleString()} previous-year questions</span>
+            <span className="hidden whitespace-nowrap sm:inline"> · growing daily</span>
           </div>
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
             {user ? `Welcome back${user.name ? `, ${user.name.split(' ')[0]}` : ''}.` : 'Practice JEE Main.'}
@@ -91,31 +95,34 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
       <div className="mt-8">
         <h2 className="text-lg font-semibold tracking-tight">Choose your subject</h2>
         <div className="mt-3 grid gap-4 sm:grid-cols-3">
-          {(taxonomy ?? []).map((s, i) => (
-            <motion.button
-              key={s.key}
-              type="button"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.07 }}
-              onClick={() => navigate(`/practice?subject=${s.key}`)}
-              className="group rounded-2xl border border-border bg-card p-5 text-left transition-all hover:-translate-y-1 hover:border-primary/40"
-            >
-              <div
-                className="mb-3 inline-flex rounded-xl p-2.5"
-                style={{ background: `color-mix(in oklab, ${SUBJECT_COLORS[s.key]} 14%, transparent)` }}
+          {(taxonomy ?? []).map((s, i) => {
+            const Icon = SUBJECT_ICONS[s.icon] ?? Atom
+            return (
+              <motion.button
+                key={s.key}
+                type="button"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.07 }}
+                onClick={() => navigate(`/practice?subject=${s.key}`)}
+                className="group rounded-2xl border border-border bg-card p-5 text-left transition-all hover:-translate-y-1 hover:border-primary/40"
               >
-                <div className="h-5 w-5 rounded" style={{ background: SUBJECT_COLORS[s.key] }} />
-              </div>
-              <div className="font-semibold" style={{ color: SUBJECT_COLORS[s.key] }}>{s.name}</div>
-              <div className="mt-1 text-xs text-muted-foreground">
-                {s.questionCount} questions · {s.chapters.length} chapters
-              </div>
-              <div className="mt-3 flex items-center gap-1 text-xs text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                Practice now <ChevronRight className="h-3.5 w-3.5" />
-              </div>
-            </motion.button>
-          ))}
+                <div
+                  className="mb-3 inline-flex rounded-xl p-2.5"
+                  style={{ background: `color-mix(in oklab, ${SUBJECT_COLORS[s.key]} 14%, transparent)` }}
+                >
+                  <Icon className="h-5 w-5" style={{ color: SUBJECT_COLORS[s.key] }} />
+                </div>
+                <div className="font-semibold" style={{ color: SUBJECT_COLORS[s.key] }}>{s.name}</div>
+                <div className="mt-1 text-xs text-muted-foreground">
+                  {s.questionCount.toLocaleString()} questions · {s.chapters.length} chapters
+                </div>
+                <div className="mt-3 flex items-center gap-1 text-xs text-primary">
+                  Practice now <ChevronRight className="h-3.5 w-3.5" />
+                </div>
+              </motion.button>
+            )
+          })}
           {!taxonomy && [0, 1, 2].map(i => <Skeleton key={i} className="h-36" />)}
         </div>
       </div>
