@@ -2,14 +2,24 @@
 //
 // Node (local dev, CI, sandbox): standard prisma-client-js against DATABASE_URL.
 // Cloudflare Workers (production deploy): worker-runtime client from
-// src/generated/worker (pure-JS query compiler, no native engine) + pg-worker
-// adapter. Connection source, in order of preference:
+// src/generated/worker (pure-JS query compiler, no native engine) + the
+// @prisma/adapter-pg driver adapter.
+//
+// VERSION PIN (prod lesson 2026-11-25): the adapter must match the engine
+// version exactly. @prisma/adapter-pg-worker@6.9.0 with the 6.19.2 engine
+// failed every query in ~11ms with "Invalid driver adapter: Error while
+// calling getConnectionInfo()" (old adapter contract; that package was
+// discontinued after 6.10). @prisma/adapter-pg@6.19.2 is the canonical
+// pairing — it uses the Node `pg` driver, which runs on Workers under
+// nodejs_compat (node:net TCP + node:tls; requires the bumped
+// compatibility_date in wrangler.jsonc).
+// Connection source, in order of preference:
 //   1. HYPERDRIVE binding (connection pooling + query cache — preferred once
 //      the config exists; creating it needs a token with Hyperdrive:Edit,
 //      see scripts/deploy_app_cloudflare.sh)
-//   2. DATABASE_URL worker secret — direct TCP from Workers via
-//      cloudflare:sockets. Use the Supabase SESSION pooler URL (port 5432);
-//      the transaction pooler (6543) is not suited to direct long-lived TCP.
+//   2. DATABASE_URL worker secret — direct TCP from Workers.
+//      Use the Supabase SESSION pooler URL (port 5432); the transaction
+//      pooler (6543) is not suited for direct long-lived TCP.
 // If neither is present the worker still boots: UI/static routes serve fine
 // and DB-backed routes fail per-request until the secret/binding is added.
 //
@@ -22,7 +32,7 @@
 // handler — where the full env (vars + secrets) is populated.
 import { PrismaClient } from '@prisma/client'
 import { PrismaClient as WorkerPrismaClient } from '@/generated/worker/client'
-import { PrismaPg } from '@prisma/adapter-pg-worker'
+import { PrismaPg } from '@prisma/adapter-pg'
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined
@@ -49,7 +59,7 @@ function createClient(): PrismaClient {
     const hyperdrive = (workersEnv as { HYPERDRIVE?: { connectionString?: string } }).HYPERDRIVE
     const directUrl = (workersEnv as { DATABASE_URL?: string }).DATABASE_URL
       ?? process.env.DATABASE_URL // OpenNext merges bindings into process.env in newer versions
-    const connectionString = hyperdrive?.connectionString ?? directUrl
+    let connectionString = hyperdrive?.connectionString ?? directUrl
     if (!connectionString) {
       console.error(
         '[db] No database configured on Workers: set the DATABASE_URL secret ' +
@@ -58,11 +68,34 @@ function createClient(): PrismaClient {
           'DB-backed API routes will keep failing until one of them is added.'
       )
     }
+    // pg's ConnectionParameters does `Object.assign({}, config, parse(url))` —
+    // a sslmode=... in the URL OVERWRITES the explicit `ssl` object below
+    // (sslmode=require is aliased to verify-full, which needs a system CA
+    // store the edge does not have). Strip sslmode so the explicit ssl wins.
+    // Direct Supabase connections only: leave Hyperdrive URLs untouched
+    // (they are already TLS-terminated at the edge and have no sslmode).
+    if (connectionString && !hyperdrive) {
+      connectionString = connectionString.replace(/[?&]sslmode=[^&]*/g, '')
+    }
     return new WorkerPrismaClient({
       // Cast: adapter-pg-worker and the generated client each bundle a copy of
       // the driver-adapter-utils types; the interfaces are structurally identical.
       adapter: new PrismaPg({
         connectionString: connectionString ?? UNCONFIGURED_URL,
+        // TLS WALL (prod lesson 2026-11-25, proven by scripts/pgworker_probe.mjs):
+        // from inside a Worker EVERY TLS route to the Supabase pooler fails —
+        // workerd's node:tls does not implement rejectUnauthorized and ignores
+        // custom CAs, and cloudflare:sockets startTls() always validates
+        // against the built-in root store (Supabase uses a private CA).
+        // With no Hyperdrive binding (token lacks Hyperdrive:Edit), the only
+        // working path is PLAIN TCP — the preparena project has SSL
+        // enforcement disabled (dashboard: Settings > Database > SSL
+        // enforcement), which the pooler permits. Any sslmode=... in the URL
+        // must be stripped or pg would attempt (and fail) the TLS upgrade.
+        // Morning fix: widen the CF token -> create the Hyperdrive config ->
+        // bind HYPERDRIVE (TLS-terminated at the edge, full verification) and
+        // re-enable SSL enforcement.
+        ssl: false,
       }) as unknown as never,
     }) as unknown as PrismaClient
   }
@@ -72,17 +105,35 @@ function createClient(): PrismaClient {
 }
 
 /**
- * Lazy Prisma singleton. Route handlers import `db` at module scope, but the
- * underlying client is only constructed on first use (inside a request) so
- * the Workers async context — and with it the DATABASE_URL secret — is
- * guaranteed to be available. Prisma client construction is cheap; the pg
- * adapter opens connections per query, not at construction.
+ * EXPERIMENT (M23): on Workers the Prisma WASM engine's connection state
+ * breaks after its first completed query — every second request hung
+ * ("canceled... would never generate a response", perfect 200/500
+ * alternation). Testing fresh-client-per-access to confirm the engine is
+ * the stateful culprit. Node runtime keeps the classic singleton.
  */
+function isWorkersRuntime(): boolean {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require('@opennextjs/cloudflare')
+    return true
+  } catch {
+    return false
+  }
+}
+const WORKERS = isWorkersRuntime()
+
 export const db: PrismaClient = new Proxy({} as PrismaClient, {
   get(_target, prop, _receiver) {
-    if (!globalForPrisma.prisma) globalForPrisma.prisma = createClient()
-    const client = globalForPrisma.prisma as unknown as Record<string | symbol, unknown>
+    if (!WORKERS) {
+      if (!globalForPrisma.prisma) globalForPrisma.prisma = createClient()
+      const client = globalForPrisma.prisma as unknown as Record<string | symbol, unknown>
+      const value = client[prop]
+      return typeof value === 'function' ? (value as (...a: unknown[]) => unknown).bind(globalForPrisma.prisma) : value
+    }
+    // Workers: fresh client per property access (WASM module stays cached by
+    // the runtime; only engine state + adapter pool are recreated).
+    const client = createClient() as unknown as Record<string | symbol, unknown>
     const value = client[prop]
-    return typeof value === 'function' ? (value as (...a: unknown[]) => unknown).bind(globalForPrisma.prisma) : value
+    return typeof value === 'function' ? (value as (...a: unknown[]) => unknown).bind(client) : value
   },
 })

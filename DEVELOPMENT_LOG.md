@@ -217,6 +217,41 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
   deployment — treat them as untested until then.
 - Question bank depth: 28 of the 2019–2026 target.
 
+## 2026-11-25 — PRODUCTION GO-LIVE · jee-nexus.workers.dev fully live (Hyperdrive)
+
+### Incident + root-cause chain (all fixes verified on live traffic)
+- **Bug 1 — module-scope client**: `db.ts` built the Prisma client at module load,
+  reading `getCloudflareContext().env` before the request scope existed → worker booted
+  with no `DATABASE_URL` ("No database configured"). Fix: lazy `Proxy` — client created
+  on first `db.*` access, always inside a route handler.
+- **Bug 2 — adapter/engine version skew**: `@prisma/adapter-pg-worker@6.9.0` vs the
+  6.19.2 engine threw `Invalid driver adapter` on every query (~11ms). Fix: canonical
+  pairing `@prisma/adapter-pg@6.19.2` (Node pg driver under `nodejs_compat`, compat
+  date 2025-11-01 for `node:net`/`node:tls`).
+- **Bug 3 — TLS wall**: workerd's `node:tls` cannot verify the Supabase pooler chain
+  (no system CA store on the edge; `rejectUnauthorized:false` ignored — proven by
+  `scripts/pgworker_probe.mjs`). Direct TLS from Workers is not viable. Fix: **Hyperdrive
+  binding** `jee-nexus-db` (id `0c3c9640…`, origin = session pooler as `jee_app`): TLS
+  terminates at the CF edge; the app speaks plain TCP to the Hyperdrive proxy.
+  `wrangler.jsonc` now binds `HYPERDRIVE` (db.ts prefers it; falls back to the
+  `DATABASE_URL` secret + `ssl:false` plain TCP, which requires Supabase SSL
+  enforcement OFF — it is off on preparena).
+- **Bug 4 — 200/500 alternation**: the WASM engine's connection state broke after the
+  first completed query (every second request hung). Fix: fresh client per `db.*`
+  property access on Workers (engine state + adapter pool recreated; WASM module stays
+  cached by the runtime). Verified: 6/6 consecutive 200s, latency 0.08–1.1s.
+
+### Production verification (live, post-deploy)
+- `/` 200 · `/api/taxonomy` 200 (real chapter counts) · `/api/pyq` 200 (year breakdown)
+  · `POST /api/questions/random` 200 (real 2019 PYQs with LaTeX) · `POST /api/auth/login`
+  200 (admin session INSERT through Hyperdrive — write path OK) · `/api/stats` 401 by
+  design (admin-gated).
+- Ops tooling added: `scripts/cf_logs*.py` (Workers observability log queries — the
+  production error stack was otherwise invisible), `scripts/pgworker_probe.mjs`,
+  `scripts/get_pooler_chain.py`, `certs/prod-ca-2021.crt`.
+- Full fix chain committed + pushed (`src/lib/db.ts`, `wrangler.jsonc`, `package.json`
+  pin `@prisma/adapter-pg@6.19.2`, pg postinstall shim `shims/pg`).
+
 ## 2026-11-23 — M10 · Supabase production cutover — app runs on live PostgreSQL
 
 ### Implemented
@@ -535,8 +570,8 @@ committed and pushed the moment it is written** (`scripts/push.sh` helper). No b
 | Bookmarks & attempt history | ✅ |
 | Analytics dashboard (charts, weak/strong chapters) | ✅ |
 | CBT examination mode | ✅ |
-| Admin dashboard + import pipeline | ⏳ |
-| Supabase Postgres + RLS production sync | 🔄 (project ACTIVE, migrations pending) |
-| Cloudflare production app deployment | ⏳ (landing live; app runs in sandbox preview) |
+| Admin dashboard + import pipeline | ✅ (admin login + bulk import live) |
+| Supabase Postgres + RLS production sync | ✅ (project preparena, migrations 0001–0006 applied) |
+| Cloudflare production app deployment | ✅ (app live via OpenNext + Hyperdrive) |
 | Automated tests | 🔄 (23 API E2E + browser verification; Playwright suite pending) |
-| Question bank depth (16 seeded; 2019–2026 target) | 🔄 |
+| Question bank depth (16 seeded; 2019–2026 target) | 🔄 (6,333-question PYQ import running) |

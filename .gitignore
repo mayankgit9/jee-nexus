@@ -71,3 +71,12 @@ src/generated/
 
 # embedded postgres runtime (scripts/pg_ensure.py)
 db/pgdata/
+
+# wrangler local dev secrets (production-mimic testing)
+.dev.vars
+
+# wrangler local state
+.wrangler/
+
+# transient agent tool outputs
+tool-results/

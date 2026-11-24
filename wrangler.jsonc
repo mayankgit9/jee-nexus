@@ -6,7 +6,9 @@
   //         the HYPERDRIVE binding additionally requires Hyperdrive:Edit)
   "name": "jee-nexus-app",
   "main": ".open-next/worker.js",
-  "compatibility_date": "2025-01-15",
+  // 2025-11-01: needs node:net + node:tls (pg driver TCP/TLS to Supabase via
+  // nodejs_compat) — keep >= 2025-09 for full node:tls support.
+  "compatibility_date": "2025-11-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
     "directory": ".open-next/assets",
@@ -15,22 +17,14 @@
   // Serve on https://jee-nexus-app.jee-nexus.workers.dev
   // (the route must also be enabled per-script — see deploy script step 4)
   "workers_dev": true,
-  // Postgres access for the deployed API routes — two supported modes
-  // (db.ts picks HYPERDRIVE if bound, else the DATABASE_URL secret via
-  // direct TCP from Workers):
-  //   1. DATABASE_URL secret (works with the current token scope):
-  //        bunx wrangler secret put DATABASE_URL --name jee-nexus-app
-  //      postgresql://jee_app.mxfiazcjcgqzqynmsefp:<PASSWORD>@aws-0-ap-south-1.pooler.supabase.com:5432/postgres?sslmode=require
-  //      (session pooler, port 5432 — NOT the transaction pooler for direct TCP)
-  //   2. Hyperdrive binding (pooling + cache; needs a token with Hyperdrive:Edit
-  //      to create the config — see scripts/deploy_app_cloudflare.sh):
-  //      POST /accounts/{account}/hyperdrive/config  { name: "jee-nexus-db",
-  //        origin: { host: aws-0-ap-south-1.pooler.supabase.com, port: 5432,
-  //                  user: jee_app.mxfiazcjcgqzqynmsefp, database: postgres } }
-  //      then paste the config id below and uncomment (placeholder goes in the
-  //      ACTIVE binding only — the deploy script refuses while a placeholder
-  //      id is present anywhere).
-  // "hyperdrive": [{ "binding": "HYPERDRIVE", "id": "put-config-id-here" }],
+  // Postgres access — ACTIVE: Hyperdrive binding (created 2026-11-25 with the
+  // account token; config name "jee-nexus-db", origin = Supabase session
+  // pooler aws-0-ap-south-1.pooler.supabase.com:5432 as jee_app). Hyperdrive
+  // terminates TLS at the CF edge, which bypasses the workerd node:tls wall
+  // (see src/lib/db.ts). db.ts prefers this binding when present.
+  // Fallback if the config is ever deleted: the DATABASE_URL worker secret
+  // (direct TCP; requires Supabase SSL enforcement OFF) — see db.ts.
+  "hyperdrive": [{ "binding": "HYPERDRIVE", "id": "0c3c964027f94d12b2bfb56a9534dac8" }],
   "vars": {
     "ADMIN_EMAILS": "admin@jee-nexus.dev"
   },
