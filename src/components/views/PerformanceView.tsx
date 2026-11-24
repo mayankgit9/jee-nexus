@@ -13,10 +13,11 @@ interface StatsData {
   stats: {
     totalAttempts: number; correct: number; accuracy: number; totalTimeSeconds: number
     answeredCount: number; distinctQuestions: number; bookmarkCount: number
+    examAttempts?: number
     subjects: { key: string; name: string; attempted: number; correct: number; accuracy: number }[]
     chapters: { key: string; name: string; subject: string; attempted: number; correct: number; accuracy: number }[]
     daily: { date: string; count: number }[]
-    recent: { id: string; isCorrect: boolean | null; subject: string; chapter: string; publicId: string; createdAt: string }[]
+    recent: { id: string; isCorrect: boolean | null; subject: string; chapter: string; publicId: string; createdAt: string; source?: 'practice' | 'exam' }[]
   }
 }
 
@@ -49,7 +50,7 @@ export function PerformanceView({ onRequireAuth }: { onRequireAuth: () => void }
       <div className="mx-auto max-w-lg rounded-2xl border border-dashed border-border p-10 text-center">
         <Target className="mx-auto h-10 w-10 text-primary" />
         <h2 className="mt-4 text-lg font-semibold">No data yet</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Answer a few questions and your performance dashboard will come alive.</p>
+        <p className="mt-2 text-sm text-muted-foreground">Answer practice questions or take a mock test — every graded attempt lands here.</p>
         <Button className="mt-5" onClick={() => navigate('/practice')}>Start practicing</Button>
       </div>
     )
@@ -72,7 +73,7 @@ export function PerformanceView({ onRequireAuth }: { onRequireAuth: () => void }
         {[
           { label: 'Total attempts', value: st.totalAttempts },
           { label: 'Accuracy', value: `${st.accuracy}%` },
-          { label: 'Distinct questions', value: st.distinctQuestions },
+          { label: 'Mock tests taken', value: st.examAttempts ?? 0 },
           { label: 'Time invested', value: formatDuration(st.totalTimeSeconds) },
         ].map((s) => (
           <Card key={s.label}>

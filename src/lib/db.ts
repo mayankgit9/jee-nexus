@@ -137,3 +137,15 @@ export const db: PrismaClient = new Proxy({} as PrismaClient, {
     return typeof value === 'function' ? (value as (...a: unknown[]) => unknown).bind(client) : value
   },
 })
+
+/**
+ * Explicit single client for multi-operation units of work ($transaction,
+ * sequential queries that must share one connection). On Workers every db.*
+ * Proxy access opens a FRESH client — and therefore a fresh connection,
+ * which counts against the 50-subrequest-per-invocation cap. Routes that
+ * loop over many writes must use this instead: create one client, run all
+ * operations (or one $transaction) through it.
+ */
+export function dbClient(): PrismaClient {
+  return createClient()
+}

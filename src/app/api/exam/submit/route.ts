@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server'
-import { db } from '@/lib/db'
+import { db, dbClient } from '@/lib/db'
 import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 import { gradeAnswer } from '@/lib/exam'
 import type { ExamPatternConfig } from '@/lib/types'
@@ -42,6 +42,10 @@ export async function POST(req: NextRequest) {
     let total = 0
     let max = 0
     const sectionTotals = new Map<string, { marks: number; max: number; correct: number; wrong: number; unattempted: number }>()
+    // Grade updates are batched into ONE transaction below: per-answer update
+    // calls each opened a fresh Prisma client (Workers subrequest cap is
+    // 50/invocation — a fully-answered 75-question mock could not submit).
+    const gradeUpdates: { id: string; isCorrect: boolean | null; marks: number }[] = []
 
     for (const eq of attempt.exam.examQuestions) {
       const q = eq.question
@@ -77,10 +81,7 @@ export async function POST(req: NextRequest) {
       sectionTotals.set(eq.section, sec)
 
       if (ans) {
-        await db.examAttemptAnswer.update({
-          where: { id: ans.id },
-          data: { isCorrect: graded.isCorrect, marksAwarded: graded.marks },
-        })
+        gradeUpdates.push({ id: ans.id, isCorrect: graded.isCorrect, marks: graded.marks })
       }
     }
 
@@ -92,16 +93,28 @@ export async function POST(req: NextRequest) {
       )
     )
 
-    await db.examAttempt.update({
-      where: { id: attempt.id },
-      data: {
-        status: expired ? 'expired' : 'submitted',
-        submittedAt: new Date(),
-        totalMarks: total,
-        maxMarks: max,
-        timeSpentSeconds,
-      },
-    })
+    // Single transaction over a single client: on Workers every db.* Proxy
+    // access opens a fresh connection (subrequest cap 50/invocation — a fully
+    // answered 75-question mock could not submit with per-answer updates).
+    const prisma = dbClient()
+    await prisma.$transaction([
+      ...gradeUpdates.map((g) =>
+        prisma.examAttemptAnswer.update({
+          where: { id: g.id },
+          data: { isCorrect: g.isCorrect, marksAwarded: g.marks },
+        })
+      ),
+      prisma.examAttempt.update({
+        where: { id: attempt.id },
+        data: {
+          status: expired ? 'expired' : 'submitted',
+          submittedAt: new Date(),
+          totalMarks: total,
+          maxMarks: max,
+          timeSpentSeconds,
+        },
+      }),
+    ])
 
     return Response.json({
       attemptId: attempt.id,
