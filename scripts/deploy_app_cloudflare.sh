@@ -50,6 +50,11 @@ if [ -f .secrets/supabase_db.env ]; then
 fi
 if [ -n "${SUPABASE_DB_PASSWORD:-}" ]; then
   export CLOUDFLARE_HYPERDRIVE_LOCAL_CONNECTION_STRING_HYPERDRIVE="postgresql://jee_app.mxfiazcjcgqzqynmsefp:${SUPABASE_DB_PASSWORD}@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
+else
+  # no stored password (sandbox recycle lost .secrets/) — getPlatformProxy only
+  # needs a syntactically-valid string to boot the local binding emulation;
+  # nothing connects during build (same trick as the dummy DATABASE_URL above)
+  export CLOUDFLARE_HYPERDRIVE_LOCAL_CONNECTION_STRING_HYPERDRIVE="postgresql://build:build@127.0.0.1:5432/build"
 fi
 bunx opennextjs-cloudflare build
 

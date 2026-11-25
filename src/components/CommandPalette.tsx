@@ -6,7 +6,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  BarChart3, BookMarked, ClipboardList, CornerDownLeft, Dice5, Library, MessageSquare,
+  BarChart3, BookMarked, CalendarCheck, ClipboardList, CornerDownLeft, Dice5, Library, MessageSquare,
   Moon, Search, ShieldCheck, Sun, Trophy, User, Home,
 } from 'lucide-react'
 import type { SessionUser, SubjectKey } from '@/lib/types'
@@ -71,6 +71,7 @@ function PaletteInner({
     }
     const nav: Action[] = [
       { id: 'home', label: 'Home', group: 'Navigate', icon: Home, run: go('/home'), keywords: 'dashboard start' },
+      { id: 'daily', label: "Today's daily challenge", group: 'Navigate', icon: CalendarCheck, run: go('/practice?daily=1'), keywords: 'question of the day qotd daily challenge streak' },
       { id: 'practice', label: 'Practice — surprise me', group: 'Navigate', icon: Dice5, run: go('/practice'), keywords: 'random questions quiz' },
       { id: 'pyq', label: 'PYQ Library', group: 'Navigate', icon: Library, run: go('/pyq'), keywords: 'previous year papers' },
       { id: 'mock', label: 'Mock Tests (CBT)', group: 'Navigate', icon: ClipboardList, run: go('/mock'), keywords: 'exam nta simulation' },

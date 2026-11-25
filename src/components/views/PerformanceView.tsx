@@ -153,7 +153,20 @@ export function PerformanceView({ onRequireAuth }: { onRequireAuth: () => void }
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="flex items-center gap-2 text-sm"><AlertTriangle className="h-4 w-4 text-amber-400" /> Chapters needing attention</CardTitle>
+            <CardTitle className="flex items-center gap-2 text-sm"><AlertTriangle className="h-4 w-4 text-amber-400" /> Chapters needing attention
+              {weakChapters.length > 0 && (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="ml-auto shrink-0"
+                  onClick={() =>
+                    navigate(`/practice?chapters=${encodeURIComponent(weakChapters.map((c) => c.key).join(','))}`)
+                  }
+                >
+                  <Target className="mr-1.5 h-3.5 w-3.5" /> Practice these {weakChapters.length}
+                </Button>
+              )}
+            </CardTitle>
           </CardHeader>
           <CardContent>
             {weakChapters.length === 0 ? (

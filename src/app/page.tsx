@@ -242,7 +242,7 @@ export default function App() {
       {/* main */}
       <main className="flex-1 px-4 py-8 pb-28 md:pb-8">
         <motion.div
-          key={view + (route.params.year ?? '') + (route.params.subject ?? '')}
+          key={view + JSON.stringify(route.params)}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
@@ -250,7 +250,16 @@ export default function App() {
         >
           {view === 'home' && <HomeView user={user} taxonomy={taxonomy} />}
           {view === 'practice' && (
-            <PracticeView taxonomy={taxonomy} loggedIn={!!user} onRequireAuth={() => navigate('/login')} />
+            <PracticeView
+              taxonomy={taxonomy}
+              loggedIn={!!user}
+              onRequireAuth={() => navigate('/login')}
+              initialSubject={route.params.subject}
+              initialChapters={
+                route.params.chapters ? route.params.chapters.split(',').filter(Boolean) : undefined
+              }
+              dailyParam={route.params.daily}
+            />
           )}
           {view === 'pyq' && (
             <PyqView

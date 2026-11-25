@@ -2,13 +2,13 @@
 
 // JEE NEXUS — home view
 import { motion } from 'framer-motion'
-import { Dice5, ArrowRight, Library, Target, Flame, BookMarked, Activity, ChevronRight, Atom, FlaskConical, Sigma, MessageSquare, ClipboardList, BarChart3, Sparkles, Trophy } from 'lucide-react'
+import { Dice5, ArrowRight, Library, Target, Flame, BookMarked, Activity, ChevronRight, Atom, FlaskConical, Sigma, MessageSquare, ClipboardList, BarChart3, Sparkles, Trophy, CalendarCheck, CheckCircle2, XCircle, Play } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Skeleton } from '@/components/ui/skeleton'
-import type { SessionUser, SubjectKey } from '@/lib/types'
+import type { SessionUser, SubjectKey, PublicQuestion, QuestionSolution } from '@/lib/types'
 import { useApi, navigate, SUBJECT_COLORS, formatDuration } from '@/lib/client'
 import { cn } from '@/lib/utils'
 
@@ -17,6 +17,18 @@ interface TaxonomySubject { key: SubjectKey; name: string; icon: string; questio
 interface PyqOverview {
   years: { year: number; total: number }[]
 }
+
+interface DailyOverview {
+  date: string
+  question: PublicQuestion | null
+  attemptedCount: number
+  answered: { isCorrect: boolean | null } | null
+  solution?: QuestionSolution | null
+}
+
+/** "26 Nov 2026" — pinned to IST noon so the label matches the challenge day */
+const formatDailyDate = (iso: string) =>
+  new Date(`${iso}T12:00:00+05:30`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
 
 interface StatsData {
   stats: {
@@ -34,7 +46,10 @@ const SUBJECT_ICONS: Record<string, LucideIcon> = { Atom, FlaskConical, Sigma }
 export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonomy: TaxonomySubject[] | null }) {
   const stats = useApi<StatsData>(user ? '/api/stats' : null)
   const pyq = useApi<PyqOverview>('/api/pyq')
+  const daily = useApi<DailyOverview>('/api/daily')
   const st = stats.data?.stats ?? null
+  const dq = daily.data?.question ?? null
+  const dailyDone = daily.data?.answered ?? null
 
   const totalQuestions = taxonomy?.reduce((a, s) => a + s.questionCount, 0) ?? 0
   const yearsCount = pyq.data?.years.length ?? 0
@@ -81,6 +96,80 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
           </div>
         </motion.div>
       </div>
+
+      {/* daily challenge banner */}
+      {daily.loading && (
+        <div className="mt-6">
+          <Skeleton className="h-[88px] w-full rounded-2xl" />
+        </div>
+      )}
+      {dq && (
+        <motion.button
+          type="button"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, delay: 0.1 }}
+          onClick={() => navigate('/practice?daily=1')}
+          className="group mt-6 flex w-full items-center gap-4 overflow-hidden rounded-2xl border border-primary/25 bg-gradient-to-r from-primary/[0.10] via-card/80 to-card/40 p-4 text-left transition-all duration-300 hover:border-primary/50 hover:shadow-lg sm:p-5"
+          aria-label="Open today's daily challenge"
+        >
+          <div className="relative shrink-0 rounded-xl bg-primary/15 p-3">
+            {dailyDone?.isCorrect === true ? (
+              <CheckCircle2 className="h-6 w-6 text-emerald-400" />
+            ) : dailyDone?.isCorrect === false ? (
+              <XCircle className="h-6 w-6 text-rose-400" />
+            ) : (
+              <CalendarCheck className={cn('h-6 w-6 text-primary', !dailyDone && 'animate-pulse')} />
+            )}
+            {!dailyDone && (
+              <span className="absolute -right-1 -top-1 flex h-3 w-3">
+                <span className="nexus-pulse absolute inline-flex h-full w-full rounded-full bg-primary" />
+                <span className="relative inline-flex h-3 w-3 rounded-full bg-primary" />
+              </span>
+            )}
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm font-semibold">
+              <span>
+                {dailyDone
+                  ? dailyDone.isCorrect === true
+                    ? 'Daily challenge conquered'
+                    : dailyDone.isCorrect === false
+                      ? 'Daily challenge — reviewed'
+                      : 'Daily challenge — revealed'
+                  : 'Daily challenge'}
+              </span>
+              <span className="text-xs font-normal text-muted-foreground">
+                {formatDailyDate(daily.data!.date)} · {dq.subject.name} · {dq.chapter.name}
+              </span>
+            </div>
+            <div className="mt-1 truncate text-xs text-muted-foreground">
+              {daily.data!.attemptedCount > 0
+                ? `${daily.data!.attemptedCount.toLocaleString('en-IN')} ${daily.data!.attemptedCount === 1 ? 'aspirant has' : 'aspirants have'} played today — one question, same for everyone`
+                : 'One question a day, same for every aspirant — keep the streak alive'}
+            </div>
+          </div>
+          <Badge
+            variant="outline"
+            className={cn(
+              'shrink-0 gap-1.5 text-xs',
+              dailyDone
+                ? 'border-border text-muted-foreground'
+                : 'border-primary/40 bg-primary/10 text-primary group-hover:bg-primary/20'
+            )}
+          >
+            {dailyDone ? (
+              <>
+                Review <ChevronRight className="h-3.5 w-3.5" />
+              </>
+            ) : (
+              <>
+                <Play className="h-3.5 w-3.5" /> Take challenge
+              </>
+            )}
+          </Badge>
+        </motion.button>
+      )}
 
       {/* stats row (logged in) */}
       {user && (

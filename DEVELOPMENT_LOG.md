@@ -5,6 +5,99 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-26 (~04:45 IST) — DAILY CHALLENGE (QOTD) LIVE + smart practice launcher; Δ-repair verified in DB
+
+### Session start state
+- Sandbox recycled (5th time): `.secrets/` gone AND local git HEAD reset to a
+  stale milestone commit (2764a4e) while the working tree lagged origin/main by
+  2,439 files. Reconciled with `git reset --hard origin/main` (working tree had
+  no local-only content — verified via diff vs origin/main first). Rebuilt
+  `.secrets/` (tokens.env now matches script conventions: bare `GH_PAT=` /
+  `SB_PAT=` lines, no `export`).
+- Health: `/`, `/api/pyq`, `/api/taxonomy` all 200. Import run 45655388098
+  (workflow_dispatch on e315db9) **completed success** — live `/api/pyq` year
+  totals sum to exactly **11,886**, the closed-corpus target.
+- **Δ-repair verification, done properly this time**: an earlier in-session
+  sampler used `?id=` against a `?publicId=` route and `toPublicQuestion`
+  doesn't ship solution bodies — its "0 artifacts" was vacuous. Re-verified by
+  running `scripts/verify_delta_clean.sql` against the live DB via the
+  Supabase management API (`scripts/db_query.py`): `{q: 0, opt: 0, sol: 0}` —
+  e315db9's 81-row repair is genuinely applied everywhere.
+- Endpoint sweep (anon + admin-authed): taxonomy, pyq (overview/list/search),
+  leaderboard (week/all + authed), stats, bookmarks, exam list, chat
+  (conversations/users/message-search), random-selection — all healthy, zero
+  bugs found. `/api/questions/random` is POST-only by design.
+
+### Daily Challenge (question of the day) — new feature
+- **`src/lib/daily.ts`**: deterministic pick per IST day — FNV-1a hash of the
+  date key indexes into the id-ordered eligible pool (`verificationStatus !=
+  rejected`). No new table, no migration; every visitor of the same IST day
+  gets the same question even across deploys. IST day boundaries shared with
+  the streak logic (UTC+5:30).
+- **`GET /api/daily`**: `{date, question, attemptedCount, answered}`.
+  - `attemptedCount` = attempts on the pick within today's IST window
+    ("N aspirants played today" social proof).
+  - Authed users get `answered` (their attempt in the window) and — ONLY then
+    — the full solution. Answers never ship before a real submit; anon users
+    can play but nothing is recorded (same policy as practice).
+- **PracticeView daily mode** (`/practice?daily=1`): straight into the
+  question (no filter screen), daily header with Exit, custom summary ("Daily
+  challenge complete" + aspirant count + Back to home / Practice more), and a
+  **review card** on re-entry once answered: readOnly QuestionCard with
+  `initialResult` + solution shipped by the API. Loading skeleton + error
+  retry states. Guard so "Practice one more" (randomSingle) isn't shadowed by
+  the review card.
+- **HomeView banner**: pulsing CalendarCheck chip + "26 Nov 2026 · Physics ·
+  Gravitation" + aspirant count; state flips to conquered/reviewed with
+  emerald/rose icons after answering. Skeleton while loading; hidden if the
+  bank is empty. Wired for anon (play without account) and authed.
+- **Command palette**: "Today's daily challenge" entry (keywords qotd/streak).
+
+### Smart practice launcher + prefill fixes
+- **PerformanceView**: "Practice these N" button on *Chapters needing
+  attention* → `/practice?chapters=<keys csv>` (chapter keys carry the subject
+  prefix, so cross-subject weak lists work through the same param).
+- **PracticeView prefill**: accepts `initialSubject`/`initialChapters`; subject
+  derives from chapter-key prefixes when all share one (chapter picker becomes
+  visible with the boxes pre-checked), which also fixes the pre-existing gap
+  where Home's subject chips (`/practice?subject=physics`) were silently
+  ignored — practice always opened "All subjects".
+- page.tsx: view remount key now `view + JSON.stringify(route.params)` so any
+  param change (daily=1, chapters=…) remounts instead of leaving stale state.
+
+### Local QA (embedded PG + dev server, same-call pattern)
+- Full corpus re-seeded locally (11,926 rows incl. seed fixtures).
+- E2E suites: **api 29/29, exam 20/20, admin 24/24**.
+- **New `scripts/test_daily_flow.py` — 12/12**: login cookie, question shape,
+  answered-null before submit, **no solution before submit**, deterministic
+  pick across calls, graded submit, answered recorded with isCorrect,
+  solution ships only after submit, attemptedCount ≥ 1, anon isolation
+  (answered stays null, no solution).
+- Browser QA (agent-browser, headless Chromium, live dev server):
+  - anon flow: banner → question → submit (graded Incorrect, solution shows
+    "Correct answer: D") → summary "Daily challenge complete · 26 Nov 2026 ·
+    1 aspirant played today" → Back to home.
+  - authed flow (fresh signup): banner → D picked → "Correct!" → summary;
+    re-entry shows the readOnly review card with KaTeX rendering (9.8 ms⁻²,
+    6.4 × 10⁶ m) — screenshot-verified.
+  - weak-chapter launcher: 3 wrong gravitation answers → Performance shows
+    "Practice these 1" → tap → Physics preselected, Gravitation pre-checked.
+  - palette: Ctrl+K → "daily" → Enter → lands on the daily view.
+  - mobile 390×844: banner renders with Review chip; nav intact.
+  - zero page errors throughout; only pre-existing KaTeX en-dash warnings.
+
+### Deploy notes for future sessions
+- `deploy_app_cloudflare.sh` now falls back to a syntactically-valid dummy
+  Hyperdrive emulation string when `.secrets/supabase_db.env` is missing
+  (getPlatformProxy only validates format; nothing connects during build) —
+  unblocks deploys after sandbox recycles that lose the DB password.
+
+### Deploy state
+- This entry committed and deployed via the script; verification of the live
+  `/api/daily` follows the deploy step.
+
+---
+
 ## 2026-11-25 (~20:45 IST) — LEADERBOARD + STREAKS LIVE; import corpus closure (10 rejected rows resolved)
 
 ### Health & CI at session start

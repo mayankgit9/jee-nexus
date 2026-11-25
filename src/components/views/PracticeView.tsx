@@ -1,9 +1,9 @@
 'use client'
 
-// JEE NEXUS — random practice engine view
-import { useMemo, useRef, useState } from 'react'
+// JEE NEXUS — random practice engine view (+ daily challenge mode)
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Dice5, Filter, Layers, RefreshCw, ArrowRight, Trophy, Target, Clock } from 'lucide-react'
+import { Dice5, Filter, Layers, RefreshCw, ArrowRight, Trophy, Target, Clock, CalendarCheck, CheckCircle2, XCircle, Home } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -14,8 +14,9 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { QuestionCard } from '@/components/QuestionCard'
-import type { PublicQuestion, SubmittedResult, SubjectKey } from '@/lib/types'
-import { api, useApi } from '@/lib/client'
+import type { PublicQuestion, QuestionSolution, SubmittedResult, SubjectKey } from '@/lib/types'
+import { api, navigate, useApi } from '@/lib/client'
+import { cn } from '@/lib/utils'
 import { toast } from '@/hooks/use-toast'
 
 interface TaxonomySubject {
@@ -24,13 +25,30 @@ interface TaxonomySubject {
   chapters: { key: string; name: string; unit: string | null; questionCount: number }[]
 }
 
+interface DailyPayload {
+  date: string
+  question: PublicQuestion | null
+  attemptedCount: number
+  answered: { isCorrect: boolean | null; selectedOptions?: number[]; numericalValue?: string; submittedAt: string } | null
+  solution?: QuestionSolution | null
+}
+
+/** "26 Nov 2026" — pinned to IST noon so the date never shifts with the viewer's TZ */
+const formatDailyDate = (iso: string) =>
+  new Date(`${iso}T12:00:00+05:30`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+
 interface Props {
   taxonomy: TaxonomySubject[] | null
   loggedIn: boolean
   onRequireAuth: () => void
+  /** prefill from the URL hash query (subject chips on Home, weak-chapter launcher) */
+  initialSubject?: string
+  initialChapters?: string[]
+  /** '1' → today's Daily Challenge session */
+  dailyParam?: string
 }
 
-export function PracticeView({ taxonomy, loggedIn, onRequireAuth }: Props) {
+export function PracticeView({ taxonomy, loggedIn, onRequireAuth, initialSubject, initialChapters, dailyParam }: Props) {
   // Only offer years that actually have imported questions (the PYQ overview
   // is the source of truth; hardcoded chips offered empty years like 2026).
   const pyqYears = useApi<{ years: { year: number }[] }>('/api/pyq')
@@ -38,8 +56,47 @@ export function PracticeView({ taxonomy, loggedIn, onRequireAuth }: Props) {
     () => (pyqYears.data?.years ?? []).map((y) => y.year).sort((a, b) => b - a),
     [pyqYears.data]
   )
-  const [subject, setSubject] = useState<string>('all')
-  const [chapters, setChapters] = useState<string[]>([])
+  const [subject, setSubject] = useState<string>(() => {
+    if (initialSubject && (initialSubject === 'all' || (taxonomy ?? []).some((s) => s.key === initialSubject))) {
+      return initialSubject
+    }
+    // chapter keys carry the subject prefix ("physics:gravitation") — when the
+    // prefill chapters all share one subject, select it so the chapter picker
+    // (and the pre-checked boxes) are visible immediately
+    if (initialChapters?.length) {
+      const prefixes = [...new Set(initialChapters.map((k) => k.split(':')[0]))]
+      const key = prefixes.length === 1 ? prefixes[0] : undefined
+      if (key && (taxonomy ?? []).some((s) => s.key === key)) return key
+    }
+    return 'all'
+  })
+  const [chapters, setChapters] = useState<string[]>(initialChapters ?? [])
+
+  // ---------- daily challenge mode ----------
+  const isDaily = dailyParam === '1'
+  const [daily, setDaily] = useState<DailyPayload | null>(null)
+  const [dailyError, setDailyError] = useState(false)
+  const dailyInit = useRef(false)
+  useEffect(() => {
+    if (!isDaily || dailyInit.current) return
+    dailyInit.current = true
+    api<DailyPayload>('/api/daily')
+      .then((d) => {
+        setDaily(d)
+        // not answered yet → jump straight into the question; answered → review card below
+        if (!d.answered && d.question) {
+          setSession([d.question])
+          setQIndex(0)
+          setResults([])
+          setShowFilters(false)
+        }
+      })
+      .catch(() => setDailyError(true))
+  }, [isDaily])
+  const dailyInitialResult = useMemo<SubmittedResult | null>(
+    () => (daily?.answered ? { isCorrect: daily.answered.isCorrect, solution: daily.solution ?? null } : null),
+    [daily]
+  )
   const [years, setYears] = useState<number[]>([])
   const [difficulties, setDifficulties] = useState<string[]>([])
   const [types, setTypes] = useState<string[]>([])
@@ -121,6 +178,109 @@ export function PracticeView({ taxonomy, loggedIn, onRequireAuth }: Props) {
     else setQIndex(session.length) // summary screen
   }
 
+  // ---------- daily: already completed today → review card ----------
+  // (skipped while a fresh "practice one more" session is active — showFilters
+  // is false the moment randomSingle loads a new question)
+  if (isDaily && daily?.answered && daily.question && !session) {
+    const answered = daily.answered
+    return (
+      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mx-auto max-w-2xl">
+        <Card className="nexus-glow">
+          <CardHeader className="text-center">
+            {answered.isCorrect === true ? (
+              <CheckCircle2 className="mx-auto h-10 w-10 text-emerald-400" />
+            ) : answered.isCorrect === false ? (
+              <XCircle className="mx-auto h-10 w-10 text-rose-400" />
+            ) : (
+              <CalendarCheck className="mx-auto h-10 w-10 text-primary" />
+            )}
+            <CardTitle className="text-2xl">Daily challenge complete</CardTitle>
+            <p className="text-sm text-muted-foreground">
+              {formatDailyDate(daily.date)} · {daily.attemptedCount.toLocaleString('en-IN')}{' '}
+              {daily.attemptedCount === 1 ? 'aspirant' : 'aspirants'} played today
+            </p>
+          </CardHeader>
+          <CardContent>
+            <div className="flex justify-center">
+              <Badge
+                variant="outline"
+                className={cn(
+                  'px-3 py-1 text-xs',
+                  answered.isCorrect === true && 'border-emerald-400/30 bg-emerald-400/10 text-emerald-400',
+                  answered.isCorrect === false && 'border-rose-400/30 bg-rose-400/10 text-rose-400',
+                  answered.isCorrect === null && 'text-muted-foreground'
+                )}
+              >
+                {answered.isCorrect === true ? 'Correct answer' : answered.isCorrect === false ? 'Wrong answer' : 'Revealed without answering'}
+              </Badge>
+            </div>
+            <QuestionCard
+              question={daily.question}
+              readOnly
+              loggedIn={loggedIn}
+              onRequireAuth={onRequireAuth}
+              initialResult={dailyInitialResult}
+            />
+            <div className="mt-5 flex flex-wrap justify-center gap-3">
+              <Button variant="outline" onClick={() => navigate('/home')}>
+                <Home className="mr-2 h-4 w-4" /> Back to home
+              </Button>
+              <Button onClick={randomSingle}>
+                <Dice5 className="mr-2 h-4 w-4" /> Practice one more
+              </Button>
+            </div>
+            {!loggedIn && (
+              <p className="mt-4 text-center text-xs text-muted-foreground">
+                Sign in so completions like today&apos;s count toward your streak.
+              </p>
+            )}
+          </CardContent>
+        </Card>
+      </motion.div>
+    )
+  }
+
+  // ---------- daily: loading / failure states ----------
+  if (isDaily && !daily && !dailyError) {
+    return (
+      <div className="mx-auto max-w-2xl space-y-4">
+        <Skeleton className="h-8 w-2/3 mx-auto" />
+        <Skeleton className="h-40 w-full" />
+        <Skeleton className="h-10 w-full" />
+        <Skeleton className="h-10 w-5/6" />
+      </div>
+    )
+  }
+  if (isDaily && dailyError) {
+    return (
+      <div className="mx-auto max-w-lg rounded-2xl border border-dashed border-border p-10 text-center">
+        <CalendarCheck className="mx-auto h-10 w-10 text-muted-foreground" />
+        <h2 className="mt-4 text-lg font-semibold">Could not load today&apos;s challenge</h2>
+        <p className="mt-2 text-sm text-muted-foreground">Check your connection and try again.</p>
+        <Button
+          className="mt-5"
+          onClick={() => {
+            setDailyError(false)
+            dailyInit.current = false
+            api<DailyPayload>('/api/daily')
+              .then((d) => {
+                setDaily(d)
+                if (!d.answered && d.question) {
+                  setSession([d.question])
+                  setQIndex(0)
+                  setResults([])
+                  setShowFilters(false)
+                }
+              })
+              .catch(() => setDailyError(true))
+          }}
+        >
+          Retry
+        </Button>
+      </div>
+    )
+  }
+
   // ---------- summary ----------
   if (session && qIndex >= session.length) {
     const correct = results.filter((r) => r.result.isCorrect === true).length
@@ -132,8 +292,23 @@ export function PracticeView({ taxonomy, loggedIn, onRequireAuth }: Props) {
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mx-auto max-w-2xl">
         <Card className="nexus-glow">
           <CardHeader className="text-center">
-            <Trophy className="mx-auto h-10 w-10 text-primary" />
-            <CardTitle className="text-2xl">Session complete</CardTitle>
+            {isDaily ? (
+              <>
+                <CalendarCheck className="mx-auto h-10 w-10 text-primary" />
+                <CardTitle className="text-2xl">Daily challenge complete</CardTitle>
+                {daily && (
+                  <p className="text-sm text-muted-foreground">
+                    {formatDailyDate(daily.date)} · {daily.attemptedCount.toLocaleString('en-IN')}{' '}
+                    {daily.attemptedCount === 1 ? 'aspirant' : 'aspirants'} played today
+                  </p>
+                )}
+              </>
+            ) : (
+              <>
+                <Trophy className="mx-auto h-10 w-10 text-primary" />
+                <CardTitle className="text-2xl">Session complete</CardTitle>
+              </>
+            )}
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -155,9 +330,20 @@ export function PracticeView({ taxonomy, loggedIn, onRequireAuth }: Props) {
               {answered > 0 && <> · avg {Math.round(totalTime / answered)}s per question</>}
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Button onClick={() => { setSession(null); setShowFilters(true) }}>
-                <RefreshCw className="mr-2 h-4 w-4" /> New session
-              </Button>
+              {isDaily ? (
+                <>
+                  <Button variant="outline" onClick={() => navigate('/home')}>
+                    <Home className="mr-2 h-4 w-4" /> Back to home
+                  </Button>
+                  <Button onClick={() => { setSession(null); setShowFilters(true) }}>
+                    <Dice5 className="mr-2 h-4 w-4" /> Practice more
+                  </Button>
+                </>
+              ) : (
+                <Button onClick={() => { setSession(null); setShowFilters(true) }}>
+                  <RefreshCw className="mr-2 h-4 w-4" /> New session
+                </Button>
+              )}
             </div>
             {!loggedIn && (
               <p className="mt-4 text-center text-xs text-muted-foreground">
@@ -175,18 +361,32 @@ export function PracticeView({ taxonomy, loggedIn, onRequireAuth }: Props) {
     const q = session[qIndex]
     return (
       <div className="mx-auto max-w-3xl">
-        <div className="mb-4 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Dice5 className="h-4 w-4 text-primary" />
-            <span>{results.length} answered · {session.length - results.length} left</span>
+        {isDaily ? (
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2 text-sm font-medium text-primary">
+              <CalendarCheck className="h-4 w-4" />
+              <span>Daily challenge{daily ? ` · ${formatDailyDate(daily.date)}` : ''}</span>
+            </div>
+            <Button variant="ghost" size="sm" onClick={() => navigate('/home')}>
+              Exit
+            </Button>
           </div>
-          <Button variant="ghost" size="sm" onClick={() => { setSession(null); setShowFilters(true) }}>
-            End session
-          </Button>
-        </div>
-        <div className="mb-5 h-1.5 overflow-hidden rounded-full bg-muted">
-          <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${(qIndex / session.length) * 100}%` }} />
-        </div>
+        ) : (
+          <>
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Dice5 className="h-4 w-4 text-primary" />
+                <span>{results.length} answered · {session.length - results.length} left</span>
+              </div>
+              <Button variant="ghost" size="sm" onClick={() => { setSession(null); setShowFilters(true) }}>
+                End session
+              </Button>
+            </div>
+            <div className="mb-5 h-1.5 overflow-hidden rounded-full bg-muted">
+              <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${(qIndex / session.length) * 100}%` }} />
+            </div>
+          </>
+        )}
 
         <QuestionCard
           key={q.id}
