@@ -223,6 +223,79 @@ check("DM delete works", r.get("deleted") is True)
 r = call("GET", "/api/chat/conversations", jar=jar_b)
 check("B no longer sees deleted DM", not any(c["id"] == dm_id for c in r["conversations"]))
 
+# --- 6b. replies + soft deletes + rename (chat v3) ---
+anchor_token = f"anchor{ts}"
+tail_token = f"tail{ts}"
+r = call("POST", "/api/chat/messages", {"conversationId": g_id, "body": f"{anchor_token} what is the dimensional formula?"}, jar=jar_a)
+anchor = r.get("message", {})
+check("A sends anchor", anchor.get("body", "").startswith(anchor_token))
+r = call("POST", "/api/chat/messages", {"conversationId": g_id, "body": f"{tail_token} bye for now"}, jar=jar_a)
+tail = r.get("message", {})
+# C replies to the anchor
+r = call("POST", "/api/chat/messages", {"conversationId": g_id, "body": "MLT^-2, force", "replyToId": anchor.get("id")}, jar=jar_c)
+reply1 = r.get("message", {})
+check("C replies to anchor", reply1.get("replyToId") == anchor.get("id"))
+check("reply carries hydrated context", (reply1.get("replyTo") or {}).get("senderName") == "Asha Verma"
+      and (reply1.get("replyTo") or {}).get("body", "").startswith(anchor_token))
+# reply target must live in the same conversation
+check("reply to foreign/unknown message 400",
+      status("POST", "/api/chat/messages", {"conversationId": g_id, "body": "x", "replyToId": "nope"}, jar=jar_c) == "400")
+# B left the group — cannot reply there at all
+check("non-member cannot reply", status("POST", "/api/chat/messages",
+      {"conversationId": g_id, "body": "x", "replyToId": anchor.get("id")}, jar=jar_b) == "403")
+# GET shows the reply context for other members
+r = call("GET", f"/api/chat/messages?conversationId={g_id}", jar=jar_a)
+a_view = {m["id"]: m for m in r["messages"]}
+check("A sees reply context", (a_view[reply1["id"]].get("replyTo") or {}).get("body", "").startswith(anchor_token))
+# A deletes the anchor (soft delete)
+r = call("DELETE", "/api/chat/messages", {"messageId": anchor["id"]}, jar=jar_a)
+check("A deletes own message", r.get("deleted") is True)
+r = call("GET", f"/api/chat/messages?conversationId={g_id}", jar=jar_c)
+c_view = {m["id"]: m for m in r["messages"]}
+check("tombstone: body blank + deleted flag", c_view[anchor["id"]].get("deleted") is True and c_view[anchor["id"]]["body"] == "")
+check("reply to deleted parent shows tombstone context",
+      (c_view[reply1["id"]].get("replyTo") or {}).get("deleted") is True
+      and (c_view[reply1["id"]].get("replyTo") or {}).get("body") == "")
+# poll overlay carries deleted ids
+r = call("GET", f"/api/chat/messages?conversationId={g_id}&after=2000-01-01T00:00:00.000Z", jar=jar_c)
+check("poll overlay lists tombstone ids", anchor["id"] in (r.get("deletedIds") or []))
+# guards
+check("only sender deletes (A on C's reply)", status("DELETE", "/api/chat/messages", {"messageId": reply1["id"]}, jar=jar_a) == "403")
+check("only sender deletes (C on A's tail)", status("DELETE", "/api/chat/messages", {"messageId": tail["id"]}, jar=jar_c) == "403")
+check("non-member cannot delete", status("DELETE", "/api/chat/messages", {"messageId": tail["id"]}, jar=jar_b) == "403")
+check("reaction on tombstone 400", status("POST", "/api/chat/reactions", {"messageId": anchor["id"], "emoji": "\U0001F44D"}, jar=jar_c) == "400")
+check("delete requires auth", status("DELETE", "/api/chat/messages", {"messageId": tail["id"]}) == "401")
+# deleting the LATEST message updates the sidebar preview (reply1 is currently
+# last, so a fresh "final" message is the one whose tombstone becomes the preview)
+r = call("POST", "/api/chat/messages", {"conversationId": g_id, "body": f"final{ts} wrapping up"}, jar=jar_a)
+final = r.get("message", {})
+r = call("DELETE", "/api/chat/messages", {"messageId": final["id"]}, jar=jar_a)
+check("A deletes final message", r.get("deleted") is True)
+r = call("GET", "/api/chat/conversations", jar=jar_c)
+gconv = next((c for c in r["conversations"] if c["id"] == g_id), None)
+check("preview shows 'Message deleted'", gconv and (gconv.get("lastMessage") or {}).get("body") == "Message deleted")
+# search never surfaces deleted bodies
+r = call("GET", f"/api/chat/search?q={anchor_token}", jar=jar_c)
+check("search excludes deleted messages", not any(m["body"].startswith(anchor_token) for m in r.get("results", [])))
+r = call("GET", "/api/chat/search?q=MLT", jar=jar_c)
+check("search still finds live messages", any("force" in m["body"] for m in r.get("results", [])))
+# rename: admin only, groups only
+new_name = f"Renamed Squad {ts % 1000}"
+r = call("PATCH", "/api/chat/conversations", {"conversationId": g_id, "name": new_name}, jar=jar_a)
+check("admin renames group", (r.get("conversation") or {}).get("name") == new_name)
+r = call("GET", "/api/chat/conversations", jar=jar_c)
+gconv = next((c for c in r["conversations"] if c["id"] == g_id), None)
+check("rename visible to members", gconv and gconv["name"] == new_name)
+check("non-admin rename 403", status("PATCH", "/api/chat/conversations", {"conversationId": g_id, "name": "nope"}, jar=jar_c) == "403")
+check("non-member rename 403", status("PATCH", "/api/chat/conversations", {"conversationId": g_id, "name": "nope"}, jar=jar_b) == "403")
+check("empty rename 400", status("PATCH", "/api/chat/conversations", {"conversationId": g_id, "name": "   "}, jar=jar_a) == "400")
+check("61-char rename 400", status("PATCH", "/api/chat/conversations", {"conversationId": g_id, "name": "x" * 61}, jar=jar_a) == "400")
+# DMs cannot be renamed
+r = call("POST", "/api/chat/conversations", {"type": "dm", "userId": uid["c"]}, jar=jar_a)
+dm2 = r.get("conversationId")
+check("DM rename 400", status("PATCH", "/api/chat/conversations", {"conversationId": dm2, "name": "x"}, jar=jar_a) == "400")
+check("rename requires auth", status("PATCH", "/api/chat/conversations", {"conversationId": g_id, "name": "x"}) == "401")
+
 # --- 7. rate limit (last — burns the budget) ---
 # The burst must complete WITHIN the 60s window or the window resets and the
 # limit never trips (prod-verified 2026-11-25: 4-worker burst spanned ~70s =

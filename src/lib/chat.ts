@@ -57,15 +57,73 @@ export function toClientMessage(msg: {
   body: string
   createdAt: Date
   senderId: string
+  deletedAt?: Date | null
+  replyToId?: string | null
   sender?: { id: string; name: string | null } | null
 }) {
+  const deleted = Boolean(msg.deletedAt)
   return {
     id: msg.id,
-    body: msg.body,
+    body: deleted ? '' : msg.body,
+    deleted,
     createdAt: msg.createdAt,
     senderId: msg.senderId,
     senderName: msg.sender?.name ?? 'Student',
+    replyToId: msg.replyToId ?? null,
+    replyTo: null as ReplyContext | null, // filled by hydrateReplies()
   }
+}
+
+/** quoted-context shape embedded under each message that is a reply */
+export interface ReplyContext {
+  id: string
+  senderName: string
+  body: string // blank when the parent was deleted
+  deleted: boolean
+}
+
+/** server-side cap for the quoted snippet — previews only, full body stays on the parent */
+const REPLY_SNIPPET_MAX = 160
+
+/**
+ * Fetch the parent messages for every reply in a page in ONE query and
+ * return messageId → quoted context. Deleted parents ship an empty body —
+ * their text must never reach the client again.
+ */
+export async function hydrateReplies(
+  client: PrismaClient,
+  messages: { id: string; replyToId?: string | null }[]
+): Promise<Map<string, ReplyContext>> {
+  const parentIds = Array.from(
+    new Set(messages.map((m) => m.replyToId).filter((x): x is string => Boolean(x)))
+  )
+  const out = new Map<string, ReplyContext>()
+  if (parentIds.length === 0) return out
+  const parents = await client.chatMessage.findMany({
+    where: { id: { in: parentIds } },
+    select: {
+      id: true,
+      body: true,
+      deletedAt: true,
+      sender: { select: { name: true } },
+    },
+  })
+  for (const p of parents) {
+    const deleted = Boolean(p.deletedAt)
+    const body = deleted ? '' : p.body.replace(/\s+/g, ' ').slice(0, REPLY_SNIPPET_MAX)
+    out.set(p.id, { id: p.id, senderName: p.sender?.name ?? 'Student', body, deleted })
+  }
+  return out
+}
+
+/** attach hydrated reply contexts to already-mapped client messages */
+export function attachReplies<
+  T extends { id: string; replyToId: string | null; replyTo: ReplyContext | null }
+>(messages: T[], replyMap: Map<string, ReplyContext>): T[] {
+  for (const m of messages) {
+    if (m.replyToId) m.replyTo = replyMap.get(m.replyToId) ?? null
+  }
+  return messages
 }
 
 export function toClientMember(m: {

@@ -1,7 +1,10 @@
 import { NextRequest } from 'next/server'
 import { dbClient } from '@/lib/db'
 import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
-import { CHAT_LIMITS, requireMembership, sanitizeMessageBody, toClientMember, toClientMessage } from '@/lib/chat'
+import {
+  CHAT_LIMITS, requireMembership, sanitizeMessageBody, toClientMember, toClientMessage,
+  hydrateReplies, attachReplies,
+} from '@/lib/chat'
 
 /** grouped reaction chips: [{ emoji, count, mine }] per message id */
 function aggregateReactions(
@@ -63,6 +66,8 @@ export async function GET(req: NextRequest) {
         body: string
         createdAt: Date
         senderId: string
+        replyToId: string | null
+        deletedAt: Date | null
         sender: { id: string; name: string | null } | null
       }[]
       hasMore: boolean
@@ -118,17 +123,34 @@ export async function GET(req: NextRequest) {
     }
     const { messages, hasMore } = page
 
-    // reactions for this page (single IN query over the page's message ids)
+    // reactions for this page — only for live (non-deleted) messages
+    const liveIds = messages.filter((m) => !m.deletedAt).map((m) => m.id)
     let reactions: Record<string, { emoji: string; count: number; mine: boolean }[]> = {}
-    if (messages.length > 0) {
+    if (liveIds.length > 0) {
       const rows = (await client.$queryRawUnsafe(
         `select message_id, emoji, user_id from chat_reactions where message_id = any($1::text[])`,
-        messages.map((m) => m.id)
+        liveIds
       )) as { message_id: string; emoji: string; user_id: string }[]
       reactions = aggregateReactions(
         rows.map((r) => ({ messageId: r.message_id, emoji: r.emoji, userId: r.user_id })),
         user.id
       )
+    }
+
+    // quoted context for replies (single query for the whole page)
+    const replyMap = await hydrateReplies(client, messages)
+
+    // poll overlay: ids of deleted messages so already-rendered bubbles can
+    // become tombstones without a reload (bounded by the partial index)
+    let deletedIds: string[] | undefined
+    if (after) {
+      const tombstones = await client.chatMessage.findMany({
+        where: { conversationId, NOT: { deletedAt: null } },
+        select: { id: true },
+        orderBy: { createdAt: 'desc' },
+        take: 50,
+      })
+      deletedIds = tombstones.map((t) => t.id)
     }
 
     return Response.json({
@@ -139,10 +161,11 @@ export async function GET(req: NextRequest) {
         myRole: membership.role,
         members: conversation.members.map(toClientMember),
       },
-      messages: messages.map(toClientMessage),
+      messages: attachReplies(messages.map(toClientMessage), replyMap),
       hasMore,
       typing: typingRows.map((t) => ({ userId: t.userId, name: t.user.name ?? 'Student' })),
       reactions,
+      deletedIds,
     })
   } catch (err) {
     return jsonError(err)
@@ -150,7 +173,8 @@ export async function GET(req: NextRequest) {
 }
 
 /**
- * POST /api/chat/messages { conversationId, body } — send a message.
+ * POST /api/chat/messages { conversationId, body, replyToId? } — send a message,
+ * optionally as a quoted reply to another message in the same conversation.
  * Bumps the conversation's updatedAt (sidebar ordering) and the sender's
  * lastReadAt (you have obviously read what you sent).
  */
@@ -159,15 +183,33 @@ export async function POST(req: NextRequest) {
     const user = await requireUser()
     const client = dbClient()
     await rateLimit(`chat-msg:${user.id}`, 30, 60 * 1000, client)
-    const payload = (await req.json().catch(() => ({}))) as { conversationId?: string; body?: string }
+    const payload = (await req.json().catch(() => ({}))) as {
+      conversationId?: string
+      body?: string
+      replyToId?: string
+    }
     const conversationId = String(payload.conversationId ?? '')
     if (!conversationId) throw new HttpError(400, 'conversationId is required')
 
     await requireMembership(client, conversationId, user.id)
     const body = sanitizeMessageBody(String(payload.body ?? ''))
 
+    // optional reply target: must exist AND belong to the same conversation
+    let replyToId: string | null = null
+    const rawReplyTo = String(payload.replyToId ?? '').trim()
+    if (rawReplyTo) {
+      const target = await client.chatMessage.findUnique({
+        where: { id: rawReplyTo },
+        select: { id: true, conversationId: true },
+      })
+      if (!target || target.conversationId !== conversationId) {
+        throw new HttpError(400, 'replyToId must reference a message in this conversation')
+      }
+      replyToId = target.id
+    }
+
     const message = await client.chatMessage.create({
-      data: { conversationId, senderId: user.id, body },
+      data: { conversationId, senderId: user.id, body, replyToId },
       include: { sender: { select: { id: true, name: true } } },
     })
     await client.chatConversation.update({
@@ -179,7 +221,46 @@ export async function POST(req: NextRequest) {
       data: { lastReadAt: new Date() },
     })
 
-    return Response.json({ message: toClientMessage(message) })
+    // hydrate the reply context so the sender's optimistic append renders the quote
+    const replyMap = await hydrateReplies(client, [message])
+    const mapped = attachReplies([toClientMessage(message)], replyMap)
+    return Response.json({ message: mapped[0] })
+  } catch (err) {
+    return jsonError(err)
+  }
+}
+
+/**
+ * DELETE /api/chat/messages { messageId } — soft-delete the caller's OWN
+ * message. The row keeps its body for audit but every read path blanks it
+ * afterwards; reactions on the tombstone are dropped and rejected.
+ */
+export async function DELETE(req: NextRequest) {
+  try {
+    const user = await requireUser()
+    const client = dbClient()
+    await rateLimit(`chat-del:${user.id}`, 30, 60 * 1000, client)
+    const payload = (await req.json().catch(() => ({}))) as { messageId?: string }
+    const messageId = String(payload.messageId ?? '')
+    if (!messageId) throw new HttpError(400, 'messageId is required')
+
+    const message = await client.chatMessage.findUnique({
+      where: { id: messageId },
+      select: { id: true, conversationId: true, senderId: true, deletedAt: true },
+    })
+    if (!message) throw new HttpError(404, 'Message not found')
+    // membership guard doubles as a 404 shield for foreign conversations
+    await requireMembership(client, message.conversationId, user.id)
+    if (message.senderId !== user.id) throw new HttpError(403, 'You can only delete your own messages')
+    if (message.deletedAt) return Response.json({ deleted: true, already: true })
+
+    await client.chatMessage.update({
+      where: { id: messageId },
+      data: { deletedAt: new Date() },
+    })
+    await client.chatReaction.deleteMany({ where: { messageId } }).catch(() => {})
+
+    return Response.json({ deleted: true })
   } catch (err) {
     return jsonError(err)
   }

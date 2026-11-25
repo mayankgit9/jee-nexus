@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server'
 import { dbClient } from '@/lib/db'
 import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
-import { CHAT_LIMITS, toClientMember } from '@/lib/chat'
+import { CHAT_LIMITS, toClientMember, requireMembership } from '@/lib/chat'
 
 /**
  * GET /api/chat/conversations — the caller's conversation list.
@@ -31,7 +31,7 @@ export async function GET() {
             messages: {
               take: 1,
               orderBy: { createdAt: 'desc' },
-              select: { body: true, createdAt: true, senderId: true, sender: { select: { id: true, name: true } } },
+              select: { body: true, createdAt: true, senderId: true, deletedAt: true, sender: { select: { id: true, name: true } } },
             },
           },
         },
@@ -51,6 +51,7 @@ export async function GET() {
              on cm.conversation_id = m.conversation_id and cm.user_id = $1
           where m.conversation_id in (${placeholders})
             and m.sender_id <> $1
+            and m.deleted_at is null
             and (cm.last_read_at is null or m.created_at > cm.last_read_at)
           group by cm.conversation_id`,
         user.id,
@@ -71,7 +72,12 @@ export async function GET() {
           myRole: m.role,
           members: conv.members.map(toClientMember),
           lastMessage: last
-            ? { body: last.body, createdAt: last.createdAt, senderId: last.senderId, senderName: last.sender?.name ?? 'Student' }
+            ? {
+                body: last.deletedAt ? 'Message deleted' : last.body,
+                createdAt: last.createdAt,
+                senderId: last.senderId,
+                senderName: last.sender?.name ?? 'Student',
+              }
             : null,
           unread: unreadMap.get(conv.id) ?? 0,
         }
@@ -163,6 +169,35 @@ export async function POST(req: NextRequest) {
     }
 
     throw new HttpError(400, 'type must be "dm" or "group"')
+  } catch (err) {
+    return jsonError(err)
+  }
+}
+
+/**
+ * PATCH /api/chat/conversations { conversationId, name } — rename a study
+ * group. Admins only (the creator); DMs have no name to change.
+ */
+export async function PATCH(req: NextRequest) {
+  try {
+    const user = await requireUser()
+    const client = dbClient()
+    await rateLimit(`chat-rename:${user.id}`, 10, 60 * 1000, client)
+    const payload = (await req.json().catch(() => ({}))) as { conversationId?: string; name?: string }
+    const conversationId = String(payload.conversationId ?? '')
+    if (!conversationId) throw new HttpError(400, 'conversationId is required')
+
+    const { conversation, membership } = await requireMembership(client, conversationId, user.id)
+    if (conversation.type !== 'group') throw new HttpError(400, 'Only groups can be renamed')
+    if (membership.role !== 'admin') throw new HttpError(403, 'Only group admins can rename the group')
+
+    const name = String(payload.name ?? '').trim()
+    if (name.length < CHAT_LIMITS.groupNameMin || name.length > CHAT_LIMITS.groupNameMax) {
+      throw new HttpError(400, `Group name must be 1-${CHAT_LIMITS.groupNameMax} characters`)
+    }
+
+    await client.chatConversation.update({ where: { id: conversationId }, data: { name } })
+    return Response.json({ conversation: { id: conversationId, name } })
   } catch (err) {
     return jsonError(err)
   }

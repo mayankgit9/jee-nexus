@@ -36,10 +36,11 @@ export async function POST(req: NextRequest) {
 
     const message = await client.chatMessage.findUnique({
       where: { id: messageId },
-      select: { conversationId: true },
+      select: { conversationId: true, deletedAt: true },
     })
     if (!message) throw new HttpError(404, 'Message not found')
     await requireMembership(client, message.conversationId, user.id)
+    if (message.deletedAt) throw new HttpError(400, 'This message was deleted')
 
     const existing = await client.chatReaction.findUnique({
       where: { messageId_userId_emoji: { messageId, userId: user.id, emoji } },

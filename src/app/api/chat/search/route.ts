@@ -30,6 +30,7 @@ export async function GET(req: NextRequest) {
       where: {
         conversationId: { in: conversationIds },
         body: { contains: q, mode: 'insensitive' },
+        deletedAt: null, // tombstones keep their body for audit but never surface
       },
       orderBy: [{ createdAt: 'desc' }, { id: 'desc' }],
       take: 30,

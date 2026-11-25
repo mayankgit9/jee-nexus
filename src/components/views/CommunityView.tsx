@@ -10,8 +10,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import {
-  ArrowLeft, ArrowDown, Check, CheckCheck, Copy, Hash, Loader2, MessageSquare, MessageSquarePlus,
-  Search, Send, Users, X, LogIn, UserPlus, ArrowDownToLine, Smile,
+  ArrowLeft, ArrowDown, Ban, Check, CheckCheck, Copy, CornerUpLeft, Hash, Loader2, MessageSquare, MessageSquarePlus,
+  Pencil, Search, Send, Smile, Trash2, Users, X, LogIn, UserPlus, ArrowDownToLine,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -47,9 +47,12 @@ interface Conversation {
 interface ChatMessage {
   id: string
   body: string
+  deleted?: boolean
   createdAt: string
   senderId: string
   senderName: string
+  replyToId?: string | null
+  replyTo?: { id: string; senderName: string; body: string; deleted: boolean } | null
 }
 
 interface ConvMeta {
@@ -82,6 +85,14 @@ interface ReactionChip {
 
 /** compact picker set — covers the common study-group responses */
 const REACTION_EMOJIS = ['👍', '🔥', '❤️', '😂', '🎉', '🤔', '😮', '👏', '🙏', '💪']
+
+/** composer quick-insert set — study-chat staples */
+const COMPOSER_EMOJIS = [
+  '😀', '😂', '🙂', '😅', '😍', '🤔', '😎', '😴',
+  '👍', '👎', '👏', '🙏', '💪', '🤝', '✌️', '🫡',
+  '🔥', '✨', '🎉', '🎯', '📚', '✏️', '🧠', '☕',
+  '❤️', '💯', '⚡', '🚀', '😢', '😮', '🤯', '😱',
+]
 
 type Filter = 'all' | 'dm' | 'group'
 
@@ -226,6 +237,16 @@ export function CommunityView({
   const [reacting, setReacting] = useState(false)
   const lastTypingPing = useRef(0)
 
+  // replies + deletes + emoji + rename
+  const [replyTo, setReplyTo] = useState<ChatMessage | null>(null)
+  const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
+  const [deleting, setDeleting] = useState(false)
+  const [emojiOpen, setEmojiOpen] = useState(false)
+  const [highlightId, setHighlightId] = useState<string | null>(null)
+  const [renameOpen, setRenameOpen] = useState(false)
+  const [renameValue, setRenameValue] = useState('')
+  const [renaming, setRenaming] = useState(false)
+
   // composer
   const [draft, setDraft] = useState('')
   const [sending, setSending] = useState(false)
@@ -287,6 +308,9 @@ export function CommunityView({
       setMessages([])
       setMeta(null)
       setTyping([])
+      setReplyTo(null)
+      setConfirmDelete(null)
+      setEmojiOpen(false)
       initialLoadDone.current = false
       try {
         const r = await api<{ conversation: ConvMeta; messages: ChatMessage[]; hasMore: boolean; typing?: TypingUser[]; reactions?: Record<string, ReactionChip[]> }>(
@@ -337,7 +361,7 @@ export function CommunityView({
     }
   }, [activeId, messages, loadingEarlier, toast])
 
-  /** incremental poll for the open conversation — messages + typing + presence */
+  /** incremental poll for the open conversation — messages + typing + presence + tombstones */
   const pollNew = useCallback(async () => {
     if (!activeId || !messages.length) return
     const last = messages[messages.length - 1]
@@ -347,6 +371,7 @@ export function CommunityView({
         conversation: ConvMeta
         typing?: TypingUser[]
         reactions?: Record<string, ReactionChip[]>
+        deletedIds?: string[]
       }>(
         `/api/chat/messages?conversationId=${encodeURIComponent(activeId)}&after=${encodeURIComponent(last.createdAt)}`
       )
@@ -354,6 +379,26 @@ export function CommunityView({
       setMeta((prev) => (prev ? { ...prev, members: r.conversation.members } : prev))
       if (r.reactions && Object.keys(r.reactions).length > 0) {
         setReactions((prev) => ({ ...prev, ...r.reactions }))
+      }
+      // live tombstones: mark any loaded message the sender has deleted
+      if (r.deletedIds && r.deletedIds.length > 0) {
+        const gone = new Set(r.deletedIds)
+        setMessages((prev) =>
+          prev.some((m) => gone.has(m.id) && !m.deleted)
+            ? prev.map((m) => (gone.has(m.id) ? { ...m, deleted: true, body: '' } : m))
+            : prev
+        )
+        setReactions((prev) => {
+          const next = { ...prev }
+          let touched = false
+          for (const id of gone) {
+            if (next[id]) {
+              delete next[id]
+              touched = true
+            }
+          }
+          return touched ? next : prev
+        })
       }
       if (r.messages.length === 0) return
       setMessages((prev) => {
@@ -416,8 +461,10 @@ export function CommunityView({
       const r = await api<{ message: ChatMessage }>('/api/chat/messages', {
         conversationId: activeId,
         body,
+        ...(replyTo ? { replyToId: replyTo.id } : {}),
       })
       setDraft('')
+      setReplyTo(null)
       if (composerRef.current) composerRef.current.style.height = 'auto'
       setMessages((prev) => (prev.some((m) => m.id === r.message.id) ? prev : [...prev, r.message]))
       stickToBottom.current = true
@@ -435,7 +482,72 @@ export function CommunityView({
     } finally {
       setSending(false)
     }
-  }, [draft, activeId, sending, meId, toast])
+  }, [draft, activeId, sending, meId, replyTo, toast])
+
+  /** soft-delete the caller's own message and swap the bubble for a tombstone */
+  const deleteMessage = useCallback(async () => {
+    if (!confirmDelete || deleting) return
+    setDeleting(true)
+    const target = confirmDelete
+    try {
+      await api('/api/chat/messages', { messageId: target }, 'DELETE')
+      setMessages((prev) => prev.map((m) => (m.id === target ? { ...m, deleted: true, body: '' } : m)))
+      setReactions((prev) => {
+        const next = { ...prev }
+        delete next[target]
+        return next
+      })
+      setConversations((prev) =>
+        prev
+          ? prev.map((c) =>
+              c.id === activeId && c.lastMessage
+                ? { ...c, lastMessage: { ...c.lastMessage, body: 'Message deleted' } }
+                : c
+            )
+          : prev
+      )
+    } catch (e) {
+      toast({ title: 'Could not delete message', description: (e as Error).message })
+    } finally {
+      setDeleting(false)
+      setConfirmDelete(null)
+    }
+  }, [confirmDelete, deleting, activeId, toast])
+
+  /** admins rename the study group; local state updates everywhere at once */
+  const renameGroup = useCallback(async () => {
+    const name = renameValue.trim()
+    if (!meta || !name || renaming || name === meta.name) {
+      setRenameOpen(false)
+      return
+    }
+    setRenaming(true)
+    try {
+      await api('/api/chat/conversations', { conversationId: meta.id, name }, 'PATCH')
+      setMeta((prev) => (prev ? { ...prev, name } : prev))
+      setConversations((prev) =>
+        prev ? prev.map((c) => (c.id === meta.id ? { ...c, name } : c)) : prev
+      )
+      toast({ title: 'Group renamed', description: name })
+      setRenameOpen(false)
+    } catch (e) {
+      toast({ title: 'Could not rename group', description: (e as Error).message })
+    } finally {
+      setRenaming(false)
+    }
+  }, [meta, renameValue, renaming, toast])
+
+  /** jump to a quoted/replied message and flash it */
+  const scrollToMessage = useCallback((id: string) => {
+    const el = listRef.current?.querySelector(`[data-mid="${id}"]`) as HTMLElement | null
+    if (!el) {
+      toast({ title: 'Original message is not loaded', description: 'Scroll up and load earlier messages to see it.' })
+      return
+    }
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    setHighlightId(id)
+    window.setTimeout(() => setHighlightId((cur) => (cur === id ? null : cur)), 1600)
+  }, [toast])
 
   const leaveConversation = useCallback(async () => {
     if (!activeId) return
@@ -808,6 +920,20 @@ export function CommunityView({
                     <UserPlus className="h-4 w-4" /> <span className="hidden sm:inline">Add</span>
                   </Button>
                 )}
+                {meta?.type === 'group' && meta.myRole === 'admin' && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => {
+                      setRenameValue(meta.name ?? '')
+                      setRenameOpen(true)
+                    }}
+                    aria-label="Rename group"
+                    className="text-muted-foreground hover:text-foreground"
+                  >
+                    <Pencil className="h-4 w-4" />
+                  </Button>
+                )}
                 <Button variant="ghost" size="sm" onClick={() => setConfirmLeave(true)} className="text-muted-foreground hover:text-destructive">
                   {meta?.type === 'dm' ? <X className="h-4 w-4" /> : <ArrowLeft className="h-4 w-4" />}
                   <span className="hidden sm:inline">{meta?.type === 'dm' ? 'Delete' : 'Leave'}</span>
@@ -848,6 +974,7 @@ export function CommunityView({
                     {messages.map((m, i) => {
                       const prev = messages[i - 1]
                       const own = m.senderId === meId
+                      const deleted = Boolean(m.deleted)
                       const newDay = !prev || new Date(prev.createdAt).toDateString() !== new Date(m.createdAt).toDateString()
                       const senderChanged = !prev || prev.senderId !== m.senderId || newDay
                       const showName = !own && meta?.type === 'group' && senderChanged
@@ -857,11 +984,12 @@ export function CommunityView({
                       const isMyLast = own && i === messages.length - 1
                       const seen = Boolean(
                         isMyLast &&
+                          !deleted &&
                           dmOther?.lastReadAt &&
                           new Date(dmOther.lastReadAt).getTime() >= new Date(m.createdAt).getTime()
                       )
                       return (
-                        <div key={m.id}>
+                        <div key={m.id} data-mid={m.id} className={cn('rounded-xl transition-colors', highlightId === m.id && 'bg-primary/10 ring-1 ring-primary/40')}>
                           {newDay && (
                             <div className="my-4 flex items-center gap-3">
                               <span className="h-px flex-1 bg-border" />
@@ -893,17 +1021,52 @@ export function CommunityView({
                                   {m.senderName}
                                 </p>
                               )}
-                              <div
-                                className={cn(
-                                  'whitespace-pre-wrap break-words rounded-2xl px-3.5 py-2 text-sm leading-relaxed',
-                                  own
-                                    ? 'rounded-br-md bg-primary text-primary-foreground'
-                                    : 'rounded-bl-md bg-muted text-foreground'
-                                )}
-                                title={new Date(m.createdAt).toLocaleString()}
-                              >
-                                {m.body}
-                              </div>
+                              {deleted ? (
+                                /* ---------- tombstone ---------- */
+                                <div
+                                  className={cn(
+                                    'flex items-center gap-1.5 whitespace-pre-wrap break-words rounded-2xl border border-dashed px-3.5 py-2 text-sm italic leading-relaxed text-muted-foreground',
+                                    own ? 'rounded-br-md' : 'rounded-bl-md'
+                                  )}
+                                  title={new Date(m.createdAt).toLocaleString()}
+                                >
+                                  <Ban className="h-3.5 w-3.5 shrink-0" />
+                                  This message was deleted
+                                </div>
+                              ) : (
+                                <div
+                                  className={cn(
+                                    'whitespace-pre-wrap break-words rounded-2xl px-3.5 py-2 text-sm leading-relaxed',
+                                    own
+                                      ? 'rounded-br-md bg-primary text-primary-foreground'
+                                      : 'rounded-bl-md bg-muted text-foreground'
+                                  )}
+                                  title={new Date(m.createdAt).toLocaleString()}
+                                >
+                                  {m.replyTo && (
+                                    <button
+                                      type="button"
+                                      onClick={() => scrollToMessage(m.replyTo!.id)}
+                                      className={cn(
+                                        'mb-1.5 flex w-full items-stretch gap-1.5 overflow-hidden rounded-lg text-left',
+                                        own ? 'bg-black/15' : 'bg-background/70'
+                                      )}
+                                      aria-label={`Jump to the message from ${m.replyTo.senderName}`}
+                                    >
+                                      <span className={cn('w-0.5 shrink-0', own ? 'bg-primary-foreground/60' : 'bg-primary/60')} />
+                                      <span className="min-w-0 py-1 pr-2">
+                                        <span className={cn('block truncate text-[11px] font-semibold', own ? 'text-primary-foreground/90' : 'text-primary')}>
+                                          {m.replyTo.senderName}
+                                        </span>
+                                        <span className={cn('block truncate text-xs', own ? 'text-primary-foreground/70' : 'text-muted-foreground')}>
+                                          {m.replyTo.deleted ? 'Message deleted' : m.replyTo.body || '(no text)'}
+                                        </span>
+                                      </span>
+                                    </button>
+                                  )}
+                                  {m.body}
+                                </div>
+                              )}
                               {pickerFor === m.id && (
                                 <div
                                   className={cn(
@@ -927,7 +1090,7 @@ export function CommunityView({
                                   ))}
                                 </div>
                               )}
-                              {reactions[m.id]?.length > 0 && (
+                              {!deleted && reactions[m.id]?.length > 0 && (
                                 <div className={cn('mt-1 flex flex-wrap gap-1', own ? 'justify-end' : 'justify-start')}>
                                   {reactions[m.id].map((chip) => (
                                     <button
@@ -948,33 +1111,62 @@ export function CommunityView({
                                   ))}
                                 </div>
                               )}
-                              <div className={cn('mt-0.5 flex items-center gap-1.5 px-1', own ? 'justify-end' : 'justify-start')}>
-                                <button
-                                  type="button"
-                                  onClick={() => setPickerFor((p) => (p === m.id ? null : m.id))}
-                                  className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
-                                  aria-label="Add reaction"
-                                >
-                                  <Smile className="h-3 w-3" />
-                                </button>
-                                <button
-                                  type="button"
-                                  onClick={() => {
-                                    void navigator.clipboard.writeText(m.body)
-                                    toast({ title: 'Message copied' })
-                                  }}
-                                  className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
-                                  aria-label="Copy message"
-                                >
-                                  <Copy className="h-3 w-3" />
-                                </button>
-                                <p className="text-[10px] text-muted-foreground">{clockLabel(m.createdAt)}</p>
-                                {seen && (
-                                  <span className="flex items-center gap-0.5 text-[10px] font-medium text-primary">
-                                    <CheckCheck className="h-3 w-3" /> Seen
-                                  </span>
-                                )}
-                              </div>
+                              {!deleted && (
+                                <div className={cn('mt-0.5 flex items-center gap-1.5 px-1', own ? 'justify-end' : 'justify-start')}>
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      setReplyTo(m)
+                                      setEmojiOpen(false)
+                                      composerRef.current?.focus()
+                                    }}
+                                    className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
+                                    aria-label={`Reply to ${m.senderName}`}
+                                  >
+                                    <CornerUpLeft className="h-3 w-3" />
+                                  </button>
+                                  <button
+                                    type="button"
+                                    onClick={() => setPickerFor((p) => (p === m.id ? null : m.id))}
+                                    className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
+                                    aria-label="Add reaction"
+                                  >
+                                    <Smile className="h-3 w-3" />
+                                  </button>
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      void navigator.clipboard.writeText(m.body)
+                                      toast({ title: 'Message copied' })
+                                    }}
+                                    className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
+                                    aria-label="Copy message"
+                                  >
+                                    <Copy className="h-3 w-3" />
+                                  </button>
+                                  {own && (
+                                    <button
+                                      type="button"
+                                      onClick={() => setConfirmDelete(m.id)}
+                                      className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-destructive focus-visible:opacity-100 group-hover/msg:opacity-100"
+                                      aria-label="Delete message"
+                                    >
+                                      <Trash2 className="h-3 w-3" />
+                                    </button>
+                                  )}
+                                  <p className="text-[10px] text-muted-foreground">{clockLabel(m.createdAt)}</p>
+                                  {seen && (
+                                    <span className="flex items-center gap-0.5 text-[10px] font-medium text-primary">
+                                      <CheckCheck className="h-3 w-3" /> Seen
+                                    </span>
+                                  )}
+                                </div>
+                              )}
+                              {deleted && (
+                                <p className={cn('mt-0.5 px-1 text-[10px] text-muted-foreground/60', own ? 'text-right' : 'text-left')}>
+                                  {clockLabel(m.createdAt)}
+                                </p>
+                              )}
                             </div>
                           </motion.div>
                         </div>
@@ -1028,6 +1220,32 @@ export function CommunityView({
 
               {/* composer */}
               <div className="border-t p-2.5 sm:p-3">
+                {replyTo && (
+                  <div className="mb-2 flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-2.5 py-1.5">
+                    <CornerUpLeft className="h-3.5 w-3.5 shrink-0 text-primary" />
+                    <button
+                      type="button"
+                      onClick={() => scrollToMessage(replyTo.id)}
+                      className="min-w-0 flex-1 text-left"
+                      aria-label="Jump to the message you are replying to"
+                    >
+                      <span className="block text-[11px] font-semibold text-primary">
+                        Replying to {replyTo.senderId === meId ? 'yourself' : replyTo.senderName}
+                      </span>
+                      <span className="block truncate text-xs text-muted-foreground">
+                        {replyTo.deleted ? 'Message deleted' : replyTo.body}
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setReplyTo(null)}
+                      className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground"
+                      aria-label="Cancel reply"
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  </div>
+                )}
                 <form
                   onSubmit={(e) => {
                     e.preventDefault()
@@ -1035,6 +1253,50 @@ export function CommunityView({
                   }}
                   className="flex items-end gap-2"
                 >
+                  <div className="relative flex items-end">
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => setEmojiOpen((v) => !v)}
+                      aria-label="Insert emoji"
+                      aria-expanded={emojiOpen}
+                      className="h-10 w-9 shrink-0 rounded-xl text-muted-foreground hover:text-foreground"
+                    >
+                      <Smile className="h-5 w-5" />
+                    </Button>
+                    {emojiOpen && (
+                      <div
+                        className="absolute bottom-12 left-0 z-30 w-64 rounded-xl border bg-popover p-2 shadow-lg"
+                        role="menu"
+                        aria-label="Pick an emoji"
+                      >
+                        <div className="grid grid-cols-8 gap-0.5">
+                          {COMPOSER_EMOJIS.map((e) => (
+                            <button
+                              key={e}
+                              type="button"
+                              onClick={() => {
+                                setDraft((d) => (d.length + e.length > 2000 ? d : d + e))
+                                composerRef.current?.focus()
+                              }}
+                              className="rounded-lg p-1 text-lg leading-none transition-transform hover:scale-125 hover:bg-muted"
+                              aria-label={`Insert ${e}`}
+                            >
+                              {e}
+                            </button>
+                          ))}
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => setEmojiOpen(false)}
+                          className="mt-1.5 w-full rounded-lg py-1 text-[11px] text-muted-foreground hover:bg-muted hover:text-foreground"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    )}
+                  </div>
                   <textarea
                     ref={composerRef}
                     value={draft}
@@ -1108,6 +1370,53 @@ export function CommunityView({
             <Button variant="destructive" size="sm" onClick={() => void leaveConversation()} disabled={leaving}>
               {leaving && <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" />}
               {meta?.type === 'dm' ? 'Delete chat' : 'Leave group'}
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={confirmDelete !== null} onOpenChange={(v) => !v && setConfirmDelete(null)}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Delete this message?</DialogTitle>
+          </DialogHeader>
+          <p className="text-sm text-muted-foreground">
+            It will be removed for everyone in this chat. Others will see “This message was deleted”.
+          </p>
+          <div className="mt-4 flex justify-end gap-2">
+            <Button variant="outline" size="sm" onClick={() => setConfirmDelete(null)}>Cancel</Button>
+            <Button variant="destructive" size="sm" onClick={() => void deleteMessage()} disabled={deleting}>
+              {deleting && <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" />}
+              Delete for everyone
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={renameOpen} onOpenChange={setRenameOpen}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Rename group</DialogTitle>
+          </DialogHeader>
+          <Input
+            value={renameValue}
+            onChange={(e) => setRenameValue(e.target.value)}
+            maxLength={60}
+            placeholder="Group name"
+            autoFocus
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault()
+                void renameGroup()
+              }
+            }}
+          />
+          <p className="text-right text-[10px] text-muted-foreground">{renameValue.trim().length}/60</p>
+          <div className="flex justify-end gap-2">
+            <Button variant="outline" size="sm" onClick={() => setRenameOpen(false)}>Cancel</Button>
+            <Button size="sm" onClick={() => void renameGroup()} disabled={renaming || !renameValue.trim() || renameValue.trim() === meta?.name}>
+              {renaming ? <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" /> : <Pencil className="mr-2 h-3.5 w-3.5" />}
+              Save name
             </Button>
           </div>
         </DialogContent>
