@@ -7,8 +7,9 @@ import { getSessionUser, jsonError, rateLimit } from '@/lib/auth'
  *
  * Public: anonymous visitors can browse (names only, emails never ship);
  * a signed-in caller additionally gets `you` (rank + stats) and `isYou`
- * markers. Ranking metric: attempts in period, ties broken by correct
- * count then least time (most efficient wins).
+ * markers. Ranking metric: graded attempts in period (practice attempts
+ * + submitted/expired CBT answers, same merge as the stats dashboard),
+ * ties broken by correct count then least time (most efficient wins).
  *
  * Portable Prisma groupBy only (works on PG prod + SQLite local dev) —
  * no raw SQL, no date_trunc, so no engine-specific drift.
@@ -26,9 +27,24 @@ export async function GET(req: NextRequest) {
     const since = period === 'week' ? new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) : undefined
     const where = since ? { createdAt: { gte: since } } : {}
 
-    const [byUser, byCorrect] = await Promise.all([
+    const [byUser, byCorrect, examAnswers] = await Promise.all([
       client.attempt.groupBy({ by: ['userId'], where, _count: { _all: true }, _sum: { timeSpentSeconds: true } }),
       client.attempt.groupBy({ by: ['userId'], where: { ...where, isCorrect: true }, _count: { _all: true } }),
+      // graded CBT/mock answers count toward the board too — mirrors the
+      // stats dashboard (a mock-only student must not be invisible here).
+      // Json-null filtering is skipped in JS on purpose (DbNull subtleties).
+      client.examAttemptAnswer.findMany({
+        where: { examAttempt: { status: { in: ['submitted', 'expired'] } } },
+        select: {
+          selectedOptions: true,
+          numericalValue: true,
+          isCorrect: true,
+          timeSpentSeconds: true,
+          updatedAt: true,
+          examAttempt: { select: { userId: true } },
+        },
+        take: 20000,
+      }),
     ])
 
     const stats = new Map<string, { attempts: number; correct: number; timeSeconds: number }>()
@@ -38,6 +54,15 @@ export async function GET(req: NextRequest) {
     for (const r of byCorrect) {
       const s = stats.get(r.userId)
       if (s) s.correct = r._count._all
+    }
+    for (const ea of examAnswers) {
+      if (ea.selectedOptions === null && ea.numericalValue === null) continue // unattempted slot
+      if (since && ea.updatedAt.getTime() < since.getTime()) continue
+      const s = stats.get(ea.examAttempt.userId) ?? { attempts: 0, correct: 0, timeSeconds: 0 }
+      s.attempts++
+      if (ea.isCorrect === true) s.correct++
+      s.timeSeconds += ea.timeSpentSeconds
+      stats.set(ea.examAttempt.userId, s)
     }
 
     const ranked = [...stats.entries()]
