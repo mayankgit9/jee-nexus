@@ -120,22 +120,31 @@ if SKIP_STATUS_MOVE:
     print("SKIP_STATUS_MOVE=1 — leaving status='imported' as-is")
     sys.exit(0)
 
-# 3. move new PYQ questions imported -> needs_review (only PYQ-* ids)
-status, r = call("GET", "/api/admin/questions?status=imported&page=1")
-total_pages = r.get("pageCount", 1)
-moved = 0
-for page in range(1, total_pages + 1):
-    status, r = call("GET", f"/api/admin/questions?status=imported&page={page}")
-    for q in r.get("questions", []):
-        if not str(q.get("publicId", "")).startswith("PYQ-"):
-            continue
-        st, _ = call("PATCH", "/api/admin/questions",
-                     {"id": q["id"], "verificationStatus": "needs_review"})
-        if st == 200:
-            moved += 1
-        else:
-            print("PATCH failed for", q.get("publicId"), st)
-print(f"moved to needs_review: {moved}")
+# 3. move new PYQ questions imported -> needs_review (only PYQ-* ids).
+#    Bulk endpoint (one updateMany) since 2026-11-25 — the previous
+#    per-question PATCH loop took ~60 min for 11,886 questions. Falls back
+#    to the loop if the endpoint is unavailable (older deployments).
+status, r = call("POST", "/api/admin/questions/bulk-status",
+                 {"from": "imported", "to": "needs_review", "prefix": "PYQ-"})
+if status == 200:
+    print(f"moved to needs_review: {r.get('moved')} (bulk)")
+else:
+    print(f"bulk-status unavailable ({status}) — falling back to per-question PATCH loop")
+    status, r = call("GET", "/api/admin/questions?status=imported&page=1")
+    total_pages = r.get("pageCount", 1)
+    moved = 0
+    for page in range(1, total_pages + 1):
+        status, r = call("GET", f"/api/admin/questions?status=imported&page={page}")
+        for q in r.get("questions", []):
+            if not str(q.get("publicId", "")).startswith("PYQ-"):
+                continue
+            st, _ = call("PATCH", "/api/admin/questions",
+                         {"id": q["id"], "verificationStatus": "needs_review"})
+            if st == 200:
+                moved += 1
+            else:
+                print("PATCH failed for", q.get("publicId"), st)
+    print(f"moved to needs_review: {moved}")
 
 # 4. final state
 status, r = call("GET", "/api/admin/stats")
