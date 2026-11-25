@@ -90,6 +90,7 @@ model User {
   chatSentMessages     ChatMessage[]         @relation("ChatSender")
   chatCreatedChats     ChatConversation[]    @relation("ChatCreator")
   chatTypingStates     ChatTyping[]
+  chatReactions        ChatReaction[]
 
   @@map("app_users")
 }
@@ -411,6 +412,7 @@ model ChatConversation {
   members  ChatMember[]
   messages ChatMessage[]
   typingState ChatTyping[]
+  // reactions hang off messages; no direct list needed on the conversation
 
   @@index([updatedAt])
   @@map("chat_conversations")
@@ -439,6 +441,7 @@ model ChatMessage {
   sender         User             @relation("ChatSender", fields: [senderId], references: [id], onDelete: Cascade)
   body           String // 1-2000 chars, enforced in the API
   createdAt      DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
+  reactions      ChatReaction[]
 
   @@index([conversationId, createdAt])
   @@map("chat_messages")
@@ -457,6 +460,21 @@ model ChatTyping {
   @@id([conversationId, userId])
   @@index([updatedAt])
   @@map("chat_typing")
+}
+
+/// Message reactions: one row per (message, user, emoji) — several different
+/// emojis per user allowed, never the same one twice (composite key).
+model ChatReaction {
+  messageId String   @map("message_id")
+  message   ChatMessage @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emoji     String
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@id([messageId, userId, emoji])
+  @@index([messageId])
+  @@map("chat_reactions")
 }
 
 /// Rate limiter state: one row per active key; a BEFORE trigger raises

@@ -11,7 +11,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   ArrowLeft, ArrowDown, Check, CheckCheck, Copy, Hash, Loader2, MessageSquare, MessageSquarePlus,
-  Search, Send, Users, X, LogIn, UserPlus, ArrowDownToLine,
+  Search, Send, Users, X, LogIn, UserPlus, ArrowDownToLine, Smile,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -73,6 +73,15 @@ interface TypingUser {
   userId: string
   name: string
 }
+
+interface ReactionChip {
+  emoji: string
+  count: number
+  mine: boolean
+}
+
+/** compact picker set — covers the common study-group responses */
+const REACTION_EMOJIS = ['👍', '🔥', '❤️', '😂', '🎉', '🤔', '😮', '👏', '🙏', '💪']
 
 type Filter = 'all' | 'dm' | 'group'
 
@@ -212,6 +221,9 @@ export function CommunityView({
   // typing + presence + scroll UX
   const [typing, setTyping] = useState<TypingUser[]>([])
   const [showJump, setShowJump] = useState(false)
+  const [reactions, setReactions] = useState<Record<string, ReactionChip[]>>({})
+  const [pickerFor, setPickerFor] = useState<string | null>(null)
+  const [reacting, setReacting] = useState(false)
   const lastTypingPing = useRef(0)
 
   // composer
@@ -277,13 +289,15 @@ export function CommunityView({
       setTyping([])
       initialLoadDone.current = false
       try {
-        const r = await api<{ conversation: ConvMeta; messages: ChatMessage[]; hasMore: boolean; typing?: TypingUser[] }>(
+        const r = await api<{ conversation: ConvMeta; messages: ChatMessage[]; hasMore: boolean; typing?: TypingUser[]; reactions?: Record<string, ReactionChip[]> }>(
           `/api/chat/messages?conversationId=${encodeURIComponent(id)}`
         )
         setMeta(r.conversation)
         setMessages(r.messages)
         setHasMore(r.hasMore)
         setTyping(r.typing ?? [])
+        setReactions(r.reactions ?? {})
+        setPickerFor(null)
         stickToBottom.current = true
         setShowJump(false)
         void markRead(id)
@@ -332,11 +346,15 @@ export function CommunityView({
         messages: ChatMessage[]
         conversation: ConvMeta
         typing?: TypingUser[]
+        reactions?: Record<string, ReactionChip[]>
       }>(
         `/api/chat/messages?conversationId=${encodeURIComponent(activeId)}&after=${encodeURIComponent(last.createdAt)}`
       )
       setTyping(r.typing ?? [])
       setMeta((prev) => (prev ? { ...prev, members: r.conversation.members } : prev))
+      if (r.reactions && Object.keys(r.reactions).length > 0) {
+        setReactions((prev) => ({ ...prev, ...r.reactions }))
+      }
       if (r.messages.length === 0) return
       setMessages((prev) => {
         const seen = new Set(prev.map((m) => m.id))
@@ -362,6 +380,32 @@ export function CommunityView({
       }
     },
     [activeId]
+  )
+
+  /** toggle a reaction; the API returns the fresh aggregate for that message */
+  const toggleReaction = useCallback(
+    async (messageId: string, emoji: string) => {
+      if (reacting) return
+      setReacting(true)
+      setPickerFor(null)
+      try {
+        const r = await api<{ reacted: boolean; reactions: ReactionChip[] }>('/api/chat/reactions', {
+          messageId,
+          emoji,
+        })
+        setReactions((prev) => {
+          const next = { ...prev }
+          if (r.reactions.length > 0) next[messageId] = r.reactions
+          else delete next[messageId]
+          return next
+        })
+      } catch (e) {
+        toast({ title: 'Could not react', description: (e as Error).message })
+      } finally {
+        setReacting(false)
+      }
+    },
+    [reacting, toast]
   )
 
   const sendMessage = useCallback(async () => {
@@ -843,7 +887,7 @@ export function CommunityView({
                                 {initialsOf(m.senderName)}
                               </span>
                             )}
-                            <div className={cn('max-w-[78%] sm:max-w-[68%]', own ? 'items-end' : 'items-start')}>
+                            <div className={cn('relative max-w-[78%] sm:max-w-[68%]', own ? 'items-end' : 'items-start')}>
                               {showName && (
                                 <p className="mb-0.5 pl-1 text-[11px] font-semibold" style={{ color: `var(--chart-${(m.senderId.charCodeAt(0) % 5) + 1})` }}>
                                   {m.senderName}
@@ -860,7 +904,59 @@ export function CommunityView({
                               >
                                 {m.body}
                               </div>
+                              {pickerFor === m.id && (
+                                <div
+                                  className={cn(
+                                    'absolute z-20 flex -translate-y-full items-center gap-0.5 rounded-xl border bg-popover p-1 shadow-lg',
+                                    own ? 'right-0' : 'left-0 sm:left-8'
+                                  )}
+                                  style={{ top: '-0.4rem' }}
+                                  role="menu"
+                                  aria-label="Pick a reaction"
+                                >
+                                  {REACTION_EMOJIS.map((e) => (
+                                    <button
+                                      key={e}
+                                      type="button"
+                                      onClick={() => void toggleReaction(m.id, e)}
+                                      className="rounded-lg p-1 text-base leading-none transition-transform hover:scale-125 hover:bg-muted"
+                                      aria-label={`React ${e}`}
+                                    >
+                                      {e}
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
+                              {reactions[m.id]?.length > 0 && (
+                                <div className={cn('mt-1 flex flex-wrap gap-1', own ? 'justify-end' : 'justify-start')}>
+                                  {reactions[m.id].map((chip) => (
+                                    <button
+                                      key={chip.emoji}
+                                      type="button"
+                                      onClick={() => void toggleReaction(m.id, chip.emoji)}
+                                      className={cn(
+                                        'flex items-center gap-0.5 rounded-full border px-1.5 py-0.5 text-[11px] leading-none transition-colors',
+                                        chip.mine
+                                          ? 'border-primary/60 bg-primary/10 text-foreground'
+                                          : 'border-border bg-background text-muted-foreground hover:border-primary/40'
+                                      )}
+                                      aria-label={`${chip.emoji} ${chip.count} — ${chip.mine ? 'remove your reaction' : 'react too'}`}
+                                    >
+                                      <span className="text-xs leading-none">{chip.emoji}</span>
+                                      <span className={cn('font-medium', chip.mine && 'text-primary')}>{chip.count}</span>
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
                               <div className={cn('mt-0.5 flex items-center gap-1.5 px-1', own ? 'justify-end' : 'justify-start')}>
+                                <button
+                                  type="button"
+                                  onClick={() => setPickerFor((p) => (p === m.id ? null : m.id))}
+                                  className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
+                                  aria-label="Add reaction"
+                                >
+                                  <Smile className="h-3 w-3" />
+                                </button>
                                 <button
                                   type="button"
                                   onClick={() => {

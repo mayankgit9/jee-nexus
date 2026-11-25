@@ -3,6 +3,30 @@ import { dbClient } from '@/lib/db'
 import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 import { CHAT_LIMITS, requireMembership, sanitizeMessageBody, toClientMember, toClientMessage } from '@/lib/chat'
 
+/** grouped reaction chips: [{ emoji, count, mine }] per message id */
+function aggregateReactions(
+  rows: { messageId: string; emoji: string; userId: string }[],
+  meId: string
+): Record<string, { emoji: string; count: number; mine: boolean }[]> {
+  const out: Record<string, { emoji: string; count: number; mine: boolean }[]> = {}
+  const order: string[] = []
+  for (const r of rows) {
+    if (!out[r.messageId]) {
+      out[r.messageId] = []
+      order.push(r.messageId)
+    }
+    const entry = out[r.messageId].find((x) => x.emoji === r.emoji)
+    if (entry) {
+      entry.count += 1
+      if (r.userId === meId) entry.mine = true
+    } else {
+      out[r.messageId].push({ emoji: r.emoji, count: 1, mine: r.userId === meId })
+    }
+  }
+  for (const id of order) out[id].sort((a, b) => b.count - a.count)
+  return out
+}
+
 /**
  * GET /api/chat/messages?conversationId=...[&after=ISO][&before=ISO][&limit=n]
  *   no cursor    → latest page (asc order, hasMore)
@@ -94,6 +118,19 @@ export async function GET(req: NextRequest) {
     }
     const { messages, hasMore } = page
 
+    // reactions for this page (single IN query over the page's message ids)
+    let reactions: Record<string, { emoji: string; count: number; mine: boolean }[]> = {}
+    if (messages.length > 0) {
+      const rows = (await client.$queryRawUnsafe(
+        `select message_id, emoji, user_id from chat_reactions where message_id = any($1::text[])`,
+        messages.map((m) => m.id)
+      )) as { message_id: string; emoji: string; user_id: string }[]
+      reactions = aggregateReactions(
+        rows.map((r) => ({ messageId: r.message_id, emoji: r.emoji, userId: r.user_id })),
+        user.id
+      )
+    }
+
     return Response.json({
       conversation: {
         id: conversation.id,
@@ -105,6 +142,7 @@ export async function GET(req: NextRequest) {
       messages: messages.map(toClientMessage),
       hasMore,
       typing: typingRows.map((t) => ({ userId: t.userId, name: t.user.name ?? 'Student' })),
+      reactions,
     })
   } catch (err) {
     return jsonError(err)

@@ -178,6 +178,38 @@ r = call("GET", f"/api/chat/messages?conversationId={dm_id}", jar=jar_a)
 dm_mems = {m["id"]: m for m in r["conversation"]["members"]}
 check("B's lastReadAt reflects the read", dm_mems[uid["b"]]["lastReadAt"] is not None)
 
+# --- 5d. message reactions ---
+r = call("GET", f"/api/chat/messages?conversationId={g_id}", jar=jar_a)
+target = next(m for m in r["messages"] if m["body"] == "thanks for the invite")
+check("reactions ride along in GET", "reactions" in r)
+r = call("POST", "/api/chat/reactions", {"messageId": target["id"], "emoji": "\U0001F44D"}, jar=jar_a)
+check("A reacts thumbs-up", r.get("reacted") is True and r["reactions"][0]["count"] == 1 and r["reactions"][0]["mine"] is True)
+r = call("POST", "/api/chat/reactions", {"messageId": target["id"], "emoji": "\U0001F525"}, jar=jar_b)
+check("B reacts fire (2 chips now)", r.get("reacted") is True and len(r["reactions"]) == 2)
+r = call("GET", f"/api/chat/messages?conversationId={g_id}", jar=jar_a)
+chips = {c["emoji"]: c for c in r["reactions"].get(target["id"], [])}
+check("aggregate groups both emojis", set(chips) == {"\U0001F44D", "\U0001F525"} and sum(c["count"] for c in chips.values()) == 2)
+check("mine flag is per-viewer", chips["\U0001F44D"]["mine"] is True and chips["\U0001F525"]["mine"] is False)
+# C also reacts 🔥 — now C's own view shows 🔥 as theirs (mine flag per viewer)
+r = call("POST", "/api/chat/reactions", {"messageId": target["id"], "emoji": "\U0001F525"}, jar=jar_c)
+check("C reacts fire too", r.get("reacted") is True and next(c for c in r["reactions"] if c["emoji"] == "\U0001F525")["count"] == 2)
+r = call("GET", f"/api/chat/messages?conversationId={g_id}", jar=jar_c)
+chips_c = {c["emoji"]: c for c in r["reactions"].get(target["id"], [])}
+check("mine flag follows viewer", chips_c["\U0001F525"]["mine"] is True and chips_c["\U0001F44D"]["mine"] is False)
+# toggling the same emoji removes it (never inflates)
+r = call("POST", "/api/chat/reactions", {"messageId": target["id"], "emoji": "\U0001F44D"}, jar=jar_a)
+check("toggle removes A's reaction", r.get("reacted") is False and len(r["reactions"]) == 1)
+r = call("POST", "/api/chat/reactions", {"messageId": target["id"], "emoji": "\U0001F44D"}, jar=jar_a)
+check("re-toggle re-adds", r.get("reacted") is True)
+# guards
+check("multi-char junk emoji 400", status("POST", "/api/chat/reactions", {"messageId": target["id"], "emoji": "abc"}, jar=jar_a) == "400")
+check("empty emoji 400", status("POST", "/api/chat/reactions", {"messageId": target["id"], "emoji": ""}, jar=jar_a) == "400")
+check("unknown message 404", status("POST", "/api/chat/reactions", {"messageId": "nope", "emoji": "\U0001F44D"}, jar=jar_a) == "404")
+r = call("GET", f"/api/chat/messages?conversationId={dm_id}", jar=jar_a)
+dm_msg_id = r["messages"][0]["id"]
+check("non-member cannot react", status("POST", "/api/chat/reactions", {"messageId": dm_msg_id, "emoji": "\U0001F44D"}, jar=jar_c) == "403")
+check("reactions requires auth", status("POST", "/api/chat/reactions", {"messageId": dm_msg_id, "emoji": "\U0001F44D"}) == "401")
+
 # --- 6. leave / delete ---
 r = call("POST", "/api/chat/leave", {"conversationId": g_id}, jar=jar_b)
 check("B leaves group", r.get("left") is True)
