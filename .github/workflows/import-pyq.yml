@@ -56,6 +56,12 @@ jobs:
           curl -sS -m 5 -o /dev/null http://localhost:3000/
       - name: Import all PYQ batches through the real admin pipeline
         run: python3 scripts/import_all_pyq.py
+        env:
+          # each chunk POST re-loads all content hashes + writes an importJob
+          # row; 50-row chunks meant ~242 calls/run (~60 min of pure overhead
+          # on no-op verification runs). 200 keeps every call well under the
+          # script's 120s timeout (worst case: 200 sequential inserts).
+          IMPORT_BATCH_SIZE: '200'
       - name: Post-import verification
         run: |
           python3 - <<'EOF'
