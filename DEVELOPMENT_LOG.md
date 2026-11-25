@@ -5,6 +5,65 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-25 (~15:45 IST) — M24 SHIPPED LIVE + complete 2019–2026 PYQ corpus; chat tables still blocked on Supabase creds
+
+Tokens returned (fresh CF + GH PAT) → unblocked everything that was waiting.
+
+### M24 live on production
+- Worktree re-rescued (3rd recycle: 5d24ee0/5aa6f9c/94bff8a objects lost again,
+  content intact). Mixed-reset onto origin/main (7ac3170), restored the files
+  the recycle ALSO dropped (data/pyq_raw ×91, public/pyq old images, certs,
+  import-pyq.yml, .gitignore entries — they were LOST, not intentionally
+  deleted) → committed as **0a084bf**, pushed, **deployed**.
+- Live verified: / , /api/pyq , /api/taxonomy 200 · chat guards
+  /api/chat/conversations + /api/chat/users → 401 (deployed, auth-first).
+- 🚫 Chat tables: `apply_migration.py` needs SB_PAT; tried the SB_PAT-less
+  fallback (new `.github/workflows/apply-migration.yml`: psql via the repo's
+  DATABASE_URL secret) — secret connects as **jee_app** (DML-only, 0003 by
+  design) → "permission denied for schema public". The GH Actions route
+  CANNOT apply DDL. Hyperdrive + worker secret are jee_app too. **Chat stays
+  at the honest 503 banner until the user provides SB_PAT (Supabase →
+  Account → Access Tokens) or the DB password** — then it's one command:
+  `python3 scripts/apply_migration.py supabase/migrations/0007_chat.sql`
+  (or dispatch apply-migration.yml once a postgres-level secret exists).
+  Also fixed: the workflow's verify step was a false-success (empty table
+  list exits 0) — now fails loudly.
+
+### CI green again (was red since Nov 24)
+- browser-e2e failing since a809330: year cards became rich buttons
+  ("2023" + count + subject chips) so the anchored `/^2023$/` locator could
+  never match → unanchored `/2023/`. CI green on a4d20a2 (5/5 jobs).
+
+### PYQ corpus COMPLETED: every JEE Main paper 2019–2026
+- 74 new papers crawled+converted+verified (16×2023-leftovers, 20×2024,
+  19×2025, 19×2026) → **12,096 questions** in data/questions, all batches
+  100% verify-clean. Bank now covers 2019–2026 with zero gaps (164 papers).
+- Converter bugs found by the verify gate (all fixed):
+  - publicId `[:8]` collided within every 2024+ paper (examside ids share an
+    8-char subject prefix) → full question_id now;
+  - NTA contested/dropped questions (no answer key) now skipped at convert;
+  - answer-key-only explanations (<20 chars) become full sentences;
+  - chapter map gap: trigonometric-functions-and-equations → trigonometry;
+  - **data/taxonomy.json synced with prod 0005/0006** (electrochemistry +
+    salt-analysis were in the live DB but missing from the verifier/CI/local
+    seed file — 67 chapters everywhere now).
+- Images: 2024+ papers ship 1MB+ PNGs → resized ≤1600px + WebP q85
+  (**2.3GB → 616MB**), 3,253 URLs rewritten in-batch, 0 missing refs.
+- Waves ran through `pyq_worker.py` + new `pyq_merge_workers.py` (worker
+  deliberately never writes shared state; merge-after-each-wave is REQUIRED —
+  early waves re-processed the same 12 papers before that was noticed).
+- Committed b4a2c5e (1.05GB push incl. 427MB raw provenance), pushed.
+- **import-pyq re-dispatched (run 45593215362)** — loads ~5.7k new questions
+  through the real admin pipeline (idempotent, content-hash dedup).
+- Worker redeployed so all 8k image assets serve BEFORE the questions land
+  (new webp + old jpg both verified 200 on live).
+
+### Health at session mid-point
+- / , /api/pyq (6,125 → growing once import lands), /api/taxonomy all 200.
+- Live worker: 0a084bf-equivalent + corpus assets.
+
+---
+
 ## 2026-11-25 (12:30 IST cron loop) — M24 rescued, verified green, UI fixes; deploy still blocked on .secrets
 
 Continued from the morning session (whose commits 9558b02/63641fb were lost to
@@ -996,5 +1055,5 @@ committed and pushed the moment it is written** (`scripts/push.sh` helper). No b
 | Supabase Postgres + RLS production sync | ✅ (project preparena, migrations 0001–0006 applied; 0007 chat 🚫 pending tokens — resume script ready) |
 | Cloudflare production app deployment | ✅ (app live via OpenNext + Hyperdrive) |
 | Automated tests | ✅ (chat 44 + regression 14 + core API 20, all green locally; Playwright suite pending) |
-| Community chat (DMs + study groups) | ✅ locally verified (44/44 e2e) · 🚫 deploy blocked on .secrets |
-| Question bank depth (2019–2026 target) | 🔄 (6,125 imported live of ~6,333; 2024–2026 still thin) |
+| Community chat (DMs + study groups) | ✅ deployed live (401 guards verified) · 🚫 chat tables need SB_PAT/DB password (jee_app is DML-only; migration 0007 ready + apply-migration.yml) |
+| Question bank depth (2019–2026 target) | ✅ corpus complete: 12,096 verified questions, all 164 papers 2019–2026 (import of ~5.7k new in progress; images live) |
