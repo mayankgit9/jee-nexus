@@ -154,6 +154,30 @@ r = call("GET", "/api/chat/search?q=zzzqqqxxx", jar=jar_a)
 check("no-match search is empty", r.get("results") == [])
 check("1-char query 400", status("GET", "/api/chat/search?q=x", jar=jar_a) == "400")
 
+# --- 5c. typing indicators + presence ---
+r = call("POST", "/api/chat/typing", {"conversationId": g_id}, jar=jar_b)
+check("typing ping ok", r.get("ok") is True)
+r = call("POST", "/api/chat/typing", {"conversationId": g_id}, jar=jar_c)
+check("typing ping C ok", r.get("ok") is True)
+r = call("GET", f"/api/chat/messages?conversationId={g_id}", jar=jar_a)
+typers = {t["userId"] for t in r.get("typing", [])}
+check("A sees B+C typing", uid["b"] in typers and uid["c"] in typers, f"typing={typers}")
+check("typing excludes self", uid["a"] not in typers)
+r = call("GET", f"/api/chat/messages?conversationId={g_id}", jar=jar_b)
+typers_b = {t["userId"] for t in r.get("typing", [])}
+check("B does not see own typing", uid["b"] not in typers_b and uid["c"] in typers_b, f"typing={typers_b}")
+check("typing requires membership", status("POST", "/api/chat/typing", {"conversationId": dm_id}, jar=jar_c) == "403")
+check("typing missing id 400", status("POST", "/api/chat/typing", {}, jar=jar_b) == "400")
+# presence + read-receipt fields ride along on every messages/conversations payload
+r = call("GET", f"/api/chat/messages?conversationId={g_id}", jar=jar_a)
+mems = r.get("conversation", {}).get("members", [])
+check("members carry lastSeenAt", len(mems) == 3 and all("lastSeenAt" in m for m in mems))
+check("members carry lastReadAt", all("lastReadAt" in m for m in mems))
+r = call("GET", f"/api/chat/messages?conversationId={dm_id}", jar=jar_a)
+# A sent 3 messages to the DM earlier; B read them via GET+read in section 4
+dm_mems = {m["id"]: m for m in r["conversation"]["members"]}
+check("B's lastReadAt reflects the read", dm_mems[uid["b"]]["lastReadAt"] is not None)
+
 # --- 6. leave / delete ---
 r = call("POST", "/api/chat/leave", {"conversationId": g_id}, jar=jar_b)
 check("B leaves group", r.get("left") is True)
