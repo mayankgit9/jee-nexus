@@ -12,6 +12,12 @@ bug fix shipped; redox chapter renamed on prod via the new DML datafix channel;
 VLM-driven UI polish landed; first corpus import died mid-run (diagnosed,
 fixed, re-dispatched — see bottom of this entry).
 
+> Import status: run 3 (45599235978, on 7b588fd: WORKERS fix + chunk retries
+> + 30/min limit) verified HEALTHY and past both prior failure points —
+> live 2023 count climbing (565 → 605+ during insert phase). ~5.7k new
+> questions (2023 leftovers + 2024/2025/2026) land autonomously over the
+> following ~2.5h; the next cron loop verifies the final counts.
+
 ---
 
 ### Feature — chat message search (DML-only, ships the moment 0007 lands)
