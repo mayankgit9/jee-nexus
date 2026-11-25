@@ -3,7 +3,7 @@
 // JEE NEXUS — year-wise PYQ library
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Library, Calendar, ChevronRight, ChevronLeft, ArrowLeft, Search, X } from 'lucide-react'
+import { Library, Calendar, ChevronRight, ChevronLeft, ArrowLeft, Search, X, FileStack } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -193,23 +193,25 @@ export function PyqView({ yearParam, subjectParam, chapterParam, loggedIn, onReq
                     onClick={() => navigate(`/pyq/${y}`)}
                     className={cn(
                       'w-full rounded-2xl border p-5 text-left transition-colors',
-                      total > 0 ? 'border-border bg-card hover:border-primary/50' : 'border-dashed border-border/50 opacity-50'
+                      total > 0 ? 'border-border bg-card hover:border-primary/50' : 'border-dashed border-border/60 opacity-70'
                     )}
                   >
                     <div className="flex items-center justify-between">
                       <Calendar className="h-5 w-5 text-primary" />
-                      <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                      {/* no chevron on disabled cards — they imply interactivity */}
+                      {total > 0 && <ChevronRight className="h-4 w-4 text-muted-foreground" />}
                     </div>
                     <div className="mt-3 text-xl font-bold">{y}</div>
                     <div className="mt-0.5 text-xs text-muted-foreground">
-                      {total > 0 ? `${total} questions` : 'coming soon'}
+                      {total > 0 ? `${total.toLocaleString('en-IN')} questions` : 'coming soon'}
                     </div>
                     {d && (
                       <div className="mt-3 flex flex-wrap gap-1.5">
                         {Object.entries(d.subjects).map(([k, v]) => (
                           <span key={k} className="rounded-md px-1.5 py-0.5 text-[11px] font-medium"
                             style={{ color: SUBJECT_COLORS[k], background: `color-mix(in oklab, ${SUBJECT_COLORS[k]} 12%, transparent)` }}>
-                            {v}
+                            {/* letter label: color-only chips fail WCAG 1.4.1 */}
+                            {k === 'physics' ? 'P' : k === 'chemistry' ? 'C' : k === 'mathematics' ? 'M' : k[0].toUpperCase()} {v.toLocaleString('en-IN')}
                           </span>
                         ))}
                       </div>
@@ -218,6 +220,17 @@ export function PyqView({ yearParam, subjectParam, chapterParam, loggedIn, onReq
                 </motion.div>
               )
             })}
+            {/* 8 year cards in a 3-col grid leave a hole — complete the row with
+                a non-interactive provenance tile instead of empty space */}
+            <div className="flex flex-col justify-between rounded-2xl border border-dashed border-border/60 p-5 opacity-80">
+              <FileStack className="h-5 w-5 text-muted-foreground" />
+              <div className="mt-3">
+                <div className="text-sm font-semibold">Every paper. Every shift.</div>
+                <div className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  Original NTA questions with exam figures and attribution — morning and evening shifts for all listed years.
+                </div>
+              </div>
+            </div>
           </div>
         )}
           </>

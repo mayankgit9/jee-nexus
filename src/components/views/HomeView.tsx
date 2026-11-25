@@ -85,9 +85,9 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
       {user && (
         <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {[
-            { label: 'Questions attempted', value: st ? String(st.totalAttempts) : '—', icon: Target },
+            { label: 'Questions attempted', value: st ? st.totalAttempts.toLocaleString('en-IN') : '—', icon: Target },
             { label: 'Accuracy', value: st ? `${st.accuracy}%` : '—', icon: Activity },
-            { label: 'Distinct questions', value: st ? String(st.distinctQuestions) : '—', icon: BookMarked },
+            { label: 'Distinct questions', value: st ? st.distinctQuestions.toLocaleString('en-IN') : '—', icon: BookMarked },
             { label: 'Time invested', value: st ? formatDuration(st.totalTimeSeconds) : '—', icon: Flame },
           ].map((s) => (
             <Card key={s.label}>
