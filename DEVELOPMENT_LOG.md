@@ -5,6 +5,78 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-25 (~20:45 IST) — LEADERBOARD + STREAKS LIVE; import corpus closure (10 rejected rows resolved)
+
+### Health & CI at session start
+- 3 health checks 200; sweep of every public endpoint clean (an earlier
+  "404" scare was my own sweep using path params instead of the
+  `?publicId=` query — no bug). Import run 45627727353 still running
+  at 11.8k/12,096; CI green through b0caa6b.
+
+### Leaderboard (new: `/api/leaderboard`, `/leaderboard` view)
+- Public board (names only — emails never ship), `period=week|all`,
+  top-50 by graded attempts with dense ranks; authed callers get `you`
+  (rank/stats) + `isYou` markers; active-student count. Rate-limited
+  30/min per user/IP. Portable Prisma groupBy (no raw SQL → works on PG
+  and any local engine).
+- **Live-verify catch**: board initially counted practice attempts only
+  — stats said 106 for the admin, board said 1 (mock-only students
+  invisible). Fixed before anyone noticed: now merges submitted/expired
+  CBT answers exactly like the stats dashboard (unattempted slots
+  skipped in JS — Prisma Json-null subtleties). Verified: board = 106
+  for admin, matching stats.
+- **LeaderboardView**: gold/silver/bronze podium with crown for #1,
+  ranked rows with accuracy bars, your-standing card (rank or "no
+  attempts yet"), anonymous sign-in CTA, period tabs, empty states.
+  Wired into desktop nav, mobile More sheet, Ctrl+K palette.
+
+### Study streaks
+- `/api/stats` now returns `streak {current, best, activeToday}`,
+  computed on **IST day boundaries** (an 11:30 PM session counts for
+  "today", unlike the UTC-based daily chart), 120-day window, merging
+  practice + graded CBT answers.
+- Home stats row: "Day streak" card (flame pulses when active today).
+  Performance: streak chip on the daily-activity card. All verified
+  live with a throwaway QA user (signup → 0-attempt state → attempt via
+  in-page fetch → streak "1 day" + rank 2 with You badge). Zero console
+  errors, zero page errors.
+- e2e: +9 checks (public board, email-leak guard, dense ranks, sort
+  order, you-rank, isYou-once, all-time board, streak block). CI 5/5
+  jobs green on 7110c10 (api-e2e ran them against real PostgreSQL).
+
+### Import corpus closure (the 10 rejects, root-caused)
+- Run 45627727353 FINISHED all 12,096 rows but exited red:
+  `inserted=1833 skipped=10253 rejected=10` → DB 11,883 unique.
+- Built `scripts/replay_import_validation.py` — replays the corpus
+  through the exact server validation + contentHash dedup locally, no
+  DB. Reproduced the live numbers precisely: 10 validation rejects +
+  203 intra-corpus duplicates (same question in multiple NTA papers,
+  deduped by design) = the 213-row gap. 11,883 unique hashes = DB total.
+- The 10, inspected one by one: 3 had recoverable answer keys IN THEIR
+  OWN SOLUTIONS (ΔG° = -13537.57 J; match-list = option 0; largest Δ₀ =
+  [Mn(H₂O)₆]³⁺ = option 1) — fixed, plus `\Delta<letter>` LaTeX repair
+  on the fresh row. 7 are ungradeable per their own solutions (NTA
+  dropped/bonus/contradictory premises/two valid numerical answers) —
+  REMOVED from the corpus (a graded bank must not ship ungradeable
+  questions). `scripts/fix_corpus_rejects.py` applied it; replay now
+  reports 0 rejects, 11,886 unique importable = 11,883 live + 3 fixed.
+- Re-dispatched import (workflow_dispatch); expected result: 3 inserts,
+  everything else skipped, run green. Final live target 11,886.
+- **Known issue (deferred, next loop)**: 82 questions contain
+  `\Delta<letter>` LaTeX artifacts (KaTeX renders unknown commands);
+  fixing them changes contentHashes, so it needs a DB-side
+  UPDATE + corpus sync as one atomic change, not a corpus-only edit.
+
+### Deploy state
+- Commits 7110c10 (leaderboard+streaks) → d5ba997 (CBT merge fix) →
+  e63d819 (corpus repair) pushed. Worker deployed via
+  `deploy_app_cloudflare.sh` (NOTE for future sessions: raw
+  `bunx wrangler deploy` uploads the STALE `.open-next/` — cost one
+  404-on-new-route false alarm; always use the script or build first).
+- CI on d5ba997/e63d819 pending at entry write; import run in flight.
+
+---
+
 ## 2026-11-25 (~23:50 IST) — UI/UX round LIVE: Ctrl+K command palette, PWA installability, quote-blanking fix
 
 ### Command palette (Ctrl/Cmd+K)
@@ -1296,4 +1368,5 @@ committed and pushed the moment it is written** (`scripts/push.sh` helper). No b
 | Cloudflare production app deployment | ✅ (app live via OpenNext + Hyperdrive) |
 | Automated tests | ✅ (chat 73 + regression 14 + core API 20, all green locally; live audit 17/17; Playwright suite pending) |
 | Community chat (DMs + study groups) | ✅ LIVE with real users: DMs, groups, search, typing indicators, presence, Seen receipts, reactions, unread badges (chat e2e 73/73) |
-| Question bank depth (2019–2026 target) | ✅ corpus complete: 12,096 verified questions, all 164 papers 2019–2026 (import of ~5.7k new in progress; images live) |
+| Leaderboard + study streaks | ✅ LIVE: public week/all-time boards (practice+CBT merged, email-leak-guarded), podium UI, IST-day streaks on Home/Performance (e2e +9) |
+| Question bank depth (2019–2026 target) | ✅ corpus closed at 11,886 gradeable questions (12,089 rows − 203 NTA cross-paper dupes): 10 former rejects root-caused via local replay — 3 repaired from their own solutions, 7 bonus/ambiguous removed; verification import re-run in flight |
