@@ -5,6 +5,44 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-25 (~23:50 IST) — UI/UX round LIVE: Ctrl+K command palette, PWA installability, quote-blanking fix
+
+### Command palette (Ctrl/Cmd+K)
+- New `src/components/CommandPalette.tsx`: keyboard-driven (↑↓/Enter/Esc),
+  grouped actions — Navigate (all views + admin-aware), per-subject PYQ jumps
+  with LIVE taxonomy counts, Preferences (theme). Keyed remount per open
+  (fresh state without reset effects — satisfies react-hooks lint rules).
+- Header "Search · Ctrl K" button (desktop) alongside theme toggle.
+- **Bug found + fixed via live browser QA**: whole-substring matching made
+  "physics pyq" return 0 results; now token-AND (every word must match).
+
+### PWA installability
+- Real brand-mark PNG icons rendered from the mint header mark via the cached
+  Chromium (`scripts/gen_icons.cjs`, oklch colors): 192/512 + maskable 512 +
+  apple-touch 180. Manifest now passes Chrome install criteria (was SVG-only),
+  plus app shortcuts (Practice / PYQ / Community) and standalone display.
+- Verified live: manifest 200, all icons 200, HTML references icon-512.
+
+### Chat polish found by browser QA
+- Deleting a message left replies' quoted blocks showing the dead parent's
+  text until reload. Fixed both paths: the 3s tombstone overlay and the local
+  delete now rewrite loaded replies' quote context (deleted + blank snippet).
+- Full browser pass on LIVE: login → DM → hover actions (reply/react/copy/
+  delete) → quoted reply send → jump-to-parent flash (ring verified via DOM)
+  → emoji picker insert (🎯 into draft) → delete confirm → tombstone render.
+  Zero page errors, zero console errors.
+
+### Housekeeping
+- eslint: ignore `.open-next/**` (local deploy artifacts OOM'd lint) and
+  `scripts/gen_icons.cjs` (.cjs require by design).
+
+### Deploy state
+- Commits dc26de8 (palette+PWA) → da7aff1 (token-AND filter) → 35269d8
+  (quote blanking). All deployed + verified live; CI green through da7aff1,
+  35269d8 running at session end. Import at ~10.9k/12,096 and climbing.
+
+---
+
 ## 2026-11-25 (~22:40 IST) — CHAT v3 LIVE: quoted replies, delete-for-everyone, group rename, emoji picker; import rescue
 
 **Sandbox recycled again (4th time)**: `.secrets/` gone, git HEAD reset to the
