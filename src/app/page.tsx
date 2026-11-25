@@ -3,7 +3,7 @@
 // JEE NEXUS — application shell (hash-routed SPA)
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, Moon, Sun, Menu, X, ClipboardList, ShieldCheck, MessageSquare, MoreHorizontal, Search } from 'lucide-react'
+import { Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, Moon, Sun, Menu, X, ClipboardList, ShieldCheck, MessageSquare, MoreHorizontal, Search, Trophy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { HomeView } from '@/components/views/HomeView'
 import { PracticeView } from '@/components/views/PracticeView'
@@ -14,6 +14,7 @@ import { ProfileView } from '@/components/views/ProfileView'
 import { MockView } from '@/components/views/MockView'
 import { AdminView } from '@/components/views/AdminView'
 import { CommunityView } from '@/components/views/CommunityView'
+import { LeaderboardView } from '@/components/views/LeaderboardView'
 import { CommandPalette } from '@/components/CommandPalette'
 import type { SessionUser, SubjectKey } from '@/lib/types'
 import { useHashRoute, useApi, navigate } from '@/lib/client'
@@ -33,6 +34,7 @@ const NAV = [
   { view: 'pyq', label: 'PYQ Library', icon: Library },
   { view: 'mock', label: 'Mock Tests', icon: ClipboardList },
   { view: 'community', label: 'Community', icon: MessageSquare },
+  { view: 'leaderboard', label: 'Leaderboard', icon: Trophy },
   { view: 'performance', label: 'Performance', icon: BarChart3 },
   { view: 'bookmarks', label: 'Bookmarks', icon: BookMarked },
 ] as const
@@ -264,8 +266,9 @@ export default function App() {
           {(view === 'login' || view === 'profile') && <ProfileView user={user} onUserChange={setUser} />}
           {view === 'mock' && <MockView loggedIn={!!user} onRequireAuth={() => navigate('/login')} />}
           {view === 'community' && <CommunityView user={user} loggedIn={!!user} onRequireAuth={() => navigate('/login')} />}
+          {view === 'leaderboard' && <LeaderboardView user={user} onRequireAuth={() => navigate('/login')} />}
           {view === 'admin' && <AdminView isAdmin={user?.role === 'admin'} />}
-          {view !== 'home' && view !== 'practice' && view !== 'pyq' && view !== 'mock' && view !== 'performance' && view !== 'bookmarks' && view !== 'login' && view !== 'profile' && view !== 'admin' && view !== 'community' && (
+          {view !== 'home' && view !== 'practice' && view !== 'pyq' && view !== 'mock' && view !== 'performance' && view !== 'bookmarks' && view !== 'login' && view !== 'profile' && view !== 'admin' && view !== 'community' && view !== 'leaderboard' && (
             <div className="mx-auto max-w-lg rounded-2xl border border-dashed border-border p-10 text-center">
               <h2 className="text-lg font-semibold">Page not found</h2>
               <Button variant="outline" className="mt-4" onClick={() => navigate('/home')}>Go home</Button>

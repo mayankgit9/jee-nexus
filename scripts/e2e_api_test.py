@@ -100,6 +100,29 @@ st = r.get("stats", {})
 check("stats show attempts>0", st.get("totalAttempts", 0) > 0, f"attempts={st.get('totalAttempts')}")
 check("stats subjects present", len(st.get("subjects", [])) > 0)
 
+# --- streak block (this user attempted questions just now) ---
+r = call("GET", "/api/stats")
+st = r.get("stats", {})
+sk = st.get("streak") or {}
+check("stats include active streak", sk.get("current", 0) >= 1 and sk.get("activeToday") is True,
+      f"streak={sk.get('current')} best={sk.get('best')}")
+check("streak best >= current", sk.get("best", 0) >= sk.get("current", 0))
+
+# --- leaderboard (public + personalized) ---
+r = call("GET", "/api/leaderboard?period=week", use_jar=False)
+lb = r.get("leaders", [])
+check("leaderboard is public and non-empty", len(lb) > 0, f"leaders={len(lb)} active={r.get('activeStudents')}")
+check("leaderboard never leaks emails", all("email" not in l and "@" not in l.get("displayName", "") for l in lb))
+check("leaderboard ranks are dense 1..N", [l["rank"] for l in lb] == list(range(1, len(lb) + 1)))
+check("leaderboard attempts sorted desc", all(lb[i]["attempts"] >= lb[i + 1]["attempts"] for i in range(len(lb) - 1)))
+r = call("GET", "/api/leaderboard?period=week")
+you = r.get("you") or {}
+check("authed leaderboard returns your rank+attempts", you.get("attempts", 0) > 0 and you.get("rank", 0) >= 1,
+      f"rank={you.get('rank')} attempts={you.get('attempts')}")
+check("own row flagged isYou exactly once", sum(1 for l in r.get("leaders", []) if l.get("isYou")) == 1)
+r = call("GET", "/api/leaderboard?period=all")
+check("all-time leaderboard works", len(r.get("leaders", [])) > 0 and (r.get("you") or {}).get("attempts", 0) > 0)
+
 # --- PYQ year overview + drill down ---
 r = call("GET", "/api/pyq", use_jar=False)
 years = r.get("years", [])

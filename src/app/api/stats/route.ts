@@ -169,6 +169,44 @@ export async function GET() {
     }
     const daily = [...dayCounts.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([date, count]) => ({ date, count }))
 
+    // streak (consecutive active days) — practice attempts + graded exam
+    // answers, counted on IST days (the audience's natural day boundary:
+    // a 11:30 PM practice session counts for "today", not split across UTC
+    // days like the UTC-based daily chart above).
+    const istDay = (d: Date) => new Date(d.getTime() + 5.5 * 3600 * 1000).toISOString().slice(0, 10)
+    const streakDays = new Set<string>()
+    const streakAttempts = await prisma.attempt.findMany({
+      where: { userId: user.id, createdAt: { gte: new Date(Date.now() - 120 * 24 * 60 * 60 * 1000) } },
+      select: { createdAt: true },
+    })
+    for (const a of streakAttempts) streakDays.add(istDay(a.createdAt))
+    for (const ea of examAnswers) {
+      if (ea.selectedOptions === null && ea.numericalValue === null) continue
+      streakDays.add(istDay(ea.updatedAt))
+    }
+    let streakCurrent = 0
+    let cursor = new Date(Date.now() + 5.5 * 3600 * 1000) // "now" in IST
+    cursor = new Date(Date.UTC(cursor.getUTCFullYear(), cursor.getUTCMonth(), cursor.getUTCDate()))
+    if (!streakDays.has(cursor.toISOString().slice(0, 10))) cursor = new Date(cursor.getTime() - 86400 * 1000)
+    while (streakDays.has(cursor.toISOString().slice(0, 10))) {
+      streakCurrent++
+      cursor = new Date(cursor.getTime() - 86400 * 1000)
+    }
+    let streakBest = 0
+    let run = 0
+    let prevDay: number | null = null
+    for (const d of [...streakDays].sort()) {
+      const t = Date.parse(`${d}T00:00:00Z`)
+      run = prevDay !== null && t - prevDay === 86400 * 1000 ? run + 1 : 1
+      if (run > streakBest) streakBest = run
+      prevDay = t
+    }
+    const streak = {
+      current: streakCurrent,
+      best: Math.max(streakBest, streakCurrent),
+      activeToday: streakDays.has(istDay(new Date())),
+    }
+
     const mergedTotal = total + examAnswered
     const mergedCorrect = correct + examCorrect
     const distinctQuestionIds = new Set<string>([
@@ -202,6 +240,7 @@ export async function GET() {
         subjects: subjectStats,
         chapters: chapterStats,
         daily,
+        streak,
         examAttempts: examAttemptsRaw,
         recent: recentMerged.map((a) => ({
           ...a,

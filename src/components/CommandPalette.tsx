@@ -7,7 +7,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   BarChart3, BookMarked, ClipboardList, CornerDownLeft, Dice5, Library, MessageSquare,
-  Moon, Search, ShieldCheck, Sun, User, Home,
+  Moon, Search, ShieldCheck, Sun, Trophy, User, Home,
 } from 'lucide-react'
 import type { SessionUser, SubjectKey } from '@/lib/types'
 import { navigate } from '@/lib/client'
@@ -75,6 +75,7 @@ function PaletteInner({
       { id: 'pyq', label: 'PYQ Library', group: 'Navigate', icon: Library, run: go('/pyq'), keywords: 'previous year papers' },
       { id: 'mock', label: 'Mock Tests (CBT)', group: 'Navigate', icon: ClipboardList, run: go('/mock'), keywords: 'exam nta simulation' },
       { id: 'community', label: 'Community — chats & groups', group: 'Navigate', icon: MessageSquare, run: go('/community'), keywords: 'dm message group chat' },
+      { id: 'leaderboard', label: 'Leaderboard', group: 'Navigate', icon: Trophy, run: go('/leaderboard'), keywords: 'rank ranking top students compete streak' },
       { id: 'performance', label: 'Performance', group: 'Navigate', icon: BarChart3, run: go('/performance'), keywords: 'analytics stats' },
       { id: 'bookmarks', label: 'Bookmarks', group: 'Navigate', icon: BookMarked, run: go('/bookmarks'), keywords: 'saved' },
       { id: 'profile', label: user ? 'Profile' : 'Sign in / Create account', group: 'Navigate', icon: User, run: go(user ? '/profile' : '/login'), keywords: 'account login signup' },

@@ -1,7 +1,7 @@
 'use client'
 
 // JEE NEXUS — performance dashboard
-import { BarChart3, Target, TrendingUp, AlertTriangle } from 'lucide-react'
+import { BarChart3, Target, TrendingUp, AlertTriangle, Flame } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
@@ -17,6 +17,7 @@ interface StatsData {
     subjects: { key: string; name: string; attempted: number; correct: number; accuracy: number }[]
     chapters: { key: string; name: string; subject: string; attempted: number; correct: number; accuracy: number }[]
     daily: { date: string; count: number }[]
+    streak?: { current: number; best: number; activeToday: boolean }
     recent: { id: string; isCorrect: boolean | null; subject: string; chapter: string; publicId: string; createdAt: string; source?: 'practice' | 'exam' }[]
   }
 }
@@ -88,7 +89,15 @@ export function PerformanceView({ onRequireAuth }: { onRequireAuth: () => void }
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         {/* daily activity */}
         <Card>
-          <CardHeader className="pb-2"><CardTitle className="flex items-center gap-2 text-sm"><TrendingUp className="h-4 w-4 text-primary" /> Daily activity (14 days)</CardTitle></CardHeader>
+          <CardHeader className="pb-2"><CardTitle className="flex flex-wrap items-center gap-2 text-sm"><TrendingUp className="h-4 w-4 text-primary" /> Daily activity (14 days)
+            {st.streak && st.streak.current > 0 && (
+              <span className={cn('ml-auto flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-semibold',
+                st.streak.activeToday ? 'border-primary/40 bg-primary/10 text-primary' : 'border-border text-muted-foreground')}>
+                <Flame className={cn('h-3 w-3', st.streak.activeToday && 'animate-pulse')} />
+                {st.streak.current}-day streak · best {st.streak.best}
+              </span>
+            )}
+          </CardTitle></CardHeader>
           <CardContent>
             {dailyChart.length === 0 ? (
               <p className="py-8 text-center text-sm text-muted-foreground">No activity in the last 14 days.</p>

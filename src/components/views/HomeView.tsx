@@ -2,7 +2,7 @@
 
 // JEE NEXUS — home view
 import { motion } from 'framer-motion'
-import { Dice5, ArrowRight, Library, Target, Flame, BookMarked, Activity, ChevronRight, Atom, FlaskConical, Sigma, MessageSquare, ClipboardList, BarChart3, Sparkles } from 'lucide-react'
+import { Dice5, ArrowRight, Library, Target, Flame, BookMarked, Activity, ChevronRight, Atom, FlaskConical, Sigma, MessageSquare, ClipboardList, BarChart3, Sparkles, Trophy } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -22,6 +22,7 @@ interface StatsData {
   stats: {
     totalAttempts: number; correct: number; accuracy: number; totalTimeSeconds: number
     distinctQuestions: number; bookmarkCount: number
+    streak?: { current: number; best: number; activeToday: boolean }
     subjects: { key: string; name: string; attempted: number; correct: number; accuracy: number }[]
     recent: { id: string; isCorrect: boolean | null; subject: string; chapter: string; publicId: string; createdAt: string }[]
     daily: { date: string; count: number }[]
@@ -85,14 +86,21 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
       {user && (
         <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {[
-            { label: 'Questions attempted', value: st ? st.totalAttempts.toLocaleString('en-IN') : '—', icon: Target },
-            { label: 'Accuracy', value: st ? `${st.accuracy}%` : '—', icon: Activity },
-            { label: 'Distinct questions', value: st ? st.distinctQuestions.toLocaleString('en-IN') : '—', icon: BookMarked },
-            { label: 'Time invested', value: st ? formatDuration(st.totalTimeSeconds) : '—', icon: Flame },
+            { label: 'Questions attempted', value: st ? st.totalAttempts.toLocaleString('en-IN') : '—', icon: Target, glow: false },
+            { label: 'Accuracy', value: st ? `${st.accuracy}%` : '—', icon: Activity, glow: false },
+            {
+              label: 'Day streak',
+              value: st?.streak ? (st.streak.current > 0 ? `${st.streak.current} day${st.streak.current === 1 ? '' : 's'}` : '—') : '—',
+              icon: Flame,
+              glow: st?.streak?.activeToday ?? false,
+            },
+            { label: 'Time invested', value: st ? formatDuration(st.totalTimeSeconds) : '—', icon: BookMarked, glow: false },
           ].map((s) => (
             <Card key={s.label}>
               <CardContent className="flex items-center gap-3 p-4">
-                <div className="rounded-lg bg-primary/10 p-2"><s.icon className="h-4 w-4 text-primary" /></div>
+                <div className={cn('rounded-lg p-2', s.glow ? 'bg-primary/25' : 'bg-primary/10')}>
+                  <s.icon className={cn('h-4 w-4', s.glow ? 'text-primary animate-pulse' : 'text-primary')} />
+                </div>
                 <div>
                   <div className="text-xl font-bold leading-tight">{s.value}</div>
                   <div className="text-[11px] text-muted-foreground">{s.label}</div>
@@ -146,7 +154,7 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
       </div>
 
       {/* feature strip */}
-      <div className="mt-8 grid gap-4 sm:grid-cols-3">
+      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
           {
             icon: MessageSquare,
@@ -154,6 +162,13 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
             body: 'DM batchmates and build study groups — doubt solving is faster together.',
             cta: 'Open Community',
             onClick: () => navigate('/community'),
+          },
+          {
+            icon: Trophy,
+            title: 'Leaderboard',
+            body: 'Weekly and all-time rankings — see where you stand among serious aspirants.',
+            cta: 'See rankings',
+            onClick: () => navigate('/leaderboard'),
           },
           {
             icon: ClipboardList,
