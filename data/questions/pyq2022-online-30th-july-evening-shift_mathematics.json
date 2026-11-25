@@ -252,47 +252,6 @@
   "images": []
  },
  {
-  "publicId": "PYQ-2022-mvjeks0o",
-  "subjectKey": "mathematics",
-  "chapterKey": "mathematics:integral-calculus",
-  "subtopic": null,
-  "type": "mcq_single",
-  "text": "If $y(x)=\\tan x-\\int\\limits _{0}^{2x}(x^{2}-xt+1)\\sin tdt$, then at $x=\\dfrac{π}{3}$, the value of $2y^{'''}-y^{''}$ is equal to",
-  "options": [
-   "$158$",
-   "$159-4\\sqrt{3}$",
-   "$126$",
-   "$127-4\\sqrt{3}$"
-  ],
-  "correctOptions": [],
-  "numericalAnswer": null,
-  "numericalTolerance": null,
-  "difficulty": "hard",
-  "sourceExam": "JEE Main",
-  "sourceYear": 2022,
-  "sourceDate": null,
-  "sourceShift": "Shift 2",
-  "sourceQuestionNumber": 31,
-  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 30th July Evening Shift via ExamSIDE (questions.examside.com)",
-  "tags": [
-   "bonus-dropped-by-nta",
-   "definite integration"
-  ],
-  "solution": {
-   "keyConcept": null,
-   "formulas": [],
-   "body": "$\\int\\limits _{0}^{2x}(x^{2}-xt+1)\\sin tdt=(x^{2}+1)(1-\\cos 2x)-x(\\sin 2x-2x\\cos 2x)=x^{2}+1+(x^{2}-1)\\cos 2x-x\\sin 2x$.\n\nSo $y=\\tan x-x^{2}-1-(x^{2}-1)\\cos 2x+x\\sin 2x$ and $y^{'}=\\sec ^{2}x-2x+(2x^{2}-1)\\sin 2x$.\n\n$y^{''}=2\\sec ^{2}x\\tan x-2+4x\\sin 2x+2(2x^{2}-1)\\cos 2x$\n\n$y^{'''}=2\\sec ^{4}x+4\\sec ^{2}x\\tan ^{2}x+16x\\cos 2x+8(1-x^{2})\\sin 2x$\n\nAt $x=\\dfrac{π}{3}$: $y^{''}=8\\sqrt{3}-1+\\dfrac{2\\sqrt{3}π}{3}-\\dfrac{2π^{2}}{9}$ and $y^{'''}=80+4\\sqrt{3}-\\dfrac{8π}{3}-\\dfrac{4\\sqrt{3}π^{2}}{9}$.\n\n$2y^{'''}-y^{''}=161-\\dfrac{16π}{3}-\\dfrac{2\\sqrt{3}π}{3}+\\dfrac{2π^{2}}{9}-\\dfrac{8\\sqrt{3}π^{2}}{9}\\approx 127.6$, which equals none of the options.",
-   "commonMistakes": null,
-   "alternativeMethod": null,
-   "verification": null,
-   "sourceReferences": [
-    "ExamSIDE explanation for JEE Main 2022 (Online) 30th July Evening Shift"
-   ],
-   "isAiGenerated": false
-  },
-  "images": []
- },
- {
   "publicId": "PYQ-2022-mvjeksh2",
   "subjectKey": "mathematics",
   "chapterKey": "mathematics:integral-calculus",

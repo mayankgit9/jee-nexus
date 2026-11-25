@@ -177,47 +177,6 @@
   "images": []
  },
  {
-  "publicId": "PYQ-2022-1l6hy2sz",
-  "subjectKey": "mathematics",
-  "chapterKey": "mathematics:application-of-derivatives",
-  "subtopic": null,
-  "type": "mcq_single",
-  "text": "If the maximum value of $a$, for which the function $f_{a}(x)=\\tan ^{-1}2x-3ax+7$ is non-decreasing in $\\left (-\\frac{π}{6},\\frac{π}{6}\\right )$, is $\\bar{a}$, then $f_{\\bar{a}}\\left (\\frac{π}{8}\\right )$ is equal to :",
-  "options": [
-   "$8-\\frac{9π}{4(9+π^{2})}$",
-   "$8-\\frac{4π}{9(4+π^{2})}$",
-   "$8\\left (\\frac{1+π^{2}}{9+π^{2}}\\right )$",
-   "$8-\\frac{π}{4}$"
-  ],
-  "correctOptions": [],
-  "numericalAnswer": null,
-  "numericalTolerance": null,
-  "difficulty": "medium",
-  "sourceExam": "JEE Main",
-  "sourceYear": 2022,
-  "sourceDate": null,
-  "sourceShift": "Shift 2",
-  "sourceQuestionNumber": 24,
-  "sourceReference": "NTA JEE Main JEE Main 2022 (Online) 26th July Evening Shift via ExamSIDE (questions.examside.com)",
-  "tags": [
-   "application of derivatives",
-   "bonus-dropped-by-nta"
-  ],
-  "solution": {
-   "keyConcept": null,
-   "formulas": [],
-   "body": "$\\text{Given,}$\n\n$\\begin{array}{ll} f_{a}(x) & =\\tan ^{-1}2x-3ax+7 \\\\  \\\\ f_{a}^{'}(x) & =\\dfrac{2}{1+4x^{2}}-3a \\end{array}$\n\nAs the function $f_{a}(x)$ is non-decreasing\n\n$\\begin{array}{l} \\text{in}\\left (-\\dfrac{π}{6},\\dfrac{π}{6}\\right ), \\\\  \\\\ f_{a}^{'}(x)\\geq 0 \\end{array}$\n\n$\\begin{array}{l} \\Rightarrow \\dfrac{2}{1+4x^{2}}-3a\\geq 0\\Rightarrow \\dfrac{2}{1+4x^{2}}\\geq 3a \\\\  \\\\ \\Rightarrow a\\leq \\dfrac{2}{3(1+4x^{2})},\\text{when}x\\in \\left (-\\dfrac{π}{6},\\dfrac{π}{6}\\right ) \\\\  \\\\ \\because a\\text{is maximum when}x^{2}=\\dfrac{π^{2}}{36}, \\end{array}$\n\n$\\begin{array}{ll} a_{\\max } & =\\dfrac{2}{3\\left (1+\\frac{4π^{2}}{36}\\right )}=\\dfrac{2\\times 12}{36+4π^{2}} \\\\  \\\\ \\qquad =\\dfrac{6}{9+π^{2}} \\\\  \\\\ \\therefore \\bar{a} & =\\dfrac{6}{9+π^{2}} \\end{array}$\n\n$\\begin{array}{l} \\therefore f_{\\bar{a}}(x)=\\tan ^{-1}2x-\\dfrac{18}{9+π^{2}}x+7 \\\\  \\\\ f_{\\bar{a}}\\left (\\dfrac{π}{8}\\right )=\\tan ^{-1}2\\left (\\dfrac{π}{8}\\right )-\\dfrac{18}{9+π^{2}}\\times \\dfrac{π}{8}+7 \\\\  \\\\ =\\tan ^{-1}\\dfrac{π}{4}-\\dfrac{9π}{36+4π^{2}}+7 \\\\  \\\\ =7+\\tan ^{-1}\\dfrac{π}{4}-\\dfrac{9π}{4(9+π^{2})}\\approx 7.29 \\end{array}$\n\nThis value matches none of the options. NTA dropped this question in its final answer key, so it is treated as a bonus question.",
-   "commonMistakes": null,
-   "alternativeMethod": null,
-   "verification": null,
-   "sourceReferences": [
-    "ExamSIDE explanation for JEE Main 2022 (Online) 26th July Evening Shift"
-   ],
-   "isAiGenerated": false
-  },
-  "images": []
- },
- {
   "publicId": "PYQ-2022-1l6hy7n8",
   "subjectKey": "mathematics",
   "chapterKey": "mathematics:limits-continuity-differentiability",

@@ -1065,42 +1065,6 @@
   ]
  },
  {
-  "publicId": "PYQ-2023-1lgyfr0p",
-  "subjectKey": "physics",
-  "chapterKey": "physics:wave-optics",
-  "subtopic": null,
-  "type": "numerical",
-  "text": "Unpolarised light of intensity 32 Wm${}^{-2}$ passes through the combination of three polaroids such that the pass axis of the last polaroid is perpendicular to that of the pass axis of first polaroid. If intensity of emerging light is 3 Wm${}^{-2}$, then the angle between pass axis of first two polaroids is $______________$ ${}^{\\circ }$.",
-  "options": [],
-  "correctOptions": null,
-  "numericalAnswer": null,
-  "numericalTolerance": null,
-  "difficulty": "medium",
-  "sourceExam": "JEE Main",
-  "sourceYear": 2023,
-  "sourceDate": null,
-  "sourceShift": "Shift 1",
-  "sourceQuestionNumber": 70,
-  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 10th April Morning Shift via ExamSIDE (questions.examside.com)",
-  "tags": [
-   "numerical-multi-answer",
-   "wave optics"
-  ],
-  "solution": {
-   "keyConcept": null,
-   "formulas": [],
-   "body": "When dealing with three polaroids, the intensity after the second polaroid will be given by Malus' law as $I_{0}\\cos ^{2}θ$, where $θ$ is the angle between the pass axes of the first two polaroids. However, as the third polaroid is orthogonal to the first, no light from the first polaroid passes through, only light from the second polaroid. So the final intensity is also modulated by a $\\sin ^{2}θ$ term (as the second and third polaroids are orthogonal).\n\nSo if we set up the equation for the final intensity $I_{\\text{net}}$:\n\n$I_{\\text{net}}=I_{0}\\cos ^{2}θ\\sin ^{2}θ$\n\nAnd we substitute the given values $I_{\\text{net}}=3\\text{W/m}^{2}$ and $I_{0}=\\frac{32\\text{W/m}^{2}}{2}=16\\text{W/m}^{2}$:\n\n$3=16\\cos ^{2}θ\\sin ^{2}θ$\n\nThis simplifies to:\n\n$\\frac{3}{16}=\\sin ^{2}θ\\cos ^{2}θ=\\left (\\frac{1}{2}\\sin 2θ\\right )^{2}$\n\nTaking the square root of both sides gives:\n\n$\\frac{\\sqrt{3}}{2}=|\\sin 2θ|$\n\nThe solutions for this are $θ=30^{\\circ }$ and $θ=60^{\\circ }$. \n\nSo, the angle between the pass axes of the first two polaroids is either $30^{\\circ }$ or $60^{\\circ }$.",
-   "commonMistakes": null,
-   "alternativeMethod": null,
-   "verification": null,
-   "sourceReferences": [
-    "ExamSIDE explanation for JEE Main 2023 (Online) 10th April Morning Shift"
-   ],
-   "isAiGenerated": false
-  },
-  "images": []
- },
- {
   "publicId": "PYQ-2023-1lgyfsuq",
   "subjectKey": "physics",
   "chapterKey": "physics:electrostatics",
