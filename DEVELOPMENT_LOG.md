@@ -93,8 +93,11 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
   unblocks deploys after sandbox recycles that lose the DB password.
 
 ### Deploy state
-- This entry committed and deployed via the script; verification of the live
-  `/api/daily` follows the deploy step.
+- Commit 5eae928 deployed via `deploy_app_cloudflare.sh` (dummy Hyperdrive
+  fallback worked first try). LIVE verification: `/api/daily` returns
+  2026-11-26 · PYQ-2022-1l59p9sm · physics · Wave Optics with no solution for
+  anon; home banner renders; daily view loads and shows the question + submit
+  (skeleton state on cold load is by design). Zero page errors.
 
 ---
 
