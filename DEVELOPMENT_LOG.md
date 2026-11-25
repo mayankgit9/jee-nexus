@@ -7,6 +7,66 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ## 2026-11-25 (~15:45 IST) — M24 SHIPPED LIVE + complete 2019–2026 PYQ corpus; chat tables still blocked on Supabase creds
 
+**Update (late session, same day):** chat message search + a REAL Node-runtime
+bug fix shipped; redox chapter renamed on prod via the new DML datafix channel;
+VLM-driven UI polish landed; first corpus import died mid-run (diagnosed,
+fixed, re-dispatched — see bottom of this entry).
+
+---
+
+### Feature — chat message search (DML-only, ships the moment 0007 lands)
+- `GET /api/chat/search?q=` — membership-scoped substring search across all the
+  caller's DMs + groups (server-side scoping; 30 newest; DM/group labels;
+  60/min rate limit; 2-char minimum).
+- CommunityView sidebar: search box (350ms debounce), results replace the
+  conversation list, windowed snippets around the match, click → open that
+  conversation. 6 new e2e tests (incl. cross-user DM privacy + 400s).
+
+### Real bug — isWorkersRuntime() misdetection (broke dev + killed the import run)
+- Detection was "does @opennextjs/cloudflare resolve" — it always resolves in
+  dev/CI (installed for the OpenNext build) → `WORKERS=true` on Node → every
+  db.* access AND dbClient() opened a fresh PrismaClient + pg Pool → local PG
+  max_connections (100) exhausted after ~30 requests ("FATAL: sorry, too many
+  clients already"). Surfaced as 500s mid-e2e-suite. Detection now calls
+  `getCloudflareContext({async:false})`: returns on Workers, throws on Node.
+  **After fix: chat 49/49 · regression 14/14 · core API 20/20 locally.**
+- This same bug killed import run 45593215362 at chunk 107/242 (500, runner
+  dev server predated the fix; pooler connection cap). import_all_pyq.py now
+  retries chunks 3× (20s backoff). Re-dispatched as run 45596846827 on the
+  fixed main.
+
+### Data quality — redox chapter renamed on PROD (found via live UI QA)
+- `chemistry:redox-reactions` was named "Redox Reactions and Electrochemistry"
+  (original 65-chapter seed) while 0005 added a separate Electrochemistry
+  chapter → year breakdown showed a dual-topic chapter next to the dedicated
+  one. Renamed in taxonomy.json + applied live via
+  `supabase/datafix/0001_redox_rename.sql` through the apply-migration
+  workflow (pure DML — jee_app can UPDATE even though it can't CREATE).
+  Verified live: API now returns "Redox Reactions" (2 Q) + "Electrochemistry" (8 Q).
+
+### UI/UX pass (browser QA + VLM review of live screenshots)
+- DOM QA: all desktop + mobile views zero horizontal overflow, zero console
+  errors; gates render; bottom tab bar clears content by 109px (VLM's
+  "clipping" claim was a false positive — measured, not assumed).
+- Fixed (VLM-verified majors): PYQ subject chips now carry letter labels
+  (P 220 / C 173 / M 172 — color-only failed WCAG 1.4.1); 9th provenance tile
+  completes the 3-col year grid (8 cards left a hole); no chevron on disabled
+  coming-soon cards; coming-soon cards more visible (opacity 70, border 60);
+  en-IN number formatting unified (year cards + HomeView stat row).
+- apply-migration.yml: verify step now gates on 0007 only; any SQL path
+  supported (datafixes included); false-success (empty table list = exit 0) fixed.
+
+### Session commits
+0a084bf (M24 rescue+ship) → a4d20a2 (CI locator fix + apply-migration wf) →
+b4a2c5e (corpus 12,096 q + converter fixes + image compression) →
+03bfad9 (chat search + WORKERS fix) → e6a3eba (redox rename) →
+d37c5c5 (PYQ grid a11y/composition) → a49d2a4 (import retry).
+All deployed (worker live at a49d2a4-equivalent + corpus assets).
+
+---
+
+## 2026-11-25 (12:30 IST cron loop) — M24 rescued, verified green, UI fixes; deploy still blocked on .secrets
+
 Tokens returned (fresh CF + GH PAT) → unblocked everything that was waiting.
 
 ### M24 live on production
