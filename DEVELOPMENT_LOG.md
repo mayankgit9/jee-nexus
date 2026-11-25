@@ -5,6 +5,77 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-25 (~21:15 IST) — PROD INCIDENT FIXED (503 flapping) + chat v2: typing, presence, receipts, reactions
+
+**Credentials status**: the `cfat_…` Cloudflare token from the user is an
+ACCOUNT-OWNED token — `/user/tokens/verify` 401s it but account-scoped
+endpoints (Workers, Hyperdrive, observability) work. Verified empirically and
+used for two full deploys. The `sbp_…` Supabase PAT works (management API).
+`.secrets/cloudflare.env` + `.secrets/tokens.env` refreshed; `supabase_db.env`
+is still LOST (sandbox recycle) — deploys use a syntactically-valid dummy
+Hyperdrive local string (the real origin credentials live inside CF's binding
++ the worker's DATABASE_URL secret; nothing needed the plaintext password).
+
+### Incident: random 503 / error 1102 across ALL routes (~40% of probes)
+- Diagnosed with a new outcome-aggregation script (`scripts/cf_outcomes.py`):
+  `exceededCpu → 503` on ~2-6% of REAL traffic, way higher for cold isolates.
+- Cause chain: 03dfa2c (events-table limiter) deployed against a prod DB
+  where the late session had ALREADY dropped rate_limit_events and applied
+  the counters schema (0009 extended + trigger) — the session died before
+  committing the code. Live code failed-open through dead-table errors per
+  request, on top of the known per-access-Proxy engine waste.
+- Fix: committed the working tree (counter upsert + trigger guard + one
+  dbClient() discipline + clientIp()), rewrote the stale 0009 file to match
+  the actually-applied prod schema, deployed.
+- **Result: 15/15 health probes green** (was 8/12 failing); login-burst probe
+  split across 3 sandbox egress IPs (per-IP keying verified); a REAL user's
+  chat-send counter hit 30/30 in prod → 429s firing. CI green on 38c30d9.
+
+### Chat v2 (three feature packages, all e2e'd + deployed)
+1. **Typing indicators** — `chat_typing` table (0011, applied via SB PAT):
+   (conversation, user) rows refreshed every 2.5s while typing; "typing" =
+   updated within 6s; stale rows invisible by age (no correctness DELETE).
+   POST /api/chat/typing (40/min, membership-guarded). Typing rides the
+   3s messages poll (still 2 subrequests). UI: animated bubble + header dots.
+2. **Presence + read receipts** — `app_users.last_seen_at` touched by
+   requireUser() ≤1 write/45s (whole app feeds it, not just chat). Sidebar
+   online dots, DM header "online / last seen…", and a WhatsApp-style
+   "✓✓ Seen" receipt on the DM sender's last message. Jump-to-latest button,
+   hover copy-message, unread count in the tab title.
+3. **Message reactions** — `chat_reactions` (0012): (message, user, emoji)
+   composite key; toggle API (60/min, membership via message's conversation,
+   emoji validated as emoji-territory code points — plain text rejected).
+   Reactions ride the messages GET (single any() query, per-viewer mine flag).
+   UI: hover smile → 10-emoji picker; chips under bubbles (own highlighted).
+
+### Bug found + fixed: directory search ranking
+`name ASC + take 10` made the NEWEST user unfindable once ten older users
+shared a name — exactly who a new student searches for. Now prefix matches
+rank first, recency breaks ties (raw SQL in /api/chat/users).
+
+### Tests
+- chat e2e **73/73** (10 typing/presence + 14 reactions/search checks added),
+  regression 14/14, core API 20/20 — all green locally; live audit sweep
+  17 endpoints correct (200/401 as designed, zero 500s).
+- Test-pollution lesson: the 5/min signup limit tripped during rapid e2e
+  re-runs (working as designed); suites must pace signup bursts.
+
+### Migrations applied to prod this session
+0011_typing_presence (chat_typing + last_seen_at) · 0012_chat_reactions.
+0009/0010 confirmed already applied by the late session (DB is source of
+truth; the stale 0009 draft file was rewritten to match).
+
+### Deploy state
+- Commits: 38c30d9 (limiter completion) → 682709a (typing/presence) →
+  8a676cd (reactions + search fix). All pushed + deployed + verified live
+  (/, /api/taxonomy, /api/pyq 200; typing/reactions guards 401; exceededCpu
+  gone from outcome aggregation).
+- PYQ import run 45599235978 (7b588fd) healthy, inserting: live grand total
+  9,828 → 10,050 during this session (2025: 776 → 998; 2024/2023/… complete).
+  Target 12,096 — ~2,000 to land; next loop verifies final counts + 2026.
+
+---
+
 ## 2026-11-25 (~15:45 IST) — M24 SHIPPED LIVE + complete 2019–2026 PYQ corpus; chat tables still blocked on Supabase creds
 
 **Update (late session, same day):** chat message search + a REAL Node-runtime
@@ -1118,8 +1189,8 @@ committed and pushed the moment it is written** (`scripts/push.sh` helper). No b
 | Analytics dashboard (charts, weak/strong chapters) | ✅ |
 | CBT examination mode | ✅ |
 | Admin dashboard + import pipeline | ✅ (admin login + bulk import live) |
-| Supabase Postgres + RLS production sync | ✅ (project preparena, migrations 0001–0006 applied; 0007 chat 🚫 pending tokens — resume script ready) |
+| Supabase Postgres + RLS production sync | ✅ (project preparena, migrations 0001–0012 applied — chat, typing/presence, reactions, rate-limit counters + trigger) |
 | Cloudflare production app deployment | ✅ (app live via OpenNext + Hyperdrive) |
-| Automated tests | ✅ (chat 44 + regression 14 + core API 20, all green locally; Playwright suite pending) |
-| Community chat (DMs + study groups) | ✅ deployed live (401 guards verified) · 🚫 chat tables need SB_PAT/DB password (jee_app is DML-only; migration 0007 ready + apply-migration.yml) |
+| Automated tests | ✅ (chat 73 + regression 14 + core API 20, all green locally; live audit 17/17; Playwright suite pending) |
+| Community chat (DMs + study groups) | ✅ LIVE with real users: DMs, groups, search, typing indicators, presence, Seen receipts, reactions, unread badges (chat e2e 73/73) |
 | Question bank depth (2019–2026 target) | ✅ corpus complete: 12,096 verified questions, all 164 papers 2019–2026 (import of ~5.7k new in progress; images live) |
