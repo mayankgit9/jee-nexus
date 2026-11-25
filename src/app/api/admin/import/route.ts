@@ -9,7 +9,12 @@ import { importQuestions, type ImportQuestionInput } from '@/lib/import'
 export async function POST(req: NextRequest) {
   try {
     const admin = await requireAdmin()
-    rateLimit(`import:${admin.id}`, 10, 60_000)
+    // 30/min: admin-gated bulk import. 10/min was calibrated when inserts
+    // dominated chunk time (~70s/chunk); the idempotent re-run path skips
+    // duplicates in ~2-4s/chunk and burst-hammered the limiter (run
+    // 45596846827 died at chunk 21 with 429s). 30 covers the fastest
+    // legitimate chunk rate with headroom; login/signup limits stay strict.
+    rateLimit(`import:${admin.id}`, 30, 60_000)
     const body = await req.json()
     const questions = body.questions
     if (!Array.isArray(questions) || questions.length === 0) {
