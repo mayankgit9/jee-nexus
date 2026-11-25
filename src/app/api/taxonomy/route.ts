@@ -14,8 +14,8 @@ export async function GET() {
         _count: { select: { questions: true } },
       },
     })
-    return Response.json({
-      subjects: subjects.map((s) => ({
+    return Response.json(
+      { subjects: subjects.map((s) => ({
         key: s.key,
         name: s.name,
         icon: s.icon,
@@ -27,8 +27,13 @@ export async function GET() {
           unit: c.unit,
           questionCount: c._count.questions,
         })),
-      })),
-    })
+      })) },
+      {
+        // taxonomy is read-mostly (counts move only during imports); a short
+        // CDN cache keeps the homepage/filters fast without stale risk
+        headers: { 'Cache-Control': 's-maxage=120, stale-while-revalidate=300' },
+      }
+    )
   } catch (err) {
     return jsonError(err)
   }

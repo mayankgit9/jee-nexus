@@ -271,6 +271,36 @@ export function QuestionCard({
     }
   }
 
+  // Keyboard shortcuts (practice flow only — skipped in readOnly/revealed/library
+  // modes): 1-4 toggle options · Enter submits. Declared AFTER submit so the
+  // ref never touches a TDZ binding.
+  const submitRef = useRef(submit)
+  submitRef.current = submit
+  useEffect(() => {
+    if (readOnly || result) return
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null
+      // don't hijack typing in inputs (the numerical answer box, report dialog)
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return
+      if (e.metaKey || e.ctrlKey || e.altKey) return
+      if (isMcq && ['1', '2', '3', '4'].includes(e.key)) {
+        const idx = Number(e.key) - 1
+        const maxIdx = question.options.length - 1
+        if (idx > maxIdx) return
+        setSelected((prev) => {
+          if (question.type === 'mcq_single') return [idx]
+          return prev.includes(idx) ? prev.filter((x) => x !== idx) : [...prev, idx].sort()
+        })
+        e.preventDefault()
+      } else if (e.key === 'Enter') {
+        submitRef.current()
+        e.preventDefault()
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [readOnly, result, isMcq, question.type, question.options.length])
+
   const toggleBookmark = async () => {
     if (!loggedIn) {
       onRequireAuth?.()
@@ -448,6 +478,11 @@ export function QuestionCard({
               <Button variant="ghost" onClick={reveal} disabled={submitting} className="text-muted-foreground">
                 Just show solution
               </Button>
+            )}
+            {isMcq && (
+              <span className="hidden text-[11px] text-muted-foreground sm:inline">
+                keys: <kbd className="rounded border border-border px-1">1</kbd>–<kbd className="rounded border border-border px-1">4</kbd> select · <kbd className="rounded border border-border px-1">Enter</kbd> submit
+              </span>
             )}
           </div>
         )}

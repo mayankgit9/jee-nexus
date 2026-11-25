@@ -3,11 +3,12 @@
 // JEE NEXUS — year-wise PYQ library
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Library, Calendar, ChevronRight, ChevronLeft, ArrowLeft } from 'lucide-react'
+import { Library, Calendar, ChevronRight, ChevronLeft, ArrowLeft, Search, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Skeleton } from '@/components/ui/skeleton'
+import { Input } from '@/components/ui/input'
 import { QuestionCard } from '@/components/QuestionCard'
 import { useApi, navigate, SUBJECT_COLORS } from '@/lib/client'
 import type { PublicQuestion } from '@/lib/types'
@@ -31,8 +32,16 @@ export function PyqView({ yearParam, subjectParam, chapterParam, loggedIn, onReq
 }) {
   const year = yearParam ? Number(yearParam) : null
   const [openedQuestion, setOpenedQuestion] = useState<PublicQuestion | null>(null)
+  // full-text search across the whole bank (independent of the year browse flow)
+  const [searchInput, setSearchInput] = useState('')
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchPage, setSearchPage] = useState(1)
 
-  const yearsData = useApi<{ years: YearData[] }>(year == null ? '/api/pyq' : null)
+  const yearsData = useApi<{ years: YearData[] }>(year == null && !searchQuery ? '/api/pyq' : null)
+  const searchResults = useApi<QuestionList & { search?: string }>(
+    searchQuery && year == null ? `/api/pyq?q=${encodeURIComponent(searchQuery)}&page=${searchPage}` : null,
+    [searchQuery, searchPage]
+  )
   const breakdown = useApi<YearBreakdown>(year != null && !subjectParam ? `/api/pyq?year=${year}` : null)
   const listKey = year != null && subjectParam
     ? `/api/pyq?year=${year}&subject=${subjectParam}${chapterParam ? `&chapter=${encodeURIComponent(chapterParam)}` : ''}`
@@ -76,7 +85,99 @@ export function PyqView({ yearParam, subjectParam, chapterParam, loggedIn, onReq
           <p className="mt-1 text-sm text-muted-foreground">
             Browse previous year questions: year → subject → chapter → shift. Every question carries its original exam metadata.
           </p>
+          <form
+            className="mt-4 flex gap-2"
+            onSubmit={(e) => {
+              e.preventDefault()
+              const t = searchInput.trim()
+              if (t.length < 3) {
+                toast({ title: 'Search needs at least 3 characters', description: 'Try a keyword like "projectile" or "adiabatic".' })
+                return
+              }
+              setSearchPage(1)
+              setSearchQuery(t)
+            }}
+          >
+            <div className="relative flex-1">
+              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                placeholder="Search questions — e.g. projectile, adiabatic, determinant…"
+                className="pl-9"
+                aria-label="Search question text"
+              />
+            </div>
+            <Button type="submit" variant="secondary">Search</Button>
+          </form>
         </div>
+
+        {searchQuery && (
+          <div className="mt-2">
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-muted-foreground">
+                Results for <span className="font-medium text-foreground">“{searchQuery}”</span>
+                {searchResults.data && ` · ${searchResults.data.total} found`}
+              </p>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => { setSearchQuery(''); setSearchInput('') }}
+              >
+                <X className="mr-1.5 h-3.5 w-3.5" /> Clear
+              </Button>
+            </div>
+            {searchResults.loading && <div className="mt-4 space-y-3"><Skeleton className="h-28" /><Skeleton className="h-28" /><Skeleton className="h-28" /></div>}
+            {searchResults.error && <p className="mt-4 text-sm text-rose-400">{searchResults.error}</p>}
+            {searchResults.data && searchResults.data.questions.length === 0 && (
+              <div className="mt-6 rounded-xl border border-dashed border-border p-10 text-center text-sm text-muted-foreground">
+                No question mentions “{searchQuery}” yet. Try a shorter or more common keyword.
+              </div>
+            )}
+            {searchResults.data && searchResults.data.questions.length > 0 && (
+              <>
+                <p className="mt-2 text-xs text-muted-foreground">page {searchResults.data.page}/{searchResults.data.pageCount}</p>
+                <div className="mt-4 space-y-3">
+                  {searchResults.data.questions.map((q) => (
+                    <button
+                      key={q.id}
+                      type="button"
+                      onClick={() => setOpenedQuestion(q)}
+                      className="w-full rounded-xl border border-border bg-card p-4 text-left transition-colors hover:border-primary/50"
+                    >
+                      <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
+                        <span className="flex items-center gap-2">
+                          <span className="rounded-md px-1.5 py-0.5 font-medium" style={{ color: SUBJECT_COLORS[q.subject.key], background: `color-mix(in oklab, ${SUBJECT_COLORS[q.subject.key]} 12%, transparent)` }}>
+                            {q.sourceYear ?? ''} · {q.subject.name}
+                          </span>
+                          {q.chapter.name}
+                        </span>
+                        <span>{q.sourceShift ?? ''} {q.sourceQuestionNumber != null ? `· Q${q.sourceQuestionNumber}` : ''}</span>
+                      </div>
+                      <div className="mt-2 line-clamp-2 text-sm leading-relaxed opacity-90">
+                        {q.text.replace(/\$\$?[^$]*\$\$?/g, m => m.replace(/[$\\]/g, '').slice(0, 60)).slice(0, 180)}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+                {searchResults.data.pageCount > 1 && (
+                  <div className="mt-6 flex items-center justify-center gap-3">
+                    <Button variant="outline" size="sm" disabled={searchPage <= 1} onClick={() => setSearchPage(searchPage - 1)}>
+                      <ChevronLeft className="h-4 w-4" /> Prev
+                    </Button>
+                    <span className="text-sm text-muted-foreground">{searchPage} / {searchResults.data.pageCount}</span>
+                    <Button variant="outline" size="sm" disabled={searchPage >= searchResults.data.pageCount} onClick={() => setSearchPage(searchPage + 1)}>
+                      Next <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        )}
+
+        {!searchQuery && (
+          <>
         {yearsData.loading && <div className="grid gap-4 sm:grid-cols-2"><Skeleton className="h-28" /><Skeleton className="h-28" /><Skeleton className="h-28" /><Skeleton className="h-28" /></div>}
         {yearsData.error && <p className="text-sm text-rose-400">{yearsData.error}</p>}
         {yearsData.data && (
@@ -118,6 +219,8 @@ export function PyqView({ yearParam, subjectParam, chapterParam, loggedIn, onReq
               )
             })}
           </div>
+        )}
+          </>
         )}
       </div>
     )

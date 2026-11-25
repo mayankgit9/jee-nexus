@@ -59,6 +59,13 @@ enum AppRole {
   @@map("app_role")
 }
 
+enum ConversationType {
+  dm
+  group
+
+  @@map("conversation_type")
+}
+
 // ----------------------------- Users & auth -----------------------------
 
 model User {
@@ -77,6 +84,9 @@ model User {
   reports        Report[]
   examAttempts   ExamAttempt[]
   passwordResets PasswordReset[]
+  chatMemberships      ChatMember[]
+  chatSentMessages     ChatMessage[]         @relation("ChatSender")
+  chatCreatedChats     ChatConversation[]    @relation("ChatCreator")
 
   @@map("app_users")
 }
@@ -382,4 +392,50 @@ model ImportJob {
 
   @@index([createdAt])
   @@map("import_jobs")
+}
+
+// ----------------------------- Community chat (DMs + study groups) -----------------------------
+
+model ChatConversation {
+  id          String           @id @default(cuid())
+  type        ConversationType
+  name        String? // groups only (1-60 chars)
+  createdById String?          @map("created_by_id")
+  createdBy   User?            @relation("ChatCreator", fields: [createdById], references: [id], onDelete: SetNull)
+  createdAt   DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt   DateTime         @updatedAt @map("updated_at") @db.Timestamptz(6) // bumped on new message — sidebar sort key
+
+  members  ChatMember[]
+  messages ChatMessage[]
+
+  @@index([updatedAt])
+  @@map("chat_conversations")
+}
+
+model ChatMember {
+  id             String           @id @default(cuid())
+  conversationId String           @map("conversation_id")
+  conversation   ChatConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  userId         String           @map("user_id")
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role           String           @default("member") // member | admin (creator)
+  lastReadAt     DateTime?        @map("last_read_at") @db.Timestamptz(6)
+  joinedAt       DateTime         @default(now()) @map("joined_at") @db.Timestamptz(6)
+
+  @@unique([conversationId, userId])
+  @@index([userId])
+  @@map("chat_members")
+}
+
+model ChatMessage {
+  id             String           @id @default(cuid())
+  conversationId String           @map("conversation_id")
+  conversation   ChatConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  senderId       String           @map("sender_id")
+  sender         User             @relation("ChatSender", fields: [senderId], references: [id], onDelete: Cascade)
+  body           String // 1-2000 chars, enforced in the API
+  createdAt      DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([conversationId, createdAt])
+  @@map("chat_messages")
 }

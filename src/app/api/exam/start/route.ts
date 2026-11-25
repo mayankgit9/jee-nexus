@@ -21,7 +21,10 @@ export async function POST(req: NextRequest) {
       include: { answers: true },
     })
     if (existing && existing.endsAt.getTime() > Date.now()) {
-      return Response.json(formatAttempt(exam, existing))
+      const resumed = formatAttempt(exam, existing)
+      const cfgDur = ((exam.config ?? {}) as { durationMinutes?: number }).durationMinutes
+      resumed.exam.durationMinutes = Math.min(240, Math.max(5, cfgDur ?? exam.pattern.durationMinutes))
+      return Response.json(resumed)
     }
 
     // Custom tests may override duration via their config; pattern duration is the fallback
@@ -32,7 +35,11 @@ export async function POST(req: NextRequest) {
       data: { userId: user.id, examId: exam.id, endsAt, status: 'in_progress' },
       include: { answers: true },
     })
-    return Response.json(formatAttempt(exam, attempt))
+    const payload = formatAttempt(exam, attempt)
+    // report the EFFECTIVE duration (config override wins), not the pattern default —
+    // the timer itself is server-authoritative via endsAt/serverNow
+    payload.exam.durationMinutes = durationMinutes
+    return Response.json(payload)
   } catch (err) {
     return jsonError(err)
   }

@@ -99,9 +99,18 @@ export function jsonError(err: unknown) {
   // Prisma errors (only the stack survives), which made production 500s
   // undiagnosable. Log explicit fields as one flat string instead.
   const e = err as { name?: string; code?: string; message?: string; meta?: unknown; stack?: string }
+  // P2021 = table does not exist on this database (feature shipped before its
+  // migration ran). Honest 503 instead of a bare 500.
+  if (e?.code === 'P2021') {
+    console.error(`[api] table missing (P2021): ${String(e?.message ?? '').slice(0, 200)}`)
+    return Response.json(
+      { error: 'This feature is not active on the live database yet — migration pending. Try again soon.' },
+      { status: 503 }
+    )
+  }
   console.error(
     `[api] ${e?.name ?? 'Error'} code=${e?.code ?? '-'} msg=${String(e?.message ?? err).slice(0, 500)}` +
-      ` meta=${JSON.stringify(e?.meta ?? null)?.slice(0, 300)} stack=${(e?.stack ?? '').split('\n').slice(0, 4).join(' | ')}`
+      ` meta=${JSON.stringify(e?.meta ?? null)?.slice(0, 300)} stack=${(e?.stack ?? '').split('\n').slice(0, 12).join(' | ')}`
   )
   return Response.json({ error: 'Internal server error' }, { status: 500 })
 }

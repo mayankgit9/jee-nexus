@@ -5,6 +5,282 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-25 (12:30 IST cron loop) — M24 rescued, verified green, UI fixes; deploy still blocked on .secrets
+
+Continued from the morning session (whose commits 9558b02/63641fb were lost to
+another sandbox recycle — the worktree survived, git objects did not).
+
+### Git reconciliation completed
+- Worktree state committed to safety branch `backup-m24-work` (dffac75).
+- `main` reset to origin/main (7ac3170, authoritative incl. the per-request
+  client perf pass) and the M24 work ported onto it as **5d24ee0** — diff
+  audited to contain ONLY session work, zero reversions of origin content.
+- Taxonomy sanity check: electrochemistry/salt-analysis chapters present on
+  both sides, no data drift from the port.
+
+### Found & fixed a real production-class bug
+- **`dbClient()` leaked a fresh pg Pool per call on the Node runtime.**
+  Every chat route calls dbClient() per request → each created a new client
+  with its own pool (default max 10) → local Postgres max_connections (100)
+  exhausted after ~30 requests: `FATAL: sorry, too many clients already`,
+  500s mid-suite, and the chat send rate limiter never got to fire because
+  requireUser died first. Fix (5aa6f9c): reuse the global singleton on Node;
+  Workers keeps fresh-per-call (M23 engine-state workaround, prod verified).
+- **eslint OOM'd at ~2GB heap** — it was linting `src/generated` (prisma
+  worker client). Ignores added for generated/tool-results/landing/data/
+  shims; lint now completes: 0 errors (first clean lint in weeks — every
+  recent run silently OOM'd before reaching app code).
+- **UI fixes (94bff8a, all browser-verified)**:
+  - mobile chat composer was 38px under the bottom tab bar (measured panel
+    bottom 817px vs nav top 779px at 390×844) → panel height now
+    `calc(100dvh-18rem)`, 2px clearance;
+  - desktop nav labels + logo subtitle single-line (whitespace-nowrap);
+  - question counts forced to en-IN locale (badge rendered "6.170" with a
+    dot under some browser locales).
+
+### Verification (all local, one command: `scripts/verify_m24_local.sh`)
+- userspace PG 18 + migrations 0001–0007 applied (21 tables), taxonomy 67
+  chapters + seed questions upserted, prisma generate (both clients).
+- **chat e2e 44/44** (auth guards, email masking, DM lifecycle incl.
+  idempotent find-or-create + delete, read receipts + unread counts,
+  incremental `after=` polling, groups incl. non-admin invites, leave/delete
+  semantics, 30/min send rate limit — confirmed 429 at send #31).
+- **regression suite 14/14** (pool-bias fix proven: random samples span
+  7 distinct years; anti-cheat 409; validation drops garbage enums).
+- **core API e2e 20/20**. Lint clean. `next build` clean.
+- Browser (agent-browser): logged-out gate, DM flow with real messages,
+  group creation + message, mobile bottom-tab layout — screenshots reviewed.
+
+### Live site status
+- Health: / , /api/pyq (2019–2023 · 6,125 questions), /api/taxonomy all 200.
+- Random endpoint is POST-only by design (GET → 405); POST verified 200 live.
+- PYQ import: 6,125 of ~6,333 target visible live (2019–2023 fully present;
+  2024–2026 still thin). GH Actions check 🚫 — GitHub API rate-limited from
+  this IP and GH_PAT is wiped, so run status unverifiable this session.
+
+### 🚫 Still blocked: .secrets/ wiped again (3rd time)
+GH_PAT, SB_PAT, CLOUDFLARE_API_TOKEN, supabase_db.env all gone → git push
+and `wrangler deploy` impossible. **Everything is committed and ready**:
+`main` = 7ac3170 + 5d24ee0 (chat) + 5aa6f9c (pool fix) + 94bff8a (UI).
+Resume is one command — `bash scripts/resume_after_secrets.sh` — which
+pushes, applies `0007_chat.sql` to preparena (REQUIRED before the chat UI
+works on live; until then live chat routes 503 via the P2021 handler),
+deploys with wrangler, and curls the live endpoints including chat guards
+(expect 401 = healthy, 503 = migration missing).
+
+### Next
+- The moment tokens return: resume script → verify live chat end-to-end.
+- More features from the backlog (typing indicators via polling, message
+  search, notifications); keep hunting bugs; keep polishing UI.
+
+---
+
+## 2026-11-25 (morning) — M24: community chat (DMs + study groups) + UI/UX overhaul
+
+User directive: "make it more more better especially the UI, add more more
+features like group chats, personal chat (DM) ... give time on UI/UX".
+All changes below are committed locally (9558b02) — push + deploy BLOCKED,
+see Ops.
+
+### Ops incident #2: sandbox recycled again, .secrets wiped AGAIN
+Between sessions the sandbox was recreated once more: `.secrets/` (GH_PAT,
+SB_PAT, CLOUDFLARE_API_TOKEN, supabase_db.env) is gone entirely, and the
+local git repo was restored to a stale M13-era snapshot. Consequences:
+- git push 🚫, wrangler deploy 🚫, Supabase migration 🚫 — until tokens return.
+- **Git reconciliation performed**: fetched origin (7ac3170 = authoritative,
+  includes the night session + a later per-request-client perf pass), backed
+  up the stale-but-newer-in-parts worktree to branch `backup-worktree-0430`,
+  reset main to origin/main, then ported the 04:30 cron session's never-pushed
+  work (anti-cheat 409, pool-bias fix, input validation, PYQ search, practice
+  keyboard shortcuts, my-reports section, PWA manifest, taxonomy cache header,
+  exam duration reporting) as commit 63641fb — verified no reversions against
+  origin's per-request-perf changes before porting.
+
+### Feature — Community chat (DMs + group study chats)
+- **Schema** (`prisma/schema.prisma` + `supabase/migrations/0007_chat.sql`):
+  `chat_conversations` (dm|group, name, updatedAt = sidebar sort key),
+  `chat_members` (role, lastReadAt for unread accounting, unique
+  [conversationId,userId]), `chat_messages` (index conversationId+createdAt).
+  Private tables — RLS app-role policies only, no anon access (same model as
+  app_users/sessions). jee_app grants + 0003 default privileges cover it.
+- **API** (6 routes, all requireUser, all on ONE dbClient() per request):
+  - GET/POST `/api/chat/conversations` — sidebar in 2 queries (nested
+    findMany + ONE grouped raw unread-count query across all conversations);
+    POST find-or-creates DMs (idempotent) and creates groups (creator=admin).
+  - GET `/api/chat/messages` — conversation meta + messages; `after=` polling
+    cursor, `before=` load-earlier cursor, limit+1 fetch for hasMore.
+  - POST `/api/chat/messages` — send (bumps conversation updatedAt + sender
+    lastReadAt), POST `/api/chat/read` — mark read,
+    POST `/api/chat/members` — add (any member can invite, groups only),
+    POST `/api/chat/leave` — leave group / delete DM (cascades),
+    GET `/api/chat/users?q=` — directory search, emails always masked
+    (`r•••@gmail.com`).
+  - Validation: 1-2000 chars (control chars stripped), group name 1-60,
+    ≤20 invitees / ≤21 members, rate limits (30 msg/min, 20 creates/hr,
+    60 searches/min — same in-memory best-effort limiter as the rest).
+  - **P2021 (missing table) now returns honest 503** with a friendly message
+    instead of a bare 500 — the UI shows a "rolling out" banner. Chat can
+    therefore ship to the worker BEFORE the migration lands without breaking.
+- **CommunityView** (`src/components/views/CommunityView.tsx`): two-pane
+  layout (sidebar + chat), gradient avatars per user/conversation, unread
+  badges, filter tabs (All/Direct/Groups), day separators, group sender
+  labels, own vs other bubbles, load-earlier with scroll anchoring, autosize
+  composer (Enter send / Shift+Enter newline, char counter near limit),
+  visibility-aware polling (sidebar 10s, active chat 3s, dedup by id),
+  new-chat dialog (DM search + group builder with member chips), add-members
+  dialog, leave/delete with explicit consequences copy, mobile master-detail
+  drill-down. Empty/error/rolling-out states for everything.
+- **E2E: `scripts/e2e_chat_test.py` — 44/44** (three users: DM lifecycle,
+  unread accounting, polling, permissions incl. post-leave 403, group
+  invite/leave, validation boundaries, rate limit).
+- Bug the new suite caught before shipping: `Number(null)=0` made a missing
+  `?limit=` default to 1 — message history silently returned ONE message.
+  Fixed (param-presence check); regression-tested.
+
+### UI/UX overhaul
+- Nav: sliding active pill (framer layoutId), icon-only below lg (fits 7
+  items + Community), header brand gradient accent line, logo hover lift.
+- Mobile: bottom tab bar (Home / Practice / PYQ / Chats / More) with animated
+  active dot, safe-area inset, footer hidden on mobile, main padding fix.
+- Home: hero floating gradient orbs + pulsing live-count badge, stat chips
+  row (years·chapters / community / CBT), subject cards with per-subject
+  hover glow, feature strip (Community chat / Mock tests / Analytics).
+- globals.css: smooth theme transition, ::selection, light-mode grid fix,
+  shimmer skeleton option, prefers-reduced-motion honoured globally.
+
+### Tests executed (all local, dev server + userspace PG 18 on :5433)
+- e2e_chat: **44/44** · e2e_api: **20/20** · e2e_exam: **21/21** ·
+  e2e_admin: **24/24** (after starting dev with ADMIN_EMAILS) ·
+  tsc: 0 errors in src/ · eslint src/: 0 errors · `next build`: clean,
+  all 22 API routes compiled.
+- Browser (agent-browser, TWO parallel sessions = two users): signup ×2,
+  DM via directory search → send → other session sees unread badge → reply →
+  first session receives it via 3s polling (no reload); group created with
+  member chips → group message → unread badge + "Asha:" preview → open →
+  sender labels + Today separator render; mobile 390×844: bottom tab bar,
+  list→chat drill-down + back, no horizontal scroll; home: 3 orbs, feature
+  strip, stat chips. Zero console/page errors in both sessions.
+
+### Deployment status
+- 🚫 BLOCKED on credentials (see Ops). Everything is committed locally on
+  main (9558b02). **Ship procedure once tokens are restored:**
+  1. `.secrets/tokens.env` → GH_PAT (repo scope) + SB_PAT; push `main`.
+  2. `python3 scripts/apply_migration.py supabase/migrations/0007_chat.sql`
+     (creates the chat tables on preparena — REQUIRED for chat to work;
+     until then chat APIs return the honest 503 and the UI shows the banner).
+  3. `.secrets/cloudflare.env` → CLOUDFLARE_API_TOKEN (Workers Scripts:Edit
+     + Hyperdrive:Edit); `bunx wrangler deploy`.
+
+### Next
+- Restore tokens → ship (push + migration + deploy) — chat tables first.
+- Playwright spec for the community flow (CI coverage) once pushed.
+- Backlog: daily streak, session-history pagination, typing indicators /
+  presence (needs Durable Objects), message reactions.
+
+---
+
+## 2026-11-25 (04:30 IST cron loop) — bug hunt + search + anti-cheat + UX
+
+Cron-run session. LIVE SITE VERIFIED HEALTHY (/, /api/pyq, /api/taxonomy,
+/api/stats all correct; audit sweep 16/16 endpoints OK). PYQ import verified
+live: 2019–2022 complete (1,092 / 979 / 1,828 / 1,661), 2023 flowing in
+steadily (101 → 211 over the session, 5,677 → 6,125 total in DB).
+
+### Ops incident (this session only): sandbox recycled, tokens lost
+The sandbox was recreated between sessions; `/home/z/my-project/.secrets/`
+(cloudflare.env, supabase_db.env) was wiped and only a stale Nov-23 tokens.env
+survived (its GH_PAT/CF_PAT are dead; SB_PAT still works). Consequences:
+- git push 🚫 BLOCKED — needs a fresh GH_PAT (repo scope) in
+  `.secrets/tokens.env`
+- CF deploy + observability logs 🚫 BLOCKED — needs a fresh CLOUDFLARE_API_TOKEN
+  (Workers Scripts:Edit + Hyperdrive:Edit) in `.secrets/cloudflare.env`
+- Supabase management API ✅ still works (SB_PAT) — DB queries, cleanup done
+- Local git was re-aligned to origin/main (7ac3170, the authoritative push).
+This session's fixes are COMMITTED LOCALLY but NOT pushed/deployed — first
+cron run with restored tokens should `git push` + `bash
+scripts/deploy_app_cloudflare.sh`.
+
+### Bug 9 (critical, live) — exam review leaked answers mid-attempt
+GET /api/exam/result?attemptId= returned isCorrect flags, correct options and
+full solutions for an in_progress attempt. A student could start a mock, GET
+the result endpoint, read every correct answer, then submit them via
+/api/exam/answer — a perfect-score cheat with zero effort. The UI happened to
+guard this client-side; the API did not. Fix: 409 until the attempt is
+submitted/expired. Verified live-locally (409 in_progress → review after
+submit).
+
+### Bug 10 (quality) — practice/mock pool bias
+Both random practice (`selectRandomQuestions`, take:500) and mock generation
+(`generateExam`, take:300 per subject) sampled the candidate pool with
+`take` but NO orderBy → Postgres returns rows in physical (insertion) order,
+and imports are year-clustered → every "random" session drew from the same
+oldest-year questions and every full-length mock drew physics from 2019.
+Fix: full-pool id fetch (caps 50k/20k as runaway guards). Regression test now
+asserts 120 sampled questions span ≥4 distinct years (observed: 5–6).
+
+### Bug 11 (robustness) — 500s on malformed filters (verified LIVE)
+`/api/pyq?difficulty=zzz` / `?type=xyz` / `?page=abc` each returned a live 500
+(Prisma enum cast / NaN skip crash). Also `POST /api/questions/random` with
+count:"abc" (NaN take) or invalid enums. Fix: strict validation → honest 400s;
+invalid enum values dropped gracefully; non-finite count → 1.
+
+### Security/abuse
+- POST /api/exam/list (exam generation) had NO auth + NO rate limit — anyone
+  could flood the shared exam list with examQuestion rows. Fix: requireUser +
+  10/hour per user.
+
+### Features added
+- **PYQ full-text search** — GET /api/pyq?q=term (case-insensitive, optional
+  year/subject narrowing, 3-char minimum, paginated, newest year first).
+  UI: search box on the PYQ Library page with results list (year·subject
+  badge, chapter, shift), Clear button, empty/short-input states. Verified in
+  browser: "projectile" → 17 results, opens into the standard attempt-first
+  question card.
+- **Keyboard shortcuts in practice** — 1–4 select MCQ options (single=radio
+  replace, multi=toggle), Enter submits; input fields excluded; shortcut hint
+  rendered next to the submit button (sm+ screens only). Verified in browser:
+  press 2 → Enter → graded Correct!
+- **My question reports (Profile)** — GET /api/reports (caller's own reports,
+  status + question snippet) + collapsible profile section with status badges
+  (open=amber / resolved=emerald) and honest empty state. Closes the feedback
+  loop for the report flow. Verified in browser end-to-end.
+- **PWA manifest** — /manifest.json (standalone, brand colors, SVG icon) +
+  metadata.manifest link → install-to-homescreen works.
+- **Perf** — /api/taxonomy now sends `Cache-Control: s-maxage=120,
+  stale-while-revalidate=300` (read-mostly; counts move only during imports).
+
+### Tooling
+- **Local Postgres E2E capability restored**: pip `postgresql-binaries`
+  (userspace PG 18.6, /tmp/pgdata, port 5433, role jee_app) + `.env.local` +
+  `prisma db push` + full seed (6,170 questions locally — seed.ts now loads
+  the whole bank). The 20-test API suite runs locally again after the
+  Postgres-only schema switch (it had been live-only since M10).
+- `scripts/mock_e2e_live.py` fixed: Supabase management API chokes on huge IN
+  lists (silent error dict → confusing TypeError). Now chunks IN lists (20)
+  and raises the real SQL error. 75-answer mock re-verified: 80/300 exact.
+- `scripts/regression_fixes_20251125.py` — 14 tests covering every fix above
+  (400s, pool-bias spread, 409 anti-cheat, graceful enum drops).
+- jsonError stack slice 4 → 12 lines (Prisma error REASON line was being cut,
+  which cost diagnosis time today).
+
+### Tests executed
+- Local API E2E: 20/20 · regression suite: 14/14 · lint: 0 errors · tsc: 0
+  errors in src/ · live audit sweep: all endpoints healthy
+- Browser (agent-browser): search flow, keyboard-graded question, reports
+  section, PWA manifest — all verified; mobile layout unaffected
+
+### Deployment status
+- LIVE (workers.dev): last deployed commit 7ac3170 — healthy, import flowing.
+- This session's commits: LOCAL ONLY (push blocked on lost GH_PAT; deploy
+  blocked on lost CF token — see Ops incident above).
+
+### Next
+- Restore tokens (GH_PAT + CLOUDFLARE_API_TOKEN) → push + deploy this batch.
+- Continue import watch (2023–2025 remaining ≈ 2,000 questions).
+- Feature backlog: daily streak, session history pagination, review filters.
+
+---
+
 ## 2026-11-25 (night) — Continuous improvement session · Hyperdrive cache bug + exam engine fixes
 
 User directive: keep working autonomously (health checks, bug hunting, features,
@@ -717,7 +993,8 @@ committed and pushed the moment it is written** (`scripts/push.sh` helper). No b
 | Analytics dashboard (charts, weak/strong chapters) | ✅ |
 | CBT examination mode | ✅ |
 | Admin dashboard + import pipeline | ✅ (admin login + bulk import live) |
-| Supabase Postgres + RLS production sync | ✅ (project preparena, migrations 0001–0006 applied) |
+| Supabase Postgres + RLS production sync | ✅ (project preparena, migrations 0001–0006 applied; 0007 chat 🚫 pending tokens — resume script ready) |
 | Cloudflare production app deployment | ✅ (app live via OpenNext + Hyperdrive) |
-| Automated tests | 🔄 (23 API E2E + browser verification; Playwright suite pending) |
-| Question bank depth (16 seeded; 2019–2026 target) | 🔄 (6,333-question PYQ import running) |
+| Automated tests | ✅ (chat 44 + regression 14 + core API 20, all green locally; Playwright suite pending) |
+| Community chat (DMs + study groups) | ✅ locally verified (44/44 e2e) · 🚫 deploy blocked on .secrets |
+| Question bank depth (2019–2026 target) | 🔄 (6,125 imported live of ~6,333; 2024–2026 still thin) |

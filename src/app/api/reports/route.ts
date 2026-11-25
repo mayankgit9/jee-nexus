@@ -4,6 +4,37 @@ import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 
 const REASONS = ['incorrect_answer', 'incorrect_solution', 'missing_diagram', 'typo', 'copyright', 'other']
 
+/** GET /api/reports — the caller's own reports with status (closes the feedback loop) */
+export async function GET() {
+  try {
+    const user = await requireUser()
+    const reports = await db.report.findMany({
+      where: { userId: user.id },
+      orderBy: { createdAt: 'desc' },
+      take: 50,
+      include: {
+        question: { select: { publicId: true, text: true, sourceYear: true } },
+      },
+    })
+    return Response.json({
+      reports: reports.map((r) => ({
+        id: r.id,
+        reason: r.reason,
+        details: r.details,
+        status: r.status,
+        createdAt: r.createdAt,
+        question: {
+          publicId: r.question.publicId,
+          year: r.question.sourceYear,
+          snippet: r.question.text.replace(/\$\$?[^$]*\$\$?/g, ' ').replace(/\s+/g, ' ').slice(0, 140),
+        },
+      })),
+    })
+  } catch (err) {
+    return jsonError(err)
+  }
+}
+
 /** Report a question (incorrect answer/solution, missing diagram, etc.) */
 export async function POST(req: NextRequest) {
   try {

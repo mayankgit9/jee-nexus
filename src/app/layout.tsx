@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.svg",
   },
+  manifest: "/manifest.json",
   openGraph: {
     title: "JEE NEXUS",
     description: "Practice JEE Main the way you'll actually write it.",

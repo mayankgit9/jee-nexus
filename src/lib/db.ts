@@ -147,5 +147,14 @@ export const db: PrismaClient = new Proxy({} as PrismaClient, {
  * operations (or one $transaction) through it.
  */
 export function dbClient(): PrismaClient {
+  if (!WORKERS) {
+    // Node runtime (dev/CI): reuse the singleton — createClient() here leaks a
+    // fresh pg Pool (default max 10) PER REQUEST, exhausting local Postgres
+    // max_connections (100) after ~30 chat requests with FATAL "sorry, too
+    // many clients already". The singleton shares one healthy pool instead.
+    // (Workers keeps fresh-per-call: see the M23 note above.)
+    if (!globalForPrisma.prisma) globalForPrisma.prisma = createClient()
+    return globalForPrisma.prisma
+  }
   return createClient()
 }

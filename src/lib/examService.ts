@@ -89,7 +89,10 @@ export async function generateExam(input: GenerateExamInput): Promise<{ examId: 
       ...(input.chapterKey ? { chapter: { key: input.chapterKey } } : {}),
       ...(input.year ? { sourceYear: input.year } : {}),
     }
-    const pool = await db.question.findMany({ where, select: { id: true }, take: 300 })
+    const pool = await db.question.findMany({ where, select: { id: true }, take: 20_000 })
+    // pool must cover the WHOLE matching bank: a small `take` without ORDER BY
+    // returns rows in physical (insertion) order — with year-clustered imports
+    // every mock would silently draw from the same oldest year.
     const shuffled = pool.map((q) => ({ q, r: rand() })).sort((a, b) => a.r - b.r)
     const chosen = shuffled.slice(0, perSubject).map((x) => x.q.id)
     if (chosen.length < perSubject) {

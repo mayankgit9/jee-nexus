@@ -2,7 +2,7 @@
 
 // JEE NEXUS — profile + auth view (login / signup / recovery)
 import { useState } from 'react'
-import { LogOut, UserCircle2, KeyRound, Mail } from 'lucide-react'
+import { LogOut, UserCircle2, KeyRound, Mail, Flag, ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -16,6 +16,14 @@ import { cn } from '@/lib/utils'
 
 type AuthMode = 'login' | 'signup' | 'recover' | 'reset'
 
+interface MyReport {
+  id: string
+  reason: string
+  status: string
+  createdAt: string
+  question: { publicId: string; year: number | null; snippet: string }
+}
+
 export function ProfileView({ user, onUserChange }: { user: SessionUser | null; onUserChange: (u: SessionUser | null) => void }) {
   const [mode, setMode] = useState<AuthMode>('login')
   const [email, setEmail] = useState('')
@@ -23,6 +31,17 @@ export function ProfileView({ user, onUserChange }: { user: SessionUser | null; 
   const [name, setName] = useState('')
   const [resetToken, setResetToken] = useState('')
   const [busy, setBusy] = useState(false)
+  const [myReports, setMyReports] = useState<MyReport[] | null>(null)
+  const [reportsOpen, setReportsOpen] = useState(false)
+
+  const loadReports = async () => {
+    try {
+      const r = await api<{ reports: MyReport[] }>('/api/reports')
+      setMyReports(r.reports)
+    } catch {
+      setMyReports([])
+    }
+  }
 
   if (user) {
     const logout = async () => {
@@ -46,6 +65,48 @@ export function ProfileView({ user, onUserChange }: { user: SessionUser | null; 
               <div className="flex justify-between"><span className="text-muted-foreground">Account</span><span>Email + password</span></div>
               <div className="mt-1.5 flex justify-between"><span className="text-muted-foreground">Role</span><span className="capitalize">{user.role}</span></div>
             </div>
+            <button
+              type="button"
+              className="flex w-full items-center justify-between rounded-lg border border-border/60 px-4 py-3 text-sm transition-colors hover:border-primary/40"
+              onClick={() => {
+                const next = !reportsOpen
+                setReportsOpen(next)
+                if (next && myReports === null) loadReports()
+              }}
+            >
+              <span className="flex items-center gap-2">
+                <Flag className="h-4 w-4 text-primary" /> My question reports
+              </span>
+              {reportsOpen ? <ChevronUp className="h-4 w-4 text-muted-foreground" /> : <ChevronDown className="h-4 w-4 text-muted-foreground" />}
+            </button>
+            {reportsOpen && (
+              <div className="rounded-lg border border-border/60 px-4 py-3">
+                {myReports === null && <p className="text-xs text-muted-foreground">Loading…</p>}
+                {myReports !== null && myReports.length === 0 && (
+                  <p className="text-xs text-muted-foreground">
+                    No reports yet. Spot a wrong answer or missing diagram? Use “Report an issue” on any question — you can track its status here.
+                  </p>
+                )}
+                {myReports !== null && myReports.length > 0 && (
+                  <ul className="space-y-2.5">
+                    {myReports.map((r) => (
+                      <li key={r.id} className="text-xs">
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="font-medium">{r.reason.replace(/_/g, ' ')}</span>
+                          <Badge variant={r.status === 'resolved' ? 'secondary' : r.status === 'open' ? 'outline' : 'outline'}
+                            className={cn('text-[10px]', r.status === 'open' && 'border-amber-500/40 text-amber-400', r.status === 'resolved' && 'text-emerald-400')}>
+                            {r.status}
+                          </Badge>
+                        </div>
+                        <p className="mt-1 line-clamp-2 text-muted-foreground">
+                          {r.question.year != null && `JEE ${r.question.year} · `}{r.question.snippet}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
             <Button variant="outline" className="w-full" onClick={logout}>
               <LogOut className="mr-2 h-4 w-4" /> Sign out
             </Button>

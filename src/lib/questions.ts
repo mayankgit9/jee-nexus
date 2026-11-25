@@ -99,6 +99,9 @@ export interface RandomFilters {
   includeAttempted?: boolean
 }
 
+const VALID_DIFFICULTIES = ['easy', 'medium', 'hard'] as const
+const VALID_TYPES = ['mcq_single', 'mcq_multi', 'numerical'] as const
+
 /**
  * Random question selection with repeat avoidance:
  * - excludes question ids passed by the client session (recently served)
@@ -106,7 +109,14 @@ export interface RandomFilters {
  * unless revision mode is requested.
  */
 export async function selectRandomQuestions(f: RandomFilters): Promise<PublicQuestion[]> {
-  const count = Math.min(Math.max(f.count ?? 1, 1), 20)
+  // non-finite counts (NaN from garbage input) would make Prisma `take` blow up
+  const count = Math.min(Math.max(Number.isFinite(f.count) ? (f.count as number) : 1, 1), 20)
+
+  // drop invalid enum values instead of letting Postgres reject the whole query
+  const difficulties = f.difficulties?.filter((d): d is Difficulty =>
+    (VALID_DIFFICULTIES as readonly string[]).includes(d)
+  )
+  const types = f.types?.filter((t): t is QuestionType => (VALID_TYPES as readonly string[]).includes(t))
 
   const where: Prisma.QuestionWhereInput = {
     verificationStatus: { not: 'rejected' },
@@ -114,8 +124,8 @@ export async function selectRandomQuestions(f: RandomFilters): Promise<PublicQue
   if (f.subject && f.subject !== 'all') where.subject = { key: f.subject }
   if (f.chapterKeys?.length) where.chapter = { key: { in: f.chapterKeys } }
   if (f.years?.length) where.sourceYear = { in: f.years }
-  if (f.difficulties?.length) where.difficulty = { in: f.difficulties as Difficulty[] }
-  if (f.types?.length) where.type = { in: f.types as QuestionType[] }
+  if (difficulties?.length) where.difficulty = { in: difficulties }
+  if (types?.length) where.type = { in: types }
 
   if (f.excludeQuestionIds?.length) {
     where.id = { notIn: f.excludeQuestionIds }
@@ -143,12 +153,15 @@ export async function selectRandomQuestions(f: RandomFilters): Promise<PublicQue
     }
   }
 
-  // Candidate pool (bounded), then Fisher–Yates sample in JS.
-  // (SQLite has no stable Prisma-level random ordering; pool+sample is robust and testable.)
+  // Candidate pool: fetch ALL matching ids, then Fisher–Yates sample in JS.
+  // A `take: N` without ORDER BY returns rows in physical (insertion) order —
+  // practice would be biased to whatever was imported first (year clustering).
+  // The bank is ~6k rows; id-only select keeps the payload small. The cap is
+  // just a runaway guard for a future much larger bank.
   const pool = await prisma.question.findMany({
     where,
     select: { id: true },
-    take: 500,
+    take: 50_000,
   })
   if (pool.length === 0) return []
   // Fisher-Yates sample

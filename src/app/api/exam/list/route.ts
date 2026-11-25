@@ -1,5 +1,5 @@
 import { db } from '@/lib/db'
-import { jsonError } from '@/lib/auth'
+import { jsonError, requireUser, rateLimit } from '@/lib/auth'
 import { generateExam, ensureDefaultPatterns } from '@/lib/examService'
 
 /**
@@ -44,6 +44,10 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
+    // exam generation writes an Exam + N examQuestion rows — abuse guard
+    // (unlimited generation would flood the shared exam list)
+    const user = await requireUser()
+    rateLimit(`exam-gen:${user.id}`, 10, 60_000)
     await ensureDefaultPatterns()
     const body = await req.json()
     const title = String(body.title ?? 'Custom mock test').slice(0, 120)

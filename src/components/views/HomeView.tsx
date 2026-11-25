@@ -2,7 +2,7 @@
 
 // JEE NEXUS — home view
 import { motion } from 'framer-motion'
-import { Dice5, ArrowRight, Library, Target, Flame, BookMarked, Activity, ChevronRight, Atom, FlaskConical, Sigma } from 'lucide-react'
+import { Dice5, ArrowRight, Library, Target, Flame, BookMarked, Activity, ChevronRight, Atom, FlaskConical, Sigma, MessageSquare, ClipboardList, BarChart3, Sparkles } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -36,15 +36,23 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
   const st = stats.data?.stats ?? null
 
   const totalQuestions = taxonomy?.reduce((a, s) => a + s.questionCount, 0) ?? 0
+  const yearsCount = pyq.data?.years.length ?? 0
+  const chapterCount = taxonomy?.reduce((a, s) => a + s.chapters.length, 0) ?? 0
 
   return (
     <div className="mx-auto max-w-5xl">
       {/* hero */}
-      <div className="nexus-grid-bg rounded-3xl border border-border bg-card/40 px-6 py-12 text-center sm:px-12 sm:py-16">
-        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+      <div className="nexus-grid-bg relative overflow-hidden rounded-3xl border border-border bg-card/40 px-6 py-12 text-center sm:px-12 sm:py-16">
+        <div className="nexus-orb nexus-orb-1" aria-hidden="true" />
+        <div className="nexus-orb nexus-orb-2" aria-hidden="true" />
+        <div className="nexus-orb nexus-orb-3" aria-hidden="true" />
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="relative">
           <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs text-primary">
-            <Flame className="h-3.5 w-3.5 shrink-0" />
-            <span className="whitespace-nowrap">{totalQuestions.toLocaleString()} previous-year questions</span>
+            <span className="relative flex h-2 w-2">
+              <span className="nexus-pulse absolute inline-flex h-full w-full rounded-full bg-primary" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+            </span>
+            <span className="whitespace-nowrap">{totalQuestions.toLocaleString('en-IN')} previous-year questions</span>
             <span className="hidden whitespace-nowrap sm:inline"> · growing daily</span>
           </div>
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
@@ -55,7 +63,7 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
           <p className="mx-auto mt-4 max-w-xl text-sm text-muted-foreground sm:text-base">
             {user
               ? 'Jump back into random practice, browse PYQs by year, or check your weak chapters.'
-              : 'Free previous-year questions with deeply detailed solutions and a true CBT experience. No signup needed to practice.'}
+              : 'Free previous-year questions with deeply detailed solutions, a true CBT experience and a community of aspirants. No signup needed to practice.'}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button size="lg" onClick={() => navigate('/practice')} className="min-w-[190px]">
@@ -64,6 +72,11 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
             <Button size="lg" variant="outline" onClick={() => navigate('/pyq')}>
               <Library className="mr-2 h-4 w-4" /> Browse PYQs by year
             </Button>
+          </div>
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
+            <span className="flex items-center gap-1.5"><Library className="h-3.5 w-3.5 text-primary" /> {yearsCount} years · {chapterCount} chapters</span>
+            <span className="flex items-center gap-1.5"><MessageSquare className="h-3.5 w-3.5 text-primary" /> Community &amp; study groups</span>
+            <span className="flex items-center gap-1.5"><ClipboardList className="h-3.5 w-3.5 text-primary" /> True NTA-style CBT</span>
           </div>
         </motion.div>
       </div>
@@ -105,8 +118,13 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.07 }}
                 onClick={() => navigate(`/practice?subject=${s.key}`)}
-                className="group rounded-2xl border border-border bg-card p-5 text-left transition-all hover:-translate-y-1 hover:border-primary/40"
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
               >
+                <div
+                  className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100"
+                  style={{ background: `color-mix(in oklab, ${SUBJECT_COLORS[s.key]} 22%, transparent)` }}
+                  aria-hidden="true"
+                />
                 <div
                   className="mb-3 inline-flex rounded-xl p-2.5"
                   style={{ background: `color-mix(in oklab, ${SUBJECT_COLORS[s.key]} 14%, transparent)` }}
@@ -115,16 +133,59 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
                 </div>
                 <div className="font-semibold" style={{ color: SUBJECT_COLORS[s.key] }}>{s.name}</div>
                 <div className="mt-1 text-xs text-muted-foreground">
-                  {s.questionCount.toLocaleString()} questions · {s.chapters.length} chapters
+                  {s.questionCount.toLocaleString('en-IN')} questions · {s.chapters.length} chapters
                 </div>
                 <div className="mt-3 flex items-center gap-1 text-xs text-primary">
-                  Practice now <ChevronRight className="h-3.5 w-3.5" />
+                  Practice now <ChevronRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                 </div>
               </motion.button>
             )
           })}
           {!taxonomy && [0, 1, 2].map(i => <Skeleton key={i} className="h-36" />)}
         </div>
+      </div>
+
+      {/* feature strip */}
+      <div className="mt-8 grid gap-4 sm:grid-cols-3">
+        {[
+          {
+            icon: MessageSquare,
+            title: 'Community chat',
+            body: 'DM batchmates and build study groups — doubt solving is faster together.',
+            cta: 'Open Community',
+            onClick: () => navigate('/community'),
+          },
+          {
+            icon: ClipboardList,
+            title: 'Mock tests (CBT)',
+            body: 'Full-length NTA-style papers with server-authoritative timers and review filters.',
+            cta: 'Take a mock',
+            onClick: () => navigate('/mock'),
+          },
+          {
+            icon: BarChart3,
+            title: 'Deep analytics',
+            body: 'Accuracy by subject and chapter, weak-spot detection, 14-day activity trends.',
+            cta: 'See performance',
+            onClick: () => navigate('/performance'),
+          },
+        ].map((f) => (
+          <button
+            key={f.title}
+            type="button"
+            onClick={f.onClick}
+            className="group flex flex-col rounded-2xl border border-border bg-card/60 p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+          >
+            <div className="mb-3 inline-flex w-fit rounded-xl bg-primary/10 p-2.5">
+              <f.icon className="h-5 w-5 text-primary" />
+            </div>
+            <div className="font-semibold">{f.title}</div>
+            <p className="mt-1 flex-1 text-xs leading-relaxed text-muted-foreground">{f.body}</p>
+            <span className="mt-3 flex items-center gap-1 text-xs font-medium text-primary">
+              {f.cta} <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+            </span>
+          </button>
+        ))}
       </div>
 
       {/* recent activity + year shortcuts */}
@@ -184,7 +245,8 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
             {pyq.data && pyq.data.years.length === 0 && (
               <p className="mt-4 text-sm text-muted-foreground">The question library is being imported — check back soon.</p>
             )}
-            <p className="mt-4 text-xs text-muted-foreground">
+            <p className="mt-4 flex items-start gap-1.5 text-xs text-muted-foreground">
+              <Sparkles className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
               Every year listed has real imported questions — no fabricated counts, no placeholder years.
             </p>
           </CardContent>

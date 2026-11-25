@@ -8,6 +8,7 @@ import type { Difficulty, QuestionType } from '@prisma/client'
 /**
  * PYQ library:
  *  GET /api/pyq                          -> year overview (+ counts per subject)
+ *  GET /api/pyq?q=term[&page=1]          -> full-text search across the bank (flat list)
  *  GET /api/pyq?year=2023                -> subject->chapter breakdown for the year (+ user progress)
  *  GET /api/pyq?year=2023&subject=physics [&chapter=...&shift=...&difficulty=...&type=...&page=1] -> question list
  */
@@ -19,6 +20,49 @@ export async function GET(req: NextRequest) {
     // one client/connection for the whole request (fresh-client-per-access
     // Proxy semantics would pay ~300ms TCP+auth per query through Hyperdrive)
     const prisma = dbClient()
+
+    // ---- Search mode (flat results across the bank; optional year/subject narrow) ----
+    const search = (sp.get('q') ?? '').trim()
+    if (search) {
+      if (search.length < 3) {
+        return Response.json({ error: 'Search term must be at least 3 characters' }, { status: 400 })
+      }
+      const sYear = yearParam ? Number(yearParam) : null
+      const sWhere: Prisma.QuestionWhereInput = {
+        verificationStatus: { not: 'rejected' },
+        text: { contains: search, mode: 'insensitive' },
+        ...(sYear !== null && Number.isInteger(sYear) && sYear > 1900 ? { sourceYear: sYear } : {}),
+        ...(sp.get('subject') && ['physics', 'chemistry', 'mathematics'].includes(sp.get('subject')!)
+          ? { subject: { key: sp.get('subject')! } }
+          : {}),
+      }
+      const sPageRaw = Number(sp.get('page') ?? 1)
+      const sPage = Number.isInteger(sPageRaw) && sPageRaw >= 1 ? sPageRaw : 1
+      const pageSize = 10
+      const [sTotal, sQuestions] = await Promise.all([
+        prisma.question.count({ where: sWhere }),
+        prisma.question.findMany({
+          where: sWhere,
+          include: {
+            subject: true,
+            chapter: true,
+            options: true,
+            images: true,
+            ...(user ? { bookmarks: { where: { userId: user.id }, select: { id: true } } } : {}),
+          },
+          orderBy: [{ sourceYear: 'desc' }, { sourceShift: 'asc' }, { sourceQuestionNumber: 'asc' }],
+          skip: (sPage - 1) * pageSize,
+          take: pageSize,
+        }),
+      ])
+      return Response.json({
+        search: search.slice(0, 80),
+        total: sTotal,
+        page: sPage,
+        pageCount: Math.max(1, Math.ceil(sTotal / pageSize)),
+        questions: sQuestions.map(toPublicQuestion),
+      })
+    }
 
     // ---- Year overview ----
     if (!yearParam) {
@@ -102,16 +146,32 @@ export async function GET(req: NextRequest) {
       verificationStatus: { not: 'rejected' },
       subject: { key: subjectParam },
     }
+    // strict enum validation — an invalid filter is a client error (400),
+    // not a Prisma cast crash (500)
     const chapter = sp.get('chapter')
     if (chapter) where.chapter = { key: chapter }
     const shift = sp.get('shift')
     if (shift) where.sourceShift = shift
     const difficulty = sp.get('difficulty')
-    if (difficulty) where.difficulty = difficulty as Difficulty
+    if (difficulty) {
+      if (!['easy', 'medium', 'hard'].includes(difficulty)) {
+        return Response.json({ error: 'Invalid difficulty filter' }, { status: 400 })
+      }
+      where.difficulty = difficulty as Difficulty
+    }
     const type = sp.get('type')
-    if (type) where.type = type as QuestionType
+    if (type) {
+      if (!['mcq_single', 'mcq_multi', 'numerical'].includes(type)) {
+        return Response.json({ error: 'Invalid type filter' }, { status: 400 })
+      }
+      where.type = type as QuestionType
+    }
 
-    const page = Math.max(1, Number(sp.get('page') ?? 1))
+    const pageRaw = Number(sp.get('page') ?? 1)
+    if (!Number.isInteger(pageRaw) || pageRaw < 1) {
+      return Response.json({ error: 'Invalid page' }, { status: 400 })
+    }
+    const page = pageRaw
     const pageSize = 10
 
     const [total, questions] = await Promise.all([

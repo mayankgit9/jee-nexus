@@ -239,3 +239,94 @@
   font-weight: 600;
   color: oklch(0.93 0.008 120);
 }
+
+/* ------------------------------------------------------------------
+   UI polish pass (2026-11-25) — smoother theme switching, hero orbs,
+   selection, reduced-motion, light-mode grid fix
+------------------------------------------------------------------ */
+html {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: oklch(0.82 0.16 166 / 30%);
+}
+
+.light ::selection {
+  background: oklch(0.62 0.13 166 / 25%);
+}
+
+/* light-mode grid visibility (white lines are invisible on light bg) */
+.light .nexus-grid-bg {
+  background-image:
+    linear-gradient(oklch(0.2 0.012 240 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.2 0.012 240 / 4%) 1px, transparent 1px);
+}
+
+/* floating gradient orbs for hero sections */
+.nexus-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: nexus-orb-float 14s ease-in-out infinite;
+}
+.nexus-orb-1 {
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, oklch(0.82 0.16 166 / 26%), transparent 70%);
+  top: -120px; left: -80px;
+  animation-delay: 0s;
+}
+.nexus-orb-2 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, oklch(0.72 0.17 305 / 22%), transparent 70%);
+  bottom: -110px; right: -60px;
+  animation-delay: -5s;
+}
+.nexus-orb-3 {
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, oklch(0.8 0.15 85 / 16%), transparent 70%);
+  top: 30%; right: 18%;
+  animation-delay: -9s;
+}
+@keyframes nexus-orb-float {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(18px, -24px, 0) scale(1.06); }
+}
+
+/* shimmer for loading states (apply alongside Skeleton) */
+.nexus-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.nexus-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 6%), transparent);
+  animation: nexus-shimmer-sweep 1.8s infinite;
+}
+@keyframes nexus-shimmer-sweep {
+  100% { transform: translateX(100%); }
+}
+
+/* unread badge pulse (chat) */
+.nexus-pulse {
+  animation: nexus-pulse-soft 2.4s ease-in-out infinite;
+}
+@keyframes nexus-pulse-soft {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.82 0.16 166 / 45%); }
+  50% { box-shadow: 0 0 0 5px oklch(0.82 0.16 166 / 0%); }
+}
+
+/* accessibility: honour reduced motion everywhere */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}

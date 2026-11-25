@@ -60,6 +60,13 @@ export async function GET(req: NextRequest) {
       },
     })
     if (!attempt || attempt.userId !== user.id) throw new HttpError(404, 'Attempt not found')
+    // Anti-cheat: a live (in_progress) attempt must never expose correct
+    // options, marks or solutions — the client could fetch answers mid-exam
+    // and submit them through /api/exam/answer. Review is only available
+    // once the attempt is graded (submitted/expired).
+    if (attempt.status === 'in_progress') {
+      throw new HttpError(409, 'Attempt still in progress — review opens after submission')
+    }
 
     const byExamQuestionId = new Map(attempt.answers.map((a) => [a.examQuestionId, a]))
     const sectionTotals = new Map<string, { marks: number; max: number; correct: number; wrong: number; unattempted: number }>()
