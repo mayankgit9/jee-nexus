@@ -440,14 +440,17 @@ model ChatMessage {
   @@map("chat_messages")
 }
 
-/// One row per ALLOWED action; the sliding-window counter shared by every
-/// Workers isolate (in-memory Maps are per-isolate and never fired in prod).
-model RateLimitEvent {
-  id        String   @id @default(uuid())
-  key       String
-  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+/// Rate limiter state: one row per active key; a BEFORE trigger raises
+/// RATE_LIMIT_EXCEEDED when hits would pass limit_max (window_seconds
+/// defines the fixed window). The app only ever $executeRaw's an upsert —
+/// zero reads, zero RETURNING, nothing Hyperdrive can cache (prod lessons
+/// 2026-11-25).
+model RateLimitCounter {
+  key           String   @id
+  windowStart   DateTime @map("window_start") @db.Timestamptz(6)
+  hits          Int      @default(0)
+  windowSeconds Int      @map("window_seconds")
+  limitMax      Int      @map("limit_max")
 
-  @@index([key, createdAt])
-  @@index([createdAt])
-  @@map("rate_limit_events")
+  @@map("rate_limit_counters")
 }

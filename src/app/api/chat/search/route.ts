@@ -13,8 +13,8 @@ import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 export async function GET(req: NextRequest) {
   try {
     const user = await requireUser()
-    await rateLimit(`chat-search:${user.id}`, 60, 60 * 1000)
     const client = dbClient()
+    await rateLimit(`chat-search:${user.id}`, 60, 60 * 1000, client)
 
     const q = (req.nextUrl.searchParams.get('q') ?? '').trim()
     if (q.length < 2) throw new HttpError(400, 'Enter at least 2 characters to search')

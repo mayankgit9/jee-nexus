@@ -1,10 +1,10 @@
 import { NextRequest } from 'next/server'
 import { db } from '@/lib/db'
-import { createSession, verifyPassword, rateLimit, jsonError, HttpError } from '@/lib/auth'
+import { clientIp,  createSession, verifyPassword, rateLimit, jsonError, HttpError } from '@/lib/auth'
 
 export async function POST(req: NextRequest) {
   try {
-    const ip = req.headers.get('x-forwarded-for') ?? 'local'
+    const ip = clientIp(req)
     await rateLimit(`login:${ip}`, 10, 60_000)
     const body = await req.json()
     const email = String(body.email ?? '').trim().toLowerCase()

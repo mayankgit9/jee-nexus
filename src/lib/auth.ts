@@ -1,7 +1,8 @@
 // JEE NEXUS — server-side session auth (scrypt + httpOnly cookie)
-import { createHash, randomBytes, randomUUID, scryptSync, timingSafeEqual } from 'crypto'
+import { createHash, randomBytes, scryptSync, timingSafeEqual } from 'crypto'
 import { cookies } from 'next/headers'
-import { db } from '@/lib/db'
+import { db, dbClient } from '@/lib/db'
+import type { PrismaClient } from '@prisma/client'
 import type { SessionUser } from '@/lib/types'
 
 const COOKIE_NAME = 'jee_nexus_session'
@@ -121,34 +122,81 @@ export function jsonError(err: unknown) {
  * The previous in-memory Map worked locally (single process) but was PROVEN
  * ineffective on Cloudflare Workers: each isolate keeps its own Map, so the
  * 30/min chat-send limit never tripped in production (live e2e 2026-11-25:
- * 31/31 sends returned 200). Events live in Postgres (rate_limit_events, one
- * row per ALLOWED action) so every isolate shares one window; rejected
- * attempts write nothing (spam cannot grow the table).
+ * 31/31 sends returned 200). The window now lives in Postgres
+ * (rate_limit_counters) so every isolate shares it; the limiter itself is a
+ * write (see the Hyperdrive lesson below) and rejected attempts only bump
+ * the counter — spam cannot grow the table.
+ *
+ * WORKERS RESOURCE LESSON (prod incident 2026-11-25, error 1102): on Workers
+ * every `db` Proxy access instantiates a fresh Prisma engine + pg pool. The
+ * first version ran count/insert/cleanup through separate Proxy accesses —
+ * up to 3 extra engines per request — which pushed busy isolates (import
+ * runner + chat) past the 128MB limit and 503'd random requests. ALL limiter
+ * queries therefore go through ONE client: passed in by routes that already
+ * hold a dbClient() (chat routes: zero extra engines), else one dbClient()
+ * created here (never the per-access Proxy).
+ *
+ * HYPERDRIVE CACHE LESSONS (prod-verified 2026-11-25, FOUR live iterations):
+ * (1) an events-table COUNT is a read — Hyperdrive served the identical
+ *     query text stale (31 sends all saw the first result); (2) running it
+ *     in a $transaction did not bypass the cache; (3) a uuid in a SQL
+ *     comment to bust the text hash broke parameter typing (42P18: comment
+ *     params are invisible to the parser); (4) even INSERT..ON CONFLICT..
+ *     RETURNING got cached — DML with a result set is apparently treated as
+ *     a cacheable read, so bursts saw a stale "hits" and never tripped.
+ * CONCLUSION: the limiter must be a write with NO result set and NO reads.
+ * It now is: ONE $executeRaw upsert (command tag only) into
+ * rate_limit_counters, where a BEFORE trigger (migration 0010) RAISEs
+ * RATE_LIMIT_EXCEEDED once hits would pass limit_max — mapped to 429 here.
+ * Rejected attempts abort inside Postgres (spam extends nothing), the check
+ * is atomic by definition, and there is nothing left for any cache to serve.
  *
  * Fails OPEN on DB errors: a limiter outage must not take features down (the
- * guarded action still has its own auth/membership checks).
+ * guarded action still has its own auth/membership checks) — prod-verified
+ * during the 42P18 incident: every guarded route stayed 200.
  */
-export async function rateLimit(key: string, max: number, windowMs: number): Promise<void> {
+export async function rateLimit(
+  key: string,
+  max: number,
+  windowMs: number,
+  client: PrismaClient = dbClient()
+): Promise<void> {
   try {
-    const rows = await db.$queryRaw<{ n: number }[]>`
-      select count(*)::int as n from rate_limit_events
-      where key = ${key}
-        and created_at > now() - (${Math.round(windowMs / 1000)} * interval '1 second')`
-    if ((rows[0]?.n ?? 0) >= max) throw new HttpError(429, 'Too many requests — slow down')
-    await db.$executeRaw`
-      insert into rate_limit_events (id, key) values (${randomUUID()}, ${key})`
-    // Opportunistic cleanup (2% of calls): rows are logically dead after the
-    // longest window (1h); 2h is safely past every window in use.
-    if (Math.random() < 0.02) {
-      await db
-        .$executeRaw`delete from rate_limit_events where created_at < now() - interval '2 hours'`
-        .catch(() => {})
-    }
+    const seconds = Math.round(windowMs / 1000)
+    await client.$executeRaw`
+      insert into rate_limit_counters (key, window_start, hits, window_seconds, limit_max)
+      values (${key}, now(), 1, ${seconds}, ${max})
+      on conflict (key) do update set
+        hits = case when rate_limit_counters.window_start < now() - (rate_limit_counters.window_seconds * interval '1 second')
+                    then 1 else rate_limit_counters.hits + 1 end,
+        window_start = case when rate_limit_counters.window_start < now() - (rate_limit_counters.window_seconds * interval '1 second')
+                    then now() else rate_limit_counters.window_start end`
   } catch (err) {
-    if (err instanceof HttpError) throw err
-    console.error(
-      `[rateLimit] degraded, failing open (key=${key}): ` +
-        String((err as Error)?.message ?? err).slice(0, 200)
-    )
+    const msg = String((err as Error)?.message ?? err)
+    if (msg.includes('RATE_LIMIT_EXCEEDED')) throw new HttpError(429, 'Too many requests — slow down')
+    console.error(`[rateLimit] degraded, failing open (key=${key}): ${msg.slice(0, 200)}`)
+    return
   }
+  // Opportunistic cleanup (2% of calls): inactive keys only — a plain write.
+  // 2h is safely past the longest window in use (1h).
+  if (Math.random() < 0.02) {
+    await client
+      .$executeRaw`delete from rate_limit_counters where window_start < now() - interval '2 hours'`
+      .catch(() => {})
+  }
+}
+
+/**
+ * Client IP for rate-limit keys. Cloudflare sets cf-connecting-ip on every
+ * request reaching the worker; x-forwarded-for (when present) is a comma
+ * list whose first hop is the client. Prod evidence (2026-11-25): neither
+ * was being read correctly — every anonymous client shared the 'local'
+ * bucket (signup:local), so one user's flood could lock out everyone.
+ */
+export function clientIp(req: Request): string {
+  return (
+    req.headers.get('cf-connecting-ip') ??
+    req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
+    'local'
+  )
 }

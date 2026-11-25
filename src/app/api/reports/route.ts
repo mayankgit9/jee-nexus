@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server'
 import { db } from '@/lib/db'
-import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
+import { clientIp,  requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 
 const REASONS = ['incorrect_answer', 'incorrect_solution', 'missing_diagram', 'typo', 'copyright', 'other']
 
@@ -39,7 +39,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const user = await requireUser()
-    const ip = req.headers.get('x-forwarded-for') ?? 'local'
+    const ip = clientIp(req)
     await rateLimit(`report:${user.id}:${ip}`, 10, 60_000)
 
     const body = await req.json()

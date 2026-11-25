@@ -1,5 +1,6 @@
 // JEE NEXUS — question import pipeline: validation + duplicate detection
 import { dbClient } from '@/lib/db'
+import type { PrismaClient } from '@prisma/client'
 import { computeContentHash } from '@/lib/questions'
 import { Prisma } from '@prisma/client'
 import type { QuestionType, Difficulty } from '@prisma/client'
@@ -110,6 +111,8 @@ export interface ImportOptions {
   adminId: string
   fileName: string
   sourceFormat: 'json' | 'csv'
+  /** Share the caller's client (Workers engine budget) instead of opening one. */
+  client?: PrismaClient
 }
 
 /** Validate + dedup + insert a batch. Never marks imported questions as verified. */
@@ -127,7 +130,7 @@ export async function importQuestions(
   // 50-subrequest-per-invocation cap — a 20-question import would fail).
   // Queries over a single connection do not each count as subrequests
   // (proven by the exam-submit batch transaction).
-  const prisma = dbClient()
+  const prisma = opts.client ?? dbClient()
 
   const subjectRows = await prisma.subject.findMany({ select: { id: true, key: true } })
   const chapterRows = await prisma.chapter.findMany({ select: { id: true, key: true } })

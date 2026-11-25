@@ -11,11 +11,11 @@ import { maskEmail } from '@/lib/chat'
 export async function GET(req: NextRequest) {
   try {
     const user = await requireUser()
-    await rateLimit(`chat-users:${user.id}`, 60, 60 * 1000)
     const q = (req.nextUrl.searchParams.get('q') ?? '').trim()
     if (q.length < 2) return Response.json({ users: [] })
 
     const client = dbClient()
+    await rateLimit(`chat-users:${user.id}`, 60, 60 * 1000, client)
     const rows = await client.user.findMany({
       where: {
         id: { not: user.id },

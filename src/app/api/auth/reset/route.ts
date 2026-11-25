@@ -1,10 +1,10 @@
 import { NextRequest } from 'next/server'
 import { db, dbClient } from '@/lib/db'
-import { hashPassword, createSession, rateLimit, jsonError, HttpError } from '@/lib/auth'
+import { clientIp,  hashPassword, createSession, rateLimit, jsonError, HttpError } from '@/lib/auth'
 
 export async function POST(req: NextRequest) {
   try {
-    const ip = req.headers.get('x-forwarded-for') ?? 'local'
+    const ip = clientIp(req)
     await rateLimit(`reset:${ip}`, 5, 60_000)
     const body = await req.json()
     const token = String(body.token ?? '')

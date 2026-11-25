@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server'
 import { db } from '@/lib/db'
-import { getSessionUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
+import { clientIp,  getSessionUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 import { toPublicSolution } from '@/lib/questions'
 import { Prisma } from '@prisma/client'
 
@@ -18,7 +18,7 @@ function isCorrectMcqMulti(selected: number[], correct: number[]): boolean {
 /** Submit an answer for a practice question: grade it server-side, record attempt, return solution */
 export async function POST(req: NextRequest) {
   try {
-    const ip = req.headers.get('x-forwarded-for') ?? 'local'
+    const ip = clientIp(req)
     await rateLimit(`submit:${ip}`, 60, 60_000)
 
     const body = await req.json()

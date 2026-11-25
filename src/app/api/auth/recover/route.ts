@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server'
 import { randomBytes } from 'crypto'
 import { db } from '@/lib/db'
-import { rateLimit, jsonError, HttpError } from '@/lib/auth'
+import { clientIp,  rateLimit, jsonError, HttpError } from '@/lib/auth'
 
 /**
  * Password recovery — request a reset token.
@@ -11,7 +11,7 @@ import { rateLimit, jsonError, HttpError } from '@/lib/auth'
  */
 export async function POST(req: NextRequest) {
   try {
-    const ip = req.headers.get('x-forwarded-for') ?? 'local'
+    const ip = clientIp(req)
     await rateLimit(`recover:${ip}`, 5, 60_000)
     const body = await req.json()
     const email = String(body.email ?? '').trim().toLowerCase()
