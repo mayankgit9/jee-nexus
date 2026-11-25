@@ -5,6 +5,71 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-25 (~22:40 IST) — CHAT v3 LIVE: quoted replies, delete-for-everyone, group rename, emoji picker; import rescue
+
+**Sandbox recycled again (4th time)**: `.secrets/` gone, git HEAD reset to the
+M13 era while the working tree was a strict subset of origin/main (nothing
+local newer — verified by direction-aware diff before resetting). Rescue:
+backup log → `git reset --hard origin/main` → restore identical log. Tokens
+rewritten to `.secrets/` (CF account token verified via account-scoped API;
+GH + SB PATs verified). `SB_PAT=` line added for scripts/apply_migration.py.
+
+### Import rescue (cancelled run found + re-dispatched)
+- Run 45599235978 was **CANCELLED at 12:49Z** (import step cut mid-run,
+  verification skipped) — the late session never noticed. Corpus frozen at
+  10,050 with 2026 entirely missing.
+- Re-dispatched as **run 45627727353** (ef1d08f, duplicate-safe contentHash
+  dedup): healthy through this session, 10,050 → **10,622+** live, 2026 papers
+  now surfaced. Target 12,096 — next loop verifies the final count.
+
+### Chat v3 (all e2e'd 100/100 locally + verified live on prod)
+1. **Quoted replies** — 0013 migration (`chat_messages.reply_to_id` FK +
+   partial tombstone index, applied to prod 4/4 chunks, columns verified):
+   POST accepts `replyToId` (validated same-conversation); GET hydrates the
+   quoted context (sender + 160-char snippet) in ONE query on every page
+   path; WhatsApp-style quoted block inside the bubble — click jumps to the
+   parent and flashes it (unloaded parents get an honest toast).
+2. **Delete for everyone** — `deleted_at` soft delete, sender-only (403
+   otherwise): body blanked server-side on EVERY read path, reactions
+   dropped + rejected on tombstones, unread counts and search exclude them,
+   sidebar preview reads "Message deleted", and the 3s poll carries
+   `deletedIds` so open bubbles become tombstones live (partial index keeps
+   the overlay at index-scan cost). UI: hover trash → confirm dialog →
+   italic dashed tombstone bubble.
+3. **Group rename** — PATCH /api/chat/conversations, admin-only (403 for
+   members/non-members), 1–60 chars, DMs rejected; pencil in the header for
+   admins, name updates everywhere client-side at once.
+4. **Composer emoji picker** — 32 study-chat emojis in a popover, inserts
+   into the draft, respects the 2000-char cap.
+
+### False-alarm postmortem worth remembering: the "[m eater"
+A suspected "schema corruption" (`fields: essageId]` at the ChatReaction
+model) triggered a deep investigation: git blob, GitHub-side content,
+controlled Prisma-parse experiments, schema bisection… Conclusion: **the
+file was always clean**. The tool-output renderer eats the two bytes `[m`
+(ANSI-sanitizer artifact), so `[messageId]` DISPLAYS as `essageId]`.
+Lesson recorded: never diagnose "corruption" from displayed grep output —
+checksum the file (`git status` clean, md5 vs known-good) first. Zero code
+changes needed.
+
+### Tests
+- chat e2e **100/100** (27 new checks: reply hydration + guards, tombstone
+  privacy, sender-only deletes, admin-only renames, deleted-aware
+  preview/search/unread, poll overlay) — required loading the rate-limit
+  trigger SQL into local PG (plain `prisma db push` creates tables but NOT
+  the 0009/0010 trigger; applied via psql, jee_app grant errors harmless as
+  superuser) and fixing a test-order bug (the reply, not the tail, is the
+  last message).
+- Live prod sweep: health 200s; two fresh users exercised reply →
+  delete → tombstone-as-other-user → rename (+403 member guard) end to end.
+
+### Deploy state
+- Commit 9867c23 pushed + deployed (worker live; workers.dev route enabled;
+  DATABASE_URL secret present). Migration 0013 applied BEFORE deploy.
+- Import run 45627727353 in progress at session end.
+
+---
+
 ## 2026-11-25 (~21:15 IST) — PROD INCIDENT FIXED (503 flapping) + chat v2: typing, presence, receipts, reactions
 
 **Credentials status**: the `cfat_…` Cloudflare token from the user is an
