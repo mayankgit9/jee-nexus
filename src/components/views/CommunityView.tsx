@@ -380,12 +380,19 @@ export function CommunityView({
       if (r.reactions && Object.keys(r.reactions).length > 0) {
         setReactions((prev) => ({ ...prev, ...r.reactions }))
       }
-      // live tombstones: mark any loaded message the sender has deleted
+      // live tombstones: mark any loaded message the sender has deleted,
+      // and blank the quoted context of loaded replies to it
       if (r.deletedIds && r.deletedIds.length > 0) {
         const gone = new Set(r.deletedIds)
         setMessages((prev) =>
-          prev.some((m) => gone.has(m.id) && !m.deleted)
-            ? prev.map((m) => (gone.has(m.id) ? { ...m, deleted: true, body: '' } : m))
+          prev.some((m) => (gone.has(m.id) && !m.deleted) || (m.replyToId && gone.has(m.replyToId) && m.replyTo && !m.replyTo.deleted))
+            ? prev.map((m) => {
+                if (gone.has(m.id)) return { ...m, deleted: true, body: '' }
+                if (m.replyToId && gone.has(m.replyToId)) {
+                  return { ...m, replyTo: m.replyTo ? { ...m.replyTo, deleted: true, body: '' } : m.replyTo }
+                }
+                return m
+              })
             : prev
         )
         setReactions((prev) => {
@@ -491,7 +498,16 @@ export function CommunityView({
     const target = confirmDelete
     try {
       await api('/api/chat/messages', { messageId: target }, 'DELETE')
-      setMessages((prev) => prev.map((m) => (m.id === target ? { ...m, deleted: true, body: '' } : m)))
+      setMessages((prev) =>
+        prev.map((m) => {
+          if (m.id === target) return { ...m, deleted: true, body: '' }
+          // replies quoting the deleted message lose their snippet too
+          if (m.replyToId === target && m.replyTo) {
+            return { ...m, replyTo: { ...m.replyTo, deleted: true, body: '' } }
+          }
+          return m
+        })
+      )
       setReactions((prev) => {
         const next = { ...prev }
         delete next[target]
