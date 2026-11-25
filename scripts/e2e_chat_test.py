@@ -4,6 +4,7 @@ import json
 import os
 import subprocess
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 BASE = os.environ.get("BASE_URL", "http://localhost:3000")
 
@@ -167,15 +168,20 @@ r = call("GET", "/api/chat/conversations", jar=jar_b)
 check("B no longer sees deleted DM", not any(c["id"] == dm_id for c in r["conversations"]))
 
 # --- 7. rate limit (last — burns the budget) ---
-limited = False
-codes = []
-for i in range(32):
-    code = status("POST", "/api/chat/messages", {"conversationId": g_id, "body": f"spam {i}"}, jar=jar_c)
-    codes.append(code)
-    if code == "429":
-        limited = True
-        break
-check("send rate limit kicks in (30/min)", limited, f"codes={codes[:8]}...{codes[-3:]}" if not limited else "")
+# The burst must complete WITHIN the 60s window or the window resets and the
+# limit never trips (prod-verified 2026-11-25: 4-worker burst spanned ~70s =
+# no 429s; a 12-worker burst capped at hits=30 with 429s firing). 12 workers
+# finish 40 sends in ~10-15s. Some EMAXCONNSESSION 500s are expected noise
+# (Supabase session pooler caps at 15 concurrent clients) — the assertion is
+# only that 429s appear.
+def send_spam(i):
+    return status("POST", "/api/chat/messages", {"conversationId": g_id, "body": f"spam {i}"}, jar=jar_c)
+with ThreadPoolExecutor(max_workers=12) as ex:
+    codes = list(ex.map(send_spam, range(40)))
+limited = "429" in codes
+n429 = codes.count("429")
+check("send rate limit kicks in (30/min)", limited,
+      f"(429s={n429})" if limited else f"codes={codes[:8]}...{codes[-3:]}")
 
 print(f"\n{passed} passed, {failed} failed")
 raise SystemExit(1 if failed else 0)

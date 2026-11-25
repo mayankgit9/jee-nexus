@@ -24,7 +24,9 @@ export function maskEmail(email: string): string {
   return `${head}${'•'.repeat(Math.max(2, Math.min(5, local.length - 1)))}@${domain}`
 }
 
-/** Membership guard — 404s unknown conversations so ids can't be probed. */
+/** Membership guard — 404s unknown conversations so ids can't be probed.
+ *  Also carries the presence/read fields the client needs for receipts:
+ *  member lastReadAt ("Seen") and user lastSeenAt (online dots). */
 export async function requireMembership(
   client: PrismaClient,
   conversationId: string,
@@ -34,7 +36,12 @@ export async function requireMembership(
     where: { id: conversationId },
     include: {
       members: {
-        select: { userId: true, role: true, user: { select: { id: true, name: true, email: true } } },
+        select: {
+          userId: true,
+          role: true,
+          lastReadAt: true,
+          user: { select: { id: true, name: true, email: true, lastSeenAt: true } },
+        },
         orderBy: { joinedAt: 'asc' },
       },
     },
@@ -64,13 +71,16 @@ export function toClientMessage(msg: {
 export function toClientMember(m: {
   userId: string
   role: string
-  user: { id: string; name: string | null; email: string }
+  lastReadAt?: Date | null
+  user: { id: string; name: string | null; email: string; lastSeenAt?: Date | null }
 }) {
   return {
     id: m.user.id,
     name: m.user.name ?? 'Student',
     email: maskEmail(m.user.email),
     role: m.role,
+    lastReadAt: m.lastReadAt ?? null,
+    lastSeenAt: m.user.lastSeenAt ?? null,
   }
 }
 

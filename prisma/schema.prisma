@@ -77,6 +77,8 @@ model User {
   preferences  Json?
   createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
   updatedAt    DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+  /// Presence: touched (≤1 write/45s) by requireUser(); "online" = < 5 min
+  lastSeenAt   DateTime? @map("last_seen_at") @db.Timestamptz(6)
 
   sessions       Session[]
   attempts       Attempt[]
@@ -87,6 +89,7 @@ model User {
   chatMemberships      ChatMember[]
   chatSentMessages     ChatMessage[]         @relation("ChatSender")
   chatCreatedChats     ChatConversation[]    @relation("ChatCreator")
+  chatTypingStates     ChatTyping[]
 
   @@map("app_users")
 }
@@ -407,6 +410,7 @@ model ChatConversation {
 
   members  ChatMember[]
   messages ChatMessage[]
+  typingState ChatTyping[]
 
   @@index([updatedAt])
   @@map("chat_conversations")
@@ -438,6 +442,21 @@ model ChatMessage {
 
   @@index([conversationId, createdAt])
   @@map("chat_messages")
+}
+
+/// Typing indicators: one row per (conversation, user), refreshed every ~3s
+/// while typing. "Currently typing" = updated_at within the last 6s — stale
+/// rows are invisible by definition and removed by opportunistic cleanup.
+model ChatTyping {
+  conversationId String           @map("conversation_id")
+  conversation   ChatConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  userId         String           @map("user_id")
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  updatedAt      DateTime         @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@id([conversationId, userId])
+  @@index([updatedAt])
+  @@map("chat_typing")
 }
 
 /// Rate limiter state: one row per active key; a BEFORE trigger raises

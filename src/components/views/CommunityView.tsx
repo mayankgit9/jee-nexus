@@ -10,7 +10,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import {
-  ArrowLeft, Check, Hash, Loader2, MessageSquare, MessageSquarePlus,
+  ArrowLeft, ArrowDown, Check, CheckCheck, Copy, Hash, Loader2, MessageSquare, MessageSquarePlus,
   Search, Send, Users, X, LogIn, UserPlus, ArrowDownToLine,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -29,6 +29,8 @@ interface ChatUser {
   name: string
   email: string
   role?: string
+  lastSeenAt?: string | null
+  lastReadAt?: string | null
 }
 
 interface Conversation {
@@ -65,6 +67,11 @@ interface SearchResult {
   senderId: string
   senderName: string
   conversation: { id: string; type: 'dm' | 'group'; name: string | null; otherName: string | null }
+}
+
+interface TypingUser {
+  userId: string
+  name: string
 }
 
 type Filter = 'all' | 'dm' | 'group'
@@ -136,6 +143,24 @@ function previewOf(c: Conversation, meId: string): string {
   return `${prefix}${body.length > 60 ? body.slice(0, 60) + '…' : body}`
 }
 
+/** "online" = seen by the server within the last 5 minutes */
+const ONLINE_WINDOW_MS = 5 * 60 * 1000
+
+function isOnline(lastSeenAt?: string | null): boolean {
+  if (!lastSeenAt) return false
+  return Date.now() - new Date(lastSeenAt).getTime() < ONLINE_WINDOW_MS
+}
+
+function lastSeenLabel(lastSeenAt?: string | null): string {
+  if (!lastSeenAt) return 'offline'
+  const delta = Date.now() - new Date(lastSeenAt).getTime()
+  if (delta < 60_000) return 'last seen just now'
+  if (delta < 3_600_000) return `last seen ${Math.floor(delta / 60_000)}m ago`
+  if (delta < 24 * 3_600_000) return `last seen ${Math.floor(delta / 3_600_000)}h ago`
+  if (delta < 48 * 3_600_000) return 'last seen yesterday'
+  return `last seen ${new Date(lastSeenAt).toLocaleDateString([], { day: 'numeric', month: 'short' })}`
+}
+
 /** window the body around the first case-insensitive match so the hit is visible */
 function snippetOf(body: string, q: string): string {
   const clean = body.replace(/\s+/g, ' ')
@@ -184,6 +209,10 @@ export function CommunityView({
   const [addMembersOpen, setAddMembersOpen] = useState(false)
   const [confirmLeave, setConfirmLeave] = useState(false)
   const [leaving, setLeaving] = useState(false)
+  // typing + presence + scroll UX
+  const [typing, setTyping] = useState<TypingUser[]>([])
+  const [showJump, setShowJump] = useState(false)
+  const lastTypingPing = useRef(0)
 
   // composer
   const [draft, setDraft] = useState('')
@@ -245,15 +274,18 @@ export function CommunityView({
       setMessagesError(null)
       setMessages([])
       setMeta(null)
+      setTyping([])
       initialLoadDone.current = false
       try {
-        const r = await api<{ conversation: ConvMeta; messages: ChatMessage[]; hasMore: boolean }>(
+        const r = await api<{ conversation: ConvMeta; messages: ChatMessage[]; hasMore: boolean; typing?: TypingUser[] }>(
           `/api/chat/messages?conversationId=${encodeURIComponent(id)}`
         )
         setMeta(r.conversation)
         setMessages(r.messages)
         setHasMore(r.hasMore)
+        setTyping(r.typing ?? [])
         stickToBottom.current = true
+        setShowJump(false)
         void markRead(id)
       } catch (e) {
         setMessagesError((e as Error).message)
@@ -291,14 +323,20 @@ export function CommunityView({
     }
   }, [activeId, messages, loadingEarlier, toast])
 
-  /** incremental poll for the open conversation */
+  /** incremental poll for the open conversation — messages + typing + presence */
   const pollNew = useCallback(async () => {
     if (!activeId || !messages.length) return
     const last = messages[messages.length - 1]
     try {
-      const r = await api<{ messages: ChatMessage[] }>(
+      const r = await api<{
+        messages: ChatMessage[]
+        conversation: ConvMeta
+        typing?: TypingUser[]
+      }>(
         `/api/chat/messages?conversationId=${encodeURIComponent(activeId)}&after=${encodeURIComponent(last.createdAt)}`
       )
+      setTyping(r.typing ?? [])
+      setMeta((prev) => (prev ? { ...prev, members: r.conversation.members } : prev))
       if (r.messages.length === 0) return
       setMessages((prev) => {
         const seen = new Set(prev.map((m) => m.id))
@@ -312,6 +350,19 @@ export function CommunityView({
       /* transient — next tick retries */
     }
   }, [activeId, messages, meId, markRead])
+
+  const onDraftChange = useCallback(
+    (value: string) => {
+      setDraft(value)
+      // typing heartbeat: only while there is text, at most every 2.5s
+      const now = Date.now()
+      if (value.trim() && activeId && now - lastTypingPing.current > 2_500) {
+        lastTypingPing.current = now
+        void api('/api/chat/typing', { conversationId: activeId }).catch(() => {})
+      }
+    },
+    [activeId]
+  )
 
   const sendMessage = useCallback(async () => {
     const body = draft.trim()
@@ -399,7 +450,9 @@ export function CommunityView({
   const onScroll = useCallback(() => {
     const el = listRef.current
     if (!el) return
-    stickToBottom.current = el.scrollHeight - el.scrollTop - el.clientHeight < 140
+    const pinned = el.scrollHeight - el.scrollTop - el.clientHeight < 140
+    stickToBottom.current = pinned
+    setShowJump((prev) => (prev === !pinned ? prev : !pinned))
   }, [])
 
   // ---------- derived ----------
@@ -414,6 +467,15 @@ export function CommunityView({
     () => (conversations ?? []).reduce((n, c) => n + c.unread, 0),
     [conversations]
   )
+
+  // unread count in the browser tab while the user is elsewhere
+  useEffect(() => {
+    const base = document.title.replace(/^\(\d+\)\s+/, '')
+    document.title = totalUnread > 0 ? `(${totalUnread}) ${base}` : base
+    return () => {
+      document.title = document.title.replace(/^\(\d+\)\s+/, '')
+    }
+  }, [totalUnread])
 
   const activeTitle = meta ? (meta.type === 'group' ? meta.name ?? 'Study group' : meta.members.find((m) => m.id !== meId)?.name ?? 'Direct message') : ''
   const rollingOut = (convError ?? messagesError ?? '').includes('not active on the live database')
@@ -574,6 +636,8 @@ export function CommunityView({
                 {filtered.map((c) => {
                   const title = conversationTitle(c, meId)
                   const isActive = c.id === activeId
+                  const dmOther = c.type === 'dm' ? c.members.find((m) => m.id !== meId) : null
+                  const dmOnline = dmOther ? isOnline(dmOther.lastSeenAt) : false
                   return (
                     <li key={c.id}>
                       <button
@@ -599,8 +663,14 @@ export function CommunityView({
                         </span>
                         <span className="min-w-0 flex-1">
                           <span className="flex items-baseline justify-between gap-2">
-                            <span className={cn('truncate text-sm', c.unread > 0 ? 'font-semibold' : 'font-medium')}>
-                              {title}
+                            <span className={cn('flex min-w-0 items-center gap-1.5 text-sm', c.unread > 0 ? 'font-semibold' : 'font-medium')}>
+                              <span className="truncate">{title}</span>
+                              {dmOnline && (
+                                <span
+                                  className="h-2 w-2 shrink-0 rounded-full bg-emerald-500 shadow-[0_0_0_2px_var(--card)]"
+                                  title="Online"
+                                />
+                              )}
                             </span>
                             <span className="shrink-0 text-[10px] text-muted-foreground">
                               {c.lastMessage ? timeLabel(c.lastMessage.createdAt) : ''}
@@ -620,7 +690,7 @@ export function CommunityView({
         </aside>
 
         {/* ------------------------------------------------ chat pane */}
-        <section className={cn('min-h-0 min-w-0 flex-col md:flex', activeId ? 'flex' : 'hidden')}>
+        <section className={cn('relative min-h-0 min-w-0 flex-col md:flex', activeId ? 'flex' : 'hidden')}>
           {!activeId ? (
             <div className="flex h-full flex-col items-center justify-center gap-3 p-8 text-center">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
@@ -647,21 +717,47 @@ export function CommunityView({
                 </button>
                 <span
                   className={cn(
-                    'flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br text-xs font-bold text-white',
+                    'relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br text-xs font-bold text-white',
                     gradientFor(activeId)
                   )}
                 >
                   {meta?.type === 'group' ? <Hash className="h-4 w-4" /> : meta ? initialsOf(activeTitle) : '…'}
+                  {meta?.type === 'dm' && (() => {
+                    const other = meta.members.find((m) => m.id !== meId)
+                    return isOnline(other?.lastSeenAt) ? (
+                      <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-card" />
+                    ) : null
+                  })()}
                 </span>
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-semibold">{messagesLoading && !meta ? 'Loading…' : activeTitle}</p>
-                  <p className="truncate text-xs text-muted-foreground">
-                    {meta?.type === 'group'
-                      ? `${meta.members.length} member${meta.members.length === 1 ? '' : 's'} · ${meta.members.slice(0, 3).map((m) => m.name.split(' ')[0]).join(', ')}${meta.members.length > 3 ? ` +${meta.members.length - 3}` : ''}`
-                      : meta
-                        ? meta.members.find((m) => m.id !== meId)?.email ?? 'Direct message'
-                        : ''}
-                  </p>
+                  {typing.length > 0 ? (
+                    <p className="flex items-center gap-1 truncate text-xs font-medium text-primary">
+                      {meta?.type === 'group'
+                        ? `${typing.map((t) => t.name.split(' ')[0]).slice(0, 2).join(', ')}${typing.length > 2 ? ` +${typing.length - 2}` : ''} typing`
+                        : 'typing'}
+                      <span className="inline-flex items-end gap-[2px] pb-[3px]" aria-hidden>
+                        {[0, 1, 2].map((i) => (
+                          <span
+                            key={i}
+                            className="h-1 w-1 animate-bounce rounded-full bg-primary"
+                            style={{ animationDelay: `${i * 150}ms`, animationDuration: '900ms' }}
+                          />
+                        ))}
+                      </span>
+                    </p>
+                  ) : (
+                    <p className="truncate text-xs text-muted-foreground">
+                      {meta?.type === 'group'
+                        ? `${meta.members.length} member${meta.members.length === 1 ? '' : 's'} · ${meta.members.slice(0, 3).map((m) => m.name.split(' ')[0]).join(', ')}${meta.members.length > 3 ? ` +${meta.members.length - 3}` : ''}`
+                        : meta
+                          ? (() => {
+                              const other = meta.members.find((m) => m.id !== meId)
+                              return isOnline(other?.lastSeenAt) ? 'online' : lastSeenLabel(other?.lastSeenAt)
+                            })()
+                          : ''}
+                    </p>
+                  )}
                 </div>
                 {meta?.type === 'group' && (
                   <Button variant="ghost" size="sm" onClick={() => setAddMembersOpen(true)} className="gap-1.5">
@@ -686,14 +782,6 @@ export function CommunityView({
                       </div>
                     ))}
                   </div>
-                ) : messages.length === 0 ? (
-                  <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                      <MessageSquare className="h-6 w-6 text-primary" />
-                    </div>
-                    <p className="text-sm font-medium">No messages yet</p>
-                    <p className="text-xs text-muted-foreground">Be the first to say hello.</p>
-                  </div>
                 ) : (
                   <>
                     {hasMore && (
@@ -704,12 +792,30 @@ export function CommunityView({
                         </Button>
                       </div>
                     )}
+                    {messages.length === 0 && (
+                      <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                          <MessageSquare className="h-6 w-6 text-primary" />
+                        </div>
+                        <p className="text-sm font-medium">No messages yet</p>
+                        <p className="text-xs text-muted-foreground">Be the first to say hello.</p>
+                      </div>
+                    )}
                     {messages.map((m, i) => {
                       const prev = messages[i - 1]
                       const own = m.senderId === meId
                       const newDay = !prev || new Date(prev.createdAt).toDateString() !== new Date(m.createdAt).toDateString()
                       const senderChanged = !prev || prev.senderId !== m.senderId || newDay
                       const showName = !own && meta?.type === 'group' && senderChanged
+                      // "Seen" receipt: my last message in a DM, once the other
+                      // member's lastReadAt reaches its createdAt
+                      const dmOther = meta?.type === 'dm' ? meta.members.find((mem) => mem.id !== meId) : null
+                      const isMyLast = own && i === messages.length - 1
+                      const seen = Boolean(
+                        isMyLast &&
+                          dmOther?.lastReadAt &&
+                          new Date(dmOther.lastReadAt).getTime() >= new Date(m.createdAt).getTime()
+                      )
                       return (
                         <div key={m.id}>
                           {newDay && (
@@ -723,7 +829,7 @@ export function CommunityView({
                             initial={initialLoadDone.current ? { opacity: 0, y: 6 } : false}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.15 }}
-                            className={cn('flex items-end gap-2', own ? 'justify-end' : 'justify-start', showName ? 'mt-2.5' : 'mt-0.5')}
+                            className={cn('group/msg flex items-end gap-2', own ? 'justify-end' : 'justify-start', showName ? 'mt-2.5' : 'mt-0.5')}
                           >
                             {!own && (
                               <span
@@ -754,17 +860,75 @@ export function CommunityView({
                               >
                                 {m.body}
                               </div>
-                              <p className={cn('mt-0.5 px-1 text-[10px] text-muted-foreground', own ? 'text-right' : 'text-left')}>
-                                {clockLabel(m.createdAt)}
-                              </p>
+                              <div className={cn('mt-0.5 flex items-center gap-1.5 px-1', own ? 'justify-end' : 'justify-start')}>
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    void navigator.clipboard.writeText(m.body)
+                                    toast({ title: 'Message copied' })
+                                  }}
+                                  className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
+                                  aria-label="Copy message"
+                                >
+                                  <Copy className="h-3 w-3" />
+                                </button>
+                                <p className="text-[10px] text-muted-foreground">{clockLabel(m.createdAt)}</p>
+                                {seen && (
+                                  <span className="flex items-center gap-0.5 text-[10px] font-medium text-primary">
+                                    <CheckCheck className="h-3 w-3" /> Seen
+                                  </span>
+                                )}
+                              </div>
                             </div>
                           </motion.div>
                         </div>
                       )
                     })}
+                    {typing.length > 0 && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-1.5 flex items-end gap-2"
+                      >
+                        <span
+                          className={cn(
+                            'flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br text-[10px] font-bold text-white',
+                            gradientFor(typing[0].userId)
+                          )}
+                        >
+                          {initialsOf(typing[0].name)}
+                        </span>
+                        <div className="flex items-center gap-1 rounded-2xl rounded-bl-md bg-muted px-4 py-3" aria-label={`${typing[0].name} is typing`}>
+                          {[0, 1, 2].map((i) => (
+                            <span
+                              key={i}
+                              className="h-1.5 w-1.5 animate-bounce rounded-full bg-muted-foreground/70"
+                              style={{ animationDelay: `${i * 150}ms`, animationDuration: '900ms' }}
+                            />
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
                   </>
                 )}
               </div>
+
+              {/* jump to latest */}
+              {showJump && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    stickToBottom.current = true
+                    setShowJump(false)
+                    const el = listRef.current
+                    if (el) el.scrollTo({ top: el.scrollHeight, behavior: 'smooth' })
+                  }}
+                  className="absolute bottom-24 right-6 flex h-9 w-9 items-center justify-center rounded-full border bg-card text-foreground shadow-lg transition-transform hover:scale-105"
+                  aria-label="Jump to latest messages"
+                >
+                  <ArrowDown className="h-4 w-4" />
+                </button>
+              )}
 
               {/* composer */}
               <div className="border-t p-2.5 sm:p-3">
@@ -778,7 +942,7 @@ export function CommunityView({
                   <textarea
                     ref={composerRef}
                     value={draft}
-                    onChange={(e) => setDraft(e.target.value)}
+                    onChange={(e) => onDraftChange(e.target.value)}
                     onInput={(e) => {
                       const el = e.target as HTMLTextAreaElement
                       el.style.height = 'auto'

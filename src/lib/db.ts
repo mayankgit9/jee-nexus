@@ -171,3 +171,17 @@ export function dbClient(): PrismaClient {
   }
   return createClient()
 }
+
+/**
+ * Release a dbClient()'s resources — WORKERS ONLY. On Workers every
+ * dbClient() call instantiates a fresh Prisma engine + pg pool; without an
+ * explicit $disconnect the pool lingers on the isolate. With continuous
+ * traffic (import runner, 2026-11-25 incident) every generation of warm
+ * isolates accumulated engines/pools and crossed the 128MB limit → error
+ * 1102 on ~40% of requests. On Node this is a NO-OP: dbClient() returns the
+ * shared singleton, which must never be disconnected.
+ */
+export async function disconnectClient(client: PrismaClient): Promise<void> {
+  if (!WORKERS) return
+  await client.$disconnect().catch(() => {})
+}

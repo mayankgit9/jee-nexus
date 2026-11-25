@@ -33,44 +33,66 @@ export async function GET(req: NextRequest) {
         ? Math.min(Math.max(Math.trunc(Number(limitParam)), 1), 100)
         : CHAT_LIMITS.messagesTake
 
-    // fetch limit+1 to compute hasMore without a count query
-    let messages: {
-      id: string
-      body: string
-      createdAt: Date
-      senderId: string
-      sender: { id: string; name: string | null } | null
-    }[]
-    let hasMore = false
-
-    if (after) {
-      messages = await client.chatMessage.findMany({
-        where: { conversationId, createdAt: { gt: after } },
-        orderBy: [{ createdAt: 'asc' }, { id: 'asc' }],
-        take: limit + 1,
-        include: { sender: { select: { id: true, name: true } } },
-      })
-      hasMore = messages.length > limit
-      if (hasMore) messages = messages.slice(0, limit)
-    } else if (before) {
-      const page = await client.chatMessage.findMany({
-        where: { conversationId, createdAt: { lt: before } },
-        orderBy: [{ createdAt: 'desc' }, { id: 'desc' }],
-        take: limit + 1,
-        include: { sender: { select: { id: true, name: true } } },
-      })
-      hasMore = page.length > limit
-      messages = (hasMore ? page.slice(0, limit) : page).reverse()
-    } else {
+    const fetchMessages = async (): Promise<{
+      messages: {
+        id: string
+        body: string
+        createdAt: Date
+        senderId: string
+        sender: { id: string; name: string | null } | null
+      }[]
+      hasMore: boolean
+    }> => {
+      if (after) {
+        const rows = await client.chatMessage.findMany({
+          where: { conversationId, createdAt: { gt: after } },
+          orderBy: [{ createdAt: 'asc' }, { id: 'asc' }],
+          take: limit + 1,
+          include: { sender: { select: { id: true, name: true } } },
+        })
+        const more = rows.length > limit
+        return { messages: more ? rows.slice(0, limit) : rows, hasMore: more }
+      }
+      if (before) {
+        const page = await client.chatMessage.findMany({
+          where: { conversationId, createdAt: { lt: before } },
+          orderBy: [{ createdAt: 'desc' }, { id: 'desc' }],
+          take: limit + 1,
+          include: { sender: { select: { id: true, name: true } } },
+        })
+        const more = page.length > limit
+        return { messages: (more ? page.slice(0, limit) : page).reverse(), hasMore: more }
+      }
       const page = await client.chatMessage.findMany({
         where: { conversationId },
         orderBy: [{ createdAt: 'desc' }, { id: 'desc' }],
         take: limit + 1,
         include: { sender: { select: { id: true, name: true } } },
       })
-      hasMore = page.length > limit
-      messages = (hasMore ? page.slice(0, limit) : page).reverse()
+      const more = page.length > limit
+      return { messages: (more ? page.slice(0, limit) : page).reverse(), hasMore: more }
     }
+
+    // typing + presence ride along on every poll (one batched round trip
+    // with the message query keeps the 3s poll at two subrequests total)
+    const typingCutoff = new Date(Date.now() - 6_000)
+    const [page, typingRows] = await Promise.all([
+      fetchMessages(),
+      client.chatTyping.findMany({
+        where: {
+          conversationId,
+          userId: { not: user.id },
+          updatedAt: { gt: typingCutoff },
+        },
+        include: { user: { select: { name: true } } },
+      }),
+    ])
+    if (Math.random() < 0.02) {
+      await client
+        .$executeRaw`delete from chat_typing where updated_at < now() - interval '1 hour'`
+        .catch(() => {})
+    }
+    const { messages, hasMore } = page
 
     return Response.json({
       conversation: {
@@ -82,6 +104,7 @@ export async function GET(req: NextRequest) {
       },
       messages: messages.map(toClientMessage),
       hasMore,
+      typing: typingRows.map((t) => ({ userId: t.userId, name: t.user.name ?? 'Student' })),
     })
   } catch (err) {
     return jsonError(err)

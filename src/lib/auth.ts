@@ -78,10 +78,22 @@ export class HttpError extends Error {
   }
 }
 
-/** Guard: any logged-in user */
+/** Guard: any logged-in user.
+ *  Also feeds presence: app_users.last_seen_at is bumped at most once per
+ *  45s per user (in-process throttle — precision doesn't matter, write
+ *  volume does). Failure is silent: presence must never block a request. */
+const presenceThrottle = new Map<string, number>()
 export async function requireUser(): Promise<SessionUser> {
   const user = await getSessionUser()
   if (!user) throw new HttpError(401, 'Not authenticated')
+  const now = Date.now()
+  if (now - (presenceThrottle.get(user.id) ?? 0) > 45_000) {
+    presenceThrottle.set(user.id, now)
+    // best-effort, fire-and-forget: an isolate death mid-write costs nothing
+    void dbClient()
+      .user.update({ where: { id: user.id }, data: { lastSeenAt: new Date() } })
+      .catch(() => {})
+  }
   return user
 }
 

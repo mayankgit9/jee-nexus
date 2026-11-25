@@ -21,7 +21,11 @@ export async function GET() {
         conversation: {
           include: {
             members: {
-              select: { userId: true, role: true, user: { select: { id: true, name: true, email: true } } },
+              select: {
+                userId: true,
+                role: true,
+                user: { select: { id: true, name: true, email: true, lastSeenAt: true } },
+              },
               orderBy: { joinedAt: 'asc' },
             },
             messages: {
