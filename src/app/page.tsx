@@ -3,7 +3,7 @@
 // JEE NEXUS — application shell (hash-routed SPA)
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, Moon, Sun, Menu, X, ClipboardList, ShieldCheck, MessageSquare, MoreHorizontal } from 'lucide-react'
+import { Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, Moon, Sun, Menu, X, ClipboardList, ShieldCheck, MessageSquare, MoreHorizontal, Search } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { HomeView } from '@/components/views/HomeView'
 import { PracticeView } from '@/components/views/PracticeView'
@@ -14,6 +14,7 @@ import { ProfileView } from '@/components/views/ProfileView'
 import { MockView } from '@/components/views/MockView'
 import { AdminView } from '@/components/views/AdminView'
 import { CommunityView } from '@/components/views/CommunityView'
+import { CommandPalette } from '@/components/CommandPalette'
 import type { SessionUser, SubjectKey } from '@/lib/types'
 import { useHashRoute, useApi, navigate } from '@/lib/client'
 import { cn } from '@/lib/utils'
@@ -52,6 +53,7 @@ export default function App() {
   const [authChecked, setAuthChecked] = useState(false)
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
   const [mobileNav, setMobileNav] = useState(false)
+  const [paletteOpen, setPaletteOpen] = useState(false)
   const taxonomyApi = useApi<{ subjects: TaxonomySubject[] }>('/api/taxonomy')
 
   useEffect(() => {
@@ -75,6 +77,18 @@ export default function App() {
   useEffect(() => {
     setMobileNav(false)
   }, [route.view])
+
+  // Ctrl/Cmd+K toggles the command palette
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault()
+        setPaletteOpen((v) => !v)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
 
   const taxonomy = taxonomyApi.data?.subjects ?? null
 
@@ -148,6 +162,17 @@ export default function App() {
           </nav>
 
           <div className="flex items-center gap-1.5">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setPaletteOpen(true)}
+              className="hidden h-9 gap-2 text-muted-foreground md:flex"
+              aria-label="Open command palette"
+            >
+              <Search className="h-4 w-4" />
+              <span className="text-xs">Search</span>
+              <kbd className="rounded border bg-muted px-1.5 py-0.5 text-[10px] font-medium">Ctrl K</kbd>
+            </Button>
             <Button variant="ghost" size="icon" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               aria-label="Toggle theme" className="h-9 w-9">
               {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
@@ -261,6 +286,16 @@ export default function App() {
           <div>Not affiliated with NTA · solutions are original and marked AI-generated until expert-verified</div>
         </div>
       </footer>
+
+      {/* command palette (Ctrl/Cmd+K) */}
+      <CommandPalette
+        open={paletteOpen}
+        onOpenChange={setPaletteOpen}
+        user={user}
+        taxonomy={taxonomy?.map((s) => ({ key: s.key, name: s.name, questionCount: s.questionCount })) ?? null}
+        theme={theme}
+        onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      />
 
       {/* mobile bottom tab bar */}
       <nav

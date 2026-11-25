@@ -19,7 +19,12 @@ export const metadata: Metadata = {
     "Premium free JEE Main previous-year-question practice with authentic diagrams, deeply detailed solutions and a true NTA-style computer based test experience.",
   keywords: ["JEE Main", "PYQ", "practice", "CBT", "mock test", "previous year questions", "Physics", "Chemistry", "Mathematics"],
   icons: {
-    icon: "/logo.svg",
+    icon: [
+      { url: "/logo.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   manifest: "/manifest.json",
   openGraph: {

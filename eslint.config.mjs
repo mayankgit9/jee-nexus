@@ -46,13 +46,14 @@ const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, {
 }, {
   ignores: [
     "node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts",
+    ".open-next/**",
     "examples/**", "skills",
     // generated code (prisma worker client) and non-app artifacts
     "src/generated/**", "tool-results/**", ".wrangler/**", ".zscripts/**",
     "landing/**", "data/**", "download/**", "agent-ctx/**", "supabase/**",
     // ops utilities: .cjs uses require() by design; mjx_testver.mjs intentionally
     // imports with a variable specifier to test module resolution
-    "shims/**", "scripts/apply_pg_shim.cjs", "scripts/mjx_testver.mjs",
+    "shims/**", "scripts/apply_pg_shim.cjs", "scripts/gen_icons.cjs", "scripts/mjx_testver.mjs",
   ]
 }];
 

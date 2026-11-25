@@ -1,17 +1,54 @@
 {
   "name": "JEE NEXUS — JEE Main Practice & CBT Platform",
   "short_name": "JEE NEXUS",
-  "description": "Free JEE Main previous-year-question practice with authentic diagrams, detailed solutions and a true NTA-style CBT experience.",
+  "description": "Free JEE Main previous-year-question practice with authentic diagrams, detailed solutions, study groups and a true NTA-style CBT experience.",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#0b0e13",
   "theme_color": "#0b0e13",
+  "categories": ["education", "productivity"],
   "icons": [
     {
       "src": "/logo.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Practice",
+      "url": "/#/practice",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "PYQ Library",
+      "url": "/#/pyq",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Community chats",
+      "url": "/#/community",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }
