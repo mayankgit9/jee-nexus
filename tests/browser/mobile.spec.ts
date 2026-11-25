@@ -35,7 +35,9 @@ test('mobile: practice view renders without overflow', async ({ page }) => {
 
 test('mobile: PYQ year grid stacks', async ({ page }) => {
   await page.goto('/#/pyq')
-  await expect(page.locator('button', { hasText: /^2023$/ })).toBeVisible({ timeout: 20_000 })
+  // year cards are rich buttons ("2023" + count + subject chips) — match
+  // unanchored; no other year button contains "2023" as a substring
+  await expect(page.locator('button', { hasText: /2023/ })).toBeVisible({ timeout: 20_000 })
 
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
   expect(overflow).toBeLessThanOrEqual(2)
