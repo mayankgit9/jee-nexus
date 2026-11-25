@@ -11,7 +11,7 @@ import { CHAT_LIMITS, requireMembership } from '@/lib/chat'
 export async function POST(req: NextRequest) {
   try {
     const user = await requireUser()
-    rateLimit(`chat-invite:${user.id}`, 20, 60 * 60 * 1000)
+    await rateLimit(`chat-invite:${user.id}`, 20, 60 * 60 * 1000)
     const client = dbClient()
     const payload = (await req.json().catch(() => ({}))) as { conversationId?: string; userIds?: unknown }
     const conversationId = String(payload.conversationId ?? '')

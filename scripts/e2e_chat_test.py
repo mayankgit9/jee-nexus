@@ -5,7 +5,7 @@ import os
 import subprocess
 import time
 
-BASE = "http://localhost:3000"
+BASE = os.environ.get("BASE_URL", "http://localhost:3000")
 
 passed = 0
 failed = 0

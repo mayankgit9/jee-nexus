@@ -47,7 +47,7 @@ export async function POST(req: Request) {
     // exam generation writes an Exam + N examQuestion rows — abuse guard
     // (unlimited generation would flood the shared exam list)
     const user = await requireUser()
-    rateLimit(`exam-gen:${user.id}`, 10, 60_000)
+    await rateLimit(`exam-gen:${user.id}`, 10, 60_000)
     await ensureDefaultPatterns()
     const body = await req.json()
     const title = String(body.title ?? 'Custom mock test').slice(0, 120)

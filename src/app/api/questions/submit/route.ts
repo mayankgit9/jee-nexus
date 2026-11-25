@@ -19,7 +19,7 @@ function isCorrectMcqMulti(selected: number[], correct: number[]): boolean {
 export async function POST(req: NextRequest) {
   try {
     const ip = req.headers.get('x-forwarded-for') ?? 'local'
-    rateLimit(`submit:${ip}`, 60, 60_000)
+    await rateLimit(`submit:${ip}`, 60, 60_000)
 
     const body = await req.json()
     const questionId = String(body.questionId ?? '')

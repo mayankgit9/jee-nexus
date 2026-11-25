@@ -96,7 +96,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     const user = await requireUser()
-    rateLimit(`chat-msg:${user.id}`, 30, 60 * 1000)
+    await rateLimit(`chat-msg:${user.id}`, 30, 60 * 1000)
     const client = dbClient()
     const payload = (await req.json().catch(() => ({}))) as { conversationId?: string; body?: string }
     const conversationId = String(payload.conversationId ?? '')

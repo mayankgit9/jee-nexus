@@ -13,7 +13,7 @@ import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 export async function GET(req: NextRequest) {
   try {
     const user = await requireUser()
-    rateLimit(`chat-search:${user.id}`, 60, 60 * 1000)
+    await rateLimit(`chat-search:${user.id}`, 60, 60 * 1000)
     const client = dbClient()
 
     const q = (req.nextUrl.searchParams.get('q') ?? '').trim()

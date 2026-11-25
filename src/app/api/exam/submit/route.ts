@@ -13,7 +13,7 @@ import type { ExamPatternConfig } from '@/lib/types'
 export async function POST(req: NextRequest) {
   try {
     const user = await requireUser()
-    rateLimit(`exam-submit:${user.id}`, 10, 60_000)
+    await rateLimit(`exam-submit:${user.id}`, 10, 60_000)
     const { attemptId } = await req.json()
 
     const attempt = await db.examAttempt.findUnique({

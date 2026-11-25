@@ -439,3 +439,15 @@ model ChatMessage {
   @@index([conversationId, createdAt])
   @@map("chat_messages")
 }
+
+/// One row per ALLOWED action; the sliding-window counter shared by every
+/// Workers isolate (in-memory Maps are per-isolate and never fired in prod).
+model RateLimitEvent {
+  id        String   @id @default(uuid())
+  key       String
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([key, createdAt])
+  @@index([createdAt])
+  @@map("rate_limit_events")
+}

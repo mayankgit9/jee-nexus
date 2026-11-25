@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
   try {
     const user = await requireUser()
     const ip = req.headers.get('x-forwarded-for') ?? 'local'
-    rateLimit(`report:${user.id}:${ip}`, 10, 60_000)
+    await rateLimit(`report:${user.id}:${ip}`, 10, 60_000)
 
     const body = await req.json()
     const questionId = String(body.questionId ?? '')

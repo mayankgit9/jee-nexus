@@ -5,7 +5,7 @@ import { hashPassword, createSession, rateLimit, jsonError, HttpError } from '@/
 export async function POST(req: NextRequest) {
   try {
     const ip = req.headers.get('x-forwarded-for') ?? 'local'
-    rateLimit(`reset:${ip}`, 5, 60_000)
+    await rateLimit(`reset:${ip}`, 5, 60_000)
     const body = await req.json()
     const token = String(body.token ?? '')
     const password = String(body.password ?? '')

@@ -1,5 +1,5 @@
 // JEE NEXUS — server-side session auth (scrypt + httpOnly cookie)
-import { createHash, randomBytes, scryptSync, timingSafeEqual } from 'crypto'
+import { createHash, randomBytes, randomUUID, scryptSync, timingSafeEqual } from 'crypto'
 import { cookies } from 'next/headers'
 import { db } from '@/lib/db'
 import type { SessionUser } from '@/lib/types'
@@ -115,15 +115,40 @@ export function jsonError(err: unknown) {
   return Response.json({ error: 'Internal server error' }, { status: 500 })
 }
 
-/** Simple in-memory rate limiter (per-process). Production edge proxies add global limits. */
-const buckets = new Map<string, { count: number; resetAt: number }>()
-export function rateLimit(key: string, max: number, windowMs: number): void {
-  const now = Date.now()
-  const b = buckets.get(key)
-  if (!b || b.resetAt < now) {
-    buckets.set(key, { count: 1, resetAt: now + windowMs })
-    return
+/**
+ * DB-backed sliding-window rate limiter (async — every call site awaits it).
+ *
+ * The previous in-memory Map worked locally (single process) but was PROVEN
+ * ineffective on Cloudflare Workers: each isolate keeps its own Map, so the
+ * 30/min chat-send limit never tripped in production (live e2e 2026-11-25:
+ * 31/31 sends returned 200). Events live in Postgres (rate_limit_events, one
+ * row per ALLOWED action) so every isolate shares one window; rejected
+ * attempts write nothing (spam cannot grow the table).
+ *
+ * Fails OPEN on DB errors: a limiter outage must not take features down (the
+ * guarded action still has its own auth/membership checks).
+ */
+export async function rateLimit(key: string, max: number, windowMs: number): Promise<void> {
+  try {
+    const rows = await db.$queryRaw<{ n: number }[]>`
+      select count(*)::int as n from rate_limit_events
+      where key = ${key}
+        and created_at > now() - (${Math.round(windowMs / 1000)} * interval '1 second')`
+    if ((rows[0]?.n ?? 0) >= max) throw new HttpError(429, 'Too many requests — slow down')
+    await db.$executeRaw`
+      insert into rate_limit_events (id, key) values (${randomUUID()}, ${key})`
+    // Opportunistic cleanup (2% of calls): rows are logically dead after the
+    // longest window (1h); 2h is safely past every window in use.
+    if (Math.random() < 0.02) {
+      await db
+        .$executeRaw`delete from rate_limit_events where created_at < now() - interval '2 hours'`
+        .catch(() => {})
+    }
+  } catch (err) {
+    if (err instanceof HttpError) throw err
+    console.error(
+      `[rateLimit] degraded, failing open (key=${key}): ` +
+        String((err as Error)?.message ?? err).slice(0, 200)
+    )
   }
-  b.count++
-  if (b.count > max) throw new HttpError(429, 'Too many requests — slow down')
 }

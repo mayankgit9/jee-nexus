@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     // duplicates in ~2-4s/chunk and burst-hammered the limiter (run
     // 45596846827 died at chunk 21 with 429s). 30 covers the fastest
     // legitimate chunk rate with headroom; login/signup limits stay strict.
-    rateLimit(`import:${admin.id}`, 30, 60_000)
+    await rateLimit(`import:${admin.id}`, 30, 60_000)
     const body = await req.json()
     const questions = body.questions
     if (!Array.isArray(questions) || questions.length === 0) {

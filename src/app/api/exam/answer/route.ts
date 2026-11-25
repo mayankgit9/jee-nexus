@@ -9,7 +9,7 @@ import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 export async function POST(req: NextRequest) {
   try {
     const user = await requireUser()
-    rateLimit(`exam-answer:${user.id}`, 240, 60_000)
+    await rateLimit(`exam-answer:${user.id}`, 240, 60_000)
     const body = await req.json()
     const attemptId = String(body.attemptId ?? '')
     const examQuestionId = String(body.examQuestionId ?? '')

@@ -11,7 +11,7 @@ import { maskEmail } from '@/lib/chat'
 export async function GET(req: NextRequest) {
   try {
     const user = await requireUser()
-    rateLimit(`chat-users:${user.id}`, 60, 60 * 1000)
+    await rateLimit(`chat-users:${user.id}`, 60, 60 * 1000)
     const q = (req.nextUrl.searchParams.get('q') ?? '').trim()
     if (q.length < 2) return Response.json({ users: [] })
 
