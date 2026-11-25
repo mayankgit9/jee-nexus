@@ -110,9 +110,12 @@ function PaletteInner({
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase()
     if (!needle) return actions
-    return actions.filter((a) =>
-      `${a.label} ${a.hint ?? ''} ${a.keywords ?? ''}`.toLowerCase().includes(needle)
-    )
+    // token-AND: every word must match somewhere ("physics pyq" → PYQ · Physics)
+    const tokens = needle.split(/\s+/)
+    return actions.filter((a) => {
+      const hay = `${a.label} ${a.hint ?? ''} ${a.keywords ?? ''}`.toLowerCase()
+      return tokens.every((t) => hay.includes(t))
+    })
   }, [actions, q])
 
   // reset on open → handled by remount (keyed); focus on mount via rAF
