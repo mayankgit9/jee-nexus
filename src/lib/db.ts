@@ -112,9 +112,22 @@ function createClient(): PrismaClient {
  * the stateful culprit. Node runtime keeps the classic singleton.
  */
 function isWorkersRuntime(): boolean {
+  // Detection must NOT be "does the package resolve" — it is installed in
+  // node_modules for the OpenNext build, so a bare require() succeeds in
+  // `next dev` too, making every db.* access and dbClient() call open a
+  // FRESH PrismaClient + pg Pool (max 10 each). ~30 requests later local
+  // Postgres hits max_connections (100) and every route 500s with
+  // "FATAL: sorry, too many clients already" (e2e suite failure, 2026-11-25).
+  // The reliable signal is the same one createClient() uses: on Workers
+  // getCloudflareContext({async:false}) RETURNS a context (env may be
+  // incomplete at module load — that's fine, we only test for throwing);
+  // on the Node runtime it throws.
   try {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require('@opennextjs/cloudflare')
+    const { getCloudflareContext } = require('@opennextjs/cloudflare') as {
+      getCloudflareContext(opts: { async: false }): { env: Record<string, unknown> }
+    }
+    getCloudflareContext({ async: false })
     return true
   } catch {
     return false

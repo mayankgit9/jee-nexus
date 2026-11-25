@@ -141,6 +141,18 @@ call("POST", "/api/chat/messages", {"conversationId": g_id, "body": "thanks for 
 r = call("GET", f"/api/chat/messages?conversationId={g_id}", jar=jar_a)
 check("A sees C's group message", any(m["body"] == "thanks for the invite" and m["senderName"] == "Chirag Shah" for m in r["messages"]))
 
+# --- 5b. message search (membership-scoped) ---
+r = call("GET", "/api/chat/search?q=mechanics%20revision", jar=jar_a)
+check("A finds DM message by phrase", isinstance(r.get("results"), list) and
+      any("mechanics revision" in m["body"] and m["conversation"]["type"] == "dm" for m in r["results"]))
+r = call("GET", "/api/chat/search?q=squad", jar=jar_a)
+check("A finds group message", any("welcome to the squad" in m["body"] and m["conversation"]["type"] == "group" for m in r["results"]))
+r = call("GET", "/api/chat/search?q=mechanics%20revision", jar=jar_c)
+check("non-member cannot search other people's DM", not any("mechanics revision" in m["body"] for m in r.get("results", [])))
+r = call("GET", "/api/chat/search?q=zzzqqqxxx", jar=jar_a)
+check("no-match search is empty", r.get("results") == [])
+check("1-char query 400", status("GET", "/api/chat/search?q=x", jar=jar_a) == "400")
+
 # --- 6. leave / delete ---
 r = call("POST", "/api/chat/leave", {"conversationId": g_id}, jar=jar_b)
 check("B leaves group", r.get("left") is True)

@@ -58,6 +58,15 @@ interface ConvMeta {
   members: ChatUser[]
 }
 
+interface SearchResult {
+  id: string
+  body: string
+  createdAt: string
+  senderId: string
+  senderName: string
+  conversation: { id: string; type: 'dm' | 'group'; name: string | null; otherName: string | null }
+}
+
 type Filter = 'all' | 'dm' | 'group'
 
 // ---------------------------------------------------------------- helpers
@@ -127,6 +136,16 @@ function previewOf(c: Conversation, meId: string): string {
   return `${prefix}${body.length > 60 ? body.slice(0, 60) + '…' : body}`
 }
 
+/** window the body around the first case-insensitive match so the hit is visible */
+function snippetOf(body: string, q: string): string {
+  const clean = body.replace(/\s+/g, ' ')
+  const idx = clean.toLowerCase().indexOf(q.toLowerCase())
+  if (idx < 0) return clean.length > 120 ? clean.slice(0, 120) + '…' : clean
+  const start = Math.max(0, idx - 40)
+  const end = Math.min(clean.length, idx + q.length + 70)
+  return (start > 0 ? '…' : '') + clean.slice(start, end) + (end < clean.length ? '…' : '')
+}
+
 // ---------------------------------------------------------------- main view
 
 export function CommunityView({
@@ -147,6 +166,12 @@ export function CommunityView({
   const [convLoading, setConvLoading] = useState(true)
   const [filter, setFilter] = useState<Filter>('all')
   const [newChatOpen, setNewChatOpen] = useState(false)
+
+  // message search (sidebar)
+  const [searchQ, setSearchQ] = useState('')
+  const [searchResults, setSearchResults] = useState<SearchResult[] | null>(null)
+  const [searching, setSearching] = useState(false)
+  const searchSeq = useRef(0)
 
   // active conversation state
   const [activeId, setActiveId] = useState<string | null>(null)
@@ -179,6 +204,31 @@ export function CommunityView({
       setConvLoading(false)
     }
   }, [])
+
+  // debounced message search — fires when the sidebar query reaches 2 chars
+  useEffect(() => {
+    const q = searchQ.trim()
+    if (q.length < 2) {
+      setSearchResults(null)
+      setSearching(false)
+      return
+    }
+    const seq = ++searchSeq.current
+    setSearching(true)
+    const t = setTimeout(async () => {
+      try {
+        const r = await api<{ results: SearchResult[] }>(
+          `/api/chat/search?q=${encodeURIComponent(q)}`
+        )
+        if (seq === searchSeq.current) setSearchResults(r.results)
+      } catch {
+        if (seq === searchSeq.current) setSearchResults([])
+      } finally {
+        if (seq === searchSeq.current) setSearching(false)
+      }
+    }, 350)
+    return () => clearTimeout(t)
+  }, [searchQ])
 
   const markRead = useCallback(async (conversationId: string) => {
     await api('/api/chat/read', { conversationId }).catch(() => {})
@@ -410,7 +460,26 @@ export function CommunityView({
         {/* ------------------------------------------------ sidebar */}
         <aside className={cn('min-h-0 flex-col border-r md:flex', activeId ? 'hidden' : 'flex')}>
           <div className="space-y-3 border-b p-3">
-            <div className="flex gap-1.5">
+            <div className="relative">
+              <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+              <input
+                value={searchQ}
+                onChange={(e) => setSearchQ(e.target.value)}
+                placeholder="Search messages…"
+                className="h-8 w-full rounded-lg border border-border bg-background pl-8 pr-7 text-xs outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-primary/50"
+              />
+              {searchQ && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQ('')}
+                  className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded p-0.5 text-muted-foreground hover:text-foreground"
+                  aria-label="Clear search"
+                >
+                  <X className="h-3.5 w-3.5" />
+                </button>
+              )}
+            </div>
+            <div className={cn('flex gap-1.5', searchQ.trim().length >= 2 && 'hidden')}>
               {(['all', 'dm', 'group'] as Filter[]).map((f) => (
                 <button
                   key={f}
@@ -428,7 +497,52 @@ export function CommunityView({
           </div>
 
           <div className="min-h-0 flex-1 overflow-y-auto p-2">
-            {convLoading && !conversations ? (
+            {searchQ.trim().length >= 2 ? (
+              /* ------------------------- message search results */
+              searching ? (
+                <div className="space-y-2 p-1">
+                  {[0, 1, 2].map((i) => (
+                    <Skeleton key={i} className="h-14 w-full rounded-xl" />
+                  ))}
+                </div>
+              ) : !searchResults || searchResults.length === 0 ? (
+                <div className="p-6 text-center text-xs text-muted-foreground">
+                  No messages matching “{searchQ.trim()}”
+                </div>
+              ) : (
+                <ul className="space-y-0.5">
+                  {searchResults.map((r) => {
+                    const label = r.conversation.type === 'group'
+                      ? r.conversation.name ?? 'Study group'
+                      : r.conversation.otherName ?? 'Direct message'
+                    return (
+                      <li key={r.id}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSearchQ('')
+                            void openConversation(r.conversation.id)
+                          }}
+                          className="w-full rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-muted"
+                        >
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="truncate text-xs font-semibold text-foreground">
+                              {r.conversation.type === 'group' && <Hash className="mr-0.5 inline h-3 w-3 text-muted-foreground" />}
+                              {label}
+                            </span>
+                            <span className="shrink-0 text-[10px] text-muted-foreground">{timeLabel(r.createdAt)}</span>
+                          </div>
+                          <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                            <span className="font-medium text-foreground/80">{r.senderName}: </span>
+                            {snippetOf(r.body, searchQ.trim())}
+                          </p>
+                        </button>
+                      </li>
+                    )
+                  })}
+                </ul>
+              )
+            ) : convLoading && !conversations ? (
               <div className="space-y-2 p-1">
                 {[0, 1, 2, 3].map((i) => (
                   <div key={i} className="flex items-center gap-3">
