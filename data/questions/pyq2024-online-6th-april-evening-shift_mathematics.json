@@ -1,0 +1,1255 @@
+[
+ {
+  "publicId": "PYQ-2024-lvb29471",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the function $f(x)=\\left (\\frac{1}{x}\\right )^{2x};x>0$ attains the maximum value at $x=\\frac{1}{\\mathrm{e}}$ then :",
+  "options": [
+   "$\\mathrm{e}^{π}<π^{\\mathrm{e}}$",
+   "$\\mathrm{e}^{2π}<(2π)^{\\mathrm{e}}$",
+   "$(2e)^{π}>π^{(2e)}$",
+   "$\\mathrm{e}^{π}>π^{\\mathrm{e}}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $x>0$, $\\ln f(x)=-2x\\ln x$, so\n\n$\\dfrac{f^{'}(x)}{f(x)}=-2(\\ln x+1)$\n\nAs $f(x)>0$, $f^{'}(x)>0$ for $0<x<\\dfrac{1}{e}$ and $f^{'}(x)<0$ for $x>\\dfrac{1}{e}$: $f$ is increasing on $\\left (0,\\dfrac{1}{e}\\right ]$ and has its maximum at $x=\\dfrac{1}{e}$.\n\nSince $π>e$, $\\dfrac{1}{π}<\\dfrac{1}{e}$, so $f\\left (\\dfrac{1}{π}\\right )<f\\left (\\dfrac{1}{e}\\right )$, where $f\\left (\\dfrac{1}{π}\\right )=π^{2/π}$ and $f\\left (\\dfrac{1}{e}\\right )=e^{2/e}$:\n\n$π^{2/π}<e^{2/e}$\n\nRaising both positive sides to the power $\\dfrac{eπ}{2}$:\n\n$π^{e}<e^{π}$\n\nSo (D) is true and (A) is false. The same monotonicity rules out (B) and (C): $f\\left (\\dfrac{1}{2π}\\right )<f\\left (\\dfrac{1}{e}\\right )$ gives $(2π)^{e}<e^{2π}$, and $\\dfrac{1}{2e}<\\dfrac{1}{π}$ gives $f\\left (\\dfrac{1}{2e}\\right )<f\\left (\\dfrac{1}{π}\\right )$, i.e. $(2e)^{π}<π^{2e}$.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb2948r",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $z_{1},z_{2}$ are two distinct complex numbers such that $\\left |\\frac{z_{1}-2z_{2}}{\\frac{1}{2}-z_{1}\\bar{z}_{2}}\\right |=2$, then",
+  "options": [
+   "either $z_{1}$ lies on a circle of radius $\\frac{1}{2}$ or $z_{2}$ lies on a circle of radius 1.",
+   "$z_{1}$ lies on a circle of radius $\\frac{1}{2}$ and $z_{2}$ lies on a circle of radius 1.",
+   "either $z_{1}$ lies on a circle of radius 1 or $z_{2}$ lies on a circle of radius $\\frac{1}{2}$.",
+   "both $z_{1}$ and $z_{2}$ lie on the same circle."
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\left |\\dfrac{z_{1}-2z_{2}}{\\frac{1}{2}-z_{1}\\bar{z}_{2}}\\right |=2 \\\\ |z_{1}-2z_{2}|=|1-2z_{1}\\bar{z}_{2}| \\\\ \\Rightarrow (z_{1}-2z_{2})(\\bar{z}_{1}-2\\bar{z}_{2})=(1-2z_{1}\\bar{z}_{2})(1-2\\bar{z}_{1}z_{2}) \\\\ \\Rightarrow |z_{1}|^{2}+4|z_{2}|^{2}-2\\bar{z}_{1}z_{2}-2\\bar{z}_{2}z_{1} \\\\ =1+4|z_{1}|^{2}|z_{2}|^{2}-2z_{1}\\bar{z}_{2}-2\\bar{z}_{1}z_{2} \\\\ \\Rightarrow |z_{1}|^{2}+4|z_{2}|^{2}-4|z_{1}|^{2}|z_{2}|^{2}-1=0 \\\\ \\Rightarrow \\left (|z_{1}|^{2}-1\\right )\\left (1-4|z_{2}|^{2}\\right )=0 \\\\ \\Rightarrow |z_{1}|=1\\text{or}|z_{2}|=\\dfrac{1}{2} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294aa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{A}=\\{1,2,3,4,5\\}$. Let $\\mathrm{R}$ be a relation on $\\mathrm{A}$ defined by $x\\mathrm{R}y$ if and only if $4x\\leq 5\\mathrm{y}$. Let $\\mathrm{m}$ be the number of elements in $\\mathrm{R}$ and $\\mathrm{n}$ be the minimum number of elements from $\\mathrm{A}\\times \\mathrm{A}$ that are required to be added to R to make it a symmetric relation. Then m + n is equal to :",
+  "options": [
+   "23",
+   "26",
+   "25",
+   "24"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} A=\\{1,2,3,4,5\\} \\\\ xRy⇔4x\\leq 5y \\\\ 4x\\leq 5y\\Rightarrow \\dfrac{x}{y}\\leq \\dfrac{5}{4}\\Rightarrow \\dfrac{x}{y}\\leq 1.25 \\end{array}$\n\n$\\begin{array}{l} R=\\{(1,2),(1,3),(1,4),(1,5),(1,1),(2,2),(2,3),(2,4), \\\\ (2,5),(3,3),(3,4),(3,5),(4,4),(4,5),(5,4),(5,5)\\} \\\\ \\therefore \\quad n(R)=m=16 \\end{array}$\n\nElements to be added to $R$ to make it symmetric\n\n$(1,2)\\in R\\Rightarrow (2,1)$ should be added\n\nSimilarly, $(3,1),(4,1),(5,1),(3,2),(4,2),(5,2),(4,3),(5,3)$\n\n$\\therefore 9$ elements should be added\n\n$\\begin{array}{ll} \\therefore  & n=9 \\\\ \\therefore  & m+n=25 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294cr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=\\frac{1}{7-\\sin 5x}$ be a function defined on $𝐑$. Then the range of the function $f(x)$ is equal to :",
+  "options": [
+   "$\\left [\\frac{1}{8},\\frac{1}{5}\\right ]$",
+   "$\\left [\\frac{1}{7},\\frac{1}{6}\\right ]$",
+   "$\\left [\\frac{1}{7},\\frac{1}{5}\\right ]$",
+   "$\\left [\\frac{1}{8},\\frac{1}{6}\\right ]$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} f(x)=\\dfrac{1}{7-\\sin 5x} \\\\  \\\\ -1\\leq \\sin 5x\\leq 1 \\\\  \\\\ -1\\leq -\\sin 5x\\leq 1 \\\\  \\\\ -1+7\\leq 7-\\sin 5x\\leq 1+7 \\\\  \\\\ 6\\leq 7-\\sin 5x\\leq 8 \\\\  \\\\ \\dfrac{1}{8}\\leq \\dfrac{1}{7-\\sin 5x}\\leq \\dfrac{1}{6} \\\\  \\\\ \\dfrac{1}{8}\\leq f(x)\\leq \\dfrac{1}{6} \\\\  \\\\ \\text{Range}=\\left [\\dfrac{1}{8},\\dfrac{1}{6}\\right ] \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294dv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{n\\to \\infty }\\frac{\\left (1^{2}-1\\right )(n-1)+\\left (2^{2}-2\\right )(n-2)+\\cdots +\\left ((n-1)^{2}-(n-1)\\right )\\cdot 1}{(1^{3}+2^{3}+\\cdots \\cdots +n^{3})-(1^{2}+2^{2}+\\cdots \\cdots +n^{2})}$ is equal to :",
+  "options": [
+   "$\\frac{2}{3}$",
+   "$\\frac{1}{2}$",
+   "$\\frac{3}{4}$",
+   "$\\frac{1}{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\lim _{n\\to \\infty }\\frac{(1^{2}-1)(n-1)+(2^{2}-2)(n-2)+...+\\left ((n-1)^{2}-(n-1)\\right )\\times 1}{(1^{3}+2^{3}+...+n^{3})-(1^{2}+2^{2}+...+n^{2})}$\n\n$\\begin{array}{l} \\text{Numerator}=\\sum\\limits _{r=1}^{n-1}\\left ((r-1)^{2}-(r-1)\\right )(n-r) \\\\ =\\sum\\limits _{r=1}^{n-1}(r-1)(r-2)(n-r) \\\\ =\\sum\\limits _{r=1}^{n-1}-r^{3}+(n+3)r^{2}-(2+3n)r+2n \\end{array}$\n\nWe will take term with the greatest power of $n$\n\n$=\\frac{-1}{4}n^{4}+\\frac{1}{3}n^{4}=\\frac{1}{12}n^{4}$\n\n$\\begin{array}{l} \\text{Denominator}=\\sum\\limits _{r=1}^{n}r^{3}-\\sum\\limits _{r=1}^{n}r^{2} \\\\ =\\left (\\dfrac{n(n+1)}{2}\\right )^{2}-\\left (\\dfrac{n(n+1)(2n+1)}{6}\\right ) \\end{array}$\n\nGreatest power of $n$ is $\\frac{n^{4}}{4}$\n\n$\\lim _{n\\to \\infty }\\frac{\\frac{1}{12}n^{4}}{\\frac{n4}{4}}=\\frac{1}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294f8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $A$ is a square matrix of order 3 such that $\\det (A)=3$ and $\\det \\left (\\mathrm{adj}\\left (-4\\mathrm{adj}\\left (-3\\mathrm{adj}\\left (3\\mathrm{adj}\\left ((2\\mathrm{A})^{-1}\\right )\\right )\\right )\\right )\\right )=2^{\\mathrm{m}}3^{\\mathrm{n}}$, then $\\mathrm{m}+2\\mathrm{n}$ is equal to :",
+  "options": [
+   "2",
+   "4",
+   "3",
+   "6"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} |A|=3 \\\\ \\left |\\mathrm{adj}\\left (-4\\mathrm{adj}\\left (-3\\mathrm{adj}\\left (3\\mathrm{adj}(2A)^{-1}\\right )\\right )\\right )\\right | \\\\ =\\left |-4\\mathrm{adj}\\left (-3\\mathrm{adj}\\left (3\\mathrm{adj}\\left ((2A)^{-1}\\right )\\right )\\right )\\right |^{2} \\end{array}$\n\n$\\begin{array}{l} =4^{6}\\left |-3\\mathrm{adj}\\left (3\\mathrm{adj}\\left ((2A)^{-1}\\right )\\right )\\right |^{4} \\\\ =4^{6}\\cdot 3^{12}\\left |3\\mathrm{adj}\\left ((2A)^{-1}\\right )\\right |^{8} \\\\ =4^{6}\\cdot 3^{12}\\cdot 3^{24}\\left |(2A)^{-1}\\right |^{16} \\\\ =4^{6}\\cdot 3^{36}2^{-48}\\left |A^{-1}\\right |^{16} \\\\ =\\dfrac{2^{-36}3^{36}}{3^{16}}=2^{-36}3^{20} \\\\ m=-36 \\\\ n=20 \\\\ m+2n=4 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294g8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If three letters can be posted to any one of the 5 different addresses, then the probability that the three letters are posted to exactly two addresses is :",
+  "options": [
+   "$\\frac{18}{25}$",
+   "$\\frac{12}{25}$",
+   "$\\frac{6}{25}$",
+   "$\\frac{4}{25}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Each of the 3 letters can go to any of the 5 addresses, so the total number of ways is $5^{3}=125$.\n\nThe 2 addresses that receive letters are chosen in ${}^{5}C_{2}=10$ ways.\n\nEach letter then goes to one of these 2 addresses in $2^{3}=8$ ways, of which 2 put all three letters at a single address; so both chosen addresses receive letters in $8-2=6$ ways.\n\n$P=\\dfrac{10\\times 6}{125}=\\dfrac{60}{125}=\\dfrac{12}{25}$\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294hw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $⃗{a}=2\\hat{i}+\\hat{j}-\\hat{k},⃗{b}=((⃗{a}\\times (\\hat{i}+\\hat{j}))\\times \\hat{i})\\times \\hat{i}$. Then the square of the projection of $⃗{a}$ on $⃗{b}$ is:",
+  "options": [
+   "$\\frac{1}{3}$",
+   "$\\frac{1}{5}$",
+   "2",
+   "$\\frac{2}{3}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{lllllll} ⃗{a}=2\\hat{i}+\\hat{j}-\\hat{k} \\\\ ⃗{b}=((⃗{a}\\times (\\hat{i}+\\hat{j}))\\times \\hat{i})\\times \\hat{i} \\\\ ⃗{a}\\times (\\hat{i}+\\hat{j})=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & 1 & -1 \\\\ 1 & 1 & 0 \\end{array}\\right | \\\\ =\\hat{i}(1)-\\hat{j}(1)+\\hat{k}(2-1) \\\\ =\\hat{i}-\\hat{j}+\\hat{k} \\end{array}$\n\n$\\begin{array}{lllllll} (⃗{a}\\times (\\hat{i}+\\hat{j}))\\times \\hat{i}=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & -1 & 1 \\\\ 1 & 0 & 0 \\end{array}\\right | \\\\ =\\hat{i}(0)-\\hat{j}(-1)+\\hat{k}(1) \\\\ =\\hat{j}+\\hat{k} \\end{array}$\n\n$\\left ((\\vec{a}\\times (\\hat{i}+\\hat{j})\\times \\hat{i}\\right )\\times \\hat{i}=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\widehat{k} \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 0 \\end{array}\\right |$\n\n$\\begin{array}{ll} =\\hat{i}(0)-\\hat{j}(-1)+\\hat{k}(-1) \\\\ ⃗{b}= & \\hat{j}-\\hat{k} \\end{array}$\n\nProjection of $⃗{a}$ on $⃗{b}=\\frac{⃗{a}\\cdot ⃗{b}}{|⃗{b}|}$\n\n$=\\frac{2}{\\sqrt{2}}=\\sqrt{2}$\n\nSquare of projection $=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294j7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{\\mathrm{a}}=6\\hat{i}+\\hat{j}-\\hat{k}$ and $\\vec{\\mathrm{b}}=\\hat{i}+\\hat{j}$. If $\\vec{\\mathrm{c}}$ is a vector such that $|\\vec{\\mathrm{c}}|\\geq 6,\\vec{\\mathrm{a}}\\cdot \\vec{\\mathrm{c}}=6|\\vec{\\mathrm{c}}|,|\\vec{\\mathrm{c}}-\\vec{\\mathrm{a}}|=2\\sqrt{2}$ and the angle between $⃗{a}\\times ⃗{b}$ and $⃗{c}$ is $60^{\\circ }$, then $|(⃗{a}\\times ⃗{b})\\times ⃗{c}|$ is equal to:",
+  "options": [
+   "$\\frac{3}{2}\\sqrt{6}$",
+   "$\\frac{9}{2}(6-\\sqrt{6})$",
+   "$\\frac{9}{2}(6+\\sqrt{6})$",
+   "$\\frac{3}{2}\\sqrt{3}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{lllllll} |(⃗{a}\\times ⃗{b})\\times ⃗{c}|=|⃗{a}\\times ⃗{b}||⃗{c}|\\sin 60^{\\circ } \\\\ \\left |\\begin{array}{lll} i & j & k \\\\ 6 & 1 & -1 \\\\ 1 & 1 & 0 \\end{array}\\right |=i(1)-j(1)+k(5) \\\\ =i-j+5k \\\\ |⃗{a}\\times ⃗{b}|=\\sqrt{1+1+25}=\\sqrt{27} \\\\ |⃗{c}-⃗{a}|=2\\sqrt{2} \\\\ c^{2}+a^{2}-2ac=8 \\\\ c^{2}-12c+30=0 \\\\ c=\\dfrac{12+\\sqrt{24}}{2}=6+\\sqrt{6} \\\\ \\Rightarrow |(⃗{a}\\times ⃗{b})\\times ⃗{c}|=\\sqrt{27}\\times (6+\\sqrt{6})\\times \\dfrac{\\sqrt{3}}{2} \\\\ =\\dfrac{9}{2}(6+\\sqrt{6}) \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294kx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the area of the region $\\left \\{(x,y):\\frac{\\mathrm{a}}{x^{2}}\\leq y\\leq \\frac{1}{x},1\\leq x\\leq 2,0<\\mathrm{a}<1\\right \\}$ is $(\\log _{\\mathrm{e}}2)-\\frac{1}{7}$ then the value of $7\\mathrm{a}-3$ is equal to :",
+  "options": [
+   "1",
+   "0",
+   "2",
+   "$-$1"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left \\{(x,y):\\frac{a}{x^{2}}\\leq y\\leq \\frac{1}{x},1\\leq x\\leq 2,0<a<1\\right \\}$\n\n$\\Rightarrow \\int\\limits _{1}^{2}\\left (\\frac{1}{x}-\\frac{a}{x^{2}}\\right )dx=\\left |\\ln |x|+\\frac{a}{x}\\right |_{1}^{2}$\n\n$\\begin{array}{l} \\left (\\ln 2+\\dfrac{a}{2}\\right )-(\\ln 1+a)=\\ln 2-\\dfrac{a}{2} \\\\ \\Rightarrow \\dfrac{a}{2}=\\dfrac{1}{7} \\\\ \\Rightarrow a=\\dfrac{2}{7} \\\\ 7a-3=\\dfrac{2}{7}\\times 7-3=-1 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294m1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{P}(α,β,γ)$ be the image of the point $\\mathrm{Q}(3,-3,1)$ in the line $\\frac{x-0}{1}=\\frac{y-3}{1}=\\frac{z-1}{-1}$ and $\\mathrm{R}$ be the point $(2,5,-1)$. If the area of the triangle $\\mathrm{PQR}$ is $λ$ and $λ^{2}=14\\mathrm{K}$, then $\\mathrm{K}$ is equal to :",
+  "options": [
+   "18",
+   "81",
+   "72",
+   "36"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\text{Line}L\\Rightarrow \\frac{x-0}{1}=\\frac{y-3}{1}=\\frac{z-1}{-1}=μ$\n\nPoint $M(μ,μ+3,-μ+1)$\n\nDirection vector of $QM=(μ-3,μ+6,-μ)$\n\nDirection vector of line $L=(1,1,-1)$\n\nBoth direction vector are perpendicular so\n\n$\\begin{array}{l} 1\\times (μ-3)+1\\times (μ+6)-1\\times (-μ)=0 \\\\ μ=-1 \\end{array}$\n\nPoint $M(-1,2,2)$ midpoint of $PQ$\n\nSo point $P(α,β,γ)=(-5,7,3)$\n\nArea of $△PQR=\\frac{1}{2}|PQ\\leftarrow \\times QR\\leftarrow |$\n\n$\\begin{array}{lllllll} PQ\\leftarrow =(8,-10,-2) \\\\ QR\\leftarrow =(-1,8,-2) \\\\ PQ\\leftarrow \\times QR\\leftarrow =\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 8 & -10 & -2 \\\\ -1 & 8 & -2 \\end{array}\\right |=36\\hat{i}+18\\hat{j}+54\\hat{k} \\end{array}$\n\nArea of $△PQR=λ$\n\n$λ=\\frac{1}{2}\\sqrt{(36)^{2}+(18)^{2}+(54)^{2}}$\n\n$\\begin{array}{l} λ^{2}=\\dfrac{1}{4}(4536) \\\\ λ^{2}=1134 \\\\ λ^{2}=14K\\text{(given)} \\\\ 14K=1134 \\\\ K=\\dfrac{1134}{14}=81 \\\\ K=81 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb294m1-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb294nj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $ABC$ be an equilateral triangle. A new triangle is formed by joining the middle points of all sides of the triangle $ABC$ and the same process is repeated infinitely many times. If $\\mathrm{P}$ is the sum of perimeters and $Q$ is the sum of areas of all the triangles formed in this process, then :",
+  "options": [
+   "$\\mathrm{P}^{2}=72\\sqrt{3}\\mathrm{Q}$",
+   "$\\mathrm{P}^{2}=36\\sqrt{3}\\mathrm{Q}$",
+   "$\\mathrm{P}=36\\sqrt{3}\\mathrm{Q}^{2}$",
+   "$\\mathrm{P}^{2}=6\\sqrt{3}\\mathrm{Q}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$△ABC$ is an equilateral triangle having side $=a$ unit\n\nNow, perimeter $=$ sum of all sides $=3a$\n\nArea $=\\frac{\\sqrt{3}}{4}a^{2}$\n\nNow, in $△DEF,DE=\\frac{a}{2}=EF=DF$\n\n$\\begin{array}{l} \\text{Perimeter}=3\\times \\dfrac{a}{2}=\\dfrac{3a}{2} \\\\ \\text{Area}=\\dfrac{\\sqrt{3}}{4}\\times \\left (\\dfrac{a}{2}\\right )^{2}=\\dfrac{\\sqrt{3}a^{2}}{16} \\end{array}$\n\nNow, $P=3a+\\frac{3a}{2}+\\frac{3a}{4}+\\cdots$\n\n$Q=\\frac{\\sqrt{3}}{4}a^{2}+\\frac{\\sqrt{3}}{16}a^{2}+\\frac{\\sqrt{3}}{64}a^{2}+\\cdots$\n\n$P=\\frac{3a}{1-\\frac{1}{2}}=3a\\times 2\\Rightarrow P=6a\\text{.... (i)}$\n\n$Q=\\frac{\\frac{\\sqrt{3}}{4}a^{2}}{1-\\frac{1}{4}}=\\frac{4}{3}\\times \\frac{\\sqrt{3}}{4}a^{2}Q=\\frac{\\sqrt{3}}{3}a^{2}\\text{.... (ii)}$\n\nFrom equation (i) & (ii)\n\n$\\begin{array}{l} P=6a \\\\ Q=\\dfrac{\\sqrt{3}}{3}a^{2} \\\\ Q=\\dfrac{\\sqrt{3}}{3}\\times \\dfrac{P^{2}}{36} \\\\ P^{2}=36\\sqrt{3}Q \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb294nj-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb294oh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Suppose the solution of the differential equation $\\frac{dy}{dx}=\\frac{(2+α)x-βy+2}{βx-2αy-(βγ-4α)}$ represents a circle passing through origin. Then the radius of this circle is :",
+  "options": [
+   "$\\sqrt{17}$",
+   "2",
+   "$\\frac{\\sqrt{17}}{2}$",
+   "$\\frac{1}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Cross-multiplying,\n\n$βxdy-2αydy-(βγ-4α)dy=(2+α)xdx-βydx+2dx.$\n\nGrouping $β(xdy+ydx)=βd(xy)$ and integrating:\n\n$βxy-αy^{2}-(βγ-4α)y=\\left (1+\\dfrac{α}{2}\\right )x^{2}+2x+C,$\n\nso the solution curves are\n\n$\\left (1+\\dfrac{α}{2}\\right )x^{2}+αy^{2}-βxy+2x+(βγ-4α)y+C=0.$\n\nFor a circle the $xy$ term must vanish and the coefficients of $x^{2}$ and $y^{2}$ must be equal: $β=0$ and $1+\\dfrac{α}{2}=α$, so $α=2$. Passing through the origin gives $C=0$.\n\nWith $β=0$ and $α=2$: $2x^{2}+2y^{2}+2x-8y=0$, i.e. $x^{2}+y^{2}+x-4y=0$.\n\nThe centre is $\\left (-\\dfrac{1}{2},2\\right )$, so the radius is $\\sqrt{\\dfrac{1}{4}+4}=\\dfrac{\\sqrt{17}}{2}$.\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294px",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A software company sets up m number of computer systems to finish an assignment in 17 days. If 4 computer systems crashed on the start of the second day, 4 more computer systems crashed on the start of the third day and so on, then it took 8 more days to finish the assignment. The value of $\\mathrm{m}$ is equal to:",
+  "options": [
+   "125",
+   "160",
+   "150",
+   "180"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the value of $\\mathrm{m}$, we need to formulate the problem using some basic concepts of arithmetic progression and work. Let's first understand the nature of the problem:\n\nInitially, there are $\\mathrm{m}$ computers, and it is estimated that with these $\\mathrm{m}$ computers, the assignment can be completed in 17 days.\n\nHowever, due to the crash of 4 computers every day starting from the second day onward, the total time taken extends by 8 days, making it 25 days in total.\n\nTo begin with, let's define the total work (W) in terms of the number of computers and days:\n\nThe total work (W) is given by:\n\nThe amount of work completed each day with $\\mathrm{m}$ computers for 17 days:\n\n$W=17m$\n\nWhen computers crash, the number of working computers each day forms an arithmetic sequence. On the first day, there are $\\mathrm{m}$ computers. On the second day, there are $\\mathrm{m}-4$ computers, on the third day, there are $\\mathrm{m}-8$ computers, and so on. We need to sum this series until 25 days are completed.\n\nThis can be formulated as:\n\nTotal work done over 25 days with decrement in the number of computers:\n\n$W=m+(m-4)+(m-8)+\\ldots +[m-4\\times (n-1)]$\n\nwhere $n$ is the number of days. Here, $n=25$.\n\nNotice that we form an arithmetic series where the first term (a) is $\\mathrm{m}$ and the common difference (d) is -4. The sum of the first n terms of an arithmetic series is:\n\n$S_{n}=\\frac{n}{2}[2a+(n-1)d]$\n\nPlugging in the values:\n\n$S_{25}=\\frac{25}{2}[2m+(25-1)(-4)]$\n\n$S_{25}=\\frac{25}{2}[2m-96]$\n\n$S_{25}=\\frac{25}{2}[2m-96]=25(m-48)$\n\nThis work should be equivalent to the work calculated earlier, so:\n\n$17m=25(m-48)$\n\nSolving for $\\mathrm{m}$:\n\n$17m=25m-1200$\n\n$8m=1200$\n\n$m=150$\n\nThus, the value of $\\mathrm{m}$ is equal to:\n\nOption C: 150",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294qv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\mathrm{P}(6,1)$ be the orthocentre of the triangle whose vertices are $\\mathrm{A}(5,-2),\\mathrm{B}(8,3)$ and $\\mathrm{C}(\\mathrm{h},\\mathrm{k})$, then the point $\\mathrm{C}$ lies on the circle :",
+  "options": [
+   "$x^{2}+y^{2}-74=0$",
+   "$x^{2}+y^{2}-65=0$",
+   "$x^{2}+y^{2}-61=0$",
+   "$x^{2}+y^{2}-52=0$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nSlope of $BF=(m_{BF})=\\frac{3-1}{8-6}=1$\n\n$\\begin{array}{l} m_{AC}=\\dfrac{k+2}{h-5}=-1(AC⟂BF) \\\\ \\Rightarrow k+2=5-h \\\\ \\Rightarrow k=3-h\\ldots \\text{(i)} \\\\ m_{AD}=\\dfrac{1+2}{6-5}=3 \\\\ m_{BC}=\\dfrac{k-3}{h-8}=-\\dfrac{1}{3}(AD⟂BC) \\\\ \\Rightarrow 3k-9=8-h\\ldots \\text{(ii)} \\end{array}$\n\nFrom (i) & (ii)\n\n$h=-4,k=7$\n\nNow, $h^{2}+k^{2}=16+49=65$\n\n$h^{2}+k^{2}-65=0$\n\nLocus is $x^{2}+y^{2}-65=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb294qv-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb294sf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If all the words with or without meaning made using all the letters of the word \"NAGPUR\" are arranged as in a dictionary, then the word at $315^{\\text{th}}$ position in this arrangement is :",
+  "options": [
+   "NRAPUG",
+   "NRAGUP",
+   "NRAPGU",
+   "NRAGPU"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "NAGPUR\n\nWord at $315^{\\text{th}}$ position\n\n$\\begin{array}{l} \\text{A......}=5!=120 \\\\ \\text{G.......}=5!=120 \\\\ \\text{NA.....}=4!=24 \\\\ \\text{NG.....}=4!=24 \\\\ \\text{NP.....}=4!=24 \\end{array}$\n\n..... Till 312 words\n\n$313^{\\text{th}}\\text{word}=\\text{NRAGPU}$\n\n$314^{\\text{th}}$ word $=$ $\\mathrm{NRAGUP}$\n\n$315^{\\text{th}}\\text{word}=\\text{NRAPGU}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294td",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Suppose for a differentiable function $h,h(0)=0,h(1)=1$ and $h^{'}(0)=h^{'}(1)=2$. If $g(x)=h(\\mathrm{e}^{x})\\mathrm{e}^{h(x)}$, then $g^{'}(0)$ is equal to:",
+  "options": [
+   "4",
+   "5",
+   "3",
+   "8"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine $g^{'}(0)$, we start by applying the chain rule and product rule to find the derivative of the given function $g(x)=h(\\mathrm{e}^{x})\\mathrm{e}^{h(x)}$.\n\nThe product rule states that if we have two functions $u(x)$ and $v(x)$, then the derivative of their product is given by:\n\n$(u(x)v(x))^{'}=u^{'}(x)v(x)+u(x)v^{'}(x)$\n\nLet's denote $u(x)=h(\\mathrm{e}^{x})$ and $v(x)=\\mathrm{e}^{h(x)}$.\n\nFirst, we need to find $u^{'}(x)$ and $v^{'}(x)$. Using the chain rule, we find:\n\n$u^{'}(x)=\\frac{d}{dx}h(\\mathrm{e}^{x})=h^{'}(\\mathrm{e}^{x})\\cdot \\frac{d}{dx}(\\mathrm{e}^{x})=h^{'}(\\mathrm{e}^{x})\\cdot \\mathrm{e}^{x}$\n\nNow, the derivative of $v(x)$ is:\n\n$v^{'}(x)=\\frac{d}{dx}(\\mathrm{e}^{h(x)})=\\mathrm{e}^{h(x)}\\cdot h^{'}(x)$\n\nUsing the product rule, we get the derivative of $g(x)$:\n\n$g^{'}(x)=u^{'}(x)v(x)+u(x)v^{'}(x)$\n\nSubstituting $u(x)$, $v(x)$, $u^{'}(x)$, and $v^{'}(x)$ into the above expression, we get:\n\n$g^{'}(x)=(h^{'}(\\mathrm{e}^{x})\\mathrm{e}^{x})\\mathrm{e}^{h(x)}+(h(\\mathrm{e}^{x}))\\left (\\mathrm{e}^{h(x)}h^{'}(x)\\right )$\n\nNext, we need to evaluate this at $x=0$:\n\nFirst, we know that:\n\n$h(0)=0$\n\n$h(1)=1$\n\n$h^{'}(0)=2$\n\n$h^{'}(1)=2$\n\nSubstituting $x=0$ into the expressions, we get:\n\n$u(0)=h(\\mathrm{e}^{0})=h(1)=1$\n\n$v(0)=\\mathrm{e}^{h(0)}=\\mathrm{e}^{0}=1$\n\n$u^{'}(0)=h^{'}(\\mathrm{e}^{0})\\mathrm{e}^{0}=h^{'}(1)\\cdot 1=2$\n\n$v^{'}(0)=\\mathrm{e}^{h(0)}h^{'}(0)=\\mathrm{e}^{0}\\cdot 2=2$\n\nTherefore, evaluating $g^{'}(0)$:\n\n$g^{'}(0)=(u^{'}(0)v(0))+(u(0)v^{'}(0))$\n\n$g^{'}(0)=(2\\cdot 1)+(1\\cdot 2)$\n\n$g^{'}(0)=2+2=4$\n\nThus, the value of $g^{'}(0)$ is 4, which corresponds to Option A.\n\nThe correct answer is Option A: 4.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294ut",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $0\\leq r\\leq n$. If ${}^{n+1}C_{r+1}:{}^{n}C_{r}:{}^{n-1}C_{r-1}=55:35:21$, then $2n+5r$ is equal to :",
+  "options": [
+   "62",
+   "60",
+   "55",
+   "50"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $0\\leq r\\leq n$. If $\\left (n+1r+1\\right ):\\left (nr\\right ):\\left (n-1r-1\\right )=55:35:21$, then we are to determine the value of $2n+5r$.\n\nStep-by-Step Solution:\n\nWrite the given proportions involving binomial coefficients:\n\n$\\frac{n+1}{r+1}\\times \\left (nr\\right ):\\left (nr\\right ):\\frac{r}{n}\\times \\left (nr\\right )=55:35:21$\n\nSimplify the proportions:\n\n$\\frac{n+1}{r+1}=\\frac{55}{35}\\text{and}\\frac{n}{r}=\\frac{35}{21}$\n\nFrom the simplified ratios, we establish the following two equations:\n\n$\\frac{n+1}{r+1}=\\frac{11}{7}\\Rightarrow 7(n+1)=11(r+1)\\Rightarrow 7n-11r=4\\text{.... (1)}$\n\n$\\frac{n}{r}=\\frac{5}{3}\\Rightarrow 3n=5r\\Rightarrow 3n-5r=0\\text{.... (2)}$\n\nSolve equations (1) and (2) simultaneously:\n\nFrom equation (2), solve for $n$:\n\n$3n=5r\\Rightarrow n=\\frac{5r}{3}$\n\nSubstitute $n$ into equation (1):\n\n$7\\left (\\frac{5r}{3}\\right )-11r=4\\Rightarrow \\frac{35r}{3}-11r=4$\n\n$\\frac{35r-33r}{3}=4\\Rightarrow \\frac{2r}{3}=4\\Rightarrow 2r=12\\Rightarrow r=6$\n\nSubstituting $r$ back to find $n$:\n\n$n=\\frac{5\\times 6}{3}=10$\n\nCompute $2n+5r$:\n\n$2n+5r=2\\times 10+5\\times 6=20+30=50$\n\nThus, the value of $2n+5r$ is 50.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294vs",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\int \\frac{1}{\\mathrm{a}^{2}\\sin ^{2}x+\\mathrm{b}^{2}\\cos ^{2}x}\\mathrm{d}x=\\frac{1}{12}\\tan ^{-1}(3\\tan x)+$ constant, then the maximum value of $\\mathrm{a}\\sin x+\\mathrm{b}\\cos x$, is :",
+  "options": [
+   "$\\sqrt{41}$",
+   "$\\sqrt{39}$",
+   "$\\sqrt{40}$",
+   "$\\sqrt{42}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\int \\dfrac{1}{a^{2}\\sin ^{2}x+b^{2}\\cos ^{2}x}dx=\\dfrac{1}{12}\\tan ^{-1}(3\\tan x)+c \\\\ I=\\int \\dfrac{\\sec ^{2}x}{b^{2}+a^{2}\\tan ^{2}x}dx \\\\ \\tan x=t \\\\ \\Rightarrow \\sec ^{2}xdx=dt \\\\ I=\\int \\dfrac{dt}{b^{2}+a^{2}t^{2}} \\\\ =\\dfrac{1}{ba}\\tan ^{-1}\\left (\\dfrac{at}{b}\\right )+c \\\\ I=\\dfrac{1}{ab}\\tan ^{-1}\\left (\\dfrac{a}{b}\\tan x\\right )+c \\\\ \\Rightarrow ab=12\\text{and}\\dfrac{a}{b}=3 \\\\ \\Rightarrow a^{2}=36\\text{and}b^{2}=4 \\\\ \\Rightarrow \\text{Maximum value of}a\\sin x+b\\cos x\\text{is}\\sqrt{a^{2}+b^{2}} \\end{array}$\n\n$=\\sqrt{36+4}$\n\n$=\\sqrt{40}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294xq",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the locus of the point, whose distances from the point $(2,1)$ and $(1,3)$ are in the ratio $5:4$, is $ax^{2}+by^{2}+cxy+dx+ey+170=0$, then the value of $a^{2}+2b+3c+4d+e$ is equal to :",
+  "options": [
+   "37",
+   "$-27$",
+   "437",
+   "5"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\therefore \\dfrac{(h-2)^{2}+(k-1)^{2}}{(h-1)^{2}+(k-3)^{2}}=\\dfrac{25}{16} \\\\ \\dfrac{h^{2}+k^{2}-4h-2k+5}{h^{2}+k^{2}-2h-6k+10}=\\dfrac{25}{16} \\end{array}$\n\nReplacing $h\\to x$ and $k\\to y$.\n\n$\\begin{array}{l} 16x^{2}+16y^{2}-64x-32y+80 \\\\ =25x^{2}+25y^{2}-50x-150y+250 \\\\ 9x^{2}+9y^{2}+14x-118y+170=0 \\\\ \\Rightarrow a=9,b=9,c=0,d=14,e=-118 \\\\ a^{2}+2b+3c+4d+e \\\\ 81+18+56-118 \\\\ \\Rightarrow 37 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb294xq-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb294ya",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $[t]$ denote the greatest integer less than or equal to $t$. Let $f:[0,\\infty )\\to 𝐑$ be a function defined by $f(x)=\\left [\\frac{x}{2}+3\\right ]-[\\sqrt{x}]$. Let $\\mathrm{S}$ be the set of all points in the interval $[0,8]$ at which $f$ is not continuous. Then $\\sum\\limits _{a\\in S}a$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 17.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{ll} f(x) & =\\left [\\dfrac{x}{2}+3\\right ]-[\\sqrt{x}] \\\\ \\qquad =\\left [\\dfrac{x}{2}\\right ]-[\\sqrt{x}]+3 \\end{array}$\n\nCritical points where $f(x)$ might change behaviours when $\\frac{x}{2}\\in$ integer and $\\sqrt{x}\\in$ integer\n\n$\\Rightarrow$ Critical points,\n\n$\\begin{array}{l} f(0)=3 \\\\ f\\left (0^{+}\\right )=3 \\\\ f\\left (1^{-}\\right )=3 \\\\ f\\left (1^{+}\\right )=2 \\\\ f\\left (2^{-}\\right )=2 \\\\ f\\left (2^{+}\\right )=3 \\\\ f\\left (3^{+}\\right )=f\\left (3^{-}\\right )=3=f\\left (4^{+}\\right )=f\\left (4^{-}\\right )=f\\left (5^{+}\\right )=f\\left (5^{-}\\right ) \\\\ f\\left (6^{-}\\right )=3 \\\\ f\\left (6^{+}\\right )=4 \\\\ f\\left (7^{-}\\right )=f\\left (7^{+}\\right )=4 \\\\ f\\left (8^{-}\\right )=4 \\\\ f(8)=5 \\end{array}$\n\n$\\begin{array}{l} \\Rightarrow f(x)\\text{is not continuous at} \\\\ x=1,2,6,8 \\\\ \\Rightarrow \\sum\\limits _{a\\in S}a=1+2+6+8 \\\\ =17 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb294yu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "In a triangle $\\mathrm{ABC},\\mathrm{BC}=7,\\mathrm{AC}=8,\\mathrm{AB}=α\\in \\mathrm{N}$ and $\\cos \\mathrm{A}=\\frac{2}{3}$. If $49\\cos (3\\mathrm{C})+42=\\frac{\\mathrm{m}}{\\mathrm{n}}$, where $\\gcd (m,n)=1$, then $m+n$ is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 39.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 51,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "properties of triangle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\cos A=\\dfrac{2}{3}=\\dfrac{α^{2}+8^{2}-7^{2}}{2\\cdot α\\cdot 8} \\\\ \\Rightarrow \\left (α^{2}+15\\right )3=32α \\\\ 3α^{2}-32α+45=0 \\\\ \\Rightarrow α=\\dfrac{5}{3},9 \\\\ \\because α\\in N\\Rightarrow α=9 \\\\ \\cos C=\\dfrac{7^{2}+8^{2}-9^{2}}{2\\cdot 7\\cdot 8}=\\dfrac{2}{7} \\end{array}$\n\n$\\begin{array}{ll} \\cos 3C & =4\\cos ^{3}C-3\\cos C \\\\ = & \\dfrac{4\\times 8}{7^{3}}-\\dfrac{6}{7} \\\\ 49\\cos 3C & =\\dfrac{32}{7}-42 \\\\ \\Rightarrow \\quad  & 49\\cos 3C+42=\\dfrac{32}{7} \\\\ \\Rightarrow \\quad  & m+n=39 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb294yu-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb294zl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $[t]$ denote the largest integer less than or equal to $t$. If $\\int\\limits _{0}^{3}\\left (\\left [x^{2}\\right ]+\\left [\\frac{x^{2}}{2}\\right ]\\right )\\mathrm{d}x=\\mathrm{a}+\\mathrm{b}\\sqrt{2}-\\sqrt{3}-\\sqrt{5}+\\mathrm{c}\\sqrt{6}-\\sqrt{7}$, where $\\mathrm{a},\\mathrm{b},\\mathrm{c}\\in 𝐙$, then $\\mathrm{a}+\\mathrm{b}+\\mathrm{c}$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 23.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 52,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{0}^{3}\\left (\\left [x^{2}\\right ]+\\left [\\frac{x^{2}}{2}\\right ]\\right )dx=\\int\\limits _{0}^{1}0dx+\\int\\limits _{1}^{\\sqrt{2}}1dx+\\int\\limits _{\\sqrt{2}}^{\\sqrt{3}}3dx+$\n\n$\\begin{array}{l} \\int\\limits _{\\sqrt{3}}^{2}4dx+\\int\\limits _{2}^{\\sqrt{5}}6dx+\\int\\limits _{\\sqrt{5}}^{\\sqrt{6}}7dx+\\int\\limits _{\\sqrt{6}}^{\\sqrt{7}}9dx+\\int\\limits _{\\sqrt{7}}^{\\sqrt{8}}10dx+\\int\\limits _{\\sqrt{8}}^{3}12dx \\\\ =31-6\\sqrt{2}-\\sqrt{3}-\\sqrt{5}-\\sqrt{7}-2\\sqrt{6} \\\\ \\Rightarrow a=31,b=-6,c=-2 \\\\ \\Rightarrow a+b+c=23 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29503",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the solution $y(x)$ of the given differential equation $(e^{y}+1)\\cos x\\mathrm{d}x+\\mathrm{e}^{y}\\sin x\\mathrm{d}y=0$ passes through the point $\\left (\\frac{π}{2},0\\right )$, then the value of $e^{y\\left (\\frac{π}{6}\\right )}$ is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 53,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given the differential equation\n\n$(e^{y}+1)\\cos xdx+e^{y}\\sin xdy=0,$\n\nwe aim to find the value of $e^{y\\left (\\frac{π}{6}\\right )}$ given that the solution $y(x)$ passes through the point $\\left (\\frac{π}{2},0\\right )$.\n\nFirst, we recognize that the differential equation can be rearranged as:\n\n$d(e^{y}\\sin x)+\\cos xdx=0.$\n\nIntegrating this expression, we obtain:\n\n$e^{y}\\sin x+\\sin x=C,$\n\nwhere $C$ is a constant. Given that the solution passes through the point $\\left (\\frac{π}{2},0\\right )$, we substitute these values into the equation to find $C$:\n\n$e^{0}\\sin \\left (\\frac{π}{2}\\right )+\\sin \\left (\\frac{π}{2}\\right )=C\\Rightarrow 1+1=C\\Rightarrow C=2.$\n\nThus, the equation simplifies to:\n\n$e^{y}\\sin x+\\sin x=2.$\n\nWe now need to determine the value of $e^{y\\left (\\frac{π}{6}\\right )}$. Substituting $x=\\frac{π}{6}$ into the equation, we get:\n\n$\\left (e^{y\\left (\\frac{π}{6}\\right )}+1\\right )\\cdot \\sin \\left (\\frac{π}{6}\\right )=2.$\n\nSince $\\sin \\left (\\frac{π}{6}\\right )=\\frac{1}{2}$, the equation becomes:\n\n$\\left (e^{y\\left (\\frac{π}{6}\\right )}+1\\right )\\cdot \\frac{1}{2}=2\\Rightarrow e^{y\\left (\\frac{π}{6}\\right )}+1=4\\Rightarrow e^{y\\left (\\frac{π}{6}\\right )}=3.$\n\nTherefore, the value of $e^{y\\left (\\frac{π}{6}\\right )}$ is $3$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29516",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the shortest distance between the lines $\\frac{x-λ}{3}=\\frac{y-2}{-1}=\\frac{z-1}{1}$ and $\\frac{x+2}{-3}=\\frac{y+5}{2}=\\frac{z-4}{4}$ is $\\frac{44}{\\sqrt{30}}$, then the largest possible value of $|λ|$ is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 43.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 54,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} L_{1}:\\dfrac{x-λ}{3}=\\dfrac{y-2}{-1}=\\dfrac{z-1}{1} \\\\ L_{2}:\\dfrac{x+2}{-3}=\\dfrac{y+5}{2}=\\dfrac{z-4}{4} \\end{array}$\n\n$\\begin{array}{lllllll} n_{1}\\times n_{2}=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 3 & -1 & 1 \\\\ -3 & 2 & 4 \\end{array}\\right | \\\\ =-6\\hat{i}-15\\hat{j}+3\\hat{k} \\\\ d=\\left |\\dfrac{[(λ+2)\\hat{i}+7\\hat{j}-3\\hat{k}][-6\\hat{i}-15\\hat{j}+3\\hat{k}]}{|-6\\hat{i}-15\\hat{j}+3\\hat{k}|}\\right |=\\dfrac{44}{\\sqrt{30}} \\\\ \\left |\\dfrac{-6λ-12-105-9}{\\sqrt{270}}\\right |=\\dfrac{44}{\\sqrt{30}} \\\\ |6λ+126|=132 \\\\ |λ+21|=22 \\\\ λ+21=\\pm 22 \\\\ |λ|_{\\max }=43 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb2951p",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The length of the latus rectum and directrices of hyperbola with eccentricity e are 9 and $x=\\pm \\frac{4}{\\sqrt{13}}$, respectively. Let the line $y-\\sqrt{3}x+\\sqrt{3}=0$ touch this hyperbola at $(x_{0},y_{0})$. If $\\mathrm{m}$ is the product of the focal distances of the point $(x_{0},y_{0})$, then $4\\mathrm{e}^{2}+\\mathrm{m}$ is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 61.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 55,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$y=mx\\pm \\sqrt{a^{2}m^{2}-b^{2}}$ is the tangent\n\n$\\begin{array}{l} \\Rightarrow m=\\sqrt{3}\\Rightarrow a^{2}m^{2}-b^{2}=3 \\\\ \\Rightarrow 3a^{2}-b^{2}=3 \\end{array}$\n\n$\\begin{array}{l} \\dfrac{2b^{2}}{a}=9\\Rightarrow b^{2}=\\dfrac{9a}{2}\\Rightarrow 3a^{2}-\\dfrac{9a}{2}=3 \\\\ \\Rightarrow a^{2}-\\dfrac{3}{2}a-1=0 \\\\ \\Rightarrow a=2\\text{or}-0.5\\text{(ignore)} \\\\ \\Rightarrow b=3 \\\\ \\Rightarrow \\dfrac{x^{2}}{4}-\\dfrac{y^{2}}{9}=1 \\\\ \\Rightarrow \\text{Solving hyperbola and tangent}y=\\sqrt{3}x-\\sqrt{3} \\\\ x_{0}=4,y_{0}=3\\sqrt{3},e=\\sqrt{1+\\dfrac{9}{4}}=\\dfrac{\\sqrt{13}}{2} \\\\ PF_{1}\\cdot PF_{2}= \\\\ \\sqrt{(4-\\sqrt{13})^{2}+(3\\sqrt{3})^{2}}\\sqrt{(4+\\sqrt{13})^{2}+(3\\sqrt{3})^{2}} \\\\ =\\sqrt{(56-8\\sqrt{13})(56+8\\sqrt{13})} \\\\ =\\sqrt{2304}=48=m \\\\ \\Rightarrow 4e^{2}+m=13+48=61 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb2951p-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb2952b",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $α,β$ be roots of $x^{2}+\\sqrt{2}x-8=0$. If $\\mathrm{U}_{\\mathrm{n}}=α^{\\mathrm{n}}+β^{\\mathrm{n}}$, then $\\frac{\\mathrm{U}_{10}+\\sqrt{2}\\mathrm{U}_{9}}{2\\mathrm{U}_{8}}$ is equal to $________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 56,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since $α$ and $β$ are roots of $x^{2}+\\sqrt{2}x-8=0$,\n\n$α^{2}+\\sqrt{2}α=8,β^{2}+\\sqrt{2}β=8.$\n\nMultiplying the first by $α^{8}$ and the second by $β^{8}$:\n\n$α^{10}+\\sqrt{2}α^{9}=8α^{8},β^{10}+\\sqrt{2}β^{9}=8β^{8}.$\n\nAdding the two,\n\n$U_{10}+\\sqrt{2}U_{9}=8U_{8}.$\n\nTherefore\n\n$\\frac{U_{10}+\\sqrt{2}U_{9}}{2U_{8}}=\\frac{8U_{8}}{2U_{8}}=4.$\n\nHence, the answer is 4.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29535",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the system of equations\n\n$\\begin{array}{l} 2x+7y+λz=3 \\\\ 3x+2y+5z=4 \\\\ x+μy+32z=-1 \\end{array}$\n\nhas infinitely many solutions, then $(λ-μ)$ is equal to $______$ :",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 38.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 57,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine if the system of equations:\n\n$\\begin{array}{l} 2x+7y+λz=3 \\\\ 3x+2y+5z=4 \\\\ x+μy+32z=-1 \\end{array}$\n\nhas infinitely many solutions, we must use Cramer's rule.\n\nThe determinants are calculated as follows:\n\n$\\begin{array}{ll} \\Delta  & =-2λ+3λμ-10μ-509 \\\\ \\Delta _{1} & =2λ+3λμ-15μ-739 \\\\ \\Delta _{2} & =-7λ-7 \\\\ \\Delta _{3} & =μ+39 \\end{array}$\n\nTo have infinitely many solutions, the determinants must satisfy:\n\n$\\begin{array}{l} \\Delta =\\Delta _{1}=\\Delta _{2}=\\Delta _{3}=0 \\end{array}$\n\nSolving these equations, we find:\n\n$λ=-1,μ=-39$\n\nThus, the value of $λ-μ$ is:\n\n$λ-μ=38$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb2953r",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\mathrm{S}(x)=(1+x)+2(1+x)^{2}+3(1+x)^{3}+\\cdots +60(1+x)^{60},x\\neq 0$, and $(60)^{2}\\mathrm{S}(60)=\\mathrm{a}(\\mathrm{b})^{\\mathrm{b}}+\\mathrm{b}$, where $a,b\\in N$, then $(a+b)$ equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3660.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 58,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} (-x)(S(x))=\\dfrac{(1+x)\\left [(1+x)^{60}-1\\right ]}{(1+x-1)}-60(1+x)^{61} \\\\ (-x)S(x)=\\dfrac{(1+x)\\left [(1+x)^{60}-1\\right ]}{x}-60(1+x)^{61} \\\\ xS(x)=60(1+x)^{61}-\\dfrac{(1+x)\\left [(1+x)^{60}-1\\right ]}{x} \\end{array}$\n\nMultiplying $x$ on both side,\n\n$x^{2}S(x)=60x(1+x)^{61}-(1+x)\\left [(1+x)^{60}-1\\right ]$\n\nPutting $x=60$\n\n$\\begin{array}{l} (60)^{2}S(60)=60\\times 60(61)^{61}-(61)\\left [61^{60}-1\\right ] \\\\ =60\\times 60(61)^{61}-(61)\\cdot 61^{60}+61 \\\\ =(61)^{61}[60\\times 60-1]+61 \\\\ =(3600-1)\\cdot 61^{61}+61 \\\\ a=3600-1,b=61\\Rightarrow a+b=3660 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb2953r-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb2954k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "From a lot of 12 items containing 3 defectives, a sample of 5 items is drawn at random. Let the random variable $X$ denote the number of defective items in the sample. Let items in the sample be drawn one by one without replacement. If variance of $X$ is $\\frac{m}{n}$, where $\\gcd (m,n)=1$, then $n-m$ is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 71.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 59,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given a lot of 12 items, 3 are defective.\n\nGood items, $12-3=9$\n\nLet $X$ denote the number of defective items.\n\nSo, value of $X=0,1,2,3$\n\nA sample of $S$ items is drawn.\n\n$P(X=0)=GGGGG$\n\n(here $G$ is good item and $d$ is defective)\n\n$\\begin{array}{l} \\dfrac{9}{12}\\cdot \\dfrac{8}{11}\\cdot \\dfrac{7}{10}\\cdot \\dfrac{6}{9}\\cdot \\dfrac{5}{8}=\\dfrac{21}{132}=\\dfrac{7}{44} \\\\ P(X=1)=5\\left [\\dfrac{9\\cdot 8\\cdot 7\\cdot 6\\cdot 3}{12\\cdot 11\\cdot 10\\cdot 9\\cdot 8}\\right ]=\\dfrac{21}{44} \\\\ P(X=2)=5\\left [\\dfrac{9\\cdot 8\\cdot 7\\cdot 3\\cdot 2}{12\\cdot 11\\cdot 10\\cdot 9\\cdot 8}\\right ]=\\dfrac{14}{44} \\\\ P(X=3)=5\\left [\\dfrac{3\\cdot 2\\cdot 1\\cdot 9\\cdot 8}{12\\cdot 11\\cdot 10\\cdot 9\\cdot 8}\\right ]=\\dfrac{2}{44} \\\\ P(X=4)=0 \\\\ P(X=5)=0 \\end{array}$\n\n  \n    $X$\n    0\n    1\n    2\n    3\n    4\n    5\n  \n\n  \n    $P(X)$\n    $\\frac{7}{44}$\n    $\\frac{21}{44}$\n    $\\frac{14}{44}$\n    $\\frac{2}{44}$\n    0\n    0\n  \n  \n    $XP(X)$\n    0\n    $\\frac{21}{44}$\n    $\\frac{28}{44}$\n    $\\frac{6}{44}$\n    0\n    0\n  \n  \n    $X^{2}P(X)$\n    0\n    $\\frac{21}{44}$\n    $\\frac{56}{44}$\n    $\\frac{18}{44}$\n    0\n    0\n  \n\n$\\begin{array}{l} σ_{x}^{2}=\\sum X^{2}P(x)-\\left (\\sum xP(x)\\right )^{2} \\\\ =\\dfrac{95}{44}-\\left (\\dfrac{55}{44}\\right )^{2} \\\\ =\\dfrac{4180-3025}{1936}=\\dfrac{1155}{1936}=\\dfrac{105}{176}=\\dfrac{m}{n} \\\\ =n-m=71 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

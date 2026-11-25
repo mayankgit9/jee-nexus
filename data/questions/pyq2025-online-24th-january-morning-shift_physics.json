@@ -1,0 +1,1034 @@
+[
+ {
+  "publicId": "PYQ-2025-m6ulviyk",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An object of mass ' m ' is projected from origin in a vertical xy plane at an angle $45^{\\circ }$ with the $\\mathrm{x}-$ axis with an initial velocity $\\mathrm{v}_{0}$. The magnitude and direction of the angular momentum of the object with respect to origin, when it reaches at the maximum height, will be [ g is acceleration due to gravity]",
+  "options": [
+   "$\\frac{mv_{o}{}^{3}}{2\\sqrt{2}g}$ along negative $z$-axis",
+   "$\\frac{mv_{o}^{3}}{2\\sqrt{2}g}$ along positive $z$-axis",
+   "$\\frac{mv_{o}^{3}}{4\\sqrt{2}g}$ along positive $z$-axis",
+   "$\\frac{mv_{o}^{3}}{4\\sqrt{2}g}$ along negative z-axis"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 51,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$⃗{v_{0}}=\\frac{v_{0}}{\\sqrt{2}}\\hat{i}+\\frac{v_{0}}{\\sqrt{2}}\\hat{j}.$\n\nAt maximum height, the vertical component of the velocity becomes zero. Setting the vertical velocity to zero:\n\n$\\frac{v_{0}}{\\sqrt{2}}-gt=0⟹t=\\frac{v_{0}}{g\\sqrt{2}}.$\n\nThe coordinates at this time are:\n\n$x=\\frac{v_{0}}{\\sqrt{2}}t=\\frac{v_{0}}{\\sqrt{2}}\\cdot \\frac{v_{0}}{g\\sqrt{2}}=\\frac{v_{0}^{2}}{2g},$\n\n$y=\\frac{v_{0}}{\\sqrt{2}}t-\\frac{1}{2}gt^{2}=\\frac{v_{0}^{2}}{2g}-\\frac{1}{2}g\\frac{v_{0}^{2}}{2g^{2}}=\\frac{v_{0}^{2}}{2g}-\\frac{v_{0}^{2}}{4g}=\\frac{v_{0}^{2}}{4g}.$\n\nThus, the position vector at maximum height is:\n\n$⃗{r}=\\frac{v_{0}^{2}}{2g}\\hat{i}+\\frac{v_{0}^{2}}{4g}\\hat{j}.$\n\nAt maximum height, the only nonzero component of velocity is the horizontal one:\n\n$⃗{v}=\\frac{v_{0}}{\\sqrt{2}}\\hat{i}.$\n\nThe angular momentum about the origin is given by:\n\n$⃗{L}=m⃗{r}\\times ⃗{v}.$\n\nWriting out the cross product:\n\n$⃗{r}\\times ⃗{v}=\\left (\\frac{v_{0}^{2}}{2g}\\hat{i}+\\frac{v_{0}^{2}}{4g}\\hat{j}\\right )\\times \\frac{v_{0}}{\\sqrt{2}}\\hat{i}.$\n\nSince the cross product of $\\hat{i}$ with itself is zero and:\n\n$\\hat{j}\\times \\hat{i}=-\\hat{k},$\n\nwe have:\n\n$⃗{r}\\times ⃗{v}=\\frac{v_{0}^{2}}{4g}\\cdot \\frac{v_{0}}{\\sqrt{2}}(-\\hat{k})=-\\frac{v_{0}^{3}}{4\\sqrt{2}g}\\hat{k}.$\n\nThus, the angular momentum is:\n\n$⃗{L}=-\\frac{mv_{0}^{3}}{4\\sqrt{2}g}\\hat{k}.$\n\nThis means the magnitude is:\n\n$\\frac{mv_{0}^{3}}{4\\sqrt{2}g},$\n\nand its direction is along the negative $\\hat{k}$ (or negative $z$-axis).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvppo",
+  "subjectKey": "physics",
+  "chapterKey": "physics:wave-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The Young's double slit interference experiment is performed using light consisting of 480 nm and 600 nm wavelengths to form interference patterns. The least number of the bright fringes of 480 nm light that are required for the first coincidence with the bright fringes formed by 600 nm light is",
+  "options": [
+   "8",
+   "4",
+   "5",
+   "6"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 52,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "wave optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$d\\sin θ=mλ$\n\nFor two wavelengths, $λ_{1}=600\\text{nm}$ and $λ_{2}=480\\text{nm}$, the bright fringes coincide when the conditions\n\n$mλ_{2}=nλ_{1}$\n\nare simultaneously satisfied for integers $m$ and $n$, representing the bright fringe order for each wavelength.\n\nRearranging the equation gives:\n\n$\\frac{m}{n}=\\frac{λ_{1}}{λ_{2}}=\\frac{600}{480}=\\frac{5}{4}$\n\nThus, the smallest positive integers that satisfy this ratio are:\n\n$m=5\\text{and}n=4.$\n\nThis means the first coincidence of the bright fringes occurs at the 5th bright fringe for the 480 nm light.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulv97p",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "What is the relative decrease in focal length of a lens for an increase in optical power by 0.1 D from 2.5D ? ['D' stands for dioptre]",
+  "options": [
+   "0.04",
+   "0.1",
+   "0.40",
+   "0.01"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 53,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$P_{1}=2.5D,f_{1}=\\frac{1}{P_{1}}=\\frac{1}{2.5}=0.4m$\n\nAfter an increase in optical power by 0.1 D:\n\n$P_{2}=2.5D+0.1D=2.6D,f_{2}=\\frac{1}{P_{2}}=\\frac{1}{2.6}\\approx 0.3846m$\n\nThe change in focal length is:\n\n$\\Delta f=f_{1}-f_{2}=0.4m-0.3846m\\approx 0.0154m$\n\nThe relative decrease in focal length is then calculated as:\n\n$\\text{Relative decrease}=\\frac{\\Delta f}{f_{1}}=\\frac{0.0154}{0.4}\\approx 0.0385\\approx 0.04$\n\nThus, the relative decrease in focal length is approximately 0.04.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvj6d",
+  "subjectKey": "physics",
+  "chapterKey": "physics:laws-of-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A car of mass ' $m$ ' moves on a banked road having radius ' $r$ ' and banking angle $θ$. To avoid slipping from banked road, the maximum permissible speed of the car is $v_{0}$. The coefficient of friction $μ$ between the wheels of the car and the banked road is",
+  "options": [
+   "$μ=\\frac{v_{0}^{2}+rg\\tan θ}{rg+v_{0}^{2}\\tan θ}$",
+   "$μ=\\frac{v_{0}^{2}-rg\\tan θ}{\\mathrm{rg}-\\mathrm{v}_{\\mathrm{o}}^{2}\\tan θ}$",
+   "$μ=\\frac{v_{0}^{2}-rg\\tan θ}{rg+v_{0}^{2}\\tan θ}$",
+   "$μ=\\frac{v_{o}^{2}+rg\\tan θ}{rg-v_{o}^{2}\\tan θ}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 54,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circular motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "At the maximum permissible speed the car tends to slide up the banked road, so limiting friction $μN$ acts down the incline. The other forces are the normal reaction $N$, perpendicular to the road, and the weight $mg$.\n\nVertical equilibrium:\n\n$N\\cos θ-μN\\sin θ=mg$\n\nThe net horizontal force, towards the centre of the turn, is the centripetal force:\n\n$N\\sin θ+μN\\cos θ=\\dfrac{mv_{0}^{2}}{r}$\n\nDividing the second equation by the first, then dividing numerator and denominator by $\\cos θ$:\n\n$\\dfrac{v_{0}^{2}}{rg}=\\dfrac{\\tan θ+μ}{1-μ\\tan θ}$\n\n$v_{0}^{2}-μv_{0}^{2}\\tan θ=rg\\tan θ+μrg\\Rightarrow μ\\left (rg+v_{0}^{2}\\tan θ\\right )=v_{0}^{2}-rg\\tan θ$\n\n$μ=\\dfrac{v_{0}^{2}-rg\\tan θ}{rg+v_{0}^{2}\\tan θ}$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvj2v",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "During the transition of electron from state A to state C of a Bohr atom, the wavelength of emitted radiation is $2000A^{o}$ and it becomes $6000A^{o}$ when the electron jumps from state B to state C. Then the wavelength of the radiation emitted during the transition of electrons from state A to state B is",
+  "options": [
+   "$4000A^{o}$",
+   "$6000A^{o}$",
+   "$2000A^{o}$",
+   "$3000A^{o}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 55,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{1}{λ_{AC}}=\\frac{E_{A}-E_{C}}{hc},\\frac{1}{λ_{BC}}=\\frac{E_{B}-E_{C}}{hc}$\n\nSince the electron transitions from state A to state C in two steps (A to B and then B to C), the energy difference for the transition from A to B is given by\n\n$E_{A}-E_{B}=(E_{A}-E_{C})-(E_{B}-E_{C})$\n\nExpressing these energy differences in terms of wavelengths,\n\n$\\frac{hc}{λ_{AB}}=\\frac{hc}{λ_{AC}}-\\frac{hc}{λ_{BC}}$\n\nCancelling out $hc$, we obtain\n\n$\\frac{1}{λ_{AB}}=\\frac{1}{λ_{AC}}-\\frac{1}{λ_{BC}}$\n\nSubstitute the given values:\n\n$\\frac{1}{λ_{AB}}=\\frac{1}{2000}-\\frac{1}{6000}$\n\nFinding a common denominator:\n\n$\\frac{1}{λ_{AB}}=\\frac{3-1}{6000}=\\frac{2}{6000}=\\frac{1}{3000}$\n\nThus, the wavelength for the A to B transition is\n\n$λ_{AB}=3000\\mathring{A}.$\n\nThis matches Option D.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulv9b8",
+  "subjectKey": "physics",
+  "chapterKey": "physics:gravitation",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A satellite is launched into a circular orbit of radius ' R ' around the earth. A second satellite is launched into an orbit of radius 1.03 R . The time period of revolution of the second satellite is larger than the first one approximately by",
+  "options": [
+   "$3%$",
+   "$2.5%$",
+   "$4.5%$",
+   "$9%$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 56,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "gravitation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T\\propto R^{\\frac{3}{2}}$\n\nFor a satellite in a circular orbit with radius $R$, the time period is given by\n\n$T=2π\\sqrt{\\frac{R^{3}}{GM}}.$\n\nIf the radius is increased to $1.03R$, the new time period $T^{'}$ becomes\n\n$T^{'}=2π\\sqrt{\\frac{(1.03R)^{3}}{GM}}=T\\times (1.03)^{\\frac{3}{2}}.$\n\nFor a small change, we can approximate\n\n$(1.03)^{\\frac{3}{2}}\\approx 1+\\frac{3}{2}\\times 0.03=1+0.045=1.045.$\n\nThis means the new time period is approximately 4.5% larger than the original time period.\n\nThus, the time period of the second satellite is larger by approximately 4.5%.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvdmg",
+  "subjectKey": "physics",
+  "chapterKey": "physics:oscillations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A particle is executing simple harmonic motion with time period 2 s and amplitude 1 cm . If D and d are the total distance and displacement covered by the particle in 12.5 s , then $\\frac{\\mathrm{D}}{\\mathrm{d}}$ is",
+  "options": [
+   "$10$",
+   "$\\frac{16}{5}$",
+   "$25$",
+   "$\\frac{15}{4}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 57,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "simple harmonic motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x(t)=\\cos (πt)$\n\nThe particle executes simple harmonic motion (SHM) with amplitude $A=1\\text{cm}$ and period $T=2\\text{s}$. In one complete cycle (2 s), the motion is as follows:\n\nIt starts at $x=1\\text{cm}$.\n\nIt moves to $x=-1\\text{cm}$ (covering a distance of $2\\text{cm}$).\n\nIt returns to $x=1\\text{cm}$ (covering another $2\\text{cm}$).\n\nThus, the total distance traveled in one complete cycle is:\n\n$D_{\\text{cycle}}=2+2=4\\text{cm}.$\n\nIn 12.5 s, the number of cycles is:\n\n$\\frac{12.5}{2}=6.25\\text{cycles}.$\n\nFor the 6 complete cycles (12 s), the distance traveled is:\n\n$D_{\\text{complete}}=6\\times 4=24\\text{cm}.$\n\nFor the remaining 0.5 s, determine the displacement. At $t=12\\text{s}$, the particle is at:\n\n$x(12)=\\cos (12π)=1\\text{cm}.$\n\nAfter an extra 0.5 s (i.e., at $t=12.5\\text{s}$), the position becomes:\n\n$x(12.5)=\\cos (12.5π)=\\cos \\left (12π+\\frac{π}{2}\\right )=\\cos \\frac{π}{2}=0\\text{cm}.$\n\nThe distance covered in this interval is:\n\n$D_{\\text{extra}}=|1-0|=1\\text{cm}.$\n\nSo, the total distance traveled is:\n\n$D=D_{\\text{complete}}+D_{\\text{extra}}=24+1=25\\text{cm}.$\n\nThe net displacement, which is the difference between the final and initial positions, is calculated as follows:\n\nInitial position at $t=0$:\n\n$x(0)=\\cos 0=1\\text{cm},$\n\nFinal position at $t=12.5\\text{s}$:\n\n$x(12.5)=0\\text{cm}.$\n\nThus, the displacement is:\n\n$d=|0-1|=1\\text{cm}.$\n\nThe ratio of the total distance traveled to the displacement is:\n\n$\\frac{D}{d}=\\frac{25}{1}=25.$\n\nTherefore, the correct answer is $25$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvdvr",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An air bubble of radius 0.1 cm lies at a depth of 20 cm below the free surface of a liquid of density $1000\\mathrm{kg}/\\mathrm{m}^{3}$. If the pressure inside the bubble is $2100\\mathrm{N}/\\mathrm{m}^{2}$ greater than the atmospheric pressure, then the surface tension of the liquid in SI unit is (use $g=10\\mathrm{m}/\\mathrm{s}^{2}$ )",
+  "options": [
+   "0.02",
+   "0.05",
+   "0.25",
+   "0.1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 58,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$P_{\\text{bubble}}=P_{\\text{atm}}+ρgh+\\frac{2S}{r}$\n\nGiven that the pressure inside the bubble is $P_{\\text{atm}}+2100\\text{N/m}^{2}$ and the liquid pressure at a depth of 20 cm is\n\n$P_{\\text{liquid}}=P_{\\text{atm}}+ρgh=P_{\\text{atm}}+1000\\times 10\\times 0.20=P_{\\text{atm}}+2000\\text{N/m}^{2},$\n\nthe pressure difference due solely to surface tension is\n\n$\\Delta P=\\left (P_{\\text{bubble}}-P_{\\text{liquid}}\\right )=\\left (P_{\\text{atm}}+2100\\right )-\\left (P_{\\text{atm}}+2000\\right )=100\\text{N/m}^{2}.$\n\nThe Laplace pressure difference for a bubble (which has one interface) is given by\n\n$\\Delta P=\\frac{2S}{r}.$\n\nThe given bubble radius is 0.1 cm, which in SI units is\n\n$r=0.1\\text{cm}=0.001\\text{m}.$\n\nSubstituting the known values into the Laplace equation gives\n\n$\\frac{2S}{0.001}=100.$\n\nSolving for $S$:\n\n$2S=100\\times 0.001=0.1,$\n\n$S=\\frac{0.1}{2}=0.05\\text{N/m}.$\n\nThus, the surface tension of the liquid is\n\n$0.05\\text{N/m}.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvdpp",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An ideal gas goes from an initial state to final state. During the process, the pressure of gas increases linearly with temperature.\n\nA. The work done by gas during the process is zero.\n\nB. The heat added to gas is different from change in its internal energy.\n\nC. The volume of the gas is increased.\n\nD. The internal energy of the gas is increased.\n\nE. The process is isochoric (constant volume process)\n\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, C Only",
+   "A, D, E Only",
+   "E Only",
+   "A, B, C, D Only"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 59,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For an ideal gas, the equation of state is given by\n\n$pV=nRT.$\n\nIf during a process the pressure increases linearly with temperature (i.e., $p\\propto T$), then from the ideal gas law (with a fixed amount of gas, $n$, and with the gas constant, $R$), it follows that\n\n$\\frac{p}{T}=\\frac{nR}{V}.$\n\nSince $nR$ is constant, a linear relationship between $p$ and $T$ implies that $\\frac{p}{T}$ remains constant throughout the process. This can only be true if the volume $V$ is constant. Hence, the process is isochoric.\n\nFor an isochoric (constant volume) process:\n\nThe work done by the gas is given by\n\n$W=\\int pdV,$\n\nand since $dV=0$, we have $W=0.$ (Statement A is true.)\n\nThe internal energy change for an ideal gas depends only on temperature:\n\n$\\Delta U=nC_{V}\\Delta T.$\n\nIf the temperature increases, then $\\Delta U>0.$ (Statement D is true.)\n\nFor an isochoric process, no expansion work is done, so any heat added goes entirely into increasing the internal energy. This means the heat added is not different from the change in internal energy (in fact, $Q=\\Delta U$). (Statement B is false.)\n\nSince the process is isochoric, the volume does not change (and certainly is not increased). (Statement C is false, and Statement E stating it is isochoric is true.)\n\nThus, the correct true statements are A, D, and E.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulv8zy",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider a parallel plate capacitor of area A (of each plate) and separation ' $d$ ' between the plates. If $E$ is the electric field and $ε_{0}$ is the permittivity of free space between the plates, then potential energy stored in the capacitor is",
+  "options": [
+   "$ε_{0}\\mathrm{E}^{2}\\mathrm{Ad}$",
+   "$\\frac{3}{4}ε_{0}\\mathrm{E}^{2}\\mathrm{Ad}$",
+   "$\\frac{1}{4}ε_{0}\\mathrm{E}^{2}\\mathrm{Ad}$",
+   "$\\frac{1}{2}ε_{0}\\mathrm{E}^{2}\\mathrm{Ad}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 60,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "capacitor"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$u=\\frac{1}{2}ε_{0}E^{2}$\n\nThe energy density of an electric field in free space is given by the expression above. For a parallel plate capacitor with plate area $A$ and separation $d$, the volume between the plates is\n\n$V=Ad.$\n\nMultiplying the energy density by the volume gives the total energy stored:\n\n$U=u\\times V=\\frac{1}{2}ε_{0}E^{2}\\times Ad=\\frac{1}{2}ε_{0}E^{2}Ad.$\n\nThus, the potential energy stored in the capacitor is\n\n$\\frac{1}{2}ε_{0}E^{2}Ad.$\n\nThis corresponds to the option:\n\n$\\text{Option D:}\\frac{1}{2}ε_{0}E^{2}Ad.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvpu4",
+  "subjectKey": "physics",
+  "chapterKey": "physics:work-energy-power",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A force $\\mathrm{F}=α+β\\mathrm{x}^{2}$ acts on an object in the x -direction. The work done by the force is 5 J when the object is displaced by 1 m . If the constant $α=1\\mathrm{N}$ then $β$ will be",
+  "options": [
+   "$15\\mathrm{N}/\\mathrm{m}^{2}$",
+   "$10\\mathrm{N}/\\mathrm{m}^{2}$",
+   "$12\\mathrm{N}/\\mathrm{m}^{2}$",
+   "$8\\mathrm{N}/\\mathrm{m}^{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 61,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "work power and energy"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The work done by a force is given by the integral of the force over the displacement. The force is given by:\n\n$F(x)=α+βx^{2}$\n\nTo find the work done when the object is displaced from $x=0$ to $x=1$, we compute:\n\n$W=\\int\\limits _{0}^{1}(α+βx^{2})dx$\n\nSubstituting $α=1\\text{N}$:\n\n$W=\\int\\limits _{0}^{1}(1+βx^{2})dx=\\int\\limits _{0}^{1}1dx+\\int\\limits _{0}^{1}βx^{2}dx$\n\nCalculating each integral separately:\n\n$\\int\\limits _{0}^{1}1dx=[x]_{0}^{1}=1$\n\n$\\int\\limits _{0}^{1}βx^{2}dx=β\\left [\\frac{x^{3}}{3}\\right ]_{0}^{1}=β\\left [\\frac{1^{3}}{3}-\\frac{0^{3}}{3}\\right ]=\\frac{β}{3}$\n\nThus, the total work done is:\n\n$W=1+\\frac{β}{3}$\n\nWe are given that the work done is 5 J, so:\n\n$1+\\frac{β}{3}=5$\n\nSubtract 1 from both sides:\n\n$\\frac{β}{3}=4$\n\nMultiply both sides by 3 to solve for $β$:\n\n$β=12\\text{N/m}^{2}$\n\nTherefore, the value of $β$ is $12\\quad \\text{N/m}^{2}$. Thus, Option C $12\\quad \\text{N/m}^{2}$ is the correct answer.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvizl",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electronic-devices",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider the following statements :\n\nA. The junction area of solar cell is made very narrow compared to a photo diode.\n\nB. Solar cells are not connected with any external bias.\n\nC. LED is made of lightly doped p-n junction.\n\nD. Increase of forward current results in continuous increase of LED light intensity.\n\nE. LEDs have to be connected in forward bias for emission of light.\n\nChoose the correct answer from the options given below :",
+  "options": [
+   "A, C, E Only",
+   "B, E Only",
+   "A, C Only",
+   "B, D, E Only"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 62,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electronic devices"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Statement A: The junction area of solar cell is made very narrow compared to a photo diode.\n\nLet's think about the purpose of a solar cell. Its main job is to collect as much sunlight as possible to generate electricity.\n\nTo collect more light, it needs a larger surface area. Therefore, the $p-n$ junction of a solar cell is made with a very large area (typically a few square centimeters).\n\nThis statement says the area is narrow, which is the opposite. So, statement A is Incorrect.\n\nStatement B: Solar cells are not connected with any external bias.\n\nRemember, a solar cell is like a small battery. It generates an electromotive force (e.m.f.) or voltage when light shines on it. It gives power; it doesn't take power from an external battery to work.\n\nWe don't apply any external bias to it. We simply connect a load, like a bulb, across it to use the electricity it produces.\n\nSo, statement B is Correct.\n\nStatement C: LED is made of lightly doped p-n junction.\n\nAn LED (Light Emitting Diode) works by the recombination of electrons and holes at the junction. To get bright light, we need a very high rate of recombination.\n\nA high rate of recombination is only possible if there are a large number of electrons on the n-side and holes on the p-side.\n\nTo achieve this high concentration of charge carriers, the $p-n$ junction of an LED is heavily doped, not lightly doped.\n\nSo, statement C is Incorrect.\n\nStatement D: Increase of forward current results in continuous increase of LED light intensity.\n\nIt is true that the intensity of light from an LED increases as we increase the forward current. More current means more electrons and holes are crossing the junction and recombining per second, which produces more light.\n\nHowever, we cannot increase the current indefinitely. Every LED has a maximum current rating mentioned by the manufacturer. If we pass a current higher than this safe limit, the LED will overheat and get permanently damaged.\n\nSo, the increase is not \"continuous\" without any limit.\n\nTherefore, this statement is Incorrect.\n\nStatement E: LEDs have to be connected in forward bias for emission of light.\n\nThis is the basic condition for an LED to work. When we connect it in forward bias, the potential barrier at the junction is lowered.\n\nThis allows the majority carriers to flow across the junction and recombine. This recombination process releases energy in the form of light (photons).\n\nIn reverse bias, the barrier height increases, very little current flows, and no light is emitted.\n\nSo, statement E is Correct.\n\nFinal Conclusion:\n\nBased on our step-by-step analysis, the only correct statements are B and E.\n\nLooking at the options provided:\n\nOption A: A, C, E Only\n\nOption B: B, E Only\n\nOption C: A, C Only\n\nOption D: B, D, E Only\n\nThus, the correct choice is Option B.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvj8c",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A parallel plate capacitor was made with two rectangular plates, each with a length of $l=3\\mathrm{cm}$ and breadth of $\\mathrm{b}=1\\mathrm{cm}$. The distance between the plates is $3μ\\mathrm{m}$. Out of the following, which are the ways to increase the capacitance by a factor of 10 ?\n\nA. $l=30\\mathrm{cm},\\mathrm{b}=1\\mathrm{cm},\\mathrm{d}=1μ\\mathrm{m}$\n\nB. $l=3\\mathrm{cm},\\mathrm{b}=1\\mathrm{cm},\\mathrm{d}=30μ\\mathrm{m}$\n\nC. $l=6\\mathrm{cm},\\mathrm{b}=5\\mathrm{cm},\\mathrm{d}=3μ\\mathrm{m}$\n\nD. $l=1\\mathrm{cm},\\mathrm{b}=1\\mathrm{cm},\\mathrm{d}=10μ\\mathrm{m}$\n\nE. $l=5\\mathrm{cm},\\mathrm{b}=2\\mathrm{cm},\\mathrm{d}=1μ\\mathrm{m}$\n\nChoose the correct answer from the options given below:",
+  "options": [
+   "C only",
+   "A only",
+   "B and D only",
+   "C and E only"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 63,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "capacitor"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The capacitance of a parallel plate capacitor is given by\n\n$C=\\frac{𝜖_{0}A}{d},$\n\nwhere:  \n\n$𝜖_{0}$ is the permittivity of free space,  \n\n$A$ is the area of a plate, and  \n\n$d$ is the separation between the plates.\n\nA change in the capacitor’s dimensions will change its capacitance by a factor of\n\n$\\frac{C_{\\text{new}}}{C_{\\text{initial}}}=\\frac{A_{\\text{new}}}{A_{\\text{initial}}}\\cdot \\frac{d_{\\text{initial}}}{d_{\\text{new}}}.$\n\nThe initial dimensions are:  \n\nLength: $l=3\\text{cm}=0.03\\text{m},$  \n\nBreadth: $b=1\\text{cm}=0.01\\text{m},$  \n\nHence, the original area is \n\n$A_{\\text{initial}}=0.03\\times 0.01=3\\times 10^{-4}\\text{m}^{2},$  \n\nPlate separation: $d_{\\text{initial}}=3μ\\text{m}=3\\times 10^{-6}\\text{m}.$\n\nFor each modification, we compare the new factor:\n\nCase C:  \n\nNew dimensions:  \n\n$l=6\\text{cm}=0.06\\text{m},b=5\\text{cm}=0.05\\text{m}.$  \n\nNew area:  \n\n$A_{\\text{new}}=0.06\\times 0.05=3\\times 10^{-3}\\text{m}^{2}.$\n\nRatio of areas:  \n\n$\\frac{A_{\\text{new}}}{A_{\\text{initial}}}=\\frac{3\\times 10^{-3}}{3\\times 10^{-4}}=10.$\n\nThe plate separation is unchanged:  \n\n$\\frac{d_{\\text{initial}}}{d_{\\text{new}}}=\\frac{3\\times 10^{-6}}{3\\times 10^{-6}}=1.$\n\nOverall factor:  \n\n$10\\times 1=10.$\n\nCase E:  \n\nNew dimensions:  \n\n$l=5\\text{cm}=0.05\\text{m},b=2\\text{cm}=0.02\\text{m}.$  \n\nNew area:  \n\n$A_{\\text{new}}=0.05\\times 0.02=1\\times 10^{-3}\\text{m}^{2}.$\n\nRatio of areas:  \n\n$\\frac{A_{\\text{new}}}{A_{\\text{initial}}}=\\frac{1\\times 10^{-3}}{3\\times 10^{-4}}\\approx 3.33.$\n\nNew plate separation:  \n\n$d_{\\text{new}}=1μ\\text{m}=1\\times 10^{-6}\\text{m},$  \n\nso the ratio of separations is  \n\n$\\frac{d_{\\text{initial}}}{d_{\\text{new}}}=\\frac{3\\times 10^{-6}}{1\\times 10^{-6}}=3.$\n\nOverall factor:  \n\n$3.33\\times 3\\approx 10.$\n\nBoth Case C and Case E yield a capacitance that is 10 times the original value.\n\nThus, the correct modifications are those in Case C and Case E.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulv9ch",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A thin plano convex lens made of glass of refractive index 1.5 is immersed in a liquid of refractive index 1.2. When the plane side of the lens is silver coated for complete reflection, the lens immersed in the liquid behaves like a concave mirror of focal length 0.2 m . The radius of curvature of the curved surface of the lens is",
+  "options": [
+   "0.15 m",
+   "0.10 m",
+   "0.25 m",
+   "0.20 m"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 64,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{1}{f}=\\frac{2(n_{2}-n_{1})}{n_{1}R}$\n\nFor a thin plano‑convex lens made of glass (refractive index $n_{2}=1.5$) immersed in a liquid (refractive index $n_{1}=1.2$), when the plane side is silver‐coated, a ray entering the curved surface from the liquid is refracted into the glass, reflects off the coated plane (thereby reversing its direction) and finally refracts back into the liquid at the same curved surface. In the paraxial approximation the net effect is equivalent to a mirror in the liquid with an effective focal length $f$.\n\nA ray that is incident parallel to the optical axis (at height $h$) will, after this combined refraction–reflection–refraction process, emerge with an angular deviation corresponding to a mirror having a power given by:\n\n$\\frac{h}{f}=\\frac{2(n_{2}-n_{1})}{n_{1}R}h.$\n\nThis gives the relation:\n\n$\\frac{1}{f}=\\frac{2(n_{2}-n_{1})}{n_{1}R}.$\n\nGiven that the effective focal length is $f=0.2\\text{m}$, substitute the values:\n\n$\\frac{1}{0.2}=\\frac{2(1.5-1.2)}{1.2R}.$\n\nSimplify the numerator:\n\n$\\frac{1}{0.2}=\\frac{2(0.3)}{1.2R}=\\frac{0.6}{1.2R}.$\n\nSince\n\n$\\frac{0.6}{1.2}=0.5,$\n\nthe equation becomes:\n\n$5=\\frac{0.5}{R}.$\n\nSolving for $R$:\n\n$R=\\frac{0.5}{5}=0.10\\text{m}.$\n\nThus, the radius of curvature of the curved surface of the lens is $0.10\\text{m}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvj41",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A plano-convex lens having radius of curvature of first surface 2 cm exhibits focal length of $f_{1}$ in air. Another plano-convex lens with first surface radius of curvature 3 cm has focal length of $f_{2}$ when it is immersed in a liquid of refractive index 1.2. If both the lenses are made of same glass of refractive index 1.5 , the ratio of $f_{1}$ and $f_{2}$ will be",
+  "options": [
+   "$2:3$",
+   "$1:3$",
+   "$1:2$",
+   "$3:5$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 65,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{1}{f}=\\left (\\frac{n}{n^{'}}-1\\right )\\left (\\frac{1}{R_{1}}-\\frac{1}{R_{2}}\\right )$\n\nFor a thin plano-convex lens, one surface is flat, meaning $R_{2}=\\infty$ and $\\frac{1}{R_{2}}=0.$ The formula reduces to:\n\n$\\frac{1}{f}=\\left (\\frac{n}{n^{'}}-1\\right )\\frac{1}{R_{1}}$\n\nThus, the focal length is:\n\n$f=\\frac{R_{1}}{\\left (\\frac{n}{n'}-1\\right )}$\n\nFor the First Lens (in Air)\n\nRefractive index of lens, $n=1.5$\n\nSurrounding medium (air), $n^{'}=1$\n\nRadius of curvature, $R_{1}=2\\text{cm}$\n\nSubstitute into the formula:\n\n$f_{1}=\\frac{2}{\\left (\\frac{1.5}{1}-1\\right )}=\\frac{2}{(1.5-1)}=\\frac{2}{0.5}=4\\text{cm}$\n\nFor the Second Lens (in Liquid)\n\nRefractive index of lens, $n=1.5$\n\nSurrounding medium (liquid), $n^{'}=1.2$\n\nRadius of curvature, $R_{1}=3\\text{cm}$\n\nSubstitute into the formula:\n\n$f_{2}=\\frac{3}{\\left (\\frac{1.5}{1.2}-1\\right )}$\n\nFirst, calculate the term inside the parentheses:\n\n$\\frac{1.5}{1.2}=1.25\\Rightarrow 1.25-1=0.25$\n\nNow, compute $f_{2}$:\n\n$f_{2}=\\frac{3}{0.25}=12\\text{cm}$\n\nRatio of the Focal Lengths\n$\\frac{f_{1}}{f_{2}}=\\frac{4}{12}=\\frac{1}{3}$\n\nThus, the ratio of $f_{1}$ to $f_{2}$ is:\n\n$1:3$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvpik",
+  "subjectKey": "physics",
+  "chapterKey": "physics:dual-nature-of-matter",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An electron of mass ' m ' with an initial velocity $\\vec{\\mathrm{v}}=\\mathrm{v}_{0}\\hat{i}(\\mathrm{v}_{0}>0)$ enters an electric field $\\vec{\\mathrm{E}}=-\\mathrm{E}_{\\mathrm{o}}\\hat{\\mathrm{k}}$. If the initial de Broglie wavelength is $λ_{0}$, the value after time t would be",
+  "options": [
+   "$\\frac{λ_{o}}{\\sqrt{1-\\frac{\\mathrm{e}2\\mathrm{E}2\\mathrm{o}\\mathrm{t}2}{\\mathrm{m}2\\mathrm{v}2\\mathrm{o}}}}$",
+   "$λ_{0}$",
+   "$\\frac{λ_{o}}{\\sqrt{1+\\frac{\\mathrm{e}2\\mathrm{E}2\\mathrm{o}\\mathrm{t}2}{\\mathrm{m}2v2o}}}$",
+   "$λ_{\\mathrm{o}}\\sqrt{1+\\frac{\\mathrm{e}^{2}\\mathrm{E}_{\\mathrm{o}}^{2}\\mathrm{t}^{2}}{\\mathrm{m}^{2}\\mathrm{v}_{\\mathrm{o}}^{2}}}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 66,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "dual nature of radiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Derivation of the de Broglie wavelength after time $t$\n\nThe de Broglie wavelength is given by\n\n$λ=\\frac{h}{p},$\n\nwhere $h$ is Planck's constant and $p$ is the momentum of the particle.\n\nInitial Conditions:  \n\nInitially, the electron has a velocity\n\n$⃗{v}=v_{0}\\hat{i},$\n\nso its momentum is\n\n$p_{0}=mv_{0}.$\n\nThe initial de Broglie wavelength is therefore\n\n$λ_{0}=\\frac{h}{mv_{0}}.$\n\nEffect of the Electric Field:  \n\nThe electron enters an electric field\n\n$⃗{E}=-E_{0}\\hat{k}.$\n\nFor an electron with charge $-e$, the force is given by\n\n$⃗{F}=-e⃗{E}=-e\\left (-E_{0}\\hat{k}\\right )=eE_{0}\\hat{k}.$\n\nThis force causes an acceleration in the $\\hat{k}$ direction:\n\n$a_{z}=\\frac{F_{z}}{m}=\\frac{eE_{0}}{m}.$\n\nMomentum Components After Time $t$:  \n\nIn the $\\hat{i}$ direction, there is no force, so the momentum remains constant:\n\n$p_{x}=mv_{0}.$\n\nIn the $\\hat{k}$ direction, starting from rest, the momentum becomes:\n\n$p_{z}=mv_{z}=m(a_{z}t)=eE_{0}t.$\n\nTotal Momentum of the Electron:  \n\nThe total momentum is the vector sum of the components:\n\n$p=\\sqrt{p_{x}^{2}+p_{z}^{2}}=\\sqrt{(mv_{0})^{2}+(eE_{0}t)^{2}}.$\n\nNew de Broglie Wavelength:  \n\nSubstituting the expression for the total momentum into the de Broglie relation gives:\n\n$λ=\\frac{h}{\\sqrt{m^{2}v_{0}^{2}+e^{2}E_{0}^{2}t^{2}}}.$\n\nExpressing this in terms of the initial de Broglie wavelength $λ_{0}=\\frac{h}{mv_{0}}$:\n\n$λ=\\frac{λ_{0}}{\\sqrt{1+\\frac{e2E2 0t2}{m2v2 0}}}.$\n\nThis final expression matches the option:\n\n$\\frac{λ_{0}}{\\sqrt{1+\\frac{e2E2 0t2}{m2v2 0}}}.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvpjn",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The amount of work done to break a big water drop of radius ' $R$ ' into 27 small drops of equal radius is 10 J . The work done required to break the same big drop into 64 small drops of equal radius will be",
+  "options": [
+   "20 J",
+   "10 J",
+   "5 J",
+   "15 J"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 67,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve the problem, we need to compare the increase in surface area when the big drop is split into small drops.\n\nStep 1: Determine the radius of the small drops\n\nFor 27 small drops:\n\nTotal volume is conserved:  \n\n$27\\times \\frac{4}{3}πr^{3}=\\frac{4}{3}πR^{3}⟹r^{3}=\\frac{R^{3}}{27}⟹r=\\frac{R}{3}.$\n\nFor 64 small drops:\n\nSimilarly,  \n\n$64\\times \\frac{4}{3}πr^{'3}=\\frac{4}{3}πR^{3}⟹r^{'3}=\\frac{R^{3}}{64}⟹r^{'}=\\frac{R}{4}.$\n\nStep 2: Calculate the surface area before and after the break-up\n\nInitial surface area of the big drop:\n\n$A_{\\text{initial}}=4πR^{2}.$\n\nFor 27 drops:\n\nSurface area of one small drop:\n\n$4π\\left (\\frac{R}{3}\\right )^{2}=\\frac{4πR^{2}}{9}.$\n\nTotal surface area:\n\n$A_{27}=27\\times \\frac{4πR^{2}}{9}=3\\times 4πR^{2}=12πR^{2}.$\n\nIncrease in surface area:\n\n$\\Delta A_{27}=12πR^{2}-4πR^{2}=8πR^{2}.$\n\nFor 64 drops:\n\nSurface area of one small drop:\n\n$4π\\left (\\frac{R}{4}\\right )^{2}=4π\\frac{R^{2}}{16}=\\frac{πR^{2}}{4}.$\n\nTotal surface area:\n\n$A_{64}=64\\times \\frac{πR^{2}}{4}=16πR^{2}.$\n\nIncrease in surface area:\n\n$\\Delta A_{64}=16πR^{2}-4πR^{2}=12πR^{2}.$\n\nStep 3: Relate work done to the change in surface area\n\nSince the work done is proportional to the increase in surface area:\n\n$\\text{Work}\\propto \\Delta A.$\n\nWe know that breaking into 27 drops requires 10 J corresponding to an increase of $8πR^{2}$.\n\nThus, if $W$ is the work done,\n\n$W_{27}=k\\cdot 8πR^{2}=10\\text{J},$\n\nwhere $k$ is the proportionality constant.\n\nFor 64 drops:\n\n$W_{64}=k\\cdot 12πR^{2}.$\n\nDividing the two equations:\n\n$\\frac{W_{64}}{10}=\\frac{12πR^{2}}{8πR^{2}}=\\frac{12}{8}=\\frac{3}{2}.$\n\nThus,\n\n$W_{64}=10\\times \\frac{3}{2}=15\\text{J}.$\n\nFinal Answer: 15 J (Option D)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvpn1",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A uniform solid cylinder of mass ' m ' and radius ' r ' rolls along an inclined rough plane of inclination $45^{\\circ }$. If it starts to roll from rest from the top of the plane then the linear acceleration of the cylinder's axis will be",
+  "options": [
+   "$\\sqrt{2}\\mathrm{g}$",
+   "$\\frac{1}{\\sqrt{2}}\\mathrm{g}$",
+   "$\\frac{1}{3\\sqrt{2}}\\mathrm{g}$",
+   "$\\frac{\\sqrt{2}g}{3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 68,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The acceleration of the center of mass for a rolling object down an incline is given by:\n\n$a=\\frac{g\\sin θ}{1+\\frac{I}{mr2}}$\n\nFor a uniform solid cylinder, the moment of inertia about its central axis is:\n\n$I=\\frac{1}{2}mr^{2}$\n\nSubstituting this into the expression for acceleration:\n\n$a=\\frac{g\\sin θ}{1+\\frac{\\dfrac{1}{2}mr2}{mr2}}=\\frac{g\\sin θ}{1+\\frac{1}{2}}=\\frac{g\\sin θ}{\\frac{3}{2}}=\\frac{2}{3}g\\sin θ$\n\nFor an incline of $45^{\\circ }$, we have:\n\n$\\sin 45^{\\circ }=\\frac{\\sqrt{2}}{2}$\n\nThus, the acceleration becomes:\n\n$a=\\frac{2}{3}g\\cdot \\frac{\\sqrt{2}}{2}=\\frac{\\sqrt{2}g}{3}$\n\nTherefore, the linear acceleration of the cylinder's axis is:\n\n$\\frac{\\sqrt{2}g}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvdsr",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An alternating current is given by $\\mathrm{I}=\\mathrm{I}_{\\mathrm{A}}\\sin ω\\mathrm{t}+\\mathrm{I}_{\\mathrm{B}}\\cos ω\\mathrm{t}$. The r.m.s current will be",
+  "options": [
+   "$\\frac{\\sqrt{\\mathrm{I}_{\\mathrm{A}}^{2}+\\mathrm{I}_{\\mathrm{B}}^{2}}}{2}$",
+   "$\\sqrt{\\frac{\\mathrm{I}_{\\mathrm{A}}^{2}+\\mathrm{I}_{\\mathrm{B}}^{2}}{2}}$",
+   "$\\frac{|\\mathrm{I}_{\\mathrm{A}}+\\mathrm{I}_{\\mathrm{B}}|}{\\sqrt{2}}$",
+   "$\\sqrt{\\mathrm{I}_{\\mathrm{A}}^{2}+\\mathrm{I}_{\\mathrm{B}}^{2}}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 69,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "alternating current"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I_{\\text{rms}}=\\sqrt{\\frac{I_{A}^{2}+I_{B}^{2}}{2}}$\n\nTo determine the root mean square (r.m.s) value of the alternating current given by\n\n$I(t)=I_{A}\\sin (ωt)+I_{B}\\cos (ωt),$\n\nwe start by squaring the current:\n\n$I(t)^{2}=I_{A}^{2}\\sin ^{2}(ωt)+I_{B}^{2}\\cos ^{2}(ωt)+2I_{A}I_{B}\\sin (ωt)\\cos (ωt).$\n\nThe r.m.s value is defined as the square root of the average of this squared current over one complete period. When averaging over a full cycle, we utilize the known averages:\n\n$\\langle \\sin ^{2}(ωt)\\rangle =\\frac{1}{2},\\langle \\cos ^{2}(ωt)\\rangle =\\frac{1}{2},\\langle \\sin (ωt)\\cos (ωt)\\rangle =0.$\n\nThus, the time-averaged square of the current becomes:\n\n$\\langle I(t)^{2}\\rangle =I_{A}^{2}\\frac{1}{2}+I_{B}^{2}\\frac{1}{2}=\\frac{I_{A}^{2}+I_{B}^{2}}{2}.$\n\nTaking the square root gives the r.m.s current:\n\n$I_{\\text{rms}}=\\sqrt{\\frac{I_{A}^{2}+I_{B}^{2}}{2}}.$\n\nThis corresponds to Option B.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvdno",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For an experimental expression $y=\\frac{32.3\\times 1125}{27.4}$, where all the digits are significant. Then to report the value of $y$ we should write",
+  "options": [
+   "$y=1326.186$",
+   "$y=1326.2$",
+   "$y=1326.19$",
+   "$y=1330$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 70,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$32.3(3\\text{sig figs}),1125(4\\text{sig figs}),27.4(3\\text{sig figs})$\n\nIn multiplication and division, the final answer must be reported with the same number of significant figures as the factor with the fewest significant figures, which here is 3.\n\nFirst, calculate the unrounded result:\n\n$y=\\frac{32.3\\times 1125}{27.4}\\approx \\frac{36337.5}{27.4}\\approx 1326.186$\n\nExpressing $1326.186$ in scientific notation:\n\n$1326.186\\approx 1.326186\\times 10^{3}$\n\nRounding to 3 significant figures:\n\nThe first three significant digits are 1, 3, and 2.\n\nConsidering the fourth digit (6) causes the last significant digit to round up.\n\nThus,\n\n$1.326186\\times 10^{3}\\approx 1.33\\times 10^{3}$\n\nIn standard decimal form, this is written as:\n\n$1330$\n\nHence, the final reported value is:\n\n$y=1330$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvpun",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A wire of resistance $9\\Omega$ is bent to form an equilateral triangle. Then the equivalent resistance across any two vertices will be $_________$ ohm.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 71,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\text{Each side of the triangle has a resistance of}R_{\\text{side}}=\\frac{9\\Omega }{3}=3\\Omega .$\n\nWhen measuring the equivalent resistance between any two vertices, there are two paths:\n\nA direct path along one side with resistance:\n\n$R_{1}=3\\Omega .$\n\nAn indirect path passing through the other two sides in series:\n\n$R_{2}=3\\Omega +3\\Omega =6\\Omega .$\n\nThese two paths are in parallel, so the equivalent resistance is calculated by:\n\n$\\frac{1}{R_{\\text{eq}}}=\\frac{1}{R_{1}}+\\frac{1}{R_{2}}=\\frac{1}{3\\Omega }+\\frac{1}{6\\Omega }=\\frac{2}{6\\Omega }+\\frac{1}{6\\Omega }=\\frac{3}{6\\Omega }.$\n\nThus,\n\n$R_{\\text{eq}}=\\frac{6\\Omega }{3}=2\\Omega .$\n\nThe equivalent resistance across any two vertices of the equilateral triangle is therefore:\n\n$2~\\Omega .$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvdwc",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A current of 5 A exists in a square loop of side $\\frac{1}{\\sqrt{2}}\\mathrm{m}$. Then the magnitude of the magnetic field $B$ at the centre of the square loop will be $p\\times 10^{-6}\\mathrm{T}$. where, value of p is $________$ $[\\;$ Take $μ_{0}=4π\\times 10^{-7}\\mathrm{T}\\mathrm{mA}^{-1}$ ].",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 72,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$B=\\frac{2\\sqrt{2}μ_{0}I}{πL}$\n\nFor a square loop of side length \n\n$L=\\frac{1}{\\sqrt{2}}\\text{m},$ \n\nthe perpendicular distance from the center to any side is \n\n$d=\\frac{L}{2}=\\frac{1}{2\\sqrt{2}}\\text{m}.$\n\nFor a finite straight wire, the magnetic field at a point at distance $d$ from the wire is given by the Biot–Savart expression\n\n$B_{\\text{side}}=\\frac{μ_{0}I}{4πd}(\\sin θ_{1}+\\sin θ_{2})$\n\nwhere $θ_{1}$ and $θ_{2}$ are the angles between the extended wire and the line joining the ends of the wire with the observation point. For one side of the square, by symmetry, the midpoint of the side and the center of the square give\n\n$\\tan θ=\\frac{L/2}{L/2}=1\\Rightarrow θ=45^{\\circ }.$\n\nThus,\n\n$\\sin θ_{1}=\\sin θ_{2}=\\sin 45^{\\circ }=\\frac{1}{\\sqrt{2}}.$\n\nThen the field due to one side is\n\n$B_{\\text{side}}=\\frac{μ_{0}I}{4π\\left (\\frac{L}{2}\\right )}\\left (\\frac{1}{\\sqrt{2}}+\\frac{1}{\\sqrt{2}}\\right )=\\frac{μ_{0}I}{4π\\left (\\frac{L}{2}\\right )}\\left (\\frac{2}{\\sqrt{2}}\\right )=\\frac{μ_{0}I\\sqrt{2}}{2πL}.$\n\nSince there are 4 sides with contributions that add vectorially in the same direction at the center, the total magnetic field is\n\n$B=4\\cdot B_{\\text{side}}=\\frac{4μ_{0}I\\sqrt{2}}{2πL}=\\frac{2\\sqrt{2}μ_{0}I}{πL}.$\n\nSubstitute \n\n$L=\\frac{1}{\\sqrt{2}},$\n\nto obtain\n\n$B=\\frac{2\\sqrt{2}μ_{0}I}{π\\left (\\frac{1}{\\sqrt{2}}\\right )}=\\frac{2\\sqrt{2}μ_{0}I\\sqrt{2}}{π}=\\frac{4μ_{0}I}{π}.$\n\nUsing the provided values \n\n$I=5\\text{A}\\text{and}μ_{0}=4π\\times 10^{-7}\\text{T}\\text{m/A},$\n\nthe magnetic field becomes\n\n$B=\\frac{4\\times \\left (4π\\times 10^{-7}\\right )\\times 5}{π}=\\frac{80π\\times 10^{-7}}{π}=80\\times 10^{-7}\\text{T}=8\\times 10^{-6}\\text{T}.$\n\nThus, the value of $p$ is\n\n$p=8.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvdtb",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The least count of a screw gauge is 0.01 mm . If the pitch is increased by $75%$ and number of divisions on the circular scale is reduced by $50%$, the new least count will be $________$ $\\times 10^{-3}\\mathrm{mm}$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 35.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 73,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The least count (L.C.) of a screw gauge is given by:\n\n$\\text{L.C.}=\\frac{\\text{Pitch}}{\\text{Number of Divisions on Circular Scale}}$\n\nLet the original pitch be $p$ and the original number of divisions be $n$. Then, the original least count is:\n\n$\\frac{p}{n}=0.01\\text{mm}$\n\nAfter modifications:\n\nThe pitch is increased by 75%, so the new pitch is:\n\n$p_{\\text{new}}=p+0.75p=1.75p$\n\nThe number of divisions is reduced by 50%, so the new number of divisions is:\n\n$n_{\\text{new}}=0.5n$\n\nThe new least count is then:\n\n$\\text{L.C.}_{\\text{new}}=\\frac{p_{\\text{new}}}{n_{\\text{new}}}=\\frac{1.75p}{0.5n}=\\frac{1.75}{0.5}\\times \\frac{p}{n}=3.5\\times \\frac{p}{n}$\n\nSubstitute the original least count:\n\n$\\text{L.C.}_{\\text{new}}=3.5\\times 0.01\\text{mm}=0.035\\text{mm}$\n\nExpressed in the form $\\times 10^{-3}\\text{mm}$, this becomes:\n\n$0.035\\text{mm}=35\\times 10^{-3}\\text{mm}$\n\nThus, the new least count is:\n\n$35\\times 10^{-3}\\text{mm}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulv987",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The temperature of 1 mole of an ideal monoatomic gas is increased by $50^{\\circ }\\mathrm{C}$ at constant pressure. The total heat added and change in internal energy are $E_{1}$ and $E_{2}$, respectively. If $\\frac{E_{1}}{E_{2}}=\\frac{x}{9}$ then the value of $x$ is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 15.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 74,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$Q=nC_{P}\\Delta T\\text{and}\\Delta U=nC_{V}\\Delta T$\n\nFor a monoatomic ideal gas, the molar specific heats are given by:\n\n$C_{V}=\\frac{3}{2}R\\text{and}C_{P}=C_{V}+R=\\frac{5}{2}R$\n\nThus, the ratio of the heat added to the change in internal energy is:\n\n$\\frac{Q}{\\Delta U}=\\frac{C_{P}}{C_{V}}=\\frac{\\frac{5}{2}R}{\\frac{3}{2}R}=\\frac{5}{3}$\n\nGiven that:\n\n$\\frac{E_{1}}{E_{2}}=\\frac{x}{9}$\n\nWe equate the two ratios:\n\n$\\frac{5}{3}=\\frac{x}{9}$\n\nMultiplying both sides by 9:\n\n$x=\\frac{5}{3}\\times 9=15$\n\nThus, the value of $x$ is 15.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6ulvxbm",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A square loop of sides $a=1\\mathrm{m}$ is held normally in front of a point charge $\\mathrm{q}=1\\mathrm{C}$ at a distance $\\frac{\\mathrm{a}}{2}$. The flux of the electric field through the shaded region is $\\frac{5}{\\mathrm{p}}\\times \\frac{1}{ε_{0}}\\frac{\\mathrm{Nm}^{2}}{\\mathrm{C}}$, where the value of p is $________$ .\n\n\n[IMG]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 48.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 75,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The charge is on the normal through the centre of the square, at distance $\\dfrac{a}{2}$. Six such squares form a closed cube of side $a$ with $q$ at its centre, so by Gauss's law and symmetry the flux through the square is\n\n$𝜙_{0}=\\dfrac{1}{6}\\cdot \\dfrac{q}{ε_{0}}$\n\nThe two diagonals and the two lines joining the midpoints of opposite sides divide the square into 8 congruent right triangles meeting at the foot of the perpendicular from $q$. Neighbouring triangles are mirror images in planes of symmetry of the field of $q$, so each carries $\\dfrac{𝜙_{0}}{8}$.\n\n\n[IMG]\n\nThe shaded region is the lower half of the square (triangles 5, 6, 7, 8) together with triangle 1, i.e. 5 of the 8 triangles. With $q=1$ C,\n\n$𝜙=\\dfrac{5}{8}\\times \\dfrac{1}{6}\\times \\dfrac{q}{ε_{0}}=\\dfrac{5}{48}\\times \\dfrac{1}{ε_{0}}\\text{N m}^{2}\\text{C}^{-1}$\n\nso $p=48$.\n\nHence, the answer is 48.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-24th-january-morning-shift/m6ulvxbm-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2025-online-24th-january-morning-shift/m6ulvxbm-1.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

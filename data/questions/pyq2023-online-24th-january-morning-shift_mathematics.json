@@ -1,0 +1,873 @@
+[
+ {
+  "publicId": "PYQ-2023-1ldyaoer",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{p},\\mathrm{q}\\in \\mathrm{ℝ}$ and $\\left (1-\\sqrt{3}i\\right )^{200}=2^{199}(p+iq),i=\\sqrt{-1}$ then $\\mathrm{p}+\\mathrm{q}+\\mathrm{q}^{2}$ and $\\mathrm{p}-\\mathrm{q}+\\mathrm{q}^{2}$ are roots of the equation.",
+  "options": [
+   "$x^{2}+4x-1=0$",
+   "$x^{2}-4x+1=0$",
+   "$x^{2}+4x+1=0$",
+   "$x^{2}-4x-1=0$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (1-\\sqrt{3}i\\right )^{200}$\n\n$=\\left [2\\left (\\frac{1}{2}-\\frac{\\sqrt{3}}{2}i\\right )\\right ]^{200}$\n\n$=2^{200}\\left (\\cos \\frac{π}{3}-i\\sin \\frac{π}{3}\\right )^{200}$\n\n$=2^{200}\\left (\\cos \\frac{200π}{3}-i\\sin \\frac{200π}{3}\\right )$\n\n$=2^{200}\\left (\\cos \\left (66π+\\frac{2π}{3}\\right )-i\\sin \\left (66π+\\frac{2π}{3}\\right )\\right )$\n\n$=2^{200}\\left (\\cos \\frac{2π}{3}-i\\sin \\frac{2π}{3}\\right )$\n\n$=2^{200}\\left (-\\frac{1}{2}-\\frac{\\sqrt{3}}{2}i\\right )$\n\n$=2^{199}\\left (-1-\\sqrt{3}i\\right )$\n\n$=2^{199}(p+iq)$\n\n$\\therefore$ p = $-$1 and q = $-\\sqrt{3}$\n\nNow, $p-q+q^{2}=-1+\\sqrt{3}+3=2+\\sqrt{3}=α$\n\nand $p+q+q^{2}=-1-\\sqrt{3}+3=2-\\sqrt{3}=β$\n\n$\\therefore$ $α+β=4$\n\n$αβ=\\left (2+\\sqrt{3}\\right )\\left (2-\\sqrt{3}\\right )=4-3=1$\n\n$\\therefore$ Quadratic equation is\n\n$x^{2}-(α+β)x+αβ=0$\n\n$\\Rightarrow x^{2}-4x+1=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyaqkk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let N denote the number that turns up when a fair die is rolled. If the probability that the system of equations\n\n$x+y+z=1$\n\n$2x+\\mathrm{N}y+2z=2$\n\n$3x+3y+\\mathrm{N}z=3$\n\nhas unique solution is $\\frac{k}{6}$, then the sum of value of k and all possible values of N is :",
+  "options": [
+   "18",
+   "21",
+   "20",
+   "19"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For unique solution $\\Delta \\neq 0$\n\ni.e. $\\left |\\begin{array}{lll} 1 & 1 & 1 \\\\ 2 & N & 2 \\\\ 3 & 3 & N \\end{array}\\right |\\neq 0$\n\n$\\Rightarrow \\left (N^{2}-6\\right )-(2N-6)+(6-3N)\\neq 0$\n\n$\\Rightarrow N^{2}-5N+6\\neq 0$\n\n$\\therefore N\\neq 2$ and $N\\neq 3$\n\n$\\therefore$ Probability of not getting 2 or 3 in a throw of dice $=\\frac{2}{3}$\n\nAs given $\\frac{2}{3}=\\frac{k}{6}\\Rightarrow k=4$\n\n$\\therefore$ Required value $=1+4+5+6+4=20$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyavo4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The relation $\\mathrm{R}=\\{(\\mathrm{a},\\mathrm{b}):\\gcd (\\mathrm{a},\\mathrm{b})=1,2\\mathrm{a}\\neq \\mathrm{b},\\mathrm{a},\\mathrm{b}\\in \\mathrm{ℤ}\\}$ is :",
+  "options": [
+   "reflexive but not symmetric",
+   "transitive but not reflexive",
+   "symmetric but not transitive",
+   "neither symmetric nor transitive"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n(a, b) belongs to relation R if $\\gcd (a,b)=1,2a\\neq b$.\n\nHere $\\gcd$ means greatest common divisor. $\\gcd$ of two numbers is the largest number that divides both of them.\n\n(1) For Reflexive,\n\nIn $aRa,\\qquad \\gcd (a,a)=a$\n\n$\\therefore$ This relation is not reflexive.\n\n(2) For Symmetric:\n\nTake $a=2,b=1\\Rightarrow \\gcd (2,1)=1$\nAlso $2a=4\\neq b$\n\nNow $\\gcd (b,a)=1$ $\\Rightarrow \\gcd (1,2)=1$\n\nand 2b should not be equal to a\n\nBut here, $2b=2=a$\n\n$\\Rightarrow \\mathrm{R}$ is not Symmetric\n\n(3) For Transitive:\n\nLet $\\mathrm{a}=14,\\mathrm{b}=19,\\mathrm{c}=21$\n\n$\\gcd (\\mathrm{a},\\mathrm{b})=1,2a\\neq b$\n\n$\\gcd (\\mathrm{b},\\mathrm{c})=1,2b\\neq c$\n\n$\\gcd (\\mathrm{a},\\mathrm{c})=7,2a\\neq c$\n\nHence not transitive\n\n$\\Rightarrow R$ is neither symmetric nor transitive.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyaxao",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{t\\to 0}\\left (1^{\\frac{1}{\\sin 2t}}+2^{\\frac{1}{\\sin 2t}}+...+n^{\\frac{1}{\\sin 2t}}\\right )^{\\sin ^{2}t}$ is equal to",
+  "options": [
+   "$\\frac{n(n+1)}{2}$",
+   "n",
+   "n${}^{2}$ + n",
+   "n${}^{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $k=\\dfrac{1}{\\sin ^{2}t}$; as $t\\to 0$, $k\\to \\infty$, and the expression is $\\left (1^{k}+2^{k}+\\cdots +n^{k}\\right )^{1/k}$.\n\nTaking $n^{k}$ out of the bracket,\n\n$\\left (1^{k}+2^{k}+\\cdots +n^{k}\\right )^{1/k}=nS^{1/k},S=\\left (\\frac{1}{n}\\right )^{k}+\\left (\\frac{2}{n}\\right )^{k}+\\cdots +\\left (\\frac{n-1}{n}\\right )^{k}+1.$\n\nEach of the $n$ terms of $S$ lies in $(0,1]$ and the last one is 1, so $1\\leq S\\leq n$ and $1\\leq S^{1/k}\\leq n^{1/k}$.\n\nAs $k\\to \\infty$, $n^{1/k}\\to 1$, so $S^{1/k}\\to 1$ and the limit equals $n$.\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyay4y",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\tan ^{-1}\\left (\\frac{1+\\sqrt{3}}{3+\\sqrt{3}}\\right )+\\sec ^{-1}\\left (\\sqrt{\\frac{8+4\\sqrt{3}}{6+3\\sqrt{3}}}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{π}{2}$",
+   "$\\frac{π}{3}$",
+   "$\\frac{π}{6}$",
+   "$\\frac{π}{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\tan ^{-1}\\left (\\frac{1+\\sqrt{3}}{3+\\sqrt{3}}\\right )+\\sec ^{-1}\\left (\\sqrt{\\frac{8+4\\sqrt{3}}{6+3\\sqrt{3}}}\\right )$\n\n$=\\tan ^{-1}\\left (\\frac{1+\\sqrt{3}}{3+\\sqrt{3}}\\right )+\\sec ^{-1}\\left (\\frac{16+8\\sqrt{3}}{12+6\\sqrt{3}}\\right )^{\\frac{1}{2}}$\n\n$=\\tan ^{-1}\\left (\\frac{1+\\sqrt{3}}{\\sqrt{3}(\\sqrt{3}+1)}\\right )+\\sec ^{-1}\\left (\\frac{4(1^{2}+(\\sqrt{3})^{2}+2.1.\\sqrt{3})}{3^{2}+(\\sqrt{3})^{2}+2.3.\\sqrt{3}}\\right )^{\\frac{1}{2}}$\n\n$=\\tan ^{-1}\\left (\\frac{1}{\\sqrt{3}}\\right )+\\sec ^{-1}\\left (\\frac{4(\\sqrt{3}+1)^{2}}{(3+\\sqrt{3})^{2}}\\right )^{\\frac{1}{2}}$\n\n$=\\frac{π}{6}+\\sec ^{-1}\\left (\\frac{2(\\sqrt{3}+1)}{\\sqrt{3}(\\sqrt{3}+1)}\\right )$\n\n$=\\frac{π}{6}+\\sec ^{-1}\\left (\\frac{2}{\\sqrt{3}}\\right )$\n\n$=\\frac{π}{6}+\\cos ^{-1}\\left (\\frac{\\sqrt{3}}{2}\\right )$\n\n$=\\frac{π}{6}+\\frac{π}{6}$\n\n$=\\frac{π}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyb0ay",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $y=y(x)$ be the solution of the differential equation $x^{3}dy+(xy-1)dx=0,x>0,y\\left (\\frac{1}{2}\\right )=3-\\mathrm{e}$. Then y (1) is equal to",
+  "options": [
+   "2 $-$ e",
+   "3",
+   "1",
+   "e"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x^{3}dy+xydx-dx=0$\n\n$\\Rightarrow \\frac{dy}{dx}=\\frac{1-xy}{x^{3}}$\n\n$\\Rightarrow \\frac{dy}{dx}+\\frac{y}{x^{2}}=\\frac{1}{x^{3}}$\n\nI.F. $=e^{\\int \\frac{dx}{x2}}=e^{-\\frac{1}{x}}$\n\n$\\therefore ye^{-\\frac{1}{x}}=\\int \\frac{e^{-\\dfrac{1}{x}}}{x^{3}}dx$\n\nFor RHS put $-\\frac{1}{x}=t\\Rightarrow \\frac{dx}{x^{2}}=dt$\n\n$\\therefore ye^{-\\frac{1}{x}}=-\\int te^{t}dt$\n\n$\\Rightarrow ye^{-\\frac{1}{x}}=-\\left [te^{t}-e^{t}\\right ]+c$\n\n$\\Rightarrow ye^{-\\frac{1}{x}}=\\frac{e^{-\\dfrac{1}{x}}}{x}+e^{-\\frac{1}{x}}+c$\n\n$↓y\\left (\\frac{1}{2}\\right )=3-e$\n\n$\\Rightarrow (3-e)e^{-2}=2e^{-2}+e^{-2}+c$\n\n$\\Rightarrow \\quad c=-\\frac{1}{e}$\n\nFor $y(1)$ put $x=1,c=-e^{-1}$ in equation (i) we get $ye^{-1}=e^{-1}+e^{-1}-e^{-1}$\n\n$\\Rightarrow y=1$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyb4hy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\Omega$ be the sample space and $\\mathrm{A}\\subseteq \\Omega$ be an event.\n\nGiven below are two statements :\n\n(S1) : If P(A) = 0, then A = $𝜙$\n\n(S2) : If P(A) = 1, then A = $\\Omega$\n\nThen :",
+  "options": [
+   "both (S1) and (S2) are true",
+   "both (S1) and (S2) are false",
+   "only (S2) is true",
+   "only (S1) is true"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "By the classical definition of probability (a finite sample space of equally likely outcomes), $P(A)=\\frac{n(A)}{n(\\Omega )}$.\n\n(S1): $P(A)=0\\Rightarrow n(A)=0\\Rightarrow A=𝜙$, so (S1) is true.\n\n(S2): $P(A)=1\\Rightarrow n(A)=n(\\Omega )\\Rightarrow A=\\Omega$, so (S2) is true.\n\nHence both (S1) and (S2) are true, which is NTA's answer (option A).\n\nRemark: this rests on the classical definition used in JEE. For a continuous sample space it fails: choosing a point on a wire $[0,1]$, the event $A=\\left \\{\\frac{1}{2}\\right \\}$ has $P(A)=0$ although $A\\neq 𝜙$, and its complement has probability 1 although it is not $\\Omega$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyb9d7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area enclosed by the curves $y^{2}+4x=4$ and $y-2x=2$ is :",
+  "options": [
+   "$\\frac{22}{3}$",
+   "9",
+   "$\\frac{23}{3}$",
+   "$\\frac{25}{3}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nRequired area $=\\int\\limits _{-4}^{2}\\left (\\frac{4-y^{2}}{4}-\\frac{y-2}{2}\\right )dy$\n\n$=\\int\\limits _{-4}^{2}\\frac{8-2y-y^{2}}{4}dy$\n\n$=\\frac{1}{4}\\left \\{8y-y^{2}-\\frac{y^{3}}{3}\\right \\}_{-4}^{2}$\n\n$=9$ square units",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-24th-january-morning-shift/1ldyb9d7r-0.webp",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1ldybbre",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The equation $x^{2}-4x+[x]+3=x[x]$, where $[x]$ denotes the greatest integer function, has :",
+  "options": [
+   "exactly two solutions in ($-\\infty ,\\infty$)",
+   "no solution",
+   "a unique solution in ($-\\infty ,\\infty$)",
+   "a unique solution in ($-\\infty ,1$)"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x^{2}-4x+[x]+3=x[x]$\n\n$\\Rightarrow x^{2}-4x+[x]+3-x[x]=0$\n\n$\\Rightarrow (x-1)(x-3)-[x](x-1)=0$\n\n$\\Rightarrow (x-1)(x-[x]-3)=0$\n\n$\\therefore$ $x=1$\n\nor\n\n$x-[x]-3=0$\n\n$\\Rightarrow \\{x\\}-3=0$ [As $\\{x\\}=x-[x]$]\n\n$\\Rightarrow \\{x\\}=3$\n\nBut we know, $0\\leq \\{x\\}<1$\n\n$\\therefore$ $\\{x\\}\\neq 3$\n\n$\\therefore$ $x$ has only one solution in ($-\\infty ,\\infty$) which is $x=1$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldybe3t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If A and B are two non-zero n $\\times$ n matrices such that $\\mathrm{A}^{2}+\\mathrm{B}=\\mathrm{A}^{2}\\mathrm{B}$, then :",
+  "options": [
+   "$\\mathrm{A}^{2}\\mathrm{B}=\\mathrm{I}$",
+   "$\\mathrm{A}^{2}=\\mathrm{I}$ or $\\mathrm{B}=\\mathrm{I}$",
+   "$\\mathrm{A}^{2}\\mathrm{B}=\\mathrm{BA}^{2}$",
+   "$\\mathrm{AB}=\\mathrm{I}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given : $A^{2}+B=A^{2}B...(i)$\n\n$\\Rightarrow A^{2}+B-I=A^{2}B-I$\n\n$\\Rightarrow A^{2}B-A^{2}-B+I=I$\n\n$\\Rightarrow A^{2}(B-I)-I(B-I)=I$\n\n$\\Rightarrow \\left (A^{2}-I\\right )(B-I)=I$\n\n$\\therefore A^{2}-I$ is the inverse matrix of $B-I$ and vice versa.\n\nSo, $(B-I)\\left (A^{2}-I\\right )=I$\n\n$\\Rightarrow BA^{2}-B-A^{2}+I=I$\n\n$\\therefore A^{2}+B=BA^{2}...(ii)$\n\nSo, by (i) and (ii)\n\n$A^{2}B=BA^{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldybitx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For three positive integers p, q, r, $x^{pq^{2}}=y^{qr}=z^{p^{2}r}$ and r = pq + 1 such that 3, 3 log${}_{y}x$, 3 log${}_{z}y$, 7 log${}_{x}z$ are in A.P. with common difference $\\frac{1}{2}$. Then r-p-q is equal to",
+  "options": [
+   "12",
+   "$-$6",
+   "6",
+   "2"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The terms $3,3\\log _{y}x,3\\log _{z}y,7\\log _{x}z$ are in A.P. with common difference $\\dfrac{1}{2}$, so\n\n$3\\log _{y}x=\\dfrac{7}{2},3\\log _{z}y=4,7\\log _{x}z=\\dfrac{9}{2}.$\n\nThus $\\log _{y}x=\\dfrac{7}{6}$ and $\\log _{z}y=\\dfrac{4}{3}$, i.e. $x=y^{7/6}$ and $z=y^{3/4}$; these agree with $\\log _{x}z=\\dfrac{9}{14}$, since $\\dfrac{7}{6}\\times \\dfrac{4}{3}\\times \\dfrac{9}{14}=1$.\n\nSubstituting in $x^{pq^{2}}=y^{qr}=z^{p^{2}r}$:\n\n$y^{\\frac{7}{6}pq^{2}}=y^{qr}=y^{\\frac{3}{4}p^{2}r}\\Rightarrow \\dfrac{7}{6}pq^{2}=qr=\\dfrac{3}{4}p^{2}r.$\n\nFirst equality: $7pq=6r$. With $r=pq+1$, $7pq=6pq+6\\Rightarrow pq=6$ and $r=7$.\n\nSecond equality: $q=\\dfrac{3}{4}p^{2}$, so $p\\times \\dfrac{3}{4}p^{2}=6\\Rightarrow p^{3}=8\\Rightarrow p=2,q=3$.\n\n$r-p-q=7-2-3=2$.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldybks1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let PQR be a triangle. The points A, B and C are on the sides QR, RP and PQ respectively such that \n\n$\\frac{QA}{AR}=\\frac{RB}{BP}=\\frac{PC}{CQ}=\\frac{1}{2}$. Then $\\frac{Area(\\Delta PQR)}{Area(\\Delta ABC)}$ is equal to :",
+  "options": [
+   "$\\frac{5}{2}$",
+   "4",
+   "2",
+   "3"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the position vector of $P,Q,R$ be $\\vec{0},\\vec{a},\\vec{b}$ \n\n$\\Rightarrow$ Position vector of $A=\\frac{2\\vec{a}+\\vec{b}}{3},$\n\nPosition vector of $B=\\frac{2\\vec{b}}{3}$ and \n\nPosition vector of $C=\\frac{\\vec{a}}{3}$\n\n\n[IMG]\n\n\n$\\begin{array}{l} \\therefore AB\\leftarrow =\\dfrac{2⃗{b}}{3}-\\left (\\dfrac{2⃗{a}+⃗{b}}{3}\\right )=\\dfrac{⃗{b}}{3}-\\dfrac{2⃗{a}}{3}=\\dfrac{⃗{b}-2⃗{a}}{3} \\\\  \\\\ CA\\leftarrow =\\dfrac{2⃗{a}+⃗{b}}{3}-\\dfrac{⃗{a}}{3}=\\dfrac{⃗{a}+⃗{b}}{3} \\\\  \\\\ \\text{Area of}△PQR=\\dfrac{1}{2}|PQ\\leftarrow \\times PR\\leftarrow |=\\dfrac{1}{2}|⃗{a}\\times ⃗{b}| \\\\  \\\\ \\text{Area of}△ABC=\\dfrac{1}{2}|CA\\leftarrow \\times AB\\leftarrow | \\\\ =\\dfrac{1}{2}\\left |\\left (\\dfrac{⃗{a}+⃗{b}}{3}\\right )\\times \\left (\\dfrac{⃗{b}-2⃗{a}}{3}\\right )\\right |=\\dfrac{1}{2}\\left |\\dfrac{⃗{a}\\times ⃗{b}}{3}\\right | \\\\  \\\\ \\therefore \\dfrac{\\text{Area}(△PQR)}{\\text{Area}(△ABC)}=\\dfrac{\\frac{1}{2}|⃗{a}\\times ⃗{b}|}{\\frac{1}{2}\\left |\\frac{⃗{a}\\times ⃗{b}}{3}\\right |}=3 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-24th-january-morning-shift/1ldybks1h-0.webp",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1ldybn6x",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=\\left \\{\\begin{array}{ll} x^{2}\\sin \\left (\\frac{1}{x}\\right ) & ,\\; x\\neq 0 \\\\ 0 & ,\\; x=0 \\end{array} \\right.$\n\nThen at $x=0$",
+  "options": [
+   "$f$ is continuous but $f^{'}$ is not continuous",
+   "$f$ and $f^{'}$ both are continuous",
+   "$f$ is continuous but not differentiable",
+   "$f^{'}$ is continuous but not differentiable"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given,\n\n$f(x)=\\left \\{\\begin{array}{ll} x^{2}\\sin \\left (\\frac{1}{x}\\right ), & x\\neq 0 \\\\ 0, & x=0 \\end{array} \\right.$\n\n$\\therefore$ $f^{'}(x)=2x\\sin \\left (\\frac{1}{x}\\right )-\\cos \\left (\\frac{1}{x}\\right )$\n\nNow,\n\n$\\lim _{x\\to 0}f^{'}(x)=\\lim _{x\\to 0}\\left [2x\\sin \\left (\\frac{1}{x}\\right )-\\cos \\left (\\frac{1}{x}\\right )\\right ]$\n\n$=0-\\lim _{x\\to 0}\\cos \\left (\\frac{1}{x}\\right )$\n\n= Does not exist\n\n$\\therefore$ $f^{'}(x)$ is discontinuous function at $x=0$.\n\nL.H.D. $=\\lim _{h\\to 0^{+}}\\frac{f(0-h)-f(0)}{-h}$\n\n$=\\lim _{h\\to 0^{+}}\\frac{f(-h)}{-h}$\n\n$=\\lim _{h\\to 0^{+}}\\frac{-h^{2}\\sin \\left (\\frac{1}{h}\\right )}{-h}=0$\n\nR.H.D. $=\\lim _{h\\to 0^{+}}\\frac{f(0+h)-f(0)}{h}$\n\n$=\\lim _{h\\to 0^{+}}\\frac{f(h)}{h}$\n\n$=\\lim _{h\\to 0^{+}}\\frac{h^{2}\\sin \\left (\\frac{1}{h}\\right )}{h}=0$\n\n$\\therefore$ L.H.D. = R.H.D.\n\n$\\Rightarrow f(x)$ is differentiable at $x=0$. So, f(x) is continuous.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldybvfx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $λ\\in \\mathrm{ℝ}$ and let the equation E be $|x|^{2}-2|x|+|λ-3|=0$. Then the largest element in the set S = {$x+λ:x$ is an integer solution of E} is $______$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$D\\geq 0\\Rightarrow 4-4|λ-3|\\geq 0$\n\n$|λ-3|\\leq 1$\n\n$-1\\leq λ-3\\leq 1$\n\n$2\\leq λ\\leq 4$\n\n$|x|=\\frac{2\\pm \\sqrt{4-4|λ-3|}}{2}$\n\n$=1\\pm \\sqrt{1-|λ-3|}$\n\n$x_{\\text{largest}}=1+1=2$, when $λ=3$\n\nLargest element of $S=2+3=5$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldybxlr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The shortest distance between the lines $\\frac{x-2}{3}=\\frac{y+1}{2}=\\frac{z-6}{2}$ and $\\frac{x-6}{3}=\\frac{1-y}{2}=\\frac{z+8}{0}$ is equal to $________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 14.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $L_{1}:\\frac{x-2}{3}=\\frac{y+1}{2}=\\frac{z-6}{2}$\n\n$\\therefore$ Point on line is $A(2,-1,6)$\n\nParallel vector to this line is,\n\n$\\vec{p}=3\\hat{i}+2\\hat{j}+2\\widehat{k}$\n\nFor $L_{2}:\\frac{x-6}{3}=\\frac{y-1}{-2}=\\frac{z+8}{0}$\n\n$\\therefore$ Point on line is $B(6,1,-8)$\n\nParallel vector to this line is,\n\n$\\vec{q}=3\\hat{i}-2\\hat{j}+0\\widehat{k}$\n\n\n[IMG]\n\n\nNow shortest distance between these two lines is,\n\n$=\\left |\\frac{AB\\leftarrow .\\left (\\vec{p}\\times \\vec{q}\\right )}{\\right |\\vec{p}\\times \\vec{q}\\left |}\\right |$\n\nNow, $AB\\leftarrow =4\\hat{i}+2\\hat{j}-14\\widehat{k}$\n\n$\\vec{p}\\times \\vec{q}=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\widehat{k} \\\\ 3 & 2 & 2 \\\\ 3 & -2 & 0 \\end{array}\\right |$\n\n$=4\\hat{i}+6\\hat{j}-12\\widehat{k}$\n\n$\\therefore$ $|⃗{p}\\times ⃗{q}|=\\sqrt{16+36+144}=\\sqrt{196}=14$\n\nand $AB\\leftarrow .\\qquad \\left (\\vec{p}\\times \\vec{q}\\right )=+16+12+168=+196$\n\n$\\therefore$ Shortest distance $=\\left |\\frac{196}{14}\\right |=14$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-24th-january-morning-shift/1ldybxlrv-0.webp",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1ldyc0dd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The 4${}^{\\mathrm{th}}$ term of GP is 500 and its common ratio is $\\frac{1}{m},m\\in \\mathrm{ℕ}$. Let $\\mathrm{S}_{\\mathrm{n}}$ denote the sum of the first n terms of this GP. If $\\mathrm{S}_{6}>\\mathrm{S}_{5}+1$ and $\\mathrm{S}_{7}<\\mathrm{S}_{6}+\\frac{1}{2}$, then the number of possible values of m is $___________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 12.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$T_{4}=500$\n\n$ar^{3}=500\\Rightarrow a=\\frac{500}{r^{3}}$\n\nNow,\n\n$\\begin{array}{l} S_{6}>S_{5}+1 \\\\  \\\\ \\dfrac{a\\left (1-r^{6}\\right )}{1-r}-\\dfrac{a\\left (1-r^{5}\\right )}{1-r}>1 \\\\  \\\\ ar^{5}>1 \\\\  \\\\ \\text{Now,}r=\\dfrac{1}{m}\\text{and}a=\\dfrac{500}{r^{3}} \\\\  \\\\ \\Rightarrow m^{2}<500 \\\\  \\\\ \\because m>0\\Rightarrow m\\in (0,10\\sqrt{5}) \\\\  \\\\ S_{7}<S_{6}+\\dfrac{1}{2} \\\\  \\\\ \\dfrac{a\\left (1-r^{7}\\right )}{1-r}<\\dfrac{a\\left (1-r^{6}\\right )}{1-r}+\\dfrac{1}{2} \\\\  \\\\ ar^{6}<\\dfrac{1}{2} \\end{array}$\n\n$\\because r=\\frac{1}{m}$ and $a=\\frac{500}{r^{3}}$\n\n$\\frac{1}{m^{3}}<\\frac{1}{1000}$\n\n$\\Rightarrow m\\in (10,\\infty )$\n\nPossible values of $m$ is $\\{11,12,....22\\}$\n\n$\\because m\\in N$\n\nTotal 12 values",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyc1pa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let C be the largest circle centred at (2, 0) and inscribed in the ellipse $\\frac{x^{2}}{36}+\\frac{y^{2}}{16}=1$. If (1, $α$) lies on C, then 10 $α^{2}$ is equal to $____________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 118.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For a point $(x,y)$ on $\\dfrac{x^{2}}{36}+\\dfrac{y^{2}}{16}=1$, $y^{2}=16-\\dfrac{4x^{2}}{9}$, so its squared distance from $(2,0)$ is\n\n$d^{2}=(x-2)^{2}+16-\\frac{4x^{2}}{9}=\\frac{5}{9}x^{2}-4x+20=\\frac{5}{9}\\left (x-\\frac{18}{5}\\right )^{2}+\\frac{64}{5},-6\\leq x\\leq 6$\n\nThe largest circle centred at $(2,0)$ inside the ellipse touches it at the nearest point, so $r^{2}=\\min d^{2}=\\dfrac{64}{5}$, attained at $x=\\dfrac{18}{5}\\in [-6,6]$.\n\n$(1,α)$ lies on C: $(1-2)^{2}+α^{2}=\\dfrac{64}{5}\\Rightarrow α^{2}=\\dfrac{59}{5}$.\n\n$10α^{2}=10\\times \\frac{59}{5}=118$\n\nHence, the answer is 118.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyc2w6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A boy needs to select five courses from 12 available courses, out of which 5 courses are language courses. If he can choose at most two language courses, then the number of ways he can choose five courses is $__________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 546.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Among 12 courses, 5 courses are of language.\n\n$\\therefore$ Remaining 7 are different courses.\n\nNow, number of ways to select 5 courses where at most 2 language courses present.\n\n  \n    \n    Language\n    Different\n    Number of ways\n  \n\n  \n    Case 1\n    0\n    5\n    ${}^{5}C_{0}\\times {}^{7}C_{5}$\n  \n  \n    Case 2\n    1\n    4\n    ${}^{5}C_{1}\\times {}^{7}C_{4}$\n  \n  \n    Case 3\n    2\n    3\n    ${}^{5}C_{2}\\times {}^{7}C_{3}$\n  \n\n$\\therefore$ Total number of ways\n\n$={}^{5}C_{0}\\times {}^{7}C_{5}+{}^{5}C_{1}\\times {}^{7}C_{4}+{}^{5}C_{2}\\times {}^{7}C_{3}$\n\n$=546$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyc3v3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The value of $12\\int\\limits _{0}^{3}\\left |x^{2}-3x+2\\right |dx$ is $____________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 22.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let I = $\\int\\limits _{0}^{3}|x^{2}-3x+2|dx$\n\n$=\\int\\limits _{0}^{3}|(x-1)(x-2)|dx$\n\n\n[IMG]\n\n\n$=\\int\\limits _{0}^{1}+(x^{2}-3x+2)dx+\\int\\limits _{1}^{2}-(x^{2}-3x+2)dx+\\int\\limits _{2}^{3}(x^{2}-3x+2)dx$\n\n$=\\left [\\frac{x^{3}}{3}-\\frac{3x^{2}}{2}+2x\\right ]_{0}^{1}-\\left [\\frac{x^{3}}{3}-\\frac{3x^{2}}{2}+2x\\right ]_{1}^{2}+\\left [\\frac{x^{3}}{3}-\\frac{3x^{2}}{2}+2x\\right ]_{2}^{3}$\n\n$=\\left (\\frac{1}{3}-\\frac{3}{2}+2\\right )-\\left [\\left (\\frac{8}{3}-6+4\\right )-\\left (\\frac{1}{3}-\\frac{3}{2}+2\\right )\\right ]+\\left [\\left (\\frac{27}{3}-\\frac{27}{2}+6\\right )-\\left (\\frac{8}{3}-6+4\\right )\\right ]$\n\n$=\\frac{5}{6}-\\left (\\frac{2}{3}-\\frac{5}{6}\\right )+\\left (\\frac{3}{2}-\\frac{2}{3}\\right )$\n\n$=\\frac{5}{6}+\\frac{5}{6}-\\frac{2}{3}-\\frac{2}{3}+\\frac{3}{2}$\n\n$=\\frac{10}{6}-\\frac{4}{3}+\\frac{3}{2}$\n\n$=\\frac{10-8+9}{6}=\\frac{11}{6}$\n\n$\\therefore$ 12I = $12\\times \\frac{11}{6}$ = 22",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-24th-january-morning-shift/1ldyc3v3b-0.webp",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-1ldyc80x",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The value of $\\frac{8}{π}\\int\\limits _{0}^{\\frac{π}{2}}\\frac{(\\cos x)^{2023}}{(\\sin x)^{2023}+(\\cos x)^{2023}}dx$ is $___________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let, $I=\\frac{8}{π}\\int\\limits _{0}^{\\frac{π}{2}}\\frac{(\\cos x)^{2023}}{(\\sin x)^{2023}+(\\cos x)^{2023}}dx$ ..... (1)\n\nUsing formula,\n\n$\\int\\limits _{a}^{b}f(x)dx=\\int\\limits _{a}^{b}f(a+b-x)dx$\n\n$I=\\frac{8}{π}\\int\\limits _{0}^{\\frac{π}{2}}\\frac{\\left [\\cos \\left (\\frac{π}{2}-x\\right )\\right ]^{2023}}{\\left [\\sin \\left (\\frac{π}{2}-x\\right )\\right ]^{2023}+\\left [\\cos \\left (\\frac{π}{2}-x\\right )\\right ]^{2023}}dx$\n\n$=\\frac{8}{π}\\int\\limits _{0}^{\\frac{π}{2}}\\frac{(\\sin x)^{2023}}{(\\cos x)^{2023}+(\\sin x)^{2023}}dx$ ..... (2)\n\nAdding equation (1) and (2), we get\n\n$2I=\\frac{8}{π}\\int\\limits _{0}^{\\frac{π}{2}}\\frac{(\\sin x)^{2023}+(\\cos x)^{2023}}{(\\sin x)^{2023}+(\\cos x)^{203}}dx$\n\n$\\Rightarrow 2I=\\frac{8}{π}\\int\\limits _{0}^{\\frac{π}{2}}dx$\n\n$\\Rightarrow 2I=\\frac{8}{π}[x]_{0}^{\\frac{π}{2}}$\n\n$\\Rightarrow 2I=\\frac{8}{π}\\times \\frac{π}{2}$\n\n$\\Rightarrow 2I=4$\n\n$\\Rightarrow I=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1ldyc8xz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of 9 digit numbers, that can be formed using all the digits of the number 123412341 so that the even digits occupy only even places, is $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 60.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Here, even digits are 2 and 4.\n\nNumber of digit \"2\" presents = 2\n\nNumber of digit \"4\" presents = 2\n\n$\\therefore$ Total even digits = 4\n\n\n[IMG]\n\n\n$\\therefore$ Total 4 even places presents.\n\nNumber of ways to put those 4 digits in those 4 places $=\\frac{{}^{4}C_{4}\\times 4!}{2!2!}=\\frac{4!}{2!2!}$\n\nNow, remaining 5 digits (three 1 and two 3) can be put in those 5 places in $=\\frac{{}^{5}C_{5}\\times 5!}{3!2!}=\\frac{5!}{3!2!}$ ways.\n\n$\\therefore$ Total possible 9 digit numbers\n\n$=\\frac{4!}{2!2!}\\times \\frac{5!}{3!2!}=60$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-24th-january-morning-shift/1ldyc8xzj-0.webp",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

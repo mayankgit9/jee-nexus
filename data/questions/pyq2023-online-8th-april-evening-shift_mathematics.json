@@ -1,0 +1,793 @@
+[
+ {
+  "publicId": "PYQ-2023-1lgyl12p",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=\\left \\{θ\\in (0,2π):\\frac{1+2i\\sin θ}{1-i\\sin θ} \\right.$ is purely imaginary $\\}$. Then the sum of the elements in $\\mathrm{A}$ is :",
+  "options": [
+   "$3π$",
+   "$π$",
+   "$2π$",
+   "$4π$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 21,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\text{Here,}z=\\dfrac{1+2i\\sin θ}{1-i\\sin θ}\\times \\dfrac{1+i\\sin θ}{1+i\\sin θ} \\\\  \\\\ \\dfrac{1+i\\sin θ+2i\\sin θ-2\\sin ^{2}θ}{1-i^{2}\\sin ^{2}θ} \\\\  \\\\ =\\dfrac{\\left (1-2\\sin ^{2}θ\\right )+i(3\\sin θ)}{1+\\sin ^{2}θ} \\end{array}$\n\n$\\because z$ is purely imaginary, so $\\mathrm{Re}z=0$\n\n$\\begin{array}{l} \\Rightarrow \\dfrac{1-2\\sin ^{2}θ}{1+\\sin ^{2}θ}=0 \\\\  \\\\ \\Rightarrow 2\\sin ^{2}θ=1\\Rightarrow \\sin ^{2}θ=\\dfrac{1}{2} \\\\  \\\\ \\Rightarrow \\sin θ=\\pm \\dfrac{1}{\\sqrt{2}} \\end{array}$\n\n$\\begin{array}{l} \\therefore A=\\left [\\dfrac{π}{4},\\dfrac{3π}{4},\\dfrac{5π}{4},\\dfrac{7π}{4}\\right ]\\because θ\\in (0,2π) \\\\  \\\\ \\therefore \\text{Sum}=\\dfrac{π+3π+5π+7π}{4}=\\dfrac{16π}{4}=4π \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyl43d",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$25^{190}-19^{190}-8^{190}+2^{190}$ is divisible by :",
+  "options": [
+   "14 but not by 34",
+   "neither 14 nor 34",
+   "both 14 and 34",
+   "34 but not by 14"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 22,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $N=25^{190}-19^{190}-8^{190}+2^{190}$. For any $n$, $a-b$ divides $a^{n}-b^{n}$.\n\n$N=(25^{190}-19^{190})-(8^{190}-2^{190})$, and both brackets are multiples of $25-19=6=8-2$, so $N$ is even.\n\n$N=(25^{190}-8^{190})-(19^{190}-2^{190})$, and both brackets are multiples of $25-8=17=19-2$, so $17$ divides $N$. Hence $34$ divides $N$.\n\nSince 190 is even, $a+b$ also divides $a^{190}-b^{190}$, so $19^{190}-2^{190}$ is a multiple of $21$ and hence of $7$.\n\nModulo 7, $25\\equiv 4$, $8\\equiv 1$ and $4^{3}=64\\equiv 1$, so $25^{190}=25^{189}\\times 25\\equiv 4$ and $25^{190}-8^{190}\\equiv 4-1=3(\\mathrm{mod}7)$.\n\nThus $N\\equiv 3(\\mathrm{mod}7)$: $N$ is not divisible by 7, and so not by 14.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyl5en",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The integral $\\int \\left [\\left (\\frac{x}{2}\\right )^{x}+\\left (\\frac{2}{x}\\right )^{x}\\right ]\\ln \\left (\\frac{ex}{2}\\right )dx$ is equal to :",
+  "options": [
+   "$\\left (\\frac{x}{2}\\right )^{x}+\\left (\\frac{2}{x}\\right )^{x}+C$",
+   "$\\left (\\frac{x}{2}\\right )^{x}-\\left (\\frac{2}{x}\\right )^{x}+C$",
+   "$\\left (\\frac{x}{2}\\right )^{x}\\log _{2}\\left (\\frac{2}{x}\\right )+C$",
+   "None"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve the integral:\n\n$I=\\int \\left [\\left (\\frac{x}{2}\\right )^{x}+\\left (\\frac{2}{x}\\right )^{x}\\right ]\\ln \\left (\\frac{ex}{2}\\right )dx$\n\nwe start by simplifying the logarithmic term:\n\n$\\ln \\left (\\frac{ex}{2}\\right )=\\ln (e)+\\ln \\left (\\frac{x}{2}\\right )=1+\\ln \\left (\\frac{x}{2}\\right )$\n\nSo the integral becomes:\n\n$I=\\int \\left [\\left (\\frac{x}{2}\\right )^{x}+\\left (\\frac{2}{x}\\right )^{x}\\right ]\\left [1+\\ln \\left (\\frac{x}{2}\\right )\\right ]dx$\n\nLet's denote:\n\n$A=\\left (\\dfrac{x}{2}\\right )^{x}$\n\n$B=\\left (\\dfrac{2}{x}\\right )^{x}$\n\nThen, the integral can be split:\n\n$I=\\int \\left [A(1+\\ln \\left (\\frac{x}{2}\\right ))+B(1+\\ln \\left (\\frac{x}{2}\\right ))\\right ]dx$\n\nCalculating $\\int A(1+\\ln \\left (\\frac{x}{2}\\right ))dx$:\nFirst, find the derivative of $A$:\n\n$\\frac{dA}{dx}=A\\left [\\ln \\left (\\frac{x}{2}\\right )+1\\right ]$\n\nThis means:\n\n$A\\left [1+\\ln \\left (\\frac{x}{2}\\right )\\right ]=\\frac{dA}{dx}$\n\nTherefore:\n\n$\\int A\\left [1+\\ln \\left (\\frac{x}{2}\\right )\\right ]dx=\\int \\frac{dA}{dx}dx=A+C_{1}=\\left (\\frac{x}{2}\\right )^{x}+C_{1}$\n\nCalculating $\\int B(1+\\ln \\left (\\frac{x}{2}\\right ))dx$:\nNote that:\n\n$\\ln \\left (\\frac{x}{2}\\right )=\\ln x-\\ln 2$\n\n$\\ln \\left (\\frac{2}{x}\\right )=\\ln 2-\\ln x$\n\nThe derivative of $B$ is:\n\n$\\frac{dB}{dx}=B\\left [\\ln \\left (\\frac{2}{x}\\right )+1\\right ]=B[\\ln 2-\\ln x+1]$\n\nBut in our integrand, we have $B\\left [1+\\ln \\left (\\frac{x}{2}\\right )\\right ]=B[1+\\ln x-\\ln 2]$. Notice that:\n\n$1+\\ln x-\\ln 2=-(\\ln 2-\\ln x+1)$\n\nThus:\n\n$B\\left [1+\\ln \\left (\\frac{x}{2}\\right )\\right ]=-\\frac{dB}{dx}$\n\nTherefore:\n\n$\\int B\\left [1+\\ln \\left (\\frac{x}{2}\\right )\\right ]dx=-\\int \\frac{dB}{dx}dx=-B+C_{2}=-\\left (\\frac{2}{x}\\right )^{x}+C_{2}$\n\nCombining the Results:\nAdding both integrals:\n\n$I=\\left (\\frac{x}{2}\\right )^{x}-\\left (\\frac{2}{x}\\right )^{x}+C$\n\nAnswer: Option B\n\n$\\left (\\frac{x}{2}\\right )^{x}-\\left (\\frac{2}{x}\\right )^{x}+C$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyl9ba",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the probability that the random variable $\\mathrm{X}$ takes values $x$ is given by $\\mathrm{P}(\\mathrm{X}=x)=\\mathrm{k}(x+1)3^{-x},x=0,1,2,3,\\ldots$, where $\\mathrm{k}$ is a constant, then $\\mathrm{P}(\\mathrm{X}\\geq 2)$ is equal to :",
+  "options": [
+   "$\\frac{7}{18}$",
+   "$\\frac{20}{27}$",
+   "$\\frac{7}{27}$",
+   "$\\frac{11}{18}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "As, we know that sum of all the probabilities $=1$\n\n$\\begin{array}{l} \\text{So,}\\sum\\limits _{x=0}^{\\infty }\\mathrm{P}(\\mathrm{X}=x)=1 \\\\  \\\\ \\Rightarrow k\\left [1+2\\cdot 3^{-1}+3\\cdot 3^{-2}+\\ldots .\\infty \\right ]=1 \\end{array}$\n\n$\\begin{array}{l} \\text{Let}S=1+\\dfrac{2}{3}+\\dfrac{3}{3^{2}}+\\ldots .+\\infty  \\\\  \\\\ \\Rightarrow \\dfrac{S}{3}=0+\\dfrac{1}{3}+\\dfrac{2}{3^{2}}+\\dfrac{3}{3^{3}}+\\ldots .+\\infty  \\end{array}$\n\nOn subtracting, we get\n\n$\\begin{array}{l} \\dfrac{2S}{3}=1+\\dfrac{1}{3}+\\dfrac{1}{3^{2}}+\\ldots .+\\infty  \\\\  \\\\ \\Rightarrow \\dfrac{2S}{3}=\\dfrac{1}{1-\\frac{1}{3}}=\\dfrac{1}{\\frac{2}{3}} \\\\  \\\\ \\Rightarrow \\dfrac{2S}{3}=\\dfrac{3}{2} \\\\  \\\\ \\Rightarrow S=\\dfrac{9}{4} \\end{array}$\n\n$\\begin{array}{l} \\text{So,}k\\times \\dfrac{9}{4}=1\\Rightarrow k=\\dfrac{4}{9} \\\\  \\\\ \\text{Now,}\\mathrm{P}(\\mathrm{X}\\geq 2)=1-\\mathrm{P}(\\mathrm{X}<2) \\\\  \\\\ =1-\\mathrm{P}(\\mathrm{X}=0)-\\mathrm{P}(\\mathrm{X}=1) \\\\  \\\\ =1-\\dfrac{4}{9}(1)-\\dfrac{4}{9}\\times \\dfrac{2}{3} \\\\  \\\\ =1-\\dfrac{4}{9}-\\dfrac{8}{27}=\\dfrac{27-12-8}{27}=\\dfrac{7}{27} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyld2f",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{A}=\\{1,2,3,4,5,6,7\\}$. Then the relation $\\mathrm{R}=\\{(x,y)\\in \\mathrm{A}\\times \\mathrm{A}:x+y=7\\}$ is :",
+  "options": [
+   "reflexive but neither symmetric nor transitive",
+   "transitive but neither symmetric nor reflexive",
+   "symmetric but neither reflexive nor transitive",
+   "an equivalence relation"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Here, $A=\\{1,2,3,4,5,6,7\\}$\n\nSince, $x+y=7\\Rightarrow y=7-x$\n\nSo, $\\mathrm{R}=\\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\\}$\n\n$\\because (a,b)\\in \\mathrm{R}\\Rightarrow (b,a)\\in \\mathrm{R}$\n\n$\\therefore \\mathrm{R}$ is symmetric only.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgylem0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the mean and variance of 12 observations be $\\frac{9}{2}$ and 4 respectively. Later on, it was observed that two observations were considered as 9 and 10 instead of 7 and 14 respectively. If the correct variance is $\\frac{m}{n}$, where $\\mathrm{m}$ and $\\mathrm{n}$ are coprime, then $\\mathrm{m}+\\mathrm{n}$ is equal to :",
+  "options": [
+   "317",
+   "316",
+   "314",
+   "315"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\text{Since, Mean}=\\dfrac{9}{2} \\\\  \\\\ \\Rightarrow \\Sigma x=\\dfrac{9}{2}\\times 12=54 \\end{array}$\n\nAlso, variance $=4$\n\n$\\begin{array}{l} \\Rightarrow \\dfrac{\\sum x^{2}}{12}-\\left [\\dfrac{\\sum x_{i}}{12}\\right ]^{2}=4 \\\\  \\\\ \\Rightarrow \\dfrac{\\sum x^{2}}{12}=4+\\dfrac{81}{4}=\\dfrac{97}{4} \\\\  \\\\ \\Rightarrow \\sum x^{2}=291 \\end{array}$\n\n$\\begin{array}{l} \\sum x^{'}=54-(9+10)+7+14 \\\\  \\\\ =54-19+21=56 \\\\  \\\\ \\text{and}\\sum x^{2}=291-(81+100)+49+196 \\\\  \\\\ =291-181+49+196=355 \\end{array}$\n\n$\\begin{array}{l} \\text{So,}σ_{\\text{new}}^{2}=\\dfrac{\\sum x_{\\text{new}}^{2}}{12}-\\left (\\dfrac{\\sum x_{\\text{new}}}{12}\\right )^{2} \\\\  \\\\ =\\dfrac{355}{12}-\\left (\\dfrac{56}{12}\\right )^{2} \\\\  \\\\ =\\dfrac{4260-3136}{144}=\\dfrac{1124}{144}=\\dfrac{281}{36} \\\\  \\\\ =\\dfrac{m}{n} \\\\  \\\\ \\Rightarrow m=281,n=36 \\\\  \\\\ \\Rightarrow m+n=281+36=317 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyliyt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The absolute difference of the coefficients of $x^{10}$ and $x^{7}$ in the expansion of $\\left (2x^{2}+\\frac{1}{2x}\\right )^{11}$ is equal to :",
+  "options": [
+   "$11^{3}-11$",
+   "$13^{3}-13$",
+   "$12^{3}-12$",
+   "$10^{3}-10$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "General term of $\\left (2x^{2}+\\frac{1}{2x}\\right )^{11}$ is :\n\n$\\begin{array}{l} \\mathrm{T}_{\\mathrm{r}+1}={}^{11}\\mathrm{C}_{r}\\left (2x^{2}\\right ){}^{11-r}\\left (\\dfrac{1}{2x}\\right )^{r} \\\\  \\\\ ={}^{11}\\mathrm{C}_{r}2^{11-r}x^{22-2r}2^{-r}x^{-r} \\\\  \\\\ ={}^{11}\\mathrm{C}_{r}2^{11-2r}x^{22-3r} \\end{array}$\n\nNow, $22-3r=10$ and $22-3r=7$\n\n$\\begin{array}{llll} \\Rightarrow 3r=12 &  &  & \\Rightarrow 3r=15 \\\\  \\\\ \\Rightarrow r=4 &  &  & \\Rightarrow r=5 \\end{array}$\n\n$\\therefore$ Coeff. of $x^{10}={}^{11}\\mathrm{C}_{4}\\cdot 2^{11-8}={}^{11}\\mathrm{C}_{4}\\times 8$\n\nCoeff. of $x^{7}={}^{11}C_{5}\\cdot 2^{11-10}={}^{11}C_{5}\\times 2$\n\nNow, required difference\n\n$\\begin{array}{l} ={}^{11}\\mathrm{C}_{4}\\times 8-{}^{11}\\mathrm{C}_{5}\\times 2 \\\\  \\\\ =\\dfrac{11\\times 10\\times 9\\times 8\\times 7!}{4!\\times 7!}\\times 8-\\dfrac{11\\times 10\\times 9\\times 8\\times 7\\times 6!\\times 2}{5!6!} \\end{array}$\n\n$\\begin{array}{l} =\\dfrac{11\\times 10\\times 9\\times 8\\times 8}{24}-\\dfrac{11\\times 10\\times 9\\times 8\\times 7\\times 2}{120} \\\\  \\\\ =11\\times 10\\times 8\\times 3-11\\times 3\\times 4\\times 7 \\\\  \\\\ =11\\times 3\\times 4[20-7] \\\\  \\\\ =11\\times 12\\times 13=(12-1)\\times 12\\times (12+1) \\\\  \\\\ =12\\left (12^{2}-1\\right )=12^{3}-12 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgylle5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area of the quadrilateral $\\mathrm{ABCD}$ with vertices $\\mathrm{A}(2,1,1),\\mathrm{B}(1,2,5),\\mathrm{C}(-2,-3,5)$ and $\\mathrm{D}(1,-6,-7)$ is equal to :",
+  "options": [
+   "48",
+   "$8\\sqrt{38}$",
+   "54",
+   "$9\\sqrt{38}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\text{Here}\\mathrm{AC}\\leftarrow =(-2-2)\\hat{i}+(-3-1)\\hat{j}+(5-1)\\hat{k} \\\\  \\\\ =-4\\hat{i}-4\\hat{j}+4\\hat{k} \\\\  \\\\ \\mathrm{BD}\\leftarrow =(1-1)\\hat{i}+(-6-2)\\hat{j}+(-7-5)\\hat{k} \\\\  \\\\ =-8\\hat{j}-12\\hat{k} \\end{array}$\n\nSo, area of quadrilateral $=\\frac{1}{2}|\\mathrm{AC}\\leftarrow \\times \\mathrm{BD}\\leftarrow |$\n\n$\\begin{array}{lllllll} =\\dfrac{1}{2}\\| \\begin{array}{lll} \\hat{i} & \\hat{j} & \\hat{k} \\\\ -4 & -4 & 4 \\\\ 0 & -8 & -12 \\end{array}\\|  \\\\  \\\\ =\\dfrac{1}{2}|(48+32)\\hat{i}-(48-0)\\hat{j}+(32-0)\\hat{k}| \\\\  \\\\ =\\dfrac{1}{2}|80\\hat{i}-48\\hat{j}+32\\hat{k}| \\\\  \\\\ =\\dfrac{1}{2}16|5\\hat{i}-3\\hat{j}+2\\hat{k}| \\\\  \\\\ =8\\sqrt{25+9+4}=8\\sqrt{38}\\text{sq units.} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgylnv0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the number of words, with or without meaning, which can be made using all the letters of the word MATHEMATICS in which $\\mathrm{C}$ and $\\mathrm{S}$ do not come together, is $(6!)\\mathrm{k}$, then $\\mathrm{k}$ is equal to :",
+  "options": [
+   "5670",
+   "1890",
+   "2835",
+   "945"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\text{Total number of words}=\\frac{11!}{2!2!2!}$\n\nNumber of words in which $\\mathrm{C}$ and $\\mathrm{S}$ are together\n\n$=\\frac{10!}{2!2!2!}\\times 2\\text{!}$\n\nSo, required number of words\n\n$\\begin{array}{l} =\\dfrac{11!}{2!2!2!}-\\dfrac{10!}{2!2!} \\\\  \\\\ =\\dfrac{11\\times 10!}{2!2!2!}-\\dfrac{10!}{2!2!} \\\\  \\\\ =\\dfrac{10!}{2!2!}\\left [\\dfrac{11}{2}-1\\right ]=\\dfrac{10!}{2!2!}\\times \\dfrac{9}{2} \\\\  \\\\ =5670\\times 6! \\\\  \\\\ \\Rightarrow k(6!)=5670\\times 6! \\\\  \\\\ \\Rightarrow k=5670 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgylvto",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $A=\\left [\\begin{array}{ll} 1 & 5 \\\\ λ & 10 \\end{array}\\right ],\\mathrm{A}^{-1}=α\\mathrm{A}+β\\mathrm{I}$ and $α+β=-2$, then $4α^{2}+β^{2}+λ^{2}$ is equal to :",
+  "options": [
+   "12",
+   "10",
+   "19",
+   "14"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{lll} \\mathrm{A}=\\left [\\begin{array}{ll} 1 & 5 \\\\ λ & 10 \\end{array}\\right ] \\\\  \\\\ \\Rightarrow |\\mathrm{A}-x\\mathrm{I}|=0 \\\\  \\\\ \\Rightarrow \\left |\\begin{array}{ll} 1-x & 5 \\\\ λ & 10-x \\end{array}\\right |=0 \\\\  \\\\ \\Rightarrow (1-x)(10-x)-5λ=0 \\\\  \\\\ \\Rightarrow 10-11x+x^{2}-5λ=0 \\end{array}$\n\nAlso, $\\Rightarrow \\mathrm{A}^{-1}=α\\mathrm{A}+β\\mathrm{I}$\n\n$\\Rightarrow αA^{2}+βA-I=0$\n\nand $A^{2}-11A+(10-5λ)I=0$\n\nOn solving, we get\n\n$α=\\frac{1}{5},β=-\\frac{11}{5}$\n\n$\\begin{array}{l} \\text{So,}5λ-10=5\\Rightarrow λ=3 \\\\  \\\\ \\therefore 4α^{2}+β^{2}+λ^{2} \\\\  \\\\ =4\\left (\\dfrac{1}{25}\\right )+\\left (\\dfrac{121}{25}\\right )+9 \\\\  \\\\ =\\dfrac{125}{25}+9=14 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgylxsd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $α>β>0$ are the roots of the equation $ax^{2}+bx+1=0$, and $\\lim _{x\\to \\frac{1}{α}}\\left (\\frac{1-\\cos \\left (x^{2}+bx+a\\right )}{2(1-αx)^{2}}\\right )^{\\frac{1}{2}}=\\frac{1}{k}\\left (\\frac{1}{β}-\\frac{1}{α}\\right ),\\text{then}\\mathrm{k}\\text{is equal to}$ :",
+  "options": [
+   "$2β$",
+   "$β$",
+   "$α$",
+   "$2α$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since, $α,β$ are roots of $ax^{2}+bx+1=0$\n\nReplace $x\\to \\frac{1}{x}$\n\n$\\frac{a}{x^{2}}+\\frac{b}{x}+1=0\\Rightarrow x^{2}+bx+a=0$\n\nSo, $\\frac{1}{α},\\frac{1}{β}$ are the roots.\n\nNow, $\\lim _{x\\to \\frac{1}{α}}\\left [\\frac{1-\\cos \\left (x^{2}+bx+a\\right )}{2(1-αx)^{2}}\\right ]^{\\frac{1}{2}}$\n\n$=\\lim _{x\\to \\frac{1}{α}}\\left [\\frac{2\\sin ^{2}\\left (\\frac{x2+bx+a}{2}\\right )}{2(1-αx)^{2}}\\right ]^{\\frac{1}{2}}$\n\n$\\begin{array}{l} =\\lim _{x\\to \\frac{1}{α}}\\left [\\dfrac{2\\sin ^{2}\\frac{\\left (x-\\frac{1}{α}\\right )\\left (x-\\frac{1}{β}\\right )}{2}}{4\\times 2α^{2}\\frac{\\left (x-\\frac{1}{α}\\right )^{2}\\left (x-\\frac{1}{β}\\right )^{2}}{4}\\left (x-\\frac{1}{β}\\right )^{2}}\\right ]^{\\frac{1}{2}} \\\\  \\\\ =\\lim _{x\\to \\frac{1}{α}}\\left [\\pm \\dfrac{1}{2}\\dfrac{\\sin \\frac{\\left (x-\\frac{1}{α}\\right )\\left (x-\\frac{1}{β}\\right )}{2}}{α\\frac{\\left (x-\\frac{1}{α}\\right )\\left (x-\\frac{1}{β}\\right )}{2}}\\left (x-\\dfrac{1}{β}\\right )\\right ] \\\\  \\\\ =\\dfrac{1}{2α}\\left [\\dfrac{-1}{α}+\\dfrac{1}{β}\\right ) \\\\  \\\\ \\Rightarrow \\dfrac{1}{k}\\left [\\dfrac{1}{β}-\\dfrac{1}{α}\\right ]=\\dfrac{1}{2α}\\left [\\dfrac{1}{β}-\\dfrac{1}{α}\\right ] \\\\  \\\\ \\Rightarrow k=2α \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgylyp9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $36\\left (4\\cos ^{2}9^{\\circ }-1\\right )\\left (4\\cos ^{2}27^{\\circ }-1\\right )\\left (4\\cos ^{2}81^{\\circ }-1\\right )\\left (4\\cos ^{2}243^{\\circ }-1\\right )$ is :",
+  "options": [
+   "18",
+   "36",
+   "54",
+   "27"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For any $θ$ with $\\sin θ\\neq 0$:\n\n$4\\cos ^{2}θ-1=3-4\\sin ^{2}θ=\\frac{3\\sin θ-4\\sin ^{3}θ}{\\sin θ}=\\frac{\\sin 3θ}{\\sin θ}$\n\nThe angles $9^{\\circ },27^{\\circ },81^{\\circ },243^{\\circ }$ each triple the previous one, so the product telescopes:\n\n$36\\cdot \\frac{\\sin 27^{\\circ }}{\\sin 9^{\\circ }}\\cdot \\frac{\\sin 81^{\\circ }}{\\sin 27^{\\circ }}\\cdot \\frac{\\sin 243^{\\circ }}{\\sin 81^{\\circ }}\\cdot \\frac{\\sin 729^{\\circ }}{\\sin 243^{\\circ }}=36\\cdot \\frac{\\sin 729^{\\circ }}{\\sin 9^{\\circ }}$\n\nSince $729^{\\circ }=2\\times 360^{\\circ }+9^{\\circ }$, $\\sin 729^{\\circ }=\\sin 9^{\\circ }$, so the value is $36$.\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgym2kp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let S be the set of all values of $θ\\in [-π,π]$ for which the system of linear equations\n\n$x+y+\\sqrt{3}z=0$\n\n$-x+(\\tan θ)y+\\sqrt{7}z=0$\n\n$x+y+(\\tan θ)z=0$\n\nhas non-trivial solution. Then $\\frac{120}{π}\\sum\\limits _{θ\\in \\mathrm{S}}θ$ is equal to :",
+  "options": [
+   "40",
+   "30",
+   "10",
+   "20"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since, the given system has a non trivial solution,\n\n$\\text{So,}\\Delta =0$\n\n$\\Rightarrow \\Delta =\\left |\\begin{array}{lll} 1 & 1 & \\sqrt{3} \\\\ -1 & \\tan θ & \\sqrt{7} \\\\ 1 & 1 & \\tan θ \\end{array}\\right |=0$\n\n$\\begin{array}{l} \\Rightarrow 1\\left (\\tan ^{2}θ-\\sqrt{7}\\right )-1(-\\tan θ-\\sqrt{7})+\\sqrt{3}(-1-\\tan θ)=0 \\\\  \\\\ \\Rightarrow \\tan ^{2}θ-\\sqrt{7}+\\tan θ+\\sqrt{7}-\\sqrt{3}-\\sqrt{3}\\tan θ=0 \\\\  \\\\ \\Rightarrow \\tan θ(\\tan θ-\\sqrt{3})+1(\\tan θ-\\sqrt{3})=0 \\\\  \\\\ \\Rightarrow \\tan θ=\\sqrt{3}\\text{or}\\tan θ=-1 \\\\  \\\\ \\therefore θ=\\left \\{\\dfrac{π}{3},\\dfrac{-2π}{3},\\dfrac{-π}{4},\\dfrac{3π}{4}\\right \\} \\\\  \\\\ \\text{So,}\\dfrac{120}{π}\\sum θ=\\dfrac{120}{π}\\left \\{\\dfrac{4π-8π-3π+9π}{12}\\right \\} \\\\  \\\\ =\\dfrac{120}{π}\\left [\\dfrac{2π}{12}\\right ]=20 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyokte",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $[t]$ denote the greatest integer function. If $\\int\\limits _{0}^{2.4}\\left [x^{2}\\right ]dx=α+β\\sqrt{2}+γ\\sqrt{3}+δ\\sqrt{5}$, then $α+β+γ+δ$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 6.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{ll} \\int\\limits _{0}^{2.4}\\left [x^{2}\\right ]dx & =\\int\\limits _{0}^{1}\\left [x^{2}\\right ]dx+\\int\\limits _{1}^{\\sqrt{2}}\\left [x^{2}\\right ]dx \\\\  \\\\ +\\int\\limits _{\\sqrt{2}}^{\\sqrt{3}}\\left [x^{2}\\right ]dx+\\int\\limits _{\\sqrt{3}}^{2}\\left [x^{2}\\right ]dx+\\int\\limits _{2}^{\\sqrt{5}}\\left [x^{2}\\right ]dx+\\int\\limits _{\\sqrt{5}}^{2.4}\\left [x^{2}\\right ]dx \\end{array}$\n\n$\\begin{array}{l} =\\int\\limits _{0}^{1}0\\cdot dx+\\int\\limits _{1}^{\\sqrt{2}}1\\cdot dx+\\int\\limits _{\\sqrt{2}}^{\\sqrt{3}}2dx+\\int\\limits _{\\sqrt{3}}^{2}3dx+\\int\\limits _{2}^{\\sqrt{5}}4dx+\\int\\limits _{\\sqrt{5}}^{2.4}5dx \\\\  \\\\ =0+[x]_{1}^{\\sqrt{2}}+2[x]_{\\sqrt{2}}^{\\sqrt{3}}+3[x]_{\\sqrt{3}}^{2}+4[x]_{2}^{\\sqrt{5}}+5[x]_{\\sqrt{5}}^{2.4} \\\\  \\\\ =\\sqrt{2}-1+2\\sqrt{3}-2\\sqrt{2}+6-3\\sqrt{3}+4\\sqrt{5}-8+12-5\\sqrt{5} \\\\  \\\\ =-\\sqrt{2}-\\sqrt{3}-\\sqrt{5}+9 \\\\  \\\\ \\therefore α=9,β=-1,γ=-1,δ=-1 \\\\  \\\\ \\text{So,}α+β+γ+δ=9-1-1-1=6 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyom5c",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let the area enclosed by the lines $x+y=2,\\mathrm{y}=0,x=0$ and the curve $f(x)=\\min \\left \\{x^{2}+\\frac{3}{4},1+[x]\\right \\}$ where $[x]$ \ndenotes the greatest integer $\\leq x$, be $\\mathrm{A}$. Then the value of $12\\mathrm{A}$ is $_____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 17.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "On $[0,1)$, $1+[x]=1$, and $x^{2}+\\dfrac{3}{4}\\leq 1$ exactly when $x\\leq \\dfrac{1}{2}$; so $f(x)=x^{2}+\\dfrac{3}{4}$ on $\\left [0,\\dfrac{1}{2}\\right ]$ and $f(x)=1$ on $\\left [\\dfrac{1}{2},1\\right )$.\n\nOn $[1,2)$, $1+[x]=2$ and $f(x)\\geq \\dfrac{7}{4}$, while the line $y=2-x\\leq 1$; so for $1\\leq x\\leq 2$ the upper boundary is the line $x+y=2$.\n\nFor $0\\leq x\\leq 1$, $f(x)\\leq 1\\leq 2-x$, so there the upper boundary is the curve. The lower boundary is $y=0$ and the left boundary is $x=0$.\n\n$A=\\int\\limits _{0}^{1/2}\\left (x^{2}+\\frac{3}{4}\\right )dx+\\int\\limits _{1/2}^{1}1dx+\\int\\limits _{1}^{2}(2-x)dx$\n\n$A=\\left (\\frac{1}{24}+\\frac{3}{8}\\right )+\\frac{1}{2}+\\frac{1}{2}=\\frac{10}{24}+1=\\frac{17}{12}$\n\n$12A=17$\n\nHence, the answer is 17.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyonh2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let m and $\\mathrm{n}$ be the numbers of real roots of the quadratic equations $x^{2}-12x+[x]+31=0$ and $x^{2}-5|x+2|-4=0$ respectively, where $[x]$ denotes the greatest integer $\\leq x$. Then $\\mathrm{m}^{2}+\\mathrm{mn}+\\mathrm{n}^{2}$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 9.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For the first equation, write $[x]=x-\\{x\\}$ with $0\\leq \\{x\\}<1$:\n\n$x^{2}-12x+x-\\{x\\}+31=0\\Rightarrow \\{x\\}=x^{2}-11x+31$\n\nSo $0\\leq x^{2}-11x+31<1$. The left inequality always holds (discriminant $121-124<0$), and the right one gives $x^{2}-11x+30<0\\Rightarrow (x-5)(x-6)<0\\Rightarrow 5<x<6$.\n\nThen $[x]=5$ and the equation becomes $x^{2}-12x+36=0$, i.e. $(x-6)^{2}=0$, so $x=6$, which is not in $(5,6)$. Hence $m=0$.\n\nFor $x^{2}-5|x+2|-4=0$ with $x\\geq -2$: $x^{2}-5x-14=0\\Rightarrow (x-7)(x+2)=0\\Rightarrow x=7$ or $x=-2$, both valid.\n\nWith $x<-2$: $x^{2}+5x+6=0\\Rightarrow (x+2)(x+3)=0\\Rightarrow x=-3$ (as $x=-2$ is excluded here).\n\nThe real roots are $-3,-2,7$, so $n=3$.\n\n$m^{2}+mn+n^{2}=0+0+9=9$\n\nHence, the answer is 9.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyoqd2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\mathrm{R}=\\{\\mathrm{a},\\mathrm{b},\\mathrm{c},\\mathrm{d},\\mathrm{e}\\}$ and $\\mathrm{S}=\\{1,2,3,4\\}$. Total number of onto functions $f:\\mathrm{R}\\to \\mathrm{S}$\nsuch that $f(\\mathrm{a})\\neq 1$, is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 180.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "An onto function from the 5 elements of $R$ to the 4 elements of $S$ sends exactly two elements of $R$ to one common image and each of the other three to a different image.\n\nTotal onto functions: the pair sharing an image is chosen in $\\left (5 2\\right )=10$ ways, and the 4 groups (the pair and three singletons) are matched with $1,2,3,4$ in $4!=24$ ways, giving $10\\times 24=240$.\n\nOnto functions with $f(\\mathrm{a})=1$: if $\\mathrm{a}$ is the only element sent to 1, then $\\mathrm{b},\\mathrm{c},\\mathrm{d},\\mathrm{e}$ map onto $\\{2,3,4\\}$ in $\\left (4 2\\right )\\times 3!=36$ ways.\n\nIf one of $\\mathrm{b},\\mathrm{c},\\mathrm{d},\\mathrm{e}$ is also sent to 1, then $\\mathrm{b},\\mathrm{c},\\mathrm{d},\\mathrm{e}$ must map one-one onto $\\{1,2,3,4\\}$, in $4!=24$ ways.\n\nSo $36+24=60$ onto functions have $f(\\mathrm{a})=1$, and the required number is $240-60=180$.\n\nHence, the answer is 180.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyorpk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\mathrm{k}$ and $\\mathrm{m}$ be positive real numbers such that the function $f(x)=\\left \\{\\begin{array}{ll} 3x^{2}+k\\sqrt{x+1}, & 0<x<1 \\\\ mx^{2}+k^{2}, & x\\geq 1 \\end{array} \\right.$ is differentiable for all $x>0$. Then $\\frac{8f^{'}(8)}{f^{'}\\left (\\frac{1}{8}\\right )}$ is equal to $____________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 309.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Here, $f(x)=\\left \\{\\begin{array}{ll} 3x^{2}+k\\sqrt{x+1}, & 0<x<1 \\\\ mx^{2}+k^{2}, & x\\geq 1 \\end{array} \\right.$\n\n$\\because f(x)$ is differentiable at $x>0$\n\nSo, $f(x)$ is differentiable at $x=1$\n\n$\\begin{array}{l} f\\left (1^{-}\\right )=f(1)=f\\left (1^{+}\\right ) \\\\  \\\\ 3+k\\sqrt{2}=m+k^{2}......(i) \\end{array}$\n\n$\\begin{array}{l} f^{'}\\left (1^{-}\\right )=f^{'}\\left (1^{+}\\right ) \\\\  \\\\ 6(1)+\\dfrac{k}{2\\sqrt{1+1}}=2m(1) \\\\  \\\\ \\Rightarrow 6+\\dfrac{k}{2\\sqrt{2}}=2m......(ii) \\end{array}$\n\nUsing (i) and (ii),\n\n$\\begin{array}{l} 3+k\\sqrt{2}=3+\\dfrac{k}{4\\sqrt{2}}+k^{2} \\\\  \\\\ \\Rightarrow k^{2}+k\\left [\\dfrac{1}{4\\sqrt{2}}-\\sqrt{2}\\right ]=0 \\end{array}$\n\n$\\Rightarrow k\\left [k+\\frac{1-8}{4\\sqrt{2}}\\right ]=0\\Rightarrow k=0,\\frac{7}{4\\sqrt{2}}$\n\nAs the problem specifies k to be a positive real number, we can rule out k = 0. Hence, k = $\\frac{7}{4\\sqrt{2}}$\n\n$\\begin{array}{l} \\text{for}k=\\dfrac{7}{4\\sqrt{2}},m=3+\\dfrac{\\frac{7}{4\\sqrt{2}}}{4\\sqrt{2}} \\\\  \\\\ =3+\\dfrac{7}{32}=\\dfrac{96+7}{32}=\\dfrac{103}{32} \\end{array}$\n\n$\\text{So,}\\frac{8f^{'}(8)}{f^{'}\\left (\\frac{1}{8}\\right )}=\\frac{8\\times \\left [2\\times \\frac{103}{32}\\times 8\\right ]}{6\\times \\frac{1}{8}+\\frac{7}{4\\sqrt{2}}\\times \\frac{1}{2\\sqrt{\\dfrac{9}{8}}}}$\n\n$=\\frac{412}{\\frac{3}{4}+\\frac{7}{12}}=\\frac{412}{\\frac{9+7}{12}}=\\frac{412\\times 12}{16}=309$\n\nConcept :\n\n$f(x)$ is differentiable at $x=a$, if $f^{'}(a^{-})=f^{'}(a^{+})$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyq0yd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let the solution curve $x=x(y),0<y<\\frac{π}{2}$, of the differential equation $(\\log _{e}(\\cos y))^{2}\\cos y\\mathrm{d}x-(1+3x\\log _{e}(\\cos y))\\sin \\mathrm{y}dy=0$ satisfy $x\\left (\\frac{π}{3}\\right )=\\frac{1}{2\\log _{e}2}$. If $x\\left (\\frac{π}{6}\\right )=\\frac{1}{\\log _{e}m-\\log _{e}n}$, where $m$ and $n$ are coprime, then $mn$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 12.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} (\\cos y)(\\ln (\\cos y))^{2}dx=(1+3x\\ln \\cos y)\\sin ydy \\\\  \\\\ \\Rightarrow \\dfrac{dx}{dy}=\\dfrac{(1+3x\\ln \\cos y)\\sin y}{(\\ln \\cos y)^{2}\\cos y} \\\\  \\\\ =\\tan y\\left [\\dfrac{1}{(\\ln \\cos y)^{2}}+\\dfrac{3x}{\\ln \\cos y}\\right ] \\\\  \\\\ \\Rightarrow \\dfrac{dx}{dy}-\\left (\\dfrac{3\\tan y}{\\ln \\cos y}\\right )x=\\dfrac{\\tan y}{(\\ln \\cos y)^{2}} \\end{array}$\n\nWhich is a linear differential equation.\n\n$\\text{I.F.}=e^{-\\int \\frac{3\\tan y}{\\ln \\cos y}dy}=(\\ln \\cos y)^{3}$\n\nSo, the solution is :\n\n$\\begin{array}{l} x\\times (\\ln \\cos y)^{3}=\\int \\left ((\\ln \\cos y)^{3}\\times \\dfrac{\\tan y}{(\\ln \\cos y)^{2}}\\right )dy \\\\  \\\\ x\\times (\\ln \\cos y)^{3}=\\dfrac{-(\\ln \\cos y)^{2}}{2}+C \\end{array}$\n\n$\\text{At}y=\\frac{π}{3}\\text{,}$\n\n$\\begin{array}{l} \\dfrac{1}{2\\ln 2}\\times \\left (\\ln \\left (\\dfrac{1}{2}\\right )\\right )^{3}=-\\dfrac{\\left (\\ln \\left (\\frac{1}{2}\\right )\\right )^{2}}{2}+C \\\\  \\\\ \\Rightarrow C=0 \\end{array}$\n\n$\\begin{array}{l} \\text{So,}x\\times \\ln ^{3}\\cos y=\\dfrac{-\\ln ^{2}\\cos y}{2} \\\\  \\\\ \\text{At}y=\\dfrac{π}{6},x\\times \\left (\\ln \\left (\\dfrac{\\sqrt{3}}{2}\\right )\\right )^{3}=-\\dfrac{1}{2}\\left (\\ln \\left (\\dfrac{\\sqrt{3}}{2}\\right )\\right )^{2} \\\\  \\\\ \\Rightarrow x=-\\dfrac{1}{2\\ln \\left (\\frac{\\sqrt{3}}{2}\\right )} \\end{array}$\n\n$\\begin{array}{l} =-\\dfrac{1}{2[\\ln \\sqrt{3}-\\ln 2]}=\\dfrac{-1}{2\\left [\\frac{1}{2}\\ln 3-\\ln 2\\right ]} \\\\  \\\\ =\\dfrac{-1}{2\\left [\\frac{\\ln 3-\\ln 4}{2}\\right ]}=\\dfrac{1}{\\ln 4-\\ln 3} \\\\  \\\\ \\Rightarrow m=4,n=3 \\\\  \\\\ \\Rightarrow mn=12 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-1lgyq24t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If domain of the function $\\log _{e}\\left (\\frac{6x^{2}+5x+1}{2x-1}\\right )+\\cos ^{-1}\\left (\\frac{2x^{2}-3x+4}{3x-5}\\right )$ is $(α,β)\\cup (γ,δ]$, then $18\\left (α^{2}+β^{2}+γ^{2}+δ^{2}\\right )$ is equal to $______________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 20.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Domain of $\\log _{e}\\left (\\frac{6x^{2}+5x+1}{2x-1}\\right )$\n\nSo, $\\frac{6x^{2}+5x+1}{2x-1}>0$\n\n$\\begin{array}{l} \\Rightarrow \\dfrac{(3x+1)(2x+1)}{2x-1}>0 \\\\  \\\\ \\Rightarrow x\\in \\left (\\dfrac{-1}{2},\\dfrac{-1}{3}\\right )\\cup \\left (\\dfrac{1}{2},\\infty \\right ) \\end{array}$\n\nDomain of\n$\\cos ^{-1}x\\to [-1,1]$\n\n$\\text{For domain of}\\cos ^{-1}\\left (\\frac{2x^{2}-3x+4}{3x-5}\\right )$\n\n$\\begin{array}{l} -1\\leq \\dfrac{2x^{2}-3x+4}{3x-5}\\leq 1 \\\\  \\\\ \\dfrac{2x^{2}-1}{3x-5}\\geq 0\\text{and}\\dfrac{2x^{2}-6x+9}{3x-5}\\leq 0 \\end{array}$\n\n$\\Rightarrow x\\in \\left [\\frac{-1}{\\sqrt{2}},\\frac{1}{\\sqrt{2}}\\right ]\\cup \\left (\\frac{5}{3},\\infty \\right )$\n\nSo, common domain is $\\left (\\frac{-1}{2},\\frac{-1}{3}\\right )\\cup \\left (\\frac{1}{2},\\frac{1}{\\sqrt{2}}\\right ]$\n\n$\\begin{array}{l} \\therefore 18\\left (α^{2}+β^{2}+γ^{2}+δ^{2}\\right )=18\\left (\\dfrac{1}{4}+\\dfrac{1}{9}+\\dfrac{1}{4}+\\dfrac{1}{2}\\right ) \\\\  \\\\ =18\\left (\\dfrac{9+4+9+18}{36}\\right )=\\dfrac{1}{2}(40)=20 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

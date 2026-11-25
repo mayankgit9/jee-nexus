@@ -250,8 +250,20 @@ def convert_paper(slug, batch_name=None):
                     except ValueError:
                         pass
 
+        # drop unanswerable questions (source answer key missing — NTA
+        # contested/dropped questions): numerical without a parsed answer,
+        # mcq without any correct option. They cannot be graded server-side.
+        if (qtype == "numerical" and numerical_answer is None) or \
+           (qtype != "numerical" and not correct_idx):
+            stats["skipped"] += 1
+            print(f"  skipped {qid} (no answer key on source)")
+            continue
+
         item = {
-            "publicId": f"PYQ-{year}-{qid[:8]}",
+            # full question_id: 2024+ examside ids share an 8-char prefix per
+            # subject section (e.g. jaoe38c1lsc4xxxx) — [:8] collided within
+            # every paper; the full 16-char id is unique by construction
+            "publicId": f"PYQ-{year}-{qid}",
             "subjectKey": subject,
             "chapterKey": map_chapter(q.get("chapter"), subject),
             "subtopic": None,
@@ -275,6 +287,10 @@ def convert_paper(slug, batch_name=None):
         if explanation and len(explanation.replace("[IMG]", "").strip()) < 20 and "[IMG]" in explanation:
             # image-only explanation: give the body a descriptive line
             explanation = "The complete solution is shown in the original exam figure.\n\n" + explanation
+        elif explanation and len(explanation.strip()) < 20:
+            # answer-key-only explanation (the source lists just the answer):
+            # make it a full sentence so the body is meaningful
+            explanation = f"The correct answer is {explanation.strip()}."
         if explanation:
             item["solution"] = {
                 "keyConcept": None,

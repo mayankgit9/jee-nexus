@@ -1,0 +1,1062 @@
+[
+ {
+  "publicId": "PYQ-2026-mnrphtel",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α,β$ be the roots of the equation $x^{2}-3x+r=0$, and $\\frac{α}{2},2β$ be the roots of the equation $x^{2}+3x+r=0$.\nIf the roots of the equation $x^{2}+6x=m$ are $2α+β+2r$ and $α-2β-\\frac{r}{2}$, then $m$ is equal to :",
+  "options": [
+   "-135",
+   "-567",
+   "135",
+   "567"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For the equation $x^{2}-3x+r=0$ with roots $α,β$, by using the standard results:\n\n$\\begin{array}{l} α+β=3 \\\\ \\dfrac{α}{2}+2β=-3 \\end{array}$\n\nThe first line comes from “sum of roots” $=-\\dfrac{\\text{coefficient of}x}{\\text{coefficient of}x^{2}}=-\\dfrac{-3}{1}=3$.\n\nThe second line comes from the equation $x^{2}+3x+r=0$, whose roots are $\\dfrac{α}{2}$ and $2β$. So, their sum is:\n\n$\\frac{α}{2}+2β=-\\frac{3}{1}=-3$\n\nNow solve the two equations:\n\n$α+β=3\\Rightarrow α=3-β$\n\nSubstitute into $\\dfrac{α}{2}+2β=-3$:\n\n$\\frac{3-β}{2}+2β=-3$\n\nMultiply by $2$:\n\n$3-β+4β=-6\\Rightarrow 3+3β=-6\\Rightarrow 3β=-9\\Rightarrow β=-3$\n\nThen $α=3-(-3)=6$.\n\nNow use “product of roots” for $x^{2}-3x+r=0$:\n\n$αβ=r\\Rightarrow r=6\\times (-3)=-18$\n\nNow consider the equation $x^{2}+6x=m$. Rewrite it in standard form:\n\n$x^{2}+6x-m=0$\n\nSo, product of its roots $=\\dfrac{-m}{1}=-m$.\n\nThe roots are given as $2α+β+2r$ and $α-2β-\\dfrac{r}{2}$. Substitute $α=6$, $β=-3$, $r=-18$:\n\nFirst root:\n\n$2α+β+2r=2(6)+(-3)+2(-18)=12-3-36=-27$\n\nSecond root:\n\n$α-2β-\\frac{r}{2}=6-2(-3)-\\frac{-18}{2}=6+6+9=21$\n\nNow product of roots:\n\n$\\begin{array}{l} =(2α+β+2\\mathrm{r})\\left (α-2β-\\dfrac{\\mathrm{r}}{2}\\right ) \\\\ \\Rightarrow -\\mathrm{m}=(-27)(21) \\\\ \\Rightarrow \\mathrm{m}=567 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpjdtx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the circles $C_{1}:|z|=r$ and $C_{2}:|z-3-4i|=5$, $z\\in \\mathrm{ℂ}$, be such that $C_{2}$ lies within $C_{1}$.\nIf $z_{1}$ moves on $C_{1}$, $z_{2}$ moves on $C_{2}$ and $\\min |z_{1}-z_{2}|=2$, then $\\max |z_{1}-z_{2}|$ is equal to :",
+  "options": [
+   "12",
+   "17",
+   "22",
+   "24"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} |z|=r \\\\ OA=r \\end{array}$\n\nStep 1: Circle $C_{1}:|z|=r$ has centre $O(0,0)$ and radius $r$ (so $OA=r$).\n\nStep 2: Circle $C_{2}:|z-3-4i|=5$ has centre at the point $(3,4)$ and radius $5$.\n\nStep 3: Distance between the centres is\n\n$OC=\\sqrt{3^{2}+4^{2}}=5$\n\nStep 4: Since $C_{2}$ lies completely inside $C_{1}$, the minimum distance between a point $z_{1}$ on $C_{1}$ and a point $z_{2}$ on $C_{2}$ happens when the two points are on the same line through the centres, on the nearest sides.\n\nSo,\n\nminimum $|\\mathrm{z}_{1}-\\mathrm{z}_{2}|=r-(OC+5)=r-(5+5)=r-10$\n\nGiven minimum $|\\mathrm{z}_{1}-\\mathrm{z}_{2}|=2$, we get\n\n$\\Rightarrow r-10=2\\Rightarrow r=12$\n\nStep 5: The maximum distance $|z_{1}-z_{2}|$ happens when $z_{1}$ and $z_{2}$ are on opposite sides along the same line through the centres.\n\nThen the farthest distance is\n\n$|z_{1}-z_{2}|=r+(OC+5)=r+10$\n\nSubstituting $r=12$,\n\n$|z_{1}-z_{2}|=12+10=22$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-2nd-april-evening-shift/mnrpjdtx-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnrpl81k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of equations\n $x+5y+6z=4$\n $2x+3y+4z=7$\n $x+6y+az=b$\n has infinitely many solutions, then the point $(a,b)$ lies on the line",
+  "options": [
+   "$y-x=3$",
+   "$x-y=3$",
+   "$x+y=11$",
+   "$x+y=12$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The given system of equations is:\n\n$x+5y+6z=4$\n\n$2x+3y+4z=7$\n\n$x+6y+az=b$\n\nFind the determinant of the coefficient matrix ($\\Delta$)\n\nThe coefficient matrix is formed by the coefficients of $x$, $y$, and $z$.\n\n$\\Delta =\\left |\\begin{array}{lll} 1 & 5 & 6 \\\\ 2 & 3 & 4 \\\\ 1 & 6 & a \\end{array}\\right |$\n\nLet us expand this determinant along the first row:\n\n$\\Delta =1(3\\cdot a-6\\cdot 4)-5(2\\cdot a-1\\cdot 4)+6(2\\cdot 6-1\\cdot 3)$\n\n$\\Delta =1(3a-24)-5(2a-4)+6(12-3)$\n\n$\\Delta =3a-24-10a+20+6(9)$\n\n$\\Delta =-7a-4+54$\n\n$\\Delta =-7a+50$\n\nFor the system to have infinitely many solutions, we equate $\\Delta$ to $0$:\n\n$-7a+50=0⟹7a=50⟹a=\\frac{50}{7}$\n\nFind the determinant $\\Delta _{z}$\n\nTo find $\\Delta _{z}$, we replace the $z$-column (third column) with the constant terms from the right-hand side of the equations. \n\n$\\Delta _{z}=\\left |\\begin{array}{lll} 1 & 5 & 4 \\\\ 2 & 3 & 7 \\\\ 1 & 6 & b \\end{array}\\right |$\n\nWe again expand along the first row:\n\n$\\Delta _{z}=1(3\\cdot b-6\\cdot 7)-5(2\\cdot b-1\\cdot 7)+4(2\\cdot 6-1\\cdot 3)$\n\n$\\Delta _{z}=1(3b-42)-5(2b-7)+4(12-3)$\n\n$\\Delta _{z}=3b-42-10b+35+4(9)$\n\n$\\Delta _{z}=-7b-7+36$\n\n$\\Delta _{z}=-7b+29$\n\nEquating $\\Delta _{z}$ to zero for infinitely many solutions, we get:\n\n$-7b+29=0⟹7b=29⟹b=\\frac{29}{7}$\n\nCheck the options for the point $(a,b)$\n\nWe have obtained the point coordinates as $(a,b)=\\left (\\frac{50}{7},\\frac{29}{7}\\right )$.\n\nLet us evaluate the difference $a-b$ to find out which linear profile equation matches our outcome:\n\n$a-b=\\frac{50}{7}-\\frac{29}{7}$\n\n$a-b=\\frac{50-29}{7}$\n\n$a-b=\\frac{21}{7}=3$\n\nWriting this relation in terms of $x$ and $y$ (where $x=a$ and $y=b$), it perfectly satisfies the line equation:\n\n$x-y=3$\n\nThus, the point $(a,b)$ lies on the line given in Option B.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpm6su",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a_{1},a_{2},a_{3},\\ldots$ be an A.P. and $g_{1}=a_{1},g_{2},g_{3},\\ldots$ be an increasing G.P. If $a_{1}=a_{2}+g_{2}=1$ and $a_{3}+g_{3}=4$, then $a_{10}+g_{5}$ is equal to:",
+  "options": [
+   "81",
+   "76",
+   "62",
+   "55"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the common difference of the given A.P. be $d$ and the common ratio of the given G.P. be $r$. \n\nFrom the general formulas for the $n$-th term of an A.P. and a G.P., we know:\n\n$a_{n}=a_{1}+(n-1)d$\n\n$g_{n}=g_{1}r^{n-1}$\n\nWe are given that $g_{1}=a_{1}$ and $a_{1}=1$.\n\nThus, the first term of both the A.P. and the G.P. is $1$. So, $g_{1}=1$.\n\nNext, we are given the first relationship:\n\n$a_{2}+g_{2}=1$\n\nUsing our formulas, we can write the second terms as $a_{2}=1+d$ and $g_{2}=1\\cdot r=r$. Let us substitute these values into the given equation:\n\n$(1+d)+r=1$\n\nSubtracting $1$ from both sides, we establish a relationship between $d$ and $r$:\n\n$d+r=0⟹d=-r$\n\nWe are also given a second relationship:\n\n$a_{3}+g_{3}=4$\n\nAgain, applying the $n$-th term formulas, we have the third terms as $a_{3}=1+2d$ and $g_{3}=1\\cdot r^{2}=r^{2}$. Substituting these in the equation gives:\n\n$(1+2d)+r^{2}=4$\n\nNow, let us substitute $d=-r$ into this equation to form a quadratic equation in terms of $r$:\n\n$1+2(-r)+r^{2}=4$\n\n$r^{2}-2r+1-4=0$\n\n$r^{2}-2r-3=0$\n\nLet us factorize this quadratic equation by splitting the middle term:\n\n$r^{2}-3r+r-3=0$\n\n$r(r-3)+1(r-3)=0$\n\n$(r-3)(r+1)=0$\n\nThis gives us two possible values for $r$: $r=3$ or $r=-1$.\n\nThe problem clearly states that the G.P. is an increasing sequence. Since the first term $g_{1}=1$ is positive, an increasing sequence requires the common ratio to be strictly greater than $1$. Therefore, we reject $r=-1$ and take the valid value:\n\n$r=3$\n\nSince $d=-r$, we find the common difference of the A.P.:\n\n$d=-3$\n\nNow, we are asked to find the value of $a_{10}+g_{5}$. Let us find $a_{10}$ and $g_{5}$ individually.\n\nFor the 10th term of the A.P.:\n\n$a_{10}=a_{1}+(10-1)d$\n\n$a_{10}=a_{1}+9d$\n\n$a_{10}=1+9(-3)$\n\n$a_{10}=1-27=-26$\n\nFor the 5th term of the G.P.:\n\n$g_{5}=g_{1}r^{5-1}$\n\n$g_{5}=g_{1}r^{4}$\n\n$g_{5}=1\\cdot (3)^{4}$\n\n$g_{5}=81$\n\nFinally, adding these two values together:\n\n$a_{10}+g_{5}=-26+81=55$\n\nTherefore, the value of $a_{10}+g_{5}$ is $55$.\n\nCorrect Answer:\n\nOption D: $55$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpmt57",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The sum $\\frac{1^{3}}{1}+\\frac{1^{3}+2^{3}}{1+3}+\\frac{1^{3}+2^{3}+3^{3}}{1+3+5}+\\ldots$ up to 8 terms, is :",
+  "options": [
+   "70",
+   "71",
+   "72",
+   "73"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\mathrm{T}_{\\mathrm{r}}=\\dfrac{1^{3}+2^{3}+3^{3}+\\ldots \\ldots \\mathrm{r}^{3}}{1+3+5+\\ldots ..+(2\\mathrm{r}-1)}=\\dfrac{\\left (\\frac{\\mathrm{r}(\\mathrm{r}+1)}{2}\\right )^{2}}{\\mathrm{r}^{2}} \\\\ =\\dfrac{\\mathrm{r}^{2}+2\\mathrm{r}+1}{4} \\end{array}$\n\n$\\begin{array}{l} \\mathrm{S}_{\\mathrm{n}}=\\sum\\limits _{\\mathrm{r}=1}^{\\mathrm{n}}\\mathrm{T}_{\\mathrm{r}} \\\\ \\mathrm{S}_{\\mathrm{n}}=\\dfrac{1}{4}\\sum \\left (\\mathrm{r}^{2}+2\\mathrm{r}+1\\right ) \\\\ =\\dfrac{1}{4}\\left [\\dfrac{\\mathrm{n}(\\mathrm{n}+1)(2\\mathrm{n}+1)}{6}+2\\dfrac{\\mathrm{n}(\\mathrm{n}+1)}{2}+\\mathrm{n}\\right ] \\\\ \\mathrm{S}_{8}=\\dfrac{1}{4}\\left [\\dfrac{8\\times 9\\times 17}{6}+8\\times 9+8\\right ] \\\\ =\\dfrac{1}{4}[204+72+8]=71 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpp20m",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If for $3\\leq r\\leq 30$, $\\left ({}^{30}C_{30-r}\\right )+3\\left ({}^{30}C_{31-r}\\right )+3\\left ({}^{30}C_{32-r}\\right )+\\left ({}^{30}C_{33-r}\\right )={}^{m}C_{r}$, then m equals :",
+  "options": [
+   "31",
+   "32",
+   "33",
+   "34"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given\n\n${}^{30}C_{30-r}+3{}^{30}C_{31-r}+3{}^{30}C_{32-r}+{}^{30}C_{33-r}={}^{m}C_{r}$\n\nfor $3\\leq r\\leq 30$.\n\nWe have to find $m$.\n\nFirst, use the symmetry property of combinations:\n\n${}^{n}C_{k}={}^{n}C_{n-k}$\n\nSo,\n\n${}^{30}C_{30-r}={}^{30}C_{r}$\n\n${}^{30}C_{31-r}={}^{30}C_{r-1}$\n\nbecause\n\n$30-(31-r)=r-1$\n\nSimilarly,\n\n${}^{30}C_{32-r}={}^{30}C_{r-2}$\n\nand\n\n${}^{30}C_{33-r}={}^{30}C_{r-3}$\n\nTherefore the left-hand side becomes\n\n${}^{30}C_{r}+3{}^{30}C_{r-1}+3{}^{30}C_{r-2}+{}^{30}C_{r-3}$\n\nNow notice the coefficients:\n\n$1,3,3,1$\n\nThese are the binomial coefficients in the expansion of\n\n$(1+x)^{3}$\n\nAlso, by Vandermonde’s identity,\n\n${}^{30}C_{r}+3{}^{30}C_{r-1}+3{}^{30}C_{r-2}+{}^{30}C_{r-3}={}^{33}C_{r}$\n\nLet us see this through binomial expansion:\n\nCoefficient of $x^{r}$ in $(1+x)^{33}$ is\n\n${}^{33}C_{r}$\n\nBut\n\n$(1+x)^{33}=(1+x)^{30}(1+x)^{3}$\n\nand\n\n$(1+x)^{3}=1+3x+3x^{2}+x^{3}$\n\nSo coefficient of $x^{r}$ in $(1+x)^{30}(1+3x+3x^{2}+x^{3})$ is\n\n${}^{30}C_{r}+3{}^{30}C_{r-1}+3{}^{30}C_{r-2}+{}^{30}C_{r-3}$\n\nHence,\n\n${}^{30}C_{r}+3{}^{30}C_{r-1}+3{}^{30}C_{r-2}+{}^{30}C_{r-3}={}^{33}C_{r}$\n\nComparing with\n\n${}^{m}C_{r}$\n\nwe get\n\n$m=33$\n\nThe correct answer is:\n\n$33$\n\nSo, Option C.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrppvhi",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $p_{n}$ denote the total number of triangles formed by joining the vertices of an $n$-side regular polygon.\nIf $p_{n+1}-p_{n}=66$, then the sum of all distinct prime divisors of $n$ is :",
+  "options": [
+   "7",
+   "8",
+   "5",
+   "6"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$P_{n}={}^{n}C_{3}$\n\nIn an $n$-sided polygon, any $3$ vertices form a triangle, so the total number of triangles is $P_{n}={}^{n}C_{3}$.\n\n$P_{n+1}-P_{n}=66$\n\nThis means when we increase the number of sides from $n$ to $n+1$, the number of triangles increases by $66$.\n\n${}^{n+1}C_{3}-{}^{n}C_{3}=66$\n\nNow we write both combinations using the formula ${}^{n}C_{3}=\\frac{n(n-1)(n-2)}{6}$.\n\n$\\Rightarrow \\frac{(n+1)n(n-1)}{6}-\\frac{n(n-1)(n-2)}{6}=66$\n\nTake the common factor $\\frac{n(n-1)}{6}$ from both terms.\n\n$\\Rightarrow \\frac{n(n-1)}{6}[n+1-n+2]=66$\n\nInside the bracket, simplify: $n+1-n+2=3$.\n\n$\\Rightarrow n(n-1)=132$\n\nSo we need two consecutive integers whose product is $132$. That gives $n=12$ because $12\\cdot 11=132$.\n\n$n=12$\n\nPrime divisors of 12 are 2 & 3\n\nThe distinct prime divisors of $12$ are $2$ and $3$.\n\nSum $=2+3=5$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpqq4y",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A man throws a fair coin repeatedly. He gets 10 points for each head he throws and 5 points for each tail he throws. If the probability that he gets exactly 30 points is $\\frac{m}{n}$, gcd $(m,n)=1$, then m + n is equal to :",
+  "options": [
+   "53",
+   "55",
+   "107",
+   "105"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\mathrm{P}=(6\\text{tail})+(4\\text{tail}+1\\text{head})+(2\\text{tail}+2\\text{head})+(3\\text{head}) \\\\ \\mathrm{P}=\\left (\\dfrac{1}{2}\\right )^{6}+\\dfrac{5!}{1!4!}\\left (\\dfrac{1}{2}\\right )^{5}+\\dfrac{4!}{2!2!}\\left (\\dfrac{1}{2}\\right )^{4}+\\left (\\dfrac{1}{2}\\right )^{3} \\\\ \\mathrm{P}=\\dfrac{1}{64}+\\dfrac{5}{32}+\\dfrac{3}{8}+\\dfrac{1}{8} \\\\ \\mathrm{P}=\\dfrac{1+10+24+8}{64}=\\dfrac{43}{64}=\\dfrac{\\mathrm{m}}{\\mathrm{n}} \\\\ \\mathrm{m}+\\mathrm{n}=107 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrprkp0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The mean and variance of n observations are 8 and 16, respectively. If the sum of the first (n − 1) observations is 48 and the sum of squares of the first (n − 1) observations is 496, then the value of n is :",
+  "options": [
+   "21",
+   "16",
+   "13",
+   "7"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The sum of all $n$ observations is $8n$, so the last observation is $x_{n}=8n-48$.\n\nVariance 16 gives $\\dfrac{\\sum x_{i}^{2}}{n}-8^{2}=16$, so $\\sum x_{i}^{2}=80n$ and $x_{n}^{2}=80n-496$.\n\nEquating the two expressions for $x_{n}$:\n\n$(8n-48)^{2}=80n-496\\Rightarrow 64(n-6)^{2}=8(10n-62)\\Rightarrow 4(n^{2}-12n+36)=5n-31$\n\n$4n^{2}-53n+175=0\\Rightarrow (n-7)(4n-25)=0$\n\nThe number of observations is a positive integer, so $n=7$ (then $x_{7}=8$ and $8^{2}=64=80\\times 7-496$).\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpt09k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let a circle pass through the origin and its centre be the point of intersection of two mutually perpendicular lines $x+(k-1)y+3=0$ and $2x+k^{2}y-4=0$. If the line $x-y+2=0$ intersects the circle at the points A and B, then $(AB)^{2}$ is equal to :",
+  "options": [
+   "10",
+   "27",
+   "18",
+   "34"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} x+(k-1)y+3=0 \\\\ 2x+k^{2}y-4=0 \\\\ \\left (\\dfrac{1}{1-k}\\right )\\left (\\dfrac{2}{k^{2}}\\right )=1 \\\\ 2=k^{2}-k^{3} \\\\ k^{3}-k^{2}+2=0 \\\\ k=-1 \\end{array}$\n\nSolving :\n\n$\\begin{array}{l} 2(x-2y+3)=0 \\\\ 2x+y-4=0 \\\\ -5y+10=0 \\\\ y=2 \\end{array}$\n\n\n[IMG]\n\n\n$x=1$\n\nCentre $(1,2)$\n\n$r=\\sqrt{5}$\n\nSo circle is $(x-1)^{2}+(y-2)^{2}=5$\n\nChord $\\mathrm{x}-\\mathrm{y}+2=0$\n\n$\\begin{array}{l} \\mathrm{p}=\\dfrac{1}{\\sqrt{2}} \\\\ \\ell =\\sqrt{5-\\dfrac{1}{2}}=\\dfrac{3}{\\sqrt{2}} \\\\ \\mathrm{AB}=\\dfrac{6}{\\sqrt{2}}\\therefore \\mathrm{AB}^{2}=18 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-2nd-april-evening-shift/mnrpt09k-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnrpty8n",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let O be the origin, and P and Q be two points on the rectangular hyperbola $xy=12$ such that the midpoint of the line segment PQ is $\\left (\\frac{1}{2},-\\frac{1}{2}\\right )$. Then the area of the triangle OPQ equals :",
+  "options": [
+   "$\\frac{3}{2}$",
+   "$\\frac{5}{2}$",
+   "$\\frac{7}{2}$",
+   "$\\frac{9}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let\n\n$P(x_{1},y_{1}),Q(x_{2},y_{2})$\n\nbe two points on the rectangular hyperbola\n\n$xy=12$\n\nSo, both points satisfy\n\n$x_{1}y_{1}=12\\text{and}x_{2}y_{2}=12$\n\nAlso, the midpoint of $PQ$ is given as\n\n$\\left (\\frac{1}{2},-\\frac{1}{2}\\right )$\n\nUsing the midpoint formula,\n\n$\\frac{x_{1}+x_{2}}{2}=\\frac{1}{2},\\frac{y_{1}+y_{2}}{2}=-\\frac{1}{2}$\n\nHence,\n\n$x_{1}+x_{2}=1,y_{1}+y_{2}=-1$\n\nNow we need the area of triangle $OPQ$, where $O=(0,0)$.\n\nThe area of triangle formed by points $O(0,0)$, $P(x_{1},y_{1})$, $Q(x_{2},y_{2})$ is\n\n$\\text{Area}=\\frac{1}{2}|x_{1}y_{2}-x_{2}y_{1}|$\n\nSo our aim is to find $|x_{1}y_{2}-x_{2}y_{1}|$.\n\nSince $x_{1}$ and $x_{2}$ are the $x$-coordinates of points on the hyperbola, and their sum is $1$, let us use\n\n$y_{1}=\\frac{12}{x_{1}},y_{2}=\\frac{12}{x_{2}}$\n\nNow using\n\n$y_{1}+y_{2}=-1$\n\nwe get\n\n$\\frac{12}{x_{1}}+\\frac{12}{x_{2}}=-1$\n\n$12\\left (\\frac{x_{1}+x_{2}}{x_{1}x_{2}}\\right )=-1$\n\nSince $x_{1}+x_{2}=1$,\n\n$12\\left (\\frac{1}{x_{1}x_{2}}\\right )=-1$\n\nSo,\n\n$x_{1}x_{2}=-12$\n\nThus $x_{1}$ and $x_{2}$ are roots of the quadratic equation\n\n$t^{2}-(x_{1}+x_{2})t+x_{1}x_{2}=0$\n\n$t^{2}-t-12=0$\n\n$(t-4)(t+3)=0$\n\nHence,\n\n$x_{1}=4,x_{2}=-3$\n\nor vice versa.\n\nThen corresponding $y$-coordinates are\n\n$y_{1}=\\frac{12}{4}=3,y_{2}=\\frac{12}{-3}=-4$\n\nSo the points are\n\n$P(4,3),Q(-3,-4)$\n\nNow area of triangle $OPQ$ is\n\n$\\text{Area}=\\frac{1}{2}|4(-4)-(-3)(3)|$\n\n$=\\frac{1}{2}|-16+9|$\n\n$=\\frac{1}{2}\\cdot 7$\n\n$=\\frac{7}{2}$\n\nTherefore, the required area is\n\n$\\dfrac{7}{2}$\n\nSo, the correct option is:\n\n$\\text{Option C}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpukw5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the parabola $y=x^{2}+px+q$ passing through the point $(1,-1)$ be such that the distance between its vertex and the $x$-axis is minimum. Then the value of $p^{2}+q^{2}$ is :",
+  "options": [
+   "2",
+   "4",
+   "5",
+   "8"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "parabola passes through $(1,-1)$ so\n\n$-1=1+p+q$\n\n$p+q=-2$\n\n$q=-2-p\\ldots (1)$\n\nDistance from x-axis\n\n$\\frac{-D}{4a}=\\frac{-(p^{2}-4q)}{4(1)}=\\frac{4q-p^{2}}{4}$\n\n$=\\frac{4(-2-p)-p^{2}}{4}\\text{from (1)}$\n\n$=\\frac{-8-4p-p^{2}}{4}=\\frac{-(p^{2}+4p+8)}{4}=\\frac{-((p+2)^{2}+4)}{4}$\n\nMinimum at $p=-2\\to q=0$\n\n$p^{2}+q^{2}=4+0=4$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpvu89",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $P=\\{θ\\in [0,4π]:\\tan ^{2}θ\\neq 1\\}$ and $S=\\{a\\in \\mathrm{ℤ}:2(\\cos ^{8}θ-\\sin ^{8}θ)\\sec 2θ=a^{2},θ\\in P\\}$. Then $n(S)$ is:",
+  "options": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} 2\\left (\\cos ^{8}θ-\\sin ^{8}θ\\right )\\sec 2θ=\\mathrm{a}^{2} \\\\ 2\\left (\\cos ^{4}θ+\\sin ^{4}θ\\right )\\left (\\cos ^{2}θ+\\sin ^{2}θ\\right )\\left (\\cos ^{2}θ-\\sin ^{2}θ\\right )\\sec 2θ=\\mathrm{a}^{2} \\\\ 2\\left (\\cos ^{4}θ+\\sin ^{4}θ\\right )=\\mathrm{a}^{2} \\\\ 2\\left (1-2\\sin ^{2}θ\\cos ^{2}θ\\right )=\\mathrm{a}^{2} \\\\ 2\\left (1-\\dfrac{\\sin ^{2}2θ}{2}\\right )=\\mathrm{a}^{2},\\mathrm{a}\\in \\mathrm{Z} \\\\ \\mathrm{a}^{2}=2-\\sin ^{2}2θ\\in [1,2] \\\\ \\mathrm{a}^{2}=1\\text{at}\\sin ^{2}2θ=1 \\\\ 2θ=(2\\mathrm{n}+1)\\dfrac{π}{2} \\\\ θ=(2\\mathrm{n}+1)\\dfrac{π}{4}\\notin \\mathrm{P} \\\\ \\mathrm{n}(\\mathrm{S})=0 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpxa1i",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the vectors $⃗{a}=-\\hat{i}+\\hat{j}+3\\hat{k}$ and $⃗{b}=\\hat{i}+3\\hat{j}+\\hat{k}$. For some $λ,μ\\in \\mathrm{ℝ}$, let $⃗{c}=λ⃗{a}+μ⃗{b}$.\nIf $⃗{c}\\cdot (3\\hat{i}-6\\hat{j}+2\\hat{k})=10$ and $⃗{c}\\cdot (\\hat{i}+\\hat{j}+\\hat{k})=-2$, then $|⃗{c}|^{2}$ is equal to :",
+  "options": [
+   "8",
+   "12",
+   "14",
+   "15"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$⃗{c}=λ⃗{a}+μ⃗{b}$\n\n$⃗{c}=(μ-λ)\\hat{i}+(λ+3μ)\\hat{j}+(3λ+μ)\\hat{k}$\n\n$⃗{c}\\cdot (3\\hat{i}-6\\hat{j}+2\\hat{k})=10$\n\n$3(μ-λ)-6(λ+3μ)+2(3λ+μ)=10$\n\n$-3λ-13μ=10\\ldots (1)$\n\n$⃗{c}\\cdot (\\hat{i}+\\hat{j}+\\hat{k})=-2$\n\n$5μ+3λ=-2\\ldots (2)$\n\nSolving (1) & (2)\n\n$λ=1,μ=-1$\n\n$⃗{c}=-2\\hat{i}-2\\hat{j}+2\\hat{k}$\n\n$|⃗{c}|^{2}=12$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrpy2y2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the point A be the foot of perpendicular drawn from the point P$(a,b,0)$ on the line\n$\\frac{x-1}{2}=\\frac{y-2}{1}=\\frac{z-α}{3}.$\nIf the midpoint of the line segment PA is $\\left (0,\\frac{3}{4},-\\frac{1}{4}\\right ),$ then the value of $a^{2}+b^{2}+α^{2}$ is equal to :",
+  "options": [
+   "1",
+   "2",
+   "6",
+   "9"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the given line be written in parametric form by taking\n\n$\\frac{x-1}{2}=\\frac{y-2}{1}=\\frac{z-α}{3}=r.$\n\nThen a general point $A$ on the line is\n\n$A(1+2r,2+r,α+3r).$\n\nGiven $P(a,b,0)$ and the midpoint of $PA$ is $\\left (0,\\frac{3}{4},-\\frac{1}{4}\\right )$. Using midpoint formula coordinate-wise:\n\n$\\begin{array}{l} \\dfrac{2r+1+a}{2}=0\\Rightarrow 2r+a=-1 \\\\  \\\\ \\dfrac{r+2+b}{2}=\\dfrac{3}{4}\\Rightarrow r+b=-\\dfrac{1}{2} \\end{array}$\n\n\n[IMG]\n\n\nSimilarly, from the $z$-coordinate of the midpoint:\n\n$\\begin{array}{l} \\dfrac{3r+α}{2}=\\dfrac{-1}{4}\\Rightarrow 3r+α=\\dfrac{-1}{2} \\\\  \\end{array}$\n\nNow, $A$ is the foot of the perpendicular from $P$ to the line, so $PA\\leftarrow$ is perpendicular to the direction vector of the line.\n\nThe direction ratios of the line are $(2,1,3)$, so we use the dot product condition:\n\n$2(x_{A}-a)+1(y_{A}-b)+3(z_{A}-0)=0.$\n\nUsing the midpoint point $\\left (0,\\frac{3}{4},-\\frac{1}{4}\\right )$, we can write $PA\\leftarrow =2\\left (\\left (0,\\frac{3}{4},-\\frac{1}{4}\\right )-P\\right )$, so its components are proportional to $\\left (-a,\\frac{3}{4}-b,-\\frac{1}{4}\\right )$. Hence the perpendicularity condition becomes:\n\n$\\begin{array}{l} 2\\cdot a+1\\cdot (b-3/4)+3\\cdot \\dfrac{1}{4}=0\\Rightarrow a+b=0 \\\\  \\end{array}$\n\nFrom $2r+a=-1$, we get $a=-1-2r$.\n\nFrom $r+b=-\\frac{1}{2}$, we get $b=-\\frac{1}{2}-r$.\n\nSubstitute in $a+b=0$:\n\n$\\begin{array}{l} \\Rightarrow 2(-1-2r)+(-r-1/2)=0 \\\\  \\\\ \\Rightarrow -3/2=3r=1\\Rightarrow r=-1/2,a=0,b=0,α=1 \\\\  \\\\ \\therefore a^{2}+b^{2}+α^{2}=1 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-2nd-april-evening-shift/mnrpy2y2-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnrpz8jc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two adjacent sides of a parallelogram PQRS are given by $PQ\\leftarrow =\\hat{j}+\\hat{k}$ and $PS\\leftarrow =\\hat{i}-\\hat{j}$. If the side PS is rotated about the point P by an acute angle $α$ in the plane of the parallelogram so that it becomes perpendicular to the side PQ, then $\\sin ^{2}\\left (\\frac{5α}{2}\\right )-\\sin ^{2}\\left (\\frac{α}{2}\\right )$ is equal to:",
+  "options": [
+   "$\\frac{1}{2}$",
+   "$\\frac{\\sqrt{3}}{2}$",
+   "$\\frac{\\sqrt{3}}{4}$",
+   "$\\frac{2\\sqrt{3}}{5}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let angle between $PQ\\leftarrow$ & $PS\\leftarrow$ is $θ$\n\n$\\cos θ=\\frac{PQ\\leftarrow .PS\\leftarrow }{\\left |PQ\\leftarrow \\right |\\left |PS\\leftarrow \\right |}$\n\n$\\cos θ=\\frac{0-1+0}{\\sqrt{2}\\sqrt{2}}$\n\n$\\cos θ=-\\frac{1}{2}$\n\n$θ=\\frac{2π}{3}$\n\n$α=\\frac{2π}{3}-\\frac{π}{2}\\text{So}α=\\frac{π}{6}$\n\n$\\sin ^{2}\\frac{5α}{2}-\\sin ^{2}\\frac{α}{2}=\\sin \\left (\\frac{5α}{2}+\\frac{α}{2}\\right )\\sin \\left (\\frac{5α}{2}-\\frac{α}{2}\\right )$\n\n$=\\sin \\frac{6α}{2}\\times \\sin \\frac{4α}{2}$\n\n$=\\sin 3α\\times \\sin 2α$\n\n$=\\sin \\frac{π}{2}\\times \\sin \\frac{π}{3}$\n\n$=1\\times \\frac{\\sqrt{3}}{2}=\\frac{\\sqrt{3}}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrq09k2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\int\\limits _{0}^{20π}(\\sin ^{4}x+\\cos ^{4}x)dx$ is equal to:",
+  "options": [
+   "$\\frac{15π}{2}$",
+   "$25π$",
+   "$15π$",
+   "$\\frac{25π}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=\\int\\limits _{0}^{20π}\\left (1-2\\sin ^{2}x\\cos ^{2}x\\right )\\cdot dx$\n\n$=20π-\\frac{1}{2}\\int\\limits _{0}^{20π}\\sin ^{2}2xdx$\n\n$=20π-\\frac{1}{2}(40)\\int\\limits _{0}^{π/2}\\sin ^{2}2x$\n\n$=20π-\\frac{20}{2}\\left (x-\\frac{\\sin 2x}{2}\\right )_{0}^{π/2}$\n\n$=20π-10\\left (\\frac{π}{2}\\right )=15π$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrq1907",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)$ be a polynomial of degree 5, and have extrema at $x=1$ and $x=-1$. If $\\lim _{x\\to 0}\\left (\\frac{f(x)}{x^{3}}\\right )=-5$, then $f(2)-f(-2)$ is equal to:",
+  "options": [
+   "0",
+   "50",
+   "92",
+   "112"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $f(x)$ is a polynomial of degree $5$\n\nAlso, $f^{'}(1)=0$; $f^{'}(-1)=0$.\n\nAlso $\\because \\lim _{x\\to 0}\\dfrac{f(x)}{x^{3}}=-5$ (fixed and finite)\n\n$\\therefore f(0)=0$; $f^{'}(0)=0$; $f^{''}(0)=0$\n\n$\\dfrac{f^{'''}(0)}{6}=-5\\to f^{'''}(0)=-30$\n\nHence, let\n\n$f^{'}(x)=(ax+b)(x-0)(x-1)(x+1)$\n\n$\\to f^{'}(x)=ax^{4}+bx^{3}-ax^{2}-bx$\n\n$f^{''}(x)=4ax^{3}+3bx^{2}-2ax-b$\n\n$\\therefore f^{''}(0)=0\\to b=0$\n\n$f^{'''}(x)=12ax^{2}+6bx-2a$\n\n$\\therefore f^{'''}(0)=-2a=-30$\n\n$\\to a=15$\n\n$\\therefore f^{'}(x)=15x.x.(x-1)(x+1)$\n\n$\\to f^{'}(x)=15x^{4}-15x^{2}$\n\n$\\to f(x)=3x^{5}-5x^{3}+C$\n\n$\\therefore f(0)=0\\to C=0$\n\n$\\therefore f(x)=3x^{5}-5x^{3}$\n\n$\\therefore f(2)-f(-2)=112$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrq3ab8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=\\int \\left (\\frac{16x+24}{x^{2}+2x-15}\\right )dx$. If $f(4)=14\\log _{e}(3)$ and $f(7)=\\log _{e}(2^{α}\\cdot 3^{β})$, $α,β\\in \\mathrm{ℕ}$, then $α+β$ is equal to :",
+  "options": [
+   "31",
+   "37",
+   "39",
+   "41"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$f(x)=\\int \\frac{8(2x+2)+8}{x^{2}+2x-15}dx$\n\n$\\Rightarrow f(x)=8\\ell n\\left |x^{2}+2x-15\\right |+\\ell n\\left |\\frac{x-3}{x+5}\\right |+C$\n\n$\\Rightarrow f(4)=14\\ell n3+C$\n\n$\\Rightarrow 14\\ell n3=14\\ell n3+C$\n\n$\\therefore C=0$\n\nNow, $f(7)=8\\ell n48-\\ell n3$\n\n$=\\ell n\\left (\\frac{(48)^{8}}{3}\\right )$\n\n$\\Rightarrow f(7)=\\ell n(2^{32}\\times 3^{7})$\n\n$α=32,β=7\\Rightarrow α+β=39$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrq59lh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $x=x(y)$ be the solution of the differential equation $2y^{2}\\frac{dx}{dy}-2xy+x^{2}=0$, $y>1$, $x(e)=e$.\nThen $x(e^{2})$ is equal to:",
+  "options": [
+   "$\\frac{3}{2}e^{2}$",
+   "$\\frac{2}{3}e^{2}$",
+   "$e^{2}$",
+   "$2e^{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2y(ydx-xdy)+x^{2}dy=0$\n\n$\\Rightarrow -2yx^{2}d\\left (\\frac{y}{x}\\right )+x^{2}dy=0$\n\n$\\Rightarrow -2yd\\left (\\frac{y}{x}\\right )+dy=0$\n\n$\\Rightarrow -2d\\left (\\frac{y}{x}\\right )+\\frac{1}{y}dy=0$\n\n$\\Rightarrow -\\frac{2y}{x}+\\log _{e}y=C$\n\nGiven $x(e)=e$\n\n$\\Rightarrow C=-1$\n\n$\\therefore -\\frac{2y}{x}+\\log _{e}y=-1$\n\n$\\Rightarrow \\frac{2y}{x}-\\log _{e}y=1$\n\nPut $y=e^{2}$, we get\n\n$\\Rightarrow \\frac{2e^{2}}{x}-2=1\\to \\frac{2e^{2}}{x}=3\\to x=\\frac{2e^{2}}{3}$\n\n$\\Rightarrow x(e^{2})=\\frac{2e^{2}}{3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrq68oe",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $A=\\{2,3,4,5,6\\}$. Let $R$ be a relation on the set $A\\times A$ given by $(x,y)R(z,w)$ if and only if $x$ divides $z$ and $y\\leq w$. Then the number of elements in $R$ is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 120.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We are given the set $A=\\{2,3,4,5,6\\}$.\n\nThe relation $R$ is defined on the Cartesian product $A\\times A$, meaning its elements are ordered pairs of the form $((x,y),(z,w))$ where all $x,y,z,w\\in A$.\n\nThe condition for the relation $(x,y)R(z,w)$ is: \n\n$x$ divides $z$\n\n$y\\leq w$\n\nNotice that the condition on $x$ and $z$ is completely independent of the condition on $y$ and $w$. Therefore, by the Fundamental Principle of Counting, the total number of elements in $R$ will be the number of possible pairs for $(x,z)$ multiplied by the number of possible pairs for $(y,w)$.\n\n Find the number of pairs $(x,z)$ where $x$ divides $z$\n\nLet us list down the possible values for $z\\in A$ for each $x\\in A$.\n\nIf $x=2$, then $z$ can be $2,4,$ or $6$. (This gives 3 pairs)\n\nIf $x=3$, then $z$ can be $3$ or $6$. (This gives 2 pairs)\n\nIf $x=4$, then $z$ can only be $4$. (This gives 1 pair)\n\nIf $x=5$, then $z$ can only be $5$. (This gives 1 pair)\n\nIf $x=6$, then $z$ can only be $6$. (This gives 1 pair)\n\nAdding these up, the total number of pairs for $(x,z)$ is:\n\n$3+2+1+1+1=8$\n\nFind the number of pairs $(y,w)$ where $y\\leq w$\n\nLet us list down the possible values for $w\\in A$ for each $y\\in A$.\n\nIf $y=2$, then $w$ can be $2,3,4,5,$ or $6$. (This gives 5 pairs)\n\nIf $y=3$, then $w$ can be $3,4,5,$ or $6$. (This gives 4 pairs)\n\nIf $y=4$, then $w$ can be $4,5,$ or $6$. (This gives 3 pairs)\n\nIf $y=5$, then $w$ can be $5$ or $6$. (This gives 2 pairs)\n\nIf $y=6$, then $w$ can only be $6$. (This gives 1 pair)\n\nAdding these up, the total number of pairs for $(y,w)$ is:\n\n$5+4+3+2+1=15$\n\n Calculate the total number of elements in $R$\n\nNow, we multiply the number of possibilities for $(x,z)$ and $(y,w)$ together:\n\n$\\text{Total elements in}R=8\\times 15=120$\n\nTherefore, the number of elements in $R$ is $120$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrq9qef",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Consider the matrices $A=\\left [\\begin{array}{ll} 2 & -2 \\\\ 4 & -2 \\end{array}\\right ]$ and $B=\\left [\\begin{array}{ll} 3 & 9 \\\\ 1 & 3 \\end{array}\\right ]$. If matrices $P$ and $Q$ are such that $PA=B$ and $AQ=B$, then the absolute value of the sum of the diagonal elements of $2(P+Q)$ is $________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 34.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$|A|=-4+8=4$, so\n\n$A^{-1}=\\frac{1}{4}\\left [\\begin{array}{ll} -2 & 2 \\\\ -4 & 2 \\end{array}\\right ]=\\frac{1}{2}\\left [\\begin{array}{ll} -1 & 1 \\\\ -2 & 1 \\end{array}\\right ].$\n\n$PA=B\\Rightarrow P=BA^{-1}$:\n\n$P=\\frac{1}{2}\\left [\\begin{array}{ll} 3 & 9 \\\\ 1 & 3 \\end{array}\\right ]\\left [\\begin{array}{ll} -1 & 1 \\\\ -2 & 1 \\end{array}\\right ]=\\frac{1}{2}\\left [\\begin{array}{ll} -21 & 12 \\\\ -7 & 4 \\end{array}\\right ].$\n\n$AQ=B\\Rightarrow Q=A^{-1}B$:\n\n$Q=\\frac{1}{2}\\left [\\begin{array}{ll} -1 & 1 \\\\ -2 & 1 \\end{array}\\right ]\\left [\\begin{array}{ll} 3 & 9 \\\\ 1 & 3 \\end{array}\\right ]=\\frac{1}{2}\\left [\\begin{array}{ll} -2 & -6 \\\\ -5 & -15 \\end{array}\\right ].$\n\n$\\mathrm{tr}(2(P+Q))=(-21+4)+(-2-15)=-34,$\n\nwhose absolute value is $34$.\n\nHence, the answer is 34.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnrqb419",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let A be the point (3, 0) and circles with variable diameter AB touch the circle $x^{2}+y^{2}=36$ internally. Let the curve C be the locus of the point B. If the eccentricity of C is $e$, then $72e^{2}$ is equal to $________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 18.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nLet the variable point be $B(h,k)$.\n\nWe are told that the circle having $AB$ as diameter touches the fixed circle $x^{2}+y^{2}=36$ internally.\n\nIf a circle has endpoints of a diameter at $A(3,0)$ and $B(h,k)$, then its equation is\n\n$(x-h)(x-3)+(y-k)(y-0)=0$\n\nExpanding this, we get\n\n$x^{2}+y^{2}-(h+3)x-ky+3h=0$\n\nSo, the centre of this circle is\n\nCentre $\\left (\\frac{h+3}{2},\\frac{k}{2}\\right )$\n\nNow, the fixed circle $x^{2}+y^{2}=36$ has centre $C_{1}(0,0)$ and radius $R=6$.\n\nThe variable circle (with diameter $AB$) has radius equal to half of $AB$, so\n\n$r=\\frac{1}{2}\\left (\\sqrt{(h-3)^{2}+k^{2}}\\right )$\n\nSince the two circles touch internally, the distance between their centres equals the difference of radii:\n\n$\\therefore C_{1}C_{2}=|R-r|$\n\nHere, $C_{2}\\left (\\frac{h+3}{2},\\frac{k}{2}\\right )$. So,\n\n$\\sqrt{\\left (\\frac{h+3}{2}\\right )^{2}+\\left (\\frac{k}{2}\\right )^{2}}=\\left |6-\\frac{1}{2}\\left (\\sqrt{(h-3)^{2}+k^{2}}\\right )\\right |$\n\nOn simplifying and writing the locus in terms of a general point $(x,y)$ (i.e., replacing $(h,k)$ by $(x,y)$), we get\n\n$\\sqrt{(x+3)^{2}+y^{2}}+\\sqrt{(x-3)^{2}+y^{2}}=12$\n\nThis is the standard form of an ellipse: sum of distances from two fixed points (foci) is constant $=2a$.\n\nSo,\n\n$2a=12\\therefore a=6$\n\nComparing, the foci are $(-3,0)$ and $(3,0)$.\n\nThe distance between the foci is $6$, so $2c=6$. Using $c=ae$, we write\n\n$2ae=6$\n\nSubstituting $a=6$:\n\n$12e=6$\n\nSo,\n\n$e=\\frac{1}{2}$\n\nFinally,\n\n$\\therefore 72e^{2}=72\\left (\\frac{1}{4}\\right )=18$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-2nd-april-evening-shift/mnrqb419-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnrqdpxh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the area of the region bounded by $16x^{2}-9y^{2}=144$ and $8x-3y=24$ is $A$, then $3(A+6\\log _{e}(3))$ is equal to $________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 24.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n$16x^{2}-9y^{2}=144$\n\n$16x^{2}-(8x-24)^{2}=144$\n\n$16x^{2}-64(x-3)^{2}=144\\to x^{2}-4(x-3)^{2}=9$\n\n$3x^{2}-24x+45\\to x^{2}-8x+15=0$\n\n$x=3,5$\n\n$\\mathrm{Area}=\\int\\limits _{3}^{5}\\sqrt{\\frac{16x^{2}-144}{9}}-\\frac{1}{2}\\cdot 2\\cdot \\frac{16}{3}$\n\n$=\\frac{4}{3}\\int\\limits _{3}^{5}\\sqrt{x^{2}-9}-\\frac{16}{3}$\n\n$=\\frac{4}{3}\\left (\\frac{x}{2}\\sqrt{x^{2}-9}-\\frac{9}{2}\\log _{e}\\left (x+\\sqrt{x^{2}-9}\\right )\\right )_{3}^{5}-\\frac{16}{3}$\n\n$=\\frac{4}{3}\\left (\\frac{5}{2}\\cdot 4-\\frac{9}{2}\\log _{e}9-\\frac{3}{2}\\cdot 0+\\frac{9}{2}\\log _{e}3\\right )-\\frac{16}{3}$\n\n$\\mathrm{Area}=8-6\\log _{e}3=A$\n\n$\\therefore A+6\\ell n3=8$\n\n$\\Rightarrow 3(A+6\\ell n3)=24$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-2nd-april-evening-shift/mnrqdpxh-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnrqfsp8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of points in the interval $[2,4]$, at which the function $f(x)=\\left [x^{2}-x-\\frac{1}{2}\\right ]$, where $[\\cdot ]$ denotes the greatest integer function, is discontinuous, is $________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 10.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For the greatest integer function\n\n$f(x)=\\left [x^{2}-x-\\frac{1}{2}\\right ],$\n\nthe function is discontinuous at those points where\n\n$x^{2}-x-\\frac{1}{2}$\n\ntakes an integer value.\n\nSo, let\n\n$x^{2}-x-\\frac{1}{2}=n,$\n\nwhere $n$ is an integer.\n\nWe need to find how many such points lie in the interval $[2,4]$.\n\nFirst, consider\n\n$g(x)=x^{2}-x-\\frac{1}{2}.$\n\nNow check its values at the endpoints:\n\nAt $x=2$,\n\n$g(2)=4-2-\\frac{1}{2}=\\frac{3}{2}.$\n\nAt $x=4$,\n\n$g(4)=16-4-\\frac{1}{2}=\\frac{23}{2}=11.5.$\n\nAlso,\n\n$g^{'}(x)=2x-1.$\n\nFor $x\\in [2,4]$, we have $2x-1>0$, so $g(x)$ is strictly increasing on $[2,4]$.\n\nHence, as $x$ goes from $2$ to $4$, $g(x)$ takes every value from $\\frac{3}{2}$ to $\\frac{23}{2}$ exactly once.\n\nNow count the integers in the interval\n\n$\\left [\\frac{3}{2},\\frac{23}{2}\\right ]=[1.5,11.5].$\n\nThese integers are\n\n$2,3,4,5,6,7,8,9,10,11.$\n\nThere are $10$ integers.\n\nSince each integer value corresponds to exactly one $x\\in [2,4]$, the function $f(x)$ is discontinuous at exactly $10$ points.\n\nTherefore, the required number of points is\n\n$10.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

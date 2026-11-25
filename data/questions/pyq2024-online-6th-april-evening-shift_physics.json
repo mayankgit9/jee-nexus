@@ -1,0 +1,1261 @@
+[
+ {
+  "publicId": "PYQ-2024-lvb2955q",
+  "subjectKey": "physics",
+  "chapterKey": "physics:laws-of-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A car of $800\\mathrm{kg}$ is taking turn on a banked road of radius $300\\mathrm{m}$ and angle of banking $30^{\\circ }$. If coefficient of static friction is 0.2 then the maximum speed with which car can negotiate the turn safely: $(\\mathrm{g}=10\\mathrm{m}/\\mathrm{s}^{2},\\sqrt{3}=1.73)$",
+  "options": [
+   "51.4 m/s",
+   "102.8 m/s",
+   "70.4 m/s",
+   "264 m/s"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 60,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circular motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "When a car takes a turn on a banked road, the forces involved are the gravitational force, the normal force from the surface, and frictional force (if any). The net force provides the necessary centripetal force for the circular motion. The angle of banking and static friction contribute to the maximum speed the car can achieve without slipping.\n\nThe forces acting on the car are as follows:\n\n1. The normal force ($N$) acts perpendicular to the surface of the road.\n\n2. Gravitational force ($mg$) acts downward.\n\n3. Frictional force ($f$), which can provide additional centripetal force if needed. It acts parallel to the surface of the road, towards the center of the circle.\n\nThe normal force and the gravitational force components can be resolved into two directions: perpendicular and parallel to the road surface. The maximum speed is achieved when all available forces (normal, frictional) are utilized to provide the necessary centripetal force ($F_{c}$) without slipping.\n\nThe centripetal force required for circular motion is given by:\n\n$F_{c}=\\frac{mv^{2}}{r}$\n\nWhere:\n\n$m$ = mass of the car = $800kg$\n\n$v$ = speed of the car\n\n$r$ = radius of the turn = $300m$\n\nOn a banked curve, the maximum velocity can be calculated using the formula:\n\n$v=\\sqrt{rg(\\tan θ+μ)/\\left (1-μ\\tan θ)} \\right.$\n\nWhere:\n\n$θ$ = angle of banking = $30^{\\circ }$\n\n$μ$ = coefficient of static friction = $0.2$\n\n$g$ = acceleration due to gravity = $10m/s^{2}$\n\nFirst, calculate the tangent of the angle:\n\n$\\tan 30^{\\circ }=\\frac{1}{\\sqrt{3}}=\\frac{1}{1.73}$\n\nSubstitute all the values into the formula:\n\n$v=\\sqrt{300\\times 10\\times \\left (\\frac{1}{1.73}+0.2\\right )/\\left (1-0.2\\times \\frac{1}{1.73}\\right )}$\n\n$v=\\sqrt{3000\\times \\left (\\frac{1}{1.73}+0.2\\right )/\\left (1-\\frac{0.2}{1.73}\\right )}$\n\n$v=\\sqrt{3000\\times \\frac{1+1.73\\times 0.2}{1.73-0.2}}$\n\n$v=\\sqrt{3000\\times \\frac{1+0.346}{1.73-0.2}}$\n\n$v=\\sqrt{3000\\times \\frac{1.346}{1.53}}$\n\n$v=\\sqrt{3000\\times 0.8797}$\n\n$v=\\sqrt{2639.1}\\approx 51.37m/s$\n\nHence, the closest option to the calculated maximum speed without slipping is:\n\nOption A: 51.4 m/s",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb2956u",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A body projected vertically upwards with a certain speed from the top of a tower reaches the ground in $t_{1}$. If it is projected vertically downwards from the same point with the same speed, it reaches the ground in $t_{2}$. Time required to reach the ground, if it is dropped from the top of the tower, is :",
+  "options": [
+   "$\\sqrt{\\mathrm{t}_{1}+\\mathrm{t}_{2}}$",
+   "$\\sqrt{\\mathrm{t}_{1}\\mathrm{t}_{2}}$",
+   "$\\sqrt{\\frac{\\mathrm{t}_{1}}{\\mathrm{t}_{2}}}$",
+   "$\\sqrt{\\mathrm{t}_{1}-\\mathrm{t}_{2}}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 61,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "motion in a straight line"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve this problem, we'll use the equations of motion under constant acceleration due to gravity. Let's define:\n\n$h$: Height of the tower\n\n$u$: Initial speed of projection (same magnitude in both cases)\n\n$g$: Acceleration due to gravity (positive downward)\n\n$t_{1}$: Time taken to reach the ground when projected upwards\n\n$t_{2}$: Time taken to reach the ground when projected downwards\n\n$t$: Time taken to reach the ground when simply dropped\n\nCase 1: Projectile Thrown Upwards\n\nWhen the body is projected upwards from the top of the tower, its initial velocity is $-u$ (since upward direction is negative), and it reaches the ground in time $t_{1}$. The equation of motion is:\n\n$h=-ut_{1}+\\frac{1}{2}gt_{1}^{2}$\n\nCase 2: Projectile Thrown Downwards\n\nWhen the body is projected downwards from the top of the tower, its initial velocity is $u$, and it reaches the ground in time $t_{2}$. The equation is:\n\n$h=ut_{2}+\\frac{1}{2}gt_{2}^{2}$\n\nCase 3: Body Dropped\n\nWhen the body is simply dropped, its initial velocity is $0$, and it reaches the ground in time $t$:\n\n$h=\\frac{1}{2}gt^{2}$\n\nStep 1: Equate the Heights\n\nFrom cases 1 and 2, equate the expressions for $h$:\n\n$-ut_{1}+\\frac{1}{2}gt_{1}^{2}=ut_{2}+\\frac{1}{2}gt_{2}^{2}$\n\nStep 2: Solve for $u$\n\nSimplify the equation:\n\n$-ut_{1}-ut_{2}=\\frac{1}{2}gt_{2}^{2}-\\frac{1}{2}gt_{1}^{2}$\n\n$-u(t_{1}+t_{2})=\\frac{1}{2}g(t_{2}^{2}-t_{1}^{2})$\n\n$-u(t_{1}+t_{2})=\\frac{1}{2}g(t_{2}-t_{1})(t_{2}+t_{1})$\n\nDivide both sides by $t_{1}+t_{2}$:\n\n$-u=\\frac{1}{2}g(t_{2}-t_{1})$\n\n$u=\\frac{1}{2}g(t_{1}-t_{2})$\n\nStep 3: Express $h$ in Terms of $t_{1}$ and $t_{2}$\n\nSubstitute $u$ back into one of the equations for $h$:\n\n$h=-\\left (\\frac{1}{2}g(t_{1}-t_{2})\\right )t_{1}+\\frac{1}{2}gt_{1}^{2}$\n\nSimplify:\n\n$h=\\frac{1}{2}gt_{1}t_{2}$\n\nStep 4: Equate the Height for the Dropped Case\n\nFrom the dropped case:\n\n$h=\\frac{1}{2}gt^{2}$\n\nSet the two expressions for $h$ equal to each other:\n\n$\\frac{1}{2}gt^{2}=\\frac{1}{2}gt_{1}t_{2}$\n\n$t^{2}=t_{1}t_{2}$\n\nStep 5: Solve for $t$\n\n$t=\\sqrt{t_{1}t_{2}}$\n\nConclusion:\n\nThe time required for the body to reach the ground when dropped is the geometric mean of $t_{1}$ and $t_{2}$:\n\nAnswer: Option B\n\n$t=\\sqrt{t_{1}t_{2}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb2957z",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given below are two statements:\n\nStatement (I) : Dimensions of specific heat is $[\\mathrm{L}^{2}\\mathrm{T}^{-2}\\mathrm{K}^{-1}]$.\n\nStatement (II) : Dimensions of gas constant is $[\\mathrm{M}\\mathrm{L}^{2}\\mathrm{T}^{-1}\\mathrm{K}^{-1}]$.\n\nIn the light of the above statements, choose the most appropriate answer from the options given below.",
+  "options": [
+   "Statement (I) is incorrect but statement (II) is correct",
+   "Both statement (I) and statement (II) are incorrect",
+   "Both statement (I) and statement (II) are correct",
+   "Statement (I) is correct but statement (II) is incorrect"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 62,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Specific heat is defined by $Q=mc\\Delta T$, so\n\n$[c]=\\dfrac{[Q]}{[m][\\Delta T]}=\\dfrac{[\\mathrm{ML}^{2}\\mathrm{T}^{-2}]}{[\\mathrm{M}][\\mathrm{K}]}=[\\mathrm{L}^{2}\\mathrm{T}^{-2}\\mathrm{K}^{-1}]$\n\nStatement (I) is correct.\n\nThe gas constant follows from $PV=nRT$, i.e. $R=\\dfrac{PV}{nT}$, where $PV$ has the dimensions of energy, $[\\mathrm{ML}^{2}\\mathrm{T}^{-2}]$, and $n$ is the amount of substance (unit mol):\n\n$[R]=\\dfrac{[\\mathrm{ML}^{2}\\mathrm{T}^{-2}]}{[\\mathrm{mol}][\\mathrm{K}]}=[\\mathrm{ML}^{2}\\mathrm{T}^{-2}\\mathrm{K}^{-1}\\mathrm{mol}^{-1}]$\n\nThe exponent of time is $-2$, not $-1$, so Statement (II) is incorrect.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29599",
+  "subjectKey": "physics",
+  "chapterKey": "physics:laws-of-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A body of weight $200\\mathrm{N}$ is suspended from a tree branch through a chain of mass $10\\mathrm{kg}$. The branch pulls the chain by a force equal to (if $\\mathrm{g}=10\\mathrm{m}/\\mathrm{s}^{2}$) :",
+  "options": [
+   "300 N",
+   "100 N",
+   "150 N",
+   "200 N"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 63,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "laws of motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the force that the branch pulls on the chain, we need to consider the combined weight of the body and the chain, as this is the total force that the branch must support due to gravity.\n\nThe weight of the body is given as $200\\mathrm{N}$.\n\nTo find the weight of the chain, we use the formula for weight, which is the mass of an object multiplied by the acceleration due to gravity ($g$). The mass of the chain is given as $10\\quad \\mathrm{kg}$ and $g=10\\mathrm{m}/\\mathrm{s}^{2}$, so:\n\n$\\text{Weight of the chain}=\\text{Mass of the chain}\\times g$\n\n$=10\\qquad \\mathrm{kg}\\times 10\\mathrm{m}/\\mathrm{s}^{2}$\n\n$=100\\mathrm{N}$\n\nThe total force that the branch must support is the sum of the weight of the body and the weight of the chain:\n\n$\\text{Total force}=\\text{Weight of the body}+\\text{Weight of the chain}$\n\n$=200\\mathrm{N}+100\\mathrm{N}$\n\n$=300\\mathrm{N}$\n\nTherefore, the branch pulls the chain by a force of $300\\mathrm{N}$, which corresponds to Option A.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb295ad",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of electrons flowing per second in the filament of a $110\\mathrm{W}$ bulb operating at $220\\mathrm{V}$ is : (Given $\\mathrm{e}=1.6\\times 10^{-19}\\mathrm{C}$)",
+  "options": [
+   "$1.25\\times 10^{19}$",
+   "$31.25\\times 10^{17}$",
+   "$6.25\\times 10^{18}$",
+   "$6.25\\times 10^{17}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 64,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} P=v\\times i\\Rightarrow i=\\dfrac{110}{220}=\\dfrac{1}{2}\\mathrm{A} \\\\ i=ne\\Rightarrow n=\\dfrac{1}{2\\times 1.6\\times 10^{-19}}=31.25\\times 10^{17} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb295bj",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electronic-devices",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The acceptor level of a p-type semiconductor is $6\\mathrm{eV}$. The maximum wavelength of light which can create a hole would be : Given $\\mathrm{hc}=1242\\mathrm{eV}\\mathrm{nm}$.",
+  "options": [
+   "407 nm",
+   "103.5 nm",
+   "414 nm",
+   "207 nm"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 65,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electronic devices"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The energy required to create a hole in a p-type semiconductor can be directly related to the acceptor level because this energy level represents the minimum energy required to excite an electron from the valence band into the acceptor level, effectively creating a hole. The acceptor level is given as $6~\\text{eV}$.\n\nTo find the maximum wavelength of light that can excite an electron into this level, we use the equation that relates the energy ($E$) of a photon to its wavelength ($λ$):\n\n$E=\\frac{hc}{λ}$\n\nWhere:\n\n$E$ is the energy in electronvolts (eV),\n\n$h$ is Planck's constant,\n\n$c$ is the speed of light, and\n\n$λ$ is the wavelength in nanometers (nm).\n\nThe product of $hc$ is given as $1242\\qquad \\text{eV nm}$, allowing us to solve for $λ$ directly:\n\n$λ=\\frac{hc}{E}$\n\nSubstituting the given values:\n\n$λ=\\frac{1242\\text{eV nm}}{6\\text{eV}}=207\\text{nm}$\n\nThus, the maximum wavelength of light that can create a hole in the semiconductor by exciting an electron into the acceptor level is $207\\text{nm}$. Therefore, the correct answer is Option D: 207 nm.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb295cr",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In a vernier calliper, when both jaws touch each other, zero of the vernier scale shifts towards left and its $4^{\\text{th}}$ division coincides exactly with a certain division on main scale. If 50 vernier scale divisions equal to 49 main scale divisions and zero error in the instrument is $0.04\\mathrm{mm}$ then how many main scale divisions are there in $1\\mathrm{cm}$ ?",
+  "options": [
+   "5",
+   "40",
+   "10",
+   "20"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 66,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} 0.04=4(\\text{L. C.)} \\\\ \\Rightarrow \\text{L.C}=0.01\\mathrm{mm} \\\\ \\begin{array}{l} 1\\mathrm{MSD}-\\frac{49}{50}MSD=0.01\\mathrm{mm} \\\\ \\Rightarrow 1\\mathrm{MSD}=50\\times 0.01\\mathrm{mm} \\\\ =0.5\\mathrm{mm} \\\\ \\Rightarrow 1\\mathrm{cm}=20(0.5\\mathrm{mm}) \\end{array} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb295dx",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In a coil, the current changes from $-2\\mathrm{A}$ to $+2\\mathrm{A}$ in $0.2\\mathrm{s}$ and induces an emf of $0.1\\mathrm{V}$. The self inductance of the coil is :",
+  "options": [
+   "4 mH",
+   "2.5 mH",
+   "1 mH",
+   "5 mH"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 67,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic induction"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the self-inductance of the coil, we can use the formula for induced electromotive force (emf), which is given by Faraday's law of electromagnetic induction as it applies to self-induction:\n\n$\\text{emf}=-L\\frac{\\Delta I}{\\Delta t}$\n\nWhere:\n\n$\\text{emf}$ = induced voltage in volts (V)\n\n$L$ = self-inductance of the coil in henries (H)\n\n$\\Delta I$ = change in current in amperes (A)\n\n$\\Delta t$ = time interval in seconds (s) over which the current change occurs\n\nHere, the problem gives us the following data:\n\n$\\text{emf}=0.1\\text{V}$\n\n$\\Delta I=2\\text{A}-(-2\\text{A})=4\\text{A}$\n\n$\\Delta t=0.2\\text{s}$\n\nSubstituting the given values into the formula, we get:\n\n$0.1=-L\\frac{4}{0.2}$\n\nSolving for $L$, the equation becomes:\n\n$0.1=-L\\cdot 20$\n\nTherefore:\n\n$L=-\\frac{0.1}{20}$\n\nCalculating the value of $L$:\n\n$L=-0.005\\text{H}$\n\nOr, expressing $L$ in millihenries (mH):\n\n$L=-5\\text{mH}$\n\nHowever, considering the absolute value (since inductance is a magnitude and cannot be negative in this context):\n\n$L=5\\text{mH}$\n\nThus, the self-inductance of the coil is 5 mH, which corresponds to Option D.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb295f4",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinetic-theory",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Energy of 10 non rigid diatomic molecules at temperature $\\mathrm{T}$ is :",
+  "options": [
+   "35 RT",
+   "$\\frac{7}{2}$ RT",
+   "$70 K_{B}T$",
+   "$35 K_{B}T$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 68,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "kinetic theory of gases"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The energy of a diatomic molecule depends on the degrees of freedom it has. For a non-rigid diatomic molecule, there are more degrees of freedom compared to a rigid diatomic molecule. Specifically, a non-rigid diatomic molecule has translational, rotational, and vibrational degrees of freedom. The translational and rotational degrees of freedom are the same for both rigid and non-rigid diatomic molecules, which include:\n\n3 translational degrees of freedom,\n\n2 rotational degrees of freedom (since linear molecules do not have the third rotational freedom because it requires rotating around the bond axis, which doesn't change the energy for linear molecules).\n\nAdditionally, non-rigid diatomic molecules have vibrational degrees of freedom. For a simple diatomic molecule, there is 1 vibrational degree of freedom (since vibration along the bond axis is possible). However, considering the energy distribution across these vibrations requires accounting for both the potential and kinetic energy associated with vibrations, effectively doubling the vibrational degrees of freedom for energy calculations to 2 (one for kinetic and one for potential energy).\n\nThus, the total degrees of freedom for a non-rigid diatomic molecule are:\n\n3 (translational) + 2 (rotational) + 2 (vibrational) = 7 degrees of freedom.\n\nThe formula for the average energy of a molecule in terms of degrees of freedom at temperature T is given by:\n\n$E=\\frac{f}{2}k_{\\mathrm{B}}T$\n\nwhere $f$ is the total number of degrees of freedom, $k_{\\mathrm{B}}$ is the Boltzmann constant, and $T$ is the temperature.\n\nPlugging in the values for a non-rigid diatomic molecule:\n\n$E=\\frac{7}{2}k_{\\mathrm{B}}T$\n\nTherefore, the total energy for 10 such molecules would be:\n\n$10\\times \\frac{7}{2}k_{\\mathrm{B}}T=35k_{\\mathrm{B}}T$\n\nSo, the correct answer is:\n\nOption D: 35 $k_{\\mathrm{B}}T$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb295g9",
+  "subjectKey": "physics",
+  "chapterKey": "physics:dual-nature-of-matter",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "When UV light of wavelength $300\\mathrm{nm}$ is incident on the metal surface having work function $2.13\\mathrm{eV}$, electron emission takes place. The stopping potential is :\n\n(Given hc $=1240\\mathrm{eV}\\mathrm{nm}$ )",
+  "options": [
+   "4 V",
+   "2 V",
+   "4.1 V",
+   "1.5 V"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 69,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "dual nature of radiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the stopping potential ($V_{s}$) when UV light of wavelength $300$ nm is incident on a metal surface with a work function of $2.13$ eV, we can use the photoelectric equation which relates the energy of the incident photons, the work function of the metal, and the kinetic energy of the emitted electrons.\n\nThe energy (E) of the photons can be calculated using the equation:\n\n$E=\\frac{hc}{λ}$\n\nwhere $h$ is the Planck constant, $c$ is the speed of light, and $λ$ is the wavelength of the incident light. Given that $hc=1240$ eV nm, we can calculate the energy of the UV light photons directly.\n\nSubstituting $hc=1240$ eV nm and $λ=300$ nm into the equation gives:\n\n$E=\\frac{1240\\text{eV nm}}{300\\text{nm}}=4.13\\text{eV}$\n\nNext, we can calculate the maximum kinetic energy of the emitted electrons using the photoelectric effect equation:\n\n$K_{\\max }=E-𝜙$\n\nwhere $K_{\\max }$ is the maximum kinetic energy of the emitted electrons, $E$ is the energy of the incident photons, and $𝜙$ is the work function of the metal.\n\nGiven $E=4.13$ eV and the work function $𝜙=2.13$ eV, we have:\n\n$K_{\\max }=4.13\\text{eV}-2.13\\text{eV}=2\\text{eV}$\n\nThe stopping potential ($V_{s}$) is related to the maximum kinetic energy of the emitted electrons by the equation:\n\n$K_{\\max }=eV_{s}$\n\nwhere $e$ is the elementary charge (the charge of an electron), and $V_{s}$ is the stopping potential. Since $e=1$ when using energy in eV and potential in volts, the stopping potential $V_{s}$ can be directly equated to the kinetic energy in eV:\n\n$V_{s}=K_{\\max }=2\\text{V}$\n\nTherefore, the stopping potential is $2$ V, which corresponds to Option B.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb2acox",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Match List I with List II:\n\n  \n    \n    LIST I\n(Y vs X)\n    \n    LIST II\n(Shape of Graph)\n  \n\n  \n    A.\n    Y = magnetic susceptibility\nX = magnetising field\n    I.\n    \n[IMG]\n\n  \n  \n    B.\n    Y = magnetic field\nX = distance from centre of a current carrying wire for x \n    II.\n    \n[IMG]\n\n  \n  \n    C.\n    Y = magnetic field\n$\\mathrm{X}=$ distance from centre of a current carrying wire for $x>\\mathrm{a}$\n(where $\\mathrm{a}=$ radius of wire)\n    III.\n    \n[IMG]\n\n  \n  \n    D.\n    Y = magnetic field inside solenoid\nX = distance from centre\n    IV.\n    \n[IMG]\n\n  \n\nChoose the correct answer from the options given below :",
+  "options": [
+   "(A)-(III), (B)-(IV), (C)- (I), (D)-(II)",
+   "(A)-(III), (B)-(I), (C)-(IV), (D)-(II)",
+   "(A)-(IV), (B)-(I), (C)-(III), (D)-(II)",
+   "(A)-(I), (B)-(III), (C)-(II), (D)-(IV)"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 70,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetic properties of matter"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "In para and dia materials, susceptibility is independent of magnetic field.\n\nInside a current carrying wire, $B\\propto X$\n\nOutside a current carrying wire, $B\\propto \\frac{1}{x}$\n\nInside a solenoid, B is constant upto ends.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb2acox-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb2acox-1.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb2acox-2.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb2acox-3.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb29ea0",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For the thin convex lens, the radii of curvature are at $15\\mathrm{cm}$ and $30\\mathrm{cm}$ respectively. The focal length of the lens is $20\\mathrm{cm}$. The refractive index of the material is :",
+  "options": [
+   "1.2",
+   "1.5",
+   "1.4",
+   "1.8"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 71,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the refractive index of the material of a thin convex lens, we can make use of the Lensmaker's Formula. The Lensmaker's formula is given by:\n\n$\\frac{1}{f}=(μ-1)\\left (\\frac{1}{R_{1}}-\\frac{1}{R_{2}}\\right )$\n\nwhere\n\n$f$ is the focal length of the lens,\n\n$μ$ is the refractive index of the material of the lens,\n\n$R_{1}$ is the radius of curvature of the first surface (convex side, positive),\n\n$R_{2}$ is the radius of curvature of the second surface (concave side, negative for convex lens).\n\nGiven in the question, the radii of curvature are $15\\quad \\mathrm{cm}$ and $30\\quad \\mathrm{cm}$ respectively, and the focal length $f=20\\mathrm{cm}$.\n\nIt's important to pay attention to the signs of the radii of curvature according to the lens maker's convention. For convex lenses, $R_{1}$ is positive and $R_{2}$ is negative; however, since the problem doesn't specify which curvature corresponds to which side in relation to the direction of light travel, we'll assume the light travels from left to right: thus, $R_{1}=+15\\mathrm{cm}$ and $R_{2}=-30\\mathrm{cm}$.\n\nSubstituting the given values into the Lensmaker's Formula, we get:\n\n$\\frac{1}{20}=(μ-1)\\left (\\frac{1}{15}-\\frac{1}{-30}\\right )$\n\n$\\frac{1}{20}=(μ-1)\\left (\\frac{1}{15}+\\frac{1}{30}\\right )$\n\n$\\frac{1}{20}=(μ-1)\\left (\\frac{2+1}{30}\\right )$\n\n$\\frac{1}{20}=(μ-1)\\left (\\frac{3}{30}\\right )$\n\n$\\frac{1}{20}=(μ-1)\\left (\\frac{1}{10}\\right )$\n\n$\\frac{1}{20}=\\frac{μ-1}{10}$\n\nNow, solve for $μ$:\n\n$μ-1=\\frac{10}{20}$\n\n$μ-1=0.5$\n\n$μ=1.5$\n\nHence, the refractive index of the material of the lens is 1.5, which corresponds to Option B.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29ebb",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two identical conducting spheres P and S with charge Q on each, repel each other with a force $16\\mathrm{N}$. A third identical uncharged conducting sphere $\\mathrm{R}$ is successively brought in contact with the two spheres. The new force of repulsion between $\\mathrm{P}$ and $\\mathrm{S}$ is :",
+  "options": [
+   "1 N",
+   "6 N",
+   "12 N",
+   "4 N"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 72,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} F_{1}=\\dfrac{KQ^{2}}{r^{2}}=16\\mathrm{N} \\\\ F_{2}=\\dfrac{K\\left (\\frac{Q}{2}\\right )\\left (\\frac{3Q}{4}\\right )}{r^{2}}=\\dfrac{3}{8}\\times 16=6\\mathrm{N} \\end{array}$\n\nFinal charges on spheres are $\\frac{Q}{2}$ and $\\frac{3Q}{4}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29eed",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The longest wavelength associated with Paschen series is : (Given $\\mathrm{R}_{\\mathrm{H}}=1.097\\times 10^{7}\\mathrm{SI}$ unit)",
+  "options": [
+   "$2.973\\times 10^{-6}\\mathrm{m}$",
+   "$1.876\\times 10^{-6}\\mathrm{m}$",
+   "$1.094\\times 10^{-6}\\mathrm{m}$",
+   "$3.646\\times 10^{-6}\\mathrm{m}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 73,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the longest wavelength associated with the Paschen series, we need to understand what the Paschen series is and how its wavelength can be calculated. The Paschen series pertains to the spectral line emissions of the hydrogen atom as an electron transitions from higher energy levels (n > 3) down to n = 3. The formula used to calculate the wavelength ($λ$) of the emitted photon during such a transition in the hydrogen atom is given by the Rydberg formula:\n\n$\\frac{1}{λ}=R_{H}\\left (\\frac{1}{3^{2}}-\\frac{1}{n^{2}}\\right )$\n\nwhere,\n\n$R_{H}$ is the Rydberg constant for hydrogen, $R_{H}=1.097\\times 10^{7}\\text{m}^{-1}$.\n\n$n$ is the principal quantum number of the higher energy level (For the longest wavelength, we use the smallest possible value of $n$ that is larger than 3, which is $n=4$, since for longer wavelength transitions, the difference in energy levels should be the smallest).\n\nTo find the longest wavelength, we plug in $n=4$ into the Rydberg equation, as this corresponds to the smallest energy transition within the Paschen series ($n=4$ to $n=3$):\n\n$\\frac{1}{λ}=1.097\\times 10^{7}\\left (\\frac{1}{3^{2}}-\\frac{1}{4^{2}}\\right )$\n\n$\\frac{1}{λ}=1.097\\times 10^{7}\\left (\\frac{1}{9}-\\frac{1}{16}\\right )$\n\n$\\frac{1}{λ}=1.097\\times 10^{7}\\left (\\frac{16-9}{144}\\right )$\n\n$\\frac{1}{λ}=1.097\\times 10^{7}\\times \\frac{7}{144}$\n\n$\\frac{1}{λ}=1.097\\times 10^{7}\\times \\frac{7}{144}$\n\n$\\frac{1}{λ}=1.097\\times 10^{7}\\times \\frac{7}{144}$\n\n$\\frac{1}{λ}=1.097\\times 10^{7}\\times \\frac{7}{144}=76403.47\\text{m}^{-1}$\n\nFinally, we calculate $λ$ by taking the reciprocal of this value:\n\n$λ=\\frac{1}{76403.47}\\approx 1.308\\times 10^{-5}\\text{m}=1.308\\times 10^{-5}\\times 10^{2}\\text{cm}=1.308\\times 10^{-3}\\text{cm}$\n\nIt seems there was a mistake in my calculation. Revising the calculation properly:\n\n$λ=\\frac{1}{1.097\\times 10^{7}\\times \\frac{7}{144}}$\n\nCorrectly evaluating this, we should directly compute:\n\n$λ\\approx \\frac{144}{7\\times 1.097\\times 10^{7}}=\\frac{144}{7.679\\times 10^{7}}\\approx 1.876\\times 10^{-6}\\text{m}$\n\nTherefore, the correct option that matches our calculation for the longest wavelength in the Paschen series is:\n\nOption B: $1.876\\times 10^{-6}\\text{m}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29efa",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A total of $48\\mathrm{J}$ heat is given to one mole of helium kept in a cylinder. The temperature of helium increases by $2^{\\circ }\\mathrm{C}$. The work done by the gas is:\nGiven, $\\mathrm{R}=8.3\\mathrm{J}\\mathrm{K}^{-1}\\mathrm{mol}^{-1}$.",
+  "options": [
+   "23.1 J",
+   "48 J",
+   "24.9 J",
+   "72.9 J"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 74,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve this problem, we can use the first law of thermodynamics, which states:\n\n$\\Delta Q=\\Delta U+W$\n\nwhere:\n\n$\\Delta Q$ is the heat transferred to the system, in this case, $48\\mathrm{J}$. \n\n$\\Delta U$ is the change in internal energy of the system. \n\n$W$ is the work done by the system.\n\nFor one mole of an ideal gas, the change in internal energy can be calculated using the equation:\n\n$\\Delta U=nC_{v}\\Delta T$\n\nwhere:\n\n$n$ is the number of moles, which is $1$ in this case. \n\n$C_{v}$ is the molar specific heat capacity at constant volume. \n\n$\\Delta T$ is the change in temperature, in Kelvins.\n\nGiven that we are dealing with helium, a monatomic ideal gas, we know that:\n\n$C_{v}=\\frac{3}{2}R$\n\nSubstituting the given values, we get:\n\n$\\Delta U=(1)\\frac{3}{2}(8.3\\mathrm{J}\\mathrm{mol}^{-1}\\mathrm{K}^{-1})(2^{\\circ }\\mathrm{C})$\n\nSince a change in temperature of $1^{\\circ }\\mathrm{C}$ is equivalent to a change in temperature of $1\\mathrm{K}$, we can directly substitute $2^{\\circ }\\mathrm{C}$ as a $2\\mathrm{K}$ change without needing to convert Celsius to Kelvin as both scales have the same magnitude of degree.\n\nTherefore,\n\n$\\Delta U=1\\times \\frac{3}{2}\\times 8.3\\times 2=24.9\\mathrm{J}$\n\nNow, substituting $\\Delta U$ and $\\Delta Q$ into the first law of thermodynamics:\n\n$48=24.9+W$\n\nSolving for $W$ we find:\n\n$W=48-24.9=23.1\\mathrm{J}$\n\nThus, the work done by the gas is $23.1\\mathrm{J}$, which corresponds to Option A.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29egr",
+  "subjectKey": "physics",
+  "chapterKey": "physics:work-energy-power",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "When kinetic energy of a body becomes 36 times of its original value, the percentage increase in the momentum of the body will be :",
+  "options": [
+   "60%",
+   "500%",
+   "6%",
+   "600%"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 75,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "work power and energy"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The relationship between kinetic energy (K.E) and momentum (p) of a body can be expressed through their respective definitions. Kinetic energy is given by $K.E=\\frac{1}{2}mv^{2}$ where $m$ is the mass of the body and $v$ is its velocity. The momentum (p) of a body is given by $p=mv$. To express kinetic energy in terms of momentum, we can manipulate the expression for momentum as follows:\n\n$p=mv⟹v=\\frac{p}{m}$\n\nSubstituting $v$ in the kinetic energy formula, we get\n\n$K.E=\\frac{1}{2}m\\left (\\frac{p}{m}\\right )^{2}=\\frac{1}{2}\\frac{p^{2}}{m}$\n\nTherefore, we see that kinetic energy is directly proportional to the square of the momentum $(K.E\\propto p^{2})$.\n\nNow, given that the kinetic energy of a body becomes 36 times its original value, we can set up the proportionality as\n\n$\\frac{K.E_{\\text{final}}}{K.E_{\\text{original}}}=36$\n\nSince $K.E_{\\text{final}}=36\\times K.E_{\\text{original}}$ and knowing $K.E\\propto p^{2}$, we can express this relationship through the squares of the initial and final momentum:\n\n$\\frac{p_{\\text{final}}^{2}}{p_{\\text{original}}^{2}}=36$\n\nTaking the square root of both sides to find the ratio of final to initial momentum, we have\n\n$\\frac{p_{\\text{final}}}{p_{\\text{original}}}=\\sqrt{36}=6$\n\nThis indicates that the final momentum is 6 times the original momentum. To find the percentage increase in the momentum, we calculate the increase from the original to the final, subtracting the original momentum (which is considered 1 times itself):\n\n$\\text{Percentage increase}=\\left (\\frac{p_{\\text{final}}-p_{\\text{original}}}{p_{\\text{original}}}\\right )\\times 100%=\\left (\\frac{6p-p}{p}\\right )\\times 100%=(6-1)\\times 100%=5\\times 100%=500%$\n\nTherefore, the correct answer is Option B: 500%.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29ehp",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Pressure inside a soap bubble is greater than the pressure outside by an amount : (given : $\\mathrm{R}=$ Radius of bubble, $\\mathrm{S}=$ Surface tension of bubble)",
+  "options": [
+   "$\\frac{S}{R}$",
+   "$\\frac{4\\mathrm{S}}{\\mathrm{R}}$",
+   "$\\frac{4\\mathrm{R}}{\\mathrm{S}}$",
+   "$\\frac{2S}{R}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 76,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The difference in pressure inside a soap bubble as compared to the outside is due to the surface tension created by the soap film on the bubble. This difference in pressure can be calculated using the formula that relates the surface tension of the soap bubble to the radius of the bubble. The correct formula for the pressure difference ($\\Delta P$) across a soap bubble is given by:\n\n$\\Delta P=\\frac{4S}{R}$\n\nHere, $S$ is the surface tension of the bubble and $R$ is the radius of the bubble. The factor of 4 comes from the fact that a soap bubble has two surfaces (an inner and an outer surface), and for each surface, the Laplace pressure (which contributes to the pressure difference due to surface tension) is given by $\\frac{2S}{R}$. Thus, for two surfaces, you double this amount, resulting in the $\\frac{4S}{R}$ term.\n\nTherefore, the correct answer is:\n\nOption B\n\n$\\frac{4\\mathrm{S}}{\\mathrm{R}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29ej7",
+  "subjectKey": "physics",
+  "chapterKey": "physics:gravitation",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Assuming the earth to be a sphere of uniform mass density, a body weighed $300\\mathrm{N}$ on the surface of earth. How much it would weigh at R/4 depth under surface of earth ?",
+  "options": [
+   "75 N",
+   "375 N",
+   "300 N",
+   "225 N"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 77,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "gravitation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve this question, we first need to understand how gravitational force (and hence weight) changes with depth under the surface of the Earth. The gravitational force at a depth $d$ is given by the formula:\n\n$F=F_{0}\\left (1-\\frac{d}{R}\\right )$\n\nwhere $F_{0}$ is the gravitational force (or the weight) at the surface, $R$ is the radius of the Earth, and $d$ is the depth below the Earth's surface.\n\nIn your question, the body weighs 300 N on the surface, so $F_{0}=300$ N. It is taken to a depth of $\\frac{R}{4}$ under the surface. Therefore, $d=\\frac{R}{4}$.\n\nSubstituting these values into our formula, we get:\n\n$F=300\\left (1-\\frac{\\frac{R}{4}}{R}\\right )$\n\n$F=300\\left (1-\\frac{1}{4}\\right )$\n\n$F=300\\left (\\frac{3}{4}\\right )$\n\n$F=225\\text{N}$\n\nTherefore, at a depth of $\\frac{R}{4}$ under the surface of the Earth, the body would weigh 225 N. The correct option is Option D.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29ekd",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In finding out refractive index of glass slab the following observations were made through travelling microscope 50 vernier scale division $=49\\mathrm{MSD};20$ divisions on main scale in each $\\mathrm{cm}$\n\nFor mark on paper\n\n$\\text{MSR}=8.45\\mathrm{cm},\\mathrm{VC}=26$\n\nFor mark on paper seen through slab\n\n$\\mathrm{MSR}=7.12\\mathrm{cm},\\mathrm{VC}=41$\n\nFor powder particle on the top surface of the glass slab\n\n$\\text{MSR}=4.05\\mathrm{cm},\\mathrm{VC}=1$\n\n(MSR $=$ Main Scale Reading, VC = Vernier Coincidence)\n\nRefractive index of the glass slab is :",
+  "options": [
+   "1.52",
+   "1.35",
+   "1.24",
+   "1.42"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 78,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the refractive index of the glass slab, we first need to calculate the actual readings using the Main Scale Reading (MSR) and Vernier Coincidence (VC), and understand how to translate these values into a measurement of the refractive index. We will start by calculating the Least Count (LC) of the vernier calipers.\n\nThe least count (LC) of the traveling microscope is given by the formula:\n\n$\\text{LC}=\\text{MSD}-\\text{VSD}$\n\nWhere MSD is the value of one main scale division and VSD is the value of one vernier scale division in terms of the main scale. We are told 50 vernier scale divisions equal 49 main scale divisions (MSD), so 1 VSD is $\\frac{49}{50}$ of an MSD.\n\nGiven that 20 divisions on the main scale represent 1 cm, each main scale division (MSD) represents:\n\n$1~\\text{MSD}=\\frac{1\\text{cm}}{20}=0.05\\text{cm}$\n\nTherefore, the least count (LC) of the microscope is:\n\n$\\text{LC}=0.05\\text{cm}-\\left (\\frac{49}{50}\\times 0.05\\text{cm}\\right )=0.05\\text{cm}-0.049\\text{cm}=0.001\\text{cm}$\n\nNow, using the least count to find the total reading (TR) from both supplied observations:\n\nFor the mark on paper, the total reading (TR) is:\n\n$\\text{TR}=\\text{MSR}+(\\text{VC}\\times \\text{LC})$\n\n$\\text{TR}_{\\text{paper}}=8.45\\text{cm}+(26\\times 0.001\\text{cm})=8.45\\text{cm}+0.026\\text{cm}=8.476\\text{cm}$\n\nFor the mark on the paper seen through the slab, the total reading is:\n\n$\\text{TR}_{\\text{seen through slab}}=7.12\\text{cm}+(41\\times 0.001\\text{cm})=7.12\\text{cm}+0.041\\text{cm}=7.161\\text{cm}$\n\nFor the powder particle on the top surface of the glass slab:\n\n$\\text{TR}_{\\text{top surface}}=4.05\\text{cm}+(1\\times 0.001\\text{cm})=4.05\\text{cm}+0.001\\text{cm}=4.051\\text{cm}$\n\nThe real depth (RD) observed directly is the difference between the first and third observations (mark on paper and powder particle on top surface):\n\n$\\text{RD}=\\text{TR}_{\\text{paper}}-\\text{TR}_{\\text{top surface}}=8.476\\text{cm}-4.051\\text{cm}=4.425\\text{cm}$\n\nThe apparent depth (AD) when viewed through the slab is the difference between the second and third observations:\n\n$\\text{AD}=\\text{TR}_{\\text{seen through slab}}-\\text{TR}_{\\text{top surface}}=7.161\\text{cm}-4.051\\text{cm}=3.11\\text{cm}$\n\nThe refractive index ($n$) of the glass slab can be found using the formula:\n\n$n=\\frac{\\text{Real Depth (RD)}}{\\text{Apparent Depth (AD)}}=\\frac{4.425\\text{cm}}{3.11\\text{cm}}$\n\nCalculating this gives:\n\n$n=\\frac{4.425}{3.11}\\approx 1.42$\n\nTherefore, the refractive index of the glass slab is approximately 1.42, which corresponds to Option D.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29elu",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-waves",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In the given electromagnetic wave $\\mathrm{E}_{\\mathrm{y}}=600\\sin (ωt-\\mathrm{kx})\\mathrm{Vm}^{-1}$, intensity of the associated light beam is (in $\\mathrm{W}/\\mathrm{m}^{2}$) : (Given $𝜖_{0}=9\\times 10^{-12}\\mathrm{C}^{2}\\mathrm{N}^{-1}\\mathrm{m}^{-2}$ )",
+  "options": [
+   "486",
+   "729",
+   "243",
+   "972"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 79,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the intensity of the given electromagnetic wave, we need to use the formula for the intensity of an electromagnetic wave:\n\n$I=\\frac{1}{2}𝜖_{0}cE_{0}^{2}$\n\nwhere:\n\n$I$ is the intensity in $\\mathrm{W}/\\mathrm{m}^{2}$\n\n$𝜖_{0}$ is the permittivity of free space, given as $9\\times 10^{-12}\\mathrm{C}^{2}\\mathrm{N}^{-1}\\mathrm{m}^{-2}$\n\n$c$ is the speed of light in vacuum, approximately $3\\times 10^{8}\\mathrm{m}/\\mathrm{s}$\n\n$E_{0}$ is the peak electric field, given as $600\\mathrm{Vm}^{-1}$\n\nNow, substitute these values into the formula:\n\n$I=\\frac{1}{2}\\times 9\\times 10^{-12}\\times 3\\times 10^{8}\\times (600)^{2}$\n\nSimplify the expression step-by-step:\n\n$I=\\frac{1}{2}\\times 9\\times 10^{-12}\\times 3\\times 10^{8}\\times 360000$\n\nFirst, calculate $9\\times 3\\times 360000$:\n\n$I=\\frac{1}{2}\\times 27\\times 10^{-4}\\times 360000$\n\nCombine 9 and 3 into 27, giving you:\n\n$I=13.5\\times 10^{-4}\\times 360000$\n\nThen, calculate the multiplication:\n\n$I=13.5\\times 36$\n\nFinally, multiply the remaining values:\n\n$I=486$\n\nThe final value is:\n\nThe intensity, $I$, is 486 $\\mathrm{W}/\\mathrm{m}^{2}$. Therefore, the correct option is:\n\nOption A: 486",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29eno",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "For a given series LCR circuit it is found that maximum current is drawn when value of variable capacitance is $2.5\\mathrm{nF}$. If resistance of $200\\Omega$ and $100\\mathrm{mH}$ inductor is being used in the given circuit. The frequency of ac source is $_________$ $\\times 10^{3}\\mathrm{Hz}$ (given $π^{2}=10$)",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 10.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 80,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "alternating current"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve this problem, we need to use the concept of resonance in an LCR (inductor-capacitor-resistor) circuit. At resonance, the inductive reactance and capacitive reactance cancel each other out. The condition for resonance in an LCR circuit is given by:\n\n$ωL=\\frac{1}{ωC}$\n\nWhere:\n\n$ω$ is the angular frequency\n\n$L$ is the inductance\n\n$C$ is the capacitance\n\nRewriting for angular frequency:\n\n$ω^{2}=\\frac{1}{LC}$\n\nThe angular frequency $ω$ is related to the frequency $f$ by:\n\n$ω=2πf$\n\nSubstituting this into the equation for angular frequency gives:\n\n$(2πf)^{2}=\\frac{1}{LC}$\n\nTherefore, the frequency $f$ can be found by:\n\n$f=\\frac{1}{2π\\sqrt{LC}}$\n\nGiven values:\n\nInductance, $L=100\\mathrm{mH}=100\\times 10^{-3}\\mathrm{H}$\n\nCapacitance, $C=2.5\\mathrm{nF}=2.5\\times 10^{-9}\\mathrm{F}$\n\nPlug these values into the frequency equation:\n\n$f=\\frac{1}{2π\\sqrt{(100\\times 10^{-3})(2.5\\times 10^{-9})}}$\n\nFirst, calculate the product of $L$ and $C$:\n\n$L\\cdot C=100\\times 10^{-3}\\cdot 2.5\\times 10^{-9}=2.5\\times 10^{-10}$\n\nNow, take the square root of the product:\n\n$\\sqrt{2.5\\times 10^{-10}}=\\sqrt{2.5}\\times 10^{-5}$\n\nGiven that $π^{2}=10$, we have:\n\n$π=\\sqrt{10}$\n\nSince $\\sqrt{2.5}=\\frac{\\sqrt{10}}{2}$:\n\n$\\sqrt{2.5}\\times 10^{-5}=\\frac{\\sqrt{10}}{2}\\times 10^{-5}$\n\nNow substitute back into the frequency formula:\n\n$f=\\frac{1}{2π\\left (\\frac{\\sqrt{10}}{2}\\times 10^{-5}\\right )}=\\frac{1}{π\\sqrt{10}\\times 10^{-5}}$\n\nSimplify the equation:\n\n$f=\\frac{10^{5}}{π\\sqrt{10}}$\n\nGiven that $π\\approx 3.14$, we get:\n\n$f\\approx \\frac{10^{5}}{3.14\\times 3.162}$\n\nSimplify further:\n\n$f\\approx \\frac{10^{5}}{9.93}\\approx 10\\times 10^{3}\\mathrm{Hz}$\n\nThus, the frequency of the AC source is approximately:\n\n$10\\times 10^{3}\\mathrm{Hz}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29eoa",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Three balls of masses $2\\mathrm{kg},4\\mathrm{kg}$ and $6\\mathrm{kg}$ respectively are arranged at centre of the edges of an equilateral triangle of side $2\\mathrm{m}$. The moment of inertia of the system about an axis through the centroid and perpendicular to the plane of triangle, will be $________$ $\\mathrm{kg}\\mathrm{m}^{2}$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 81,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nMoment of inertia about c and perpendicular to the\nplane is :\n\n$\\begin{array}{l} I=2\\times \\left (\\dfrac{a}{2\\sqrt{3}}\\right )^{2}+4\\times \\left (\\dfrac{a}{2\\sqrt{3}}\\right )^{2}+6\\left (\\dfrac{a}{2\\sqrt{3}}\\right )^{2} \\\\  \\\\ I=4\\mathrm{kg}\\mathrm{m}^{2} \\end{array}$\n\nDistance between centroid and midpoint of sides\n\n$=\\frac{a}{2\\sqrt{3}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb29eoa-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb2acqd",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "In the given figure an ammeter A consists of a $240\\Omega$ coil connected in parallel to a $10\\Omega$ shunt. The reading of the ammeter is $________$ $\\mathrm{mA}$.\n\n\n[IMG]\n\n\n(The $140.4\\Omega$ resistor in the figure is external to the ammeter; the $240\\Omega$ coil and its $10\\Omega$ shunt are both inside A.)",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 160.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 82,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Resistance of the ammeter (coil and shunt in parallel): $r_{A}=\\frac{240\\times 10}{240+10}=9.6\\Omega$. The ammeter reads the total current through it (coil + shunt), i.e. the current in the series circuit with the external $140.4\\Omega$ resistor:\n\n$\\begin{array}{l} i=\\dfrac{24}{140.4+r_{A}}=\\dfrac{24}{140.4+9.6}=0.16\\mathrm{A} \\\\ i=160\\mathrm{mA} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb2acqd-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb29fxq",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A coil having 100 turns, area of $5\\times 10^{-3}\\mathrm{m}^{2}$, carrying current of $1\\mathrm{mA}$ is placed in uniform magnetic field of $0.20\\mathrm{T}$ such a way that plane of coil is perpendicular to the magnetic field. The work done in turning the coil through $90^{\\circ }$ is $_________$ $μ\\mathrm{J}$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 100.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 83,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the work done in turning the coil through $90^{\\circ }$, we first need to understand the concept of torque on a current-carrying loop in a magnetic field and how work done relates to the change in potential energy of the system. The potential energy (U) of a magnetic dipole in a magnetic field is given by:\n\n$U=-⃗{M}\\cdot ⃗{B}$\n\nwhere:\n\n$⃗{M}$ is the magnetic moment of the coil, and\n\n$⃗{B}$ is the magnetic field.\n\nFor a coil with $N$ turns, carrying current $I$, and with an area $A$, the magnetic moment $⃗{M}$ is defined as:\n\n$M=NI\\cdot A$\n\nGiven that the coil has $100$ turns, carries a current of $1~\\mathrm{mA}=1\\times 10^{-3}\\mathrm{A}$, and the area of the coil is $5\\times 10^{-3}\\mathrm{m}^{2}$, we can calculate its magnetic moment as follows:\n\n$M=100\\cdot 1\\times 10^{-3}\\cdot 5\\times 10^{-3}=0.5\\times 10^{-3}\\mathrm{Am}^{2}$\n\nSince the coil is initially placed such that its plane is perpendicular to the magnetic field (i.e., the angle $θ=0^{\\circ }$), and then it is turned through $90^{\\circ }$, the initial and final angles ($θ_{i}$ and $θ_{f}$) of the coil with respect to the magnetic field are $0^{\\circ }$ and $90^{\\circ }$ respectively. This means the initial potential energy ($U_{i}$) and final potential energy ($U_{f}$) of the system are:\n\n$U_{i}=-MB\\cos (θ_{i})$\n\n$U_{f}=-MB\\cos (θ_{f})$\n\nGiven that $B=0.20\\mathrm{T}$, $θ_{i}=0^{\\circ }(\\cos (0)=1)$, and $θ_{f}=90^{\\circ }(\\cos (90^{\\circ })=0)$, the potential energies are:\n\n$U_{i}=-0.5\\times 10^{-3}\\cdot 0.20\\cdot 1=-1\\times 10^{-4}\\mathrm{J}$\n\n$U_{f}=-0.5\\times 10^{-3}\\cdot 0.20\\cdot 0=0\\mathrm{J}$\n\nThe work done ($W$) is equal to the change in potential energy:\n\n$W=U_{f}-U_{i}$\n\n$W=0-(-1\\times 10^{-4})=1\\times 10^{-4}\\mathrm{J}$\n\nTherefore, the work done in turning the coil through $90^{\\circ }$ is $100μ\\mathrm{J}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb2acle",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A capacitor of $10μ\\mathrm{F}$ capacitance whose plates are separated by $10\\mathrm{mm}$ through air and each plate has area $4\\mathrm{cm}^{2}$ is now filled equally with two dielectric media of $K_{1}=2,K_{2}=3$ respectively as shown in figure. If new force between the plates is $8\\mathrm{N}$. The supply voltage is $________ V$.\n\n\n[IMG]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 80.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 84,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "capacitor"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The two dielectrics fill equal halves of the plate area, so they act as two capacitors in parallel, each with half the area of the original $10μ\\mathrm{F}$ capacitor:\n\n$\\begin{array}{l} C_{1}=\\dfrac{K_{1}C_{0}}{2}=\\dfrac{2\\times 10}{2}=10μ\\mathrm{F},C_{2}=\\dfrac{K_{2}C_{0}}{2}=\\dfrac{3\\times 10}{2}=15μ\\mathrm{F} \\\\ C=C_{1}+C_{2}=25μ\\mathrm{F} \\end{array}$\n\nFor a parallel plate capacitor with charge $Q$, plate separation $x$ and $C=\\frac{K𝜖_{0}A}{x}$, the energy is $U=\\frac{Q^{2}}{2C}=\\frac{Q^{2}x}{2K𝜖_{0}A}$, so the force between the plates is $F=\\frac{dU}{dx}=\\frac{Q^{2}}{2K𝜖_{0}A}=\\frac{Q^{2}}{2Cd}$:\n\n$\\begin{array}{l} F=\\dfrac{Q^{2}}{2Cd}=\\dfrac{CV^{2}}{2d} \\\\ 8=\\dfrac{25\\times 10^{-6}\\times V^{2}}{2\\times 10\\times 10^{-3}} \\\\ V^{2}=6400 \\\\ V=80\\mathrm{V} \\end{array}$\n\n(The plate area of $4\\mathrm{cm}^{2}$ is not consistent with $10μ\\mathrm{F}$, since $\\frac{𝜖_{0}A}{d}\\approx 0.35\\mathrm{pF}$; the answer uses the given capacitance, as in NTA's final key.)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb2acle-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-lvb29gxb",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A particle moves in a straight line so that its displacement $x$ at any time $t$ is given by $x^{2}=1+t^{2}$. Its acceleration at any time $\\mathrm{t}$ is $x^{-\\mathrm{n}}$ where $\\mathrm{n}=$ $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 85,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "motion in a straight line"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given the displacement of the particle $x^{2}=1+t^{2}$, we want to find the acceleration, which is the second derivative of displacement with respect to time, $a=\\frac{d^{2}x}{dt^{2}}$, and we are given that the acceleration at any time $t$ is $x^{-n}$, for us to find the value of $n$.\n\nFirst, let's find the first derivative of displacement with respect to time, which gives us the velocity. Differentiating $x^{2}=1+t^{2}$ with respect to t, we get:\n\n$2x\\frac{dx}{dt}=2t$\n\nThis simplifies to:\n\n$\\frac{dx}{dt}=\\frac{t}{x}$\n\nNow, let's differentiate this velocity to find the acceleration:\n\n$a=\\frac{d^{2}x}{dt^{2}}=\\frac{d}{dt}\\left (\\frac{t}{x}\\right )$\n\nTo differentiate $\\frac{t}{x}$ with respect to $t$, we'll use the quotient rule:\n\n$\\frac{d}{dt}\\left (\\frac{t}{x}\\right )=\\frac{x\\cdot 1-t\\cdot \\frac{dx}{dt}}{x^{2}}$\n\nSubstitute $\\frac{dx}{dt}=\\frac{t}{x}$ into the equation:\n\n$a=\\frac{x(1)-t(\\frac{t}{x})}{x^{2}}=\\frac{x-\\frac{t2}{x}}{x^{2}}=\\frac{x^{2}-t^{2}}{x^{3}}$\n\nRecalling that the displacement equation given was $x^{2}=1+t^{2}$, substitute this into our expression for acceleration:\n\n$a=\\frac{1+t^{2}-t^{2}}{x^{3}}=\\frac{1}{x^{3}}$\n\nThus, the acceleration of the particle at any time $t$ is $x^{-3}$, which means our value for $n$ is $3$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29gxu",
+  "subjectKey": "physics",
+  "chapterKey": "physics:wave-optics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Two coherent monochromatic light beams of intensities I and $4\\mathrm{I}$ are superimposed. The difference between maximum and minimum possible intensities in the resulting beam is $x\\mathrm{I}$. The value of $x$ is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 86,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "wave optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "When two coherent light beams interfere, the resulting intensity at a point depends on the principle of superposition and is related to their amplitudes. Let the amplitude of the first light beam be A, then its intensity, which is proportional to the square of its amplitude, is given as $I\\propto A^{2}$. Since intensity is directly proportional to the square of amplitude, for the second beam with intensity $4I$, its amplitude would be $2A$, as $4I\\propto (2A)^{2}$.\n\nThe maximum intensity ($I_{\\max }$) occurs when the two beams are in phase and their amplitudes add up constructively, which can be represented as:\n\n$I_{\\max }\\propto (A+2A)^{2}=(3A)^{2}=9A^{2}$\n\nGiven that $I\\propto A^{2}$, substituting this relation to express $I_{\\max }$ in terms of $I$, we get:\n\n$I_{\\max }=9I$\n\nThe minimum intensity ($I_{\\min }$) occurs when the two beams are completely out of phase, leading their amplitudes to subtract destructively, thus\n\n$I_{\\min }\\propto (2A-A)^{2}=A^{2}$\n\nAgain, using the fact that $I\\propto A^{2}$, we find that:\n\n$I_{\\min }=I$\n\nNow, the difference between the maximum and minimum intensities in the resulting beam is:\n\n$xI=I_{\\max }-I_{\\min }=9I-I$\n\n$xI=8I$\n\nTherefore, the value of $x$ is 8.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29gyo",
+  "subjectKey": "physics",
+  "chapterKey": "physics:waves",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Two open organ pipes of lengths $60\\mathrm{cm}$ and $90\\mathrm{cm}$ resonate at $6^{\\text{th}}$ and $5^{\\text{th}}$ harmonics respectively. The difference of frequencies for the given modes is $_________$ $\\mathrm{Hz}$. (Velocity of sound in air $=333\\mathrm{m}/\\mathrm{s}$)",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 740.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 87,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve this problem, let's first understand how the harmonics of open organ pipes work. For an open organ pipe, the harmonics are given by the formula:\n\n$f_{n}=n\\frac{v}{2L}$\n\nwhere:\n\n$f_{n}$ is the frequency of the nth harmonic,\n\n$n$ is the harmonic number (an integer),\n\n$v$ is the speed of sound in air,\n\n$L$ is the length of the organ pipe.\n\nGiven that the speeds of sound in air $v=333\\text{m/s}$, and the lengths of the two open organ pipes are $60\\quad \\text{cm}=0.60\\text{m}$ and $90\\quad \\text{cm}=0.90\\text{m}$, we can calculate the frequencies of the 6th harmonic for the 60 cm pipe and the 5th harmonic for the 90 cm pipe.\n\nFor the 60 cm pipe at the 6th harmonic ($n=6$):\n\n$f_{6,60}=6\\frac{333}{2\\times 0.60}=6\\times \\frac{333}{1.2}=6\\times 277.5=1665\\text{Hz}$\n\nFor the 90 cm pipe at the 5th harmonic ($n=5$):\n\n$f_{5,90}=5\\frac{333}{2\\times 0.90}=5\\times \\frac{333}{1.8}=5\\times 185=925\\text{Hz}$\n\nThe difference in frequencies between these two modes is:\n\n$\\Delta f=f_{6,60}-f_{5,90}=1665\\text{Hz}-925\\text{Hz}=740\\text{Hz}$\n\nTherefore, the difference of frequencies for the given modes is $740\\text{Hz}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb29gzg",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "In Franck-Hertz experiment, the first dip in the current-voltage graph for hydrogen is observed at $10.2\\mathrm{V}$. The wavelength of light emitted by hydrogen atom when excited to the first excitation level is $________ nm. ($Given hc $=1245\\mathrm{eV}\\mathrm{nm},\\mathrm{e}=1.6\\times 10^{-19}\\mathrm{C}$).",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 122.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 88,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The Franck-Hertz experiment provides evidence for quantized energy levels within atoms. When atoms are excited by electrons with a specific kinetic energy, they can jump to higher energy levels. Upon returning to lower levels, they emit photons whose energies correspond to the difference between these levels. The first dip in the current-voltage graph for hydrogen, observed at $10.2\\mathrm{V}$, corresponds to the energy required to excite a hydrogen atom to its first excitation level. The wavelength of the light emitted when the atom returns to its ground state can be calculated using the energy of the photon emitted.\n\nTo find the wavelength ($λ$) of light emitted, we use the relationship between energy ($E$), Planck's constant ($h$), the speed of light ($c$), and wavelength ($λ$), given in the equation form as $E=\\frac{hc}{λ}$.\n\nHowever, we are given $hc$ in electron volts per nanometer ($1245\\mathrm{eV}\\cdot \\mathrm{nm}$), and the energy is also given in terms of voltage ($10.2\\mathrm{V}$). First, we convert the energy into electron volts (eV) using the formula: $E=eV$, where $e$ is the charge of an electron ($1.6\\times 10^{-19}\\mathrm{C}$).\n\nThe energy in electron volts can be directly calculated as:\n\n$E=10.2\\mathrm{V}\\cdot 1.6\\times 10^{-19}\\mathrm{C}/\\mathrm{electron}=10.2\\mathrm{eV}$,\n\nsince $1\\mathrm{V}\\cdot 1\\mathrm{C}=1\\mathrm{eV}$ by definition.\n\nNext, using the energy-wavelength relationship and the given value for $hc$, the wavelength can be calculated as:\n\n$λ=\\frac{hc}{E}$\n\nSubstituting the given values yields:\n\n$λ=\\frac{1245\\mathrm{eV}\\cdot \\mathrm{nm}}{10.2\\mathrm{eV}}$\n\nThis simplifies to:\n\n$λ=\\frac{1245}{10.2}\\mathrm{nm}$\n\nCalculating this gives:\n\n$λ\\approx 122.06\\mathrm{nm}$.\n\nTherefore, the wavelength of light emitted by the hydrogen atom when excited to the first excitation level is approximately $122.06\\mathrm{nm}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-lvb2acm6",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A wire of cross sectional area A, modulus of elasticity $2\\times 10^{11}\\mathrm{Nm}^{-2}$ and length $2\\mathrm{m}$ is stretched between two vertical rigid supports. When a mass of $2\\mathrm{kg}$ is suspended at the middle it sags lower from its original position making angle $θ=\\frac{1}{100}$ radian on the points of support. The value of A is $________$ $\\times 10^{-4}\\mathrm{m}^{2}$ (consider $x<<\\mathrm{L}$ ).\n\n(given : $\\mathrm{g}=10\\mathrm{m}/\\mathrm{s}^{2}$)\n\n\n[IMG]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 89,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 6th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "elasticity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The wire has total length $2L=2\\text{m}$, so each half has natural length $L=1\\text{m}$. The midpoint sags by $x$, and for a small angle $θ\\approx \\dfrac{x}{L}$.\n\nEach half stretches to $\\sqrt{L^{2}+x^{2}}\\approx L+\\dfrac{x^{2}}{2L}$, so the longitudinal strain is\n\n$\\dfrac{\\Delta L}{L}=\\dfrac{x^{2}}{2L^{2}}=\\dfrac{θ^{2}}{2}=\\dfrac{(10^{-2})^{2}}{2}=5\\times 10^{-5}$\n\nAt the midpoint the vertical components of the two equal tensions balance the weight:\n\n$2T\\sin θ=mg\\Rightarrow T=\\dfrac{mg}{2θ}=\\dfrac{2\\times 10}{2\\times 10^{-2}}=1000\\text{N}$\n\nBy Hooke's law, $T=YA\\dfrac{\\Delta L}{L}$:\n\n$A=\\dfrac{T}{Y(\\Delta L/L)}=\\dfrac{1000}{2\\times 10^{11}\\times 5\\times 10^{-5}}=1\\times 10^{-4}\\text{m}^{2}$\n\nHence, the answer is 1.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 6th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-6th-april-evening-shift/lvb2acm6-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 6th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

@@ -1,0 +1,1097 @@
+[
+ {
+  "publicId": "PYQ-2026-mnsik5l1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider the relation $R$ on the set $\\{-2,-1,0,1,2\\}$ defined by $(a,b)\\in R$ if and only if $1+ab>0$. Then, among the statements :\n\nI. The number of elements in R is 17\n\nII. R is an equivalence relation",
+  "options": [
+   "Only I is true",
+   "Only II is true",
+   "Both I and II are true",
+   "Neither I nor II is true"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "On $S=\\{-2,-1,0,1,2\\}$, $1+ab>0⟺ab>-1⟺ab\\geq 0$, since $ab$ is an integer.\n\nPairs with $ab\\geq 0$: those with $a=0$ or $b=0$ number $5+5-1=9$; pairs of nonzero elements of the same sign number $2\\times 2+2\\times 2=8$. So $R$ has $9+8=17$ elements and statement I is true.\n\n$R$ is reflexive ($a^{2}\\geq 0$) and symmetric ($ab=ba$). However, $(2,0)\\in R$ and $(0,-2)\\in R$, while $2\\times (-2)=-4<0$ gives $(2,-2)\\notin R$. So $R$ is not transitive, not an equivalence relation, and statement II is false.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5m2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of values of $z\\in \\mathrm{ℂ}$, satisfying the equations $|z-(4+8i)|=\\sqrt{10}$ and $|z-(3+5i)|+|z-(5+11i)|=4\\sqrt{5}$, is $:$",
+  "options": [
+   "0",
+   "2",
+   "1",
+   "4"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The second equation is an ellipse with foci $S_{1}(3,5)$ and $S_{2}(5,11)$ and major axis $2a=4\\sqrt{5}$, so $a=2\\sqrt{5}$.\n\n$S_{1}S_{2}=\\sqrt{2^{2}+6^{2}}=2\\sqrt{10}=2ae$, so $ae=\\sqrt{10}$ and\n\n$b^{2}=a^{2}-a^{2}e^{2}=20-10=10\\Rightarrow b=\\sqrt{10}$\n\nThe centre of the ellipse is the midpoint of $S_{1}S_{2}$, that is $(4,8)$.\n\nThe first equation is the circle with centre $(4,8)$ and radius $\\sqrt{10}$, equal to the semi-minor axis $b$ of the ellipse.\n\nEvery point of the ellipse is at a distance of at least $b$ from its centre, with equality only at the two ends of the minor axis, so the circle meets the ellipse at exactly these two points.\n\n\n[IMG]\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-8th-april-evening-shift/mnsik5m2-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 8th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5my",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of linear equations :\n\n$\\begin{array}{l} x+y+z=6 \\\\ x+2y+5z=10 \\\\ 2x+3y+λz=μ \\end{array}$\n\nhas infinitely many solutions, then the value of $λ+μ$ equals:",
+  "options": [
+   "12",
+   "16",
+   "22",
+   "28"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the condition for infinitely many solutions, we first calculate the determinant $D$ of the coefficients of $x,y,z$:\n\n$D=\\left |\\begin{array}{lll} 1 & 1 & 1 \\\\ 1 & 2 & 5 \\\\ 2 & 3 & λ \\end{array}\\right |=λ-6$\n\nFor infinitely many solutions, $D=0$.  \n\nSo, $λ-6=0\\Rightarrow λ=6.$\n\nNow, let us find $D_{1}$, the determinant obtained by replacing the first column with the constants:\n\n$D_{1}=\\left |\\begin{array}{lll} 6 & 1 & 1 \\\\ 10 & 2 & 5 \\\\ μ & 3 & λ \\end{array}\\right |=2λ+3μ-60$\n\nNext, the determinant $D_{2}$ is obtained by replacing the second column with the constants:\n\n$D_{2}=\\left |\\begin{array}{lll} 1 & 6 & 1 \\\\ 1 & 10 & 5 \\\\ 2 & μ & λ \\end{array}\\right |=4(λ-μ+10)$\n\nFinally, $D_{3}$ is obtained by replacing the third column with the constants:\n\n$D_{3}=\\left |\\begin{array}{lll} 1 & 1 & 6 \\\\ 1 & 2 & 10 \\\\ 2 & 3 & μ \\end{array}\\right |=μ-16$\n\nFor the system to have infinitely many solutions, all the determinants must be zero:\n\n$D=D_{1}=D_{2}=D_{3}=0$\n\nSubstitute $λ=6$:\n\nFrom $D_{3}=0$,  \n\n$μ-16=0\\Rightarrow μ=16.$\n\nThus,\n\n$λ+μ=6+16=22$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5nv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=\\left [\\begin{array}{lll} α & 1 & 2 \\\\ 2 & 3 & 0 \\\\ 0 & 4 & 5 \\end{array}\\right ]$ and $B=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & -5α & 0 \\\\ 0 & 4α & -2α \\end{array}\\right ]+\\mathrm{adj}(A)$. If $\\det (B)=66$, then $\\det (\\mathrm{adj}(A))$ equals :",
+  "options": [
+   "289",
+   "361",
+   "441",
+   "529"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $A=\\left [\\begin{array}{lll} α & 1 & 2 \\\\ 2 & 3 & 0 \\\\ 0 & 4 & 5 \\end{array}\\right ]$,\n\n$|A|=α(15-0)-1(10-0)+2(8-0)=15α+6.$\n\nFrom the cofactors of $A$,\n\n$\\mathrm{adj}A=\\left [\\begin{array}{lll} 15 & 3 & -6 \\\\ -10 & 5α & 4 \\\\ 8 & -4α & 3α-2 \\end{array}\\right ],$\n\nso\n\n$B=\\left [\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & -5α & 0 \\\\ 0 & 4α & -2α \\end{array}\\right ]+\\mathrm{adj}A=\\left [\\begin{array}{lll} 16 & 3 & -6 \\\\ -10 & 0 & 4 \\\\ 8 & 0 & α-2 \\end{array}\\right ].$\n\nExpanding along the second column, whose only non-zero entry is $3$:\n\n$|B|=-3\\left |\\begin{array}{ll} -10 & 4 \\\\ 8 & α-2 \\end{array}\\right |=-3(-10α+20-32)=30α+36.$\n\n$30α+36=66\\Rightarrow α=1$, so $|A|=15+6=21$.\n\nFor a $3\\times 3$ matrix, $|\\mathrm{adj}A|=|A|^{2}=21^{2}=441$.\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5p5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α=3+4+8+9+13+14+\\ldots$ upto 40 terms. If $(\\tan β)^{\\frac{α}{1020}}$ is a root of the equation $x^{2}+x-2=0,β\\in \\left (0,\\frac{π}{2}\\right )$, then $\\sin ^{2}β+3\\cos ^{2}β$ is equal to :",
+  "options": [
+   "$2$",
+   "$\\frac{7}{4}$",
+   "$\\frac{5}{2}$",
+   "$\\frac{3}{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "1. A series sum is defined : $𝜶=3+4+8+9+13+14+\\ldots ..𝒕_{40}$\n\n2. $(\\tan 𝜷)^{\\frac{α}{1020}}$ is a root of the quadratic equation $𝒙^{2}+𝒙-2=0$ where $𝜷\\in \\left (0,\\frac{𝝅}{2}\\right )$\n\n3. To evaluate the expression $\\sin ^{2}β+3\\cos ^{2}β$\n\n$\\therefore$ $𝜶=3+4+8+9+13+14+\\ldots ..𝒕_{40}$\n\n$=7+17+27+\\ldots ..+𝑻_{20}$\n\n$=\\frac{20}{2}\\{(2)\\cdot (7)+(20-1)\\cdot (10)\\}$\n\n$=(10)\\cdot (14+190)=2,040\\ldots \\ldots (𝒊)$\n\nEquation (i) gives the value of $α=2,040$ :\n\n$(\\tan β)^{\\frac{α}{1020}}=(\\tan β)^{\\frac{2040}{1020}}=\\tan ^{2}β\\ldots \\ldots (ii)$\n\nNow let us solve the quadratic equation $x^{2}+x-2=0$ :\n\n$x^{2}+x-2=0\\Rightarrow x^{2}+2x-x-2=0\\Rightarrow (x+2)(x-1)=0$\n\n$\\Rightarrow \\begin{array}{ll} p & q \\\\ -2 & 1 \\end{array}$\n\nwhere $𝒑$ and $𝒒$ are the roots\n\nWe have derived in equation $(ii)(\\tan β)^{\\frac{α}{1020}}=\\tan ^{2}β$ which is also a root of the equation $x^{2}+x-2=0$ :\n\nFrom the pair of roots we get  $\\tan ^{2}β$ =1$\\Rightarrow \\tan β=\\pm 1$ As $\\tan ^{2}β⩾0$ always\n\n$𝜷\\in \\left (0,\\frac{π}{2}\\right )\\Rightarrow \\tan 𝜷=1\\Rightarrow 𝜷=\\frac{π}{4}$\n\n$\\Rightarrow \\sin ^{2}β+3\\cos ^{2}β=\\sin ^{2}\\frac{π}{4}+3\\cos ^{2}\\frac{π}{4}=\\left (\\frac{1}{2}\\right )+\\left (\\frac{3}{2}\\right )=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5q1",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A candidate has to go to the examination centre to appear in an examination. The candidate uses only one means of transportation for the entire distance out of bus, scooter and car. The probabilities of the candidate going by bus, scooter and car, respectively, are $\\frac{2}{5},\\frac{1}{5}$ and $\\frac{2}{5}$. The probabilities that the candidate reaches late at the examination centre are $\\frac{1}{5},\\frac{1}{3}$ and $\\frac{1}{4}$ if the candidate uses bus, scooter and car, respectively. Given that the candidate reached late at the examination centre, the probability that the candidate travelled by bus is :",
+  "options": [
+   "$\\frac{11}{37}$",
+   "$\\frac{12}{37}$",
+   "$\\frac{13}{37}$",
+   "$\\frac{14}{37}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $B,S,C$ be the events of travelling by bus, scooter and car, and $L$ the event of reaching late. Given $P(B)=\\dfrac{2}{5},P(S)=\\dfrac{1}{5},P(C)=\\dfrac{2}{5}$ and $P(L|B)=\\dfrac{1}{5},P(L|S)=\\dfrac{1}{3},P(L|C)=\\dfrac{1}{4}$.\n\nBy the total probability theorem,\n\n$P(L)=\\frac{2}{5}\\cdot \\frac{1}{5}+\\frac{1}{5}\\cdot \\frac{1}{3}+\\frac{2}{5}\\cdot \\frac{1}{4}=\\frac{2}{25}+\\frac{1}{15}+\\frac{1}{10}=\\frac{12+10+15}{150}=\\frac{37}{150}.$\n\nBy Bayes' theorem,\n\n$P(B|L)=\\frac{P(B)P(L|B)}{P(L)}=\\frac{\\frac{12}{150}}{\\frac{37}{150}}=\\frac{12}{37}.$\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5qw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A set of four observations has mean 1 and variance 13. Another set of six observations has mean 2 and variance 1 . Then, the variance of all these 10 observations is equal to :",
+  "options": [
+   "5.96",
+   "6.14",
+   "6.04",
+   "6.24"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{llllllllllllll} \\text{Observation} & 𝒙_{1} & 𝒙_{2} & 𝒙_{3} & 𝒙_{4} & 𝒏 & \\text{Observation} & 𝒚_{1} & 𝒚_{2} & 𝒚_{3} & 𝒚_{4} & 𝒚_{5} & 𝒚_{6} & 𝒏 \\\\ \\text{Set} & 1 & 1 & 1 & 1 & 4 & \\text{Set} & 2 & 2 & 2 & 2 & 2 & 2 & 6 \\end{array}$\n\n$\\text{Set}1⇉μ_{x}=\\frac{\\sum\\limits _{i=1}^{4}x_{i}}{4}=1\\ldots .(i)$\n\n$σ_{x}^{2}=\\left [⎛⎝⎜\\frac{\\sum\\limits _{i=1}^{4}x_{i}^{2}}{4}⎞⎠⎟-μ_{x}^{2}\\right ]=13\\ldots \\ldots (ii)$\n\nSet $2⇉μ_{y}=\\frac{\\sum\\limits _{j=1}^{6}y_{j}}{6}=2\\ldots \\ldots (iii)$\n\n$σ_{y}^{2}=\\left [⎛⎝⎜\\frac{\\sum\\limits _{j=1}^{6}y_{j}^{2}}{6}⎞⎠⎟-μ_{y}^{2}\\right ]=1\\ldots \\ldots (iv)$\n\nWe mathematically extract from equations $(i)$ and $(ii)$ :\n\n$\\sum\\limits _{i=1}^{4}x_{i}=4\\ldots .(𝒗)\\sum\\limits _{i=1}^{4}x_{i}^{2}=4\\left (μ_{x}^{2}+13\\right )=4(1+13)=56\\ldots \\ldots (𝒗𝒊)$\n\nWe mathematically extract from equations (iii) and (iv) :\n\n$\\sum\\limits _{j=1}^{6}𝒚_{j}=12\\ldots .(𝒗𝒊𝒊)\\sum\\limits _{j=1}^{6}y_{j}^{2}=6\\left (𝝁_{y}^{2}+1\\right )=6(4+1)=30\\ldots \\ldots (𝒗𝒊𝒊𝒊)$\n\nWe have mathematically compiled a summary of all the information in equations (v) through (viii) to compute the mean and the variance for the 10 datapoints in set $1\\cup$ set 2 :\n\n$μ_{t}=\\frac{\\sum\\limits _{i=1}^{4}x_{i}+\\sum\\limits _{j=1}^{6}y_{j}}{4+6}=\\frac{4+12}{10}=1.6\\ldots ..(𝒊𝒙)$\n\n$σ_{t}^{2}=\\left [\\left (\\frac{\\sum _{i=1}^{4}𝒙_{i}^{2}+\\sum _{j=1}^{6}𝒚_{j}^{2}}{4+6}\\right )-𝝁_{t}^{2}\\right ]$\n\n$=\\frac{56+30}{4+6}-\\begin{array}{l} (1.6)^{2} \\end{array}$\n\n$=8.6-2.56=6.04$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5rv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $26\\left (\\frac{2^{3}}{3}\\left ({}^{12}\\mathrm{C}_{2}\\right )+\\frac{2^{5}}{5}\\left ({}^{12}\\mathrm{C}_{4}\\right )+\\frac{2^{7}}{7}\\left ({}^{12}\\mathrm{C}_{6}\\right )+\\cdots +\\frac{2^{13}}{13}\\left ({}^{12}\\mathrm{C}_{12}\\right )\\right )=3^{13}-α$, then $α$ is equal to :",
+  "options": [
+   "45",
+   "48",
+   "51",
+   "54"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$𝑺_{𝒓}=26\\left [\\left (\\frac{2^{3}}{3}\\right )\\cdot \\left ({}^{12}𝑪_{2}\\right )+\\left (\\frac{2^{5}}{5}\\right )\\cdot \\left ({}^{12}𝑪_{4}\\right )+\\left (\\frac{2^{7}}{7}\\right )\\cdot \\left ({}^{12}𝑪_{6}\\right )+\\left (\\frac{2^{9}}{9}\\right )\\cdot \\left ({}^{12}𝑪_{8}\\right )+\\ldots .+\\left (\\frac{2^{13}}{13}\\right )\\cdot \\left ({}^{12}𝑪_{12}\\right )\\right ]$\n\n$=26\\left [\\sum\\limits _{r=1}^{6}\\left (\\frac{2^{2r+1}}{2r+1}\\right )\\cdot \\left ({}^{12}𝑪_{2r}\\right )\\right ]$.\n\n$𝑺_{𝒓}=\\frac{26}{13}\\left [\\sum\\limits _{r=1}^{6}\\left (2^{2r+1}\\right )\\cdot \\left ({}^{13}𝑪_{2r+1}\\right )\\right ]$\n\n$=2\\left [\\sum\\limits _{r=0}^{6}\\left (2^{2r+1}\\right )\\cdot \\left ({}^{13}𝑪_{2r+1}\\right )-\\left ({}^{13}𝑪_{1}\\right )\\cdot 2^{1}\\right ]$\n\n$=2\\left [\\sum\\limits _{r=0}^{6}\\left (2^{2r+1}\\right )\\cdot \\left ({}^{13}C_{2r+1}\\right )\\right ]-52$\n\n$\\begin{array}{ll} 𝑺_{𝒓} & =2\\left [\\left ({}^{13}𝑪_{1}\\right )\\cdot 2^{1}+\\left ({}^{13}𝑪_{3}\\right )\\cdot 2^{3}+\\left ({}^{13}𝑪_{5}\\right )\\cdot 2^{5}+\\left ({}^{13}𝑪_{7}\\right )\\cdot 2^{7}+\\ldots ..+\\left ({}^{13}𝑪_{13}\\right )\\cdot 2^{13}\\right ]-52 \\\\ =(1+2)^{13}-(1-2)^{13}-52 \\\\ =3^{13}+1-52 \\\\ =3^{13}-51.....(i) \\end{array}$\n\n$𝑺_{r}=26\\left [\\left (\\frac{2^{3}}{3}\\right )\\cdot \\left ({}^{12}𝑪_{2}\\right )+\\left (\\frac{2^{5}}{5}\\right )\\cdot \\left ({}^{12}𝑪_{4}\\right )+\\left (\\frac{2^{7}}{7}\\right )\\cdot \\left ({}^{12}𝑪_{6}\\right )+\\left (\\frac{2^{9}}{9}\\right )\\cdot \\left ({}^{12}𝑪_{8}\\right )+\\ldots .+\\left (\\frac{2^{13}}{13}\\right )\\cdot \\left ({}^{12}𝑪_{12}\\right )\\right ]=3^{13}-𝜶\\ldots .(ii)$\n\nFrom the equivalence relationship between equation $(𝒊)$ and $(𝒊𝒊)$ we conclude $α=51$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5t2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A person has three different bags and four different books. The number of ways, in which he can put these books in the bags so that no bag is empty, is :",
+  "options": [
+   "18",
+   "36",
+   "39",
+   "72"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nNumber of ways ( $𝒏$ ) $=\\left ({}^{4}C_{2}\\right )\\cdot \\left ({}^{3}C_{1}\\right )\\cdot (2)\\cdot (1)=36$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-8th-april-evening-shift/mnsik5t2-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 8th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5u6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If a straight line drawn through the point of intersection of the lines $4x+3y-1=0$ and $3x+4y-1=0$, meets the co-ordinate axes at the points P and Q , then the locus of the mid point of PQ is :",
+  "options": [
+   "$x+y-7=0$",
+   "$x+y-14xy=0$",
+   "$2x+y+14xy=0$",
+   "$x+2y-14xy=0$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n1. A straight line $𝑳$ passes through the point of intersection of 2 straight lines: $\\left \\{\\begin{array}{l} 𝑳_{1}:4𝒙+3𝒚-1=0 \\\\ 𝑳_{2}:3𝒙+4𝒚-1=0 \\end{array} \\right.$\n\n2. The straight line $𝑳$ cuts the axes at $𝑷$ and $𝑸$\n\n3. To identify the locus of the mid-point of the segment $PQ$\n\nThe point of intersection of $𝑳_{1}$ and $𝑳_{2}$ is $𝑰(𝜶,𝜷)$\n\nThe mid-point of the segment $𝑷𝑸$ is $𝑴(𝒉,𝒌)$\n\nAnalytical Study :\n\nWe first solve the pair of straight lines $𝑳_{1}$ and $𝑳_{2}$ to locate the point of intersection :\n\n$\\begin{array}{l} 4x+3y-1=0\\Rightarrow 12x+9y=3 \\\\ 3x+4y-1=0\\Rightarrow 12x+16y=4 \\end{array}\\Rightarrow β=\\frac{1}{7}\\Rightarrow 𝜶=\\frac{1}{7}\\Rightarrow 𝑰\\left (\\frac{1}{7},\\frac{1}{7}\\right )\\ldots ..(i)$\n\nThe straight line $𝑳$ passes through the point $𝑰$ identified by equation (i)\n\nThe equation of the straight line $𝑳$ in point slope form is written below :\n\n$L:\\left (y-\\frac{1}{7}\\right )=m\\left (x-\\frac{1}{7}\\right )\\equiv L:7mx-7y=m-1\\equiv L:\\frac{7mx}{m-1}+\\frac{7y}{1-m}=1\\ldots .(ii)$\n\nThe equation (ii) gives the straight line $𝑳$ in intercept form where the $𝑿$ and $𝒀$ intercepts are observed below :\n\n$\\begin{array}{lll} \\begin{array}{ll} 𝑷 & 𝑸 \\\\ \\left (\\frac{𝒎-1}{7𝒎},0\\right ) & \\left (0,\\frac{1-𝒎}{7}\\right ) \\end{array}\\text{..... Chart}1 \\end{array}$\nFrom Chart 1, the mid-point of the section $𝑷𝑸$ is derived applying mid-point formulae :\n\n$M(h,k)=M\\left (\\frac{m-1}{14m},\\frac{1-m}{14}\\right )\\equiv \\begin{array}{lll} \\text{Point} & h & k \\\\ M(h,k) & \\frac{m-1}{14m} & \\frac{1-m}{14} \\end{array}\\ldots .\\text{Chart}2$\nChart 2 has the $𝑿$ and $𝒀$ coordinate each as a function of $𝒎$ where we can eliminate $𝒎$ and mathematically trace the locus :\n\n$𝒌=\\frac{1-𝒎}{14}\\Rightarrow 𝒎=1-14𝒌\\Rightarrow 𝒉=\\frac{1-14𝒌-1}{14(1-14𝒌)}=\\frac{14𝒌}{14(14𝒌-1)}=\\frac{𝒌}{(14𝒌-1)}\\Rightarrow 14𝒉𝒌-𝒉=𝒌\\Rightarrow 𝒉+𝒌-14𝒉𝒌=0$\n\nThe locus of the mid-point of the section $𝑷𝑸$ after replacement of the dummy variables is found to be the rectangular hyperbola $𝒙+𝒚-14𝒙𝒚=0$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-8th-april-evening-shift/mnsik5u6-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 8th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5vb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let O be the vertex of the parabola $y^{2}=4x$ and its chords OP and OQ are perpendicular to each other. If the locus of the mid-point of the line segment PQ is a conic C , then the length of its latus rectum is :",
+  "options": [
+   "1",
+   "2",
+   "4",
+   "8"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} t_{1}t_{2}=-4 \\\\ 2h=t_{1}^{2}+t_{2}^{2}2k=2(t_{1}+t_{2}) \\\\ 2h=k^{2}-2t_{1}t_{2} \\\\ 2h=k^{2}+8 \\\\ k^{2}=2h-8 \\\\ =2((h-4) \\\\ \\text{L.R.}=2 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-8th-april-evening-shift/mnsik5vb-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 8th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5x8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α=3\\sin ^{-1}\\left (\\frac{6}{11}\\right )$ and $β=3\\cos ^{-1}\\left (\\frac{4}{9}\\right )$, where inverse trigonometric functions take only the principal values.\n\nGiven below are two statements :\n\nStatement I : $\\cos (α+β)>0$.\n\nStatement II : $\\cos (α)<0$.\n\nIn the light of the above statements, choose the correct answer from the options given below :",
+  "options": [
+   "Both Statement I and Statement II are true",
+   "Both Statement I and Statement II are false",
+   "Statement I is true but Statement II is false",
+   "Statement I is false but Statement II is true"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since $\\dfrac{1}{2}<\\dfrac{6}{11}<\\dfrac{1}{\\sqrt{2}}$ and $\\sin ^{-1}$ is increasing, $\\dfrac{π}{6}<\\sin ^{-1}\\dfrac{6}{11}<\\dfrac{π}{4}$, so\n\n$\\frac{π}{2}<α<\\frac{3π}{4}$\n\nThus $α$ lies in the second quadrant and $\\cos α<0$, so Statement II is true.\n\nSince $0<\\dfrac{4}{9}<\\dfrac{1}{2}$ and $\\cos ^{-1}$ is decreasing, $\\dfrac{π}{3}<\\cos ^{-1}\\dfrac{4}{9}<\\dfrac{π}{2}$, so\n\n$π<β<\\frac{3π}{2}$\n\nAdding, $\\dfrac{3π}{2}<α+β<\\dfrac{9π}{4}$. Cosine is positive on $\\left (\\dfrac{3π}{2},\\dfrac{5π}{2}\\right )$, which contains this interval, so $\\cos (α+β)>0$ and Statement I is true.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5yc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For the function $f(x)=\\mathrm{e}^{\\sin |x|}-|x|,x\\in 𝐑$, consider the following statements :\n\nStatement I : $f$ is differentiable for all $x\\in 𝐑$.\n\nStatement II : $f$ is increasing in $\\left (-π,-\\frac{π}{2}\\right )$.\n\nIn the light of the above statements, choose the correct answer from the options given below :",
+  "options": [
+   "Both Statement I and Statement II are true",
+   "Both Statement I and Statement II are false",
+   "Statement I is true but Statement II is false",
+   "Statement I is false but Statement II is true"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $x>0$, $f(x)=e^{\\sin x}-x$ and $f^{'}(x)=e^{\\sin x}\\cos x-1$, so $f^{'}(0^{+})=1-1=0$.\n\nFor $x<0$, $f(x)=e^{-\\sin x}+x$ and $f^{'}(x)=1-e^{-\\sin x}\\cos x$, so $f^{'}(0^{-})=1-1=0$.\n\nBoth one-sided derivatives at $x=0$ equal 0 and $f$ is differentiable at every $x\\neq 0$, so $f$ is differentiable on $𝐑$; Statement I is true.\n\nFor $x\\in \\left (-π,-\\dfrac{π}{2}\\right )$, $\\cos x<0$, so $f^{'}(x)=1-e^{-\\sin x}\\cos x>1>0$ and $f$ is increasing there; Statement II is true.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5yy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\vec{\\mathrm{a}}=4\\hat{i}-\\hat{j}+3\\hat{k},\\mathrm{b}\\leftarrow =10\\hat{i}+2\\hat{j}-\\hat{k}$ and a vector $\\vec{\\mathrm{c}}$ be such that $2(\\vec{\\mathrm{a}}\\times \\vec{\\mathrm{b}})+3(\\mathrm{b}\\leftarrow \\times \\vec{\\mathrm{c}})=\\vec{0}$.\n\nIf $\\vec{\\mathrm{a}}\\cdot \\vec{\\mathrm{c}}=15$, then $\\vec{\\mathrm{c}}\\cdot (\\hat{i}+\\hat{j}-3\\hat{k})$ is equal to :",
+  "options": [
+   "-6",
+   "-5",
+   "-4",
+   "-3"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The unknown vector $\\vec{𝒄}$ is represented in 3D: $\\vec{𝒄}=𝒙\\hat{𝒊}+𝒚\\hat{𝒋}+z\\hat{𝒌}$\n\nCross product of 2 vectors $\\vec{𝒂}$ and $\\vec{𝒃}$ :\n\n$(\\vec{𝒂}\\times \\vec{𝒃})=\\left |\\begin{array}{lll} \\hat{𝒊} & \\hat{𝒋} & \\hat{𝒌} \\\\ 4 & -1 & 3 \\\\ 10 & 2 & -1 \\end{array}\\right |=-5\\hat{𝒊}+34\\hat{j}+18\\hat{𝒌}\\ldots ..(i)$\n\nCross product of 2 vectors $\\vec{𝒃}$ and $\\vec{𝒄}$ :\n\n$(\\vec{𝒃}\\times \\vec{𝒄})=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 10 & 2 & -1 \\\\ 𝒙 & 𝒚 & 𝒛 \\end{array}\\right |=(2z+y)\\hat{𝒊}-(10z+𝒙)\\hat{𝒋}+(10𝒚-2𝒙)\\hat{𝒌}\\ldots \\ldots (𝒊𝒊)$\n\nWe know, $2(𝒂\\times 𝒃)+3(𝒃\\times 𝒄)=0$\n\n$\\Rightarrow 2(-5\\hat{𝒊}+34\\hat{𝒋}+18\\hat{𝒌})+3\\{(2𝒛+𝒚)\\hat{𝒊}-(10𝒛+x)\\hat{𝒋}+(10𝒚-2x)\\hat{𝒌}\\}=0$\n\n$\\Rightarrow$ $(6z+3y-10)\\hat{i}+(68-30z-3x)j+(36+30y-6x)\\hat{k}=0$\n\nAs individual vector components of a null vector are zero.\n\n$\\begin{array}{ll} 𝒙-5𝒚 & =6\\ldots .𝑷_{1} \\\\ 𝒚+2𝒛 & =\\dfrac{10}{3}\\ldots ..𝑷_{2} \\\\ 10𝒛+𝒙 & =\\dfrac{68}{3}\\ldots .𝑷_{3} \\end{array}$\n\n$(⃗{a})\\cdot (⃗{c})=15\\Rightarrow (4\\hat{i}-\\hat{j}+3\\hat{k})\\cdot (x\\hat{i}+y\\hat{j}+z\\hat{k})=4x-y+3z=15\\ldots \\ldots (iv)$\n\nEquation set $(iii)$ is mathematically constructed to form a linear combination of 2 planes $𝑷_{1}$ and $𝑷_{2}$ generating the $3^{\\text{rd}}$ plane $𝑷_{3}$ :\n\n$𝒙-5𝒚+(𝝀)\\cdot (𝒚+2𝒛)=\\frac{68}{3}\\Rightarrow 𝝀=5\\Rightarrow 𝑷_{1}+5𝑷_{2}=𝑷_{3}\\ldots \\ldots (𝒗)$\n\nEquation ( $𝒗$ ) is conclusive in generating a family of planes $\\{𝑷_{1},𝑷_{2},𝑷_{3}\\}$ indicating infinite solutions for the system equation (iii)\n\nWe need an auxiliary equation provided through (iv) to render an unique solution for the vector $⃗{c}$ :\n\n$\\left [\\begin{array}{llll} x-5y & =6 & \\ldots . & P_{1} \\\\ y+2z & =\\frac{10}{3} & \\ldots . & P_{2} \\\\ 4x-y+3z & =15 & \\ldots . & P_{4} \\end{array}\\right ]\\ldots .(vi)$\n\nEquation (vi) can be solved using Determinants and Cramer's rule :\n\n$𝚫=\\left |\\begin{array}{lll} 1 & -5 & 0 \\\\ 0 & 1 & 2 \\\\ 4 & -1 & 3 \\end{array}\\right |\\leftarrow 𝑹_{3}=𝑹_{3}-4𝑹_{1}=\\left |\\begin{array}{lll} 1 & -5 & 0 \\\\ 0 & 1 & 2 \\\\ 0 & 19 & 3 \\end{array}\\right |=-35\\ldots ..(vii)$\n\n$\\Delta _{x}=\\left |\\begin{array}{lll} 6 & -5 & 0 \\\\ \\frac{10}{3} & 1 & 2 \\\\ 15 & -1 & 3 \\end{array}\\right |$\n\n$\\begin{array}{l} 𝑹_{1}=𝑹_{1}+5𝑹_{2} \\\\ 𝑹_{3}=𝑹_{3}+𝑹_{2} \\end{array}$\n\n$=\\left |\\begin{array}{lll} \\frac{68}{3} & 0 & 10 \\\\ \\frac{10}{3} & 1 & 2 \\\\ \\frac{55}{3} & 0 & 5 \\end{array}\\right |$\n\n$C_{1}⇆C_{2}$\n\n$=-\\left |\\begin{array}{ll} 0 & \\frac{68}{3} \\\\ 1 & \\frac{10}{3} \\\\ 0 & \\frac{10}{3} \\\\ \\frac{55}{3} \\end{array}\\right |=\\left (\\frac{68}{3}\\right )\\cdot (5)-\\left (\\frac{55}{3}\\right )\\cdot (10)=-70\\ldots \\ldots (viii)$\n\n\n[IMG]\n\n\nEquations $(𝒗𝒊𝒊),(𝒗𝒊𝒊𝒊),(𝒊𝒙)$ and $(𝒙)$ provides the solution to system equation $(𝒗𝒊)$ from Cramer's rule :\n\n$\\left [\\begin{array}{l} x=\\frac{\\Delta _{x}}{\\Delta }=\\frac{70}{35}= \\\\ y=\\frac{\\Delta _{y}}{\\Delta }=-\\frac{28}{35}=-\\frac{4}{5} \\\\ z=\\frac{\\Delta _{z}}{\\Delta }=\\frac{217}{(3)\\cdot (35)}=\\frac{31}{15} \\end{array}\\right ]$\n\n$\\Rightarrow \\vec{𝒄}=(2)\\hat{𝒊}-\\left (\\frac{4}{5}\\right )\\hat{𝒋}+\\left (\\frac{31}{15}\\right )\\hat{𝒌}$\n\n$\\begin{array}{l} \\therefore (\\vec{𝒄})\\cdot (\\hat{𝒊}+\\hat{j}-3\\hat{𝒌}) \\\\ =\\left \\{(2)\\hat{i}-\\left (\\dfrac{4}{5}\\right )\\hat{j}+\\left (\\dfrac{31}{15}\\right )\\hat{k}\\right \\}\\cdot (\\hat{𝒊}+\\hat{j}-3\\hat{𝒌}) \\\\ =2-\\dfrac{4}{5}-\\dfrac{31}{5} \\end{array}$\n\n$=-\\frac{4+31-10}{5}=-5$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-8th-april-evening-shift/mnsik5yy-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 8th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnsik5zv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the foot of perpendicular from the point $(λ,2,3)$ on the line $\\frac{x-4}{1}=\\frac{y-9}{2}=\\frac{z-5}{1}$ be the point ( $1,μ,2$ ). Then the distance between the lines $\\frac{x-1}{2}=\\frac{y-2}{3}=\\frac{z+4}{6}$ and $\\frac{x-λ}{2}=\\frac{y-μ}{3}=\\frac{z+5}{6}$ is equal to :",
+  "options": [
+   "$\\frac{12}{7}$",
+   "$\\frac{\\sqrt{145}}{7}$",
+   "$\\frac{\\sqrt{146}}{7}$",
+   "$\\frac{\\sqrt{143}}{7}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\frac{x-4}{1}=\\frac{y-9}{2}=\\frac{z-5}{1}$\n\n$\\mathrm{Q}(1,μ,2)$ satisfies the line L\n\n$\\therefore \\frac{1-4}{1}=\\frac{μ-9}{2}=\\frac{2-5}{1}$\n\n$\\Rightarrow -3=\\frac{μ-9}{2}=-3\\Rightarrow μ=3$\n\nD.R. of PQ : $λ-1,2-μ,1$\n\nSince $\\mathrm{PQ}⟂\\mathrm{L}\\Rightarrow (λ-1).1+2(2-μ)+1.1=0$\n\n$\\Rightarrow λ-2μ+4=0\\therefore λ=2$\n\nNow lines : $\\frac{x-1}{2}=\\frac{y-2}{3}=\\frac{z+4}{6}$ \\&\n\n$\\frac{x-2}{2}=\\frac{y-3}{3}=\\frac{z+5}{6}$\n\n$\\begin{array}{l} \\text{i.e.}⃗{r}=(\\hat{i}+2\\hat{j}-4\\hat{k})+t_{1}(2\\hat{i}+3\\hat{j}+6\\hat{k}) \\\\ &⃗{r}=(2\\hat{i}+3\\hat{j}-5\\hat{k})+t_{2}(2\\hat{i}+3\\hat{j}+6\\hat{k}) \\end{array}$\n\nDistance\n\n$\\begin{array}{l} =\\dfrac{|((\\hat{i}+2\\hat{j}-4\\hat{k})-(2\\hat{i}+3\\hat{j}-5\\hat{k}))\\times (2\\hat{i}+3\\hat{j}+6\\hat{k})|}{|2\\hat{i}+3\\hat{j}+6\\hat{k}|} \\\\ =\\dfrac{|-9\\hat{i}+8\\hat{j}-\\hat{k}|}{7}=\\dfrac{\\sqrt{146}}{7} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-8th-april-evening-shift/mnsik5zv-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 8th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnsik61b",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of the integral $\\int\\limits _{0}^{2}\\frac{\\sqrt{x(x^{2}+x+1)}}{(\\sqrt{x+1})\\left (\\sqrt{x^{4}+x^{2}+1}\\right )}\\mathrm{d}x$ is equal to:",
+  "options": [
+   "$\\frac{1}{3}\\log _{e}(3-2\\sqrt{2})$",
+   "$\\frac{2}{3}\\log _{e}(4+\\sqrt{2})$",
+   "$\\frac{2}{3}\\log _{e}(3+2\\sqrt{2})$",
+   "$\\frac{1}{3}\\log _{e}(1+6\\sqrt{2})$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since $x^{4}+x^{2}+1=(x^{2}+1)^{2}-x^{2}=(x^{2}+x+1)(x^{2}-x+1)$, the factor $\\sqrt{x^{2}+x+1}$ cancels:\n\n$I=\\int\\limits _{0}^{2}\\dfrac{\\sqrt{x}}{\\sqrt{x+1}\\sqrt{x^{2}-x+1}}dx=\\int\\limits _{0}^{2}\\dfrac{\\sqrt{x}}{\\sqrt{x^{3}+1}}dx$\n\nPut $x=t^{2}$, $dx=2tdt$; the limits become $0$ to $\\sqrt{2}$:\n\n$I=\\int\\limits _{0}^{\\sqrt{2}}\\dfrac{2t^{2}}{\\sqrt{t^{6}+1}}dt$\n\nPut $t^{3}=u$, $3t^{2}dt=du$; the limits become $0$ to $2\\sqrt{2}$:\n\n$I=\\dfrac{2}{3}\\int\\limits _{0}^{2\\sqrt{2}}\\dfrac{du}{\\sqrt{u^{2}+1}}=\\dfrac{2}{3}\\left [\\log _{e}\\left (u+\\sqrt{u^{2}+1}\\right )\\right ]_{0}^{2\\sqrt{2}}=\\dfrac{2}{3}\\log _{e}\\left (3+2\\sqrt{2}\\right )$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik629",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $y=y(x)$ be the solution of the differential equation $x\\sqrt{1-x^{2}}dy+\\left (y\\sqrt{1-x^{2}}-x\\cos ^{-1}x\\right )dx=0,x\\in (0,1),\\lim _{x\\to 1^{-}}y(x)=1$. Then $y\\left (\\frac{1}{2}\\right )$ equals :",
+  "options": [
+   "$3-\\frac{π}{\\sqrt{3}}$",
+   "$4-\\sqrt{3}π$",
+   "$4-\\frac{2π}{\\sqrt{3}}$",
+   "$3-\\frac{π}{2\\sqrt{3}}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Dividing by $x\\sqrt{1-x^{2}}dx$:\n\n$\\frac{dy}{dx}+\\frac{y}{x}=\\frac{\\cos ^{-1}x}{\\sqrt{1-x^{2}}}$\n\nThe integrating factor is $e^{\\int \\frac{dx}{x}}=x$, so\n\n$xy=\\int \\frac{x\\cos ^{-1}x}{\\sqrt{1-x^{2}}}dx$\n\nIntegrating by parts with $\\cos ^{-1}x$ as the first function and $\\int \\dfrac{x}{\\sqrt{1-x^{2}}}dx=-\\sqrt{1-x^{2}}$:\n\n$xy=-\\sqrt{1-x^{2}}\\cos ^{-1}x-\\int \\left (-\\frac{1}{\\sqrt{1-x^{2}}}\\right )\\left (-\\sqrt{1-x^{2}}\\right )dx=-\\sqrt{1-x^{2}}\\cos ^{-1}x-x+C$\n\nAs $x\\to 1^{-}$, $\\sqrt{1-x^{2}}\\cos ^{-1}x\\to 0$, so $\\lim _{x\\to 1^{-}}y=C-1=1$, giving $C=2$.\n\nAt $x=\\frac{1}{2}$, $\\sqrt{1-\\frac{1}{4}}=\\frac{\\sqrt{3}}{2}$ and $\\cos ^{-1}\\frac{1}{2}=\\frac{π}{3}$:\n\n$\\frac{1}{2}y\\left (\\frac{1}{2}\\right )=-\\frac{\\sqrt{3}}{2}\\cdot \\frac{π}{3}-\\frac{1}{2}+2=\\frac{3}{2}-\\frac{π}{2\\sqrt{3}}$\n\n$y\\left (\\frac{1}{2}\\right )=3-\\frac{π}{\\sqrt{3}}$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik636",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f:(1,\\infty )\\to 𝐑$ be a function defined as $f(x)=\\frac{x-1}{x+1}$. Let $f^{i+1}(x)=f\\left (f^{i}(x)\\right ),i=1,2,\\ldots ,25$, where $f^{1}(x)=f(x)$. If $g(x)+f^{26}(x)=0,x\\in (1,\\infty )$, then the area of the region bounded by the curves $y=g(x),2y=2x-3,y=0$ and $x=4$ is :",
+  "options": [
+   "$\\frac{1}{8}+\\log _{\\mathrm{e}}2$",
+   "$\\frac{1}{4}+\\log _{\\mathrm{e}}2$",
+   "$\\frac{5}{6}+3\\log _{e}2$",
+   "$\\frac{5}{6}+\\log _{e}2$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We first focus on the orbit periodicity of $f^{n}(𝒙)$ :\n\n$f^{1}(x)=f(x)=\\frac{x-1}{x+1};x\\in (1,\\infty )\\ldots ..(i)$\n\n$f^{2}(x)=f\\left \\{f^{1}(x)\\right \\}=f\\{f(x)\\}=f\\left (\\frac{x-1}{x+1}\\right )=\\frac{\\left (\\frac{x-1}{x+1}\\right )-1}{\\left (\\frac{x-1}{x+1}\\right )+1}=-\\frac{2}{2x}=-\\frac{1}{x};x\\in (1,\\infty )\\ldots ..(ii)$\n\n$𝒇^{3}(𝒙)=f\\left \\{𝒇^{2}(𝒙)\\right \\}=f\\left (-\\frac{1}{𝒙}\\right )=\\frac{\\left (-\\frac{1}{𝒙}\\right )-1}{\\left (-\\frac{1}{𝒙}\\right )+1}=\\frac{1+𝒙}{1-𝒙};𝒙\\in (1,\\infty )\\ldots ..(𝒊𝒊𝒊)$\n\n$f^{4}(x)=f\\left \\{f^{3}(x)\\right \\}=f\\left (\\frac{1+x}{1-x}\\right )=\\frac{\\left (\\frac{1+x}{1-x}\\right )-1}{\\left (\\frac{1+x}{1-x}\\right )+1}=\\frac{2x}{2}=x;x\\in (1,\\infty )\\ldots ..(iv)$\n\n$f^{5}(x)=f\\left \\{f^{4}(x)\\right \\}=f(x)=\\frac{x-1}{x+1};x\\in (1,\\infty )\\ldots ..(v)$\n\n\n[IMG]\n\n\nFrom the nature of table which completes the 25 iterations in 6 cycles with orbit periodicity 4 :\n\n$f^{25}(x)=f(x)=f^{1}(x)\\Rightarrow f^{26}(x)=f^{2}(x)=-\\frac{1}{x}\\ldots \\ldots (vi)$\n\nEquation (vi) exactly identifies the function $𝒈(𝒙)$ defined under SOW :\n\n$𝒈(𝒙)+𝒇^{26}(𝒙)=0\\Rightarrow 𝒈(𝒙)=-𝒇^{26}(𝒙)=\\frac{1}{𝒙}\\ldots \\ldots (vii)$\n\nEquation (vii) has identified the function $𝒈(𝒙)$ and we can mathematically plot the bounded area between the curves :\n\n\n[IMG]\n\n\n$\\begin{array}{llll} g(x) & \\text{Slant line} & \\text{Horizontal line} & \\text{Vertical line} \\\\ \\frac{1}{x} & y=x-\\left (\\frac{3}{2}\\right ) & X\\text{-axis} & x=4 \\end{array}$\n\n$\\begin{array}{lllll} \\text{Pair} & 𝒈(𝒙) & \\text{Slant line} & \\text{Feasible} & \\text{Intersection Points} \\\\ 1 & \\frac{1}{𝒙} & 𝒚=𝒙-\\left (\\frac{3}{2}\\right ) & \\text{Yes} & 𝑨,𝑲 \\end{array}$\n\n$\\Rightarrow \\frac{1}{x}=x-\\left (\\frac{3}{2}\\right )\\Rightarrow 2x^{2}-3x-2=0\\Rightarrow x=\\left (2,-\\frac{1}{2}\\right )\\Rightarrow y=\\left (\\frac{1}{2},-2\\right )$\n\n$\\begin{array}{lllll} \\text{Intersections} & 𝑨 & 𝑲 & \\text{Discarded point} & \\text{Reason} \\\\ \\text{Coordinates} & \\left (2,\\frac{1}{2}\\right ) & \\left (-\\frac{1}{2},-2\\right ) & 𝑲 & \\text{Falls outside the scope of bounded area} \\end{array}$\n\n$\\begin{array}{lllll} \\text{Pair} & 𝒈(𝒙) & \\text{Vertical line} & \\text{Feasible} & \\text{Intersection Points} \\\\ 2 & \\frac{1}{𝒙} & 𝒙=4 & \\text{Yes} & 𝑩 \\end{array}$\n\n$\\Rightarrow x=4\\Rightarrow y=0.25$\n\n$\\begin{array}{ll} \\text{Intersection} & 𝑩 \\\\ \\text{Coordinate} & (4,0.25) \\end{array}$\n\n$\\begin{array}{lllll} \\text{Pair} & \\text{Horizontal line} & \\text{Vertical line} & \\text{Feasible} & \\text{Intersection point} \\\\ 3 & 𝑿\\text{-axis} & 𝒙=4 & \\text{Yes} & 𝑪 \\end{array}$\n\n$\\Rightarrow x=4,y=0$\n\n$\\begin{array}{ll} \\text{Intersection} & 𝑪 \\\\ \\text{Coordinate} & (4,0) \\end{array}$\n\n$\\begin{array}{lllll} \\text{Pair} & \\text{Slant line} & \\text{Horizontal line} & \\text{Feasible} & \\text{Intersection point} \\\\ 4 & 𝒚=x-\\left (\\frac{3}{2}\\right ) & X\\text{-axis} & \\text{Yes} & D \\end{array}$\n\n$\\Rightarrow 𝒚=0\\Rightarrow 𝒙=\\frac{3}{2}$\n\n$\\begin{array}{ll} \\text{Intersection} & 𝑫 \\\\ \\text{Coordinate} & \\left (\\frac{3}{2},0\\right ) \\end{array}$\n\n  \n\n    g(x)\n\n    X-axis\n\n    Feasible\n\n    Intersection point\n\n    Reason\n\n  \n\n  \n\n    1/x\n\n    y = 0\n\n    No\n\n    None\n\n    X-axis is a horizontal asymptote to g(x)\n\n  \n\n  \n\n    Slant line\n\n    Vertical line\n\n    Feasible\n\n    Intersection point\n\n    Reason\n\n  \n\n  \n\n    y = x − (3/2)\n\n    x = 4\n\n    No\n\n    (4, 5/2)\n\n    Intersects much above B and outside the scope of bounded area\n\n  \n\n  \n\n    Sides\n\n    Left boundary\n\n    Equation\n\n    Top boundary\n\n    Equation\n\n    Right boundary\n\n    Equation\n\n    Bottom boundary\n\n    Equation\n\n  \n\n  \n\n    Curves\n\n    Slant line\n\n    y = x − (3/2)\n\n    Rectangular Hyperbola\n\n    y = 1/x\n\n    Vertical line\n\n    x = 4\n\n    X-axis\n\n    y = 0\n\n  \n\n  \n\n    Vertices\n\n    Top left\n\n    Coordinates\n\n    Top right\n\n    Coordinates\n\n    Bottom right\n\n    Coordinates\n\n    Bottom left\n\n    Coordinates\n\n  \n\n  \n\n    Points\n\n    A\n\n    A (2, 1/2)\n\n    B\n\n    B (4, 1/4)\n\n    C\n\n    C (4, 0)\n\n    D\n\n    D (3/2, 0)\n\n  \n\nWe can visualize that both $𝑨$ and $𝑫$ lie on the slant line but $𝑨$ is ahead of $𝑫$ along the $𝑿$-axis. From $𝑨$ we can drop a ⟂ on the $𝑿$-axis at $𝑴$ to form a right angled $𝚫𝑨𝑴𝑫$. From $𝑨$ and $𝑫$ the remaining area upto the vertical $𝒙=4$ lies under the rectangular hyperbola $g(x)=\\frac{1}{x}$ :\n\n$\\begin{array}{ll} \\text{Area}=\\left (\\dfrac{1}{2}\\right )\\cdot (𝑫𝑴)\\cdot (𝑨𝑴)+\\int\\limits _{2}^{4}𝒈(𝒙)𝒅𝒙 & =\\left (\\dfrac{1}{2}\\right )\\cdot (2-1\\cdot 5)\\cdot \\left (\\dfrac{1}{2}\\right )+\\int\\limits _{2}^{4}\\left (\\dfrac{1}{x}\\right )d𝒙 \\\\ =\\dfrac{1}{8}+[\\ln |𝒙|]_{2}^{4} \\\\ =\\dfrac{1}{8}+\\ln 2 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-8th-april-evening-shift/mnsik636-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 8th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2026-online-8th-april-evening-shift/mnsik636-1.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 8th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnsik64k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=\\left \\{\\begin{array}{ll} \\frac{1}{3}, & x\\leq π/2 \\\\ \\frac{\\mathrm{b}(1-\\sin x)}{(π-2x)^{2}}, & x>π/2 \\end{array} \\right.$. If $f$ is continuous at $x=π/2$, then the value of $\\int\\limits _{0}^{3\\mathrm{b}-6}\\left |x^{2}+2x-3\\right |\\mathrm{d}x$ is :",
+  "options": [
+   "5",
+   "2",
+   "3",
+   "4"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The function $𝒇(𝒙)$ is continuous at $𝒙=\\frac{𝝅}{2}$ where \n\n$𝒇(𝒙)=\\left \\{\\begin{array}{ll} \\frac{1}{3} & ;x⩽\\frac{π}{2} \\\\ \\frac{b(1-\\sin x)}{(𝝅-2x)^{2}} & ;x>\\frac{π}{2} \\end{array}\\cdots (i) \\right.$.\n\nWe observe the LHL from equation $(i)$ :\n\n$\\lim _{x\\to \\left (\\frac{π}{2}\\right )^{-}}f(x)=f\\left (\\frac{π}{2}\\right )=\\frac{1}{3}\\ldots \\ldots (ii)$\n\nWe must have the RHL from equation (i) to be $\\frac{1}{3}$ for the function $𝒇(𝒙)$ to be continuous at $𝒙=\\frac{𝝅}{2}$ :\n\n$\\lim _{𝒙\\to \\left (\\frac{𝝅}{2}\\right )^{+}}𝒇\\mathbf{(}𝒙\\mathbf{)}=\\frac{1}{3}\\Rightarrow \\lim _{𝒙\\to \\left (\\frac{𝝅}{2}\\right )^{+}}\\frac{𝒃(1-\\sin 𝒙)}{(𝝅-2x)^{2}}=\\frac{1}{3}\\ldots \\ldots (𝒊𝒊𝒊)$\n\n$\\Rightarrow$ $\\lim _{x\\to \\left (\\frac{𝝅}{2}\\right )^{+}}\\frac{𝒃(1-\\sin 𝒙)}{(𝝅-2𝒙)^{2}}=\\frac{0}{0}$ format $\\leftarrow$ Apply L'hôpital's rule\n\n$\\Rightarrow$ $\\lim _{x\\to \\left (\\frac{𝝅}{2}\\right )^{+}}\\frac{b\\cos 𝒙}{4(𝝅-2𝒙)}=\\frac{0}{0}$ format ค Apply L'hôpital's rule once more\n\n$\\Rightarrow$ $\\lim _{x\\to \\left (\\frac{π}{2}\\right )^{+}}\\frac{b\\sin x}{8}=\\frac{b}{8}\\ldots \\ldots (iv)$\n\nWe can mathematically demonstrate conditional continuity of $f(x)$ at $x=\\frac{π}{2}$ from equation (iii) and (iv) :\n\n$\\frac{b}{8}=\\frac{1}{3}\\Rightarrow b=\\frac{8}{3}\\ldots \\ldots (v)$\n\nNow, I = $\\int\\limits _{0}^{3\\mathrm{b}-6}\\left |x^{2}+2x-3\\right |\\mathrm{d}x$\n\n$=\\int\\limits _{0}^{(3)\\left (\\frac{8}{3}\\right )-6}\\left |𝒙^{2}+2𝒙-3\\right |𝒅𝒙$\n\n$=\\int\\limits _{0}^{2}\\left |x^{2}+2x-3\\right |dx$\n\n$=\\int\\limits _{0}^{2}|(x+3)(x-1)|dx$\n\n$\\left \\{\\begin{array}{l} (x+3)(x-1)⩾0;x\\in (-\\infty ,-3] \\\\ (x+3)(x-1)⩽0;x\\in [-3,1] \\\\ (x+3)(x-1)⩾0;x\\in [1,\\infty ) \\end{array} \\right.$\n\n$=\\int\\limits _{0}^{1}(x+3)(1-x)dx$ $+\\int\\limits _{1}^{2}(x+3)(x-1)dx$\n\n$=\\int\\limits _{0}^{1}\\left (3-2x-x^{2}\\right )dx$ $+\\int\\limits _{1}^{2}\\left (x^{2}+2x-3\\right )dx$\n\n$\\begin{array}{l} =\\left [3x-x^{2}-\\dfrac{x^{3}}{3}\\right ]_{0}^{1}+\\left [\\dfrac{x^{3}}{3}+x^{2}-3x\\right ]_{1}^{2} \\end{array}$\n\n$\\begin{array}{l} =\\left (3-1-\\dfrac{1}{3}\\right )+\\left (\\dfrac{8}{3}+4-6\\right )-\\left (\\dfrac{1}{3}+1-3\\right ) \\end{array}$\n\n= 4",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik65i",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\frac{x^{2}}{f(a^{2}+7a+3)}+\\frac{y^{2}}{f(3a+15)}=1$ represent an ellipse with major axis along $y$-axis, where $f$ is a strictly decreasing positive function on $𝐑$. If the set of all possible values of $a$ is $𝐑-[α,β]$, then $α^{2}+β^{2}$ is equal to :",
+  "options": [
+   "28",
+   "40",
+   "61",
+   "24"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since the ellipse has its major axis along the $y$-axis, the denominator under $y^{2}$ must be bigger than the denominator under $x^{2}$.\n\nSo we need\n\n$f(3a+15)>f\\left (a^{2}+7a+3\\right ).$\n\nGiven that $f$ is a strictly decreasing positive function, a bigger function value happens when the input is smaller. So,\n\n$3a+15<a^{2}+7a+3.$\n\nBring all terms to one side:\n\n$a^{2}+7a+3-3a-15>0$\n\n$a^{2}+4a-12>0.$\n\nComplete the square:\n\n$a^{2}+4a-12=(a+2)^{2}-16.$\n\nSo the inequality becomes\n\n$(a+2)^{2}-16>0\\Rightarrow (a+2)^{2}>16.$\n\nTaking square roots,\n\n$|a+2|>4\\Rightarrow a+2>4\\text{or}a+2<-4.$\n\nSo,\n\n$a>2\\text{or}a<-6.$\n\nThat means the allowed values are\n\n$a\\in 𝐑-[-6,2].$\n\nHence, $α=-6$ and $β=2$. Therefore,\n\n$α^{2}+β^{2}=(-6)^{2}+(2)^{2}=36+4=40.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik66f",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The sum of squares of all the real solutions of the equation \n\n$\\log _{(x+1)}\\left (2x^{2}+5x+3\\right )=4-\\log _{(2x+3)}\\left (x^{2}+2x+1\\right )$ is equal to $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "logarithm"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The bases need $x+1>0$, $x+1\\neq 1$, $2x+3>0$, $2x+3\\neq 1$, and the arguments $2x^{2}+5x+3=(x+1)(2x+3)$ and $x^{2}+2x+1=(x+1)^{2}$ must be positive. Together these give $x>-1$, $x\\neq 0$.\n\nUsing the factorisations, the equation becomes\n\n$1+\\log _{(x+1)}(2x+3)=4-2\\log _{(2x+3)}(x+1).$\n\nPut $u=\\log _{(x+1)}(2x+3)$, so that $\\log _{(2x+3)}(x+1)=\\dfrac{1}{u}$:\n\n$1+u=4-\\dfrac{2}{u}\\Rightarrow u^{2}-3u+2=0\\Rightarrow u=1\\text{or}u=2.$\n\nFor $u=1$: $2x+3=x+1\\Rightarrow x=-2$, which is rejected since $x>-1$.\n\nFor $u=2$: $2x+3=(x+1)^{2}\\Rightarrow x^{2}=2\\Rightarrow x=\\pm \\sqrt{2}$. Here $x=-\\sqrt{2}<-1$ is rejected, while $x=\\sqrt{2}$ satisfies every condition.\n\nThe only real solution is $x=\\sqrt{2}$, so the sum of squares of the solutions is $(\\sqrt{2})^{2}=2$.\n\nHence, the answer is 2.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik66y",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\int\\limits _{π/6}^{π/4}\\left (\\cot \\left (x-\\frac{π}{3}\\right )\\cot \\left (x+\\frac{π}{3}\\right )+1\\right )dx=α\\log _{\\mathrm{e}}(\\sqrt{3}-1)$, then $9α^{2}$ is equal to $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 12.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$𝑰=\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\cot \\left (𝒙-\\frac{𝝅}{3}\\right )\\cdot \\cot \\left (𝒙+\\frac{𝝅}{3}\\right )+1\\right ]𝒅𝒙$\n\n$\\begin{array}{l} =\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left |\\dfrac{\\cos \\left (x-\\frac{π}{3}\\right )\\cdot \\cos \\left (x+\\frac{π}{3}\\right )+\\sin \\left (x-\\frac{π}{3}\\right )\\cdot \\sin \\left (x+\\frac{π}{3}\\right )}{\\sin \\left (x-\\frac{π}{3}\\right )\\cdot \\sin \\left (x+\\frac{π}{3}\\right )}\\right |dx \\\\ =\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left |\\dfrac{\\cos \\left \\{\\left (x+\\frac{π}{3}\\right )-\\left (x-\\frac{π}{3}\\right )\\right \\}}{\\sin \\left (x-\\frac{π}{3}\\right )\\cdot \\sin \\left (x+\\frac{π}{3}\\right )}\\right |dx \\\\ =\\cos \\left (\\dfrac{2π}{3}\\right )\\cdot \\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\dfrac{1}{\\sin \\left (x-\\frac{π}{3}\\right )\\cdot \\sin \\left (x+\\frac{π}{3}\\right )}\\right ]dx \\end{array}$\n\n$\\Rightarrow$ $I=2\\cos \\left (\\frac{2π}{3}\\right )\\cdot \\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\frac{1}{2\\sin \\left (x-\\frac{π}{3}\\right )\\cdot \\sin \\left (x+\\frac{π}{3}\\right )}\\right ]dx$\n\n$\\begin{array}{l} =2\\cos \\left (\\dfrac{2π}{3}\\right )\\cdot \\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\dfrac{1}{\\left \\{\\cos \\left (x-\\frac{π}{3}\\right )\\cdot \\cos \\left (x+\\frac{π}{3}\\right )+\\sin \\left (x-\\frac{π}{3}\\right )\\cdot \\sin \\left (x+\\frac{π}{3}\\right )\\right \\}-\\left \\{\\cos \\left (x-\\frac{π}{3}\\right )\\cdot \\cos \\left (x+\\frac{π}{3}\\right )-\\sin \\left (x-\\frac{π}{3}\\right )\\cdot \\sin \\left (x+\\frac{π}{3}\\right )\\right ]}dx \\\\ =2\\cos \\left (\\dfrac{2π}{3}\\right )\\cdot \\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\dfrac{1}{\\cos \\left (\\frac{2π}{3}\\right )-\\cos (2x)}\\right ]dx \\end{array} \\right.$\n\n$\\Rightarrow$ $\\left. 𝑰=-\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\frac{1}{-\\frac{1}{2}-\\cos (2x)}\\right ]dx=\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\frac{2}{1+2\\cos (2x)}\\right ]dx=\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\frac{2}{1+2\\left (1-2\\sin ^{2}x\\right )}\\right ]dx=\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\frac{2}{3-4\\sin ^{2}x\\right )}\\right ]dx$\n\n$\\Rightarrow$ $𝑰=\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\frac{2\\sec ^{2}x}{3\\sec ^{2}x-4\\tan ^{2}x}\\right ]dx=\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\frac{2\\sec ^{2}x}{3\\left (1+\\tan ^{2}x\\right )-4\\tan ^{2}x}\\right ]dx=\\int\\limits _{\\frac{π}{6}}^{\\frac{π}{4}}\\left [\\frac{2\\sec ^{2}x}{3-\\tan ^{2}x}\\right ]dx$\n\nSubstitute $𝒕=\\tan 𝒙\\Rightarrow 𝒅𝒕=\\left (\\sec ^{2}𝒙\\right )𝒅𝒙$\n\n$\\Rightarrow$ $I=\\int\\limits _{\\frac{1}{\\sqrt{3}}}^{1}\\left [\\frac{2}{3-t^{2}}\\right ]dt=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot \\int\\limits _{\\frac{1}{\\sqrt{3}}}^{1}\\left [\\frac{2\\sqrt{3}}{(\\sqrt{3}+t)(\\sqrt{3}-t)}\\right ]dt$\n\n$=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot \\int\\limits _{\\frac{1}{\\sqrt{3}}}^{1}\\left [\\frac{(\\sqrt{3}+t)+(\\sqrt{3}-t)}{(\\sqrt{3}+t)(\\sqrt{3}-t)}\\right ]dt=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot \\int\\limits _{\\frac{1}{\\sqrt{3}}}^{1}\\left [\\frac{1}{\\sqrt{3}-t}+\\frac{1}{\\sqrt{3}+t}\\right ]dt$\n\n$\\Rightarrow$ $𝑰=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot [\\ln (\\sqrt{3}+t)-\\ln (\\sqrt{3}-t)]_{\\frac{1}{\\sqrt{3}}}^{1}=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot \\left [\\ln \\left (\\frac{\\sqrt{3}+t}{\\sqrt{3}-t}\\right )\\right ]_{\\frac{1}{\\sqrt{3}}}^{1}$\n\n$=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot \\left [\\ln \\left (\\frac{\\sqrt{3}+1}{\\sqrt{3}-1}\\right )-\\ln 2\\right ]=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot \\left [\\ln \\left \\{\\frac{2}{(\\sqrt{3}-1)^{2}}\\right \\}-\\ln 2\\right ]$\n\n$𝑰=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot \\ln \\left \\{\\frac{2}{2(\\sqrt{3}-1)^{2}}\\right \\}=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot \\ln \\left \\{\\frac{1}{(\\sqrt{3}-1)^{2}}\\right \\}$\n\n$=\\left (\\frac{1}{\\sqrt{3}}\\right )\\cdot \\ln \\left \\{(\\sqrt{3}-1)^{-2}\\right \\}=\\left (-\\frac{2}{\\sqrt{3}}\\right )\\cdot \\ln (\\sqrt{3}-1)\\ldots \\ldots (i)$\n\n$\\therefore$ $α=-\\frac{2}{\\sqrt{3}}\\Rightarrow 9α^{2}=12$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik67d",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let a line $L_{1}$ pass through the origin and be perpendicular to the lines\n\n$\\mathrm{L}_{2}:\\vec{\\mathrm{r}}=(3+\\mathrm{t})\\hat{i}+(2\\mathrm{t}-1)\\hat{j}+(2\\mathrm{t}+4)\\hat{k}$ and\n\n$\\mathrm{L}_{3}:\\vec{\\mathrm{r}}=(3+2\\mathrm{s})\\hat{i}+(3+2\\mathrm{s})\\hat{j}+(2+\\mathrm{s})\\hat{k},\\mathrm{t},\\mathrm{s}\\in 𝐑$.\n\nIf $(a,b,c),a\\in 𝐙$, is the point on $\\mathrm{L}_{3}$ at a distance of $\\sqrt{17}$ from the point of intersection of $\\mathrm{L}_{1}$ and $\\mathrm{L}_{2}$, then $(\\mathrm{a}+\\mathrm{b}+\\mathrm{c})^{2}$ is equal to $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A pair of lines in 3D have the vector equations :\n\n$\\begin{array}{lll} 𝑳_{2} & 𝑳_{3} & (𝒕,s) \\\\ \\vec{𝒓}=(3+𝒕)\\hat{𝒊}+(2𝒕-1)\\hat{𝒋}+(2𝒕+4)\\hat{𝒌} & \\vec{𝒓}=(3+2𝒔)\\hat{𝒊}+(3+2𝒔)\\hat{𝒋}+(2+𝒔)\\hat{𝒌} & \\in \\mathrm{ℝ} \\end{array}$\n\nA third line $𝑳_{1}$ passes through the origin and is ⟂ to both the lines $𝑳_{2}$ and $𝑳_{3}$ defined just above\n\nThe point of intersection of $𝑳_{1}$ and $𝑳_{2}$ is at a distance $\\sqrt{17}$ units from another point with coordinates $(𝒂,𝒃,𝒄)$ and lying on $𝑳_{3}$ where $a\\in Z$\n\n$\\begin{array}{l} \\mathrm{L}_{2}:\\dfrac{\\mathrm{x}-3}{1}=\\dfrac{\\mathrm{y}+1}{2}=\\dfrac{\\mathrm{z}-4}{2}=\\mathrm{t} \\\\ \\mathrm{L}_{5}:\\dfrac{\\mathrm{x}-3}{2}=\\dfrac{\\mathrm{y}-3}{2}=\\dfrac{\\mathrm{z}-2}{1}=\\mathrm{s} \\\\ \\text{vector}⟂\\text{to}\\mathrm{L}_{2}&\\mathrm{L}_{3} \\end{array}$\n\n$\\begin{array}{lllllll} \\Rightarrow \\left |\\begin{array}{lll} i & j & k \\\\ 1 & 2 & 2 \\\\ 2 & 2 & 1 \\end{array}\\right |=\\hat{i}(-2)-\\hat{j}(-3)+\\hat{k}(-2) \\\\ =-2\\hat{i}+3\\hat{j}-2\\hat{k} \\\\ =-(2\\hat{i}-3\\hat{j}+2\\hat{k}) \\end{array}$\n\nNow, $\\mathrm{L}_{1}:\\frac{\\mathrm{x}}{2}=\\frac{\\mathrm{y}}{-3}=\\frac{\\mathrm{z}}{2}=\\ell$\n\nintersection of $\\mathrm{L}_{1}$ \\& $\\mathrm{L}_{2}$\n\n$\\Rightarrow \\mathrm{t}+3=2\\ell ,2\\mathrm{t}-1=-3\\ell ,2\\mathrm{t}+4=2\\ell$\n\n$\\Rightarrow$ $t+3=2t+4$\n\n$\\begin{array}{l} t=-1 \\\\ \\Rightarrow P\\equiv (2,-3,2) \\end{array}$\n\nA point on $\\mathrm{L}_{3}$ is $\\mathrm{Q}(2\\mathrm{s}+3,2\\mathrm{s}+3,\\mathrm{s}+2)$\n\n$\\begin{array}{l} \\Rightarrow PQ^{2}=(2s+1)^{2}+(2s+6)^{2}+s^{2}=17 \\\\ \\Rightarrow 9s^{2}+28s+20=0 \\\\ \\Rightarrow (9s+10)(s+2)=0\\Rightarrow s=-2 \\\\ \\therefore Q\\equiv (-1,-1,0)\\equiv (a,b,c)\\Rightarrow (a+b+c)^{2}=4 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-mnsik68a",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Consider the circle C : $x^{2}+y^{2}-6x-8y-11=0$. Let a variable chord AB of the circle C subtend a right angle at the origin. If the locus of the foot of the perpendicular drawn from the origin on the chord AB is the circle $x^{2}+y^{2}-αx-βy-γ=0$, then $α+β+2γ$ is equal to $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 18.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Assumptions :\n\n$𝑭(h,𝒌)$ is the foot of the ⟂ drop from origin on the variable chord $𝑨𝑩$\n\nThe end-points of the chord $𝑨𝑩$ are\n\n$\\begin{array}{ll} 𝑨 & 𝑩 \\\\ (𝒙_{1},𝒚_{1}) & (𝒙_{2},𝒚_{2}) \\end{array}$\n\n\n[IMG]\n\n\n$\\begin{array}{lllll} \\text{Circle} & \\text{Equation} & \\text{Transform} & \\text{Centre} & \\text{Radius} \\\\ 𝑪 & 𝒙^{2}+𝒚^{2}-6𝒙-8𝒚-11=0 & (𝒙-3)^{2}+(𝒚-4)^{2}=36 & (3,4) & 6 \\end{array}$\n\nWe will now form the line equations of the ⟂ drop $𝑶𝑭$ and the variable chord $𝑨𝑩$ :\n\n$l_{OF}:y=\\left (\\frac{k}{h}\\right )x\\Rightarrow l_{AB}:y=-\\left (\\frac{h}{k}\\right )x+c....(i)$\n\nThe foot of the ⟂ on line $𝒍_{𝑨𝑩}$ defined in equation (i) is $𝑭(𝒉,𝒌)$ :\n\n$k=-\\left (\\frac{𝒉}{𝒌}\\right )\\cdot (𝒉)+c\\Rightarrow c=\\frac{𝒉^{2}+k^{2}}{k}\\Rightarrow l_{AB}:𝒉𝒙+𝒌𝒚=h^{2}+k^{2}\\ldots \\ldots (ii)$\n\nEquation (ii) which gives the equation of the variable chord $𝑨𝑩$ cuts the circle at $𝑨(𝒙_{1},𝒚_{1})$ and $𝑩(𝒙_{2},𝒚_{2})$ is substituted in the equation of the circle $𝑪$ from chart 1 to form 2 quadratics in $𝒙$ and $𝒚$ respectively :\n\nQuadratic in $x$ :\n\n$𝒙^{2}+𝒚^{2}-6𝒙-8𝒚-11=0\\Rightarrow 𝒌^{2}x^{2}+𝒌^{2}𝒚^{2}-6𝒌^{2}𝒙-8𝒌^{2}𝒚-11𝒌^{2}=0$\n\n$𝒌^{2}𝒙^{2}+\\left (𝒉^{2}+𝒌^{2}-𝒉𝒙\\right )^{2}-6𝒌^{2}𝒙-8𝒌\\left (𝒉^{2}+𝒌^{2}-𝒉𝒙\\right )-11𝒌^{2}=0$\n\n$\\left (𝒉^{2}+𝒌^{2}\\right )𝒙^{2}-2𝒙\\left \\{𝒉\\left (𝒉^{2}+𝒌^{2}\\right )+3𝒌^{2}-4𝒉𝒌\\right \\}+\\left (𝒉^{2}+𝒌^{2}\\right )^{2}-8𝒌\\left (𝒉^{2}+𝒌^{2}\\right )-11𝒌^{2}=0\\leftarrow$ Quadratic in $𝒙$\n\n$𝒙_{1}𝒙_{2}=\\frac{\\left (𝒉^{2}+𝒌^{2}\\right )^{2}-8𝒌\\left (𝒉^{2}+𝒌^{2}\\right )-11𝒌^{2}}{(𝒉^{2}+𝒌^{2})}\\ldots$. (iii) where $𝒙_{1}$ and $𝒙_{2}$ are the roots of the quadratic\n\nQuadratic in $y$ :\n\n$𝒙^{2}+𝒚^{2}-6𝒙-8𝒚-11=0\\Rightarrow 𝒉^{2}𝒙^{2}+𝒉^{2}𝒚^{2}-6𝒉^{2}𝒙-8𝒉^{2}𝒚-11𝒉^{2}=0$\n\n$\\left (𝒉^{2}+𝒌^{2}-𝒌𝒚\\right )^{2}+𝒉^{2}𝒚^{2}-6𝒉\\left (𝒉^{2}+𝒌^{2}-𝒌𝒚\\right )-8𝒉^{2}𝒚-11𝒉^{2}=0$\n\n$\\left (𝒉^{2}+𝒌^{2}\\right )𝒚^{2}-2𝒚\\left \\{𝒌\\left (𝒉^{2}+𝒌^{2}\\right )+4𝒉^{2}-3𝒉𝒌\\right \\}+\\left (𝒉^{2}+k^{2}\\right )^{2}-6𝒉\\left (𝒉^{2}+k^{2}\\right )-11𝒉^{2}=0$ Quadratic in $𝒚$\n\n$𝒚_{1}𝒚_{2}=\\frac{\\left (h^{2}+k^{2}\\right )^{2}-6h\\left (h^{2}+k^{2}\\right )-11h^{2}}{h^{2}+k^{2}}\\ldots .(𝒊𝒗)$ where $𝒚_{1}$ and $𝒚_{2}$ are the roots of the quadratic\n\nThe variable chord $𝑨𝑩$ with end-points $𝑨(𝒙_{1},𝒚_{1})$ and $𝑩(𝒙_{2},𝒚_{2})$ subtend a right $∡$ at origin.\n\nWe now infer from equations (iii) and (iv) :\n\n$\\left (\\frac{y_{1}}{x_{1}}\\right )\\cdot \\left (\\frac{y_{2}}{x_{2}}\\right )=-1$\n\n$\\Rightarrow \\frac{\\left \\{\\frac{\\left (𝒉2+𝒌2\\right )2-6𝒉\\left (𝒉2+𝒌2\\right )-11𝒉2}{𝒉2+𝒌2}\\right \\}}{\\left \\{\\frac{\\left (𝒉2+𝒌2\\right )2-8𝒌\\left (𝒉2+𝒌2\\right )-11𝒌2}{\\left (𝒉2+𝒌2\\right )}\\right \\}}=-1$\n\n$\\Rightarrow \\frac{\\left (𝒉^{2}+𝒌^{2}\\right )^{2}-6𝒉\\left (𝒉^{2}+𝒌^{2}\\right )-11𝒉^{2}}{(𝒉^{2}+𝒌^{2})^{2}-8𝒌(𝒉^{2}+𝒌^{2})-11𝒌^{2}}=-1$\n\n$\\Rightarrow$ $\\left (𝒉^{2}+𝒌^{2}\\right )^{2}-6𝒉\\left (𝒉^{2}+𝒌^{2}\\right )-11𝒉^{2}=-\\left \\{\\left (𝒉^{2}+𝒌^{2}\\right )^{2}-8𝒌\\left (𝒉^{2}+𝒌^{2}\\right )-11𝒌^{2}\\right \\}$\n\n$\\Rightarrow$ $2\\left (𝒉^{2}+𝒌^{2}\\right )^{2}-\\left (𝒉^{2}+𝒌^{2}\\right )(6𝒉+8𝒌)-11\\left (𝒉^{2}+𝒌^{2}\\right )=0$\n\n$\\Rightarrow$ $2\\left (h^{2}+k^{2}\\right )\\cdot \\left (h^{2}+k^{2}-3h-4k-\\frac{11}{2}\\right )=0$\n\n$\\Rightarrow$ $𝒉^{2}+𝒌^{2}-3𝒉-4𝒌-\\frac{11}{2}=0\\leftarrow 𝒉^{2}+𝒌^{2}\\neq 0[\\because 𝑭(𝒉,𝒌)$ is not the origin $]$\n\n$\\Rightarrow$ $x^{2}+y^{2}-3x-4y-\\frac{11}{2}=0\\ldots ..(𝒗)\\leftarrow$ Locus of $F(h,k)$\n\nThe circle $C:𝒙^{2}+𝒚^{2}-𝜶𝒙-𝜷𝒚-𝝀=0$ be the locus of $𝑭(𝒉,𝒌)$ which must be equivalent to equation $(𝒗)$ :\n\n$\\therefore$ $𝒙^{2}+𝒚^{2}-𝜶𝒙-𝜷𝒚-𝝀\\equiv 𝒙^{2}+𝒚^{2}-3𝒙-4𝒚-\\frac{11}{2}$\n\n$\\Rightarrow \\begin{array}{lllll} 𝜶 & 𝜷 & 𝝀 & 2𝝀 & 𝜶+𝜷+2𝝀 \\\\ 3 & 4 & \\frac{11}{2} & 11 & 18 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-8th-april-evening-shift/mnsik68a-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 8th April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-mnsik68s",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $f$ be a polynomial function such that $\\log _{2}(f(x))=\\left (\\log _{2}\\left (2+\\frac{2}{3}+\\frac{2}{9}+\\ldots \\ldots \\infty \\right )\\right )\\cdot \\log _{3}\\left (1+\\frac{f(x)}{f(1/x)}\\right ),x>0$ and $f(6)=37$. Then $\\sum\\limits _{\\mathrm{n}=1}^{10}f(\\mathrm{n})$ is equal to $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 395.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 8th April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Statement of Work :\n\n1. $𝒇(𝒙)$ is a polynomial function\n\n2. A logarithmic equation involving function $\\left. f:\\log _{2}[f(x)]=\\left [\\log _{2}\\left (2+\\frac{2}{3}+\\frac{2}{9}+\\ldots ..\\infty \\right )\\right ]\\cdot \\log _{3}\\left \\{1+\\frac{𝒇(𝒙)}{f\\left (\\frac{1}{𝒙}\\right )}\\right \\}\\right ];x>0$ and $𝒇(6)=37$\n\n3. To evaluate the sum : $\\sum\\limits _{n=1}^{10}𝒇(n)$\n\n$\\left.  \\left. \\begin{array}{ll} \\log _{2}[𝒇(𝒙)] & =\\left [\\log _{2}\\left (2+\\dfrac{2}{3}+\\dfrac{2}{9}+\\ldots .\\infty \\right )\\right ]\\cdot \\left [\\log _{3}\\left \\{1+\\dfrac{𝒇(𝒙)}{𝒇\\left (\\frac{1}{𝒙}\\right )}\\right \\}\\right ] \\\\ =\\left [\\log _{2}2\\left \\{1+\\dfrac{1}{3}+\\left (\\dfrac{1}{3}\\right )^{2}+\\ldots ..\\infty \\right \\}\\right ]\\cdot \\left |~\\log _{3}\\left \\{1+\\dfrac{𝒇(𝒙)}{𝒇\\left (\\frac{1}{𝒙}\\right )}\\right \\}\\right ]. \\\\ =\\left [\\log _{2}2\\left (\\dfrac{1}{1-\\frac{1}{3}}\\right )\\right ]\\cdot \\left [\\log _{3}\\left \\{1+\\dfrac{𝒇(𝒙)}{𝒇\\left (\\frac{1}{𝒙}\\right )}\\right \\}\\right ] \\\\ =[\\log _{2}3]\\cdot \\right |~\\log _{3}\\left \\{1+\\dfrac{𝒇(𝒙)}{𝒇\\left (\\frac{1}{𝒙}\\right )}\\right \\}\\right ] \\end{array}$\n\n$\\frac{\\log _{2}[f(x)]}{\\log _{2}3}=\\left [\\log _{3}\\left \\{1+\\frac{f(x)}{f\\left (\\frac{1}{x}\\right )}\\right )\\right ]$\n\n$\\Rightarrow \\log _{3}[f(x)]=\\log _{3}\\left \\{1+\\frac{𝒇(𝒙)}{f\\left (\\frac{1}{𝒙}\\right )}\\right \\}$\n\n$\\Rightarrow f(x)=1+\\frac{f(x)}{f\\left (\\frac{1}{x}\\right )}$\n\n$\\Rightarrow$ $f(x)\\cdot f\\left (\\frac{1}{x}\\right )=f(x)+f\\left (\\frac{1}{x}\\right )$ .....(i)\n\nThe function $𝒇(𝒙)$ is a polynomial function stated in SOW where $𝒇(6)=37=(6)^{2}+1\\ldots ..(𝒊𝒊)$ \n\nEquation (ii) on logical analysis reduces the polynomial $𝒇(𝒙)$ to the possible form below : \n\n$f(x)=x^{2}+1\\ldots \\ldots (iii)\\leftarrow$ Cubic powers of $x$ is not possible where $f(6)>216$ \n\nNow let us analyze the polynomial function $𝒇(𝒙)$ from preconditions set in SOW :\n\n$f(x)\\cdot f\\left (\\frac{1}{x}\\right )=\\left (1+x^{2}\\right )\\cdot \\left (1+\\frac{1}{x^{2}}\\right )=1+\\frac{1}{x^{2}}+x^{2}+1=\\left (1+x^{2}\\right )+\\left (1+\\frac{1}{x^{2}}\\right )=f(x)+f\\left (\\frac{1}{x}\\right )\\ldots .(iv)$\n\nEquation $(ii),(iii)$ and $(iv)$ mathematically certify the polynomial $f(x)=1+x^{2}$ :\n\n$f(x)=1+x^{2}$\n\n$\\Rightarrow s_{10}=\\sum\\limits _{n=1}^{10}f(𝒏)=\\sum\\limits _{𝒏=1}^{10}\\left (1+𝒏^{2}\\right )=\\sum\\limits _{𝒏=1}^{10}(1)+\\sum\\limits _{n=1}^{10}\\left (n^{2}\\right )$\n\n$=10+\\frac{(10)\\cdot (10+1)\\cdot \\{(2)\\cdot (10)+1\\}}{6}=10+385=395$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 8th April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

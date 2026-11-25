@@ -1,0 +1,1253 @@
+[
+ {
+  "publicId": "PYQ-2024-luy9clsu",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-waves",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A plane EM wave is propagating along $x$ direction. It has a wavelength of $4\\mathrm{mm}$. If electric field is in $y$ direction with the maximum magnitude of $60\\mathrm{Vm}^{-1}$, the equation for magnetic field is :",
+  "options": [
+   "$\\mathrm{B}_{z}=2\\times 10^{-7}\\sin \\left [\\frac{π}{2}\\left (x-3\\times 10^{8}\\mathrm{t}\\right )\\right ]\\hat{\\mathrm{k}}\\mathrm{T}$",
+   "$\\mathrm{B}_{z}=2\\times 10^{-7}\\sin \\left [\\frac{π}{2}\\times 10^{3}\\left (x-3\\times 10^{8}\\mathrm{t}\\right )\\right ]\\hat{\\mathrm{k}}\\mathrm{T}$",
+   "$\\mathrm{B}_{z}=60\\sin \\left [\\frac{π}{2}\\left (x-3\\times 10^{8}\\mathrm{t}\\right )\\right ]\\hat{\\mathrm{k}}\\mathrm{T}$",
+   "$\\mathrm{B}_{x}=60\\sin \\left [\\frac{π}{2}\\left (x-3\\times 10^{8}\\mathrm{t}\\right )\\right ]\\hat{\\mathrm{i}}\\mathrm{T}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 61,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the correct equation for the magnetic field of the plane electromagnetic wave given its parameters, we can use a couple of known relationships from electromagnetism.\n\nFirstly, the wavelength ($λ$) of the wave is given as $4\\mathrm{mm}=4\\times 10^{-3}\\mathrm{m}$. The speed of light (and all electromagnetic waves in vacuum) is $c=3\\times 10^{8}\\mathrm{m}/\\mathrm{s}$. Using these values, we can find the frequency ($f$) of the wave using the relationship:\n\n$c=λf$\n\n$f=\\frac{c}{λ}=\\frac{3\\times 10^{8}}{4\\times 10^{-3}}=75\\times 10^{9}\\mathrm{Hz}$\n\nThe angular frequency ($ω$) which appears in wave equations is related to the frequency by $ω=2πf$. However, in this context, what we need is the wave vector ($k$), which defines how the phase of the wave changes with space. The wave vector $k=\\frac{2π}{λ}$. So, for this wave, $k=\\frac{2π}{4\\times 10^{-3}}=\\frac{π}{2}\\times 10^{3}\\mathrm{m}^{-1}$.\n\nKnowing that the electric field ($𝐄$) and magnetic field ($𝐁$) are related as $E=cB$ in a vacuum, where $E$ and $B$ are the magnitudes of the electric and magnetic fields, respectively, we can calculate the magnitude of the magnetic field using the provided maximum electric field magnitude ($E=60\\mathrm{Vm}^{-1}$).\n\n$B=\\frac{E}{c}=\\frac{60}{3\\times 10^{8}}=2\\times 10^{-7}\\mathrm{T}$\n\nTherefore, the wave equation for the magnetic field, considering it propagates in the $x$-direction and oscillates in a direction perpendicular to both the $x$-direction and the direction of the electric field (thus, in the $z$-direction if $𝐄$ is in the $y$-direction), is:\n\n$𝐁=B\\sin (kx-ωt)\\hat{𝐤}$\n\n$𝐁=2\\times 10^{-7}\\sin \\left (\\frac{π}{2}\\times 10^{3}(x-3\\times 10^{8}t)\\right )\\hat{𝐤}\\mathrm{T}$\n\nThis is represented by Option B:\n\n$\\mathrm{B}_{z}=2\\times 10^{-7}\\sin \\left [\\frac{π}{2}\\times 10^{3}\\left (x-3\\times 10^{8}\\mathrm{t}\\right )\\right ]\\hat{\\mathrm{k}}\\mathrm{T}$\n\nTherefore, the correct answer is Option B.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luy9clvj",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A galvanometer has a coil of resistance $200\\Omega$ with a full scale deflection at $20μ\\mathrm{A}$. The value of resistance to be added to use it as an ammeter of range $(0-20)\\mathrm{mA}$ is :",
+  "options": [
+   "$0.40\\Omega$",
+   "$0.10\\Omega$",
+   "$0.20\\Omega$",
+   "$0.50\\Omega$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 62,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To convert a galvanometer into an ammeter, we need to add a shunt resistance in parallel with the galvanometer's coil. The purpose of the shunt resistance is to bypass the majority of the current while allowing only a small fraction of it to pass through the galvanometer, thereby preventing it from being damaged by high currents.\n\nGiven parameters:\n\nResistance of the galvanometer's coil, $R_{g}=200\\Omega$\n\nFull-scale deflection current of the galvanometer, $I_{g}=20μ\\mathrm{A}=20\\times 10^{-6}\\mathrm{A}$\n\nDesired ammeter range, $I=20\\mathrm{mA}=20\\times 10^{-3}\\mathrm{A}$\n\nThe shunt resistance, $R_{s}$, can be calculated using the formula:\n\n$\\frac{R_{s}}{R_{g}+R_{s}}=\\frac{I_{g}}{I}$\n\nSolving for $R_{s}$:\n\n$R_{s}=R_{g}\\left (\\frac{I_{g}}{I-I_{g}}\\right )$\n\nSubstituting the given values:\n\n$R_{s}=200\\left (\\frac{20\\times 10^{-6}}{20\\times 10^{-3}-20\\times 10^{-6}}\\right )$\n\nSimplifying the expression:\n\n$R_{s}=200\\left (\\frac{20\\times 10^{-6}}{19.98\\times 10^{-3}}\\right )$\n\n$R_{s}\\approx 200\\left (\\frac{20\\times 10^{-6}}{20\\times 10^{-3}}\\right )=200\\left (\\frac{1}{1000}\\right )=0.20\\Omega$\n\nTherefore, the value of the resistance to be added to use the galvanometer as an ammeter of range $(0-20)\\mathrm{mA}$ is $0.20\\Omega$. Thus, the correct answer is:\n\nOption C: $0.20\\Omega$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luy9clxz",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The dimensional formula of latent heat is :",
+  "options": [
+   "$\\left [\\mathrm{M}^{0}\\mathrm{LT}^{-2}\\right ]$",
+   "$\\left [\\mathrm{MLT}^{-2}\\right ]$",
+   "$\\left [\\mathrm{M}^{0}\\mathrm{L}^{2}\\mathrm{T}^{-2}\\right ]$",
+   "$\\left [\\mathrm{ML}^{2}\\mathrm{T}^{-2}\\right ]$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 63,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To derive the dimensional formula of latent heat, we need to understand what latent heat actually refers to. Latent heat is the amount of heat absorbed or released by a substance during a change in its physical state (phase) that occurs without changing its temperature.\n\nThe formula for latent heat ($L$) is given by:\n\n$Q=mL$\n\nwhere:\n\n$Q$ = Heat absorbed or released (with the dimension of energy $[\\mathrm{ML}^{2}\\mathrm{T}^{-2}]$),\n\n$m$ = Mass of the substance ($[\\mathrm{M}]$),\n\n$L$ = Latent heat.\n\nTo find the dimensions of latent heat, we rearrange the formula to solve for $L$:\n\n$L=\\frac{Q}{m}$\n\nKnowing the dimensions of $Q$ (energy, which is equivalent to work done, with dimensions $[\\mathrm{ML}^{2}\\mathrm{T}^{-2}]$) and $m$ (mass, with dimensions $[\\mathrm{M}]$), we can substitute these into the equation to find $L$'s dimensions:\n\n$L=\\frac{[\\mathrm{ML}^{2}\\mathrm{T}^{-2}]}{[\\mathrm{M}]}$\n\nThis simplifies to:\n\n$L=[\\mathrm{L}^{2}\\mathrm{T}^{-2}]$\n\nTherefore, the dimensional formula of latent heat is:\n\n$L=[\\mathrm{M}^{0}\\mathrm{L}^{2}\\mathrm{T}^{-2}]$\n\nSo, the correct option is:\n\nOption C $\\left [\\mathrm{M}^{0}\\mathrm{L}^{2}\\mathrm{T}^{-2}\\right ]$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luy9cm0f",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A sphere of relative density $σ$ and diameter $D$ has concentric cavity of diameter $d$. The ratio of $\\frac{D}{d}$, if it just floats on water in a tank is :",
+  "options": [
+   "$\\left (\\frac{σ-2}{σ+2}\\right )^{1/3}$",
+   "$\\left (\\frac{σ+1}{σ-1}\\right )^{1/3}$",
+   "$\\left (\\frac{σ-1}{σ}\\right )^{1/3}$",
+   "$\\left (\\frac{σ}{σ-1}\\right )^{1/3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 64,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve this problem, we consider the buoyancy and weight force acting on the sphere. For the sphere to just float on water, the weight of the water displaced by the sphere must be equal to the weight of the sphere. The volume of water displaced by the sphere is equivalent to the outer volume of the sphere minus the volume of the cavity inside it.\n\nThe volume of a sphere is given by $V=\\frac{4}{3}πr^{3}$, where $r$ is the radius of the sphere. For the given sphere, its outer radius is $R=\\frac{D}{2}$, and the radius of the cavity is $r=\\frac{d}{2}$. Therefore, the volume of the sphere excluding the cavity is:\n\n$V_{\\text{solid part}}=\\frac{4}{3}πR^{3}-\\frac{4}{3}πr^{3}$\n\n$V_{\\text{solid part}}=\\frac{4}{3}π\\left (\\frac{D}{2}\\right )^{3}-\\frac{4}{3}π\\left (\\frac{d}{2}\\right )^{3}$\n\nRelative density ($σ$) is defined as the ratio of the density of an object to the density of water. This means the actual density of the sphere is $σ\\times \\text{density of water}$. Since the object just floats, the weight of the displaced water is equal to the weight of the solid part of the sphere (ignoring the cavity), which can be mathematically represented as:\n\n$\\text{Weight of solid part}=\\text{Weight of displaced water}$\n\n$σ\\cdot ρ_{\\text{water}}\\cdot V_{\\text{solid part}}\\cdot g=ρ_{\\text{water}}\\cdot V_{\\text{displaced water}}\\cdot g$\n\nSince the sphere is floating, $V_{\\text{displaced water}}=\\frac{4}{3}πR^{3}$, the equation simplifies to:\n\n$σ\\left (\\frac{4}{3}πR^{3}-\\frac{4}{3}πr^{3}\\right )=\\frac{4}{3}πR^{3}$\n\nCancelling out common terms gives:\n\n$σ(R^{3}-r^{3})=R^{3}$\n\nGiven that $σ$ is the relative density, we can rearrange the equation to solve for the ratio of $D/d$ or equivalently $R/r$:\n\n$σ=\\frac{R^{3}}{R^{3}-r^{3}}$\n\nSolving for $R/r$:\n\n$R^{3}(1-σ)+σr^{3}=0$\n\n$\\frac{R^{3}}{r^{3}}=\\frac{σ}{σ-1}$\n\nSince $R=\\frac{D}{2}$ and $r=\\frac{d}{2}$, the ratio of $D/d$ is equal to the ratio of $R/r$, thus:\n\n$\\frac{D}{d}=\\left (\\frac{σ}{σ-1}\\right )^{1/3}$\n\nThis matches Option D:\n\n$\\left (\\frac{σ}{σ-1}\\right )^{1/3}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luy9cm2x",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The volume of an ideal gas $(γ=1.5)$ is changed adiabatically from 5 litres to 4 litres. The ratio of initial pressure to final pressure is :",
+  "options": [
+   "$\\frac{4}{5}$",
+   "$\\frac{8}{5\\sqrt{5}}$",
+   "$\\frac{2}{\\sqrt{5}}$",
+   "$\\frac{16}{25}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 65,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the ratio of the initial pressure to the final pressure of an ideal gas undergoing an adiabatic process, we can use the adiabatic equation for an ideal gas, which relates pressure (P) and volume (V) as follows:\n\n$P_{1}V_{1}^{γ}=P_{2}V_{2}^{γ}$\n\nHere, $P_{1}$ and $V_{1}$ are the initial pressure and volume, respectively, $P_{2}$ and $V_{2}$ are the final pressure and volume, respectively, and $γ$ is the heat capacity ratio of the gas.\n\nGiven in the question, $γ=1.5$, $V_{1}=5$ litres and $V_{2}=4$ litres. We need to find the ratio $\\frac{P_{1}}{P_{2}}$.\n\nRearranging the adiabatic equation for the ratio $\\frac{P_{1}}{P_{2}}$, we get:\n\n$P_{1}V_{1}^{γ}=P_{2}V_{2}^{γ}\\Rightarrow \\frac{P_{1}}{P_{2}}=\\left (\\frac{V_{2}}{V_{1}}\\right )^{γ}$\n\nSubstituting the given values:\n\n$\\frac{P_{1}}{P_{2}}=\\left (\\frac{V_{2}}{V_{1}}\\right )^{γ}=\\left (\\frac{4}{5}\\right )^{1.5}$\n\nTo calculate the value:\n\n$\\frac{P_{1}}{P_{2}}=\\left (\\frac{4}{5}\\right )^{1.5}=\\left (\\frac{4}{5}\\right )^{\\frac{3}{2}}$\n\nSimplifying further:\n\n$\\frac{P_{1}}{P_{2}}=\\left (\\frac{2^{2}}{5}\\right )^{\\frac{3}{2}}=\\left (\\frac{2^{3}}{5^{\\dfrac{3}{2}}}\\right )=\\frac{8}{5\\sqrt{5}}$\n\nTherefore, the ratio of the initial pressure to the final pressure is $\\frac{8}{5\\sqrt{5}}$, which corresponds to Option B.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luy9cm5p",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electronic-devices",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A light emitting diode (LED) is fabricated using GaAs semiconducting material whose band gap is $1.42\\mathrm{eV}$. The wavelength of light emitted from the LED is :",
+  "options": [
+   "1243 nm",
+   "875 nm",
+   "650 nm",
+   "1400 nm"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 66,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electronic devices"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The wavelength of light emitted by a Light Emitting Diode (LED) fabricated using a semiconducting material can be determined by the energy band gap of the material. The energy of the photon emitted, which corresponds to the band gap energy, is given by the equation:\n\n$E=\\frac{hc}{λ}$\n\nWhere:\n\n$E$ is the energy of the emitted photon (in joules when $h$ and $c$ are in SI units), corresponding to the band gap energy of the material.\n\n$h$ is Planck's constant ($6.626\\times 10^{-34}\\mathrm{m}^{2}\\mathrm{kg}/\\mathrm{s}$).\n\n$c$ is the speed of light in vacuum ($3.0\\times 10^{8}\\mathrm{m}/\\mathrm{s}$).\n\n$λ$ is the wavelength of the emitted light (in meters).\n\nHowever, since the energy band gap given is in electronvolts (eV), and we are looking for the wavelength in nanometers (nm), we can use the energy formula directly in terms of eV and then do the unit conversion conveniently. The conversion between energy (in eV) and wavelength (in nm) without needing to convert eV to Joules is facilitated by the equation:\n\n$λ(\\mathrm{nm})=\\frac{1240}{E(\\mathrm{eV})}$\n\nHere, 1240 nm·eV is a conversion factor used for directly converting energy in eV to wavelength in nm.\n\nGiven the band gap energy of GaAs is $1.42\\mathrm{eV}$, the wavelength ($λ$) of light emitted can be found as:\n\n$λ=\\frac{1240}{1.42}=873.24\\mathrm{nm}$\n\nThus, the wavelength of light emitted from the LED is approximately 873.24 nm, which is closest to:\n\nOption B: 875 nm.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luyit9wg",
+  "subjectKey": "physics",
+  "chapterKey": "physics:work-energy-power",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A particle of mass $m$ moves on a straight line with its velocity increasing with distance according to the equation $v=α\\sqrt{x}$, where $α$ is a constant. The total work done by all the forces applied on the particle during its displacement from $x=0$ to $x=\\mathrm{d}$, will be :",
+  "options": [
+   "$\\frac{\\mathrm{m}}{2α^{2}\\mathrm{d}}$",
+   "$\\frac{\\mathrm{md}}{2α^{2}}$",
+   "$\\frac{\\mathrm{m}α^{2}\\mathrm{d}}{2}$",
+   "$2\\mathrm{m}α^{2}\\mathrm{d}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 67,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "work power and energy"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the total work done by all forces applied on the particle during its displacement, we can use the work-energy theorem which states that the work done by all forces on an object is equal to the change in kinetic energy of the object. So, we first need to find the initial and final kinetic energies of the particle and then calculate the work done.\n\nThe velocity of the particle is given by $v=α\\sqrt{x}$,\n\nand the kinetic energy $K$ of the particle is given by $K=\\frac{1}{2}mv^{2}$. We can substitute the expression for $v$ into this formula to get the kinetic energy as a function of position $x$:\n\n$K(x)=\\frac{1}{2}m(α\\sqrt{x})^{2}=\\frac{1}{2}mα^{2}x$\n\nTo find the total work done from $x=0$ to $x=d$, we need to compute the difference in kinetic energy between these two points:\n\n$W=K(d)-K(0)$\n\nAt $x=d$,\n\n$K(d)=\\frac{1}{2}mα^{2}d$\n\nAt $x=0$, since the particle starts from this position,\n\n$K(0)=\\frac{1}{2}mα^{2}(0)=0$\n\nSo, the work done $W$ is simply the kinetic energy at $x=d$,\n\n$W=\\frac{1}{2}mα^{2}d-0=\\frac{1}{2}mα^{2}d$\n\nThis matches with Option C:\n\n$\\frac{mα^{2}d}{2}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luyit8bo",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given below are two statements :\n\nStatement (I) : When currents vary with time, Newton's third law is valid only if momentum carried by the electromagnetic field is taken into account\n\nStatement (II) : Ampere's circuital law does not depend on Biot-Savart's law.\n\nIn the light of the above statements, choose the correct answer from the options given below :",
+  "options": [
+   "Both Statement I and Statement II are false",
+   "Statement I is false but Statement II is true",
+   "Both Statement I and Statement II are true",
+   "Statement I is true but Statement II is false"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 68,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's analyze each statement in detail to determine the correct answer:\n\nStatement (I) : \"When currents vary with time, Newton's third law is valid only if momentum carried by the electromagnetic field is taken into account.\" This statement is true. According to physics, particularly when dealing with electromagnetism and Maxwell's equations, the momentum of the electromagnetic field plays a critical role in conserving momentum in systems where electromagnetic forces are at play. In situations where electric and magnetic fields vary with time, they can carry momentum. Thus, for the conservation laws to hold, including Newton's third law which states that for every action, there is an equal and opposite reaction, the momentum carried by the electromagnetic fields must be included. This is essential in scenarios such as radiation pressure where light (which can be considered an electromagnetic wave) exerts pressure on surfaces, thereby imparting momentum.\n\nStatement (II) : \"Ampere's circuital law does not depend on Biot-Savart's law.\" This statement is false. Historically and mathematically, Ampère's Circuital Law and Biot-Savart Law are closely related in the context of classical electromagnetism. Ampère's Law, particularly in its integral form, relates the integrated magnetic field around a closed loop to the electric current passing through the loop. Biot-Savart Law, on the other hand, is used to calculate the magnetic field generated by a current-carrying element at a point in space. Although Ampère's Law can be derived without directly invoking the Biot-Savart Law, the fundamental understanding and derivations of magnetic fields due to currents, as presented in many textbooks and formulations, show that both laws are manifestations of how moving charges produce magnetic fields. Moreover, the formulation of Ampère's Law was later extended by Maxwell (Maxwell's addition) to include the concept of displacement current, linking it more fundamentally to the changing electric fields and closing a conceptual loop that ties it to the broader electromagnetic theory that includes the effects described by the Biot-Savart Law.\n\nGiven the above explanations:\n\nOption D (Statement I is true but Statement II is false) is the correct answer.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luyita7s",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A particle moving in a straight line covers half the distance with speed $6\\mathrm{m}/\\mathrm{s}$. The other half is covered in two equal time intervals with speeds $9\\mathrm{m}/\\mathrm{s}$ and $15\\mathrm{m}/\\mathrm{s}$ respectively. The average speed of the particle during the motion is :",
+  "options": [
+   "9.2 m/s",
+   "8.8 m/s",
+   "10 m/s",
+   "8 m/s"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 69,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "motion in a straight line"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's denote the total distance covered by the particle as $2d$, where $d$ is the distance for each half. To calculate the average speed, we need to find the total distance traveled and divide it by the total time taken.\n\nFor the first half of the journey, the particle covers the distance $d$ at a speed of $6~\\text{m/s}$. The time taken for this part of the journey can be calculated using the formula $\\text{time}=\\frac{\\text{distance}}{\\text{speed}}$. So,\n\n$\\text{time}_{1}=\\frac{d}{6}$\n\nFor the second half of the journey, the distance $d$ is further divided into two parts, each covered in equal time intervals. Given the speeds are $9~\\text{m/s}$ and $15\\quad \\text{m/s}$ respectively, let's call the equal time intervals $t$. The distances covered in these intervals can be found by $\\text{distance}=\\text{speed}\\times \\text{time}$.\n\nFor the part covered at $9~\\text{m/s}$:\n\n$d_{1}=9t$\n\nFor the part covered at $15\\quad \\text{m/s}$:\n\n$d_{2}=15t$\n\nSince these two parts together make up the second half of the journey,\n\n$d_{1}+d_{2}=d$\n\n$9t+15t=d$\n\nThis gives us $24t=d$, and from this, we can find $t=\\frac{d}{24}$.\n\nThe total time for the second half of the journey is the sum of the times for the two parts, which are equal ($t$ each), so the total time for the second half is $2t$. Since $t=\\frac{d}{24}$,\n\n$\\text{time}_{2}=2\\times \\frac{d}{24}=\\frac{d}{12}$\n\nThe total time taken for the entire journey is the sum of the times for the first and second halves:\n\n$\\text{total time}=\\text{time}_{1}+\\text{time}_{2}=\\frac{d}{6}+\\frac{d}{12}$\n\n$\\text{total time}=\\frac{2d}{12}+\\frac{d}{12}=\\frac{3d}{12}=\\frac{d}{4}$\n\nThe total distance is $2d$, and the total time is $\\frac{d}{4}$. Therefore, the average speed is calculated as:\n\n$\\text{average speed}=\\frac{\\text{total distance}}{\\text{total time}}=\\frac{2d}{\\frac{d}{4}}=\\frac{2d}{1}\\times \\frac{4}{d}=8\\text{m/s}$\n\nThus, the correct answer is Option D: 8 m/s.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luyitaa6",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given below are two statements :\n\nStatement (I) : When an object is placed at the centre of curvature of a concave lens, image is formed at the centre of curvature of the lens on the other side.\n\nStatement (II) : Concave lens always forms a virtual and erect image.\n\nIn the light of the above statements, choose the correct answer from the options given below :",
+  "options": [
+   "Statement I is false but Statement II is true",
+   "Both Statement I and Statement II are false",
+   "Both Statement I and Statement II are true",
+   "Statement I is true but Statement II is false"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 70,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's analyze each statement carefully:\n\nStatement (I): When an object is placed at the centre of curvature of a concave lens, image is formed at the centre of curvature of the lens on the other side.\n\nTo understand this statement, let's recall the nature of images formed by concave lenses. A concave lens (diverging lens) always forms images that are virtual, erect, and smaller than the object, regardless of the object's position. The term \"centre of curvature\" is typically associated with mirrors rather than lenses. Therefore, this statement is incorrect because a concave lens does not form a real image that could be said to be at the centre of curvature on the other side.\n\nStatement (II): Concave lens always forms a virtual and erect image.\n\nNow, considering the second statement, a concave lens (diverging lens) indeed always forms virtual, erect, and diminished images. This is a fundamental property of concave lenses.\n\nGiven this analysis:\n\nThe correct answer is Option A: Statement I is false but Statement II is true.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luyit8ee",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A sample of 1 mole gas at temperature $T$ is adiabatically expanded to double its volume. If adiabatic constant for the gas is $γ=\\frac{3}{2}$, then the work done by the gas in the process is :",
+  "options": [
+   "$\\mathrm{R}\\mathrm{T}[2+\\sqrt{2}]$",
+   "$\\mathrm{RT}[2-\\sqrt{2}]$",
+   "$\\frac{\\mathrm{R}}{\\mathrm{T}}[2-\\sqrt{2}]$",
+   "$\\frac{T}{R}[2+\\sqrt{2}]$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 71,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For an adiabatic process, the work done by the gas can be found using the formula:\n\n$W=\\frac{P_{1}V_{1}-P_{2}V_{2}}{γ-1}$\n\nGiven that the volume is doubled ($V_{2}=2V_{1}$) and the adiabatic constant $γ=\\frac{3}{2}$, we can manipulate the ideal gas law and the adiabatic process relationship to find an expression for work done in terms of the initial conditions and $γ$.\n\nRecall, for an adiabatic process, $PV^{γ}=\\text{constant}$, so we can write:\n\n$P_{1}V_{1}^{γ}=P_{2}V_{2}^{γ}$\n\nUsing the fact that $V_{2}=2V_{1}$, we can express $P_{2}$ in terms of $P_{1}$ and $V_{1}$ as follows:\n\n$P_{1}V_{1}^{γ}=P_{2}(2V_{1})^{γ}$\n\n$P_{2}=P_{1}\\left (\\frac{V_{1}}{2V_{1}}\\right )^{γ}$\n\n$P_{2}=P_{1}\\left (\\frac{1}{2}\\right )^{γ}$\n\nThe work done then becomes:\n\n$W=\\frac{P_{1}V_{1}-P_{1}\\left (\\frac{1}{2}\\right )^{γ}\\cdot 2V_{1}}{γ-1}$\n\n$W=P_{1}V_{1}\\frac{1-\\left (\\frac{1}{2}\\right )^{γ}\\cdot 2}{γ-1}$\n\nPlugging in $γ=\\frac{3}{2}$, we get:\n\n$W=P_{1}V_{1}\\frac{1-\\left (\\frac{1}{2}\\right )^{\\dfrac{3}{2}}\\cdot 2}{\\frac{3}{2}-1}$\n\n$W=P_{1}V_{1}\\frac{1-\\sqrt{\\frac{1}{2}}\\cdot 2}{\\frac{1}{2}}$\n\n$W=2P_{1}V_{1}(1-\\sqrt{\\frac{1}{2}})$\n\nSince $P_{1}V_{1}=nRT$ for 1 mole ($n=1$) of gas at temperature $T$, we can further simplify:\n\n$W=2RT(1-\\sqrt{\\frac{1}{2}})$\n\n$W=2RT(1-\\frac{1}{\\sqrt{2}})$\n\n$W=RT(2-\\sqrt{2})$\n\nTherefore, the correct option is:\n\nOption B $\\mathrm{RT}[2-\\sqrt{2}]$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luyitai0",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A capacitor is made of a flat plate of area A and a second plate having a stair-like structure as shown in figure. If the area of each stair is $\\frac{A}{3}$ and the height is $d$, the capacitance of the arrangement is :\n\n\n[IMG]",
+  "options": [
+   "$\\frac{11𝜖_{\\mathrm{o}}\\mathrm{A}}{20\\mathrm{d}}$",
+   "$\\frac{13𝜖_{\\mathrm{o}}\\mathrm{A}}{17\\mathrm{d}}$",
+   "$\\frac{18𝜖_{\\mathrm{o}}\\mathrm{A}}{11\\mathrm{d}}$",
+   "$\\frac{11𝜖_{\\mathrm{o}}\\mathrm{A}}{18\\mathrm{d}}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 72,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "capacitor"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The flat plate of area $A$ faces three steps, each of area $\\dfrac{A}{3}$, at separations $d$, $2d$ and $3d$ from it.\n\nEach step forms a capacitor with the part of the flat plate facing it. All three share the same two plates and hence the same potential difference, so they are in parallel:\n\n$C=\\dfrac{ε_{0}(A/3)}{d}+\\dfrac{ε_{0}(A/3)}{2d}+\\dfrac{ε_{0}(A/3)}{3d}$\n\n$C=\\dfrac{ε_{0}A}{d}\\left (\\dfrac{1}{3}+\\dfrac{1}{6}+\\dfrac{1}{9}\\right )=\\dfrac{ε_{0}A}{d}\\cdot \\dfrac{6+3+2}{18}=\\dfrac{11\\quad ε_{0}A}{18\\quad d}$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-9th-april-morning-shift/luyitai0-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 9th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-luyita15",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "One main scale division of a vernier caliper is equal to $\\mathrm{m}$ units. If $\\mathrm{n}^{\\text{th}}$ division of main scale coincides with $(n+1)^{\\text{th}}$ division of vernier scale, the least count of the vernier caliper is :",
+  "options": [
+   "$\\frac{1}{(\\mathrm{n}+1)}$",
+   "$\\frac{m}{(n+1)}$",
+   "$\\frac{n}{(n+1)}$",
+   "$\\frac{\\mathrm{m}}{\\mathrm{n}(\\mathrm{n}+1)}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 73,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The least count of a vernier caliper is defined as the smallest distance that it can measure and is calculated by the difference in length between one main scale division and one vernier scale division. It can be represented as:\n\n$\\text{Least Count}=\\text{Main scale division}-\\text{Vernier scale division}$\n\nGiven that one main scale division is equal to $\\mathrm{m}$ units and the $\\mathrm{n}^{\\text{th}}$ division of main scale coincides with the $(n+1)^{\\text{th}}$ division of the vernier scale, this means that $n$ divisions on the main scale is equal to $(n+1)$ divisions on the vernier scale.\n\nSince one main scale division is $\\mathrm{m}$ units, $n$ divisions on the main scale would be $n\\times \\mathrm{m}$ units. If $n$ divisions on the main scale are equal to $(n+1)$ divisions on the vernier scale, we can determine the length of one vernier scale division as\n\n$\\text{Length of one vernier scale division}=\\frac{n\\times \\mathrm{m}}{n+1}$\n\nThus, the least count, which is the difference between one main scale division and one vernier scale division, is:\n\n$\\text{Least Count}=\\mathrm{m}-\\frac{n\\times \\mathrm{m}}{n+1}=\\mathrm{m}\\left (1-\\frac{n}{n+1}\\right )=\\mathrm{m}\\left (\\frac{n+1-n}{n+1}\\right )=\\mathrm{m}\\left (\\frac{1}{n+1}\\right )$\n\nThis simplifies to:\n\n$\\text{Least Count}=\\frac{\\mathrm{m}}{\\mathrm{n}+1}$\n\nTherefore, the correct option is:\n\nOption B: $\\frac{\\mathrm{m}}{\\mathrm{n}+1}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luyit9yv",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A heavy iron bar, of weight $W$ is having its one end on the ground and the other on the shoulder of a person. The bar makes an angle $θ$ with the horizontal. The weight experienced by the person is :",
+  "options": [
+   "$W\\sin θ$",
+   "$W$",
+   "$\\frac{W}{2}$",
+   "$W\\cos θ$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 74,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} mg\\times \\dfrac{L}{2}\\cos θ=N\\times L\\cos θ \\\\ \\Rightarrow N=\\dfrac{mg}{2}=\\dfrac{W}{2} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-9th-april-morning-shift/luyit9yv-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 9th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-luyita5l",
+  "subjectKey": "physics",
+  "chapterKey": "physics:laws-of-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A light unstretchable string passing over a smooth light pulley connects two blocks of masses $m_{1}$ and $m_{2}$. If the acceleration of the system is $\\frac{g}{8}$, then the ratio of the masses $\\frac{m_{2}}{m_{1}}$ is :",
+  "options": [
+   "$5:3$",
+   "$8:1$",
+   "$9:7$",
+   "$4:3$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 75,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "laws of motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the ratio of the masses $\\frac{m_{2}}{m_{1}}$ given that the acceleration of the system is $\\frac{g}{8}$, where $g$ is the acceleration due to gravity, we need to analyze the forces acting on each mass and apply Newton's second law of motion.\n\nFor mass $m_{1}$, the force acting downward (towards the centre of the Earth) is the gravitational force $m_{1}g$, and the tension $T$ acts upward. Its equation of motion, considering downward as positive, can be given by:\n\n$m_{1}g-T=m_{1}a$\n\nFor mass $m_{2}$, the force acting downward is $m_{2}g$, but since it is on the opposite side of the pulley, the tension $T$ is upwards (considering upward movement as positive direction), so we have:\n\n$T-m_{2}g=m_{2}a$\n\nSince the pulley is light and smooth, the tension $T$ is the same on both sides of the pulley. Also, the system accelerates together, so $a=\\frac{g}{8}$.\n\nAdding the two equations to eliminate $T$ gives us:\n\n$m_{1}g-m_{2}g=(m_{1}-m_{2})a$\n\n$g(m_{1}-m_{2})=(m_{1}-m_{2})\\frac{g}{8}$\n\nCanceling out $g$ and dividing both sides by $m_{1}-m_{2}$ (assuming $m_{1}\\neq m_{2}$), we get:\n\n$1=\\frac{1}{8}$\n\nThis simplification doesn't align with finding the ratio directly, indicating a mistake in handling the simultaneous equations relation to $a$ and $T$. Let's correct our approach to finding the ratio of the masses based on the acceleration and tension.\n\nSince the acceleration $a=\\frac{g}{8}$, and considering the system as a whole, the net force causing the acceleration is the difference in gravitational forces on the two masses. This net force provides the system's entire acceleration. Thus, correctly setting up the equations for the system should give:\n\n$m_{2}g-m_{1}g=(m_{1}+m_{2})\\frac{g}{8}$\n\n$g(m_{2}-m_{1})=\\frac{g}{8}(m_{1}+m_{2})$\n\n$8(m_{2}-m_{1})=m_{1}+m_{2}$\n\n$8m_{2}-8m_{1}=m_{1}+m_{2}$\n\n$7m_{2}=9m_{1}$\n\n$\\frac{m_{2}}{m_{1}}=\\frac{9}{7}$\n\nTherefore, the correct ratio of the masses $\\frac{m_{2}}{m_{1}}$ is $9:7$, which corresponds to Option C.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luyita3e",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The energy equivalent of $1\\mathrm{g}$ of substance is :",
+  "options": [
+   "$5.6\\times 10^{26}\\mathrm{MeV}$",
+   "$5.6\\times 10^{12}\\mathrm{MeV}$",
+   "$5.6\\mathrm{eV}$",
+   "$11.2\\times 10^{24}\\mathrm{MeV}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 76,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the energy equivalent of a mass, we use Einstein's mass-energy equivalence principle given by the equation:\n\n$E=mc^{2}$\n\nwhere:\n\n- $E$ is the energy\n\n- $m$ is the mass\n\n- $c$ is the speed of light in a vacuum, which is approximately $3\\times 10^{8}\\mathrm{m}/\\mathrm{s}$\n\nGiven the mass $m=1\\mathrm{g}=1\\times 10^{-3}\\mathrm{kg}$, we can substitute these values into the equation:\n\n$E=(1\\times 10^{-3}\\mathrm{kg})\\times (3\\times 10^{8}\\mathrm{m}/\\mathrm{s})^{2}$\n\nCalculating this, we get:\n\n$E=1\\times 10^{-3}\\times 9\\times 10^{16}$\n\n$E=9\\times 10^{13}\\mathrm{J}$\n\nNext, to convert this energy into electron volts ($\\mathrm{eV}$), we use the conversion factor: $1\\mathrm{J}=6.242\\times 10^{12}\\mathrm{MeV}$.\n\nTherefore:\n\n$E=9\\times 10^{13}\\mathrm{J}\\times 6.242\\times 10^{12}\\mathrm{MeV}/\\mathrm{J}$\n\nCalculating this, we get:\n\n$E=5.6178\\times 10^{26}\\mathrm{MeV}$\n\nTherefore, the energy equivalent of $1\\mathrm{g}$ of a substance is:\n\nOption A: $5.6\\times 10^{26}\\mathrm{MeV}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luyitafd",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The equivalent resistance between A and B is :\n\n\n[IMG]",
+  "options": [
+   "18 $\\Omega$",
+   "27 $\\Omega$",
+   "19 $\\Omega$",
+   "25 $\\Omega$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 77,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Redrawing the circuit\n\n\n[IMG]\n\n\n$\\Rightarrow R_{\\mathrm{eq}}=6+5+8=19\\Omega$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-9th-april-morning-shift/luyitafd-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 9th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2024-online-9th-april-morning-shift/luyitafd-1.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 9th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-luz2u3w3",
+  "subjectKey": "physics",
+  "chapterKey": "physics:gravitation",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An astronaut takes a ball of mass $m$ from earth to space. He throws the ball into a circular orbit about earth at an altitude of $318.5\\mathrm{km}$. From earth's surface to the orbit, the change in total mechanical energy of the ball is $x\\frac{\\mathrm{GM}_{\\mathrm{e}}\\mathrm{m}}{21\\mathrm{R}_{\\mathrm{e}}}$. The value of $x$ is (take $\\mathrm{R}_{\\mathrm{e}}=6370\\mathrm{km})$ :",
+  "options": [
+   "12",
+   "11",
+   "9",
+   "10"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 78,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "gravitation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "At earth surface, $E_{1}=-\\frac{GM_{e}m}{R_{e}}$\n\nin the orbit, $E_{2}=-\\frac{GM_{e}m}{2r}$\n\n$\\begin{array}{ll} \\Delta E & =GM_{e}m\\left [\\dfrac{1}{R_{e}}-\\dfrac{1}{2r}\\right ] \\\\  \\\\ =GM_{e}m\\left [\\dfrac{1}{R_{e}}-\\dfrac{1}{2.1R_{e}}\\right ] \\\\  \\\\ =\\dfrac{11}{21}\\dfrac{GM_{e}m}{R_{e}} \\\\  \\\\ \\Rightarrow  & x=11 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2u3rd",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A bulb and a capacitor are connected in series across an ac supply. A dielectric is then placed between the plates of the capacitor. The glow of the bulb :",
+  "options": [
+   "becomes zero",
+   "remains same",
+   "increases",
+   "decreases"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 79,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "alternating current"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To understand the impact of placing a dielectric between the plates of the capacitor on the glow of the bulb, we need to consider the properties and behavior of capacitors in an AC circuit.\n\nWhen a capacitor is connected in series with a bulb in an AC circuit, the impedance of the capacitor plays a significant role in determining the current through the circuit. The impedance $Z_{C}$ of a capacitor in an AC circuit is given by:\n\n$Z_{C}=\\frac{1}{ωC}$\n\nwhere:\n\n$Z_{C}$ is the capacitive reactance (impedance of the capacitor).\n\n$ω$ is the angular frequency of the AC supply ( $ω=2πf$ , where $f$ is the frequency).\n\n$C$ is the capacitance of the capacitor.\n\nWhen we place a dielectric between the plates of the capacitor, the capacitance $C$ increases. The capacitance with a dielectric can be described as:\n\n$C^{'}=κC$\n\nwhere:\n\n$C^{'}$ is the new capacitance with the dielectric present.\n\n$κ$ is the dielectric constant ( $κ>1$ ).\n\nSince $C^{'}>C$, the new capacitive reactance $Z_{C}^{'}$ can be given as:\n\n$Z_{C}^{'}=\\frac{1}{ωC^{'}}$\n\nBecause $C^{'}=κC$, we have:\n\n$Z_{C}^{'}=\\frac{1}{ωκC}=\\frac{1}{κ}\\left (\\frac{1}{ωC}\\right )=\\frac{Z_{C}}{κ}$\n\nSince $κ>1$, $Z_{C}^{'}<Z_{C}$. This means the impedance of the capacitor decreases when a dielectric is placed between its plates. In a series circuit, the overall impedance decreases when the impedance of one component decreases, leading to an increase in the current through the circuit.\n\nThus, with an increase in current, the bulb will glow brighter. Therefore, the correct option is:\n\nOption C: increases",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2umsu",
+  "subjectKey": "physics",
+  "chapterKey": "physics:dual-nature-of-matter",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A proton, an electron and an alpha particle have the same energies. Their de-Broglie wavelengths will be compared as :",
+  "options": [
+   "$λ_{\\mathrm{p}}>λ_{\\mathrm{e}}>λ_{α}$",
+   "$λ_{α}<λ_{\\mathrm{p}}<λ_{\\mathrm{e}}$",
+   "$λ_{\\mathrm{e}}>λ_{α}>λ_{\\mathrm{p}}$",
+   "$λ_{\\mathrm{p}}<λ_{\\mathrm{e}}<λ_{α}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 80,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "dual nature of radiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the relationship between the de-Broglie wavelengths of a proton, an electron, and an alpha particle with the same energies, we need to use the de-Broglie wavelength formula:\n\n$λ=\\frac{h}{p}$\n\nwhere $h$ is Planck's constant and $p$ is the momentum of the particle.\n\nFor particles with the same kinetic energy $E$, we have:\n\n$E=\\frac{p^{2}}{2m}$\n\nSolving for $p$:\n\n$p=\\sqrt{2mE}$\n\nSubstituting this into the de-Broglie equation, we get:\n\n$λ=\\frac{h}{\\sqrt{2mE}}$\n\nSince all three particles have the same energy $E$, the de-Broglie wavelength is inversely proportional to the square root of the mass $m$:\n\n$λ\\propto \\frac{1}{\\sqrt{m}}$\n\nThe masses of the particles are as follows:\n\nMass of proton $m_{p}$ is approximately $1.67\\times 10^{-27}$ kg\n\nMass of electron $m_{e}$ is approximately $9.11\\times 10^{-31}$ kg\n\nMass of alpha particle $m_{α}$ is approximately $4\\times 1.67\\times 10^{-27}$ kg (since it has 2 protons and 2 neutrons)\n\nComparatively:\n\nMass of alpha particle $m_{α}$ is the largest.\n\nMass of proton $m_{p}$ is intermediate.\n\nMass of electron $m_{e}$ is the smallest.\n\nTherefore, the de-Broglie wavelength will be:\n\nLargest for the electron ($λ_{\\mathrm{e}}$)\n\nIntermediate for the proton ($λ_{\\mathrm{p}}$)\n\nSmallest for the alpha particle ($λ_{α}$)\n\nHence, the correct order is:\n\nOption B:\n\n$λ_{α}<λ_{\\mathrm{p}}<λ_{\\mathrm{e}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2u3y2",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A square loop of edge length $2\\mathrm{m}$ carrying current of $2\\mathrm{A}$ is placed with its edges parallel to the $x$-$y$ axis. A magnetic field is passing through the $x$-$y$ plane and expressed as $⃗{B}=B_{0}(1+4x)\\hat{k}$, where $B_{0}=5\\mathrm{T}$. The net magnetic force experienced by the loop is $_________$ $\\mathrm{N}$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 160.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 81,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Due to constant component of magnetic field $F=0$\n\n\n[IMG]\n\n\nDue to variable component\n\n$\\begin{array}{ll} F_{1}=0 \\\\ \\text{and,}F_{2}+F_{3}=0 \\\\ \\begin{array}{ll} \\text{and,}F_{4} & =(\\mathrm{B}_{0}4x)i\\mathrm{L} \\\\ =5\\times 4\\times 2\\times 2\\times 2 \\\\ =160\\mathrm{N} \\end{array} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-9th-april-morning-shift/luz2u3y2-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 9th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2024-luz2umur",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "At the centre of a half ring of radius $\\mathrm{R}=10\\mathrm{cm}$ and linear charge density $4\\mathrm{nC}\\mathrm{m}^{-1}$, the potential is $xπ\\mathrm{V}$. The value of $x$ is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 36.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 82,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{ll} V & =\\dfrac{KQ}{R} \\\\ =\\dfrac{9\\times 10^{9}\\times 4\\times 10^{-9}πR}{R} \\\\ =36π \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2u3te",
+  "subjectKey": "physics",
+  "chapterKey": "physics:wave-optics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "In a Young's double slit experiment, the intensity at a point is $\\left (\\frac{1}{4}\\right )^{\\text{th}}$ of the maximum intensity, the minimum distance of the point from the central maximum is $_________$ $μ\\mathrm{m}$. (Given : $λ=600\\mathrm{nm},\\mathrm{d}=1.0\\mathrm{mm},\\mathrm{D}=1.0\\mathrm{m}$)",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 200.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 83,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "wave optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "In a Young's double slit experiment, the intensity at a point can be expressed as a function of the phase difference between the light arriving from the two slits. The intensity at any point on the screen is given by:\n\n$I=I_{\\text{\\max }}\\cos ^{2}\\left (\\frac{δ}{2}\\right )$\n\nWhere:\n\n$I_{\\text{\\max }}$ is the maximum intensity.\n\n$δ$ is the phase difference between the light waves from the two slits.\n\nGiven the intensity at a point is $\\left (\\frac{1}{4}\\right )^{\\text{th}}$ of the maximum intensity, we can write:\n\n$\\frac{I}{I_{\\text{\\max }}}=\\frac{1}{4}$\n\nSubstituting this into the intensity equation:\n\n$\\frac{1}{4}=\\cos ^{2}\\left (\\frac{δ}{2}\\right )$\n\nTaking the square root of both sides, we get:\n\n$\\cos \\left (\\frac{δ}{2}\\right )=\\frac{1}{2}$\n\nThe possible solutions for $δ$ are:\n\n$\\frac{δ}{2}=\\frac{π}{3}$ or $\\frac{δ}{2}=\\left (π-\\frac{π}{3}\\right )$ which gives $δ=\\frac{2π}{3}$ or $δ=\\frac{4π}{3}$.\n\nConsidering the smallest phase difference, $δ=\\frac{2π}{3}$, we use the relation for the phase difference due to path difference:\n\n$δ=\\frac{2π}{λ}\\cdot \\Delta x$\n\nThus, substituting the value of $δ$, we have:\n\n$\\frac{2π}{λ}\\cdot \\Delta x=\\frac{2π}{3}$\n\nSolving for $\\Delta x$, we get:\n\n$\\Delta x=\\frac{λ}{3}=\\frac{600\\mathrm{nm}}{3}=200\\mathrm{nm}=0.2μ\\mathrm{m}$\n\nThe minimum distance of the point from the central maximum on the screen can be found using the interference equation:\n\n$y=\\frac{\\Delta x\\cdot D}{d}$\n\nSubstituting the known values:\n\n$y=\\frac{0.2μ\\mathrm{m}\\cdot 1.0\\mathrm{m}}{1.0\\mathrm{mm}}=\\frac{0.2\\cdot 10^{-6}\\mathrm{m}\\cdot 1.0\\mathrm{m}}{1.0\\cdot 10^{-3}\\mathrm{m}}$\n\nSimplifying this expression:\n\n$y=0.2\\mathrm{mm}=200μ\\mathrm{m}$\n\nHence, the minimum distance of the point from the central maximum is:\n\n$200μ\\mathrm{m}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2u47j",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $⃗{a}$ and $⃗{b}$ make an angle $\\cos ^{-1}\\left (\\frac{5}{9}\\right )$ with each other, then $|⃗{a}+⃗{b}|=\\sqrt{2}|⃗{a}-⃗{b}|$ for $|⃗{a}|=n|⃗{b}|$. The integer value of $\\mathrm{n}$ is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 84,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve this problem, we will use the concepts of vector addition and magnitudes involving the dot product. Given the angle between $⃗{a}$ and $⃗{b}$ is $\\cos ^{-1}\\left (\\frac{5}{9}\\right )$, we can use the properties of dot products and magnitudes to find the required integer value of $n$.\n\nFirst, let's use the condition $|⃗{a}+⃗{b}|=\\sqrt{2}|⃗{a}-⃗{b}|$. Square both sides to remove the square roots:\n\n$|⃗{a}+⃗{b}|^{2}=2|⃗{a}-⃗{b}|^{2}$\n\nNow we will expand both sides using the formula for the magnitude of the sum and difference of vectors:\n\n$|⃗{a}+⃗{b}|^{2}=(⃗{a}+⃗{b})\\cdot (⃗{a}+⃗{b})=⃗{a}\\cdot ⃗{a}+2⃗{a}\\cdot ⃗{b}+⃗{b}\\cdot ⃗{b}$\n\nAnd\n\n$|⃗{a}-⃗{b}|^{2}=(⃗{a}-⃗{b})\\cdot (⃗{a}-⃗{b})=⃗{a}\\cdot ⃗{a}-2⃗{a}\\cdot ⃗{b}+⃗{b}\\cdot ⃗{b}$\n\nSubstitute these back into the original equation:\n\n$⃗{a}\\cdot ⃗{a}+2⃗{a}\\cdot ⃗{b}+⃗{b}\\cdot ⃗{b}=2(⃗{a}\\cdot ⃗{a}-2⃗{a}\\cdot ⃗{b}+⃗{b}\\cdot ⃗{b})$\n\nExpand the right-hand side:\n\n$⃗{a}\\cdot ⃗{a}+2⃗{a}\\cdot ⃗{b}+⃗{b}\\cdot ⃗{b}=2⃗{a}\\cdot ⃗{a}-4⃗{a}\\cdot ⃗{b}+2⃗{b}\\cdot ⃗{b}$\n\nRearrange all terms to one side to combine like terms:\n\n$⃗{a}\\cdot ⃗{a}+2⃗{a}\\cdot ⃗{b}+⃗{b}\\cdot ⃗{b}-2⃗{a}\\cdot ⃗{a}+4⃗{a}\\cdot ⃗{b}-2⃗{b}\\cdot ⃗{b}=0$\n\nCombine like terms:\n\n$-⃗{a}\\cdot ⃗{a}+6⃗{a}\\cdot ⃗{b}-⃗{b}\\cdot ⃗{b}=0$\n\nWe know that:\n\n$⃗{a}\\cdot ⃗{a}=|⃗{a}|^{2}\\text{and}⃗{b}\\cdot ⃗{b}=|⃗{b}|^{2}\\text{and}⃗{a}\\cdot ⃗{b}=|⃗{a}||⃗{b}|\\cos (θ)$\n\nSince the angle between $⃗{a}$ and $⃗{b}$ is $\\cos ^{-1}\\left (\\frac{5}{9}\\right )$, we have:\n\n$\\cos (θ)=\\frac{5}{9}$\n\nSubstitute these back into the equation:\n\n$-|⃗{a}|^{2}+6|⃗{a}||⃗{b}|\\left (\\frac{5}{9}\\right )-|⃗{b}|^{2}=0$\n\nSimplify it further:\n\n$-|⃗{a}|^{2}+\\frac{30}{9}|⃗{a}||⃗{b}|-|⃗{b}|^{2}=0$\n\n$-|⃗{a}|^{2}+\\frac{10}{3}|⃗{a}||⃗{b}|-|⃗{b}|^{2}=0$\n\nWe know that $|⃗{a}|=n|⃗{b}|$. Substitute this into the equation:\n\n$-(n|⃗{b}|)^{2}+\\frac{10}{3}(n|⃗{b}|)|⃗{b}|-|⃗{b}|^{2}=0$\n\nSimplify it:\n\n$-n^{2}|⃗{b}|^{2}+\\frac{10}{3}n|⃗{b}|^{2}-|⃗{b}|^{2}=0$\n\nFactor out $|⃗{b}|^{2}$:\n\n$|⃗{b}|^{2}\\left (-n^{2}+\\frac{10}{3}n-1\\right )=0$\n\nSince $|⃗{b}|^{2}\\neq 0$, we can solve:\n\n$-n^{2}+\\frac{10}{3}n-1=0$\n\nMultiply through by 3 to clear the fraction:\n\n$-3n^{2}+10n-3=0$\n\nRearrange it to match standard quadratic form:\n\n$3n^{2}-10n+3=0$\n\nSolve this quadratic equation using the quadratic formula:\n\n$n=\\frac{-b\\pm \\sqrt{b^{2}-4ac}}{2a}$\n\nHere, $a=3$, $b=-10$, and $c=3$:\n\n$n=\\frac{10\\pm \\sqrt{(-10)^{2}-4\\cdot 3\\cdot 3}}{2\\cdot 3}=\\frac{10\\pm \\sqrt{100-36}}{6}=\\frac{10\\pm \\sqrt{64}}{6}=\\frac{10\\pm 8}{6}$\n\nThis results in two possible solutions for $n$:\n\n$n=\\frac{18}{6}=3\\text{and}n=\\frac{2}{6}=\\frac{1}{3}$\n\nHowever, since $n$ is given to be an integer, we take:\n\n$3$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2u49f",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Two persons pull a wire towards themselves. Each person exerts a force of $200\\mathrm{N}$ on the wire. Young's modulus of the material of wire is $1\\times 10^{11}\\mathrm{N}\\mathrm{m}^{-2}$. Original length of the wire is $2\\mathrm{m}$ and the area of cross section is $2\\mathrm{cm}^{2}$. The wire will extend in length by $_________$ $μ\\mathrm{m}$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 20.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 85,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "elasticity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the extension in the length of the wire, we can use the formula derived from Young's modulus:\n\n$\\text{Young’s Modulus (Y)}=\\frac{\\text{Stress}}{\\text{Strain}}$\n\nWhere:\n\nStress ($σ$) is given by:\n\n$σ=\\frac{F}{A}$\n\nand Strain ($𝜖$) is:\n\n$𝜖=\\frac{\\Delta L}{L}$\n\nHere,\n\n$F$ is the force exerted,\n\n$A$ is the cross-sectional area,\n\n$\\Delta L$ is the change in length,\n\n$L$ is the original length.\n\nWe are given:\n\n$F=200\\mathrm{N}$ (each person pulls with this force, but the total force in the wire should be considered as the tension experienced by one side, so it still remains 200 N),\n\n$A=2\\mathrm{cm}^{2}=2\\times 10^{-4}\\mathrm{m}^{2}$,\n\n$L=2\\mathrm{m}$,\n\n$Y=1\\times 10^{11}\\mathrm{N}\\mathrm{m}^{-2}$.\n\nFirst, calculate the stress ($σ$):\n\n$σ=\\frac{200\\mathrm{N}}{2\\times 10^{-4}\\mathrm{m}^{2}}=10^{6}\\mathrm{N}\\mathrm{m}^{-2}$\n\nUsing Young’s modulus formula:\n\n$Y=\\frac{\\text{Stress}}{\\text{Strain}}⟹\\text{Strain}=\\frac{\\text{Stress}}{Y}$\n\nThus, the strain ($𝜖$) is:\n\n$𝜖=\\frac{10^{6}\\mathrm{N}\\mathrm{m}^{-2}}{1\\times 10^{11}\\mathrm{N}\\mathrm{m}^{-2}}=10^{-5}$\n\nNow, relate the strain to the change in length:\n\n$𝜖=\\frac{\\Delta L}{L}⟹\\Delta L=𝜖\\times L=10^{-5}\\times 2\\mathrm{m}=2\\times 10^{-5}\\mathrm{m}$\n\nConvert this change in length to micrometers:\n\n$1\\mathrm{m}=10^{6}μ\\mathrm{m}$\n\n$2\\times 10^{-5}\\mathrm{m}=2\\times 10^{-5}\\times 10^{6}μ\\mathrm{m}=20μ\\mathrm{m}$\n\nTherefore, the wire will extend in length by $20μ\\mathrm{m}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2u43a",
+  "subjectKey": "physics",
+  "chapterKey": "physics:oscillations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The position, velocity and acceleration of a particle executing simple harmonic motion are found to have magnitudes of $4\\mathrm{m},2\\mathrm{ms}^{-1}$ and $16\\mathrm{ms}^{-2}$ at a certain instant. The amplitude of the motion is $\\sqrt{x}\\mathrm{m}$ where $x$ is $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 17.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 86,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "simple harmonic motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's begin by understanding the equations related to simple harmonic motion (SHM). For a particle executing SHM, the position $x$, velocity $v$, and acceleration $a$ are given by the following equations:\n\n1. Position: $x=A\\cos (ωt+𝜙)$\n\n2. Velocity: $v=-Aω\\sin (ωt+𝜙)$\n\n3. Acceleration: $a=-Aω^{2}\\cos (ωt+𝜙)$\n\nHere, $A$ is the amplitude of the motion, $ω$ is the angular frequency, and $𝜙$ is the phase constant.\n\nGiven the magnitudes at a certain instant:\n\n$x=4\\mathrm{m}$\n\n$v=2\\mathrm{ms}^{-1}$\n\n$a=16\\mathrm{ms}^{-2}$\n\nUsing the acceleration equation:\n\n$a=-Aω^{2}\\cos (ωt+𝜙)$\n\nSince we’re given the magnitude of the acceleration, we remove the negative sign:\n\n$16=Aω^{2}\\cos (ωt+𝜙)$\n\nUsing the position equation:\n\n$x=A\\cos (ωt+𝜙)$\n\nWe already know $x=4\\mathrm{m}$, so:\n\n$4=A\\cos (ωt+𝜙)$\n\nFrom these two equations, we know:\n\n$Aω^{2}\\cos (ωt+𝜙)=16$\n\n$A\\cos (ωt+𝜙)=4$\n\nTherefore:\n\n$Aω^{2}\\cdot 4/A=16$\n\n$4ω^{2}=16$\n\n$ω^{2}=4$\n\n$ω=2\\mathrm{rad}/\\mathrm{s}$\n\nNext, using the velocity equation:\n\n$v=-Aω\\sin (ωt+𝜙)$\n\nAgain, we consider the magnitude:\n\n$2=A\\cdot 2\\sin (ωt+𝜙)$\n\n$2=2A\\sin (ωt+𝜙)$\n\n$\\sin (ωt+𝜙)=\\dfrac{1}{A}$\n\nWe know from the position equation that:\n\n$\\cos (ωt+𝜙)=\\dfrac{4}{A}$\n\nUsing the identity $\\sin ^{2}(θ)+\\cos ^{2}(θ)=1$, we get:\n\n$\\left (\\dfrac{1}{A}\\right )^{2}+\\left (\\dfrac{4}{A}\\right )^{2}=1$\n\n$\\dfrac{1}{A^{2}}+\\dfrac{16}{A^{2}}=1$\n\n$\\dfrac{17}{A^{2}}=1$\n\n$A^{2}=17$\n\n$A=\\sqrt{17}\\mathrm{m}$\n\nTherefore, the amplitude of the motion is $\\sqrt{17}\\mathrm{m}$, meaning $x$ is 17.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2u45k",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A star has $100%$ helium composition. It starts to convert three ${}^{4}\\mathrm{He}$ into one ${}^{12}\\mathrm{C}$ via triple alpha process as ${}^{4}\\mathrm{He}+{}^{4}\\mathrm{He}+{}^{4}\\mathrm{He}\\to {}^{12}\\mathrm{C}+\\mathrm{Q}$. The mass of the star is $2.0\\times 10^{32}\\mathrm{kg}$ and it generates energy at the rate of $5.808\\times 10^{30}\\mathrm{W}$. The rate of converting these ${}^{4}\\mathrm{He}$ to ${}^{12}\\mathrm{C}$ is $\\mathrm{n}\\times 10^{42}\\mathrm{s}^{-1}$, where $\\mathrm{n}$ is $_________$. [ Take, mass of ${}^{4}\\mathrm{He}=4.0026\\mathrm{u}$, mass of ${}^{12}\\mathrm{C}=12\\mathrm{u}$]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 87,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the rate of converting ${}^{4}\\mathrm{He}$ to ${}^{12}\\mathrm{C}$, we need to calculate the energy released per reaction and use the given power production of the star to find the rate of reactions. The relevant nuclear reaction is:\n\n${}^{4}\\mathrm{He}+{}^{4}\\mathrm{He}+{}^{4}\\mathrm{He}\\to {}^{12}\\mathrm{C}+\\mathrm{Q}$\n\nThe masses involved in the reaction are given:\n\nMass of ${}^{4}\\mathrm{He}=4.0026\\mathrm{u}$\n\nMass of ${}^{12}\\mathrm{C}=12\\mathrm{u}$\n\nFirst, we calculate the mass defect (difference between the mass of reactants and products) which will give us the energy released in each reaction:\n\nMass of reactants: $3\\times 4.0026\\mathrm{u}=12.0078\\mathrm{u}$\n\nMass of product: $12\\quad \\mathrm{u}$\n\nMass defect: $12.0078\\mathrm{u}-12\\mathrm{u}=0.0078\\mathrm{u}$\n\nWe use Einstein's mass-energy equivalence principle, $E=mc^{2}$, to find the energy released per reaction. The conversion factor between atomic mass units and energy is $1~\\mathrm{u}=931.5\\mathrm{MeV}$.\n\nEnergy released per reaction: $0.0078\\mathrm{u}\\times 931.5\\mathrm{MeV}/\\mathrm{u}=7.2627\\mathrm{MeV}$\n\nWe convert this energy into joules. $1~\\mathrm{MeV}=1.60218\\times 10^{-13}\\mathrm{J}$:\n\nEnergy per reaction: $7.2627\\mathrm{MeV}\\times 1.60218\\times 10^{-13}\\mathrm{J}/\\mathrm{MeV}=1.163\\times 10^{-12}\\mathrm{J}$\n\nThe power generated by the star is given as $5.808\\times 10^{30}\\mathrm{W}$. The rate of the reaction is the power divided by the energy per reaction:\n\n$\\text{Rate of reactions}=\\frac{\\text{Power}}{\\text{Energy per reaction}}$\n\n$\\text{Rate}=\\frac{5.808\\times 10^{30}\\mathrm{W}}{1.163\\times 10^{-12}\\mathrm{J}}$\n\n$\\text{Rate}=4.99\\times 10^{42}\\mathrm{s}^{-1}\\simeq 5\\times 10^{42}\\mathrm{s}^{-1}$\n\nThus, the rate of converting ${}^{4}\\mathrm{He}$ to ${}^{12}\\mathrm{C}$ is:\n\n$\\mathrm{n}=5$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2uzm2",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A string is wrapped around the rim of a wheel of moment of inertia $0.40\\mathrm{kgm}^{2}$ and radius $10\\mathrm{cm}$. The wheel is free to rotate about its axis. Initially the wheel is at rest. The string is now pulled by a force of $40\\mathrm{N}$. The angular velocity of the wheel after $10\\mathrm{s}$ is $x\\mathrm{rad}/\\mathrm{s}$, where $x$ is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 100.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 88,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the angular velocity ($ω$) of the wheel after $10$ seconds, we first need to understand the relationship between the force applied through the string, the torque produced by this force, and how this torque affects the wheel's angular acceleration ($α$).\n\nThe torque ($τ$) produced by the force ($F$) is given by the product of the force and the radius ($r$) of the wheel through which the force is applied:\n\n$τ=F\\cdot r$\n\nGiven that $F=40\\mathrm{N}$ and $r=10\\mathrm{cm}=0.1\\mathrm{m}$, the torque can be calculated as:\n\n$τ=40\\cdot 0.1=4\\mathrm{Nm}$\n\nThe torque is related to the angular acceleration ($α$) and the moment of inertia ($I$) of the wheel by the equation:\n\n$τ=I\\cdot α$\n\nGiven that $I=0.40\\mathrm{kg}\\cdot \\mathrm{m}^{2}$, we can rearrange the above formula to solve for $α$:\n\n$α=\\frac{τ}{I}=\\frac{4}{0.40}=10\\mathrm{rad}/\\mathrm{s}^{2}$\n\nWith the angular acceleration ($α$), we can calculate the angular velocity ($ω$) after a given time ($t$) using the formula:\n\n$ω=ω_{0}+α\\cdot t$\n\nWhere $ω_{0}$ is the initial angular velocity. Since the wheel starts from rest, $ω_{0}=0$. Thus, for $t=10\\mathrm{s}$:\n\n$ω=0+10\\cdot 10=100\\mathrm{rad}/\\mathrm{s}$\n\nTherefore, the angular velocity ($ω$) of the wheel after $10$ seconds is $100\\mathrm{rad}/\\mathrm{s}$, so $x=100$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2umql",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "When a coil is connected across a $20\\mathrm{V}$ dc supply, it draws a current of $5\\mathrm{A}$. When it is connected across $20\\mathrm{V},50\\mathrm{Hz}$ ac supply, it draws a current of $4\\mathrm{A}$. The self inductance of the coil is $__________$  $\\mathrm{mH}$. (Take $π=3$)",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 10.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 89,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "alternating current"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's first determine the resistance of the coil when connected to a DC supply. The current drawn by the coil in a DC circuit can be used to calculate its resistance using Ohm's law:\n\n$R=\\frac{V}{I}$\n\nGiven the DC supply voltage $V_{DC}=20\\mathrm{V}$ and the current $I_{DC}=5\\mathrm{A}$, the resistance $R$ is:\n\n$R=\\frac{20\\mathrm{V}}{5\\mathrm{A}}=4\\Omega$\n\nNext, let's use the information given for the AC supply. When connected to an AC supply, the coil's impedance $Z$ can be determined using the given current. The total voltage and current in an AC circuit are related to the impedance by the formula:\n\n$Z=\\frac{V}{I}$\n\nGiven the AC supply voltage $V_{AC}=20\\mathrm{V}$ and the current $I_{AC}=4\\mathrm{A}$, the impedance $Z$ is:\n\n$Z=\\frac{20\\mathrm{V}}{4\\mathrm{A}}=5\\Omega$\n\nThe impedance $Z$ of the coil in an AC circuit is composed of both the resistance $R$ and the inductive reactance $X_{L}$, related by:\n\n$Z=\\sqrt{R^{2}+X_{L}^{2}}$\n\nWe already know that $R=4\\Omega$. We can now solve for the inductive reactance $X_{L}$:\n\n$5=\\sqrt{4^{2}+X_{L}^{2}}$\n\nSquaring both sides of the equation:\n\n$25=16+X_{L}^{2}$\n\nSolving for $X_{L}$:\n\n$X_{L}^{2}=25-16$\n\n$X_{L}^{2}=9$\n\n$X_{L}=\\sqrt{9}$\n\n$X_{L}=3\\Omega$\n\nThe inductive reactance $X_{L}$ is also related to the inductance $L$ and the angular frequency $ω$ by the formula:\n\n$X_{L}=ωL$\n\nwhere $ω=2πf$. Given the frequency $f=50\\mathrm{Hz}$ and using $π=3$, we find:\n\n$ω=2\\times 3\\times 50$\n\n$ω=300\\mathrm{rad}/\\mathrm{s}$\n\nNow we can solve for the inductance $L$:\n\n$X_{L}=300L$\n\n$3=300L$\n\n$L=\\frac{3}{300}$\n\n$L=0.01\\mathrm{H}$\n\nSince $1~\\mathrm{H}=1000\\mathrm{mH}$, the self inductance of the coil is:\n\n$L=0.01\\mathrm{H}\\times 1000\\mathrm{mH}/\\mathrm{H}=10\\mathrm{mH}$\n\nTherefore, the self inductance of the coil is $10\\quad \\mathrm{mH}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2024-luz2v3ok",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The current flowing through the $1\\Omega$ resistor is $\\frac{n}{10}$ A. The value of $n$ is $_______$.\n\n\n[IMG]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 25.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2024,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 90,
+  "sourceReference": "NTA JEE Main JEE Main 2024 (Online) 9th April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nAt $C$\n\n$\\begin{array}{l} \\dfrac{v_{1}}{2}+\\dfrac{v_{1}-5}{2}+\\dfrac{v_{1}+10-v_{2}}{1}=0 \\\\ v_{2}=2v_{1}+\\dfrac{15}{2}\\text{.... (i)} \\end{array}$\n\nAt $A$\n\n$\\begin{array}{l} \\dfrac{v_{2}-5}{4}+\\dfrac{v_{2}}{4}+\\dfrac{v_{2}-10-v_{1}}{1}=0 \\\\ 6v_{2}=4v_{1}+45\\text{.... (ii)} \\end{array}$\n\n$\\begin{array}{l} \\Rightarrow v_{1}=0 \\\\ \\text{and}v_{2}=\\dfrac{15}{2} \\\\ \\therefore \\quad i=\\dfrac{5}{2}\\mathrm{A} \\\\ \\Rightarrow n=25 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2024 (Online) 9th April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2024-online-9th-april-morning-shift/luz2v3ok-0.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 9th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2024-online-9th-april-morning-shift/luz2v3ok-1.webp",
+    "altText": "Original exam figure (JEE Main 2024 (Online) 9th April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

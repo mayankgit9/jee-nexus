@@ -1,0 +1,1052 @@
+[
+ {
+  "publicId": "PYQ-2025-m6t9xt1i",
+  "subjectKey": "physics",
+  "chapterKey": "physics:waves",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The equation of a transverse wave travelling along a string is $y(x,t)=4.0\\sin \\left [20\\times 10^{-3}x+600t\\right ]\\mathrm{mm}$, where $x$ is in mm and $t$ is in second. The velocity of the wave is :",
+  "options": [
+   "$-60\\mathrm{m}/\\mathrm{s}$",
+   "$+60\\mathrm{m}/\\mathrm{s}$",
+   "$+30\\mathrm{m}/\\mathrm{s}$",
+   "$-30\\mathrm{m}/\\mathrm{s}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 51,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's analyze the wave equation step by step.\n\nThe given wave is:\n\n$y(x,t)=4.0\\sin \\left [20\\times 10^{-3}x+600t\\right ]\\text{mm}.$\n\nFirst, simplify the coefficient of $x$:\n\n$20\\times 10^{-3}=0.02\\text{mm}^{-1}.$\n\nSo the equation becomes:\n\n$y(x,t)=4.0\\sin (0.02x+600t)\\text{mm}.$\n\nA standard form for a travelling wave is:\n\n$y(x,t)=A\\sin (kx-ωt)$\n\nwhich represents a wave moving in the positive $x$-direction with speed $v=\\frac{ω}{k}$.\n\nNotice that our wave equation has the form:\n\n$\\sin (0.02x+600t)$\n\nThe positive sign in front of $600t$ means we can rewrite the phase as:\n\n$0.02x+600t=0.02x-(-600t),$\n\nwhich indicates that the angular frequency $ω$ in the standard form is effectively $-600$.\n\nThe velocity $v$ of a wave is determined from the phase (for a constant phase, $𝜙=$ constant):\n\n$kx+ωt=\\text{constant}.$\n\nDifferentiating with respect to $t$:\n\n$k\\frac{dx}{dt}+ω=0,$\n\nwhich gives:\n\n$\\frac{dx}{dt}=-\\frac{ω}{k}.$\n\nSubstituting the values:\n\n$k=0.02\\text{mm}^{-1}$\n\n$ω=600\\text{s}^{-1}$\n\nWe have:\n\n$v=-\\frac{600}{0.02}=-30000\\text{mm/s}.$\n\nConvert the velocity from mm/s to m/s:\n\n$-30000\\text{mm/s}=-30\\text{m/s}.$\n\nThus, the velocity of the wave is $-30\\text{m/s}$.\n\nThe correct answer is Option D.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xt2i",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-waves",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A plane electromagnetic wave of frequency 20 MHz travels in free space along the $+x$ direction. At a particular point in space and time, the electric field vector of the wave is $\\mathrm{E}_{y}=9.3\\mathrm{Vm}^{-1}$. Then, the magnetic field vector of the wave at that point is",
+  "options": [
+   "$\\mathrm{B}_{z}=1.55\\times 10^{-8}\\mathrm{T}$",
+   "$\\mathrm{B}_{z}=6.2\\times 10^{-8}\\mathrm{T}$",
+   "$\\mathrm{B}_{z}=3.1\\times 10^{-8}\\mathrm{T}$",
+   "$\\mathrm{B}_{z}=9.3\\times 10^{-8}\\mathrm{T}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 52,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For an electromagnetic wave in free space, the magnitudes of the electric and magnetic fields are related by the speed of light, $c\\approx 3\\times 10^{8}\\mathrm{m}/\\mathrm{s},$ through the equation\n\n$E=cB.$\n\nHere's how to determine the magnetic field:\n\nWe are given the electric field magnitude: $E=9.3\\mathrm{V}/\\mathrm{m}.$\n\nUse the relationship to find the magnetic field magnitude:\n\n$B=\\frac{E}{c}=\\frac{9.3}{3\\times 10^{8}}\\mathrm{T}.$\n\nCalculating the value gives:\n\n$B\\approx 3.1\\times 10^{-8}\\mathrm{T}.$\n\nSince the electric field is along the $y$ direction and the wave propagates along the $+x$ direction, by the right-hand rule, the magnetic field is oriented along the $z$ direction.\n\nThus, the magnetic field vector is\n\n$\\mathrm{B}_{z}=3.1\\times 10^{-8}\\mathrm{T},$\n\nwhich corresponds to Option C.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xt3e",
+  "subjectKey": "physics",
+  "chapterKey": "physics:gravitation",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If a satellite orbiting the Earth is 9 times closer to the Earth than the Moon, what is the time period of rotation of the satellite? Given rotational time period of Moon $=27$ days and gravitational attraction between the satellite and the moon is neglected.",
+  "options": [
+   "3 days",
+   "27 days",
+   "81 days",
+   "1 day"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 53,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "gravitation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the time period of the satellite, we can use Kepler’s third law, which states that the square of the orbital period is proportional to the cube of the orbital radius. Mathematically, this is expressed as:\n\n$\\frac{T^{2}}{R^{3}}=\\text{constant}$\n\nHere’s how we solve the problem step by step:\n\nLet:\n\nThe Moon's distance from Earth be $R_{\\text{moon}}$.\n\nThe Moon's orbital period be $T_{\\text{moon}}=27$ days.\n\nThe satellite's orbital radius be $R_{\\text{sat}}=\\frac{R_{\\text{moon}}}{9}$ (since it is 9 times closer).\n\nAccording to Kepler's law for both orbits, we have:\n\n$\\frac{T_{\\text{sat}}^{2}}{R_{\\text{sat}}^{3}}=\\frac{T_{\\text{moon}}^{2}}{R_{\\text{moon}}^{3}}$\n\nSubstitute $R_{\\text{sat}}$:\n\n$\\frac{T_{\\text{sat}}^{2}}{\\left (\\frac{R\\text{moon}}{9}\\right )^{3}}=\\frac{27^{2}}{R_{\\text{moon}}^{3}}$\n\nSimplify the left side by noting that:\n\n$\\left (\\frac{R_{\\text{moon}}}{9}\\right )^{3}=\\frac{R_{\\text{moon}}^{3}}{9^{3}}=\\frac{R_{\\text{moon}}^{3}}{729}$\n\nSo the equation becomes:\n\n$\\frac{T_{\\text{sat}}^{2}}{\\frac{R3\\text{moon}}{729}}=\\frac{27^{2}}{R_{\\text{moon}}^{3}}$\n\nMultiply both sides by $\\frac{R_{\\text{moon}}^{3}}{729}$:\n\n$T_{\\text{sat}}^{2}=27^{2}\\times \\frac{1}{729}$\n\nRecognize that $27^{2}=729$:\n\n$T_{\\text{sat}}^{2}=\\frac{729}{729}=1$\n\nTake the square root:\n\n$T_{\\text{sat}}=1\\text{day}$\n\nThus, the satellite’s orbital period is 1 day, which corresponds to Option D: 1 day.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xt4a",
+  "subjectKey": "physics",
+  "chapterKey": "physics:laws-of-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A massless spring gets elongated by amount $x_{1}$ under a tension of 5 N . Its elongation is $x_{2}$ under the tension of 7 N . For the elongation of $(5x_{1}-2x_{2})$, the tension in the spring will be,",
+  "options": [
+   "20 N",
+   "39 N",
+   "11 N",
+   "15 N"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 54,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "laws of motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We can solve this using Hooke's Law, which states:\n\n$F=kx,$\n\nwhere:\n\n• $F$ is the force (tension),\n\n• $k$ is the spring constant, and\n\n• $x$ is the extension of the spring.\n\nFollow these steps:\n\nFor the first scenario (extension $x_{1}$ under 5 N):\n\n$5=kx_{1}\\Rightarrow k=\\frac{5}{x_{1}}.$\n\nFor the second scenario (extension $x_{2}$ under 7 N):\n\n$7=kx_{2}\\Rightarrow k=\\frac{7}{x_{2}}.$\n\nEquate the two expressions for $k$:\n\n$\\frac{5}{x_{1}}=\\frac{7}{x_{2}}\\Rightarrow \\frac{x_{1}}{x_{2}}=\\frac{5}{7}\\Rightarrow x_{2}=\\frac{7}{5}x_{1}.$\n\nTo find the tension for the extension of $(5x_{1}-2x_{2})$, use Hooke's Law again:\n\n$\\text{Tension,}F=k(5x_{1}-2x_{2}).$\n\nSubstitute $k=\\frac{5}{x_{1}}$:\n\n$F=\\frac{5}{x_{1}}(5x_{1}-2x_{2}).$\n\nSubstitute the expression for $x_{2}$:\n\n$F=\\frac{5}{x_{1}}\\left (5x_{1}-2\\left (\\frac{7}{5}x_{1}\\right )\\right )=\\frac{5}{x_{1}}\\left (5x_{1}-\\frac{14}{5}x_{1}\\right ).$\n\nSimplify the expression inside the parentheses:\n\n$5x_{1}-\\frac{14}{5}x_{1}=\\left (\\frac{25}{5}-\\frac{14}{5}\\right )x_{1}=\\frac{11}{5}x_{1}.$\n\nNow substitute back:\n\n$F=\\frac{5}{x_{1}}\\cdot \\frac{11}{5}x_{1}=11\\text{N}.$\n\nThus, the tension in the spring for the extension $(5x_{1}-2x_{2})$ is $11\\text{N}.$ \n\nThe correct option is Option C.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xt54",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Water of mass $m$ gram is slowly heated to increase the temperature from $T_{1}$ to $T_{2}$. The change in entropy of the water, given specific heat of water is $1\\mathrm{Jkg}^{-1}\\mathrm{K}^{-1}$, is :",
+  "options": [
+   "$\\mathrm{m}(\\mathrm{T}_{2}-\\mathrm{T}_{1})$",
+   "zero",
+   "$\\mathrm{m}\\ln \\left (\\frac{\\mathrm{T}_{1}}{\\mathrm{T}_{2}}\\right )$",
+   "$\\mathrm{m}\\ln \\left (\\frac{\\mathrm{T}_{2}}{\\mathrm{T}_{1}}\\right )$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 55,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the change in entropy when water is heated from temperature $T_{1}$ to $T_{2}$, we use the definition of entropy change for a reversible process:\n\n$\\Delta S=\\int\\limits _{T_{1}}^{T_{2}}\\frac{dQ}{T}$\n\nSince the water is being heated slowly, the process is reversible, and the heat added is given by:\n\n$dQ=mcdT$\n\nwhere:  \n\n• $m$ is the mass of the water,  \n\n• $c$ is the specific heat capacity (given as $1~\\mathrm{J}\\mathrm{kg}^{-1}\\mathrm{K}^{-1}$).\n\nSubstitute $dQ$ into the integral:\n\n$\\Delta S=\\int\\limits _{T_{1}}^{T_{2}}\\frac{mcdT}{T}=mc\\int\\limits _{T_{1}}^{T_{2}}\\frac{dT}{T}.$\n\nSince $c=1$, the equation simplifies to:\n\n$\\Delta S=m\\int\\limits _{T_{1}}^{T_{2}}\\frac{dT}{T}.$\n\nEvaluating the integral, we have:\n\n$\\int\\limits _{T_{1}}^{T_{2}}\\frac{dT}{T}=\\ln T\\left |_{T_{1}}^{T_{2}}=\\ln \\left (\\frac{T_{2}}{T_{1}}\\right ). \\right.$\n\nThus, the change in entropy is:\n\n$\\Delta S=m\\ln \\left (\\frac{T_{2}}{T_{1}}\\right ).$\n\nComparing with the options provided, the correct answer is:\n\nOption D: $m\\ln \\left (\\frac{T_{2}}{T_{1}}\\right ).$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9yk2g",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electronic-devices",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "What is the current through the battery in the circuit shown below?\n\n\n[IMG]",
+  "options": [
+   "1.5 A",
+   "0.25 A",
+   "1.0 A",
+   "0.5 A"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 56,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electronic devices"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the current through the battery in this circuit, we need to consider the equivalent resistance and the biasing of the components involved.\n\nBoth components in the circuit are forward-biased. Given this, the equivalent resistance ($R_{\\text{eq}}$) is $10\\quad \\Omega$.\n\nThe current ($i$) through the circuit can be calculated using Ohm's law:\n\n$i=\\frac{V}{R}=\\frac{5\\text{V}}{10\\Omega }=0.5\\text{A}$\n\nThus, the current through the battery is $0.5\\text{A}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9yk2g-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xuah",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given below are two statements. One is labelled as Assertion (A) and the other is labelled as Reason (R).\n\nAssertion (A) : The binding energy per nucleon is found to be practically independent of the atomic number A , for nuclei with mass numbers between 30 and 170 .\n\nReason (R) : Nuclear force is long range.\nIn the light of the above statements, choose the correct answer from the options given below :",
+  "options": [
+   "(A) is true but (R) is false",
+   "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+   "(A) is false but (R) is true",
+   "Both (A) and (R) are true but (R) is NOT the correct explanation of (A)"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 57,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's analyze both statements:\n\nAssertion (A): “The binding energy per nucleon is found to be practically independent of the atomic number A, for nuclei with mass numbers between 30 and 170.”\n\nIn fact, for nuclei in this mass range, the binding energy per nucleon is nearly constant (around 7–8 MeV per nucleon). This is because the attractive nuclear force saturates, leading to a relatively uniform binding energy per nucleon in medium to heavy nuclei.\n\nTherefore, Assertion (A) is true.\n\nReason (R): “Nuclear force is long range.”\n\nThe nuclear force (or strong force) that holds the nucleons (protons and neutrons) together is actually very short-ranged. Its effective range is approximately 1 to 3 femtometers (fm), after which the force rapidly decreases.\n\nHence, Reason (R) is false.\n\nSince the assertion is correct and the reason is incorrect, the correct answer is:\n\nOption A: (A) is true but (R) is false.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xube",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A ball having kinetic energy KE, is projected at an angle of $60^{\\circ }$ from the horizontal. What will be the kinetic energy of ball at the highest point of its flight?",
+  "options": [
+   "$\\frac{(\\mathrm{KE})}{2}$",
+   "$\\frac{(\\mathrm{KE})}{8}$",
+   "$\\frac{(\\mathrm{KE})}{4}$",
+   "$\\frac{(\\mathrm{KE})}{16}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 58,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "motion in a plane"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's break down the problem step by step:\n\nThe ball is projected with kinetic energy \n\n$\\mathrm{KE}=\\frac{1}{2}mv^{2},$\n\nwhere $v$ is the initial speed.\n\nThe ball is launched at an angle of $60^{\\circ }$. So, its initial velocity components are:\n\nHorizontal: $v_{x}=v\\cos (60^{\\circ })=\\frac{v}{2}$\n\nVertical: $v_{y}=v\\sin (60^{\\circ })$\n\nAt the highest point of its flight, the vertical component of the velocity becomes zero (i.e., $v_{y}=0$), but the horizontal component remains unchanged.\n\nTherefore, the kinetic energy at the highest point is only due to the horizontal velocity:\n\n$\\mathrm{KE}_{\\text{top}}=\\frac{1}{2}mv_{x}^{2}$\n\nSubstitute $v_{x}=\\frac{v}{2}$:\n\n$\\mathrm{KE}_{\\text{top}}=\\frac{1}{2}m\\left (\\frac{v}{2}\\right )^{2}=\\frac{1}{2}m\\frac{v^{2}}{4}=\\frac{1}{8}mv^{2}$\n\nNotice that the initial kinetic energy is \n\n$\\mathrm{KE}=\\frac{1}{2}mv^{2}.$ \n\nSo we can write:\n\n$\\mathrm{KE}_{\\text{top}}=\\frac{1}{8}mv^{2}=\\frac{1}{4}\\left (\\frac{1}{2}mv^{2}\\right )=\\frac{1}{4}\\mathrm{KE}$\n\nThus, the kinetic energy at the highest point is $\\frac{\\mathrm{KE}}{4}$.\n\nAnswer: Option C.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xuc7",
+  "subjectKey": "physics",
+  "chapterKey": "physics:dual-nature-of-matter",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In photoelectric effect an em-wave is incident on a metal surface and electrons are ejected from the surface. If the work function of the metal is 2.14 eV and stopping potential is 2 V , what is the wavelength of the em-wave?\n(Given $\\mathrm{hc}=1242\\mathrm{eVnm}$ where h is the Planck's constant and c is the speed of light in vacuum.)",
+  "options": [
+   "400 nm",
+   "600 nm",
+   "300 nm",
+   "200 nm"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 59,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "dual nature of radiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's break down the problem step by step:\n\nIn the photoelectric effect, the energy of a photon is given by:\n\n$hν=𝜙+K_{e}$\n\nwhere:\n\n$𝜙$ is the work function of the metal,\n\n$K_{e}$ is the kinetic energy of the ejected electron.\n\nThe kinetic energy of the ejected electrons is provided by the stopping potential:\n\n$K_{e}=eV$\n\nGiven that the stopping potential is $V=2\\text{V}$, we have:\n\n$K_{e}=2\\text{eV}$\n\nNow, we can calculate the photon energy:\n\n$hν=𝜙+K_{e}=2.14\\text{eV}+2\\text{eV}=4.14\\text{eV}$\n\nThe relation between the photon's energy and its wavelength is:\n\n$hν=\\frac{hc}{λ}$\n\nRearranging for $λ$:\n\n$λ=\\frac{hc}{hν}$\n\nGiven that $hc=1242\\text{eV·nm}$, substitute the values:\n\n$λ=\\frac{1242\\text{eV·nm}}{4.14\\text{eV}}$\n\nCalculate the wavelength:\n\n$λ\\approx \\frac{1242}{4.14}\\approx 300\\text{nm}$\n\nThus, the wavelength of the incident electromagnetic wave is approximately 300 nm.\n\nThe correct answer is Option C: 300 nm.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xud5",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two point charges $-4μ\\mathrm{c}$ and $4μ\\mathrm{c}$, constituting an electric dipole, are placed at $(-9,0,0)\\mathrm{cm}$ and $(9,0,0)\\mathrm{cm}$ in a uniform electric field of strength $10^{4}\\mathrm{NC}^{-1}$. The work done on the dipole in rotating it from the equilibrium through $180^{\\circ }$ is :",
+  "options": [
+   "18.4 mJ",
+   "12.4 mJ",
+   "16.4 mJ",
+   "14.4 mJ"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 60,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The work done on an electric dipole in a uniform electric field when it is rotated from an angle $θ_{1}$ to an angle $θ_{2}$ is given by:\n\n$W=-pE(\\cos θ_{2}-\\cos θ_{1})$\n\nwhere:\n\n$p=q\\cdot d$ is the dipole moment,\n\n$E$ is the electric field strength,\n\n$θ_{1}$ and $θ_{2}$ are the initial and final angles between the dipole moment and the electric field.\n\nGiven:\n\nCharge $q=4μ\\mathrm{C}=4\\times 10^{-6}\\mathrm{C}$\n\nDistance $d=18\\mathrm{cm}=0.18\\mathrm{m}$\n\nElectric field $E=10^{4}\\mathrm{N}/\\mathrm{C}$\n\nInitial angle $θ_{1}=0^{\\circ }$ (aligned with the field, equilibrium position)\n\nFinal angle $θ_{2}=180^{\\circ }$\n\nFirst, calculate the dipole moment $p$:\n\n$p=q\\cdot d=4\\times 10^{-6}\\mathrm{C}\\cdot 0.18\\mathrm{m}=7.2\\times 10^{-7}\\mathrm{Cm}$\n\nCalculate the work done $W$:\n\n$W=-pE(\\cos 180^{\\circ }-\\cos 0^{\\circ })$\n\n$W=-7.2\\times 10^{-7}\\mathrm{Cm}\\cdot 10^{4}\\mathrm{N}/\\mathrm{C}\\cdot (-1-1)$\n\n$W=7.2\\times 10^{-7}\\mathrm{Cm}\\cdot 10^{4}\\mathrm{N}/\\mathrm{C}\\cdot 2$\n\n$W=1.44\\times 10^{-2}\\mathrm{J}=14.4\\mathrm{mJ}$\n\nTherefore, the work done on the dipole in rotating it from the equilibrium position through $180^{\\circ }$ is 14.4 mJ (Option D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xudy",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A concave mirror of focal length $f$ in air is dipped in a liquid of refractive index $μ$. Its focal length in the liquid will be:",
+  "options": [
+   "$μf$",
+   "$f$",
+   "$\\frac{f}{μ}$",
+   "$\\frac{f}{(μ-1)}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 61,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "When a concave mirror is dipped in a liquid, its focal length is still determined by the geometry of the mirror. For a spherical concave mirror, the focal length is given by\n\n$f=\\frac{R}{2}$\n\nwhere $R$ is the radius of curvature of the mirror. This derivation comes solely from geometrical considerations and the law of reflection, which states that the angle of incidence equals the angle of reflection. Since reflection is independent of the medium in which the mirror is immersed, the focal length remains unchanged.\n\nThus, even when the mirror is in a liquid of refractive index $μ$, its focal length is still\n\n$f.$\n\nThe correct answer is Option B: $f$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xueu",
+  "subjectKey": "physics",
+  "chapterKey": "physics:wave-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The width of one of the two slits in Young's double slit experiment is d while that of the other slit is $x\\mathrm{d}$. If the ratio of the maximum to the minimum intensity in the interference pattern on the screen is $9:4$ then what is the value of $x$ ?\n(Assume that the field strength varies according to the slit width.)",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 62,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "wave optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the amplitude from the slit of width $d$ be proportional to $E$ and from the slit of width $xd$ be proportional to $xE$ (with $x>1$, as is evident from the given options).\n\nFor two coherent waves with amplitudes $E_{1}$ and $E_{2}$, the resultant intensity when added in phase (maximum) and out of phase (minimum) is given by\n\n$I_{\\max }\\propto (E_{1}+E_{2})^{2}\\text{and}I_{\\min }\\propto (E_{2}-E_{1})^{2}.$\n\nHere, setting\n\n$E_{1}=E$ (from the narrower slit of width $d$) and \n\n$E_{2}=xE$ (from the wider slit of width $xd$),\n\nwe have\n\n$I_{\\max }\\propto (E+xE)^{2}=E^{2}(1+x)^{2},$\n\nand since $x>1$ the subtraction in the destructive case gives\n\n$I_{\\min }\\propto (xE-E)^{2}=E^{2}(x-1)^{2}.$\n\nThe ratio of maximum to minimum intensity is therefore\n\n$\\frac{I_{\\max }}{I_{\\min }}=\\frac{(1+x)^{2}}{(x-1)^{2}}.$\n\nWe are given that\n\n$\\frac{(1+x)^{2}}{(x-1)^{2}}=\\frac{9}{4}.$\n\nTaking the square root of both sides (noting that all quantities are positive) leads to\n\n$\\frac{1+x}{x-1}=\\frac{3}{2}.$\n\nTo solve for $x$, cross-multiply:\n\n$2(1+x)=3(x-1).$\n\nExpanding both sides:\n\n$2+2x=3x-3.$\n\nRearrange the equation to isolate $x$:\n\n$2+2x+3=3x⟹5+2x=3x,$\n\nwhich implies\n\n$x=5.$\n\nThus, the value of $x$ is\n\n$5.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xufp",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The refractive index of the material of a glass prism is $\\sqrt{3}$. The angle of minimum deviation is equal to the angle of the prism. What is the angle of the prism?",
+  "options": [
+   "$60^{\\circ }$",
+   "$50^{\\circ }$",
+   "$58^{\\circ }$",
+   "$48^{\\circ }$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 63,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Step 1: Symmetry at Minimum Deviation\n\nIn a prism, when the deviation is minimum, the path of light is symmetric. This means that the angle of incidence ($i$) is equal to the angle of emergence ($i^{'}$), and the light inside the prism makes equal angles with the prism faces. If the prism angle is $A$, then the refracted angle at each interface is:\n\n$r=\\frac{A}{2}$\n\nStep 2: Relating Deviation to the Angles\n\nThe formula for the deviation ($D$) in a prism is given by:\n\n$D=i+i^{'}-A$\n\nAt minimum deviation, $i=i^{'}$, so:\n\n$D_{\\text{\\min }}=2i-A$\n\nThe special condition given is that the minimum deviation is equal to the prism angle:\n\n$D_{\\text{\\min }}=A$\n\nThus:\n\n$A=2i-A⟹2i=2A⟹i=A$\n\nStep 3: Applying Snell's Law\n\nAt the first surface, Snell's law gives:\n\n$\\sin i=μ\\sin r$\n\nSubstitute the values $i=A$ and $r=\\frac{A}{2}$:\n\n$\\sin A=μ\\sin \\frac{A}{2}$\n\nGiven that the refractive index $μ=\\sqrt{3}$, we have:\n\n$\\sin A=\\sqrt{3}\\sin \\frac{A}{2}$\n\nStep 4: Solving the Equation\n\nRecall the double-angle formula for sine:\n\n$\\sin A=2\\sin \\frac{A}{2}\\cos \\frac{A}{2}$\n\nSubstitute this into the previous equation:\n\n$2\\sin \\frac{A}{2}\\cos \\frac{A}{2}=\\sqrt{3}\\sin \\frac{A}{2}$\n\nAssuming $\\sin \\frac{A}{2}\\neq 0$, we can divide both sides by $\\sin \\frac{A}{2}$:\n\n$2\\cos \\frac{A}{2}=\\sqrt{3}$\n\nSolve for $\\cos \\frac{A}{2}$:\n\n$\\cos \\frac{A}{2}=\\frac{\\sqrt{3}}{2}$\n\nSince:\n\n$\\cos 30^{\\circ }=\\frac{\\sqrt{3}}{2}$\n\nIt follows:\n\n$\\frac{A}{2}=30^{\\circ }⟹A=60^{\\circ }$\n\nFinal Answer:\n\nThe angle of the prism is $60^{\\circ }$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xugk",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two charges $7μ\\mathrm{c}$ and $-4μ\\mathrm{c}$ are placed at $(-7\\mathrm{cm},0,0)$ and $(7\\mathrm{cm},0,0)$ respectively. Given, $𝜖_{0}=8.85\\times 10^{-12}\\mathrm{C}^{2}\\mathrm{N}^{-1}\\mathrm{m}^{-2}$, the electrostatic potential energy of the charge configuration is :",
+  "options": [
+   "$-2.0$ J",
+   "$-1.5$ J",
+   "$-1.2$ J",
+   "$-1.8$ J"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 64,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$U=\\frac{1}{4π𝜖_{0}}\\frac{q_{1}q_{2}}{r}$\n\nHere, \n\n$q_{1}=7\\times 10^{-6}C$\n\n$q_{2}=-4\\times 10^{-6}C$\n\nThe separation between the charges is along the x-axis from $-7\\text{cm}$ to $7~\\text{cm}$, so \n\n$r=0.14m$\n\nThe Coulomb constant is approximated as \n\n$\\frac{1}{4π𝜖_{0}}\\approx 9\\times 10^{9}\\frac{Nm^{2}}{C^{2}}$\n\nSubstitute these values into the equation:\n\n$U=9\\times 10^{9}\\times \\frac{(7\\times 10^{-6})(-4\\times 10^{-6})}{0.14}$\n\nCalculate the product of the charges:\n\n$(7\\times 10^{-6})(-4\\times 10^{-6})=-28\\times 10^{-12}C^{2}$\n\nNow, divide by the distance:\n\n$\\frac{-28\\times 10^{-12}}{0.14}=-2\\times 10^{-10}C^{2}/m$\n\nFinally, multiply by the Coulomb constant:\n\n$U=9\\times 10^{9}\\times (-2\\times 10^{-10})=-1.8J$\n\nThus, the electrostatic potential energy of the configuration is:\n\n$-1.8\\qquad J$\n\nThis corresponds to Option D.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xuhf",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Water flows in a horizontal pipe whose one end is closed with a valve. The reading of the pressure gauge attached to the pipe is $P_{1}$. The reading of the pressure gauge falls to $P_{2}$ when the valve is opened. The speed of water flowing in the pipe is proportional to",
+  "options": [
+   "$(P_{1}-P_{2})^{2}$",
+   "$\\sqrt{\\mathrm{P}_{1}-\\mathrm{P}_{2}}$",
+   "$P_{1}-P_{2}$",
+   "$(P_{1}-P_{2})^{4}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 65,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "When water flows from a region of higher pressure to a region of lower pressure, the difference in pressure is converted into kinetic energy of the flowing water. According to Bernoulli's principle for horizontal flow (where gravitational effects can be ignored), this conversion can be expressed as:\n\n$\\frac{1}{2}ρv^{2}=P_{1}-P_{2}$\n\nHere, \n\n$ρ$ is the density of water,\n\n$v$ is the speed of the water,\n\n$P_{1}$ is the initial pressure when the valve is closed,\n\n$P_{2}$ is the pressure after the valve is opened.\n\nBy solving for $v$, we have:\n\n$v=\\sqrt{\\frac{2(P_{1}-P_{2})}{ρ}}$\n\nThis equation shows that the speed of the water, $v$, is proportional to the square root of the pressure difference:\n\n$v\\propto \\sqrt{P_{1}-P_{2}}$\n\nThus, the correct relationship is given by the square root of the pressure difference.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xuib",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The energy of a system is given as $\\mathrm{E}(\\mathrm{t})=α^{3}\\mathrm{e}^{-βt}$, where t is the time and $β=0.3\\mathrm{s}^{-1}$. The errors in the measurement of $α$ and $t$ are $1.2%$ and $1.6%$, respectively. At $t=5\\mathrm{s}$, maximum percentage error in the energy is :",
+  "options": [
+   "$6%$",
+   "$11.6%$",
+   "$4%$",
+   "$8.4%$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 66,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given $E=α^{3}e^{-βt}$, taking logarithms gives $\\ln E=3\\ln α-βt$.\n\nDifferentiating, the magnitudes of the contributions add for the maximum error:\n\n$\\left (\\dfrac{\\Delta E}{E}\\right )_{\\max }=3\\dfrac{\\Delta α}{α}+β\\Delta t$\n\nThe error in $α$ contributes $3\\times 1.2%=3.6%$.\n\nThe error in $t$ is $1.6%$ of $5\\text{s}$, so $\\Delta t=0.016\\times 5=0.08\\text{s}$ and $β\\Delta t=0.3\\times 0.08=0.024=2.4%$.\n\n$\\left (\\dfrac{\\Delta E}{E}\\right )_{\\max }=3.6%+2.4%=6%$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xuk2",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Match List - I with List - II\n\n  \n    \n    List - I\n    \n    List - II\n  \n\n  \n    (A)\n    Permeability of free space\n    (I)\n    $\\left [\\mathrm{M}\\mathrm{L}^{2}\\mathrm{T}^{-2}\\right ]$\n  \n  \n    (B)\n    Magnetic field\n    (II)\n    $\\left [\\mathrm{M}\\mathrm{T}^{-2}\\mathrm{A}^{-1}\\right ]$\n  \n  \n    (C)\n    Magnetic moment\n    (III)\n    $\\left [\\mathrm{M}\\mathrm{L}\\mathrm{T}^{-2}\\mathrm{A}^{-2}\\right ]$\n  \n  \n    (D)\n    Torsional constant\n    (IV)\n    $\\left [\\mathrm{L}^{2}\\mathrm{A}\\right ]$\n  \n\nChoose the correct answer from the options given below :",
+  "options": [
+   "(A)-(III), (B)-(II), (C)-(IV), (D)-(I)",
+   "$(\\mathrm{A})-(\\mathrm{I}),(\\mathrm{B})-(\\mathrm{IV}),(\\mathrm{C})-(\\mathrm{II}),(\\mathrm{D})-(\\mathrm{III})$",
+   "$(\\mathrm{A})-(\\mathrm{II}),(\\mathrm{B})-(\\mathrm{I}),(\\mathrm{C})-(\\mathrm{III}),(\\mathrm{D})-(\\mathrm{IV})$",
+   "(A)-(IV), (B)-(III), (C)-(I), (D)-(II)"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 67,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The correct matching is:\n\n(A) Permeability of free space has dimensions  \n\n$[MLT^{-2}A^{-2}]$  \n\nwhich corresponds to entry (III).\n\n(B) Magnetic field has dimensions  \n\n$[MT^{-2}A^{-1}]$  \n\nwhich corresponds to entry (II).\n\n(C) Magnetic moment in SI units is expressed in Ampere-square meters, i.e.,  \n\n$[L^{2}A]$  \n\nwhich corresponds to entry (IV).\n\n(D) Torsional constant (torque per unit angular displacement) has dimensions  \n\n$[ML^{2}T^{-2}]$  \n\nwhich corresponds to entry (I).\n\nThus, the correct answer is:\n\nOption A: (A)-(III), (B)-(II), (C)-(IV), (D)-(I)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9yjuc",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "[IMG]\n\n\nUsing the given $P-V$ diagram, the work done by an ideal gas along the path $ABCD$ is :",
+  "options": [
+   "$3\\mathrm{P}_{0}\\mathrm{V}_{0}$",
+   "$-3\\mathrm{P}_{0}\\mathrm{V}_{0}$",
+   "$-4\\mathrm{P}_{0}\\mathrm{V}_{0}$",
+   "$4\\mathrm{P}_{0}\\mathrm{V}_{0}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 68,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the work done by an ideal gas along the path $ABCD$ on the given $P-V$ diagram, we calculate the work done on each segment individually and then sum them up.\n\nSegment $AB$: The work is given by $\\text{w}_{AB}=P_{0}\\times V_{0}$, contributing $P_{0}V_{0}$.\n\nSegment $BC$: No volume change occurs along this path, resulting in zero work: $\\text{w}_{BC}=0$.\n\nSegment $CD$: The gas compresses, performing negative work: $\\text{w}_{CD}=-(2P_{0}\\times 2V_{0})=-4P_{0}V_{0}$.\n\nAdding the work done in each segment:\n\n$\\begin{array}{ll} \\text{w}_{ABCD} & =\\text{w}_{AB}+\\text{w}_{BC}+\\text{w}_{CD} \\\\ =P_{0}V_{0}+0-4P_{0}V_{0} \\\\ =-3P_{0}V_{0} \\end{array}$\n\nThus, the total work done by the gas along the path $ABCD$ is $-3P_{0}V_{0}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9yjuc-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xvoz",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A circular disk of radius R meter and mass M kg is rotating around the axis perpendicular to the disk. An external torque is applied to the disk such that $θ(t)=5t^{2}-8t$, where $θ(t)$ is the angular position of the rotating disc as a function of time $t$.\nHow much power is delivered by the applied torque, when $t=2\\mathrm{s}$ ?",
+  "options": [
+   "$60\\mathrm{MR}^{2}$",
+   "$72\\mathrm{MR}^{2}$",
+   "$8\\mathrm{MR}^{2}$",
+   "$108\\mathrm{MR}^{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 69,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Moment of Inertia and Angular Motion\n\nFor a solid circular disk, the moment of inertia is given by\n\n$I=\\frac{1}{2}MR^{2}.$\n\nThe angular position is defined as\n\n$θ(t)=5t^{2}-8t.$\n\nAngular Velocity and Acceleration\n\nDifferentiate with respect to time to obtain the angular velocity:\n\n$ω(t)=\\frac{dθ}{dt}=10t-8.$\n\nDifferentiating again, the angular acceleration is:\n\n$α(t)=\\frac{dω}{dt}=10.$\n\nAt time $t=2\\text{s}$:\n\nAngular velocity: \n\n$ω(2)=10(2)-8=12\\text{rad/s}.$\n\nAngular acceleration: \n\n$α(2)=10\\text{rad/s}^{2}.$\n\nTorque Calculation\n\nThe torque applied by the external force is related to the moment of inertia and angular acceleration:\n\n$τ=Iα=\\frac{1}{2}MR^{2}\\times 10=5MR^{2}.$\n\nPower Delivered\n\nPower delivered by a torque is given by:\n\n$P=τω.$\n\nAt $t=2\\text{s}$, substitute the values:\n\n$P=5MR^{2}\\times 12=60MR^{2}.$\n\nThus, the power delivered by the applied torque at $t=2\\text{s}$ is:\n\n$60MR^{2}.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xvps",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A galvanometer having a coil of resistance $30\\Omega$ need 20 mA of current for full-scale deflection. If a maximum current of 3 A is to be measured using this galvanometer, the resistance of the shunt to be added to the galvanometer should be $\\frac{30}{X}\\Omega$, where $X$ is",
+  "options": [
+   "447",
+   "298",
+   "149",
+   "596"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 70,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given:\n\nGalvanometer resistance: \n\n$R_{g}=30\\Omega$\n\nFull-scale deflection current: \n\n$I_{g}=20mA=0.02A$\n\nMaximum current to be measured: \n\n$I=3A$\n\nWhen using the galvanometer to measure 3 A, the extra current passing through the shunt resistor ($R_{s}$) is:\n\n$I_{s}=I-I_{g}=3-0.02=2.98A.$\n\nSince the galvanometer and the shunt resistor are connected in parallel, their voltage drops must be equal. Therefore:\n\n$I_{g}R_{g}=I_{s}R_{s}.$\n\nSubstitute the given values:\n\n$0.02\\times 30=2.98\\times R_{s}\\Rightarrow R_{s}=\\frac{0.6}{2.98}\\approx 0.2013\\Omega .$\n\nThe shunt resistance is represented as:\n\n$R_{s}=\\frac{30}{X}\\Omega .$\n\nEquate the two expressions:\n\n$\\frac{30}{X}=0.2013.$\n\nSolving for $X$:\n\n$X=\\frac{30}{0.2013}\\approx 149.$\n\nThus, the value of $X$ is approximately $149.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xvqc",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-waves",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A time varying potential difference is applied between the plates of a parallel plate capacitor of capacitance $2.5μ\\mathrm{F}$. The dielectric constant of the medium between the capacitor plates is 1 . It produces an instantaneous displacement current of 0.25 mA in the intervening space between the capacitor plates, the magnitude of the rate of change of the potential difference will be $_________$ $\\mathrm{Vs}^{-1}$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 100.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 71,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{dV}{dt}=\\frac{I}{C}$\n\nGiven that the displacement current is $I=0.25\\times 10^{-3}\\text{A}$ and the capacitance is $C=2.5\\times 10^{-6}\\text{F},$ the rate of change of the potential difference is calculated as follows:\n\n$\\frac{dV}{dt}=\\frac{0.25\\times 10^{-3}}{2.5\\times 10^{-6}}=\\frac{0.25}{2.5}\\times \\frac{10^{-3}}{10^{-6}}=0.1\\times 10^{3}=100\\text{V/s}.$\n\nThus, the magnitude of the rate of change of the potential difference is $100\\text{V/s}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xvqu",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "In a series LCR circuit, a resistor of $300\\Omega$, a capacitor of 25 nF and an inductor of 100 mH are used. For maximum current in the circuit, the angular frequency of the ac source is $_________$ $\\times 10^{4}$ radians $\\mathrm{s}^{-1}$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 72,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "alternating current"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$ω=\\frac{1}{\\sqrt{LC}}$\n\nFor a series LCR circuit, the maximum current occurs at resonance, where the inductive reactance equals the capacitive reactance. Given the values:\n\nInductance: $L=100\\text{mH}=0.1\\text{H}$\n\nCapacitance: $C=25\\text{nF}=25\\times 10^{-9}\\text{F}$\n\nwe first calculate the product $LC$:\n\n$LC=0.1\\times 25\\times 10^{-9}=2.5\\times 10^{-9}$\n\nNext, compute the square root of the product:\n\n$\\sqrt{LC}=\\sqrt{2.5\\times 10^{-9}}$\n\nRecognize that:\n\n$\\sqrt{2.5\\times 10^{-9}}=\\sqrt{2.5}\\times \\sqrt{10^{-9}}\\approx 1.581\\times 10^{-4.5}$\n\nSince $10^{-4.5}=3.162\\times 10^{-5}$, we have:\n\n$\\sqrt{LC}\\approx 1.581\\times 3.162\\times 10^{-5}\\approx 5.0\\times 10^{-5}$\n\nNow, the angular frequency at resonance becomes:\n\n$ω=\\frac{1}{5.0\\times 10^{-5}}=2.0\\times 10^{4}\\text{radians/s}$\n\nThus, the angular frequency of the AC source for maximum current in the circuit is:\n\n$ω=2\\times 10^{4}\\text{radians/s}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xvrd",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "An air bubble of radius 1.0 mm is observed at a depth 20 cm below the free surface of a liquid having surface tension $0.095\\mathrm{J}/\\mathrm{m}^{2}$ and density $10^{3}\\mathrm{kg}/\\mathrm{m}^{3}$. The difference between pressure inside the bubble and atmospheric pressure is $__________$ $\\mathrm{N}/\\mathrm{m}^{2}$. (Take $\\mathrm{g}=10\\mathrm{m}/\\mathrm{s}^{2}$ )",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2190.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 73,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the difference between the pressure inside the air bubble and the atmospheric pressure, we use the fact that at depth $h$ in a liquid of density $ρ$, the external (hydrostatic) pressure exceeds atmospheric by $ρgh$. Additionally, for a spherical bubble in a liquid, the internal pressure exceeds the external pressure by $\\frac{2T}{r}$, where $T$ is the surface tension and $r$ is the radius of the bubble.\n\nHence, the internal pressure of the bubble is\n\n$P_{\\text{inside}}=P_{\\text{atm}}+ρgh+\\frac{2T}{r}.$\n\nTherefore, the difference between the bubble's internal pressure and the atmospheric pressure is\n\n$\\Delta P=P_{\\text{inside}}-P_{\\text{atm}}=ρgh+\\frac{2T}{r}.$\n\nSubstituting the given values:\n\n$ρ=10^{3}\\text{kg/m}^{3}$\n\n$g=10\\text{m/s}^{2}$\n\n$h=0.20\\text{m}$\n\n$T=0.095\\text{J/m}^{2}$\n\n$r=1.0\\times 10^{-3}\\text{m}$\n\nwe compute each term:\n\nHydrostatic term:\n\n$ρgh=(10^{3}\\text{kg/m}^{3})\\cdot (10\\text{m/s}^{2})\\cdot (0.20\\text{m})=2000\\text{N/m}^{2}.$\n\nSurface tension term:\n\n$\\frac{2T}{r}=\\frac{2\\times 0.095\\text{J/m}^{2}}{1.0\\times 10^{-3}\\text{m}}=\\frac{2\\times 0.095}{10^{-3}}=2\\times 95=190\\text{N/m}^{2}.$\n\nHence,\n\n$\\Delta P=2000\\text{N/m}^{2}+190\\text{N/m}^{2}=2190\\text{N/m}^{2}.$\n\nThus, the required pressure difference between the inside of the bubble and the atmospheric pressure is\n\n$2190\\qquad \\text{N/m}^{2}.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9yjrz",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "At steady state the charge on the capacitor, as shown in the circuit below, is $_________$ $μ$C.\n\n\n[IMG]",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 16.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 74,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "capacitor"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\mathrm{i}=\\left (\\dfrac{5}{25}\\right ) \\\\  \\\\ \\mathrm{Q}=\\mathrm{CV} \\\\  \\\\ \\mathrm{Q}=\\left (8\\times 10^{-6}\\right )\\left (\\dfrac{5}{25}\\times 10\\right ) \\\\  \\\\ \\mathrm{Q}=\\left (\\dfrac{8\\times 5\\times 10^{-5}}{25}\\right )=16μ\\mathrm{C} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9yjrz-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9yjrz-1.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xwsf",
+  "subjectKey": "physics",
+  "chapterKey": "physics:gravitation",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A satellite of mass $\\frac{M}{2}$ is revolving around earth in a circular orbit at a height of $\\frac{R}{3}$ from earth surface. The angular momentum of the satellite is $\\mathrm{M}\\sqrt{\\frac{\\mathrm{GMR}}{x}}$. The value of $x$ is $_________$ , where M and R are the mass and radius of earth, respectively. ( G is the gravitational constant)",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 75,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "gravitation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$r=R+\\frac{R}{3}=\\frac{4R}{3}$\n\nFor a circular orbit, the gravitational force provides the required centripetal force:\n\n$\\frac{GMm}{r^{2}}=\\frac{mv^{2}}{r}$\n\nwhich simplifies to\n\n$v=\\sqrt{\\frac{GM}{r}}.$\n\nThe angular momentum $L$ of the satellite is given by\n\n$L=mvr.$\n\nSubstitute the values:\n\nSatellite mass: $m=\\frac{M}{2}$\n\nOrbital radius: $r=\\frac{4R}{3}$\n\nSpeed: $v=\\sqrt{\\frac{GM}{\\frac{4R}{3}}}=\\sqrt{\\frac{3GM}{4R}}$\n\nThus,\n\n$L=\\frac{M}{2}\\cdot \\frac{4R}{3}\\cdot \\sqrt{\\frac{3GM}{4R}}.$\n\nSimplify the expression:\n\n$L=\\frac{M\\cdot 4R}{6}\\sqrt{\\frac{3GM}{4R}}=\\frac{2MR}{3}\\sqrt{\\frac{3GM}{4R}}.$\n\nNotice that the square root can be combined as:\n\n$\\sqrt{\\frac{3GM}{4R}}=\\sqrt{\\frac{3}{4}}\\sqrt{\\frac{GM}{R}}.$\n\nTherefore,\n\n$L=\\frac{2MR}{3}\\cdot \\sqrt{\\frac{3}{4}}\\sqrt{\\frac{GM}{R}}=\\frac{2MR\\sqrt{3}}{3\\cdot 2}\\sqrt{\\frac{GM}{R}}=\\frac{M\\sqrt{3}}{3}\\sqrt{GMR},$\n\nwhere we used the fact that $R\\sqrt{\\frac{1}{R}}=\\sqrt{R}$ to form $\\sqrt{GMR}$.\n\nSo the final expression is:\n\n$L=\\frac{M}{\\sqrt{3}}\\sqrt{GMR}.$\n\nIt is given that the angular momentum can also be expressed as:\n\n$L=M\\sqrt{\\frac{GMR}{x}}.$\n\nEquate the two expressions:\n\n$\\frac{M}{\\sqrt{3}}\\sqrt{GMR}=M\\sqrt{\\frac{GMR}{x}}.$\n\nCancel $M$ and $\\sqrt{GMR}$ on both sides (assuming they are nonzero):\n\n$\\frac{1}{\\sqrt{3}}=\\sqrt{\\frac{1}{x}}.$\n\nTaking squares on both sides:\n\n$\\frac{1}{3}=\\frac{1}{x}.$\n\nThus,\n\n$x=3.$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

@@ -1,0 +1,993 @@
+[
+ {
+  "publicId": "PYQ-2026-ml8t8khb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=[x]^{2}-[x+3]-3,x\\in 𝐑$, where [.] is the greatest integer function. Then",
+  "options": [
+   "$f(x)=0$ for finitely many values of $x$",
+   "$f(x)<0$ only for $x\\in [-1,3)$",
+   "$\\int\\limits _{0}^{2}f(x)\\mathrm{d}x=-6$",
+   "$f(x)>0$ only for $x\\in [4,\\infty )$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\text{(A)}\\Rightarrow f(x)=0\\Rightarrow [x]=3\\text{or}[x]=-2 \\\\ \\Rightarrow x\\in [3,4)\\cup [-2,-1)\\Rightarrow f(x)=0\\text{has infinite solutions} \\\\ f(x)=[x]^{2}-[x+3]-3 \\\\ =[x]^{2}-[x]-6=([x]-3)([x]+2) \\end{array}$\n\n$\\begin{array}{l} (C)\\Rightarrow \\int\\limits _{0}^{2}f(x)dx=\\int\\limits _{0}^{2}\\left ([x]^{2}-[x]-6\\right )dx \\\\ \\int\\limits _{0}^{2}f(x)dx=\\int\\limits _{0}^{2}\\left ([x]^{2}-[x]-6\\right )dx=\\int\\limits _{0}^{2}\\left ([x]^{2}-[x]\\right )dx-12=-12 \\\\ (B)\\Rightarrow f(x)<0\\Rightarrow ([x]-3)([x]+2)<0\\Rightarrow -2<[x]<3\\Rightarrow -1\\leq [x]<3 \\\\ (D)\\Rightarrow f(x)>0\\Rightarrow [x]<-2\\text{or}[x]>3\\Rightarrow x<-2\\text{or}x\\geq 4\\Rightarrow x\\in (-\\infty ,-2)\\cup [4,\\infty ) \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kj9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the locus of the mid-point of the chord through the origin $O$ of the parabola $y^{2}=4x$ be the curve S . Let P be any point on S . Then the locus of the point, which internally divides OP in the ratio 3 : 1, is :",
+  "options": [
+   "$2x^{2}=3y$",
+   "$2y^{2}=3x$",
+   "$3y^{2}=2x$",
+   "$3x^{2}=2y$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $M(x_{1},y_{1})$ be the locus of the midpoint of the chord of the parabola $y^{2}=4x$\n\n∴ Equation of the chord is $S_{1}=S_{11}\\Rightarrow yy_{1}-2(x+x_{1})=y_{1}^{2}-4x_{1}$\n\nIt passes through $0(0,0)$\n\n$\\therefore -2x_{1}=y_{1}^{2}-4x_{1}$\n\nLocus of M is $y^{2}=2x$\n\nLet $P\\left (\\frac{1}{2}t^{2},t\\right )$ be a point on this locus\n\n\n[IMG]\n\n\n$\\begin{array}{l} Q(x,y)=\\left (\\dfrac{\\frac{3t^{2}}{2}+0}{4},\\dfrac{3t+0}{4}\\right )\\Rightarrow \\left (\\dfrac{3t^{2}}{8},\\dfrac{3t}{4}\\right ) \\\\ \\Rightarrow t^{2}=\\dfrac{8x}{3},t=\\dfrac{4y}{3}\\Rightarrow \\dfrac{16y^{2}}{9}=\\dfrac{8x}{3}\\Rightarrow 2y^{2}=3x \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-22nd-january-evening-shift/ml8t8kj9-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 22nd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kkh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let n be the number obtained on rolling a fair die. If the probability that the system\n\n$\\begin{array}{l} x-\\mathrm{n}y+z=6 \\\\ x+(\\mathrm{n}-2)y+(\\mathrm{n}+1)z=8 \\\\ (\\mathrm{n}-1)y+z=1 \\end{array}$\n\nhas a unique solution is $\\frac{k}{6}$, then the sum of $k$ and all possible values of $n$ is :",
+  "options": [
+   "22",
+   "20",
+   "24",
+   "21"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} x-ny+z=6 \\\\ x+(n-2)y+(n+1)z=8 \\\\ (n-1)y+z=1 \\end{array}$\n\n$\\left |\\begin{array}{lll} 1 & -n & 1 \\\\ 1 & (n-2) & n+1 \\\\ 0 & n-1 & 1 \\end{array}\\right |=0\\Rightarrow n=1,2\\text{or}n=-1\\text{(rejected)}$\n\nFor unique solution $\\mathrm{n}=3,4,5,6$\n\nNow P (Probability when system of equations has unique solution) $=\\frac{4}{6}$\n\nSo $\\mathrm{k}=4$\n\nNow required sum $=4+(3+4+5+6)=22$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8klh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the domain of the function $f(x)=\\log _{3}\\log _{5}\\left (7-\\log _{2}\\left (x^{2}-10x+85\\right )\\right )+\\sin ^{-1}\\left (\\left |\\frac{3x-7}{17-x}\\right |\\right )$ be $(α,β]$. Then $α+β$ is equal to :",
+  "options": [
+   "12",
+   "8",
+   "10",
+   "9"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $t=x^{2}-10x+85=(x-5)^{2}+60$, which is always positive.\n\nThe outer logarithm needs $\\log _{5}(7-\\log _{2}t)>0$, i.e. $7-\\log _{2}t>1$, so $\\log _{2}t<6$ and $t<64$ (this also makes $7-\\log _{2}t$ positive).\n\n$(x-5)^{2}+60<64\\Rightarrow (x-5)^{2}<4\\Rightarrow 3<x<7$\n\nThe $\\sin ^{-1}$ term needs $\\left |\\dfrac{3x-7}{17-x}\\right |\\leq 1$ with $x\\neq 17$, i.e. $(3x-7)^{2}\\leq (17-x)^{2}$:\n\n$9x^{2}-42x+49\\leq x^{2}-34x+289\\Rightarrow 8x^{2}-8x-240\\leq 0\\Rightarrow (x-6)(x+5)\\leq 0\\Rightarrow -5\\leq x\\leq 6$\n\nThe domain is $(3,7)\\cap [-5,6]=(3,6]$, so $α=3$, $β=6$ and $α+β=9$.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kma",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let S and $\\mathrm{S}^{'}$ be the foci of the ellipse $\\frac{x^{2}}{25}+\\frac{y^{2}}{9}=1$ and $\\mathrm{P}(α,β)$ be a point on the ellipse in the first quadrant. If $(\\mathrm{SP})^{2}+(\\mathrm{S}^{'}\\mathrm{P})^{2}-\\mathrm{SP}\\cdot \\mathrm{S}^{'}\\mathrm{P}=37$, then $α^{2}+β^{2}$ is equal to :",
+  "options": [
+   "13",
+   "15",
+   "11",
+   "17"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\because \\mathrm{P}\\text{lies on ellipse}\\Rightarrow \\dfrac{α^{2}}{25}+\\dfrac{β^{2}}{9}=1 \\\\ \\because PS+PS^{'}=2a\\Rightarrow PS+PS^{'}=10 \\\\ \\because (PS)^{2}+\\left (PS^{'}\\right )^{2}-PS.PS^{'}=37 \\\\ \\left (PS+PS^{'}\\right )^{2}-3PS.PS^{'}=37 \\\\ 100-3PS.PS^{'}=37 \\\\ 3PS.PS^{'}=63\\Rightarrow PS.PS^{'}=21 \\\\ \\because PS&PS^{'}\\text{are}\\left (5\\pm \\dfrac{4}{5}.α\\right ) \\\\ \\therefore PS.PS^{'}=25-\\dfrac{16}{25}α^{2}=21 \\\\ \\dfrac{16}{25}α^{2}=4 \\\\ α=\\dfrac{5}{2}\\Rightarrow α^{2}=\\dfrac{25}{4} \\\\ \\therefore β^{2}=\\dfrac{27}{4} \\\\ \\therefore α^{2}+β^{2}=\\dfrac{52}{4}=13 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8knc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\lim _{x\\to 0}\\frac{\\mathrm{e}^{(\\mathrm{a}-1)x}+2\\cos \\mathrm{b}x+(\\mathrm{c}-2)\\mathrm{e}^{-x}}{x\\cos x-\\log _{\\mathrm{e}}(1+x)}=2$, then $\\mathrm{a}^{2}+\\mathrm{b}^{2}+\\mathrm{c}^{2}$ is equal to :",
+  "options": [
+   "3",
+   "5",
+   "9",
+   "7"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Expanding about $x=0$, the numerator is\n\n$e^{(a-1)x}+2\\cos bx+(c-2)e^{-x}=(c+1)+(a-c+1)x+\\left (\\frac{(a-1)^{2}}{2}-b^{2}+\\frac{c-2}{2}\\right )x^{2}+\\ldots$\n\nand the denominator is\n\n$x\\cos x-\\log _{e}(1+x)=\\left (x-\\frac{x^{3}}{2}+\\ldots \\right )-\\left (x-\\frac{x^{2}}{2}+\\frac{x^{3}}{3}-\\ldots \\right )=\\frac{x^{2}}{2}-\\frac{5x^{3}}{6}+\\ldots$\n\nFor a finite limit the constant and $x$ terms of the numerator must vanish: $c+1=0\\Rightarrow c=-1$, and $a-c+1=0\\Rightarrow a=-2$.\n\nThe limit is then\n\n$\\frac{\\frac{(a-1)2}{2}-b^{2}+\\frac{c-2}{2}}{\\frac{1}{2}}=(a-1)^{2}-2b^{2}+(c-2)=9-2b^{2}-3=6-2b^{2}$\n\n$6-2b^{2}=2\\Rightarrow b^{2}=2$.\n\n$a^{2}+b^{2}+c^{2}=4+2+1=7$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8ko9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $⃗{a}=2\\hat{i}-\\hat{j}+\\hat{k}$ and $⃗{b}=λ\\hat{j}+2\\hat{k},λ\\in 𝒁$ be two vectors. Let $⃗{c}=⃗{a}\\times ⃗{b}$ and $⃗{d}$ be a vector of magnitude 2 in $yz$-plane. If $|⃗{c}|=\\sqrt{53}$, then the maximum possible value of $(⃗{c}\\cdot ⃗{d})^{2}$ is equal to :",
+  "options": [
+   "52",
+   "26",
+   "104",
+   "208"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We are given the vectors:\n\n$⃗{a}=2\\hat{i}-\\hat{j}+\\hat{k}$\n\n$⃗{b}=λ\\hat{j}+2\\hat{k}$\n\nFirst, find the cross product $⃗{c}=⃗{a}\\times ⃗{b}$:\n\n$⃗{c}=\\left |\\begin{array}{lll} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & -1 & 1 \\\\ 0 & λ & 2 \\end{array}\\right |$\n\nExpanding this determinant gives:\n\n$⃗{c}=\\hat{i}(-2-λ)-\\hat{j}(4-0)+\\hat{k}(2λ-0)$\n\n$⃗{c}=-(λ+2)\\hat{i}-4\\hat{j}+2λ\\hat{k}$\n\nWe are given that $|⃗{c}|=\\sqrt{53}$, which means $|⃗{c}|^{2}=53$:\n\n$(λ+2)^{2}+(-4)^{2}+(2λ)^{2}=53$\n\n$λ^{2}+4λ+4+16+4λ^{2}=53$\n\n$5λ^{2}+4λ+20=53$\n\n$5λ^{2}+4λ-33=0$\n\nFactoring the quadratic equation:\n\n$(5λ-11)(λ+3)=0$\n\nSince $λ$ is an integer ($λ\\in \\mathrm{ℤ}$), we take:\n\n$λ=-3$\n\nNow, substituting $λ=-3$ back into $⃗{c}$:\n\n$⃗{c}=-(-3+2)\\hat{i}-4\\hat{j}+2(-3)\\hat{k}$\n\n$⃗{c}=\\hat{i}-4\\hat{j}-6\\hat{k}$\n\nNext, consider the vector $⃗{d}$. Since $⃗{d}$ lies in the $yz$-plane, its $x$-component is zero:\n\n$⃗{d}=y\\hat{j}+z\\hat{k}$\n\nThe magnitude of $⃗{d}$ is given as $2$, so:\n\n$|⃗{d}|^{2}=y^{2}+z^{2}=2^{2}=4$\n\nNow, compute the dot product $⃗{c}\\cdot ⃗{d}$:\n\n$⃗{c}\\cdot ⃗{d}=(1)(0)+(-4)(y)+(-6)(z)=-(4y+6z)$\n\nTherefore,\n\n$(⃗{c}\\cdot ⃗{d})^{2}=(4y+6z)^{2}$\n\nUsing the Cauchy-Schwarz inequality for the terms $4y+6z$:\n\n$(4y+6z)^{2}\\leq (4^{2}+6^{2})(y^{2}+z^{2})$\n\n$(4y+6z)^{2}\\leq (16+36)(4)$\n\n$(4y+6z)^{2}\\leq 52\\times 4=208$\n\nThe maximum possible value is attained when the ratio of $y$ and $z$ matches $4:6$.\n\nThus, the maximum possible value of $(⃗{c}\\cdot ⃗{d})^{2}$ is $208$.\n\nThe correct option is Option D.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kps",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $[\\cdot ]$ denote the greatest integer function, and let $f(x)=\\min \\left \\{\\sqrt{2}x,x^{2}\\right \\}$.\n\nLet $\\mathrm{S}=\\{x\\in (-2,2)$ : the function $\\mathrm{g}(x)=|x|\\left [x^{2}\\right ]$ is discontinuous at $x\\}$.\n\nThen $\\sum\\limits _{x\\in \\mathrm{S}}f(x)$ equals",
+  "options": [
+   "$2-\\sqrt{2}$",
+   "$2\\sqrt{6}-3\\sqrt{2}$",
+   "$1-\\sqrt{2}$",
+   "$\\sqrt{6}-2\\sqrt{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$[x^{2}]$ jumps where $x^{2}$ crosses an integer, which in $(-2,2)$ happens at $x^{2}=1,2,3$, that is at $x=\\pm 1,\\pm \\sqrt{2},\\pm \\sqrt{3}$. At each of these points $|x|\\neq 0$, so $g(x)=|x|[x^{2}]$ jumps by $|x|$ there; near $x=0$, $[x^{2}]=0$, so $g$ is continuous at $0$.\n\n$S=\\{-\\sqrt{3},-\\sqrt{2},-1,1,\\sqrt{2},\\sqrt{3}\\}$\n\nWith $f(x)=\\min \\{\\sqrt{2}x,x^{2}\\}$:\n\n$f(-1)=\\min \\{-\\sqrt{2},1\\}=-\\sqrt{2}$, $f(1)=\\min \\{\\sqrt{2},1\\}=1$\n\n$f(-\\sqrt{2})=\\min \\{-2,2\\}=-2$, $f(\\sqrt{2})=\\min \\{2,2\\}=2$\n\n$f(-\\sqrt{3})=\\min \\{-\\sqrt{6},3\\}=-\\sqrt{6}$, $f(\\sqrt{3})=\\min \\{\\sqrt{6},3\\}=\\sqrt{6}$\n\n$\\sum\\limits _{x\\in S}f(x)=-\\sqrt{2}+1-2+2-\\sqrt{6}+\\sqrt{6}=1-\\sqrt{2}$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kqr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Among the statements\n\n$(S1)$ : If $A(5,-1)$ and $B(-2,3)$ are two vertices of a triangle, whose orthocentre is $(0,0)$, then its third vertex is $(-4,-7)$\n\nand\n\n(S2) : If positive numbers $2a,b,c$ are three consecutive terms of an A.P., then the lines $ax+by+c=0$ are concurrent at $(2,-2)$,",
+  "options": [
+   "both are incorrect",
+   "only (S2) is correct",
+   "both are correct",
+   "only (S1) is correct"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\text{Solution of statement-I} \\\\ m_{AO}m_{BC}=-1 \\end{array}$\n\n[IMG]\n\n$\\begin{array}{l} \\Rightarrow 2h-3k=13\\ldots \\ldots  \\\\ &m_{AB}m_{OC}=-1 \\\\ \\Rightarrow 4k=7h\\ldots \\ldots \\ldots \\ldots . \\end{array}$\n\n⇒ third vertex is $(-4,-7)$\n\nSolution of statement -2\n\n$\\begin{array}{l} 2a,b,c\\to A\\cdot P \\\\ b=\\dfrac{2a+c}{2}\\Rightarrow 2a-2b+c=0 \\end{array}$\n\n∴ lines $ax+by+c=0$ are concurrent then\n\n$\\begin{array}{l} \\dfrac{x}{2}=\\dfrac{y}{-2}=\\dfrac{1}{1} \\\\ x=2\\text{and}y=-2 \\end{array}$\n\n$\\therefore \\mathrm{Pt}$. Of concurrency is $(2,-2)$\n\n∴ Statement 2 is correct.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-22nd-january-evening-shift/ml8t8kqr-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 22nd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8ks2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α,β$ be the roots of the quadratic equation $12x^{2}-20x+3λ=0,λ\\in 𝐙$. If $\\frac{1}{2}⩽|β-α|⩽\\frac{3}{2}$, then the sum of all possible values of $λ$ is :",
+  "options": [
+   "3",
+   "6",
+   "1",
+   "4"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\dfrac{1}{2}\\leq |α-β|\\leq \\dfrac{3}{2} \\\\ \\dfrac{1}{4}\\leq |α-β|^{2}\\leq \\dfrac{9}{4} \\\\ \\dfrac{1}{4}\\leq (α+β)^{2}-4αβ\\leq \\dfrac{9}{4} \\\\ \\dfrac{1}{4}\\leq \\dfrac{25}{9}-4\\times \\dfrac{λ}{4}\\leq \\dfrac{9}{4} \\\\ -\\dfrac{91}{36}\\leq -λ\\leq \\dfrac{-19}{36} \\\\ \\dfrac{19}{36}\\leq λ\\leq \\dfrac{91}{36} \\\\ λ=1,2 \\\\ \\text{Sum}=3 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kt7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of elements in the relation $\\mathrm{R}=\\left \\{(x,y):4x^{2}+y^{2}<52,x,y\\in 𝐙\\right \\}$ is",
+  "options": [
+   "86",
+   "67",
+   "89",
+   "77"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\begin{array}{l} 4_{↓}x^{2}+y_{↓}^{2}<52,x,y\\in Z \\\\ 0~0,\\pm 1,\\pm 2,\\pm 3,\\pm 4,\\pm 5,\\pm 6,\\pm 7\\to 1\\times 15=15 \\\\ \\pm 1 0,\\pm 1,\\pm 2,\\pm 3\\ldots \\ldots \\ldots .\\pm 6\\to 2\\times 13=26 \\\\ \\pm 2 0,\\pm 1\\pm 2\\pm 3\\ldots \\ldots \\ldots .\\pm 5\\to 2\\times 11=22 \\\\ \\pm 3 0,\\pm 1,\\pm 2,\\pm 3\\to 2\\times 7=14 \\end{array} \\\\ \\text{Number of elements}=77 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8ku7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f$ and $g$ be functions satisfying $f(x+y)=f(x)f(y),f(1)=7$ and $g(x+y)=g(xy),g(1)=1$, for all $x,y\\in 𝐍$. If $\\sum\\limits _{x=1}^{\\mathrm{n}}\\left (\\frac{f(x)}{\\mathrm{g}(x)}\\right )=19607$, then n is equal to :",
+  "options": [
+   "6",
+   "7",
+   "4",
+   "5"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} f(x+y)=f(x)\\cdot f(y)\\Rightarrow f(x)=a^{x} \\\\ \\left (\\because f(1)=7\\Rightarrow a^{1}=7\\right ) \\end{array}$\n\nSo $f(x)=7^{x}$\n\nNow\n\n$g(x+y)=g(xy)(\\text{put}y=1)\\Rightarrow g(x+1)=g(x)$\n\nSo $g(1)=g(2)=g(3)=\\ldots \\ldots \\ldots =g(n)=1$\n\n$\\begin{array}{l} \\text{Given}\\sum\\limits _{x=1}^{n}\\dfrac{f(x)}{g(x)}=19607 \\\\ \\sum\\limits _{x=1}^{n}\\dfrac{7^{x}}{1}=19607\\Rightarrow 7\\left (\\dfrac{7^{n}-1}{7-1}\\right )=19607 \\\\ 7^{n}-1=\\dfrac{6}{7}\\times 19607 \\\\ 7^{n}=16807\\Rightarrow n=5 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kv6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $X=\\left [\\begin{array}{l} x \\\\ y \\\\ z \\end{array}\\right ]$ is a solution of the system of equations $AX=B$, where $\\mathrm{adj}A=\\left [\\begin{array}{lll} 4 & 2 & 2 \\\\ -5 & 0 & 5 \\\\ 1 & -2 & 3 \\end{array}\\right ]$ and $\\mathrm{B}=\\left [\\begin{array}{l} 4 \\\\ 0 \\\\ 2 \\end{array}\\right ]$, then $|x+y+z|$ is equal to :",
+  "options": [
+   "3",
+   "2",
+   "$\\frac{3}{2}$",
+   "1"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For a $3\\times 3$ matrix, $|\\mathrm{adj}A|=|A|^{2}$.\n\n$|\\mathrm{adj}A|=4(0+10)-2(-15-5)+2(10-0)=40+40+20=100$\n\nSo $|A|^{2}=100$, which gives $|A|=\\pm 10$; in particular $A$ is invertible.\n\n$X=A^{-1}B=\\dfrac{1}{|A|}(\\mathrm{adj}A)B=\\pm \\dfrac{1}{10}\\left [\\begin{array}{lll} 4 & 2 & 2 \\\\ -5 & 0 & 5 \\\\ 1 & -2 & 3 \\end{array}\\right ]\\left [\\begin{array}{l} 4 \\\\ 0 \\\\ 2 \\end{array}\\right ]=\\pm \\dfrac{1}{10}\\left [\\begin{array}{l} 20 \\\\ -10 \\\\ 10 \\end{array}\\right ]=\\pm \\left [\\begin{array}{l} 2 \\\\ -1 \\\\ 1 \\end{array}\\right ]$\n\nThus $x+y+z=\\pm 2$ and $|x+y+z|=2$.\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kw6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area of the region $\\mathrm{A}=\\left \\{(x,y):4x^{2}+y^{2}⩽8 \\right.$ and $\\left. y^{2}⩽4x\\right \\}$ is:",
+  "options": [
+   "$π+\\frac{2}{3}$",
+   "$\\frac{π}{2}+2$",
+   "$π+4$",
+   "$\\frac{π}{2}+\\frac{1}{3}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "From $4x^{2}+y^{2}=8$ and $y^{2}=4x$: $4x^{2}+4x-8=0\\Rightarrow x^{2}+x-2=0\\Rightarrow x=1$ ($x=-2$ gives $y^{2}<0$), so the curves meet at $(1,\\pm 2)$.\n\nThe region is symmetric about the x-axis. For $0\\leq x\\leq 1$ it is bounded by the parabola $y=2\\sqrt{x}$, and for $1\\leq x\\leq \\sqrt{2}$ by the ellipse $y=\\sqrt{8-4x^{2}}=2\\sqrt{2-x^{2}}$.\n\n$A=2\\left [\\int\\limits _{0}^{1}2\\sqrt{x}dx+\\int\\limits _{1}^{\\sqrt{2}}2\\sqrt{2-x^{2}}dx\\right ]=\\frac{8}{3}+4\\int\\limits _{1}^{\\sqrt{2}}\\sqrt{2-x^{2}}dx$\n\n$\\int\\limits _{1}^{\\sqrt{2}}\\sqrt{2-x^{2}}dx=\\left [\\frac{x}{2}\\sqrt{2-x^{2}}+\\sin ^{-1}\\frac{x}{\\sqrt{2}}\\right ]_{1}^{\\sqrt{2}}=\\frac{π}{2}-\\frac{1}{2}-\\frac{π}{4}=\\frac{π}{4}-\\frac{1}{2}$\n\n$A=\\frac{8}{3}+π-2=π+\\frac{2}{3}$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kxb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let L be the line $\\frac{x+1}{2}=\\frac{y+1}{3}=\\frac{z+3}{6}$ and let S be the set of all points $(\\mathrm{a},\\mathrm{b},\\mathrm{c})$ on L , whose distance from the line $\\frac{x+1}{2}=\\frac{y+1}{3}=\\frac{z-9}{0}$ along the line $L$ is 7 . Then $\\sum\\limits _{(a,b,c)\\in S}(a+b+c)$ is equal to :",
+  "options": [
+   "28",
+   "6",
+   "40",
+   "34"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "M is the point of intersection of $L_{1}&L_{2}$\n\n$\\begin{array}{l} \\Rightarrow 2λ-1=2μ-1,3λ-1=3μ-1,6λ-3=9\\Rightarrow λ=2=μ \\\\ M(3,5,9) \\end{array}$\n\nNow let point P be $(2K-1,3K-1,6K-3)$ on $L_{1}$\n\nSuch that $\\mathrm{PM}=7$\n\n$\\begin{array}{l} \\begin{array}{l} \\Rightarrow \\sqrt{(2K-4)^{2}+(3K-6)^{2}+(6K-12)^{2}}=7 \\\\ \\Rightarrow 49K^{2}+196-196K=49 \\\\ \\Rightarrow K^{2}+4-4K=1\\Rightarrow K^{2}-4K+3=0\\Rightarrow K=1,3 \\end{array} \\\\ \\text{So points}\\mathrm{P}&\\mathrm{Q}\\text{are}(1,2,3)&(5,8,15)\\text{So sum of all co-ordinates of}\\mathrm{P}&\\mathrm{Q}=34 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8kz7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{P}(10,2\\sqrt{15})$ be a point on the hyperbola $\\frac{x^{2}}{\\mathrm{a}^{2}}-\\frac{y^{2}}{\\mathrm{b}^{2}}=1$, whose foci are S and $\\mathrm{S}^{'}$. If the length of its latus rectum is 8 , then the square of the area of $\\Delta \\mathrm{PSS}^{'}$ is equal to :",
+  "options": [
+   "4200",
+   "1462",
+   "900",
+   "2700"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} P(10,2\\sqrt{15})\\text{lies on}\\dfrac{x^{2}}{a^{2}}-\\dfrac{y^{2}}{b^{2}}=1 \\\\ \\therefore \\dfrac{100}{a^{2}}-\\dfrac{60}{b^{2}}=1\\ldots \\ldots \\ldots \\ldots ..(1) \\\\ \\because \\text{Length of latus rectum}=8 \\\\ \\dfrac{2\\cdot b^{2}}{a}=8\\Rightarrow \\dfrac{b^{2}}{a}=4\\ldots \\ldots \\ldots .(2) \\end{array}$\n\nFrom (1) \\& (2)\n\n$\\begin{array}{l} \\dfrac{100}{a^{2}}-\\dfrac{60}{4a}=1 \\\\ 400-60a=4a^{2} \\\\ 4a^{2}+60a-400=0 \\\\ a^{2}+15a-100=0 \\\\ a=5&-20(\\text{rejected}) \\\\ \\Rightarrow b=\\sqrt{20} \\end{array}$\n\n$\\begin{array}{l} \\therefore \\text{Hyperbola is}\\dfrac{x^{2}}{25}-\\dfrac{y^{2}}{20}=1 \\\\ \\therefore \\text{Focal length}SS^{1}=2ae=2\\cdot 5\\cdot \\left (\\sqrt{1+\\dfrac{4}{5}}\\right )=6\\sqrt{5} \\\\ \\therefore \\text{Area of}△PSS^{1}=\\dfrac{1}{2}\\cdot 6\\sqrt{5}\\cdot 2\\sqrt{15}=30\\sqrt{3}=A \\\\ \\therefore A^{2}=2700 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8l05",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the mean deviation about the median of the numbers $\\mathrm{k},2\\mathrm{k},3\\mathrm{k},\\ldots .,1000\\mathrm{k}$ is 500 , then $\\mathrm{k}^{2}$ is equal to :",
+  "options": [
+   "1",
+   "16",
+   "9",
+   "4"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\because \\text{median}=\\dfrac{1001k}{2}=X_{M} \\\\ \\therefore \\text{mean deviation about median}=\\dfrac{\\sum |X_{i}-X_{M}|}{n} \\\\ =\\dfrac{2\\left (\\frac{k}{2}+\\frac{3k}{2}+\\frac{5k}{2}+\\ldots ...500\\text{terms}\\right )}{1000}=\\dfrac{2.\\frac{k}{2}(500)^{2}}{1000}=\\dfrac{500k}{2}=500(\\text{given}) \\\\ \\therefore k=2 \\\\ \\therefore k^{2}=4 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8l13",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{S}=\\left \\{z\\in \\mathrm{ℂ}:4z^{2}+\\bar{z}=0\\right \\}$. Then $\\sum\\limits _{z\\in \\mathrm{S}}|z|^{2}$ is equal to:",
+  "options": [
+   "$\\frac{5}{64}$",
+   "$\\frac{1}{16}$",
+   "$\\frac{7}{64}$",
+   "$\\frac{3}{16}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$4z^{2}+\\bar{z}=0$\n\nLet $z=x+iy$\n\n$\\begin{array}{l} 4(x+iy)^{2}+x-iy=0 \\\\ 4x^{2}-4y^{2}+8xyi+x-iy=0 \\\\ 4x^{2}-4y^{2}+x=0&y(8x-1)=0 \\\\ \\Rightarrow y=0\\text{or}x=\\dfrac{1}{8} \\end{array}$\n\nIf $y=0,4x^{2}+x=0$\n\n$\\begin{array}{ll} x=0,\\frac{-1}{4} &  \\\\ \\therefore z_{1}=0+0.i & |z_{1}|^{2}=0 \\\\ z_{2}=-\\frac{1}{4}+0i & |z_{2}|^{2}=\\frac{1}{16} \\end{array}$\n\nIf $x=\\frac{1}{8}$\n\n$\\begin{array}{l} 4\\times \\dfrac{1}{64}-4y^{2}+\\dfrac{1}{8}=0\\Rightarrow 4y^{2}=\\dfrac{3}{16}\\Rightarrow y=\\pm \\dfrac{\\sqrt{3}}{8} \\\\ \\therefore z_{3}=\\dfrac{1}{8}+\\dfrac{\\sqrt{3}}{8}i|z_{3}|^{2}=\\dfrac{1}{64}+\\dfrac{3}{64}=\\dfrac{1}{16} \\\\ z_{4}=\\dfrac{1}{8}-\\dfrac{\\sqrt{3}}{8}i|z_{4}|^{2}=\\dfrac{1}{64}+\\dfrac{3}{64}=\\dfrac{1}{16} \\\\ \\therefore \\sum\\limits _{i=1}^{n}|z_{i}|^{2}=0+\\dfrac{1}{16}+\\dfrac{1}{16}+\\dfrac{1}{16}=\\dfrac{3}{16} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8l1z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{C}_{\\mathrm{r}}$ denote the coefficient of $x^{\\mathrm{r}}$ in the binomial expansion of $(1+x)^{\\mathrm{n}},\\mathrm{n}\\in \\mathrm{N},0\\leq \\mathrm{r}\\leq \\mathrm{n}$. If \n\n$P_{n}=C_{0}-C_{1}+\\frac{2^{2}}{3}C_{2}-\\frac{2^{3}}{4}C_{3}+\\ldots ..+\\frac{(-2)^{n}}{n+1}C_{n}$, then the value of $\\sum\\limits _{n=1}^{25}\\frac{1}{P_{2n}}$ equals.",
+  "options": [
+   "675",
+   "580",
+   "525",
+   "650"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{ll} P_{n} & =\\sum\\limits _{r=0}^{n}\\dfrac{{}^{n}C_{r}(-2)^{r}}{r+1}=\\sum\\limits _{r=0}^{n}\\dfrac{1}{(n+1)}{}^{n+1}C_{r+1}(-2)^{r} \\\\ =\\dfrac{-1}{2(n+1)}\\sum\\limits _{r=0}^{n}{}^{n+1}C_{r+1}(-2)^{r+1}=\\dfrac{-1}{2(n+1)}\\left [(1-2)^{n+1}-1\\right ] \\\\ P_{n} & =\\dfrac{1}{2(n+1)}\\left [1-(-1)^{n+1}\\right ] \\end{array}$\n\n$\\begin{array}{l} P_{2n}=\\dfrac{1}{2(2n+1)}\\left [1-(-1)^{2n+1}\\right ] \\\\ P_{2n}=\\dfrac{1}{2n+1} \\\\ \\sum\\limits _{n=1}^{25}\\dfrac{1}{P_{2n}}=\\sum\\limits _{n=1}^{25}(2n+1)=3+5+\\ldots ..+51=\\dfrac{25}{2}[51+3]=25\\times 27=675 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8l2k",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Suppose $\\mathrm{a},\\mathrm{b},\\mathrm{c}$ are in A.P. and $\\mathrm{a}^{2},2\\mathrm{b}^{2},\\mathrm{c}^{2}$ are in G.P. If $\\mathrm{a}<\\mathrm{b}<\\mathrm{c}$ and $\\mathrm{a}+\\mathrm{b}+\\mathrm{c}=1$, then $9\\left (\\mathrm{a}^{2}+\\mathrm{b}^{2}+\\mathrm{c}^{2}\\right )$ is equal to $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 9.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} a=b-d,c=b+d,\\Rightarrow b=\\dfrac{1}{3}\\Rightarrow 4b^{4}=a^{2}c^{2} \\\\ 4b^{4}=[(b-d)(b+d)]^{2} \\\\ \\dfrac{4}{81}=\\left (\\dfrac{1}{9}-d^{2}\\right )^{2}\\Rightarrow \\dfrac{4}{81}=\\dfrac{1}{81}-\\dfrac{2d^{2}}{9}+d^{4}\\Rightarrow d^{4}-\\dfrac{2d^{2}}{9}-\\dfrac{1}{27}=0\\Rightarrow 27d^{4}-6d^{2}-1=0 \\\\ d^{2}=1/3\\Rightarrow d=+\\dfrac{1}{\\sqrt{3}}(\\text{as}\\mathrm{a}<\\mathrm{b}<\\mathrm{c}) \\\\ 9\\left (a^{2}+b^{2}+c^{2}\\right )=9\\left [\\left (\\dfrac{1}{3}-\\dfrac{1}{\\sqrt{3}}\\right )^{2}+\\left (\\dfrac{1}{3}\\right )^{2}+\\left (\\dfrac{1}{3}+\\dfrac{1}{\\sqrt{3}}\\right )^{2}\\right ]=9\\left [\\dfrac{1}{3}+\\dfrac{2}{3}\\right ]=3+6=9 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8l31",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let a vector $\\vec{\\mathrm{a}}=\\sqrt{2}\\hat{i}-\\hat{j}+λ\\hat{k},λ>0$, make an obtuse angle with the vector $\\vec{\\mathrm{b}}=-λ^{2}\\hat{i}+4\\sqrt{2}\\hat{j}+4\\sqrt{2}\\hat{k}$ and an angle $θ,\\frac{π}{6}<θ<\\frac{π}{2}$, with the positive $z$-axis. If the set of all possible values of $λ$ is $(α,β)-\\{γ\\}$, then $α+β+γ$ is equal to $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} ⃗{a}^{\\wedge }\\hat{k}\\in \\left (\\dfrac{π}{6},\\dfrac{π}{2}\\right ) \\\\ \\dfrac{λ}{\\sqrt{(2+1+λ^{2})}}\\in \\left (0,\\dfrac{\\sqrt{3}}{2}\\right )\\Rightarrow 0<\\dfrac{λ}{\\sqrt{3+λ^{2}}}<\\dfrac{\\sqrt{3}}{2} \\\\ λ>0&λ\\in (-3,3)\\Rightarrow λ\\in (0,3)\\ldots \\ldots \\ldots .(1) \\end{array}$\n\n$⃗{a}^{\\wedge }⃗{b}$ is obtuse\n\n$\\begin{array}{l} ⃗{a}\\cdot ⃗{b}<0\\Rightarrow -\\sqrt{2}λ^{2}-4\\sqrt{2}+4\\sqrt{2}λ<0 \\\\ \\Rightarrow λ^{2}-4λ+4>0\\Rightarrow (λ-2)^{2}>0 \\\\ \\Rightarrow λ\\in R-\\{2\\}\\ldots \\ldots .(2) \\end{array}$\n\n(1) \\& (2) ⇒ $λ\\in (0,3)-\\{2\\}\\Rightarrow α+β+γ=5$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8l3g",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let [.] be the greatest integer function. If $α=\\int\\limits _{0}^{64}\\left (x^{1/3}-\\left [x^{1/3}\\right ]\\right )\\mathrm{d}x$, then $\\frac{1}{π}\\int\\limits _{0}^{απ}\\left (\\frac{\\sin ^{2}θ}{\\sin ^{6}θ+\\cos ^{6}θ}\\right )\\mathrm{d}θ$ is equal to $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 36.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\int\\limits _{0}^{64}x^{1/3}dx=\\dfrac{3}{4}\\left [x^{4/3}\\right ]_{0}^{64}=\\dfrac{3}{4}\\cdot 256=192$\n\n$\\left [x^{1/3}\\right ]$ is $0$ on $[0,1)$, $1$ on $[1,8)$, $2$ on $[8,27)$ and $3$ on $[27,64)$, so\n\n$\\int\\limits _{0}^{64}\\left [x^{1/3}\\right ]dx=1(7)+2(19)+3(37)=7+38+111=156$\n\nHence $α=192-156=36$.\n\nThe integrand $g(θ)=\\dfrac{\\sin ^{2}θ}{\\sin ^{6}θ+\\cos ^{6}θ}$ has period $π$ and $g(π-θ)=g(θ)$, so\n\n$E=\\dfrac{1}{π}\\int\\limits _{0}^{36π}g(θ)dθ=\\dfrac{36}{π}\\int\\limits _{0}^{π}g(θ)dθ=\\dfrac{72}{π}J,J=\\int\\limits _{0}^{π/2}\\dfrac{\\sin ^{2}θ}{\\sin ^{6}θ+\\cos ^{6}θ}dθ$\n\nReplacing $θ$ by $\\dfrac{π}{2}-θ$ gives $J=\\int\\limits _{0}^{π/2}\\dfrac{\\cos ^{2}θ}{\\sin ^{6}θ+\\cos ^{6}θ}dθ$; adding the two forms,\n\n$2J=\\int\\limits _{0}^{π/2}\\dfrac{dθ}{\\sin ^{6}θ+\\cos ^{6}θ}=\\int\\limits _{0}^{π/2}\\dfrac{\\sec ^{6}θ}{\\tan ^{6}θ+1}dθ$\n\nWith $t=\\tan θ$, $dt=\\sec ^{2}θdθ$, $\\sec ^{4}θ=\\left (1+t^{2}\\right )^{2}$ and $t^{6}+1=\\left (t^{2}+1\\right )\\left (t^{4}-t^{2}+1\\right )$:\n\n$2J=\\int\\limits _{0}^{\\infty }\\dfrac{1+t^{2}}{t^{4}-t^{2}+1}dt=\\int\\limits _{0}^{\\infty }\\dfrac{1+\\frac{1}{t^{2}}}{\\left (t-\\frac{1}{t}\\right )^{2}+1}dt$\n\nWith $u=t-\\dfrac{1}{t}$, $u$ runs from $-\\infty$ to $\\infty$, so $2J=\\int\\limits _{-\\infty }^{\\infty }\\dfrac{du}{u^{2}+1}=π$ and $J=\\dfrac{π}{2}$.\n\n$E=\\dfrac{72}{π}\\cdot \\dfrac{π}{2}=36$\n\nHence, the answer is 36.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8l42",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\cos (α+β)=-\\frac{1}{10}$ and $\\sin (α-β)=\\frac{3}{8}$, where $0<α<\\frac{π}{3}$ and $0<β<\\frac{π}{4}$. If $\\tan 2α=\\frac{3(1-r\\sqrt{5})}{\\sqrt{11}(s+\\sqrt{5})},r,s\\in N$, then $r+s$ is equal to $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 20.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\tan 2α=\\tan [(α+β)+(α-β)] \\\\ \\tan 2α=\\dfrac{\\tan (α+β)+\\tan (α-β)}{1-\\tan (α+β)\\cdot \\tan (α-β)} \\\\ \\tan 2α=\\dfrac{\\left (-\\sqrt{99}+\\frac{3}{\\sqrt{55}}\\right )}{1-(\\sqrt{99})\\left (\\frac{3}{\\sqrt{55}}\\right )} \\\\ \\tan 2α=\\dfrac{-3\\sqrt{11}+\\frac{3}{\\sqrt{5}\\times \\sqrt{11}}}{1+\\frac{9\\sqrt{11}}{\\sqrt{5}\\times \\sqrt{11}}} \\\\ \\tan 2α=\\dfrac{3(1-11\\sqrt{5})}{\\sqrt{11}(9+\\sqrt{5})} \\\\ r=11,s=9 \\\\ r+s=20 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml8t8l4l",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let S be the set of the first 11 natural numbers. Then the number of elements in $A=\\{B\\subseteq S:n(B)⩾2$ and the product of all elements of $B$ is even $\\}$ is $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1979.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$S=\\{1,2,\\ldots ,11\\}$ has 5 even numbers $(2,4,6,8,10)$ and 6 odd numbers.\n\nThe product of the elements of $B$ is even exactly when $B$ contains at least one even number.\n\nThe subsets with no even number are the $2^{6}$ subsets of the six odd numbers (the empty set included), so the subsets containing at least one even number number $2^{11}-2^{6}=2048-64=1984$.\n\nOf these, the ones with $n(B)<2$ are the 5 singletons $\\{2\\},\\{4\\},\\{6\\},\\{8\\},\\{10\\}$; the empty set is already excluded.\n\n$n(A)=1984-5=1979$\n\nHence, the answer is 1979.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

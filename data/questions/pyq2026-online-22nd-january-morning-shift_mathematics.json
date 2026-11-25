@@ -1,0 +1,1017 @@
+[
+ {
+  "publicId": "PYQ-2026-ml89h582",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two distinct numbers $a$ and $b$ are selected at random from $1,2,3,\\ldots ,50$. The probability, that their product $ab$ is divisible by 3 , is",
+  "options": [
+   "$\\frac{272}{1225}$",
+   "$\\frac{561}{1225}$",
+   "$\\frac{664}{1225}$",
+   "$\\frac{8}{25}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Total ways to choose two distinct numbers from $1,2,\\ldots ,50$ is\n\n$\\left (50 2\\right )=1225.$\n\nThe product $ab$ is not divisible by $3$ only if neither $a$ nor $b$ is divisible by $3$.\n\nMultiples of $3$ in $1$ to $50$: $⌊\\frac{50}{3}⌋=16$.  \n\nSo numbers not divisible by $3$: $50-16=34$.\n\nUnfavorable pairs:\n\n$\\left (34 2\\right )=\\frac{34\\cdot 33}{2}=561.$\n\nTherefore favorable pairs:\n\n$1225-561=664,$\n\nand the required probability is\n\n$\\frac{664}{1225}.$\n\nAnswer: $\\dfrac{664}{1225}$ (Option C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h5cj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of solutions of $\\tan ^{-1}4x+\\tan ^{-1}6x=\\frac{π}{6}$, where $-\\frac{1}{2\\sqrt{6}}<x<\\frac{1}{2\\sqrt{6}}$, is equal to :",
+  "options": [
+   "2",
+   "0",
+   "3",
+   "1"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $|x|<\\dfrac{1}{2\\sqrt{6}}$, $(4x)(6x)=24x^{2}<1$, so\n\n$\\tan ^{-1}4x+\\tan ^{-1}6x=\\tan ^{-1}\\dfrac{10x}{1-24x^{2}}.$\n\n$\\dfrac{10x}{1-24x^{2}}=\\tan \\dfrac{π}{6}=\\dfrac{1}{\\sqrt{3}}\\Rightarrow 24x^{2}+10\\sqrt{3}x-1=0$\n\nThe discriminant is $(10\\sqrt{3})^{2}+4(24)(1)=396=36\\times 11$, so\n\n$x=\\dfrac{-10\\sqrt{3}\\pm 6\\sqrt{11}}{48}=\\dfrac{-5\\sqrt{3}\\pm 3\\sqrt{11}}{24}.$\n\nThe root $\\dfrac{-5\\sqrt{3}-3\\sqrt{11}}{24}\\approx -0.775$ lies outside the interval, since $\\dfrac{1}{2\\sqrt{6}}\\approx 0.204$.\n\nThe root $\\dfrac{3\\sqrt{11}-5\\sqrt{3}}{24}\\approx \\dfrac{9.950-8.660}{24}\\approx 0.054$ lies inside the interval, so the equation has exactly one solution.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h4wk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the line $αx+2y=1$, where $α\\in \\mathrm{ℝ}$, does not meet the hyperbola $x^{2}-9y^{2}=9$, then a possible value of $α$ is :",
+  "options": [
+   "0.6",
+   "0.7",
+   "0.8",
+   "0.5"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} αx+2y=1,α\\in R \\\\ x^{2}-9y^{2}=9 \\\\ y=\\dfrac{1-αx}{2} \\\\ 4x^{2}-9\\left (1+α^{2}x^{2}-2αx\\right )=36 \\end{array}$\n\n$\\begin{array}{l} (4-9α^{2})x^{2}+18αx-45=0 \\\\ \\Delta =(18α)^{2}+180(4-9α^{2})=720-1296α^{2}<0 \\\\ 1296α^{2}-720>0 \\\\ α^{2}>0.55 \\\\ α=0.8 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h6y7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of distinct real solutions of the equation $x|x+4|+3|x+2|+10=0$ is",
+  "options": [
+   "2",
+   "3",
+   "0",
+   "1"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the number of distinct real solutions for the given equation, we need to understand how the expressions inside the absolute values behave. The absolute value expressions are $|x+4|$ and $|x+2|$. The signs of $x+4$ and $x+2$ change at $x=-4$ and $x=-2$. These two critical points divide the real number line into three intervals: \n\n$x\\geq -2$\n\n$-4\\leq x<-2$\n\n$x<-4$\n\nLet's analyze the equation $x|x+4|+3|x+2|+10=0$ for each case separately.\n\nCase 1: When $x\\geq -2$\n\nIn this interval, both $x+4$ and $x+2$ are positive (or zero). So, $|x+4|=x+4$ and $|x+2|=x+2$.\n\nSubstitute these into the equation:\n\n$x(x+4)+3(x+2)+10=0$\n\n$x^{2}+4x+3x+6+10=0$\n\n$x^{2}+7x+16=0$\n\nNow, we check the discriminant $D$ (where $D=b^{2}-4ac$) of this quadratic equation:\n\n$D=7^{2}-4(1)(16)=49-64=-15$\n\nSince $D<0$, there are no real roots in this interval.\n\nCase 2: When $-4\\leq x<-2$\n\nHere, $x+4$ is positive (or zero), but $x+2$ is negative. So, $|x+4|=x+4$ and $|x+2|=-(x+2)$.\n\nThe equation becomes:\n\n$x(x+4)-3(x+2)+10=0$\n\n$x^{2}+4x-3x-6+10=0$\n\n$x^{2}+x+4=0$\n\nLet's check the discriminant for this equation:\n\n$D=1^{2}-4(1)(4)=1-16=-15$\n\nAgain, $D<0$, so there are no real roots in this interval either.\n\nCase 3: When $x<-4$\n\nIn this case, both $x+4$ and $x+2$ are negative. So, $|x+4|=-(x+4)$ and $|x+2|=-(x+2)$.\n\nThe equation changes to:\n\n$-x(x+4)-3(x+2)+10=0$\n\n$-x^{2}-4x-3x-6+10=0$\n\n$-x^{2}-7x+4=0$\n\nMultiplying by $-1$ makes it easier to solve:\n\n$x^{2}+7x-4=0$\n\nLet's find the discriminant:\n\n$D=7^{2}-4(1)(-4)=49+16=65$\n\nSince $D>0$, this quadratic equation gives two real roots. Using the quadratic formula $x=\\frac{-b\\pm \\sqrt{D}}{2a}$, the roots are:\n\n$x=\\frac{-7\\pm \\sqrt{65}}{2}$\n\nNow we must verify if these roots actually lie in our current interval, which is $x<-4$.\n\nWe know that $\\sqrt{65}$ is slightly larger than $8$ (because $\\sqrt{64}=8$). Let's roughly estimate it as $8.06$.\n\nFor the first root (taking the positive sign):\n\n$x_{1}=\\frac{-7+\\sqrt{65}}{2}\\approx \\frac{-7+8.06}{2}\\approx 0.53$\n\nThis value is greater than $-4$, so it does not lie in the given interval $x<-4$. We reject this root.\n\nFor the second root (taking the negative sign):\n\n$x_{2}=\\frac{-7-\\sqrt{65}}{2}\\approx \\frac{-7-8.06}{2}\\approx -7.53$\n\nThis value is strictly less than $-4$, so it falls correctly within our interval. \n\nThis means there is exactly $1$ valid real solution for the entire equation.\n\nOption D is correct.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h84z",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the relation R on the set $\\mathrm{M}=\\{1,2,3,\\ldots ,16\\}$ be given by $\\mathrm{R}=\\{(x,y):4y=5x-3,x,y\\in \\mathrm{M}\\}$.\n\nThen the minimum number of elements required to be added in R , in order to make the relation symmetric, is equal to",
+  "options": [
+   "4",
+   "3",
+   "1",
+   "2"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\begin{array}{l} M=\\{1,2,3\\ldots .16\\} \\\\ R=\\{(x,y)/4y=5x-3,x,y\\in M\\} \\\\ 4y=5x-3 \\\\ y=\\dfrac{5x-3}{4} \\end{array} \\\\ \\text{Pairs in R} \\\\ x\\in M,4y=5x-3\\Rightarrow x=3,7,11,15\\Rightarrow (y=3,8,13,18) \\\\ y\\leq 16\\text{rejects}x=15 \\\\ R=\\{(3,3),(7,8),(11,13)\\} \\\\ \\text{(3,3) is already symmetric. Need to add (8,7) and (13,11). Minimum number of elements to add = 2} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h5ft",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the set of all values of $r$, for which the circles $(x+1)^{2}+(y+4)^{2}=r^{2}$ and $x^{2}+y^{2}-4x-2y-4=0$ intersect at two distinct points be the interval $(α,β)$. Then $αβ$ is equal to",
+  "options": [
+   "21",
+   "24",
+   "20",
+   "25"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} |r_{1}-r_{2}|<c_{1}c_{2}<r_{1}+r_{2} \\\\ r-3<\\sqrt{9+25}<r+3 \\\\ r\\in (\\sqrt{34}-3,\\sqrt{34}+3) \\\\ αβ=25 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h5gl",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the solution curve of the differential equation $xdy-ydx=\\sqrt{x^{2}+y^{2}}dx,x>0$, $y(1)=0$, be $y=y(x)$. Then $y(3)$ is equal to",
+  "options": [
+   "6",
+   "4",
+   "1",
+   "2"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Dividing by $xdx$, the equation is homogeneous: $\\dfrac{dy}{dx}=\\dfrac{y+\\sqrt{x^{2}+y^{2}}}{x}$. Put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$ (with $x>0$):\n\n$v+x\\dfrac{dv}{dx}=v+\\sqrt{1+v^{2}}\\Rightarrow \\dfrac{dv}{\\sqrt{1+v^{2}}}=\\dfrac{dx}{x}$\n\nIntegrating: $\\ln \\left (v+\\sqrt{1+v^{2}}\\right )=\\ln x+C$. At $x=1$, $v=0$: $0=0+C$, so $C=0$ and\n\n$v+\\sqrt{1+v^{2}}=x\\Rightarrow y+\\sqrt{x^{2}+y^{2}}=x^{2}$\n\nSo $\\sqrt{x^{2}+y^{2}}=x^{2}-y$; squaring, $x^{2}+y^{2}=x^{4}-2x^{2}y+y^{2}$, so $1=x^{2}-2y$ and\n\n$y=\\dfrac{x^{2}-1}{2}\\Rightarrow y(3)=\\dfrac{9-1}{2}=4$\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h7pj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the chord joining the points $\\mathrm{P}_{1}(x_{1},y_{1})$ and $\\mathrm{P}_{2}(x_{2},y_{2})$ on the parabola $y^{2}=12x$ subtends a right angle at the vertex of the parabola, then $x_{1}x_{2}-y_{1}y_{2}$ is equal to",
+  "options": [
+   "280",
+   "288",
+   "292",
+   "284"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For the parabola\n\n$y^{2}=12x,$\n\ncompare it with $y^{2}=4ax$. We get\n\n$4a=12\\Rightarrow a=3.$\n\nThe parametric coordinates of a point on the parabola are\n\n$(at^{2},2at)=(3t^{2},6t).$\n\nThus, take\n\n$P_{1}=(3t_{1}^{2},6t_{1}),P_{2}=(3t_{2}^{2},6t_{2}).$\n\nThe chord subtends a right angle at the vertex $O(0,0)$. Hence,\n\n$OP_{1}\\leftarrow \\cdot OP_{2}\\leftarrow =0.$\n\nSo,\n\n$(3t_{1}^{2})(3t_{2}^{2})+(6t_{1})(6t_{2})=0,$\n\n$9t_{1}^{2}t_{2}^{2}+36t_{1}t_{2}=0.$\n\nSince the points are not the vertex,\n\n$t_{1}t_{2}=-4.$\n\nNow,\n\n$\\begin{array}{ll} x_{1}x_{2}-y_{1}y_{2} & =(3t_{1}^{2})(3t_{2}^{2})-(6t_{1})(6t_{2}) \\\\ =9(t_{1}t_{2})^{2}-36t_{1}t_{2} \\\\ =9(-4)^{2}-36(-4) \\\\ =144+144 \\\\ =288. \\end{array}$\n\nHence, the correct answer is\n\n$288$\n\nOption B.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h6yw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\mathrm{A}=\\left [\\begin{array}{ll} 2 & 3 \\\\ 3 & 5 \\end{array}\\right ]$, then the determinant of the matrix $\\left (\\mathrm{A}^{2025}-3\\mathrm{A}^{2024}+\\mathrm{A}^{2023}\\right )$ is",
+  "options": [
+   "12",
+   "24",
+   "28",
+   "16"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{lll} A=\\left (\\begin{array}{ll} 2 & 3 \\\\ 3 & 5 \\end{array}\\right ),|A|=1 \\\\ \\left |A^{2025}-3A^{2024}+A^{2023}\\right |=\\left |A^{2023}\\right |\\left |A^{2}-3A+I\\right |=16 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h5sw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\int\\limits _{-\\frac{π}{2}}^{\\frac{π}{2}}\\left (\\frac{1}{[x]+4}\\right )dx$, where $[\\cdot ]$ denotes the greatest integer function, is",
+  "options": [
+   "$\\frac{1}{60}(21π-1)$",
+   "$\\frac{1}{60}(π-7)$",
+   "$\\frac{7}{60}(π-3)$",
+   "$\\frac{7}{60}(3π-1)$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\int\\limits _{-\\frac{π}{2}}^{-1}\\dfrac{1}{2}dx+\\int\\limits _{-1}^{0}\\dfrac{1}{3}dx+\\int\\limits _{0}^{1}\\dfrac{1}{4}dx+\\int\\limits _{1}^{\\frac{π}{2}}\\dfrac{1}{5}dx \\\\ =\\dfrac{21π-7}{60}=\\dfrac{7}{60}(3π-1) \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h5hq",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{AB}\\leftarrow =2\\hat{i}+4\\hat{j}-5\\hat{k}$ and $\\mathrm{AD}\\leftarrow =\\hat{i}+2\\hat{j}+λ\\hat{k},λ\\in \\mathrm{ℝ}$. Let the projection of the vector $⃗{v}=\\hat{i}+\\hat{j}+\\hat{k}$ on the diagonal $\\mathrm{AC}\\leftarrow$ of the parallelogram ABCD be of length one unit. If $α,β$, where $α>β$, be the roots of the equation $λ^{2}x^{2}-6λx+5=0$, then $2α-β$ is equal to",
+  "options": [
+   "3",
+   "6",
+   "4",
+   "1"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "In a parallelogram $ABCD$, the diagonal vector $\\mathrm{AC}\\leftarrow$ is the sum of the adjacent side vectors $\\mathrm{AB}\\leftarrow$ and $\\mathrm{AD}\\leftarrow$.\n\n$\\mathrm{AC}\\leftarrow =\\mathrm{AB}\\leftarrow +\\mathrm{AD}\\leftarrow$\n\nSubstitute the given vectors:\n\n$\\mathrm{AC}\\leftarrow =(2\\hat{i}+4\\hat{j}-5\\hat{k})+(\\hat{i}+2\\hat{j}+λ\\hat{k})$\n\n$\\mathrm{AC}\\leftarrow =3\\hat{i}+6\\hat{j}+(λ-5)\\hat{k}$\n\nThe magnitude of vector $\\mathrm{AC}\\leftarrow$ is:\n\n$|\\mathrm{AC}\\leftarrow |=\\sqrt{3^{2}+6^{2}+(λ-5)^{2}}=\\sqrt{45+(λ-5)^{2}}$\n\nThe scalar projection of $⃗{v}=\\hat{i}+\\hat{j}+\\hat{k}$ on $\\mathrm{AC}\\leftarrow$ has a length of $1$ unit. \n\nThe formula for the length of projection of $⃗{v}$ on $\\mathrm{AC}\\leftarrow$ is:\n\n$\\frac{|⃗{v}\\cdot \\mathrm{AC}\\leftarrow |}{|\\mathrm{AC}\\leftarrow |}=1$\n\nFind the dot product $⃗{v}\\cdot \\mathrm{AC}\\leftarrow$:\n\n$⃗{v}\\cdot \\mathrm{AC}\\leftarrow =(1)(3)+(1)(6)+(1)(λ-5)=λ+4$\n\nNow, substitute this into the projection relation:\n\n$\\frac{|λ+4|}{\\sqrt{45+(λ-5)^{2}}}=1$\n\nSquaring both sides gives:\n\n$(λ+4)^{2}=45+(λ-5)^{2}$\n\nExpand both sides:\n\n$λ^{2}+8λ+16=45+λ^{2}-10λ+25$\n\nSimplify by canceling $λ^{2}$ from both sides:\n\n$8λ+16=-10λ+70$\n\n$18λ=54$\n\n$λ=3$\n\nNow, substitute $λ=3$ into the given quadratic equation $λ^{2}x^{2}-6λx+5=0$:\n\n$3^{2}x^{2}-6(3)x+5=0$\n\n$9x^{2}-18x+5=0$\n\nFactorize the quadratic expression:\n\n$9x^{2}-15x-3x+5=0$\n\n$3x(3x-5)-1(3x-5)=0$\n\n$(3x-1)(3x-5)=0$\n\nThe roots are:\n\n$x=\\frac{5}{3}\\text{or}x=\\frac{1}{3}$\n\nSince it is given that $α>β$, we have:\n\n$α=\\frac{5}{3}\\text{and}β=\\frac{1}{3}$\n\nNow, compute the value of $2α-β$:\n\n$2α-β=2\\left (\\frac{5}{3}\\right )-\\frac{1}{3}=\\frac{10}{3}-\\frac{1}{3}=\\frac{9}{3}=3$\n\nHence, the correct choice is Option A.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h58x",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the line $x=-1$ divide the area of the region $\\left \\{(x,y):1+x^{2}\\leq y\\leq 3-x\\right \\}$ in the ratio $m:n,\\gcd (m,n)=1$. Then $m+n$ is equal to",
+  "options": [
+   "27",
+   "28",
+   "25",
+   "26"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The curves meet where $1+x^{2}=3-x$, i.e. $x^{2}+x-2=0$, so $x=-2$ and $x=1$; on $[-2,1]$ the line lies above the parabola, with height $(3-x)-(1+x^{2})=2-x-x^{2}$.\n\nArea to the left of $x=-1$:\n\n$A_{1}=\\int\\limits _{-2}^{-1}\\left (2-x-x^{2}\\right )dx=\\left [2x-\\dfrac{x^{2}}{2}-\\dfrac{x^{3}}{3}\\right ]_{-2}^{-1}=-\\dfrac{13}{6}+\\dfrac{10}{3}=\\dfrac{7}{6}$\n\nArea to the right of $x=-1$:\n\n$A_{2}=\\int\\limits _{-1}^{1}\\left (2-x-x^{2}\\right )dx=4-0-\\dfrac{2}{3}=\\dfrac{10}{3}$\n\n$A_{1}:A_{2}=\\dfrac{7}{6}:\\dfrac{20}{6}=7:20$, so $m=7$, $n=20$ and $m+n=27$.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h6kk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f(x)=x^{2025}-x^{2000},x\\in [0,1]$ and the minimum value of the function $f(x)$ in the interval $[0,1]$ be $(80)^{80}(n)^{-81}$. Then $n$ is equal to",
+  "options": [
+   "-40",
+   "-41",
+   "-80",
+   "-81"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} f(x)=x^{2025}-x^{2000};x\\in [0,1] \\\\ f^{'}(x)=2025x^{2024}-2000x^{1999} \\\\ =x^{1999}\\left (2025x^{25}-2000\\right ) \\\\ f^{'}(x)=0\\Rightarrow x^{25}=\\dfrac{80}{81} \\\\ f(x)=\\left (x^{25}\\right )^{81}-\\left (x^{25}\\right )^{80} \\\\ =\\left (\\dfrac{80}{81}\\right )^{81}-\\left (\\dfrac{80}{81}\\right )^{80} \\\\ =\\left (\\dfrac{80}{81}\\right )^{80}\\left (-\\dfrac{1}{81}\\right ) \\\\ =(80)^{80}(-81)^{-81} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h7qf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the sum of the first four terms of an A.P. is 6 and the sum of its first six terms is 4 , then the sum of its first twelve terms is",
+  "options": [
+   "-26",
+   "-20",
+   "-24",
+   "-22"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "With first term $a$ and common difference $d$, $S_{n}=\\dfrac{n}{2}[2a+(n-1)d]$.\n\n$S_{4}=2(2a+3d)=6\\Rightarrow 2a+3d=3$\n\n$S_{6}=3(2a+5d)=4\\Rightarrow 6a+15d=4$\n\nSubtracting three times the first equation from the second gives $6d=-5$, so $d=-\\dfrac{5}{6}$ and $2a=3-3d=\\dfrac{11}{2}$.\n\n$S_{12}=6(2a+11d)=6\\left (\\dfrac{11}{2}-\\dfrac{55}{6}\\right )=33-55=-22$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h62i",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If a random variable $x$ has the probability distribution\n\n$\\begin{array}{lllllllll} x & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\\\ \\mathrm{P}(x) & 0 & 2\\mathrm{k} & \\mathrm{k} & 3\\mathrm{k} & 2\\mathrm{k}^{2} & 2\\mathrm{k} & \\mathrm{k}^{2}+\\mathrm{k} & 7\\mathrm{k}^{2} \\end{array}$\n\nthen $\\mathrm{P}(3<x\\leq 6)$ is equal to",
+  "options": [
+   "0.34",
+   "0.64",
+   "0.22",
+   "0.33"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} 2K+K+3K+2K^{2}+2K+K^{2}+K+7K^{2}=1 \\\\ (K+1)(10K-1)=0 \\\\ K=-1\\text{or}K=\\dfrac{1}{10} \\\\ P(3<x\\leq 6)=\\dfrac{2}{100}+\\dfrac{2}{10}+\\dfrac{1}{100}+\\dfrac{1}{10}=0.33 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h7ys",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The coefficient of $x^{48}$ in $(1+x)+2(1+x)^{2}+3(1+x)^{3}+\\ldots +100(1+x)^{100}$ is equal to",
+  "options": [
+   "$100\\cdot {}^{100}\\mathrm{C}_{49}-{}^{100}\\mathrm{C}_{48}$",
+   "$100\\cdot {}^{101}\\mathrm{C}_{49}-{}^{101}\\mathrm{C}_{50}$",
+   "${}^{100}\\mathrm{C}_{50}+{}^{101}\\mathrm{C}_{49}$",
+   "$100\\cdot {}^{100}\\mathrm{C}_{49}-{}^{100}\\mathrm{C}_{50}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} S=(1+x)+2(1+x)^{2}+3(1+x)^{3}+\\ldots +100(1+x)^{100} \\\\ (1+x)S=(1+x)^{2}+\\ldots +99(1+x)^{100}+100(1+x)^{101} \\\\ -xS=(1+x)\\left (\\dfrac{(1+x)^{100}-1}{x}\\right )-100(1+x)^{101} \\\\ S=\\left (\\dfrac{(1+x)-(1+x)^{101}}{x^{2}}\\right )+\\dfrac{100(1+x)^{101}}{x} \\\\ \\text{Coeff of}x^{48}=-{}^{101}C_{50}+100\\times {}^{(101)}C_{49} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h7ah",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{P}(α,β,γ)$ be the point on the line $\\frac{x-1}{2}=\\frac{y+1}{-3}=z$ at a distance $4\\sqrt{14}$ from the point $(1,-1,0)$ and nearer to the origin. Then the shortest distance, between the lines $\\frac{x-α}{1}=\\frac{y-β}{2}=\\frac{z-γ}{3}$ and $\\frac{x+5}{2}=\\frac{y-10}{1}=\\frac{z-3}{1}$, is equal to",
+  "options": [
+   "$4\\sqrt{\\frac{7}{5}}$",
+   "$7\\sqrt{\\frac{5}{4}}$",
+   "$4\\sqrt{\\frac{5}{7}}$",
+   "$2\\sqrt{\\frac{7}{4}}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{x-1}{2}=\\frac{y+1}{-3}=\\frac{z}{1}=t$\n\n$\\begin{array}{l} (1+2t,-1-3t,t) \\\\ 4t^{2}+9t^{2}+t^{2}=16\\times 14 \\\\ t=\\pm 4 \\\\ \\text{Points are}(9,-13,4),(-7,11,-4) \\\\ (α,β,γ)=(-7,11,-4) \\\\ \\bar{a}=(-7,11,-4),\\bar{c}=(-5,10,3) \\\\ \\bar{c}-\\bar{a}=(2,-1,7) \\\\ b\\times d=(-1,5,-3) \\\\ S.D=\\left |\\dfrac{-2-5-21}{\\sqrt{1+25+9}}\\right |=\\dfrac{28}{\\sqrt{35}} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h6lh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the domain of the function $f(x)=\\sin ^{-1}\\left (\\frac{5-x}{3+2x}\\right )+\\frac{1}{\\log _{e}(10-x)}$ is $(-\\infty ,α]\\cup [β,γ)-\\{δ\\}$, then $6(α+β+γ+δ)$ is equal to",
+  "options": [
+   "66",
+   "68",
+   "70",
+   "67"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The function needs $-1\\leq \\dfrac{5-x}{3+2x}\\leq 1$, $10-x>0$ and $\\log _{e}(10-x)\\neq 0$.\n\nUpper bound:\n\n$\\frac{5-x}{3+2x}-1\\leq 0\\Rightarrow \\frac{2-3x}{3+2x}\\leq 0\\Rightarrow \\frac{3x-2}{2x+3}\\geq 0\\Rightarrow x\\in \\left (-\\infty ,-\\frac{3}{2}\\right )\\cup \\left [\\frac{2}{3},\\infty \\right )$\n\nLower bound:\n\n$\\frac{5-x}{3+2x}+1\\geq 0\\Rightarrow \\frac{x+8}{2x+3}\\geq 0\\Rightarrow x\\in (-\\infty ,-8]\\cup \\left (-\\frac{3}{2},\\infty \\right )$\n\nBoth hold for $x\\in (-\\infty ,-8]\\cup \\left [\\dfrac{2}{3},\\infty \\right )$.\n\nThe logarithm needs $10-x>0$, i.e. $x<10$, and the denominator needs $10-x\\neq 1$, i.e. $x\\neq 9$.\n\nSo the domain is $(-\\infty ,-8]\\cup \\left [\\dfrac{2}{3},10\\right )-\\{9\\}$, giving $α=-8$, $β=\\dfrac{2}{3}$, $γ=10$, $δ=9$.\n\n$6(α+β+γ+δ)=6\\left (-8+\\frac{2}{3}+10+9\\right )=6\\times \\frac{35}{3}=70$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h6zp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f:[1,\\infty )\\to \\mathrm{ℝ}$ be a differentiable function. If $6\\int\\limits _{1}^{x}f(t)dt=3xf(x)+x^{3}-4$ for all $x\\geq 1$, then the value of $f(2)-f(3)$ is :",
+  "options": [
+   "4",
+   "3",
+   "-4",
+   "-3"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} 6\\int\\limits _{1}^{x}f(t)dt=3xf(x)+x^{3}-4 \\\\ \\text{By using Leibniz rule} \\\\ \\begin{array}{l} 6f(x)=3f(x)+3xf^{'}(x)+3x^{2} \\\\ \\dfrac{f(x)-xf^{'}(x)}{x^{2}}=1 \\\\ \\dfrac{d}{dx}\\left (\\dfrac{f(x)}{x}\\right )=-1\\Rightarrow f(x)=-x^{2}+kx \\\\ 1=-1+k(\\text{since}f(1)=1) \\\\ f(x)=-x^{2}+2x \\\\ f(2)-f(3)=3 \\end{array} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h5dc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the image of the point $\\mathrm{P}(1,2,a)$ in the line $\\frac{x-6}{3}=\\frac{y-7}{2}=\\frac{7-\\mathrm{z}}{2}$ is $\\mathrm{Q}(5,b,\\mathrm{c})$, then $a^{2}+b^{2}+c^{2}$ is equal to",
+  "options": [
+   "298",
+   "264",
+   "293",
+   "283"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The line $\\dfrac{x-6}{3}=\\dfrac{y-7}{2}=\\dfrac{7-z}{2}$ is $\\dfrac{x-6}{3}=\\dfrac{y-7}{2}=\\dfrac{z-7}{-2}$, through $(6,7,7)$ with direction $(3,2,-2)$; a general point on it is $(3t+6,2t+7,7-2t)$.\n\nThe midpoint $M$ of $P(1,2,a)$ and its image $Q(5,b,c)$ lies on the line, and $M=\\left (3,\\dfrac{2+b}{2},\\dfrac{a+c}{2}\\right )$.\n\nFrom the $x$-coordinate, $3t+6=3\\Rightarrow t=-1$, so $M=(3,5,9)$.\n\nHence $\\dfrac{2+b}{2}=5\\Rightarrow b=8$ and $\\dfrac{a+c}{2}=9\\Rightarrow a+c=18$.\n\nAlso $PQ\\leftarrow =(4,b-2,c-a)=(4,6,c-a)$ is perpendicular to the line:\n\n$3(4)+2(6)-2(c-a)=0\\Rightarrow c-a=12$\n\nWith $a+c=18$, this gives $a=3$ and $c=15$.\n\n$a^{2}+b^{2}+c^{2}=9+64+225=298$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h6m0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\frac{\\cos ^{2}48^{\\circ }-\\sin ^{2}12^{\\circ }}{\\sin ^{2}24^{\\circ }-\\sin ^{2}6^{\\circ }}=\\frac{α+β\\sqrt{5}}{2}$, where $α,β\\in \\mathrm{ℕ}$, then $α+β$ is equal to $____$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 4.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Using $\\cos ^{2}A-\\sin ^{2}B=\\cos (A+B)\\cos (A-B)$ and $\\sin ^{2}A-\\sin ^{2}B=\\sin (A+B)\\sin (A-B)$:\n\n$\\cos ^{2}48^{\\circ }-\\sin ^{2}12^{\\circ }=\\cos 60^{\\circ }\\cos 36^{\\circ },\\sin ^{2}24^{\\circ }-\\sin ^{2}6^{\\circ }=\\sin 30^{\\circ }\\sin 18^{\\circ }$\n\nSince $\\cos 60^{\\circ }=\\sin 30^{\\circ }=\\dfrac{1}{2}$, the given ratio equals $\\dfrac{\\cos 36^{\\circ }}{\\sin 18^{\\circ }}$.\n\nWith $\\cos 36^{\\circ }=\\dfrac{\\sqrt{5}+1}{4}$ and $\\sin 18^{\\circ }=\\dfrac{\\sqrt{5}-1}{4}$:\n\n$\\frac{\\sqrt{5}+1}{\\sqrt{5}-1}=\\frac{(\\sqrt{5}+1)^{2}}{5-1}=\\frac{6+2\\sqrt{5}}{4}=\\frac{3+\\sqrt{5}}{2}$\n\nSince $\\sqrt{5}$ is irrational, $α=3$ and $β=1$, so $α+β=4$.\n\nHence, the answer is 4.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h7za",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let A be a $3\\times 3$ matrix such that $\\mathrm{A}+\\mathrm{A}^{\\mathrm{T}}=\\mathrm{O}$. If $\\mathrm{A}\\left [\\begin{array}{l} 1 \\\\ -1 \\\\ 0 \\end{array}\\right ]=\\left [\\begin{array}{l} 3 \\\\ 3 \\\\ 2 \\end{array}\\right ],\\mathrm{A}^{2}\\left [\\begin{array}{l} 1 \\\\ -1 \\\\ 0 \\end{array}\\right ]=\\left [\\begin{array}{l} -3 \\\\ 19 \\\\ -24 \\end{array}\\right ]$ and $\\det (\\mathrm{adj}(2\\mathrm{adj}(\\mathrm{A}+\\mathrm{I})))=(2)^{α}\\cdot (3)^{β}\\cdot (11)^{γ},α,β,γ$ are non-negative integers, then $α+β+γ$ is equal to $____$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 18.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since $A+A^{T}=O$, $A$ is skew-symmetric: $A=\\left [\\begin{array}{lll} 0 & p & q \\\\ -p & 0 & r \\\\ -q & -r & 0 \\end{array}\\right ]$.\n\nWith $v=\\left [\\begin{array}{l} 1 \\\\ -1 \\\\ 0 \\end{array}\\right ]$, $Av=\\left [\\begin{array}{l} -p \\\\ -p \\\\ -q+r \\end{array}\\right ]=\\left [\\begin{array}{l} 3 \\\\ 3 \\\\ 2 \\end{array}\\right ]$, so $p=-3$ and $r-q=2$.\n\nAlso $A^{2}v=A(Av)=A\\left [\\begin{array}{l} 3 \\\\ 3 \\\\ 2 \\end{array}\\right ]=\\left [\\begin{array}{l} 3p+2q \\\\ -3p+2r \\\\ -3q-3r \\end{array}\\right ]=\\left [\\begin{array}{l} -9+2q \\\\ 9+2r \\\\ -3q-3r \\end{array}\\right ]=\\left [\\begin{array}{l} -3 \\\\ 19 \\\\ -24 \\end{array}\\right ]$, so $q=3$ and $r=5$.\n\n$A+I=\\left [\\begin{array}{lll} 1 & -3 & 3 \\\\ 3 & 1 & 5 \\\\ -3 & -5 & 1 \\end{array}\\right ],|A+I|=1(1+25)+3(3+15)+3(-15+3)=26+54-36=44.$\n\nFor a $3\\times 3$ matrix $M$, $|\\mathrm{adj}M|=|M|^{2}$ and $|kM|=k^{3}|M|$. With $M=A+I$:\n\n$|2\\mathrm{adj}M|=2^{3}|M|^{2}=8\\cdot 44^{2},$\n\n$\\det (\\mathrm{adj}(2\\mathrm{adj}M))=\\left (8\\cdot 44^{2}\\right )^{2}=2^{6}\\cdot 44^{4}=2^{6}\\cdot 2^{8}\\cdot 11^{4}=2^{14}\\cdot 3^{0}\\cdot 11^{4}.$\n\nSo $α=14$, $β=0$, $γ=4$ and $α+β+γ=18$.\n\nHence, the answer is 18.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h4x4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let ABC be a triangle. Consider four points $\\mathrm{p}_{1},\\mathrm{p}_{2},\\mathrm{p}_{3},\\mathrm{p}_{4}$ on the side AB , five points $p_{5},p_{6},p_{7},p_{8},p_{9}$ on the side $BC$, and four points $p_{10},p_{11},p_{12},p_{13}$ on the side AC . None of these points is a vertex of the triangle ABC . Then the total number of pentagons, that can be formed by taking all the vertices from the points $p_{1},p_{2},\\ldots ,p_{13}$, is $____$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 660.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Three points on the same side are collinear, so a pentagon can use at most 2 points from each side. Five vertices with at most 2 per side split as $2,2,1$ among the three sides, and any such set of 5 points on the boundary of the triangle (no three collinear) gives exactly one pentagon.\n\nSide AB has 4 points, BC has 5 points and AC has 4 points.\n\nOne point from AB, two each from BC and AC: ${}^{4}C_{1}\\times {}^{5}C_{2}\\times {}^{4}C_{2}=4\\times 10\\times 6=240$.\n\nOne point from AC, two each from AB and BC: ${}^{4}C_{1}\\times {}^{4}C_{2}\\times {}^{5}C_{2}=4\\times 6\\times 10=240$.\n\nOne point from BC, two each from AB and AC: ${}^{5}C_{1}\\times {}^{4}C_{2}\\times {}^{4}C_{2}=5\\times 6\\times 6=180$.\n\n$240+240+180=660$\n\nHence, the answer is 660.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h85h",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $α=\\frac{-1+i\\sqrt{3}}{2}$ and $β=\\frac{-1-i\\sqrt{3}}{2},i=\\sqrt{-1}$. If\n\n$(7-7α+9β)^{20}+(9+7α-7β)^{20}+(-7+9α+7β)^{20}+(14+7α+7β)^{20}=m^{10},$\n\nthen $m$ is $____$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 49.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α=ω$ and $β=ω^{2}$, where $ω$ is a non-real cube root of unity, so $αβ=1$, $α^{2}=β$, $β^{2}=α$ and $1+α+β=0$.\n\nLet $T=-7+9α+7β$. Then\n\n$αT=-7α+9α^{2}+7αβ=7-7α+9β$\n\n$βT=-7β+9αβ+7β^{2}=9+7α-7β$\n\nAlso $14+7α+7β=14+7(α+β)=14-7=7$.\n\nSo the left side equals $T^{20}\\left (α^{20}+β^{20}+1\\right )+7^{20}$.\n\nSince $20=3\\times 6+2$, $α^{20}=α^{2}=β$ and $β^{20}=β^{2}=α$, so $α^{20}+β^{20}+1=α+β+1=0$.\n\nHence $m^{10}=7^{20}=49^{10}$, which gives the positive value $m=49$.\n\nHence, the answer is 49.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml89h7r9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $\\int (\\sin x)^{\\frac{-11}{2}}(\\cos x)^{\\frac{-5}{2}}dx=-\\frac{p_{1}}{q_{1}}(\\cot x)^{\\frac{9}{2}}-\\frac{p_{2}}{q_{2}}(\\cot x)^{\\frac{5}{2}}-\\frac{p_{3}}{q_{3}}(\\cot x)^{\\frac{1}{2}}+\\frac{p_{4}}{q_{4}}(\\cot x)^{\\frac{-3}{2}}+\\mathrm{C}$, where $p_{i}$ and $q_{i}$ are positive integers with $\\gcd (p_{i},q_{i})=1$ for $i=1,2,3,4$ and C is the constant of integration, then $\\frac{15p_{1}p_{2}p_{3}p_{4}}{q_{1}q_{2}q_{3}q_{4}}$ is equal to $____$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 16.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 22nd January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since the powers add up to $-8$,\n\n$(\\sin x)^{-\\frac{11}{2}}(\\cos x)^{-\\frac{5}{2}}=\\frac{\\cos ^{11/2}x}{\\sin ^{11/2}x}\\cdot \\frac{1}{\\cos ^{8}x}=\\frac{\\sec ^{8}x}{\\tan ^{11/2}x}=\\frac{(1+\\tan ^{2}x)^{3}\\sec ^{2}x}{\\tan ^{11/2}x}.$\n\nPutting $\\tan x=t$, $\\sec ^{2}xdx=dt$, and expanding $(1+t^{2})^{3}=1+3t^{2}+3t^{4}+t^{6}$:\n\n$\\int \\frac{(1+t^{2})^{3}}{t^{11/2}}dt=\\int \\left (t^{-\\frac{11}{2}}+3t^{-\\frac{7}{2}}+3t^{-\\frac{3}{2}}+t^{\\frac{1}{2}}\\right )dt$\n\n$=-\\frac{2}{9}t^{-\\frac{9}{2}}-\\frac{6}{5}t^{-\\frac{5}{2}}-6t^{-\\frac{1}{2}}+\\frac{2}{3}t^{\\frac{3}{2}}+C.$\n\nSince $t^{-1}=\\cot x$, this is\n\n$-\\frac{2}{9}(\\cot x)^{\\frac{9}{2}}-\\frac{6}{5}(\\cot x)^{\\frac{5}{2}}-\\frac{6}{1}(\\cot x)^{\\frac{1}{2}}+\\frac{2}{3}(\\cot x)^{-\\frac{3}{2}}+C.$\n\nAll four fractions are in lowest terms, so $\\dfrac{p_{1}}{q_{1}}=\\dfrac{2}{9}$, $\\dfrac{p_{2}}{q_{2}}=\\dfrac{6}{5}$, $\\dfrac{p_{3}}{q_{3}}=\\dfrac{6}{1}$, $\\dfrac{p_{4}}{q_{4}}=\\dfrac{2}{3}$.\n\n$\\frac{15p_{1}p_{2}p_{3}p_{4}}{q_{1}q_{2}q_{3}q_{4}}=\\frac{15\\times 2\\times 6\\times 6\\times 2}{9\\times 5\\times 1\\times 3}=\\frac{2160}{135}=16$\n\nHence, the answer is 16.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 22nd January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

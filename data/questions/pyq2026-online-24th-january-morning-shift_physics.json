@@ -1,0 +1,1124 @@
+[
+ {
+  "publicId": "PYQ-2026-ml98p4ge",
+  "subjectKey": "physics",
+  "chapterKey": "physics:oscillations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A cylindrical block of mass $M$ and area of cross section $A$ is floating in a liquid of density $ρ$ and with its axis vertical. When depressed a little and released the block starts oscillating. The period of oscillation is $____$",
+  "options": [
+   "$2π\\sqrt{\\frac{ρA}{Mg}}$",
+   "$π\\sqrt{\\frac{2M}{ρAg}}$",
+   "$2π\\sqrt{\\frac{M}{ρAg}}$",
+   "$π\\sqrt{\\frac{ρA}{Mg}}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 51,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "simple harmonic motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Initially, the block is floating. The weight of the block is balanced by the buoyant force $(\\mathrm{F}_{\\mathrm{B}})$.\n\nLet h be the height of the submerged part of the block.\n\n$\\mathrm{Mg}=\\mathrm{F}_{\\mathrm{B}}=\\mathrm{V}_{\\text{submerged}}\\times ρ_{\\text{liquid}}\\times \\mathrm{g}$\n\n$\\Rightarrow$ $\\mathrm{Mg}=(\\mathrm{A}\\times \\mathrm{h})ρ\\mathrm{g}$\n\n\n[IMG]\n\n\nWhen the block is depressed by a small distance x downwards, the volume of the displaced liquid increases by $A\\cdot x$. This creates an extra buoyant force which acts as the restoring force.\n\nThe additional buoyant force is :\n\n$\\mathrm{F}_{\\text{restoring}}=-(\\text{Additional Volume})\\times ρ\\times \\mathrm{g}$\n\n$\\mathrm{F}_{\\text{restoring}}=-(\\mathrm{Ax})ρ\\mathrm{g}$\n\nSince the force is proportional to displacement x and acts opposite to it ( $\\mathrm{F}\\propto -\\mathrm{x}$ ), the motion is Simple Harmonic Motion (SHM).\n\nUsing Newton's Second Law ( $\\mathrm{F}=\\mathrm{Ma}$ ) :\n\n$\\mathrm{Ma}=-(ρ\\mathrm{Ag})\\mathrm{x}$\n\n$\\Rightarrow$ $a=-\\left (\\frac{ρAg}{M}\\right )x.$\n\nStandard equation for SHM acceleration is $\\mathrm{a}=-ω^{2}\\mathrm{x}$\n\nComparing the two equations:\n\n$ω^{2}=\\frac{ρ\\mathrm{Ag}}{\\mathrm{M}}\\Rightarrow ω=\\sqrt{\\frac{ρ\\mathrm{Ag}}{\\mathrm{M}}}$\n\nThe time period T is given by $\\mathrm{T}=\\frac{2π}{ω}$.\n\n$\\Rightarrow$ $\\mathrm{T}=2π\\sqrt{\\frac{\\mathrm{M}}{ρ\\mathrm{Ag}}}$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p4ge-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p55s",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The electrostatic potential in a charged spherical region of radius $r$ varies as $V=ar^{3}+b$, where $a$ and $b$ are constants. The total charge in the sphere of unit radius is $α\\times πa𝜖_{0}$. The value of $α$ is $____$ .\n\n(permittivity of vacuum is $𝜖_{0}$ )",
+  "options": [
+   "-12",
+   "-8",
+   "-9",
+   "-6"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 52,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The electric field $⃗{E}$ is related to the electric potential $V$ by $E=-\\frac{dV}{dr}$.\n\nSince the potential V depends only on the radial distance r , the electric field is radial.\n\nGiven the potential function :\n\n$\\mathrm{V}=\\mathrm{ar}^{3}+\\mathrm{b}$\n\nThen the electric field is,\n\n$\\mathrm{E}=-\\frac{\\mathrm{dV}}{\\mathrm{dr}}=-\\left [\\frac{\\mathrm{d}}{\\mathrm{dr}}\\left (\\mathrm{ar}^{3}+\\mathrm{b}\\right )\\right ]=-3\\mathrm{ar}^{2}$\n\nWe need to find the total charge enclosed in a sphere of unit radius ( $\\mathrm{R}=1$ ).\n\nThe electric flux passing through the surface of this sphere is given by $\\Phi _{E}=\\int ⃗{E}\\cdot d⃗{A}$\n\nAt $R=1$, the electric field magnitude is :\n\n$E(1)=-3a(1)^{2}=-3a$\n\nThe surface area of the sphere is $4πR^{2}=4π(1)^{2}=4π$.\n\nThus, the flux is :\n\n$\\Phi _{\\mathrm{E}}=\\mathrm{E}\\times \\text{Area}=(-3\\mathrm{a})\\times (4π)=-12π\\mathrm{a}$\n\nAccording to Gauss's Law,\n\n$\\Phi _{\\mathrm{E}}=\\frac{\\mathrm{Q}_{\\text{enclosed}}}{𝜖_{0}}\\Rightarrow \\mathrm{Q}_{\\text{enclosed}}=\\Phi _{\\mathrm{E}}\\times 𝜖_{0}$\n\n$\\Rightarrow$ $Q_{\\text{enclosed}}=(-12πa)\\times 𝜖_{0}$\n\n$\\Rightarrow$ $\\mathrm{Q}_{\\text{enclosed}}=-12π\\mathrm{a}𝜖_{0}=α\\times π\\mathrm{a}𝜖_{0}\\Rightarrow α=-12$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml98p4zc",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The exit surface of a prism with refractive index $n$ is coated with a material having refractive index $\\frac{n}{2}$. When this prism is set for minimum angle of deviation, it exactly meets the condition of critical angle. The prism angle is $____$ .",
+  "options": [
+   "$60^{\\circ }$",
+   "$30^{\\circ }$",
+   "$15^{\\circ }$",
+   "$45^{\\circ }$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 53,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Light is traveling from the prism material (denser medium) to the coating material (rarer medium).\n\n\n[IMG]\n\n\nRefractive index of Prism $\\mathrm{n}_{1}=\\mathrm{n}$\n\nRefractive index of Coating $\\mathrm{n}_{2}=\\frac{\\mathrm{n}}{2}$\n\nAccording to question at the exit surface, the light exactly meets the condition of critical angle.\n\nThe formula for the critical angle is :\n\n$\\sin θ_{\\mathrm{C}}=\\frac{\\mathrm{n}_{\\text{rare}}}{\\mathrm{n}_{\\text{denser}}}$\n\n$\\Rightarrow$ $\\sin θ_{C}=\\frac{n/2}{n}=\\frac{1}{2}$\n\n$θ_{C}=\\sin ^{-1}(1/2)=30^{\\circ }$\n\nSo, the angle of incidence at the second face $(\\mathrm{r}_{2})$ is equal to the critical angle :\n\n$r_{2}=30^{\\circ }$\n\nApplying the condition for minimum deviation, the light ray passes symmetrically through the prism.\n\n$\\mathrm{r}_{1}=\\mathrm{r}_{2}=30^{\\circ }$\n\nThe light ray inside the prism is parallel to the base (for an equilateral prism).\n\nFor any prism, the relationship between the Prism Angle A and the internal angles is:\n\n$\\begin{array}{l} \\mathrm{A}=\\mathrm{r}_{1}+\\mathrm{r}_{2} \\\\ \\mathrm{A}=30^{\\circ }+30^{\\circ } \\\\ \\mathrm{A}=60^{\\circ } \\end{array}$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p4zc-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p4ai",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A brass wire of length 2 m and radius 1 mm at $27^{\\circ }\\mathrm{C}$ is held taut between two rigid supports. Initially it was cooled to a temperature of $-43^{\\circ }\\mathrm{C}$ creating a tension $T$ in the wire. The temperature to which the wire has to be cooled in order to increase the tension in it to $1.4T$, is $____$ ${}^{\\circ }\\mathrm{C}$.",
+  "options": [
+   "-71",
+   "-80",
+   "-65",
+   "-86"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 54,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "elasticity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A metal rod of original length $L$ that is free to move. If we heat this rod by a temperature difference $\\Delta T$, it will naturally expand.\n\nThe change in length ( $\\Delta \\mathrm{L}$ ) is given by the law of linear thermal expansion :\n\n$\\Delta \\mathrm{L}=\\mathrm{L}\\cdot α\\cdot \\Delta \\mathrm{T}$\n\nWhere $α=$ Coefficient of Linear Expansion\n\nWhen a wire fixed at both ends is cooled, it contracts. Since the supports are rigid, they prevent this contraction, creating a tension in the wire.\n\n$\\text{Strain}ε=\\frac{\\Delta \\mathrm{L}}{\\mathrm{L}}=α\\Delta \\mathrm{T}$\n\nAccording to Hooke's Law, Stress is proportional to Strain within the elastic limit. The constant of proportionality is Young's Modulus (Y).\n\n$Y=\\frac{\\text{Stress}}{\\text{Strain}}$\n\n$\\Rightarrow$ Stress $(σ)=\\mathrm{Y}\\times$ Strain\n\n$σ=\\mathrm{Y}\\cdot (α\\Delta \\mathrm{T})$\n\nStress is defined as Force (F) per unit Area (A).\n\n$\\text{Stress}=\\frac{\\mathrm{F}}{\\mathrm{A}}=\\mathrm{Y}\\cdot (α\\Delta \\mathrm{T})$\n\n$\\Rightarrow$ $\\mathrm{F}=(\\mathrm{Y}α\\Delta \\mathrm{T})\\times \\mathrm{A}$\n\n$\\Rightarrow \\mathrm{F}\\propto \\Delta \\mathrm{T}\\Rightarrow \\frac{\\mathrm{F}_{1}}{\\mathrm{F}_{2}}=\\frac{\\Delta \\mathrm{T}_{1}}{\\Delta \\mathrm{T}_{2}}$\n\nInitial Temperature $=\\mathrm{t}_{0}=27^{\\circ }\\mathrm{C}$\n\nFinal Temperature $=\\mathrm{t}_{1}=-43^{\\circ }\\mathrm{C}$\n\n$\\Delta \\mathrm{T}_{1}=27-(-43)=70^{\\circ }\\mathrm{C}$\n\nInitial tension in the wire is, $\\mathrm{F}_{1}=\\mathrm{T}$\n\nFinal tension in the wire is $\\mathrm{F}_{2}=1.4\\mathrm{T}$\n\nLet the new final temperature be $t_{2}$.\n\n$\\Delta \\mathrm{T}_{2}=27-\\mathrm{t}_{2}$\n\n$\\Rightarrow$ $\\frac{\\mathrm{F}_{2}}{\\mathrm{F}_{1}}=\\frac{1.4\\mathrm{T}}{\\mathrm{T}}=\\frac{27-\\mathrm{t}_{2}}{70}$\n\n$\\Rightarrow$ $1.4=\\frac{27-t_{2}}{70}$\n\n$\\Rightarrow$ $27-t_{2}=1.4\\times 70$\n\n$\\Rightarrow$ $27-t_{2}=98$\n\n$\\Rightarrowt_{2}=27-98$\n\n$\\Rightarrowt_{2}=-71^{\\circ }\\mathrm{C}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml98p5ei",
+  "subjectKey": "physics",
+  "chapterKey": "physics:oscillations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A spring of force constant $15\\mathrm{N}/\\mathrm{m}$ is cut into two pieces. If the ratio of their length is $1:3$, then the force constant of smaller piece is $____$ $\\mathrm{N}/\\mathrm{m}$.",
+  "options": [
+   "20",
+   "45",
+   "60",
+   "15"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 55,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "simple harmonic motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The spring constant k of a spring is inversely proportional to the length L of the spring.\n\n$\\mathrm{k}\\propto \\frac{1}{\\mathrm{L}}$\n\nThis means that the product of the spring constant and the length is a constant for a given spring:\n\n$\\mathrm{k}\\cdot \\mathrm{L}=\\text{Constant}$\n\nThe force constant of original spring is $\\mathrm{k}_{\\mathrm{o}}=15\\mathrm{N}/\\mathrm{m}$.\n\nLet the original length be L .\n\nThe spring is cut into two pieces with a length ratio of $1:3$.\n\n$x+3x=L\\Rightarrow x=\\frac{L}{4}$\n\nHence, the length of smaller spring is $L_{1}=x=\\frac{L}{4}$ and the length of larger spring is $L_{2}=3x=\\frac{3L}{4}$.\n\nLet $\\mathrm{k}_{1}$ be the force constant of the smaller piece.\n\nUsing the inverse proportionality relationship:\n\n$\\mathrm{k}_{\\mathrm{o}}\\mathrm{L}_{\\mathrm{o}}=\\mathrm{k}_{1}\\mathrm{L}_{1}$\n\n$\\Rightarrow$ $15\\times \\mathrm{L}=\\mathrm{k}_{1}\\times \\left (\\frac{\\mathrm{L}}{4}\\right )\\Rightarrow \\mathrm{k}_{1}=60\\mathrm{N}/\\mathrm{m}$\n\nTherefore, the force constant of smaller piece is $60\\mathrm{N}/\\mathrm{m}$. \n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml98p4hq",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-waves",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Match the LIST-I with LIST-II\n\nList-I\n\nList-II\n\nA.\n\nRadio-wave\n\nI.\n\nis produced by Magnetron valve\n\nB.\n\nMicro-wave\n\nII.\n\ndue to change in the vibrational modes of atoms\n\nC.\n\nInfrared-wave\n\nIII.\n\ndue to inner shell electrons moving from higher energy level to lower energy level\n\nD.\n\nX-ray\n\nIV.\n\ndue to rapid acceleration of electrons\n\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-IV, B-II, C-I, D-III",
+   "A-IV, B-III, C-I, D-II",
+   "A-IV, B-I, C-II, D-III",
+   "A-II, B-IV, C-III, D-I"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 56,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Radio-waves\n\n1. Radio waves have the longest wavelengths in the EM spectrum. They are artificially generated by transmitters. The core process involves an oscillating electric current in a special conductor called an antenna.\n\n2. According to electromagnetic theory, an accelerating electric charge produces electromagnetic waves. In an antenna, electrons are rapidly accelerated back and forth.\n\n3. So, the radio waves are produced due to rapid acceleration of electrons.\n\nMicro-waves\n\n1. Micro-waves are high-frequency radio waves. While they can be produced by acceleration, high-power microwaves (like those in radar or microwave ovens) are generated using special vacuum tubes.\n\n2. The most common device for this is the Magnetron (or Klystron). A Magnetron uses a magnetic field to control the flow of electrons in a vacuum, causing them to oscillate at microwave frequencies.\n\n3. Hence the Micro-wave is produced by Magnetron valve.\n\nInfrared-waves\n\n1. Infrared waves are often perceived as heat. All objects above absolute zero emit infrared radiation.\n\n2. This emission arises from the thermal motion of atoms and molecules. When the atoms in a molecule vibrate or rotate, they change energy states. The transition between these vibrational and rotational energy levels results in the emission of infrared photons.\n\n3. Hence, the infrared waves are produced due to change in the vibrational modes of atoms.\n\nX-rays\n\n1. X-rays have very high energy and short wavelengths. They are typically produced in X-ray tubes.\n\n2. There are two main ways X-rays are produced:\n\n(A) Braking Radiation: When high-speed electrons are suddenly stopped by a metal target.\n\n(B) Characteristic X-rays: When a high-energy electron knocks an electron out of an inner shell (like the K-shell) of an atom, a vacancy is created. An electron from a higher energy outer shell falls into this vacancy. The large energy difference is released as an X-ray photon.\n\n3. Hence, it is due to inner shell electrons moving from higher energy level to lower energy level.\n\nSo,\n\nA (Radio-wave) → IV\n\nB (Micro-wave) → I\n\nC (Infrared-wave) → II\n\nD (X-ray) → III\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml98p3ql",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two resistors of $100\\Omega$ each are connected in series with a 9 V battery. A voltmeter of $400\\Omega$ resistance is connected to measure the voltage drop across one of the resistors. The voltmeter reading is $____$ V.",
+  "options": [
+   "3",
+   "2",
+   "4",
+   "4.5"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 57,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The initial circuit is,\n\n\n[IMG]\n\n\nWhen the voltmeter is connected to measure the voltage across one resistor, it is connected in parallel with that resistor.\n\nResistance of Voltmeter $\\mathrm{R}_{\\mathrm{V}}=400\\Omega$\n\nThe voltmeter $(\\mathrm{R}_{\\mathrm{V}})$ and the resistor $(\\mathrm{R}_{1})$ are in parallel.\n\n$\\frac{1}{R_{1,V}}=\\frac{1}{R_{1}}+\\frac{1}{R_{V}}$\n\n$\\Rightarrow$ $\\frac{1}{R_{1,V}}=\\frac{1}{100}+\\frac{1}{400}=\\frac{5}{400}$\n\n$\\mathrm{R}_{1,\\mathrm{V}}=\\frac{400}{5}=80\\Omega$\n\nNow, $R_{2}$ is in series with the equivalent resistance $(R_{1,V})$. So, the total resistance of the circuit is,\n\n$\\mathrm{R}_{\\text{total}}=\\mathrm{R}_{1,\\mathrm{V}}+\\mathrm{R}_{2}$\n\n$\\Rightarrow$ $\\mathrm{R}_{\\text{total}}=100\\Omega +80\\Omega =180\\Omega$\n\nUsing Ohm's Law ( $\\mathrm{V}=\\mathrm{I}\\cdot \\mathrm{R}$ ) for the entire circuit :\n\n$\\mathrm{I}=\\frac{\\mathrm{V}}{\\mathrm{R}_{\\text{total}}}$\n\n$\\Rightarrow$ $I=\\frac{9}{180}=\\frac{1}{20}=0.05\\mathrm{A}$\n\nThe voltmeter measures the potential difference across the parallel section ( $\\mathrm{R}_{1,\\mathrm{V}}$ ).\n\nUsing Ohm's Law for that specific section :\n\n$V_{\\text{reading}}=I\\times R_{1,V}$\n\n$\\Rightarrow$ $\\mathrm{V}_{\\text{reading}}=0.05\\mathrm{A}\\times 80\\Omega$\n\n$\\Rightarrow$ $\\mathrm{V}_{\\text{reading}}=4\\mathrm{V}$\n\nTherefore, the voltmeter reading is 4 V. Hence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p3ql-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p5fb",
+  "subjectKey": "physics",
+  "chapterKey": "physics:wave-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An unpolarised light is incident at an interface of two dielectric media having refractive indices of 2 (incident medium) and $2\\sqrt{3}$ (medium) respectively. To satisfy the condition that reflected and refracted rays are perpendicular to each other, the angle of incidence is $____$",
+  "options": [
+   "$45^{\\circ }$",
+   "$60^{\\circ }$",
+   "$10^{\\circ }$",
+   "$30^{\\circ }$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 58,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "wave optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Light hits the surface at an angle of incidence $i$.\n\nPart of the light bounces back. According to the Law of Reflection, the angle of reflection is equal to the angle of incidence (i).\n\nPart of the light enters the second medium. It bends at an angle of refraction $r$.\n\n\n[IMG]\n\n\nThe reflected and refracted rays are perpendicular to each other. This means the angle between the reflected ray and the refracted ray is $90^{\\circ }$.\n\nThe sum of angles on a straight line is $180^{\\circ }$.\n\n$\\mathrm{i}+90^{\\circ }+\\mathrm{r}=180^{\\circ }\\Rightarrow \\mathrm{i}+\\mathrm{r}=90^{\\circ }$\n\n$\\Rightarrow \\mathrm{r}=90^{\\circ }-\\mathrm{i}$\n\nNow using the fundamental law of refraction, Snell's Law :\n\n$μ_{1}\\sin (\\mathrm{i})=\\mathrm{n}_{2}\\sin (\\mathrm{r})\\Rightarrow μ_{1}\\sin (\\mathrm{i})=\\mathrm{n}_{2}\\sin (90^{\\circ }-\\mathrm{i})$\n\n$\\Rightarrow μ_{1}\\sin (\\mathrm{i})=\\mathrm{n}_{2}\\cos (\\mathrm{i})$\n\n$\\Rightarrow$ $\\tan (\\mathrm{i})=\\frac{μ_{2}}{μ_{1}}$\n\nThe refractive index of first medium is $μ_{1}=2$ and the refractive index of second medium is $μ_{2}=2\\sqrt{3}$\n\n$\\tan (i)=\\frac{2\\sqrt{3}}{2}=\\sqrt{3}\\Rightarrow i=60^{\\circ }$\n\nTherefore, the angle of incidence is $60^{\\circ }$. \n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p5fb-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p4oa",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two electrons are moving in orbits of two hydrogen like atoms with speeds $3\\times 10^{5}\\mathrm{m}/\\mathrm{s}$ and $2.5\\times 10^{5}\\mathrm{m}/\\mathrm{s}$ respectively. If the radii of these orbits are nearly same then the possible order of energy states are $____$ respectively.",
+  "options": [
+   "8 and 10",
+   "10 and 12",
+   "9 and 8",
+   "6 and 5"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 59,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nThe velocity of an electron in the $\\mathrm{n}^{\\text{th}}$ orbit is proportional to the atomic number Z and inversely proportional to the principal quantum number n .\n\n$\\mathrm{v}\\propto \\frac{\\mathrm{Z}}{\\mathrm{n}}$\n\n$\\Rightarrow$ $\\mathrm{v}=\\mathrm{k}_{\\mathrm{v}}\\cdot \\frac{\\mathrm{Z}}{\\mathrm{n}}\\ldots (i)$\n\nWhere $\\mathrm{k}_{\\mathrm{v}}$ is constant for the velocity.\n\nThe radius of the $\\mathrm{n}^{\\text{th}}$ orbit is proportional to the square of the principal quantum number n and inversely proportional to the atomic number Z.\n\n$r\\propto \\frac{n^{2}}{Z}$\n\n$\\Rightarrow$ $\\mathrm{r}=\\mathrm{k}_{\\mathrm{r}}\\cdot \\frac{\\mathrm{n}^{2}}{\\mathrm{Z}}\\ldots (\\mathrm{ii})$\n\nLet $\\mathrm{r}_{1}$ be the radius for the first atom (with state $\\mathrm{n}_{1},\\mathrm{Z}_{1}$ ) and $\\mathrm{r}_{2}$ for the second (with state $\\mathrm{n}_{2},\\mathrm{Z}_{2}$ ).\n\n$\\mathrm{r}_{1}=\\mathrm{r}_{2}$\n\n$\\Rightarrow$ $\\mathrm{k}_{\\mathrm{r}}\\cdot \\frac{\\mathrm{n}_{1}^{2}}{\\mathrm{Z}_{1}}=\\mathrm{k}_{\\mathrm{r}}\\cdot \\frac{\\mathrm{n}_{2}^{2}}{\\mathrm{Z}_{2}}$\n\n$\\Rightarrow$ $\\frac{\\mathrm{n}_{1}^{2}}{\\mathrm{Z}_{1}}=\\frac{\\mathrm{n}_{2}^{2}}{\\mathrm{Z}_{2}}$\n\n$\\frac{\\mathrm{Z}_{1}}{\\mathrm{Z}_{2}}=\\frac{\\mathrm{n}_{1}^{2}}{\\mathrm{n}_{2}^{2}}=\\left (\\frac{\\mathrm{n}_{1}}{\\mathrm{n}_{2}}\\right )^{2}\\ldots (iii)$\n\nLet $\\mathrm{v}_{1}$ and $\\mathrm{v}_{2}$ be the speeds.\n\n$\\mathrm{v}_{1}=\\mathrm{k}_{\\mathrm{v}}\\frac{\\mathrm{Z}_{1}}{\\mathrm{n}_{1}}\\ldots (iv)$\n\n$\\mathrm{v}_{2}=\\mathrm{k}_{\\mathrm{v}}\\frac{\\mathrm{Z}_{2}}{\\mathrm{n}_{2}}\\ldots (\\mathrm{v})$\n\n$\\therefore$ $\\frac{\\mathrm{v}_{1}}{\\mathrm{v}_{2}}=\\frac{\\mathrm{k}_{\\mathrm{v}}\\left (\\frac{\\mathrm{Z}1}{\\mathrm{n}1}\\right )}{\\mathrm{k}_{\\mathrm{v}}\\left (\\frac{\\mathrm{Z}2}{\\mathrm{n}2}\\right )}$\n\n$\\Rightarrow$ $\\frac{\\mathrm{v}_{1}}{\\mathrm{v}_{2}}=\\frac{\\mathrm{Z}_{1}}{\\mathrm{n}_{1}}\\times \\frac{\\mathrm{n}_{2}}{\\mathrm{Z}_{2}}$ .....(vi)\n\n$\\Rightarrow$ $\\frac{\\mathrm{v}_{1}}{\\mathrm{v}_{2}}=\\left [\\left (\\frac{\\mathrm{n}_{1}}{\\mathrm{n}_{2}}\\right )^{2}\\right ]\\cdot \\left (\\frac{\\mathrm{n}_{2}}{\\mathrm{n}_{1}}\\right )=\\frac{\\mathrm{n}_{1}}{\\mathrm{n}_{2}}$\n\nIt is given that the speed of first electron is $\\mathrm{v}_{1}=3\\times 10^{5}\\mathrm{m}/\\mathrm{s}$ and that of electron in second hydrogen like atom is $\\mathrm{v}_{2}=2.5\\times 10^{5}\\mathrm{m}/\\mathrm{s}$\n\n$\\frac{n_{1}}{n_{2}}=\\frac{3\\times 10^{5}}{2.5\\times 10^{5}}$\n\n$\\Rightarrow$ $\\frac{\\mathrm{n}_{1}}{\\mathrm{n}_{2}}=\\frac{3}{2.5}$\n\n$\\Rightarrow$ $\\frac{\\mathrm{n}_{1}}{\\mathrm{n}_{2}}=\\frac{6}{5}$\n\nSo, the smallest possible energy states in two atoms are 6 and 5. \n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p4oa-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p5zm",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In a microscope of tube length 10 cm two convex lenses are arranged with focal length of 2 cm and 5 cm . Total magnification obtained with this system for normal adjustment is $(5)^{k}$. The value of $k$ is $____$ .",
+  "options": [
+   "4",
+   "5",
+   "2",
+   "3.5"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 60,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A compound microscope consists of two lenses objective lens (lens near the object) and the eyepiece (lens near the eye.). To achieve high magnification, objective lens must have a small focal length compared to eyepiece.\n\nSo,\n\n1. Focal length of Objective $=f_{0}=2\\mathrm{cm}$\n\n2. Focal length of Eyepiece $=\\mathrm{f}_{\\mathrm{e}}=5\\mathrm{cm}$\n\nDuring normal adjustment in optical instruments the final image is formed at infinity. This allows the observer to view the image with a relaxed eye.\n\n\n[IMG]\n\n\nThe total magnification ( M ) of a microscope is the product of the magnification of the objective ( $\\mathrm{m}_{\\mathrm{o}}$ ) and the magnification of the eyepiece ( $\\mathrm{m}_{\\mathrm{e}}$ ).\n\n$\\mathrm{M}=\\mathrm{m}_{\\mathrm{o}}\\times \\mathrm{m}_{\\mathrm{e}}$\n\nThe eyepiece acts like a simple magnifying glass. For an image formed at infinity, the angular magnification is the ratio of the distinct vision distance (D) to the focal length ( $\\mathrm{f}_{\\mathrm{e}}$ ).\n\n$m_{e}=\\frac{D}{f_{e}}$\n\nWhere Least Distance of Distinct Vision $\\mathrm{D}=25\\mathrm{cm}$.\n\nThe objective forms a real, inverted image.\n\nThe tube length $(\\mathrm{L})$ is defined as the distance between the second focal point of the objective and the first focal point of the eyepiece.\n\n$m_{o}\\approx \\frac{L}{f_{o}}$\n\nSo, the total magnification of the microscope is,\n\n$\\mathrm{M}=\\left (\\frac{\\mathrm{L}}{\\mathrm{f}_{\\mathrm{o}}}\\right )\\times \\left (\\frac{\\mathrm{D}}{\\mathrm{f}_{\\mathrm{e}}}\\right )$\n\nPutting the values,\n\n$M=\\left (\\frac{10\\mathrm{cm}}{2\\mathrm{cm}}\\right )\\times \\left (\\frac{25}{5}\\right )=25=5^{2}$\n\n$\\Rightarrow$ $5^{2}=5^{k}\\Rightarrow k=2$\n\nTherefore, the value of k is 2. \n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p5zm-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p4il",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given below are two statements :\n\nStatement I : For all elements, greater the mass of the nucleus, greater is the binding energy per nucleon.\n\nStatement II : For all elements, nuclei with less binding energy per nucleon transforms to nuclei with greater binding energy per nucleon.\n\nIn the light of the above statements, choose the correct answer from the options given below",
+  "options": [
+   "Statement I is false but Statement II is true",
+   "Both Statement I and Statement II are true",
+   "Both Statement I and Statement II are false",
+   "Statement I is true but Statement II is false"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 61,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nFor light nuclei, the binding energy per nucleon $\\left (\\frac{BE}{A}\\right )$ increases rapidly as mass increases. The curve reaches a maximum around Mass Number $\\mathrm{A}\\approx 56$ (Iron, Fe ). This is the most stable region. For heavy nuclei the $\\frac{\\mathrm{BE}}{\\mathrm{A}}$ actually decreases as mass increases.\n\nSo, the binding energy per nucleon does not constantly increase with mass. It increases initially, peaks, and then decreases.\n\nHence, statement I is false.\n\nNature always tends towards the state of lowest potential energy (highest stability). Higher Binding Energy per Nucleon means the nucleus is more tightly bound and therefore more stable.\n\nSo, in nuclear fission a heavy nucleus (low $\\frac{BE}{A}$ ) splits into two lighter nuclei (higher $\\frac{BE}{A}$ ). And in nuclear fusion the light nuclei (low BE/A) combine to form a heavier nucleus (higher BE/A).\n\nIn both fundamental nuclear processes (fission and fusion), the system evolves from a state of lower binding energy per nucleon to a state of higher binding energy per nucleon. This is the driving force behind nuclear energy release.\n\nHence, statement II is true.\n\nTherefore, statement I is false, statement II is true. Hence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p4il-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p40j",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For the series LCR circuit connected with $220\\mathrm{V},50\\mathrm{Hz}$ a.c source as shown in the figure, the power factor is $\\frac{α}{10}$. The value of $α$ is $____$ .\n\n\n[IMG]",
+  "options": [
+   "4",
+   "8",
+   "6",
+   "10"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 62,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "alternating current"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The power factor ( $\\cos 𝜙$ ) of an AC circuit is defined as the ratio of the true resistance (R) to the total impedance (Z) of the circuit.\n\nPower Factor $=\\cos 𝜙=\\frac{\\mathrm{R}}{\\mathrm{Z}}$\n\nIn a series $LCR$ circuit, the inductive reactance $(X_{L})$ and capacitive reactance $(X_{C})$ oppose each other. The net reactance is the difference between them.\n\n$\\mathrm{X}=|\\mathrm{X}_{\\mathrm{L}}-\\mathrm{X}_{\\mathrm{C}}|$\n\nSubstituting the given values :\n\n$\\mathrm{X}=|70-150|\\Omega =80\\Omega$\n\nThe total impedance of the circuit is,\n\n$Z=\\sqrt{R^{2}+X^{2}}$\n\n\n[IMG]\n\n\n$\\mathrm{Z}=\\sqrt{(60)^{2}+(80)^{2}}=\\sqrt{10000}=100\\Omega$\n\nSo, the power factor is $\\cos 𝜙=\\frac{\\mathrm{R}}{\\mathrm{Z}}=\\frac{60}{100}=\\frac{6}{10}$\n\n$\\Rightarrow \\frac{\\mathrm{a}}{10}=\\frac{6}{10}$\n\n$\\Rightarrow a=6$\n\nTherefore, the value of a is 6 . Hence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p40j-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p40j-1.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p5g5",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two masses 400 g and 350 g are suspended from the ends of a light string passing over a heavy pulley of radius 2 cm . When released from rest the heavier mass is observed to fall 81 cm in 9 s . The rotational inertia of the pulley is $____$ $\\mathrm{kg}\\cdot \\mathrm{m}^{2}$. $\\left (\\mathrm{g}=9.8\\mathrm{m}/\\mathrm{s}^{2}\\right )$",
+  "options": [
+   "$8.3\\times 10^{-3}$",
+   "$4.75\\times 10^{-3}$",
+   "$1.86\\times 10^{-2}$",
+   "$9.5\\times 10^{-3}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 63,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The heavier mass starts from rest ( $u=0$ ) and falls a certain distance ( $h$ ) in time ( $t$ ).\n\nUsing the kinematic equation :\n\n$\\mathrm{h}=\\mathrm{ut}+\\frac{1}{2}\\mathrm{at}^{2}$\n\n$\\Rightarrow$ $\\mathrm{h}=\\frac{1}{2}\\mathrm{at}^{2}\\Rightarrow \\mathrm{a}=\\frac{2\\mathrm{h}}{\\mathrm{t}^{2}}$\n\nThe given distance $\\mathrm{h}=81\\mathrm{cm}=0.81\\mathrm{m}$\n\nThe time taken is $\\mathrm{t}=9\\mathrm{s}$\n\n$a=\\frac{2\\times 0.81}{9^{2}}=\\frac{1.62}{81}$\n\n$\\Rightarrow$ $\\mathrm{a}=0.02\\mathrm{m}/\\mathrm{s}^{2}$\n\nSince the pulley has mass (and inertia), the tension is not the same on both sides. Let $\\mathrm{T}_{1}$ be the tension on the heavier mass side ( $\\mathrm{m}_{1}$ ) and $\\mathrm{T}_{2}$ be the tension on the lighter mass side ( $\\mathrm{m}_{2}$ ).\n\n\n[IMG]\n\n\nFor heavier mass ( $\\mathrm{m}_{1}=0.4\\mathrm{kg}$ ) which is moving down.\n\n$\\mathrm{m}_{1}\\mathrm{g}-\\mathrm{T}_{1}=\\mathrm{m}_{1}\\mathrm{a}$\n\n$\\Rightarrow$ $\\mathrm{T}_{1}=\\mathrm{m}_{1}(\\mathrm{g}-\\mathrm{a})\\ldots (\\mathrm{i})$\n\nFor lighter mass ( $\\mathrm{m}_{2}=0.35\\mathrm{kg}$ ) which is moving up.\n\n$\\mathrm{T}_{2}-\\mathrm{m}_{2}\\mathrm{g}=\\mathrm{m}_{2}\\mathrm{a}$\n\n$\\Rightarrow$ $\\mathrm{T}_{2}=\\mathrm{m}_{2}(\\mathrm{g}+\\mathrm{a})\\ldots \\text{(ii)}$\n\nThe pulley rotates due to the difference in tensions. The net torque $(τ)$ causes angular acceleration $(α)$.\n\n$τ=(\\mathrm{T}_{1}-\\mathrm{T}_{2})\\mathrm{R}$\n\nAlso, from Newton's Second Law for rotation:\n\n$τ=\\mathrm{I}α$\n\nTherefore :\n\n$(\\mathrm{T}_{1}-\\mathrm{T}_{2})\\mathrm{R}=\\mathrm{I}α$\n\nAssuming the string does not slip, the linear acceleration of the string\n\n$\\mathrm{a}=\\mathrm{R}α\\Rightarrow α=\\frac{\\mathrm{a}}{\\mathrm{R}}$\n\nSubstituting in the torque equation :\n\n$(\\mathrm{T}_{1}-\\mathrm{T}_{2})\\mathrm{R}=\\mathrm{I}\\left (\\frac{\\mathrm{a}}{\\mathrm{R}}\\right )$\n\n$\\mathrm{I}=\\frac{(\\mathrm{T}_{1}-\\mathrm{T}_{2})\\mathrm{R}^{2}}{\\mathrm{a}}\\ldots (iii)$\n\nOn subtracting (ii) from (i)\n\n$\\mathrm{T}_{1}-\\mathrm{T}_{2}=[\\mathrm{m}_{1}(\\mathrm{g}-\\mathrm{a})]-[\\mathrm{m}_{2}(\\mathrm{g}+\\mathrm{a})]$\n\n$\\Rightarrow$ $\\mathrm{T}_{1}-\\mathrm{T}_{2}=(\\mathrm{m}_{1}\\mathrm{g}-\\mathrm{m}_{1}\\mathrm{a})-(\\mathrm{m}_{2}\\mathrm{g}+\\mathrm{m}_{2}\\mathrm{a})$\n\n$\\Rightarrow$ $\\mathrm{T}_{1}-\\mathrm{T}_{2}=(\\mathrm{m}_{1}-\\mathrm{m}_{2})\\mathrm{g}-(\\mathrm{m}_{1}+\\mathrm{m}_{2})\\mathrm{a}$\n\nPutting the values,\n\n$\\mathrm{T}_{1}-\\mathrm{T}_{2}=(0.400-0.350)\\times 9.8-(0.400+0.350)\\times 0.02$\n\n$\\Rightarrow$ $\\mathrm{T}_{1}-\\mathrm{T}_{2}=(0.05\\times 9.8)-(0.75\\times 0.02)$\n\n$\\Rightarrow$ $\\mathrm{T}_{1}-\\mathrm{T}_{2}=0.475\\mathrm{N}$\n\nSo, putting in equation (iii),\n\n$\\mathrm{I}=\\frac{(0.475)\\times \\mathrm{R}^{2}}{\\mathrm{a}}$\n\nGiven radius $\\mathrm{R}=2\\mathrm{cm}=0.02\\mathrm{m}$.\n\n$I=\\frac{0.475\\times (0.02)^{2}}{0.02}=0.475\\times 0.02=9.5\\times 10^{-3}\\mathrm{kgm}^{2}$\n\nTherefore, the rotational inertia of the pulley is $9.5\\times 10^{-3}\\mathrm{kgm}^{2}$. \n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p5g5-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p6cv",
+  "subjectKey": "physics",
+  "chapterKey": "physics:gravitation",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Three masses $200\\mathrm{kg},300\\mathrm{kg}$ and 400 kg are placed at the vertices of an equilateral triangle with sides 20 m . They are rearranged on the vertices of a bigger triangle of side 25 m and with the same centre. The work done in this process $____$ J. (Gravitational constant $\\mathrm{G}=6.7\\times 10^{-11}\\mathrm{N}\\mathrm{m}^{2}/\\mathrm{kg}^{2}$ )",
+  "options": [
+   "$4.77\\times 10^{-7}$",
+   "$1.74\\times 10^{-7}$",
+   "$9.86\\times 10^{-6}$",
+   "$2.85\\times 10^{-7}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 64,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "gravitation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The work done ( W ) by an external agent to rearrange a system of masses against gravitational force is equal to the change in the Gravitational Potential Energy $(U)$ of the system.\n\n$\\mathrm{W}=\\Delta \\mathrm{U}=\\mathrm{U}_{\\text{final}}-\\mathrm{U}_{\\text{initial}}$\n\nFor a system of three masses $m_{1},m_{2},m_{3}$ separated by distances $r_{12},r_{23},r_{31}$, the total potential energy is the sum of the potential energies of all pairs :\n\n\n[IMG]\n\n\n$\\mathrm{U}=\\mathrm{U}_{12}+\\mathrm{U}_{23}+\\mathrm{U}_{31}=-\\mathrm{G}\\left [\\frac{\\mathrm{m}_{1}\\mathrm{m}_{2}}{\\mathrm{r}_{12}}+\\frac{\\mathrm{m}_{2}\\mathrm{m}_{3}}{\\mathrm{r}_{23}}+\\frac{\\mathrm{m}_{3}\\mathrm{m}_{1}}{\\mathrm{r}_{31}}\\right ]$\n\nSince the masses are at the vertices of an equilateral triangle, all distances are equal ( $r_{12}=r_{23}=r_{31}=L$ ).\n\n$\\mathrm{U}=-\\frac{\\mathrm{G}}{\\mathrm{L}}(\\mathrm{m}_{1}\\mathrm{m}_{2}+\\mathrm{m}_{2}\\mathrm{m}_{3}+\\mathrm{m}_{3}\\mathrm{m}_{1})$\n\nGiven masses are,\n\n1. $\\mathrm{m}_{1}=200\\mathrm{kg}$\n\n2. $\\mathrm{m}_{2}=300\\mathrm{kg}$\n\n3. $\\mathrm{m}_{3}=400\\mathrm{kg}$\n\n$U=-\\frac{G}{L}(200\\times 300+300\\times 400+400\\times 200)=-\\frac{G\\left (2.6\\times 10^{5}\\right )}{L}$\n\nSo, the work done by external agent is,\n\n$\\mathrm{W}=\\mathrm{U}_{\\mathrm{f}}-\\mathrm{U}_{\\mathrm{i}}$\n\n$\\Rightarrow$ $\\mathrm{W}=\\left [-\\frac{\\mathrm{G}\\left (2.6\\times 10^{5}\\right )}{\\mathrm{L}_{\\mathrm{f}}}\\right ]-\\left [-\\frac{\\mathrm{G}\\left (2.6\\times 10^{5}\\right )}{\\mathrm{L}_{\\mathrm{i}}}\\right ]$\n\n$\\mathrm{W}=\\mathrm{G}\\left (2.6\\times 10^{5}\\right )\\left (\\frac{1}{\\mathrm{L}_{\\mathrm{i}}}-\\frac{1}{\\mathrm{L}_{\\mathrm{f}}}\\right )$\n\nThe initial side is $=\\mathrm{L}_{\\mathrm{i}}=20\\mathrm{m}$\n\nThe final side is $\\mathrm{L}_{\\mathrm{f}}=25\\mathrm{m}$\n\nPutting the values,\n\n$W=\\left (6.7\\times 10^{-11}\\right )\\times \\left (2.6\\times 10^{5}\\right )\\times \\left (\\frac{1}{20}-\\frac{1}{25}\\right )$\n\n$\\Rightarrow$ $W=\\left (6.7\\times 10^{-11}\\right )\\times \\left (2.6\\times 10^{5}\\right )\\times \\left (10^{-2}\\right )$\n\n$\\Rightarrow$ $\\mathrm{W}=1.742\\times 10^{-7}\\mathrm{J}$\n\nTherefore, the work done in this process is $1.74\\times 10^{-7}\\mathrm{J}$. \n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p6cv-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p4u2",
+  "subjectKey": "physics",
+  "chapterKey": "physics:current-electricity",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two resistors $2\\Omega$ and $3\\Omega$ are connected in the gaps of bridge as shown in figure. The null point is obtained with the contact of jockey at some point on wire $XY$. When an unknown resistor is connected in parallel with $3\\Omega$ resistor, the null point is shifted by 22.5 cm toward $Y$. The resistance of unknown resistor is $____$ $\\Omega$.\n\n[IMG]",
+  "options": [
+   "3",
+   "1",
+   "4",
+   "2"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 65,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "current electricity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A meter bridge works on the principle of a Wheatstone bridge. When the bridge is balanced (null point), no current flows through the galvanometer.\n\n\n[IMG]\n\n\nThe relationship between the resistors in the gaps ( $R_{1},R_{2}$ ) and the balancing lengths ( $l,100-l$ ) is:\n\n$\\frac{\\mathrm{R}_{1}}{\\mathrm{R}_{2}}=\\frac{\\mathrm{l}}{100-\\mathrm{l}}$\n\nHere, $\\mathrm{R}_{1}=2\\Omega ,\\mathrm{R}_{2}=3\\Omega$\n\nLength of the wire from the left end $(\\mathrm{X})$ to the null point is $\\mathrm{l}_{1}$ then remaining length of the wire (assuming standard 100 cm wire) is $(100-l_{1})$.\n\n$\\frac{2}{3}=\\frac{\\mathrm{l}_{1}}{100-\\mathrm{l}_{1}}$\n\n$\\Rightarrow$ $2(100-l_{1})=3l_{1}$\n\n$\\Rightarrow$ $200-2\\mathrm{l}_{1}=3\\mathrm{l}_{1}$\n\n$\\Rightarrow$ $200=5l_{1}\\Rightarrow l_{1}=40\\mathrm{cm}$\n\nSo, the initial null point is at 40 cm from X.\n\nWhen an unknown resistor X is connected in parallel with the $3\\Omega$ resistor in the right gap.\n\n\n[IMG]\n\n\nThe new right gap resistance is $\\mathrm{R}_{2}^{'}$.\n\nFor two resistors in parallel, the equivalent resistance is:\n\n$\\mathrm{R}_{2}^{'}=\\frac{3\\times \\mathrm{X}}{3+\\mathrm{X}}$\n\nThe null point shifts by 22.5 cm towards Y (the right end).\n\n$\\mathrm{l}_{2}=\\mathrm{l}_{1}+22.5\\mathrm{cm}$\n\n$\\Rightarrow$ $\\mathrm{l}_{2}=40+22.5=62.5\\mathrm{cm}$\n\nUsing balanced condition,\n\n$\\frac{\\mathrm{R}_{1}}{\\mathrm{R}_{2}^{'}}=\\frac{\\mathrm{l}_{2}}{100-\\mathrm{l}_{2}}$\n\n$\\Rightarrow$ $\\frac{2}{\\mathrm{R}_{2}^{'}}=\\frac{62.5}{100-62.5}$\n\n$\\Rightarrow$ $\\frac{2}{\\mathrm{R}_{2}^{'}}=\\frac{62.5}{37.5}=\\frac{5}{3}$\n\n$\\mathrm{R}_{2}^{'}=\\frac{6}{5}=1.2\\Omega$\n\nWe know that $R_{2}^{'}$ is the parallel combination of $3\\Omega$ and $X$.\n\n$1.2=\\frac{3X}{3+X}\\Rightarrow 1.2(3+X)=3X$\n\n$\\Rightarrow 3.6+1.2\\mathrm{X}=3\\mathrm{X}$\n\n $\\Rightarrow 3.6=3X-1.2X$\n\n$\\Rightarrow 3.6=1.8\\mathrm{X}$\n\n$\\Rightarrow \\mathrm{X}=2\\Omega$\n\nTherefore, the value of X is $2\\Omega$. Hence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p4u2-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p4u2-1.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p4u2-2.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p505",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "There are three concentric conducting spherical shells $A,B$ and $C$ of radii $a,b$ and $c$ respectively ( $c>b>a$ ) and they are charged with charge $q_{1},q_{2}$ and $q_{3}$ respectively. The potentials of the spheres $A,B$ and $C$ respectively, are :",
+  "options": [
+   "$\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}}{a}+\\frac{q_{2}}{b}+\\frac{q_{3}}{c}\\right ),\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}+q_{2}+q_{3}}{b}\\right ),\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}+q_{2}+q_{3}}{c}\\right )$",
+   "$\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}+q_{2}+q_{3}}{a}\\right ),\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}+q_{2}+q_{3}}{b}\\right ),\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}+q_{2}+q_{3}}{c}\\right )$",
+   "$\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}+q_{2}+q_{3}}{a}\\right ),\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}+q_{2}}{b}+\\frac{q_{3}}{c}\\right ),\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}}{a}+\\frac{q_{2}}{b}+\\frac{q_{3}}{c}\\right )$",
+   "$\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}}{a}+\\frac{q_{2}}{b}+\\frac{q_{3}}{c}\\right ),\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}+q_{2}}{b}+\\frac{q_{3}}{c}\\right ),\\frac{1}{4π𝜖_{\\mathrm{o}}}\\left (\\frac{q_{1}+q_{2}+q_{3}}{c}\\right )$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 66,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "A charged shell of radius $R$ and charge $Q$ gives potential $\\dfrac{1}{4π𝜖_{0}}\\dfrac{Q}{R}$ at every point on or inside it and $\\dfrac{1}{4π𝜖_{0}}\\dfrac{Q}{r}$ at a distance $r$ outside it. The potential of each shell is the sum of the contributions of all three shells.\n\n\n[IMG]\n\nShell A ($r=a$) lies on A and inside B and C:\n\n$V_{A}=\\dfrac{1}{4π𝜖_{0}}\\left (\\dfrac{q_{1}}{a}+\\dfrac{q_{2}}{b}+\\dfrac{q_{3}}{c}\\right )$\n\nShell B ($r=b$) lies outside A, on B and inside C:\n\n$V_{B}=\\dfrac{1}{4π𝜖_{0}}\\left (\\dfrac{q_{1}+q_{2}}{b}+\\dfrac{q_{3}}{c}\\right )$\n\nShell C ($r=c$) lies outside A and B and on C:\n\n$V_{C}=\\dfrac{1}{4π𝜖_{0}}\\left (\\dfrac{q_{1}+q_{2}+q_{3}}{c}\\right )$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p505-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p6ii",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Three charges $+2q,+3q$ and $-4q$ are situated at $(0,-3a),(2a,0)$ and $(-2a,0)$ respectively in the $xy$ plane. The resultant dipole moment about origin is $____$ .",
+  "options": [
+   "$2qa(7\\hat{i}-3\\hat{j})$",
+   "$2qa(3\\hat{j}-7\\hat{i})$",
+   "$2qa(3\\hat{i}-7\\hat{j})$",
+   "$2qa(3\\hat{j}-\\hat{i})$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 67,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For a system of discrete point charges $q_{i}$ located at positions $⃗{r}_{i}$, the electric dipole moment $⃗{P}$ with respect to the origin is defined as the vector sum of the product of each charge and its position vector.\n\n$\\vec{\\mathrm{P}}=\\sum _{\\mathrm{i}}\\mathrm{q}_{\\mathrm{i}}\\vec{\\mathrm{r}}_{\\mathrm{i}}$\n\n$\\Rightarrow$ $\\vec{\\mathrm{P}}=\\mathrm{q}_{1}\\vec{\\mathrm{r}}_{1}+\\mathrm{q}_{2}\\vec{\\mathrm{r}}_{2}+\\mathrm{q}_{3}\\vec{\\mathrm{r}}_{3}+\\cdots$\n\n\n[IMG]\n\n\nFor charge $1(\\mathrm{q}_{1})$ :\n\n$\\mathrm{q}_{1}=+2\\mathrm{q}$ and it is at coordinates $(0,-3\\mathrm{a})$\n\nSo, position vector with respect to origin is, $=\\vec{\\mathrm{r}}_{1}=0\\hat{ı}-3a\\hat{ȷ}=-3a\\hat{ȷ}$\n\nSo, electric dipole moment is, $⃗{p}_{1}=2q(-3a\\hat{ȷ})=-6aq\\hat{ȷ}$\n\nFor charge $2(\\mathrm{q}_{2})$ :\n\n$\\mathrm{q}_{2}=+3\\mathrm{q}$ and it is at coordinates $(2\\mathrm{a},0)$\n\nSo, position vector with respect to origin is, $=\\vec{\\mathrm{r}}_{2}=2a\\hat{\\mathrm{i}}-0\\hat{\\mathrm{j}}=2a\\hat{\\mathrm{i}}$\n\nSo, electric dipole moment is, $⃗{p}_{2}=3q(2a\\hat{\\mathrm{i}})=6aq\\hat{\\mathrm{i}}$\n\nFor charge $3(\\mathrm{q}_{3})$ :\n\n$\\mathrm{q}_{3}=-4\\mathrm{q}$ and it is at coordinates $(-2\\mathrm{a},0)$\n\nSo, position vector with respect to origin is, $=\\vec{\\mathrm{r}}_{3}=-2\\mathrm{a}\\hat{\\mathrm{i}}-0\\hat{\\mathrm{j}}=-2\\mathrm{a}\\hat{\\mathrm{i}}$\n\nSo, electric dipole moment is, $⃗{p}_{3}=-4q(-2a\\hat{i})=8aq\\hat{i}$\n\nSo, the net electric dipole moment is the sum of the individual moments :\n\n$⃗{P}=⃗{P}_{1}+⃗{P}_{2}+⃗{P}_{3}$\n\n$\\Rightarrow$ $\\vec{\\mathrm{P}}=(-6qa\\hat{ȷ})+(6qa\\hat{ı})+(8qa\\hat{ı})$\n\n$\\Rightarrow$ $\\vec{\\mathrm{P}}=14qa\\hat{ı}-6qa\\hat{ȷ}$\n\n$\\Rightarrow$ $\\vec{\\mathrm{P}}=2\\mathrm{qa}(7\\hat{ı}-3\\hat{ȷ})$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p6ii-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p38f",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A boy throws a ball into air at $45^{\\circ }$ from the horizontal to land it on a roof of a building of height $H$. If the ball attains maximum height in 2 s and lands on the building in 3 s after launch, then value of $H$ is $____$ m.\n\n$\\left (\\mathrm{g}=10\\mathrm{m}/\\mathrm{s}^{2}\\right )$",
+  "options": [
+   "20",
+   "25",
+   "10",
+   "15"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 68,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "motion in a plane"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let u be the initial velocity and $θ=45^{\\circ }$ be the angle of projection.\n\n\n[IMG]\n\n\nThe initial vertical velocity is $\\mathrm{u}_{\\mathrm{y}}=\\mathrm{u}\\sin θ$\n\nThe ball attains maximum height in $\\mathrm{t}_{\\max }=2\\mathrm{s}$.\n\nAt the maximum height, the vertical component of the velocity becomes zero $(\\mathrm{v}_{\\mathrm{y}}=0)$.\n\nUsing the first equation of motion $(\\mathrm{v}=\\mathrm{u}+\\mathrm{at})$ :\n\n$\\mathrm{v}_{\\mathrm{y}}=\\mathrm{u}_{\\mathrm{y}}-\\mathrm{gt}$\n\n$\\Rightarrow$ $0=\\mathrm{u}_{\\mathrm{y}}-(10)(2)\\Rightarrow \\mathrm{u}_{\\mathrm{y}}=20\\mathrm{m}/\\mathrm{s}$\n\nSo, the initial vertical velocity is $20\\mathrm{m}/\\mathrm{s}$.\n\nThe ball lands on the roof of the building at $\\mathrm{t}=3\\mathrm{s}$.\n\nThis means at $t=3$, the vertical displacement $(y)$ of the ball is equal to the height of the building $(H)$.\n\nUsing the second equation of motion $\\left (s=ut+\\frac{1}{2}at^{2}\\right )$ :\n\n$\\mathrm{y}=\\mathrm{u}_{\\mathrm{y}}\\mathrm{t}-\\frac{1}{2}\\mathrm{gt}^{2}$\n\nSubstituting the given values :\n\n1. $y=H$ (Height of the building)\n\n2. $\\mathrm{u}_{\\mathrm{y}}=20\\mathrm{m}/\\mathrm{s}$ (Calculated in Step 2)\n\n3. $\\mathrm{t}=3\\mathrm{s}$ (Given time of landing)\n\n$H=(20)(3)-\\frac{1}{2}(10)(3)^{2}=15\\mathrm{m}$\n\nTherefore, the height of the building is 15 m. Hence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p38f-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p3kb",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Density of water at $4^{\\circ }\\mathrm{C}$ and $20^{\\circ }\\mathrm{C}$ are $1000\\mathrm{kg}/\\mathrm{m}^{3}$ and $998\\mathrm{kg}/\\mathrm{m}^{3}$ respectively. The increase in internal energy of 4 kg of water when it is heated from $4^{\\circ }\\mathrm{C}$ to $20^{\\circ }\\mathrm{C}$ is $____$ J.\n\n(specific heat capacity of water $=4.2\\mathrm{kJ}/\\mathrm{kg}\\mathrm{K}$ and 1 atmospheric pressure $=10^{5}\\mathrm{Pa}$ )",
+  "options": [
+   "268799.2",
+   "315826.2",
+   "234699.2",
+   "258700.8"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 69,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Heat supplied to water:\n\n$Q=mc\\Delta T$\n\nHere, $m=4\\text{kg}$, $c=4.2\\times 10^{3}\\text{J kg}^{-1}\\text{K}^{-1}$, and $\\Delta T=20-4=16\\text{K}$.\n\nSo,\n\n$Q=4\\times 4.2\\times 10^{3}\\times 16=268800\\text{J}$\n\nSince heating is done at atmospheric pressure, water expands and does work:\n\n$W=P\\Delta V$\n\nInitial volume:\n\n$V_{1}=\\frac{m}{ρ_{1}}=\\frac{4}{1000}=0.004\\text{m}^{3}$\n\nFinal volume:\n\n$V_{2}=\\frac{m}{ρ_{2}}=\\frac{4}{998}=0.004008016\\text{m}^{3}$\n\nChange in volume:\n\n$\\Delta V=V_{2}-V_{1}=0.004008016-0.004=8.016\\times 10^{-6}\\text{m}^{3}$\n\nWork done:\n\n$W=10^{5}\\times 8.016\\times 10^{-6}=0.8016\\text{J}$\n\nBy first law of thermodynamics,\n\n$\\Delta U=Q-W=268800-0.8016=268799.1984\\text{J}\\approx 268799.2\\text{J}$\n\nCorrect option: A (268799.2 J)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml98p6k3",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Match the LIST-I with LIST-II\n\nList-I\nList-II\n\nA.\nMagnetic induction\nI.\n$MLT^{-2}A^{-2}$\n\nB.\nMagnetic flux\nII.\n$ML^{2}T^{-2}A^{-2}$\n\nC.\nMagnetic permeability\nIII.\n$ML^{0}T^{-2}A^{-1}$\n\nD.\nSelf inductance\nIV.\n$ML^{2}T^{-2}A^{-1}$\n\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-IV, C-II, D-I",
+   "A-I, B-III, C-IV, D-II",
+   "A-IV, B-III, C-I, D-II",
+   "A-III, B-IV, C-I, D-II"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 70,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The force on a current-carrying wire is given by $\\mathrm{F}=\\mathrm{BI}\\mathrm{l}\\sin θ$\n\n$\\mathrm{B}=\\frac{\\mathrm{F}}{\\mathrm{I}\\cdot \\mathrm{l}\\sin θ}$\n\nDimensions of force $[\\mathrm{F}]=\\left [\\mathrm{MLT}^{-2}\\right ]$\n\nDimensions of current $[\\mathrm{I}]=[\\mathrm{A}]$\n\nDimension of length $[\\mathrm{l}]=[\\mathrm{L}]$\n\nDimension of trigonometric function is $\\left [\\mathrm{M}^{0}\\mathrm{L}^{0}\\mathrm{T}^{0}\\right ]$, so $[\\sin θ]=\\left [\\mathrm{M}^{0}\\mathrm{L}^{0}\\mathrm{T}^{0}\\right ]$\n\nSo, the dimension of magnetic field is,\n\n$[\\mathrm{B}]=\\frac{\\left [\\mathrm{MLT}^{-2}\\right ]}{[\\mathrm{A}][\\mathrm{L}]}=\\left [\\mathrm{M}\\mathrm{L}^{1-1}\\mathrm{T}^{-2}\\mathrm{A}^{-1}\\right ]$\n\n$\\Rightarrow$ $[\\mathrm{B}]=\\left [\\mathrm{M}\\mathrm{L}^{0}\\mathrm{T}^{-2}\\mathrm{A}^{-1}\\right ]\\to (\\mathrm{III})$\n\nMagnetic flux is the product of magnetic field and area: $\\Phi =\\mathrm{B}\\cdot \\mathrm{A}$\n\nDimensions of magnetic induction $[\\mathrm{B}]=\\left [\\mathrm{M}\\mathrm{T}^{-2}\\mathrm{A}^{-1}\\right ]$\n\nDimensions of area $[\\mathrm{A}]=\\left [\\mathrm{L}^{2}\\right ]$\n\nSo, the dimension of magnetic flux is,\n\n$[\\Phi ]=\\left [\\mathrm{M}\\mathrm{T}^{-2}\\mathrm{A}^{-1}\\right ]\\times \\left [\\mathrm{L}^{2}\\right ]$\n\n$\\Rightarrow$ $[\\Phi ]=\\left [\\mathrm{M}\\mathrm{L}^{2}\\mathrm{T}^{-2}\\mathrm{A}^{-1}\\right ]\\to (\\mathrm{IV})$\n\nFrom Ampere's Law or the force between two parallel wires : \n\n \n\n$\\mathrm{F}=\\frac{μ\\mathrm{I}_{1}\\mathrm{I}_{2}\\mathrm{l}}{2π\\mathrm{r}}$.\n\n$\\Rightarrowμ=\\frac{\\mathrm{F}\\cdot 2π\\mathrm{r}}{\\mathrm{I}_{1}\\mathrm{I}_{2}\\cdot \\mathrm{l}}$\n\nDimensions of Force $[\\mathrm{F}]=\\left [\\mathrm{MLT}^{-2}\\right ]$\n\nDimensions of distance $[\\mathrm{r}]=[\\mathrm{L}]$\n\nDimensions of 2 and $π$ is $\\left [\\mathrm{M}^{0}\\mathrm{L}^{0}\\mathrm{T}^{0}\\right ]$\n\nDimensions of current $[\\mathrm{I}]=[\\mathrm{A}]$\n\nDimensions of length $[\\mathrm{l}]=[\\mathrm{L}]$\n\nSo, the dimensions of magnetic permeability is,\n\n$[μ]=\\frac{\\left [\\mathrm{MLT}^{-2}\\right ][\\mathrm{L}]}{[\\mathrm{A}][\\mathrm{A}][\\mathrm{L}]}$\n\n$\\Rightarrow$ $[μ]=\\frac{\\left [\\mathrm{ML}^{2}\\mathrm{T}^{-2}\\right ]}{[\\mathrm{A}^{2}][\\mathrm{L}]}=\\left [\\mathrm{ML}^{2-1}\\mathrm{T}^{-2}\\mathrm{A}^{-2}\\right ]$\n\n$\\Rightarrow$ $[μ]=\\left [\\mathrm{M}\\mathrm{L}\\mathrm{T}^{-2}\\mathrm{A}^{-2}\\right ]\\to (\\mathrm{I})$\n\nThe energy stored in an inductor is $\\mathrm{U}=\\frac{1}{2}\\mathrm{LI}^{2}$.\n\n$\\mathrm{L}=\\frac{2\\mathrm{U}}{\\mathrm{I}^{2}}$\n\nDimensions of energy $[\\mathrm{U}]=\\left [\\mathrm{ML}^{2}\\mathrm{T}^{-2}\\right ]$\n\nDimensions of current $[\\mathrm{I}]=[\\mathrm{A}]$\n\nSo, the dimensions of self-inductance is,\n\n$[\\mathrm{L}]=\\frac{\\left [\\mathrm{ML}^{2}\\mathrm{T}^{-2}\\right ]}{[\\mathrm{A}^{2}]}$\n\n$\\Rightarrow$ $[\\mathrm{L}]=\\left [\\mathrm{M}\\mathrm{L}^{2}\\mathrm{T}^{-2}\\mathrm{A}^{-2}\\right ]\\to (\\mathrm{II})$\n\nHence, the correct match is A-III, B-IV, C-I, D-II. Therefore, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml98p60i",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A short bar magnet placed with its axis at $30^{\\circ }$ with an external field of 800 Gauss, experiences a torque of $0.016\\mathrm{N}.\\mathrm{m}$. The work done in moving it from most stable to most unstable position is $α\\times 10^{-3}\\mathrm{J}$. The value of $α$ is $____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 64.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 72,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetic properties of matter"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nWhen a magnetic dipole like a bar magnet is placed in a magnetic field (B) at an angle ( $θ$ ), it experiences a torque.\n\n$τ=\\mathrm{M}\\mathrm{B}\\sin θ$\n\nWhere, $\\mathrm{M}=$ magnetic moment of the magnet, $\\mathrm{B}=$ magnetic field strength, $θ=$ Angle between the magnet's axis and the field.\n\nThe magnetic field is given in Gauss. We must convert it to the standard SI unit, Tesla (T).\n\n1 Tesla $=10000$ Gauss $\\left (10^{4}\\mathrm{G}\\right )$\n\nSo, $\\mathrm{B}=800$ Gauss $=800\\times 10^{-4}\\mathrm{T}=0.08\\mathrm{T}$\n\nUsing $τ=\\mathrm{MB}\\sin θ$ :\n\n$0.016=M\\times (0.08)\\times \\sin (30^{\\circ })$\n\n$\\Rightarrow$ $0.016=\\mathrm{M}\\times 0.08\\times 0.5$\n\n$\\Rightarrow$ $\\mathrm{M}=\\frac{0.016}{0.04}$\n\n$\\Rightarrow$ $\\mathrm{M}=0.4\\mathrm{A}\\cdot \\mathrm{m}^{2}$\n\nThe potential energy of the magnetic dipole is given as $\\mathrm{U}=-\\mathrm{MB}\\cos θ$\n\nThe magnet is aligned with the magnetic field, i.e., $θ_{1}=0^{\\circ }$. The potential energy is minimum.\n\nThe magnet is aligned against (opposite to) the magnetic field, i.e., $θ_{2}=180^{\\circ }$. The potential energy is maximum.\n\nThe work done to rotate a magnet from an initial angle $θ_{1}$ to a final angle $θ_{2}$ is equal to the change in its potential energy.\n\n$\\mathrm{W}=\\mathrm{MB}(\\cos θ_{1}-\\cos θ_{2})$\n\n1. $θ_{1}=0^{\\circ }$\n\n2. $θ_{2}=180^{\\circ }$\n\nSo, the work done is,\n\n$\\mathrm{W}=(0.4)\\times (0.08)\\times [\\cos (0^{\\circ })-\\cos (180^{\\circ })]$\n\n$\\Rightarrow$ $\\mathrm{W}=0.032\\times [1-(-1)]=0.032\\times 2$\n\n$\\Rightarrow$ $\\mathrm{W}=0.064\\mathrm{J}=64\\times 10^{-3}\\mathrm{J}=α\\times 10^{-3}\\mathrm{J}$\n\n$\\Rightarrow$ $α=64$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p60i-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p413",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electronic-devices",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A voltage regulating circuit consisting of Zener diode, having break-down voltage of 10 V and maximum power dissipation of 0.4 W , is operated at 15 V . The approximate value of protective resistance in this circuit is $____$ $\\Omega$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 125.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 73,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electronic devices"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nThe series protective resistance limits the current flowing through the Zener diode so that it does not exceed the power rating.\n\nThe Zener diode maintains a constant voltage $(V_{z})$ across load resistance $R_{L}$. The excess voltage from the source ( $V_{\\text{in}}-V_{z}$ ) is dropped across the resistor $R_{s}$.\n\nThe Zener breakdown voltage $\\mathrm{V}_{\\mathrm{Z}}=10\\mathrm{V}$\n\nMaximum power dissipation $\\mathrm{P}_{\\text{\\max }}=0.4\\mathrm{W}$\n\nUsing the power formula $\\mathrm{P}=\\mathrm{V}\\times \\mathrm{I}$.\n\n$I_{\\max }=\\frac{P_{\\max }}{V_{z}}$\n\n$\\Rightarrow$ $I_{\\max }=\\frac{0.4\\mathrm{W}}{10\\mathrm{V}}=0.04\\mathrm{A}$\n\nThe resistor is connected in series with the Zener diode. According to Kirchhoff's Voltage Law (KVL), the sum of voltage drops must equal the supply voltage.\n\n$V_{in}=V_{Rs}+V_{z}$\n\n$\\Rightarrow$ $V_{Rs}=V_{in}-V_{z}$\n\n$\\Rightarrow$ $V_{Rs}=15\\mathrm{V}-10\\mathrm{V}=5\\mathrm{V}$\n\nTo protect the diode, we choose the resistance such that the current flowing through it does not exceed $\\mathrm{I}_{\\max }$.\n\n$\\mathrm{R}_{\\mathrm{s}}=\\frac{\\mathrm{V}_{\\mathrm{Rs}}}{\\mathrm{I}_{\\max }}$\n\n$\\Rightarrow$ $\\mathrm{R}_{\\mathrm{s}}=\\frac{5}{0.04}\\Omega =125\\Omega$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p413-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml98p566",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Sixty four rain drops of radius 1 mm each falling down with a terminal velocity of $10\\mathrm{cm}/\\mathrm{s}$ coalesce to form a bigger drop. The terminal velocity of bigger drop is\n\n$____$ $\\mathrm{cm}/\\mathrm{s}$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 160.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 74,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 24th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "When a spherical drop falls through a viscous medium (like air), it reaches a constant speed called terminal velocity $(\\mathrm{v}_{\\mathrm{t}})$ when the net force on it is zero.\n\nThe forces involved are :\n\n\n[IMG]\n\n\nWeight ( W ) is acting downwards, $\\mathrm{W}=\\mathrm{mg}=$ Volume $\\times ρ\\times \\mathrm{g}$.\n\nBuoyant force ( $\\mathrm{F}_{\\mathrm{b}}$ ) is acting upwards.\n\nViscous drag force ( $\\mathrm{F}_{\\mathrm{v}}$ ) is acting upwards\n\nAccording to Stokes' Law $\\mathrm{F}_{\\mathrm{v}}=6πη\\mathrm{r}$ v.\n\nAt equilibrium, the net force must be zero.\n\n$\\mathrm{W}-\\mathrm{F}_{\\mathrm{b}}=\\mathrm{F}_{\\mathrm{v}}$\n\nThis leads to the standard formula for terminal velocity :\n\n$v_{t}=\\frac{2r^{2}g(ρ-σ)}{9η}$\n\nWhere :\n\n$\\mathrm{r}=$ Radius of the drop\n\n$ρ=$ Density of the drop (water)\n\n$σ=$ Density of the medium (air)\n\n$η=$ Coefficient of viscosity\n\n$\\mathrm{g}=$ Acceleration due to gravity\n\nSince $\\mathrm{g},ρ,σ$, and $η$ are constants for both the small and big drops, the terminal velocity is directly proportional to the square of the radius.\n\n$v_{t}\\propto r^{2}$\n\nWhen 64 small drops combine to form one big drop, the total volume remains conserved.\n\nLet r be the radius of a small drop.\n\nLet R be the radius of the big drop.\n\nLet $\\mathrm{n}=64$ be the number of drops.\n\nVolume of Big Drop $=\\mathrm{n}\\times$ (Volume of Small Drop)\n\n$\\Rightarrow$ $\\frac{4}{3}π\\mathrm{R}^{3}=\\mathrm{n}\\times \\frac{4}{3}π\\mathrm{r}^{3}$\n\n$\\Rightarrow$ $\\mathrm{R}^{3}=\\mathrm{n}\\cdot \\mathrm{r}^{3}$\n\n$\\Rightarrow$ $\\mathrm{R}=\\mathrm{n}^{1/3}\\cdot \\mathrm{r}$\n\nSubstituting $\\mathrm{n}=64$ :\n\n$\\mathrm{R}=64^{1/3}\\cdot \\mathrm{r}$\n\n$\\Rightarrow$ $\\mathrm{R}=4\\mathrm{r}$\n\nSo, the ratio of the terminal velocities for big and small drop using the fact that terminal velocity is proportional to square of radius,\n\n$\\frac{\\mathrm{v}_{\\text{big}}}{\\mathrm{v}_{\\text{small}}}=\\frac{\\mathrm{R}^{2}}{\\mathrm{r}^{2}}=\\left (\\frac{\\mathrm{R}}{\\mathrm{r}}\\right )^{2}=\\left (\\frac{4\\mathrm{r}}{4}\\right )^{2}=16$\n\nGiven $\\mathrm{v}_{\\text{small}}=10\\mathrm{cm}/\\mathrm{s}$.\n\n$v_{\\text{big}}=16\\times v_{\\text{small}}$\n\n$\\Rightarrow$ $v_{\\mathrm{big}}=16\\times 10\\mathrm{cm}/\\mathrm{s}$\n\n$\\Rightarrow$ $\\mathrm{v}_{\\mathrm{big}}=160\\mathrm{cm}/\\mathrm{s}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 24th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-24th-january-morning-shift/ml98p566-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 24th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

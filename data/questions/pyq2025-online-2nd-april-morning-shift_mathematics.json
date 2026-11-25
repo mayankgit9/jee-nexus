@@ -1,0 +1,1071 @@
+[
+ {
+  "publicId": "PYQ-2025-m9dunndi",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{A}=\\left [\\begin{array}{ll} α & -1 \\\\ 6 & β \\end{array}\\right ],α>0$, such that $\\det (\\mathrm{A})=0$ and $α+β=1$. If I denotes $2\\times 2$ identity matrix, then the matrix $(I+A)^{8}$ is :",
+  "options": [
+   "$\\left [\\begin{array}{ll} 257 & -64 \\\\ 514 & -127 \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} 766 & -255 \\\\ 1530 & -509 \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} 1025 & -511 \\\\ 2024 & -1024 \\end{array}\\right ]$",
+   "$\\left [\\begin{array}{ll} 4 & -1 \\\\ 6 & -1 \\end{array}\\right ]$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $|A|=0\\Rightarrow αβ-(-6)=0\\Rightarrow αβ=-6$ and $α+β=1\\Rightarrow α,β$ are roots of the equation\n\n$\\begin{array}{lllll} x^{2}-x-6=0\\Rightarrow x=3,-2.\\text{Since}α>0 \\\\ \\Rightarrow α=3,β=-2 \\\\ \\Rightarrow A=\\left [\\begin{array}{ll} 3 & -1 \\\\ 6 & -2 \\end{array}\\right ]\\Rightarrow I+A=\\left [\\begin{array}{ll} 4 & -1 \\\\ 6 & -1 \\end{array}\\right ] \\\\ (I+A)^{2}=\\left [\\begin{array}{ll} 10 & -3 \\\\ 18 & -5 \\end{array}\\right ]\\Rightarrow (I+A)^{4}=\\left [\\begin{array}{ll} 46 & -15 \\\\ 90 & -29 \\end{array}\\right ] \\\\ \\Rightarrow (I+A)^{8}=\\left [\\begin{array}{ll} 766 & -255 \\\\ 1530 & -509 \\end{array}\\right ] \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunnyx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the vertices Q and R of the triangle PQR lie on the line $\\frac{x+3}{5}=\\frac{y-1}{2}=\\frac{z+4}{3},\\mathrm{QR}=5$ and the coordinates of the point $P$ be $(0,2,3)$. If the area of the triangle $PQR$ is $\\frac{m}{n}$ then :",
+  "options": [
+   "$2\\mathrm{m}-5\\sqrt{21}\\mathrm{n}=0$",
+   "$\\mathrm{m}-5\\sqrt{21}\\mathrm{n}=0$",
+   "$5\\mathrm{m}-21\\sqrt{2}\\mathrm{n}=0$",
+   "$5\\mathrm{m}-2\\sqrt{21}\\mathrm{n}=0$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} H:(5λ-3,2λ+1,3λ-4) \\\\ <\\mathrm{DR}\\text{of}\\mathrm{PH}> \\\\ <5λ-3,2λ-1,3λ-7> \\\\ PH\\leftarrow \\cdot QR\\leftarrow =0 \\\\ \\Rightarrow (5λ-3)5+(2λ-1)2+(3λ-7)3=0 \\\\ \\Rightarrow 25λ-15+4λ-2+9λ-21=0 \\\\ \\Rightarrow 38λ=38 \\\\ \\Rightarrow λ=1 \\\\ \\therefore \\quad H(2,3,-1) \\\\ PH=\\sqrt{4+1+16}=\\sqrt{21} \\\\ \\therefore \\quad \\text{Area}=\\dfrac{1}{2}\\times PH\\text{QR} \\\\ =\\dfrac{1}{2}\\times \\sqrt{21}\\times 5=\\dfrac{5\\sqrt{21}}{2}=\\dfrac{m}{n} \\\\ 2m-5\\sqrt{21}n=0 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-morning-shift/m9dunnyx-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9dunr5t",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a\\in R$ and $A$ be a matrix of order $3\\times 3$ such that $\\det (A)=-4$ and $A+I=\\left [\\begin{array}{lll} 1 & a & 1 \\\\ 2 & 1 & 0 \\\\ a & 1 & 2 \\end{array}\\right ]$, where $I$ is the identity matrix of order $3\\times 3$. If $\\det ((a+1)\\mathrm{adj}((a-1)A))$ is $2^{\\mathrm{m}}3^{\\mathrm{n}},\\mathrm{m}$, $\\mathrm{n}\\in \\{0,1,2,\\ldots ,20\\}$, then $\\mathrm{m}+\\mathrm{n}$ is equal to :",
+  "options": [
+   "14",
+   "17",
+   "15",
+   "16"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given\n\n$A+I=\\left [\\begin{array}{lll} 1 & a & 1 \\\\ 2 & 1 & 0 \\\\ a & 1 & 2 \\end{array}\\right ]$\n\nSo,\n\n$A=\\left [\\begin{array}{lll} 1-1 & a & 1 \\\\ 2 & 1-1 & 0 \\\\ a & 1 & 2-1 \\end{array}\\right ]=\\left [\\begin{array}{lll} 0 & a & 1 \\\\ 2 & 0 & 0 \\\\ a & 1 & 1 \\end{array}\\right ]$\n\n1) Find $a$ using $\\det (A)=-4$\nCompute $\\det (A)$ by expanding along the first row:\n\n$\\det (A)=0\\cdot C_{11}+a\\cdot C_{12}+1\\cdot C_{13}$\n\nNow,\n\n$C_{12}=(-1)^{1+2}\\left |\\begin{array}{ll} 2 & 0 \\\\ a & 1 \\end{array}\\right |=-(2\\cdot 1-0\\cdot a)=-2$\n\n$C_{13}=(-1)^{1+3}\\left |\\begin{array}{ll} 2 & 0 \\\\ a & 1 \\end{array}\\right |=+(2\\cdot 1-0\\cdot a)=2$\n\nSo,\n\n$\\det (A)=a(-2)+1(2)=2-2a=2(1-a)$\n\nGiven $\\det (A)=-4$:\n\n$2(1-a)=-4⟹1-a=-2⟹a=3$\n\n2) Evaluate $\\det ((a+1)\\mathrm{adj}((a-1)A))$\nUse properties for a $3\\times 3$ matrix:\n\n$\\det (kM)=k^{3}\\det (M)$\n\n$\\det (\\mathrm{adj}(M))=(\\det M)^{3-1}=(\\det M)^{2}$\n\n$\\det ((a-1)A)=(a-1)^{3}\\det (A)$\n\nLet $B=(a-1)A$. Then\n\n$\\det ((a+1)\\mathrm{adj}(B))=(a+1)^{3}\\det (\\mathrm{adj}(B))=(a+1)^{3}(\\det B)^{2}$\n\nNow,\n\n$\\det B=((a-1)^{3})(\\det A)=(a-1)^{3}(-4)$\n\nSo,\n\n$\\det ((a+1)\\mathrm{adj}((a-1)A))=(a+1)^{3}\\left [(-4)(a-1)^{3}\\right ]^{2}=(a+1)^{3}\\cdot 16\\cdot (a-1)^{6}$\n\nPut $a=3$:\n\n$(a+1)^{3}=4^{3}=2^{6},(a-1)^{6}=2^{6},16=2^{4}$\n\nHence,\n\n$\\text{Determinant}=2^{6}\\cdot 2^{4}\\cdot 2^{6}=2^{16}=2^{m}3^{n}$\n\nSo $m=16,n=0⟹m+n=16$.\n\nAnswer: 16 (Option D)",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunngg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $θ\\in [-2π,2π]$, then the number of solutions of $2\\sqrt{2}\\cos ^{2}θ+(2-\\sqrt{6})\\cos θ-\\sqrt{3}=0$, is equal to:",
+  "options": [
+   "8",
+   "6",
+   "10",
+   "12"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric functions and equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} 2\\sqrt{2}\\cos ^{2}θ+(2-\\sqrt{6})\\cos θ-\\sqrt{3}=0 \\\\ 2\\sqrt{2}\\cos ^{2}θ+2\\cos θ-\\sqrt{6}\\cos θ-\\sqrt{3}=0 \\\\ (2\\cos θ-\\sqrt{3})(\\sqrt{2}\\cos θ+1)=0 \\\\ \\Rightarrow \\cos θ=\\dfrac{\\sqrt{3}}{2}\\text{or}\\cos θ=\\dfrac{-1}{\\sqrt{2}} \\\\ θ=\\left \\{\\dfrac{-11π}{6},\\dfrac{-5π}{4},\\dfrac{-3π}{4},\\dfrac{-π}{6},\\dfrac{π}{6},\\dfrac{3π}{4},\\dfrac{5π}{4},\\dfrac{11π}{6}\\right \\} \\\\ \\Rightarrow 8\\text{(solution)} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunrcc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $S$ and $S^{'}$ are the foci of the ellipse $\\frac{x^{2}}{18}+\\frac{y^{2}}{9}=1$ and P be a point on the ellipse, then $\\min (SP\\cdot S^{'}P)+\\max (SP\\cdot S^{'}P)$ is equal to :",
+  "options": [
+   "$3(6+\\sqrt{2})$",
+   "$3(1+\\sqrt{2})$",
+   "27",
+   "9"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Here $a^{2}=18$ and $b^{2}=9$, so $a=3\\sqrt{2}$ and $e=\\sqrt{1-\\dfrac{9}{18}}=\\dfrac{1}{\\sqrt{2}}$; the foci are $S(3,0)$ and $S^{'}(-3,0)$.\n\n\n[IMG]\n\nFor $P(x,y)$ on the ellipse the focal distances are $SP=a-ex$ and $S^{'}P=a+ex$ (so $SP+S^{'}P=2a$), hence\n\n$SP\\cdot S^{'}P=a^{2}-e^{2}x^{2}=18-\\dfrac{x^{2}}{2},-3\\sqrt{2}\\leq x\\leq 3\\sqrt{2}$\n\nThe maximum is at $x=0$ (ends of the minor axis): $18$.\n\nThe minimum is at $x^{2}=18$ (ends of the major axis): $18-9=9$.\n\n$\\min (SP\\cdot S^{'}P)+\\max (SP\\cdot S^{'}P)=9+18=27$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-morning-shift/m9dunrcc-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9dunpit",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the focal chord PQ of the parabola $y^{2}=4x$ make an angle of $60^{\\circ }$ with the positive $x$ axis, where P lies in the first quadrant. If the circle, whose one diameter is PS, S being the focus of the parabola, touches the $y$-axis at the point $(0,α)$, then $5α^{2}$ is equal to:",
+  "options": [
+   "15",
+   "25",
+   "20",
+   "30"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $y^{2}=4x$, $a=1$ and the focus is $S(1,0)$. Let $P(t^{2},2t)$ with $t>0$, since $P$ is in the first quadrant.\n\nThe focal chord makes $60^{\\circ }$ with the positive $x$-axis, so the slope of $PS$ is $\\sqrt{3}$:\n\n$\\dfrac{2t}{t^{2}-1}=\\sqrt{3}\\Rightarrow \\sqrt{3}t^{2}-2t-\\sqrt{3}=0\\Rightarrow (t-\\sqrt{3})(\\sqrt{3}t+1)=0$\n\nWith $t>0$, $t=\\sqrt{3}$ and $P(3,2\\sqrt{3})$.\n\nThe circle with diameter $PS$ has centre $\\left (\\dfrac{3+1}{2},\\dfrac{2\\sqrt{3}+0}{2}\\right )=(2,\\sqrt{3})$ and radius $\\dfrac{PS}{2}=\\dfrac{1+3}{2}=2$, since the focal distance $PS=1+t^{2}=4$.\n\nThe distance of the centre from the $y$-axis is $2$, equal to the radius, so the circle touches the $y$-axis at the foot of the perpendicular from the centre, $(0,\\sqrt{3})$.\n\nSo $α=\\sqrt{3}$ and $5α^{2}=15$.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9duno8j",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the function $f(x)=2x^{3}-9ax^{2}+12\\mathrm{a}^{2}x+1$, where $\\mathrm{a}>0$, attains its local maximum and local minimum values at p and q , respectively, such that $\\mathrm{p}^{2}=\\mathrm{q}$, then $f(3)$ is equal to :",
+  "options": [
+   "55",
+   "37",
+   "10",
+   "23"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the value of $f(3)$ for the function $f(x)=2x^{3}-9ax^{2}+12a^{2}x+1$, where $a>0$, we follow these steps:\n\nFirst, find the critical points by setting the derivative equal to zero:\n\n$f^{'}(x)=6x^{2}-18ax+12a^{2}=0$\n\nFactoring gives:\n\n$6(x-a)(x-2a)=0$\n\nThus, the critical points are $x=a$ and $x=2a$.\n\n$x=a$ corresponds to a local maximum.\n\n$x=2a$ corresponds to a local minimum.\n\nAccording to the problem, $p^{2}=q$. Substituting $p=a$ and $q=2a$ gives:\n\n$a^{2}=2a$\n\nSolving for $a$ gives:\n\n$a(a-2)=0$\n\nSince $a>0$, we have $a=2$.\n\nNow, substitute $a=2$ back into the function:\n\n$f(x)=2x^{3}-18x^{2}+48x+1$\n\nTo find $f(3)$:\n\n$f(3)=2(3)^{3}-18(3)^{2}+48(3)+1$\n\nCalculate each term:\n\n$2(3)^{3}=54$\n\n$18(3)^{2}=162$\n\n$48(3)=144$\n\nThus, \n\n$f(3)=54-162+144+1=37$\n\nSo, $f(3)=37$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9duns1f",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $ABCD$ be a tetrahedron such that the edges $AB,AC$ and $AD$ are mutually perpendicular. Let the areas of the triangles $\\mathrm{ABC},\\mathrm{ACD}$ and ADB be 5,6 and 7 square units respectively. Then the area (in square units) of the $△BCD$ is equal to :",
+  "options": [
+   "$\\sqrt{110}$",
+   "12",
+   "$\\sqrt{340}$",
+   "$7\\sqrt{3}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\mathrm{ar}(△ABC)=5 \\\\ \\dfrac{1}{2}\\times bc=5 \\\\ \\Rightarrow bc=10 \\\\ \\mathrm{ar}(△ACD)=6 \\\\ \\dfrac{1}{2}\\times cd=6 \\\\ \\Rightarrow cd=12 \\\\ \\mathrm{ar}(△ABD)=7 \\\\ bd=14 \\end{array}$\n\n$\\begin{array}{l} \\mathrm{area}(△BCD)=\\dfrac{1}{2}|BC\\leftarrow \\times BD\\leftarrow | \\\\ BC\\leftarrow =<-b,c,0> \\\\ BD\\leftarrow =<-b,0,d> \\\\ |BC\\leftarrow \\times BD\\leftarrow |=\\sqrt{c^{2}d^{2}+b^{2}d^{2}+b^{2}c^{2}} \\\\ =\\sqrt{12^{2}+14^{2}+10^{2}} \\\\ =\\sqrt{440} \\\\ \\mathrm{ar}(△BCD)=\\sqrt{110} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-morning-shift/m9duns1f-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9dunqo8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $z$ be a complex number such that $|z|=1$. If $\\frac{2+\\mathrm{k}^{2}z}{\\mathrm{k}+\\bar{z}}=\\mathrm{k}z,\\mathrm{k}\\in 𝐑$, then the maximum distance of $\\mathrm{k}+i\\mathrm{k}^{2}$ from the circle $|z-(1+2i)|=1$ is :",
+  "options": [
+   "$\\sqrt{5}+1$",
+   "3",
+   "$\\sqrt{3}+1$",
+   "2"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\begin{array}{l} \\dfrac{2+k^{2}z}{k+\\bar{z}}=kz \\\\ \\Rightarrow 2+k^{2}z=k^{2}z+kz\\bar{z} \\\\ \\Rightarrow 2=k|z|^{2}\\left (z\\bar{z}=|z|^{2},|z|=1\\right ) \\\\ \\Rightarrow 2=k \\\\ \\therefore k+k^{2}i=2+4i \\end{array} \\\\ \\therefore \\quad \\text{The maximum distance is} \\\\ \\begin{array}{l} =\\sqrt{(4-2)^{2}+(2-1)^{2}}+\\text{radius} \\\\ =\\sqrt{(2)^{2}+(1)^{2}}+1 \\\\ =\\sqrt{5}+1 \\end{array} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-morning-shift/m9dunqo8-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9dunpl9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let one focus of the hyperbola $\\mathrm{H}:\\frac{x^{2}}{\\mathrm{a}^{2}}-\\frac{y^{2}}{\\mathrm{b}^{2}}=1$ be at $(\\sqrt{10},0)$ and the corresponding directrix be $x=\\frac{9}{\\sqrt{10}}$. If $e$ and $l$ respectively are the eccentricity and the length of the latus rectum of H , then $9\\left (e^{2}+l\\right )$ is equal to :",
+  "options": [
+   "12",
+   "14",
+   "15",
+   "16"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$\n\nDirectrix : $x=\\frac{9}{\\sqrt{10}}=\\frac{a}{e}\\text{..... (i)}$\n\nFocus : $(\\sqrt{10},0)\\equiv (ae,0)$\n\n$ae=\\sqrt{10}\\text{..... (ii)}$\n\n(i) $\\times$ (ii)\n\n$\\Rightarrow a^{2}=9\\Rightarrow a=3$\n\nSubstitute in (ii)\n\n$e=\\frac{\\sqrt{10}}{3}$\n\n$\\begin{array}{l} \\text{Now}e^{2}=1+\\dfrac{b^{2}}{a^{2}} \\\\ \\dfrac{10}{9}=1+\\dfrac{b^{2}}{a} \\\\ \\Rightarrow b=1 \\\\ I=\\dfrac{2b^{2}}{a}=\\dfrac{2\\times 1}{3}=\\dfrac{2}{3} \\\\ a\\left [e^{2}+l\\right ]=9\\left [\\dfrac{10}{9}+\\dfrac{2}{3}\\right ]=10+6 \\\\ =16 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9duno1a",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The largest $\\mathrm{n}\\in 𝐍$ such that $3^{\\mathrm{n}}$ divides 50 ! is :",
+  "options": [
+   "22",
+   "20",
+   "21",
+   "23"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} V_{3}(50!)=\\left [\\dfrac{50}{3}\\right ]+\\left [\\dfrac{50}{9}\\right ]+\\left [\\dfrac{50}{27}\\right ]+\\left [\\dfrac{50}{81}\\right ]+\\ldots +\\left [\\dfrac{50}{3^{n}}\\right ] \\\\ =16+5+1+0+0+0\\ldots =22 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunnj6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{P}_{\\mathrm{n}}=α^{\\mathrm{n}}+β^{\\mathrm{n}},\\mathrm{n}\\in \\mathrm{N}$. If $\\mathrm{P}_{10}=123,\\mathrm{P}_{9}=76,\\mathrm{P}_{8}=47$ and $\\mathrm{P}_{1}=1$, then the quadratic equation having roots $\\frac{1}{α}$ and $\\frac{1}{β}$ is :",
+  "options": [
+   "$x^{2}+x-1=0$",
+   "$x^{2}-x+1=0$",
+   "$x^{2}+x+1=0$",
+   "$x^{2}-x-1=0$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given\n\n$P_{n}=α^{n}+β^{n}$\n\nand\n\n$P_{10}=123,P_{9}=76,P_{8}=47,P_{1}=1.$\n\nWe want the quadratic equation whose roots are $\\dfrac{1}{α}$ and $\\dfrac{1}{β}$.\n\nFor numbers $α,β$, the sequence $P_{n}=α^{n}+β^{n}$ satisfies\n\n$P_{n}=(α+β)P_{n-1}-(αβ)P_{n-2}.$\n\nNow use the given values:\n\n$P_{10}=(α+β)P_{9}-(αβ)P_{8}.$\n\nSo,\n\n$123=(α+β)\\cdot 76-(αβ)\\cdot 47.$\n\nAlso, since $P_{1}=α+β=1$, we get\n\n$123=76-47αβ.$\n\nThus,\n\n$47=-47αβ,$\n\nso\n\n$αβ=-1.$\n\nNow the roots needed are $\\dfrac{1}{α}$ and $\\dfrac{1}{β}$.\n\nTheir sum is\n\n$\\frac{1}{α}+\\frac{1}{β}=\\frac{α+β}{αβ}=\\frac{1}{-1}=-1.$\n\nTheir product is\n\n$\\frac{1}{αβ}=\\frac{1}{-1}=-1.$\n\nA quadratic equation with roots $r_{1},r_{2}$ is\n\n$x^{2}-(r_{1}+r_{2})x+r_{1}r_{2}=0.$\n\nHere,\n\n$x^{2}-(-1)x+(-1)=0,$\n\nwhich gives\n\n$x^{2}+x-1=0.$\n\nSo the correct option is:\n\n$x^{2}+x-1=0$\n\nOption A.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunpnr",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\vec{\\mathrm{a}}$ is a nonzero vector such that its projections on the vectors $2\\hat{i}-\\hat{j}+2\\hat{k},\\hat{i}+2\\hat{j}-2\\hat{k}$ and $\\hat{k}$ are equal, then a unit vector along $\\vec{\\mathrm{a}}$ is :",
+  "options": [
+   "$\\frac{1}{\\sqrt{155}}(-7\\hat{i}+9\\hat{j}+5\\hat{k})$",
+   "$\\frac{1}{\\sqrt{155}}(-7\\hat{i}+9\\hat{j}-5\\hat{k})$",
+   "$\\frac{1}{\\sqrt{155}}(7\\hat{i}+9\\hat{j}-5\\hat{k})$",
+   "$\\frac{1}{\\sqrt{155}}(7\\hat{i}+9\\hat{j}+5\\hat{k})$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The projection of $⃗{a}$ on $⃗{v}$ is $\\dfrac{⃗{a}\\cdot ⃗{v}}{|⃗{v}|}$. Here $|2\\hat{i}-\\hat{j}+2\\hat{k}|=|\\hat{i}+2\\hat{j}-2\\hat{k}|=3$ and $|\\hat{k}|=1$.\n\nWith $⃗{a}=x\\hat{i}+y\\hat{j}+z\\hat{k}$, equal projections give\n\n$\\dfrac{2x-y+2z}{3}=z=\\dfrac{x+2y-2z}{3}$\n\nThe first equality gives $2x-y+2z=3z$, so $y=2x-z$. The second gives $x+2y-2z=3z$, so $x+2y=5z$.\n\nSubstituting: $x+4x-2z=5z\\Rightarrow x=\\dfrac{7z}{5}$, and then $y=\\dfrac{14z}{5}-z=\\dfrac{9z}{5}$.\n\nSo $⃗{a}=\\dfrac{z}{5}(7\\hat{i}+9\\hat{j}+5\\hat{k})$ with $z\\neq 0$; for $7\\hat{i}+9\\hat{j}+5\\hat{k}$ each projection equals 5.\n\nSince $|7\\hat{i}+9\\hat{j}+5\\hat{k}|=\\sqrt{49+81+25}=\\sqrt{155}$, a unit vector along $⃗{a}$ is $\\dfrac{1}{\\sqrt{155}}(7\\hat{i}+9\\hat{j}+5\\hat{k})$ (the opposite unit vector is not among the options).\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunrqg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the system of linear equations\n\n$\\begin{array}{l} 3x+y+βz=3 \\\\ 2x+αy-z=-3 \\\\ x+2y+z=4 \\end{array}$\n\nhas infinitely many solutions, then the value of $22β-9α$ is :",
+  "options": [
+   "31",
+   "37",
+   "43",
+   "49"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{lllllllllllllllllll} \\begin{array}{l} 3x+y+βz=3 \\\\ 2x+αy-z=-3 \\\\ x+2y+z=4 \\end{array} \\\\ \\text{has infinite solution} \\\\ \\begin{array}{lllllll} \\Rightarrow \\Delta =0,\\Delta _{1}=\\Delta _{2}=\\Delta _{3}=0 \\\\ \\Delta =0\\Rightarrow \\left |\\begin{array}{lll} 3 & 1 & β \\\\ 2 & α & -1 \\\\ 1 & 2 & 1 \\end{array}\\right |=0 \\\\ \\Delta _{2}=0\\Rightarrow \\left |\\begin{array}{lll} 3 & 3 & β \\\\ 2 & -3 & -1 \\\\ 1 & 4 & 1 \\end{array}\\right |=0 \\\\ \\Rightarrow 3(-3+4)-3(2+1)+β(8+3)=0 \\\\ \\Rightarrow 3-9+11β=0 \\\\ \\Rightarrow β=\\dfrac{6}{11} \\\\ \\Delta _{3}=0\\Rightarrow \\left |\\begin{array}{lll} 3 & 1 & 3 \\\\ 2 & α & -3 \\\\ 1 & 2 & 4 \\end{array}\\right |=0 \\\\ \\Rightarrow 3(4α+6)-1(8+3)+3(4-α)=0 \\\\ 12α+18-11+12-3α=0 \\\\ 9α=-19 \\\\ α=\\dfrac{-19}{9} \\end{array} \\end{array}$\n\n$\\therefore 22β-9α=31$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunoaq",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f:𝐑\\to 𝐑$ be a twice differentiable function such that $(\\sin x\\cos y)(f(2x+2y)-f(2x-2y))=(\\cos x\\sin y)(f(2x+2y)+f(2x-2y))$, for all $x,y\\in 𝐑$.\nIf $f^{'}(0)=\\frac{1}{2}$, then the value of $24f^{''}\\left (\\frac{5π}{3}\\right )$ is :",
+  "options": [
+   "2",
+   "3",
+   "$-$3",
+   "$-$2"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Collecting the terms in $f(2x+2y)$ and $f(2x-2y)$:\n\n$f(2x+2y)(\\sin x\\cos y-\\cos x\\sin y)=f(2x-2y)(\\sin x\\cos y+\\cos x\\sin y)$\n\n$f(2x+2y)\\sin (x-y)=f(2x-2y)\\sin (x+y)\\Rightarrow \\frac{f(2x+2y)}{\\sin (x+y)}=\\frac{f(2x-2y)}{\\sin (x-y)}$\n\nSince $x+y$ and $x-y$ take any values independently, both sides equal a constant $k$. So $f(2u)=k\\sin u$ for all $u$, that is, $f(x)=k\\sin \\dfrac{x}{2}$.\n\n$f^{'}(x)=\\dfrac{k}{2}\\cos \\dfrac{x}{2}$, and $f^{'}(0)=\\dfrac{k}{2}=\\dfrac{1}{2}$ gives $k=1$.\n\n$f^{''}(x)=-\\dfrac{1}{4}\\sin \\dfrac{x}{2}$, so $f^{''}\\left (\\dfrac{5π}{3}\\right )=-\\dfrac{1}{4}\\sin \\dfrac{5π}{6}=-\\dfrac{1}{4}\\cdot \\dfrac{1}{2}=-\\dfrac{1}{8}$.\n\n$24f^{''}\\left (\\frac{5π}{3}\\right )=24\\times \\left (-\\frac{1}{8}\\right )=-3$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunod0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let A be the set of all functions $f:𝐙\\to 𝐙$ and R be a relation on A such that $\\mathrm{R}=\\{(\\mathrm{f},\\mathrm{g}):f(0)=\\mathrm{g}(1)$ and $f(1)=\\mathrm{g}(0)\\}$. Then R is :",
+  "options": [
+   "Symmetric and transitive but not reflexive",
+   "Symmetric but neither reflexive nor transitive",
+   "Transitive but neither reflexive nor symmetric",
+   "Reflexive but neither symmetric nor transitive"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(f,f)\\in R$ requires $f(0)=f(1)$. For $f(x)=x$, $f(0)=0\\neq 1=f(1)$, so $(f,f)\\notin R$ and R is not reflexive.\n\nIf $(f,g)\\in R$, then $f(0)=g(1)$ and $f(1)=g(0)$, that is, $g(0)=f(1)$ and $g(1)=f(0)$, which is exactly the condition $(g,f)\\in R$. So R is symmetric.\n\nTake $f(x)=x$ and $g(x)=1-x$. Then $g(1)=0=f(0)$ and $g(0)=1=f(1)$, so $(f,g)\\in R$, and by symmetry $(g,f)\\in R$. Transitivity would then force $(f,f)\\in R$, which is false. So R is not transitive.\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunp6b",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of sequences of ten terms, whose terms are either 0 or 1 or 2 , that contain exactly five 1 s and exactly three 2 s , is equal to :",
+  "options": [
+   "360",
+   "2520",
+   "1820",
+   "45"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the number of sequences of ten terms, each being either 0, 1, or 2, containing exactly five 1s and exactly three 2s, follow these steps:\n\nDetermine the Remaining Terms: Since there are 5 ones and 3 twos, you will need 2 zeros to fill the sequence (because $5+3+2=10$).\n\nCalculate the Number of Arrangements: You have a total of 10 positions to fill with these numbers (5 ones, 3 twos, 2 zeros). The formula for calculating permutations of a multiset is:\n\n$\\frac{10!}{5!\\times 3!\\times 2!}$\n\nWhere:\n\n$10!$ is the factorial of the total number of terms.\n\n$5!$ is the factorial for the number of 1s.\n\n$3!$ is the factorial for the number of 2s.\n\n$2!$ is the factorial for the number of 0s.\n\nResult: Simplifying the calculation gives:\n\n$\\frac{10!}{5!\\times 3!\\times 2!}=2520$\n\nThus, there are 2520 possible sequences with the given conditions.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunqlt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For $α,β,γ\\in 𝐑$, if $\\lim _{x\\to 0}\\frac{x^{2}\\sin αx+(γ-1)\\mathrm{e}^{x2}}{\\sin 2x-βx}=3$, then $β+γ-α$ is equal to :",
+  "options": [
+   "$-$1",
+   "4",
+   "6",
+   "7"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\text{At}x\\to 0 \\\\ \\sin 2x-βx\\to 0 \\\\ \\Rightarrow \\dfrac{0}{0}\\text{form} \\\\ \\Rightarrow (γ-1)e^{0}+0\\sin (αx)\\to 0 \\\\ \\Rightarrow (γ-1)=0 \\\\ \\Rightarrow γ=1 \\\\ \\Rightarrow \\lim _{x\\to 0}\\dfrac{x^{2}\\sin (αx)}{(\\sin 2x-βx)}=3 \\end{array}$\n\n$\\Rightarrow \\lim _{x\\to 0}\\frac{x^{2}\\left [αx-\\frac{(αx)3}{3!}+\\frac{(αx)5}{5!}-\\cdots \\right ]}{\\left [(2x)-\\frac{(2x)3}{3!}+\\frac{(2x)5}{5!}\\right ]-βx}$\n\n$\\Rightarrow \\lim _{x\\to 0}\\frac{αx^{3}-\\frac{α3x5}{3!}+\\frac{α5x7}{5!}-\\cdots }{x(2-β)-\\frac{8x3}{6}+\\frac{2 5\\cdot x5}{5!}-\\cdots }=3$\n\n$\\begin{array}{ll} \\Rightarrow  & 2-β=0\\text{and}\\dfrac{α}{\\frac{-8}{6}}=3 \\\\ \\Rightarrow  & β=2 \\\\ \\quad α=3\\left (-\\dfrac{8}{6}\\right )=-4 \\\\ \\Rightarrow  & γ=1,β=2,α=-4 \\\\ \\Rightarrow  & β+γ-α=7 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunqss",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The term independent of $x$ in the expansion of $\\left (\\frac{(x+1)}{\\left (x^{2/3}+1-x^{1/3}\\right )}-\\frac{(x-1)}{\\left (x-x^{1/2}\\right )}\\right )^{10},x>1$, is :",
+  "options": [
+   "240",
+   "120",
+   "150",
+   "210"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\left (\\frac{x+1}{x^{2/3}-x^{1/3}+1}-\\frac{x-1}{x-x^{1/2}}\\right )^{10}$\n\n= $\\left (\\frac{\\left (x^{1/3}\\right )^{3}+\\left (1^{1/3}\\right )^{3}}{x^{2/3}-x^{1/3}+1}-\\frac{\\left (\\sqrt{x}\\right )^{2}-(1)^{2}}{x-x^{1/2}}\\right )^{10}$\n\n= $\\left (\\frac{\\left (x^{1/3}+1\\right )\\left (x^{2/3}-x^{1/3}+1\\right )}{x^{2/3}-x^{1/3}+1}-\\frac{\\left (\\sqrt{x}+1\\right )\\left (\\sqrt{x}-1\\right )}{\\sqrt{x}\\left (\\sqrt{x}-1\\right )}\\right )^{10}$\n\n= $\\left (\\left (x^{1/3}+1\\right )-\\frac{\\left (\\sqrt{x}+1\\right )}{\\sqrt{x}}\\right )^{10}$\n\n= $\\left (\\left (x^{1/3}+1\\right )-\\left (1+\\frac{1}{\\sqrt{x}}\\right )\\right )^{10}$\n\n= $\\left (x^{1/3}-\\frac{1}{x^{1/2}}\\right )^{10}$\n\n[Note:\n\nFor $\\left (x^{α}\\pm \\frac{1}{x^{β}}\\right )^{n}$ the $(r+1)^{th}$ term with power m of x is \n\n$r=\\frac{nα-m}{α+β}$]\n\nHere $α=\\frac{1}{3}$, $β=\\frac{1}{2}$ and m = 0\n\nthen $r=\\frac{10\\times \\frac{1}{3}-0}{\\frac{1}{3}+\\frac{1}{2}}$ = $\\frac{10}{3}\\times \\frac{6}{5}$ = 4\n\n$\\therefore$ $T_{5}$ is the term independent of x.\n\n$\\therefore$ $T_{5} =$ ${}^{10}C_{4}$ = 210",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunoqg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a_{1},a_{2},a_{3},\\ldots$ be in an A.P. such that $\\sum\\limits _{k=1}^{12}a_{2k-1}=-\\frac{72}{5}a_{1},a_{1}\\neq 0$. If $\\sum\\limits _{k=1}^{n}a_{k}=0$, then $n$ is :",
+  "options": [
+   "18",
+   "17",
+   "11",
+   "10"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given:  \n\n$\\sum\\limits _{k=1}^{12}a_{2k-1}=-\\frac{72}{5}a_{1}$\n\nThis means:\n\n$a_{1}+a_{3}+\\cdots +a_{23}=-\\frac{72}{5}a_{1}$\n\nExpress each term in A.P.:  \n\nThe general term of the A.P. is given by $a_{k}=a+(k-1)d$. Thus, for the odd indices:\n\n$a_{1}+(a+2d)+(a+4d)+\\cdots +(a+22d)$\n\nSimplify the equation:  \n\n$12a+2d(1+2+\\cdots +11)=-\\frac{72}{5}a$\n\nUse the formula for sum of an arithmetic series (first 11 terms):  \n\n$1+2+\\cdots +11=\\frac{11\\times 12}{2}=66$\n\nSo, the equation becomes:\n\n$12a+2d(66)=-\\frac{72}{5}a$\n\n$12a+132d=-\\frac{72}{5}a$\n\nSolve for the relationship between $a$ and $d$:  \n\n$132d=-\\frac{72}{5}a-12a$\n\n$132d=-\\frac{132}{5}a$\n\nSo, \n\n$a=-5d\\text{(i)}$\n\nSecond condition:  \n\n$\\sum\\limits _{k=1}^{n}a_{k}=0\\Rightarrow S_{n}=0$\n\n$\\frac{n}{2}[2a+(n-1)d]=0$\n\n$2a=-(n-1)d\\text{(ii)}$\n\nCombine equation (i) and (ii):  \n\nSubstitute $a=-5d$ into equation (ii):\n\n$2(-5d)=-(n-1)d$\n\n$-10d=-(n-1)d$\n\nTherefore:\n\n$n-1=10$\n\n$n=11$\n\nThus, $n=11$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunre9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Three distinct numbers are selected randomly from the set $\\{1,2,3,\\ldots ,40\\}$. If the probability, that the selected numbers are in an increasing G.P., is $\\frac{m}{n},\\gcd (m,n)=1$, then $m+n$ is equal to $__________$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 2477.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Total selections: $\\left (40 3\\right )=9880$. Each favourable set is counted once, written in increasing order.\n\nThree integers in increasing G.P. with ratio $r=\\dfrac{p}{q}$, where $p>q\\geq 1$ and $\\gcd (p,q)=1$, have the form $kq^{2},kpq,kp^{2}$ with $k\\in \\mathrm{ℕ}$, since $a\\cdot \\dfrac{p^{2}}{q^{2}}$ is an integer only when $q^{2}$ divides $a$.\n\nAll three terms lie in $\\{1,\\ldots ,40\\}$ exactly when $kp^{2}\\leq 40$, so each coprime pair $(p,q)$ gives $⌊\\dfrac{40}{p^{2}}⌋$ sets, and $p\\leq 6$.\n\n$p=2$ ($q=1$): $1\\times 10=10$; $p=3$ ($q=1,2$): $2\\times 4=8$; $p=4$ ($q=1,3$): $2\\times 2=4$; $p=5$ ($q=1,2,3,4$): $4\\times 1=4$; $p=6$ ($q=1,5$): $2\\times 1=2$.\n\nFavourable sets $=10+8+4+4+2=28$.\n\n$P=\\dfrac{28}{9880}=\\dfrac{7}{2470}$\n\nSince $2470=2\\times 5\\times 13\\times 19$ has no factor 7, $m=7$, $n=2470$ and $m+n=2477$.\n\nHence, the answer is 2477.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunq2x",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $f:𝐑\\to 𝐑$ be a thrice differentiable odd function satisfying $f^{'}(x)\\geq 0,f^{''}(x)=f(x),f(0)=0,f^{'}(0)=3$. Then $9f(\\log _{e}3)$ is equal to $__________$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 36.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differentiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} f^{'}(x)\\geq 0,f^{''}(x)=f(x) \\\\ \\text{Second order differential equation} \\end{array}$\n\n$\\begin{array}{l} f(x)=Ae^{x}+Be^{-x} \\\\ f(0)=0\\Rightarrow A=-B \\\\ \\Rightarrow f(x)=A\\left (e^{x}-e^{-x}\\right ) \\\\ f^{'}(x)=Ae^{x}+Ae^{-x}=A\\left (e^{x}+e^{-x}\\right ) \\\\ f^{'}(0)=3=A\\left (e^{0}+e^{-0}\\right )=2A\\Rightarrow A=\\dfrac{3}{2} \\\\ f(x)=\\dfrac{3}{2}\\left (e^{x}-e^{-x}\\right ) \\\\ \\text{If}(\\ln 3)=\\dfrac{27}{2}\\left (e^{\\ln 3}-e^{-\\ln 3}\\right )=\\dfrac{27}{2}\\left (3-\\dfrac{1}{3}\\right )=\\dfrac{27}{2}\\cdot \\dfrac{8}{3} \\\\ =36 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9dunrsb",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the area of the region $\\left \\{(x,y):\\left |4-x^{2}\\right |\\leq y\\leq x^{2},y\\leq 4,x\\geq 0\\right \\}$ is $\\left (\\frac{80\\sqrt{2}}{α}-β\\right ),α,β\\in 𝐍$, then $α+β$ is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 22.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $x\\geq 0$, the condition $|4-x^{2}|\\leq x^{2}$ needs $4-x^{2}\\leq x^{2}$, i.e. $x\\geq \\sqrt{2}$; the condition $|4-x^{2}|\\leq y\\leq 4$ needs $x^{2}-4\\leq 4$, i.e. $x\\leq 2\\sqrt{2}$.\n\nFor $\\sqrt{2}\\leq x\\leq 2$, $x^{2}\\leq 4$, so $y$ runs from $4-x^{2}$ to $x^{2}$. For $2\\leq x\\leq 2\\sqrt{2}$, $x^{2}\\geq 4$, so $y$ runs from $x^{2}-4$ to $4$.\n\n\n[IMG]\n\n$\\int\\limits _{\\sqrt{2}}^{2}\\left (2x^{2}-4\\right )dx=\\left [\\dfrac{2x^{3}}{3}-4x\\right ]_{\\sqrt{2}}^{2}=-\\dfrac{8}{3}+\\dfrac{8\\sqrt{2}}{3}$\n\n$\\int\\limits _{2}^{2\\sqrt{2}}\\left (8-x^{2}\\right )dx=\\left [8x-\\dfrac{x^{3}}{3}\\right ]_{2}^{2\\sqrt{2}}=\\dfrac{32\\sqrt{2}}{3}-\\dfrac{40}{3}$\n\n$\\text{Area}=\\dfrac{40\\sqrt{2}}{3}-16=\\dfrac{80\\sqrt{2}}{6}-16$\n\nComparing with $\\dfrac{80\\sqrt{2}}{α}-β$ gives $α=6$, $β=16$, so $α+β=22$.\n\nHence, the answer is 22.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-morning-shift/m9dunrsb-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9dunos7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The absolute difference between the squares of the radii of the two circles passing through the point $(-9,4)$ and touching the lines $x+y=3$ and $x-y=3$, is equal to $________$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 768.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\because x+y=3$ and $x-y=3$ are tangents\n\n$\\therefore$ Both circle centre will lie on $x$-axis\n\n$\\therefore (x-a)^{2}+y^{2}=r^{2}$\n\nHence centre is $C(α,0)$\n\n$\\begin{array}{l} r=\\sqrt{(α+9)^{2}+16}\\text{.... (1)} \\\\ \\text{Also}\\left |\\dfrac{α-3}{\\sqrt{2}}\\right |=r\\text{.... (2)} \\\\ \\begin{array}{l} \\sqrt{(α+9)^{2}+16}=\\left |\\dfrac{α-3}{\\sqrt{2}}\\right | \\\\ \\Rightarrow α=-5\\text{or}-37 \\\\ \\mathrm{r}=\\left |\\dfrac{-5-3}{\\sqrt{2}}\\right |\\text{or}\\left |\\dfrac{-37-3}{\\sqrt{2}}\\right | \\\\ =4\\sqrt{2}\\text{or}20\\sqrt{2} \\\\ \\left |\\mathrm{r}_{1}^{2}-\\mathrm{r}_{2}^{2}\\right |=|32-800|=768 \\end{array} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-morning-shift/m9dunos7-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9dunr7n",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let [.] denote the greatest integer function. If $\\int\\limits _{0}^{e^{3}}\\left [\\frac{1}{e^{x-1}}\\right ]dx=α-\\log _{e}2$, then $α^{3}$ is equal to $_________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To solve this, we start by evaluating the integral:\n\n$I=\\int\\limits _{0}^{e^{3}}\\left [\\frac{1}{e^{x-1}}\\right ]dx$\n\nThe greatest integer function $[\\cdot ]$ returns the largest integer less than or equal to the input value. Here's how we can approach the problem:\n\nDetermine the function inside the integral:  \n\n$\\frac{1}{e^{x-1}}=e^{1-x}$.\n\nIdentifying the intervals:\n\nWhen $e^{1-x}\\geq 2$, which simplifies to $x\\leq 1-\\ln 2$, we have $\\left [e^{1-x}\\right ]=2$.\n\nWhen $1\\leq e^{1-x}<2$, simplifying gives $1-\\ln 2<x\\leq 1$, and thus $\\left [e^{1-x}\\right ]=1$.\n\nWhen $0\\leq e^{1-x}<1$, which holds for $x>1$, thus $\\left [e^{1-x}\\right ]=0$ from $x=1$ to $x=e^{3}$.\n\nEvaluate the integral on these intervals:\n\n$\\int\\limits _{0}^{1-\\ln 2}2dx=2(1-\\ln 2)$ \n\n$\\int\\limits _{1-\\ln 2}^{1}1dx=1-(1-\\ln 2)=\\ln 2$ \n\n$\\int\\limits _{1}^{e^{3}}0\\qquad dx=0$\n\nCombine these results:\n\n$I=2(1-\\ln 2)+\\ln 2+0=2-\\ln 2$\n\nThus, we are given that:\n\n$α-\\ln 2=2-\\ln 2$\n\nThis implies that:\n\n$α=2$\n\nTherefore, $α^{3}=2^{3}=8$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

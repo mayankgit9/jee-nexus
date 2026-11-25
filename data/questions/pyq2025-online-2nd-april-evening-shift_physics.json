@@ -1,0 +1,1111 @@
+[
+ {
+  "publicId": "PYQ-2025-m9e5j2f6",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The moment of inertia of a circular ring of mass M and diameter r about a tangential axis lying in the plane of the ring is :",
+  "options": [
+   "$\\frac{3}{8}\\mathrm{Mr}^{2}$",
+   "$2\\mathrm{Mr}^{2}$",
+   "$\\frac{1}{2}\\mathrm{Mr}^{2}$",
+   "$\\frac{3}{2}\\mathrm{Mr}^{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 51,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The diameter of the ring is $r$, so its radius is $R=\\dfrac{r}{2}$.\n\nAbout the axis through the centre perpendicular to the plane, $I_{z}=MR^{2}$. The two perpendicular diameters in the plane are equivalent, so by the perpendicular axis theorem $2I_{\\text{dia}}=MR^{2}\\Rightarrow I_{\\text{dia}}=\\dfrac{MR^{2}}{2}$.\n\nA tangent lying in the plane of the ring is parallel to a diameter at distance $R$, so by the parallel axis theorem\n\n$I=\\dfrac{MR^{2}}{2}+MR^{2}=\\dfrac{3}{2}MR^{2}=\\dfrac{3}{2}M\\left (\\dfrac{r}{2}\\right )^{2}=\\dfrac{3}{8}Mr^{2}$\n\nThe value $2MR^{2}=\\dfrac{1}{2}Mr^{2}$ belongs to a tangent perpendicular to the plane, not one lying in it.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j2hj",
+  "subjectKey": "physics",
+  "chapterKey": "physics:magnetic-effects-of-current",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In a moving coil galvanometer, two moving coils $\\mathrm{M}_{1}$ and $\\mathrm{M}_{2}$ have the following particulars :\n\n$\\begin{array}{l} \\mathrm{R}_{1}=5\\Omega ,\\mathrm{N}_{1}=15,\\mathrm{A}_{1}=3.6\\times 10^{-3}\\mathrm{m}^{2},\\mathrm{B}_{1}=0.25\\mathrm{T} \\\\ \\mathrm{R}_{2}=7\\Omega ,\\mathrm{N}_{2}=21,\\mathrm{A}_{2}=1.8\\times 10^{-3}\\mathrm{m}^{2},\\mathrm{B}_{2}=0.50\\mathrm{T} \\end{array}$\n\nAssuming that torsional constant of the springs are same for both coils, what will be the ratio of voltage sensitivity of $M_{1}$ and $M_{2}$ ?",
+  "options": [
+   "$1:1$",
+   "$1:3$",
+   "$1:2$",
+   "$1:4$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 52,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "magnetics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "In a moving coil galvanometer, the voltage sensitivity is given by the formula:\n\n$\\text{Voltage sensitivity}=\\frac{θ}{V}=\\frac{N\\cdot A\\cdot B}{c\\cdot R}$\n\nHere, $θ$ is the deflection angle, $V$ is the voltage, $N$ is the number of turns, $A$ is the coil area, $B$ is the magnetic field, $c$ is the torsional constant of the spring, and $R$ is the resistance of the coil.\n\nFor the two moving coils $\\mathrm{M}_{1}$ and $\\mathrm{M}_{2}$, we want to determine the ratio of their voltage sensitivities. Given that the torsional constant $c$ is the same for both coils, we can express the ratio as:\n\n$\\text{Ratio of voltage sensitivities}=\\left (\\frac{N_{1}\\cdot A_{1}\\cdot B_{1}}{N_{2}\\cdot A_{2}\\cdot B_{2}}\\right )\\cdot \\frac{R_{2}}{R_{1}}$\n\nPlugging in the given values:\n\n$N_{1}=15$\n\n$A_{1}=3.6\\times 10^{-3}\\text{m}^{2}$\n\n$B_{1}=0.25\\text{T}$\n\n$R_{1}=5\\Omega$\n\n$N_{2}=21$\n\n$A_{2}=1.8\\times 10^{-3}\\text{m}^{2}$\n\n$B_{2}=0.50\\text{T}$\n\n$R_{2}=7\\Omega$\n\nWe calculate:\n\n$\\text{Ratio}=\\left (\\frac{15\\times 3.6\\times 0.25}{21\\times 1.8\\times 0.5}\\right )\\times \\frac{7}{5}=\\frac{1}{1}$\n\nThus, the ratio of the voltage sensitivities of $M_{1}$ to $M_{2}$ is 1:1.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j2kg",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given below are two statements : one is labelled as Assertion (A) and the other is labelled as Reason (R).\n\nAssertion (A) : Net dipole moment of a polar linear isotropic dielectric substance is not zero even in the absence of an external electric field.\n\nReason (R) : In absence of an external electric field, the different permanent dipoles of a polar dielectric substance are oriented in random directions.\n\nIn the light of the above statements, choose the most appropriate answer from the options given below :",
+  "options": [
+   "Both (A) and (R) are correct and (R) is the correct explanation of (A)",
+   "Both (A) and (R) are correct but (R) is not the correct explanation of (A)",
+   "(A) is not correct but (R) is correct",
+   "(A) is correct but (R) is not correct"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 53,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Assertion (A): The net dipole moment of a polar linear isotropic dielectric substance is not zero, even when there is no external electric field. \n\nReason (R): In the absence of an external electric field, the different permanent dipoles in a polar dielectric substance are oriented in random directions.\n\nExplanation:\n\nAssertion (A): The statement is incorrect. In a polar linear isotropic dielectric substance, the net dipole moment is zero when an external electric field is absent. This is because the dipoles within the material are randomly oriented and cancel each other out.\n\nReason (R): The statement is correct. In the absence of an external electric field, the dipoles in a polar dielectric substance remain inherently polarized but are oriented randomly. This randomness in orientation leads to a cancellation of the net dipole moment. \n\nTherefore, while the reason is correct, it does not support the validity of the assertion as stated.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j2n6",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $μ_{0}$ and $𝜖_{0}$ are the permeability and permittivity of free space, respectively, then the dimension of $\\left (\\frac{1}{μ_{0}𝜖_{0}}\\right )$ is :",
+  "options": [
+   "$\\mathrm{T}^{2}/\\mathrm{L}$",
+   "$\\mathrm{L}^{2}/\\mathrm{T}^{2}$",
+   "$\\mathrm{T}^{2}/\\mathrm{L}^{2}$",
+   "$\\mathrm{L}/\\mathrm{T}^{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 54,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The expression $\\frac{1}{μ_{0}𝜖_{0}}$ is related to the speed of light $c$, given by the equation:\n\n$c=\\frac{1}{\\sqrt{μ_{0}𝜖_{0}}}$\n\nTherefore, we have:\n\n$\\frac{1}{μ_{0}𝜖_{0}}=c^{2}$\n\nThe speed of light $c$ has the dimensions of $\\text{L T}^{-1}$, where $\\text{L}$ is the dimension of length and $\\text{T}$ is the dimension of time. Thus, when squared, the dimensions become:\n\n$c^{2}=(\\text{L T}^{-1})^{2}=\\text{L}^{2}\\text{T}^{-2}$\n\nHence, the dimensions of $\\frac{1}{μ_{0}𝜖_{0}}$ are $\\text{L}^{2}\\text{T}^{-2}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j2pk",
+  "subjectKey": "physics",
+  "chapterKey": "physics:waves",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A sinusoidal wave of wavelength 7.5 cm travels a distance of 1.2 cm along the $x$-direction in 0.3 sec . The crest P is at $x=0$ at $\\mathrm{t}=0\\sec$ and maximum displacement of the wave is 2 cm . Which equation correctly represents this wave?",
+  "options": [
+   "$y=2\\cos (0.83x-3.35t)\\mathrm{cm}$",
+   "$y=2\\sin (0.83x-3.5\\mathrm{t})\\mathrm{cm}$",
+   "$y=2\\cos (0.13x-0.5t)\\mathrm{cm}$",
+   "$y=2\\cos (3.35x-0.83\\mathrm{t})\\mathrm{cm}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 55,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "waves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The wave covers 1.2 cm in 0.3 s, so $v=\\dfrac{1.2}{0.3}=4\\text{cm s}^{-1}$.\n\n$k=\\dfrac{2π}{λ}=\\dfrac{2π}{7.5}\\approx 0.83\\text{cm}^{-1},ω=kv\\approx 0.838\\times 4\\approx 3.35\\text{rad s}^{-1}$\n\nThe amplitude is the maximum displacement, $A=2\\text{cm}$, and the wave travels along $+x$, so the phase is $(kx-ωt)$.\n\nA crest at $x=0$ at $t=0$ requires $y(0,0)=+A$. The form $y=A\\cos (kx-ωt)$ gives $y(0,0)=A$, while $y=A\\sin (kx-ωt)$ gives $y(0,0)=0$; a cosine wave is a sinusoidal wave shifted in phase by $\\dfrac{π}{2}$.\n\n$y=2\\cos (0.83x-3.35t)\\text{cm}$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j2rw",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electromagnetic-induction",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A solenoid having area A and length ' $l$ ' is filled with a material having relative permeability\n2. The magnetic energy stored in the solenoid is :",
+  "options": [
+   "$\\frac{\\mathrm{B}^{2}\\mathrm{A}l}{4μ_{0}}$",
+   "$\\frac{\\mathrm{B}^{2}\\mathrm{A}l}{2μ_{0}}$",
+   "$\\frac{\\mathrm{B}^{2}\\mathrm{A}l}{μ_{0}}$",
+   "$\\mathrm{B}^{2}\\mathrm{Al}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 56,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electromagnetic induction"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the magnetic energy stored in a solenoid filled with a material of relative permeability 2, we start with the expression for energy density in a magnetic field:\n\n$\\frac{U}{V}=\\frac{B^{2}}{2μ_{\\mathrm{r}}μ_{0}}$\n\nGiven that the relative permeability $μ_{\\mathrm{r}}$ is 2, this becomes:\n\n$\\frac{U}{V}=\\frac{B^{2}}{2\\times 2μ_{0}}=\\frac{B^{2}}{4μ_{0}}$\n\nThe energy $U$ stored in the solenoid can be expressed as:\n\n$U=\\frac{B^{2}}{4μ_{0}}\\times V$\n\nHere, $V$ is the volume of the solenoid, calculated as $A\\times \\ell$ (where $A$ is the cross-sectional area and $\\ell$ is the length). Therefore, substituting for $V$, we get:\n\n$U=\\frac{B^{2}}{4μ_{0}}\\times A\\ell$\n\nThis formula gives us the magnetic energy stored in the solenoid.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j2u9",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two identical objects are placed in front of convex mirror and concave mirror having same radii of curvature of 12 cm , at same distance of 18 cm from the respective mirrors. The ratio of sizes of the images formed by convex mirror and by concave mirror is :",
+  "options": [
+   "2",
+   "$1/2$",
+   "$1/3$",
+   "3"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 57,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\text{Using}m=\\dfrac{f}{u-f} \\\\ m_{1}=\\dfrac{6}{18-6}=\\dfrac{1}{2} \\end{array}$\n\n\n[IMG]\n\n\n$\\mathrm{m}_{2}=\\frac{6}{18+6}=\\frac{1}{4}\\therefore \\frac{\\mathrm{m}_{2}}{\\mathrm{m}_{1}}=\\frac{1}{2}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j2u9-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j2u9-1.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j2wj",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinematics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A sportsman runs around a circular track of radius $r$ such that he traverses the path $ABAB$. The distance travelled and displacement, respectively, are \n\n[IMG]",
+  "options": [
+   "$πr,3r$",
+   "$2\\mathrm{r},3π\\mathrm{r}$",
+   "$3π\\mathrm{r},2\\mathrm{r}$",
+   "$3πr,πr$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 58,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "motion in a straight line"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the distance traveled and displacement of a sportsman running around a circular track, we begin by analyzing the path described as $A\\to B\\to A\\to B$.\n\nDisplacement:\nThe displacement is the straight line distance from the initial point to the final point. In this case, the sportsman completes one full circle (from $A$ back to $A$) and then continues to point $B$ (which is opposite point $A$ on the circle). Therefore, the displacement is the diameter of the circle:\n\n$\\text{Displacement}=2r$\n\nDistance:\nThe distance is the total path length traveled by the sportsman. Starting at $A$, he completes one full circle back to $A$, which has a circumference of:\n\n$2πr$\n\nHe then runs half the circle from $A$ to $B$, which is another:\n\n$\\frac{1}{2}\\times 2πr=πr$\n\nThus, the total distance is the circumference of the full circle plus half of another circle:\n\n$\\text{Distance}=2πr+πr=3πr$\n\nIn summary, the distance traveled by the sportsman is $3πr$ and the displacement is $2r$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j2wj-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j2yz",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electronic-devices",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "In the digital circuit shown in the figure, for the given inputs the $P$ and $Q$ values are :\n\n\n[IMG]",
+  "options": [
+   "$P=0,Q=1$",
+   "$P=1,Q=0$",
+   "$\\mathrm{P}=0,\\mathrm{Q}=0$",
+   "$P=1,Q=1$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 59,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electronic devices"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The complete solution is shown in the original exam figure.\n\n[IMG]",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j2yz-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j2yz-1.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j31d",
+  "subjectKey": "physics",
+  "chapterKey": "physics:dual-nature-of-matter",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "An electron with mass ' m ' with an initial velocity $(\\mathrm{t}=0)\\vec{\\mathrm{v}}=\\mathrm{v}_{0}\\hat{i}(\\mathrm{v}_{0}>0)$ enters a magnetic field $\\vec{\\mathrm{B}}=\\mathrm{B}_{0}\\hat{j}$. If the initial de-Broglie wavelength at $\\mathrm{t}=0$ is $λ_{0}$ then its value after time ' t ' would be :",
+  "options": [
+   "$\\frac{λ_{0}}{\\sqrt{1-\\frac{\\mathrm{e}2\\mathrm{B}2 0\\mathrm{t}2}{\\mathrm{m}2}}}$",
+   "$λ_{0}$",
+   "$λ_{0}\\sqrt{1+\\frac{\\mathrm{e}^{2}\\mathrm{B}_{0}^{2}\\mathrm{t}^{2}}{\\mathrm{m}^{2}}}$",
+   "$\\frac{λ_{0}}{\\sqrt{1+\\frac{\\mathrm{e}2\\mathrm{B}2 0\\mathrm{t}2}{\\mathrm{m}2}}}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 60,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "dual nature of radiation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Magnetic field does not work\n\n$\\therefore$ Speed will not change, so De-Broglie wavelength remains same.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j343",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A bi-convex lens has radius of curvature of both the surfaces same as $1/6\\mathrm{cm}$. If this lens is required to be replaced by another convex lens having different radii of curvatures on both sides $(R_{1}\\neq R_{2})$, without any change in lens power then possible combination of $R_{1}$ and $R_{2}$ is :",
+  "options": [
+   "$\\frac{1}{3}\\mathrm{cm}$ and $\\frac{1}{7}\\mathrm{cm}$",
+   "$\\frac{1}{5}\\mathrm{cm}$ and $\\frac{1}{7}\\mathrm{cm}$",
+   "$\\frac{1}{3}\\mathrm{cm}$ and $\\frac{1}{3}\\mathrm{cm}$",
+   "$\\frac{1}{6}\\mathrm{cm}$ and $\\frac{1}{9}\\mathrm{cm}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 61,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To replace a bi-convex lens with another convex lens that has different radii of curvature on each side (i.e., $R_{1}\\neq R_{2}$), while maintaining the same lens power, the radii must satisfy a specific relationship. \n\nFor the current bi-convex lens, both radii of curvature are given as $\\frac{1}{6}\\text{cm}$. The lens formula for power is tied to the radii through:\n\n$\\frac{1}{f_{1}}=(μ-1)\\left (\\frac{2}{R}\\right )$\n\nWhen this lens is replaced by a lens with different radii ($R_{1}$ and $R_{2}$), the condition that has to be met is:\n\n$\\frac{1}{f_{2}}=(μ-1)\\left (\\frac{1}{R_{1}}+\\frac{1}{R_{2}}\\right )$\n\nFor power equivalence, the expressions for $\\frac{1}{f_{1}}$ and $\\frac{1}{f_{2}}$ must be equal:\n\n$(μ-1)\\left (\\frac{1}{R_{1}}+\\frac{1}{R_{2}}\\right )=(μ-1)\\left (\\frac{2}{R}\\right )$\n\nThis simplifies to:\n\n$\\frac{1}{R_{1}}+\\frac{1}{R_{2}}=\\frac{2}{R}$\n\nGiven $R=\\frac{1}{6}\\text{cm}$, it follows that:\n\n$\\frac{1}{R_{1}}+\\frac{1}{R_{2}}=\\frac{2}{\\left (\\frac{1}{6}\\right )}$\n\nThus, simplifying the equation gives:\n\n$\\frac{1}{R_{1}}+\\frac{1}{R_{2}}=12$\n\nTherefore, any valid pair of radii $R_{1}$ and $R_{2}$ must satisfy this equation.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j36v",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two large plane parallel conducting plates are kept 10 cm apart as shown in figure. The potential difference between them is V . The potential difference between the points A and $B$ (shown in the figure) is :\n[IMG]",
+  "options": [
+   "1 V",
+   "$\\frac{1}{4}\\mathrm{V}$",
+   "$\\frac{3}{4}\\mathrm{V}$",
+   "$\\frac{2}{5}\\mathrm{V}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 62,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nStep 1: Formula for Potential Difference\n\nThe potential difference ($\\Delta V$) between two points in a uniform electric field is found by multiplying the electric field ($E$) by the distance ($\\Delta d$) between the points:  \n\n$\\Delta V=E\\times \\Delta d$\n\nStep 2: Find the Electric Field\n\nThe total potential difference between the two plates is $V$, and they are 10 cm apart.  \n\nSo, the electric field between the plates is:  \n\n$E=\\frac{V}{10}$  \n\nHere, distance is in centimeters.\n\nStep 3: Calculate Potential Difference Between A and B\n\nPoints A and B are 4 cm apart.  \n\nSo, the potential difference between A and B will be:  \n\n$V_{AB}=E\\times 4=\\frac{V}{10}\\times 4=\\frac{4V}{10}=\\frac{2V}{5}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j36v-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j36v-1.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j39g",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Two water drops each of radius ' $r$ ' coalesce to form a bigger drop. If ' $T$ ' is the surface tension, the surface energy released in this process is :",
+  "options": [
+   "$4π\\mathrm{r}^{2}\\mathrm{T}\\left [2-2^{1/3}\\right ]$",
+   "$4π\\mathrm{r}^{2}\\mathrm{T}[1+\\sqrt{2}]$",
+   "$4π\\mathrm{r}^{2}\\mathrm{T}\\left [2-2^{2/3}\\right ]$",
+   "$4π\\mathrm{r}^{2}\\mathrm{T}[\\sqrt{2}-1]$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 63,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "fluid mechanics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the surface energy released when two identical water drops coalesce to form a larger drop, let's go through the process step by step:\n\nVolume Conservation:  \n\nWhen two droplets, each with a radius $R$, merge to form a larger droplet, the total volume is conserved. Therefore:\n\n$2\\times \\frac{4}{3}πR^{3}=\\frac{4}{3}πr^{3}$\n\nSolving for $r$, the radius of the larger drop, we find:\n\n$r=2^{1/3}R$\n\nInitial Surface Energy ($U_{i}$):  \n\nThe initial surface energy of the two smaller droplets is given by the surface area of each multiplied by the surface tension $T$:\n\n$U_{i}=2\\times 4πR^{2}T$\n\nFinal Surface Energy ($U_{f}$):  \n\nThe surface energy of the larger droplet is given by:\n\n$U_{f}=4πr^{2}T=4πR^{2}T(2^{2/3})$\n\nEnergy Released:  \n\nThe energy released in the process is the difference between the initial and final surface energy:\n\n$\\text{Heat lost}=U_{i}-U_{f}=4πR^{2}T\\left [2-2^{2/3}\\right ]$\n\nThis expression gives us the amount of surface energy that is released when two identical water drops combine to form a single larger drop.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3bs",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Energy released when two deuterons $\\left ({}_{1}\\mathrm{H}^{2}\\right )$ fuse to form a helium nucleus $\\left ({}_{2}\\mathrm{He}^{4}\\right )$ is :\n(Given : Binding energy per nucleon of ${}_{1}\\mathrm{H}^{2}=1.1\\mathrm{MeV}$ and binding energy per nucleon of ${}_{2}\\mathrm{He}^{4}=7.0\\mathrm{MeV}$ )",
+  "options": [
+   "26.8 MeV",
+   "8.1 MeV",
+   "23.6 MeV",
+   "5.9 MeV"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 64,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The binding energy of a nucleus equals the binding energy per nucleon times the number of nucleons.\n\nFor one deuteron, $2\\times 1.1=2.2\\text{MeV}$, so two deuterons together have $2\\times 2.2=4.4\\text{MeV}$.\n\nFor ${}_{2}^{4}\\text{He}$, the binding energy is $4\\times 7.0=28.0\\text{MeV}$.\n\nIn ${}_{1}^{2}\\text{H}+{}_{1}^{2}\\text{H}\\to {}_{2}^{4}\\text{He}$, the energy released equals the gain in binding energy:\n\n$Q=28.0-4.4=23.6\\text{MeV}$\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3eh",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\text{Match List - I with List - II.}$\n\n$\\begin{array}{lll}  & \\text{List - I} & List-II \\\\  \\\\ \\text{(A)} & \\text{Heat capacity of body} & \\text{(I)}\\mathrm{J}\\mathrm{kg}^{-1} \\\\ \\text{(B)} & \\text{Specific heat capacity of body} & \\text{(II)}\\mathrm{J}\\mathrm{K}^{-1} \\\\ \\text{(C)} & \\text{Latent heat} & \\text{(III)}\\mathrm{J}\\mathrm{kg}^{-1}\\mathrm{K}^{-1} \\\\ \\text{(D)} & \\text{Thermal conductivity} & \\text{(IV)}\\mathrm{J}\\mathrm{m}^{-1}\\mathrm{K}^{-1}\\mathrm{s}^{-1} \\end{array}$\n\n$\\text{Choose the correct answer from the options given below :}$",
+  "options": [
+   "(A)-(IV), (B)-(III), (C)-(II), (D)-(I)",
+   "(A)-(III), (B)-(I), (C)-(II), (D)-(IV)",
+   "(A)-(III), (B)-(IV), (C)-(I), (D)-(II)",
+   "(A)-(II), (B)-(III), (C)-(I), (D)-(IV)"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 65,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermal properties of matter"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To match the entries in List-I with their corresponding units in List-II, we can use the definitions and formulas related to each concept in thermal physics:\n\nHeat Capacity of a Body (C') is defined as:\n\n$C^{'}=\\frac{\\Delta Q}{\\Delta T}$\n\nThe unit for heat capacity (C') is Joules per Kelvin (J K${}^{-1}$).\n\nSpecific Heat Capacity of a Body (S) indicates how much heat energy is required to change the temperature of a unit mass of a substance by one degree Kelvin:\n\n$S=\\frac{\\Delta Q}{m\\Delta T}$\n\nThe unit for specific heat capacity (S) is Joules per kilogram per Kelvin (J kg${}^{-1}$ K${}^{-1}$).\n\nLatent Heat (L) is the heat energy absorbed or released during a phase change of a substance at a constant temperature:\n\n$L=\\frac{\\Delta Q}{m}$\n\nThe unit for latent heat (L) is Joules per kilogram (J kg${}^{-1}$).\n\nThermal Conductivity (K) measures the ability of a material to conduct heat:\n\n$\\Delta Q=\\frac{KA\\Delta T}{L}\\Rightarrow K=\\frac{\\Delta Q\\cdot L}{A\\Delta T}$\n\nThe unit for thermal conductivity (K) is Joules per meter per Kelvin per second (J m${}^{-1}$ K${}^{-1}$ s${}^{-1}$).\n\nUsing these formulas and their corresponding units, the correct matches are:\n\n(A) Heat capacity of body $\\to$ (II) J K${}^{-1}$\n\n(B) Specific heat capacity of body $\\to$ (III) J kg${}^{-1}$ K${}^{-1}$\n\n(C) Latent heat $\\to$ (I) J kg${}^{-1}$\n\n(D) Thermal conductivity $\\to$ (IV) J m${}^{-1}$ K${}^{-1}$ s${}^{-1}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3gx",
+  "subjectKey": "physics",
+  "chapterKey": "physics:electrostatics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Consider a circular loop that is uniformly charged and has a radius $\\mathrm{a}\\sqrt{2}$. Find the position along the positive $z$-axis of the cartesian coordinate system where the electric field is maximum if the ring was assumed to be placed in $xy$ plane at the origin :",
+  "options": [
+   "a",
+   "$a/2$",
+   "0",
+   "$a/\\sqrt{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 66,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "electrostatics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For a ring of charge $Q$ and radius $R$ in the $xy$ plane, the field at a point on the $z$-axis is along the axis:\n\n$E(z)=\\dfrac{kQz}{(z^{2}+R^{2})^{3/2}}$\n\nAt a maximum, $\\dfrac{dE}{dz}=0$:\n\n$\\dfrac{dE}{dz}=kQ\\dfrac{(z^{2}+R^{2})^{3/2}-3z^{2}(z^{2}+R^{2})^{1/2}}{(z^{2}+R^{2})^{3}}=kQ\\dfrac{R^{2}-2z^{2}}{(z^{2}+R^{2})^{5/2}}=0$\n\n$\\Rightarrow z=\\dfrac{R}{\\sqrt{2}}$\n\n$E$ is zero at $z=0$ and tends to zero as $z\\to \\infty$, so this point is the maximum.\n\nWith $R=a\\sqrt{2}$:\n\n$z=\\dfrac{a\\sqrt{2}}{\\sqrt{2}}=a$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3jq",
+  "subjectKey": "physics",
+  "chapterKey": "physics:laws-of-motion",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "[IMG]\n\nA body of mass 1 kg is suspended with the help of two strings making angles as shown in figure. Magnitudes of tensions $\\mathrm{T}_{1}$ and $\\mathrm{T}_{2}$, respectively, are (in N ) :\n\n(Take acceleration due to gravity $10\\mathrm{m}/\\mathrm{s}^{2}$ )",
+  "options": [
+   "$5\\sqrt{3},5$",
+   "$5\\sqrt{3},5\\sqrt{3}$",
+   "5,5",
+   "$5,5\\sqrt{3}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 67,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "laws of motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\mathrm{T}_{1}=\\mathrm{mg}\\cos 30^{\\circ } \\\\ \\mathrm{T}_{2}=\\mathrm{mg}\\sin 30^{\\circ } \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j3jq-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j3jq-1.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3m3",
+  "subjectKey": "physics",
+  "chapterKey": "physics:thermodynamics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Identify the characteristics of an adiabatic process in a monoatomic gas.\n(A) Internal energy is constant.\n(B) Work done in the process is equal to the change in internal energy.\n(C) The product of temperature and volume is a constant.\n(D) The product of pressure and volume is a constant.\n(E) The work done to change the temperature from $\\mathrm{T}_{1}$ to $\\mathrm{T}_{2}$ is proportional to $(\\mathrm{T}_{2}-\\mathrm{T}_{1})$.\nChoose the correct answer from the options given below :",
+  "options": [
+   "(B), (D) only",
+   "(B), (E) only",
+   "(A), (C), (E) only",
+   "(A), (C), (D) only"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 68,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "thermodynamics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "In an adiabatic process, the key characteristics for a monoatomic gas are:\n\nNo Heat Exchange: The adiabatic process occurs without heat transfer, meaning $Q=0$.\n\nWork Done and Internal Energy Change: The work done on or by the system is equal to the change in internal energy. Mathematically, this is expressed as:\n\n$\\Delta U=-W$\n\nwhere $\\Delta U$ is the change in internal energy and $W$ is the work done.\n\nWork and Temperature Relationship: The work done when changing the temperature from $T_{1}$ to $T_{2}$ is proportional to the difference between these temperatures. This relationship can be expressed as:\n\n$|\\text{Work Done}|=nC_{v}\\Delta T\\propto (T_{2}-T_{1})$\n\nHere, $n$ is the number of moles, $C_{v}$ is the molar heat capacity at constant volume, and $\\Delta T$ is the change in temperature.\n\nFrom these characteristics, the correct features of an adiabatic process in a monoatomic gas relate to the relationships involving work done and temperature change, specifically options (B) and (E).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3ou",
+  "subjectKey": "physics",
+  "chapterKey": "physics:units-and-measurements",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Given a charge q , current I and permeability of vacuum $μ_{\\mathrm{o}}$. Which of the following quantity has the dimension of momentum ?",
+  "options": [
+   "$qI/μ_{o}$",
+   "$q^{2}μ_{o}I$",
+   "$qμ_{0}/I$",
+   "$\\mathrm{q}μ_{\\mathrm{o}}\\mathrm{I}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 69,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "units and measurements"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let's look at the units (dimensions) of the given quantities:\n\nCharge $Q$ has units of ampere × time $(A\\cdot T)$ \n\nCurrent $I$ has units of ampere $(A)$ \n\nPermeability of vacuum $μ_{0}$ has units of mass × length × time${}^{-2}$ × ampere${}^{-2}$ $(MLT^{-2}A^{-2})$ \n\nMomentum has units of mass × length × time${}^{-1}$ $(MLT^{-1})$ \n\nWe want to combine $Q$, $μ_{0}$, and $I$ so that the result has the same units as momentum $(MLT^{-1})$.\n\nSuppose the answer is $Q^{x}μ_{0}^{y}I^{z}$. Let's write out the units for this:\n\n$Q^{x}μ_{0}^{y}I^{z}=(AT)^{x}(MLT^{-2}A^{-2})^{y}(A)^{z}$\n\nCombine the powers of each unit:\n\nMass (M):      exponent = $y$ \n\nLength (L):    exponent = $y$ \n\nTime (T):      exponent = $x-2y$ \n\nAmpere (A):    exponent = $x-2y+z$ \n\nWe want these to match the units of momentum, $M^{1}L^{1}T^{-1}$:\n\nSo we set up:\n\n$y=1$ (so mass and length exponents match momentum)\n\n$x-2y=-1$ (time exponent)\n\n$x-2y+z=0$ (ampere exponent cancels out)\n\nSolve these equations:\n\nFirst, $y=1$.\n\nSecond, $x-2(1)=-1⟹x=1$.\n\nThird, $x-2(1)+z=0⟹1-2+z=0⟹z=1$.\n\nThe required combination is $x=1$, $y=1$, $z=1$:\n\nSo, the quantity with the dimension of momentum is $Qμ_{0}I$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3r3",
+  "subjectKey": "physics",
+  "chapterKey": "physics:atoms-and-nuclei",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Assuming the validity of Bohr's atomic model for hydrogen like ions the radius of $\\mathrm{Li}^{++}$ ion in its ground state is given by $\\frac{1}{X}a_{0}$, where $X=$ $__________ ($Where $\\mathrm{a}_{0}$ is the first Bohr's radius.)",
+  "options": [
+   "2",
+   "9",
+   "1",
+   "3"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 70,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "atoms and nuclei"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The radius of a hydrogen-like ion according to Bohr's atomic model is given by the formula:\n\n$r=r_{0}\\frac{n^{2}}{Z}$\n\nWhere:\n\n$r_{0}$ is the first Bohr radius ($a_{0}$)\n\n$n$ represents the principal quantum number\n\n$Z$ is the atomic number of the ion\n\nFor the ion $\\text{Li}^{++}$, the atomic number $Z=3$ and we are considering the ground state, so $n=1$.\n\nPlugging these values into the formula, we get:\n\n$r=r_{0}\\frac{1^{2}}{3}=\\frac{r_{0}}{3}$\n\nThis shows that the radius of $\\text{Li}^{++}$ in its ground state is $\\frac{1}{3}a_{0}$, meaning $X=3$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3sx",
+  "subjectKey": "physics",
+  "chapterKey": "physics:ray-optics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A ray of light suffers minimum deviation when incident on a prism having angle of the prism equal to $60^{\\circ }$. The refractive index of the prism material is $\\sqrt{2}$. The angle of incidence (in degrees$) is__________$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 45.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 71,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "geometrical optics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the angle of incidence when a ray of light experiences minimum deviation in a prism, we use the formula for the refractive index $μ$:\n\n$μ=\\frac{\\sin \\left (\\frac{A+δm}{2}\\right )}{\\sin \\left (\\frac{A}{2}\\right )}$\n\nGiven:\n\nThe angle of the prism, $A=60^{\\circ }$\n\nThe refractive index of the prism material, $μ=\\sqrt{2}$\n\nMinimum deviation, $δ_{m}=30^{\\circ }$\n\nAt minimum deviation, the angle of incidence $i$ equals the angle of emergence $e$. Therefore, the relation between the angle of minimum deviation and the angle of the prism is represented as:\n\n$δ_{m}=2i-A$\n\nSolving for $i$:\n\n$δ_{m}=2i-A⟹30^{\\circ }=2i-60^{\\circ }⟹2i=90^{\\circ }⟹i=45^{\\circ }$\n\nThus, the angle of incidence is $45^{\\circ }$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3uq",
+  "subjectKey": "physics",
+  "chapterKey": "physics:properties-of-solids-and-liquids",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The length of a light string is 1.4 m when the tension on it is 5 N . If the tension increases to 7 N , the length of the string is 1.56 m . The original length of the string $is__________m$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 72,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "elasticity"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To find the original length of the string, we use the relationship between tension, elasticity constant ($K$), and the change in length of the string.\n\nGiven the equation for tension:\n\n$\\mathrm{T}=\\mathrm{K}(\\ell -\\ell _{0})$\n\nwhere $\\ell$ is the length of the string under tension and $\\ell _{0}$ is the original length.\n\nWhen the tension is 5 N, the equation becomes:\n\n$5=\\mathrm{K}(1.4-\\ell _{0})$\n\nWhen the tension increases to 7 N, the equation is:\n\n$7=\\mathrm{K}(1.56-\\ell _{0})$\n\nBy setting up a ratio from the two equations, we have:\n\n$\\frac{5}{1.4-\\ell _{0}}=\\frac{7}{1.56-\\ell _{0}}$\n\nSolving this proportion gives us the original length $\\ell _{0}$:\n\n$\\ell _{0}=1\\mathrm{m}$\n\nThus, the original length of the string is 1 meter.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3wx",
+  "subjectKey": "physics",
+  "chapterKey": "physics:rotational-motion",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "[IMG]\nA wheel of radius 0.2 m rotates freely about its center when a string that is wrapped over its rim is pulled by force of 10 N as shown in figure. The established torque produces an angular acceleration of $2\\mathrm{rad}/\\mathrm{s}^{2}$. Moment of intertia of the wheel $is___________$ $\\mathrm{kg}\\quad \\quad \\mathrm{m}^{2}$. (Acceleration due to gravity $=10\\mathrm{m}/\\mathrm{s}^{2}$ )",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 73,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "rotational motion"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nStep 1: Use the Torque Formula\n\nThe force pulls the rim and creates a turning effect called torque. The formula for torque is: torque = force × radius (F × R).\n\nStep 2: Relate Torque to Angular Acceleration\n\nTorque is also described as: torque = moment of inertia × angular acceleration (I × α).\n\nStep 3: Set Up the Equation\n\nSet the two expressions for torque equal. So, $F\\times R=I\\times α$.\n\nStep 4: Solve for Moment of Inertia $I$\n\n$I=\\frac{F\\times R}{α}$\n\nStep 5: Substitute the Values\n\nHere, the force $F=10\\mathrm{N}$, the radius $R=0.2\\mathrm{m}$, and the angular acceleration $α=2\\mathrm{rad}/\\mathrm{s}^{2}$.\n\nStep 6: Calculate\n\n$I=\\frac{10\\times 0.2}{2}=\\frac{2}{2}=1\\mathrm{kg}\\quad \\mathrm{m}^{2}$\n\nSo, the moment of inertia of the wheel is $1~\\mathrm{kg}\\quad \\mathrm{m}^{2}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j3wx-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2025-online-2nd-april-evening-shift/m9e5j3wx-1.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 2nd April Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j3yu",
+  "subjectKey": "physics",
+  "chapterKey": "physics:kinetic-theory",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The internal energy of air in $4\\mathrm{m}\\times 4\\mathrm{m}\\times 3\\mathrm{m}$ sized room at 1 atmospheric pressure will $be___________________\\times 10^{6}\\mathrm{J}$\n\n(Consider air as diatomic molecule)",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 12.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 74,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "kinetic theory of gases"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "To determine the internal energy of the air in a room that measures $4~\\mathrm{m}\\times 4\\mathrm{m}\\times 3\\mathrm{m}$ at 1 atmospheric pressure, we can follow these steps using the properties of a diatomic gas:\n\nThe volume of the room, $V$, is calculated as:\n\n$V=4\\mathrm{m}\\times 4\\mathrm{m}\\times 3\\mathrm{m}=48\\mathrm{m}^{3}$\n\nFor a diatomic gas like air, the internal energy $U$ is given by the formula:\n\n$U=nC_{v}T=n\\frac{5RT}{2}$\n\nWhere:\n\n$n$ is the number of moles,\n\n$C_{v}$ is the molar heat capacity at constant volume,\n\n$R$ is the ideal gas constant, and\n\n$T$ is the temperature in Kelvin.\n\nUsing the ideal gas law, $PV=nRT$, we can substitute for $nRT$:\n\n$nRT=PV$\n\nTherefore, the internal energy $U$ becomes:\n\n$U=\\frac{5}{2}PV$\n\nSubstituting the given values for atmospheric pressure $P=10^{5}\\mathrm{Pa}$ (1 atm) and volume $V=48\\mathrm{m}^{3}$:\n\n$U=\\frac{5}{2}\\times 10^{5}\\mathrm{Pa}\\times 48\\mathrm{m}^{3}=12\\times 10^{6}\\mathrm{J}$\n\nThus, the internal energy of the air in the room is $12\\times 10^{6}\\mathrm{J}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m9e5j416",
+  "subjectKey": "physics",
+  "chapterKey": "physics:gravitation",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "A satellite of mass 1000 kg is launched to revolve around the earth in an orbit at a height of 270 km from the earth's surface. Kinetic energy of the satellite in this orbit $is____________$ $\\times 10^{10}\\mathrm{J}$.\n\n(Mass of earth $=6\\times 10^{24}\\mathrm{kg}$, Radius of earth $=6.4\\times 10^{6}\\mathrm{m}$, Gravitational constant $=6.67\\times 10^{-11}\\mathrm{Nm}^{2}\\mathrm{kg}^{-2}$ )",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 75,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 2nd April Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "gravitation"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The kinetic energy (KE) of a satellite revolving around the Earth can be expressed with the following formula:\n\n$\\mathrm{KE}=\\frac{1}{2}mv^{2}=\\frac{1}{2}m\\frac{GM_{e}}{r}=\\frac{GM_{e}m}{2r}$\n\nFor this satellite, the radius $r$ is the sum of the Earth's radius $R_{E}$ and the height $h$ above the Earth's surface:\n\n$r=R_{E}+h$\n\nGiven:\n\nMass of the satellite, $m=1000\\text{kg}$\n\nMass of the Earth, $M_{e}=6\\times 10^{24}\\text{kg}$\n\nRadius of the Earth, $R_{E}=6.4\\times 10^{6}\\text{m}$\n\nHeight of orbit above the Earth's surface, $h=270\\text{km}=2.7\\times 10^{5}\\text{m}$\n\nGravitational constant, $G=6.67\\times 10^{-11}\\text{Nm}^{2}\\text{kg}^{-2}$\n\nSubstitute these values into the equation:\n\n$\\mathrm{KE}=\\frac{6.67\\times 10^{-11}\\times 6\\times 10^{24}\\times 1000}{2(6.4\\times 10^{6}+2.7\\times 10^{5})}$\n\n$=\\frac{6.67\\times 10^{-11}\\times 6\\times 10^{24}\\times 1000}{2\\times 6.67\\times 10^{6}}$\n\n$=3\\times 10^{10}\\text{J}$\n\nHence, the kinetic energy of the satellite in its orbit is $3\\times 10^{10}\\text{J}$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 2nd April Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

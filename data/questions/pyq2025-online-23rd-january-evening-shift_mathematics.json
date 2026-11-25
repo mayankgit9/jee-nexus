@@ -1,0 +1,1079 @@
+[
+ {
+  "publicId": "PYQ-2025-m6t9xqq4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\mathrm{I}=\\int\\limits _{0}^{\\frac{π}{2}}\\frac{\\sin ^{\\dfrac{3}{2}}x}{\\sin ^{\\dfrac{3}{2}}x+\\cos ^{\\dfrac{3}{2}}x}\\mathrm{d}x$, then $\\int\\limits _{0}^{2\\mathrm{I}}\\frac{x\\sin x\\cos x}{\\sin ^{4}x+\\cos ^{4}x}\\mathrm{d}x$ equals :",
+  "options": [
+   "$\\frac{π^{2}}{12}$",
+   "$\\frac{π^{2}}{4}$",
+   "$\\frac{π^{2}}{16}$",
+   "$\\frac{π^{2}}{8}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For I\n\nApply king ($\\mathrm{P}-5$) and add\n\n$\\begin{array}{l} 2I=\\int\\limits _{0}^{π/2}dx=\\dfrac{π}{2}\\Rightarrow I=\\dfrac{π}{4} \\\\ I_{2}=\\int\\limits _{0}^{π/2}\\dfrac{x\\sin x\\cos x}{\\sin ^{4}x+\\cos ^{4}x}dx \\end{array}$\n\nApply king and add\n\n$\\begin{array}{l} \\mathrm{I}_{2}=\\dfrac{π}{4}\\int\\limits _{0}^{π/2}\\dfrac{\\tan \\mathrm{xsec}{}^{2}\\mathrm{xdx}}{\\tan ^{4}\\mathrm{x}+1} \\\\ \\text{put}\\tan ^{2}\\mathrm{x}=\\mathrm{t} \\\\ \\dfrac{π}{8}\\int\\limits _{0}^{\\infty }\\dfrac{\\mathrm{dt}}{\\mathrm{t}^{2}+1} \\\\ =\\dfrac{π}{8}\\cdot \\dfrac{π}{2}=\\dfrac{π^{2}}{16} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xqrg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The number of complex numbers $z$, satisfying $|z|=1$ and $\\left |\\frac{z}{\\bar{z}}+\\frac{\\bar{z}}{z}\\right |=1$, is :",
+  "options": [
+   "8",
+   "10",
+   "4",
+   "6"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Since $|z|=1$, write $z=e^{iθ}$ with $θ\\in [0,2π)$, so $\\bar{z}=e^{-iθ}$ and\n\n$\\frac{z}{\\bar{z}}+\\frac{\\bar{z}}{z}=e^{2iθ}+e^{-2iθ}=2\\cos 2θ$\n\nThe condition $|2\\cos 2θ|=1$ gives $\\cos 2θ=\\pm \\dfrac{1}{2}$, with $2θ\\in [0,4π)$.\n\nFor $\\cos 2θ=\\dfrac{1}{2}$: $2θ=\\dfrac{π}{3},\\dfrac{5π}{3},\\dfrac{7π}{3},\\dfrac{11π}{3}$, so $θ=\\dfrac{π}{6},\\dfrac{5π}{6},\\dfrac{7π}{6},\\dfrac{11π}{6}$.\n\nFor $\\cos 2θ=-\\dfrac{1}{2}$: $2θ=\\dfrac{2π}{3},\\dfrac{4π}{3},\\dfrac{8π}{3},\\dfrac{10π}{3}$, so $θ=\\dfrac{π}{3},\\dfrac{2π}{3},\\dfrac{4π}{3},\\dfrac{5π}{3}$.\n\nThese give 8 distinct numbers: $z=\\pm \\dfrac{\\sqrt{3}}{2}\\pm \\dfrac{1}{2}i$ and $z=\\pm \\dfrac{1}{2}\\pm \\dfrac{\\sqrt{3}}{2}i$.\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xqsj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The length of the chord of the ellipse $\\frac{x^{2}}{4}+\\frac{y^{2}}{2}=1$, whose mid-point is $\\left (1,\\frac{1}{2}\\right )$, is :",
+  "options": [
+   "$\\frac{2}{3}\\sqrt{15}$",
+   "$\\frac{1}{3}\\sqrt{15}$",
+   "$\\sqrt{15}$",
+   "$\\frac{5}{3}\\sqrt{15}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "ellipse"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{ll} \\begin{array}{l} \\mathrm{T}=\\mathrm{S}_{1} \\\\ \\dfrac{\\mathrm{x}\\cdot 1}{4}+\\dfrac{\\mathrm{y}\\cdot 1/2}{2}=\\dfrac{1}{4}+\\dfrac{1}{8} \\\\ \\mathrm{x}+\\mathrm{y}=\\dfrac{3}{2} \\end{array} \\\\ \\text{solve with ellipse} \\\\ \\begin{array}{ll} \\mathrm{PR} & =\\sqrt{(\\mathrm{x}_{2}-\\mathrm{x}_{1})^{2}+(\\mathrm{y}_{2}-\\mathrm{y}_{1})^{2}} \\\\ =\\sqrt{2}|\\mathrm{x}_{2}-\\mathrm{x}_{1}| \\end{array} \\end{array}$\n\n\n[IMG]\n\n\n$\\begin{array}{l} y_{2}=\\dfrac{3}{2}-x_{2} \\\\ y_{1}=\\dfrac{3}{2}-x_{1} \\\\ y_{2}-y_{1}=x_{2}-x_{1} \\\\ x^{2}+2y^{2}=4 \\\\ x^{2}+2\\left (\\dfrac{3}{2}-x\\right )^{2}=4 \\\\ 6x^{2}-12x+1=0 \\\\ x_{1}+x_{2}=2 \\\\ x_{1}x_{2}=1/6 \\\\ |x_{2}-x_{1}|=\\sqrt{(x_{2}+x_{1})^{2}-4x_{1}x_{2}} \\\\ =\\sqrt{4-4/6} \\\\ PR=\\sqrt{2}\\cdot 2\\cdot \\dfrac{\\sqrt{5}}{\\sqrt{2}\\sqrt{3}}=\\dfrac{2}{3}\\sqrt{15} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9xqsj-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xqu3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the point A divide the line segment joining the points $\\mathrm{P}(-1,-1,2)$ and $\\mathrm{Q}(5,5,10)$ internally in the ratio $r:1(r>0)$. If O is the origin and $(\\mathrm{OQ}\\leftarrow \\cdot \\mathrm{OA}\\leftarrow )-\\frac{1}{5}|\\mathrm{OP}\\leftarrow \\times \\mathrm{OA}\\leftarrow |^{2}=10$, then the value of r is :",
+  "options": [
+   "$\\sqrt{7}$",
+   "14",
+   "7",
+   "3"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\begin{array}{l} \\mathrm{A}\\equiv \\left (\\dfrac{5\\mathrm{r}-1}{\\mathrm{r}+1},\\dfrac{5\\mathrm{r}-1}{\\mathrm{r}+1},\\dfrac{10\\mathrm{r}+2}{\\mathrm{r}+1}\\right ) \\\\ (\\mathrm{OQ}\\leftarrow \\cdot \\mathrm{OA}\\leftarrow )-\\dfrac{|\\mathrm{OP}\\leftarrow \\times \\mathrm{OA}\\leftarrow |^{2}}{5}=10\\text{.... (1)} \\\\ \\mathrm{OQ}\\leftarrow \\cdot \\mathrm{OA}\\leftarrow =\\dfrac{10}{\\mathrm{r}+1}(15\\mathrm{r}+1) \\\\ |\\mathrm{OP}\\leftarrow \\times \\mathrm{OA}\\leftarrow |^{2}=\\dfrac{\\mathrm{r}^{2}}{(\\mathrm{r}+1)^{2}}(800) \\end{array} \\\\ \\text{so by equation (1)} \\\\ \\begin{array}{l} \\dfrac{10}{r+1}(15r+1)-\\dfrac{1}{5}\\dfrac{r^{2}(800)}{(r+1)^{2}}=10 \\\\ 2r^{2}-14r=0 \\\\ r=7,r\\neq 0 \\end{array} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9yk1i",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A board has 16 squares as shown in the figure :\n\n\n[IMG]\n\n\nOut of these 16 squares, two squares are chosen at random. The probability that they have no side in common is :",
+  "options": [
+   "$\\frac{3}{5}$",
+   "$\\frac{4}{5}$",
+   "$\\frac{23}{30}$",
+   "$\\frac{7}{10}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Total ways for selecting any two squares $={}^{16}\\mathrm{C}_{2}=120$\n\nTotal ways for selecting common side squares\n\n\n[IMG]\n\n\n$\\begin{array}{l} =24 \\\\ \\text{so required probability} \\\\ \\begin{array}{l} =1-\\dfrac{24}{120} \\\\ =\\dfrac{4}{5} \\end{array} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9yk1i-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   },
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9yk1i-1.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xskm",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the square of the shortest distance between the lines $\\frac{x-2}{1}=\\frac{y-1}{2}=\\frac{z+3}{-3}$ and $\\frac{x+1}{2}=\\frac{y+3}{4}=\\frac{z+5}{-5}$ is $\\frac{m}{n}$, where $m$, $n$ are coprime numbers, then $m+n$ is equal to :",
+  "options": [
+   "14",
+   "6",
+   "21",
+   "9"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{lllllll} \\vec{\\mathrm{a}}=(2,1,-3) \\\\ \\vec{\\mathrm{b}}=(-1,-3,-5) \\\\ \\vec{\\mathrm{p}}\\times \\vec{\\mathrm{q}}=\\left |\\begin{array}{lll} \\hat{\\mathrm{i}} & \\hat{\\mathrm{j}} & \\hat{\\mathrm{k}} \\\\ 1 & 2 & -3 \\\\ 2 & 4 & -5 \\end{array}\\right | \\\\ =2\\hat{\\mathrm{i}}-\\hat{\\mathrm{j}} \\\\ \\mathrm{b}\\leftarrow -\\vec{\\mathrm{a}}=-3\\hat{\\mathrm{i}}-4\\hat{\\mathrm{j}}-2\\hat{\\mathrm{k}} \\\\ \\mathrm{S}_{\\mathrm{d}}=\\dfrac{|(\\vec{\\mathrm{b}}-\\vec{\\mathrm{a}})\\cdot (\\vec{\\mathrm{p}}\\times \\vec{\\mathrm{q}})|}{|\\vec{\\mathrm{p}}\\times \\vec{\\mathrm{q}}|} \\\\ =\\dfrac{2}{\\sqrt{5}} \\\\ (\\mathrm{S}_{\\mathrm{d}})^{2}=\\dfrac{4}{5} \\\\ \\mathrm{m}=4,\\mathrm{n}=5\\Rightarrow \\mathrm{m}+\\mathrm{n}=9 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xslh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{X}=𝐑\\times 𝐑$. Define a relation R on X as :\n\n$(a_{1},b_{1})R(a_{2},b_{2})⇔b_{1}=b_{2}$\n\nStatement I: $\\mathrm{R}$ is an equivalence relation.\n\nStatement II : For some $(\\mathrm{a},\\mathrm{b})\\in \\mathrm{X}$, the $\\mathrm{set}\\mathrm{S}=\\{(x,y)\\in \\mathrm{X}:(x,y)\\mathrm{R}(\\mathrm{a},\\mathrm{b})\\}$ represents a line parallel to $y=x$.\n\nIn the light of the above statements, choose the correct answer from the options given below :",
+  "options": [
+   "Both Statement I and Statement II are true",
+   "Statement I is true but Statement II is false",
+   "Both Statement I and Statement II are false",
+   "Statement I is false but Statement II is true"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For any $(a,b)\\in X$, $b=b$, so $(a,b)R(a,b)$ and R is reflexive.\n\nIf $(a_{1},b_{1})R(a_{2},b_{2})$, then $b_{1}=b_{2}$, so $b_{2}=b_{1}$ and $(a_{2},b_{2})R(a_{1},b_{1})$; R is symmetric.\n\nIf $(a_{1},b_{1})R(a_{2},b_{2})$ and $(a_{2},b_{2})R(a_{3},b_{3})$, then $b_{1}=b_{2}=b_{3}$, so $(a_{1},b_{1})R(a_{3},b_{3})$; R is transitive. Hence R is an equivalence relation and Statement I is true.\n\nFor a fixed $(a,b)\\in X$, $(x,y)R(a,b)$ holds exactly when $y=b$, so\n\n$S=\\{(x,b):x\\in \\mathrm{ℝ}\\},$\n\nwhich is the horizontal line $y=b$ with slope $0$. The line $y=x$ has slope $1$, so S is never parallel to $y=x$ and Statement II is false.\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsmf",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the area of the region $\\left \\{(x,y):-1\\leq x\\leq 1,0\\leq y\\leq \\mathrm{a}+\\mathrm{e}^{|x|}-\\mathrm{e}^{-x},\\mathrm{a}>0\\right \\}$ is $\\frac{\\mathrm{e}^{2}+8\\mathrm{e}+1}{\\mathrm{e}}$, then the value of $a$ is :",
+  "options": [
+   "7",
+   "5",
+   "6",
+   "8"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $-1\\leq x\\leq 0$, $|x|=-x$, so the upper boundary is $y=a+e^{-x}-e^{-x}=a$; this part is a rectangle of area $a\\times 1=a$.\n\nFor $0\\leq x\\leq 1$, $|x|=x$, so the upper boundary is $y=a+e^{x}-e^{-x}$, which stays positive since $a>0$ and $e^{x}\\geq e^{-x}$.\n\n\n[IMG]\n\n$\\text{Area}=a+\\int\\limits _{0}^{1}(a+e^{x}-e^{-x})dx=a+[ax+e^{x}+e^{-x}]_{0}^{1}=2a+e+\\dfrac{1}{e}-2$\n\nThe given area is $\\dfrac{e^{2}+8e+1}{e}=e+8+\\dfrac{1}{e}$, so\n\n$2a-2=8\\Rightarrow a=5$\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9xsmf-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsnh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the range of the function $f(x)=6+16\\cos x\\cdot \\cos \\left (\\frac{π}{3}-x\\right )\\cdot \\cos \\left (\\frac{π}{3}+x\\right )\\cdot \\sin 3x\\cdot \\cos 6x,x\\in 𝐑$ be $[α,β]$. Then the distance of the point $(α,β)$ from the line $3x+4y+12=0$ is :",
+  "options": [
+   "11",
+   "10",
+   "8",
+   "9"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Using $\\cos (A-B)\\cos (A+B)=\\cos ^{2}A-\\sin ^{2}B$:\n\n$\\cos \\left (\\frac{π}{3}-x\\right )\\cos \\left (\\frac{π}{3}+x\\right )=\\frac{1}{4}-\\sin ^{2}x=\\cos ^{2}x-\\frac{3}{4}$\n\n$\\cos x\\cos \\left (\\frac{π}{3}-x\\right )\\cos \\left (\\frac{π}{3}+x\\right )=\\frac{4\\cos ^{3}x-3\\cos x}{4}=\\frac{1}{4}\\cos 3x$\n\nTherefore\n\n$f(x)=6+4\\cos 3x\\sin 3x\\cos 6x=6+2\\sin 6x\\cos 6x=6+\\sin 12x$\n\nSince $-1\\leq \\sin 12x\\leq 1$, the range of $f$ is $[5,7]$, so $(α,β)=(5,7)$.\n\nThe distance of $(5,7)$ from $3x+4y+12=0$ is\n\n$\\frac{|3(5)+4(7)+12|}{\\sqrt{3^{2}+4^{2}}}=\\frac{55}{5}=11$\n\nHence, the correct option is (A).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsok",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The system of equations\n\n$\\begin{array}{l} x+y+z=6, \\\\ x+2y+5z=9, \\\\ x+5y+λz=μ, \\end{array}$\n\nhas no solution if",
+  "options": [
+   "$λ=17,μ=18$",
+   "$λ=17,μ\\neq 18$",
+   "$λ=15,μ\\neq 17$",
+   "$λ\\neq 17,μ\\neq 18$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{lllllll} \\mathrm{D}=\\left |\\begin{array}{lll} 1 & 1 & 1 \\\\ 1 & 2 & 5 \\\\ 1 & 5 & λ \\end{array}\\right |=0 \\\\ λ=17 \\\\ D_{z}=\\left |\\begin{array}{lll} 1 & 1 & 6 \\\\ 1 & 2 & 9 \\\\ 1 & 5 & μ \\end{array}\\right |\\neq 0 \\\\ μ\\neq 18 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsph",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The distance of the line $\\frac{x-2}{2}=\\frac{y-6}{3}=\\frac{z-3}{4}$ from the point $(1,4,0)$ along the line $\\frac{x}{1}=\\frac{y-2}{2}=\\frac{z+3}{3}$ is :",
+  "options": [
+   "$\\sqrt{17}$",
+   "$\\sqrt{13}$",
+   "$\\sqrt{15}$",
+   "$\\sqrt{14}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The line through $(1,4,0)$ parallel to $\\dfrac{x}{1}=\\dfrac{y-2}{2}=\\dfrac{z+3}{3}$ has direction $(1,2,3)$; its general point is $(λ+1,2λ+4,3λ)$.\n\nA general point of $\\dfrac{x-2}{2}=\\dfrac{y-6}{3}=\\dfrac{z-3}{4}$ is $(2t+2,3t+6,4t+3)$.\n\nAt the point of intersection, $λ+1=2t+2$ and $2λ+4=3t+6$, so $λ=2t+1$ and $2(2t+1)+4=3t+6\\Rightarrow t=0,λ=1$.\n\nThe $z$-coordinates also agree ($3λ=3=4t+3$), so the lines meet at $(2,6,3)$.\n\nThe required distance is\n\n$\\sqrt{(2-1)^{2}+(6-4)^{2}+(3-0)^{2}}=\\sqrt{1+4+9}=\\sqrt{14}$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsqc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{x\\to \\infty }\\frac{\\left (2x^{2}-3x+5\\right )(3x-1)^{\\dfrac{x}{2}}}{(3x^{2}+5x+4)\\sqrt{(3x+2)^{x}}}$ is equal to :",
+  "options": [
+   "$\\frac{2e}{3}$",
+   "$\\frac{2}{3\\sqrt{\\mathrm{e}}}$",
+   "$\\frac{2\\mathrm{e}}{\\sqrt{3}}$",
+   "$\\frac{2}{\\sqrt{3\\mathrm{e}}}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\lim _{x\\to \\infty }\\dfrac{\\left (2-\\frac{3}{x}+\\frac{5}{x^{2}}\\right )\\left (1-\\frac{1}{3x}\\right )^{x/2}}{\\left (3+\\frac{5}{x}+\\frac{4}{x^{2}}\\right )\\left (1+\\frac{2}{3x}\\right )^{x/2}} \\\\ =\\lim _{x\\to \\infty }\\dfrac{2}{3}\\cdot \\dfrac{e^{\\frac{x}{2}\\left (1-\\frac{1}{3x}-1\\right )}}{e^{\\frac{x}{2}\\left (1+\\frac{2}{3x}-1\\right )}} \\\\ =\\dfrac{2}{3}\\cdot \\dfrac{e^{-\\frac{1}{6}}}{e^{1/3}}=\\dfrac{2}{3}e^{-\\frac{1}{2}} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsr8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A=[a_{ij}]$ be a $3\\times 3$ matrix such that $A\\left [\\begin{array}{l} 0 \\\\ 1 \\\\ 0 \\end{array}\\right ]=\\left [\\begin{array}{l} 0 \\\\ 0 \\\\ 1 \\end{array}\\right ],A\\left [\\begin{array}{l} 4 \\\\ 1 \\\\ 3 \\end{array}\\right ]=\\left [\\begin{array}{l} 0 \\\\ 1 \\\\ 0 \\end{array}\\right ]$ and $A\\left [\\begin{array}{l} 2 \\\\ 1 \\\\ 2 \\end{array}\\right ]=\\left [\\begin{array}{l} 1 \\\\ 0 \\\\ 0 \\end{array}\\right ]$, then $a_{23}$ equals :",
+  "options": [
+   "2",
+   "$-$1",
+   "1",
+   "0"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{lllllll} \\text{Let}A=\\left [\\begin{array}{lll} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \\end{array}\\right ] \\\\ A\\left [\\begin{array}{l} 0 \\\\ 1 \\\\ 0 \\end{array}\\right ]=\\left [\\begin{array}{l} 0 \\\\ 0 \\\\ 1 \\end{array}\\right ]\\Rightarrow \\left [\\begin{array}{l} a_{12} \\\\ a_{22} \\\\ a_{32} \\end{array}\\right ]=\\left [\\begin{array}{l} 0 \\\\ 0 \\\\ 1 \\end{array}\\right ]\\Rightarrow \\begin{array}{l} a_{22}=0;a_{12}=0 \\\\ a_{32}=1 \\end{array} \\end{array}$\n\n$\\begin{array}{l} A\\left [\\begin{array}{l} 4 \\\\ 1 \\\\ 3 \\end{array}\\right ]=\\left [\\begin{array}{l} 0 \\\\ 1 \\\\ 0 \\end{array}\\right ]\\Rightarrow \\begin{array}{l} 4a_{11}+a_{12}+3a_{13}=0 \\\\ 4a_{21}+a_{22}+3a_{23}=1\\Rightarrow 4a_{21}+3a_{23}=1 \\\\ 4a_{31}+a_{32}+3a_{33}=0 \\end{array} \\\\ A\\left [\\begin{array}{l} 2 \\\\ 1 \\\\ 2 \\end{array}\\right ]=\\left [\\begin{array}{l} 1 \\\\ 0 \\\\ 0 \\end{array}\\right ]\\Rightarrow \\begin{array}{l} 2a_{11}+a_{12}+2a_{13}=1 \\\\ 2a_{21}+a_{22}+2a_{23}=0\\Rightarrow a_{21}+a_{23}=0 \\\\ 2a_{31}+a_{32}+2a_{33}=0 \\end{array} \\\\ -4a_{23}+3a_{23}=1\\Rightarrow a_{23}=-1 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xss4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{A}=\\{(x,y)\\in 𝐑\\times 𝐑:|x+y|⩾3\\}$ and $\\mathrm{B}=\\{(x,y)\\in 𝐑\\times 𝐑:|x|+|y|\\leq 3\\}$.\nIf $\\mathrm{C}=\\{(x,y)\\in \\mathrm{A}\\cap \\mathrm{B}:x=0$ or $y=0\\}$, then $\\sum _{(x,y)\\in \\mathrm{C}}|x+y|$ is :",
+  "options": [
+   "18",
+   "24",
+   "15",
+   "12"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\mathrm{C}=\\{(3,0),(-3,0),(0,3),(0,-3)\\} \\\\ \\Sigma |\\mathrm{x}+\\mathrm{y}|=12 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9xss4-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xst0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If in the expansion of $(1+x)^{\\mathrm{p}}(1-x)^{\\mathrm{q}}$, the coefficients of $x$ and $x^{2}$ are 1 and -2 , respectively, then $\\mathrm{p}^{2}+\\mathrm{q}^{2}$ is equal to :",
+  "options": [
+   "8",
+   "20",
+   "13",
+   "18"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$(1+x)^{p}(1-x)^{q}=\\left (1+px+\\dfrac{p(p-1)}{2}x^{2}+\\ldots \\right )\\left (1-qx+\\dfrac{q(q-1)}{2}x^{2}-\\ldots \\right )$\n\nCoefficient of $x$: $p-q=1$.\n\nCoefficient of $x^{2}$: $\\dfrac{p(p-1)}{2}-pq+\\dfrac{q(q-1)}{2}=-2$\n\n$\\Rightarrow p^{2}+q^{2}-2pq-(p+q)=-4\\Rightarrow (p-q)^{2}-(p+q)=-4$\n\n$\\Rightarrow 1-(p+q)=-4\\Rightarrow p+q=5$\n\nSo $p=3$, $q=2$, and $p^{2}+q^{2}=9+4=13$.\n\nHence, the correct option is (C).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xstw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A rod of length eight units moves such that its ends $A$ and $B$ always lie on the lines $x-y+2=0$ and $y+2=0$, respectively. If the locus of the point $P$, that divides the rod $AB$ internally in the ratio $2:1$ is $9\\left (x^{2}+αy^{2}+βxy+γx+28y\\right )-76=0$, then $α-β-γ$ is equal to :",
+  "options": [
+   "24",
+   "22",
+   "21",
+   "23"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $A(t,t+2)$ lie on $x-y+2=0$ and $B(s,-2)$ on $y+2=0$. The point $P(h,k)$ dividing $AB$ internally in the ratio $2:1$ is\n\n$h=\\dfrac{2s+t}{3},k=\\dfrac{2(-2)+(t+2)}{3}=\\dfrac{t-2}{3}.$\n\nHence $t=3k+2$ and $s=\\dfrac{3h-t}{2}=\\dfrac{3h-3k-2}{2}$.\n\nThen $t-s=\\dfrac{9k-3h+6}{2}=\\dfrac{3(3k-h+2)}{2}$ and $(t+2)-(-2)=t+4=3(k+2)$.\n\n$AB=8$ gives\n\n$\\dfrac{9(3k-h+2)^{2}}{4}+9(k+2)^{2}=64\\Rightarrow 9\\left [(3k-h+2)^{2}+4(k+2)^{2}\\right ]=256.$\n\nExpanding, $(3k-h+2)^{2}+4(k+2)^{2}=h^{2}+13k^{2}-6hk-4h+28k+20$, so\n\n$9\\left (h^{2}+13k^{2}-6hk-4h+28k\\right )+180=256\\Rightarrow 9\\left (x^{2}+13y^{2}-6xy-4x+28y\\right )-76=0.$\n\nComparing, $α=13$, $β=-6$, $γ=-4$, so $α-β-γ=13+6+4=23$.\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsut",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\int x^{3}\\sin x\\mathrm{d}x=g(x)+C$, where $C$ is the constant of integration. If $8\\left (g\\left (\\frac{π}{2}\\right )+g^{'}\\left (\\frac{π}{2}\\right )\\right )=απ^{3}+βπ^{2}+γ,α,β,γ\\in Z$, then $α+β-γ$ equals :",
+  "options": [
+   "47",
+   "55",
+   "62",
+   "48"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\int x^{3}\\sin xdx=-x^{3}\\cos x+\\int 3x^{2}\\cos xdx \\\\ =-x^{3}\\cos x+3x^{2}\\sin x-\\int 6x\\sin xdx \\\\ =-x^{3}\\cos x+3x^{2}\\sin x+6x\\cos x-6\\sin x+c \\end{array}$\n\nSo $g(x)=-x^{3}\\cos x+3x^{2}\\sin x+6x\\cos x-6\\sin x$\n\n$\\begin{array}{l} g\\left (\\dfrac{π}{2}\\right )=\\dfrac{3π^{2}}{4}-6 \\\\ g^{'}(x)=x^{3}\\sin x \\\\ g^{'}\\left (\\dfrac{π}{2}\\right )=\\dfrac{π^{3}}{8} \\\\ 8\\left (g\\left (\\dfrac{π}{2}\\right )+g^{'}\\left (\\dfrac{π}{2}\\right )\\right )=π^{3}+6π^{2}-48 \\end{array}$\n\nSo $α+β-γ=55$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsvp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:application-of-derivatives",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A spherical chocolate ball has a layer of ice-cream of uniform thickness around it. When the thickness of the ice-cream layer is 1 cm , the ice-cream melts at the rate of $81\\mathrm{cm}^{3}/\\min$ and the thickness of the ice-cream layer decreases at the rate of $\\frac{1}{4π}\\mathrm{cm}/\\min$. The surface area (in $\\mathrm{cm}^{2}$ ) of the chocolate ball (without the ice-cream layer) is :",
+  "options": [
+   "$128π$",
+   "$196π$",
+   "$225π$",
+   "$256π$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "application of derivatives"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\begin{array}{l} \\mathrm{v}=\\dfrac{4}{3}π\\mathrm{r}^{3} \\\\ \\dfrac{\\mathrm{dv}}{\\mathrm{dt}}=4π\\mathrm{r}^{2}\\dfrac{\\mathrm{dr}}{\\mathrm{dt}} \\\\ 81=4π\\mathrm{r}^{2}\\times \\dfrac{1}{4π} \\\\ \\mathrm{r}^{2}=81 \\\\ \\mathrm{r}=9 \\end{array} \\\\ \\text{surface area of chocolate}=4π(r-1)^{2}=256π \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9xsvp-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xswk",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the shortest distance from $(a,0),a>0$, to the parabola $y^{2}=4x$ be 4 . Then the equation of the circle passing through the point $(a,0)$ and the focus of the parabola, and having its centre on the axis of the parabola is :",
+  "options": [
+   "$x^{2}+y^{2}-8x+7=0$",
+   "$x^{2}+y^{2}-6x+5=0$",
+   "$x^{2}+y^{2}-4x+3=0$",
+   "$x^{2}+y^{2}-10x+9=0$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\n$\\begin{array}{l} \\text{Normal at}\\mathrm{P} \\\\ \\begin{array}{l} y+tx=2t+t^{3} \\\\ ↑ \\\\ (a,0) \\end{array} \\end{array}$\n\n$\\begin{array}{l} \\mathrm{at}=2\\mathrm{t}+\\mathrm{t}^{3} \\\\ \\mathrm{a}=2+\\mathrm{t}^{2} \\\\ \\mathrm{R}\\left (2+\\mathrm{t}^{2},0\\right ) \\\\ \\mathrm{PR}=4\\Rightarrow 4+4\\mathrm{t}^{2}=16 \\end{array}$\n\n$\\begin{array}{l} 4\\mathrm{t}^{2}=12\\Rightarrow \\mathrm{t}^{2}=3 \\\\ \\mathrm{a}=5,\\mathrm{R}(5,0) \\end{array}$\n\nFocus $(1,0)$\n\n$(1,0)&(5,0)$ will be the end points of diameter\n\n$\\Rightarrow Eq^{\\mathrm{n}}$ of circle is\n\n$\\begin{array}{l} (x-1)(x-5)+y^{2}=0 \\\\ x^{2}+y^{2}-6x+5=0 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2025-online-23rd-january-evening-shift/m6t9xswk-0.webp",
+    "altText": "Original exam figure (JEE Main 2025 (Online) 23rd January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsxp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $x=x(y)$ be the solution of the differential equation $y=\\left (x-y\\frac{\\mathrm{d}x}{\\mathrm{d}y}\\right )\\sin \\left (\\frac{x}{y}\\right ),y>0$ and $x(1)=\\frac{π}{2}$. Then $\\cos (x(2))$ is equal to :",
+  "options": [
+   "$2(\\log _{e}2)-1$",
+   "$1-2(\\log _{e}2)^{2}$",
+   "$1-2(\\log _{\\mathrm{e}}2)$",
+   "$2(\\log _{e}2)^{2}-1$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Multiplying the equation by $dy$:\n\n$y~dy=(xdy-ydx)\\sin \\left (\\dfrac{x}{y}\\right )$\n\nDividing by $y^{2}$ and using $d\\left (\\dfrac{x}{y}\\right )=\\dfrac{y~dx-xdy}{y^{2}}$:\n\n$\\dfrac{dy}{y}=-\\sin \\left (\\dfrac{x}{y}\\right )d\\left (\\dfrac{x}{y}\\right )$\n\nIntegrating: $\\ln y=\\cos \\left (\\dfrac{x}{y}\\right )+C$.\n\nAt $y=1$, $x=\\dfrac{π}{2}$: $0=\\cos \\dfrac{π}{2}+C$, so $C=0$ and $\\ln y=\\cos \\left (\\dfrac{x}{y}\\right )$.\n\nAt $y=2$: $\\cos \\left (\\dfrac{x(2)}{2}\\right )=\\ln 2$, so\n\n$\\cos (x(2))=2\\cos ^{2}\\left (\\dfrac{x(2)}{2}\\right )-1=2(\\ln 2)^{2}-1$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsyg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $α,β$ be the roots of the equation $x^{2}-\\mathrm{ax}-\\mathrm{b}=0$ with $\\mathrm{Im}(α)<\\mathrm{Im}(β)$. Let $\\mathrm{P}_{\\mathrm{n}}=α^{\\mathrm{n}}-β^{\\mathrm{n}}$. If $\\mathrm{P}_{3}=-5\\sqrt{7}i,\\mathrm{P}_{4}=-3\\sqrt{7}i,\\mathrm{P}_{5}=11\\sqrt{7}i$ and $\\mathrm{P}_{6}=45\\sqrt{7}i$, then $\\left |α^{4}+β^{4}\\right |$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 31.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$α+β=a$ and $αβ=-b$. Since $α^{2}=aα+b$, multiplying by $α^{n-2}$ gives $α^{n}=aα^{n-1}+bα^{n-2}$; the same holds for $β$, and subtracting:\n\n$P_{n}=aP_{n-1}+bP_{n-2}$\n\nFor $n=5$: $11\\sqrt{7}i=a(-3\\sqrt{7}i)+b(-5\\sqrt{7}i)\\Rightarrow -3a-5b=11$\n\nFor $n=6$: $45\\sqrt{7}i=a(11\\sqrt{7}i)+b(-3\\sqrt{7}i)\\Rightarrow 11a-3b=45$\n\nSolving, $b=-4$ and $a=3$, so $α+β=3$ and $αβ=4$.\n\n$α^{2}+β^{2}=(α+β)^{2}-2αβ=9-8=1$\n\n$α^{4}+β^{4}=\\left (α^{2}+β^{2}\\right )^{2}-2(αβ)^{2}=1-32=-31$\n\nSo $\\left |α^{4}+β^{4}\\right |=31$.\n\nHence, the answer is 31.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xsz2",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The focus of the parabola $y^{2}=4x+16$ is the centre of the circle $C$ of radius 5 . If the values of $λ$, for which C passes through the point of intersection of the lines $3x-y=0$ and $x+λy=4$, are $λ_{1}$ and $λ_{2},λ_{1}<λ_{2}$, then $12λ_{1}+29λ_{2}$ is equal to $________$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 15.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "parabola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$y^{2}=4(x+4)$\n\nEquation of circle\n\n$(x+3)^{2}+y^{2}=25$\n\nPasses through the point of intersection of two lines $3x-y=0$ and $x+λy=4$ which is $\\left (\\frac{4}{3λ+1},\\frac{12}{3λ+1}\\right )$, after solving with circle, we get\n\n$\\begin{array}{l} λ=-\\dfrac{7}{6},1 \\\\ 12λ_{1}+29λ_{2} \\\\ -14+29=15 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xszj",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The number of ways, 5 boys and 4 girls can sit in a row so that either all the boys sit together or no two boys sit together, is $________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 17280.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "All boys together: the 5 boys form one block, which with the 4 girls makes 5 units, arranged in $5!$ ways; the boys inside the block are arranged in $5!$ ways. Number of ways $=5!\\times 5!=14400$.\n\nNo two boys together: the 4 girls are arranged in $4!$ ways, leaving 5 gaps (including both ends). The 5 boys must occupy all 5 gaps, one in each, in $5!$ ways. Number of ways $=4!\\times 5!=2880$.\n\nThe two cases cannot happen together, so the required number $=14400+2880=17280$.\n\nHence, the answer is 17280.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xszy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The roots of the quadratic equation $3x^{2}-px+q=0$ are $10^{\\text{th}}$ and $11^{\\text{th}}$ terms of an arithmetic progression with common difference $\\frac{3}{2}$. If the sum of the first 11 terms of this arithmetic progression is 88 , then $q-2p$ is equal to $________$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 474.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\begin{array}{l} S_{11}=\\dfrac{11}{2}(2a+10d)=88 \\\\ a+5d=8 \\\\ a=8-5\\times \\dfrac{3}{2}=\\dfrac{1}{2} \\end{array} \\\\ \\text{Roots are} \\\\ \\begin{array}{l} \\mathrm{T}_{10}=\\mathrm{a}+9\\mathrm{d}=\\dfrac{1}{2}+9\\times \\dfrac{3}{2}=14 \\\\ \\mathrm{T}_{11}=\\mathrm{a}+10\\mathrm{d}=\\dfrac{1}{2}+10\\times \\dfrac{3}{2}=\\dfrac{31}{2} \\\\ \\dfrac{\\mathrm{p}}{3}=\\mathrm{T}_{10}+\\mathrm{T}_{11}=14+\\dfrac{31}{2}=\\dfrac{59}{2} \\\\ \\mathrm{p}=\\dfrac{177}{2} \\\\ \\dfrac{\\mathrm{q}}{3}=\\mathrm{T}_{10}\\times \\mathrm{T}_{11}=7\\times 31=217 \\\\ \\mathrm{q}=651 \\\\ \\mathrm{q}-2\\mathrm{p} \\\\ =651-177 \\\\ =474 \\end{array} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2025-m6t9xt0i",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The variance of the numbers $8,21,34,47,\\ldots ,320$ is $_______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8788.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2025,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2025 (Online) 23rd January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} \\begin{array}{l} \\mathrm{Var}(8,21,34,47,\\ldots \\ldots ,320) \\\\ \\mathrm{Var}(0,13,26,39,\\ldots \\ldots ,312) \\\\ 13^{2}\\cdot \\mathrm{Var}(0,1,2,\\ldots \\ldots ,24) \\\\ 13^{2}\\cdot \\mathrm{Var}(1,2,3,\\ldots \\ldots ,25) \\end{array} \\\\ \\text{So,}σ^{2}=13^{2}\\times \\left (\\dfrac{25^{2}-1}{12}\\right )=8788 \\\\ \\text{Alternate solution} \\\\ \\begin{array}{l} 8+(n-1)13=320 \\\\ 13n=325 \\\\ n=25 \\end{array} \\end{array}$\n\n$\\begin{array}{l} \\text{no. of terms}=25 \\\\ \\begin{array}{l} \\text{mean}=\\dfrac{\\sum \\mathrm{x}_{\\mathrm{i}}}{\\mathrm{n}}=\\dfrac{8+21+\\ldots +320}{25}=\\dfrac{\\frac{25}{2}(8+320)}{25} \\\\ \\text{variance}σ^{2}=\\dfrac{\\sum \\mathrm{x}_{\\mathrm{i}}^{2}}{\\mathrm{n}}-(\\text{mean})^{2} \\\\ =\\dfrac{8^{2}+21^{2}+\\ldots .+320^{2}}{25}-(164)^{2} \\\\ =8788 \\end{array} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2025 (Online) 23rd January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

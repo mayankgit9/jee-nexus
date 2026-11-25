@@ -1,0 +1,1044 @@
+[
+ {
+  "publicId": "PYQ-2026-ml81k4ns",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The area of the region $\\mathrm{R}=\\left \\{(x,y):xy\\leq 8,1\\leq y\\leq x^{2},x\\geq 0\\right \\}$ is",
+  "options": [
+   "$\\frac{2}{3}(20\\log _{e}(2)+9)$",
+   "$\\frac{1}{3}(40\\log _{e}(2)+27)$",
+   "$\\frac{1}{3}(49\\log _{e}(2)-15)$",
+   "$\\frac{2}{3}(24\\log _{e}(2)-7)$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$x\\geq 0$ and $1\\leq y\\leq x^{2}$ give $x\\geq 1$; $xy\\leq 8$ means $y\\leq \\dfrac{8}{x}$. So the region is $1\\leq y\\leq \\min \\left \\{x^{2},\\dfrac{8}{x}\\right \\}$.\n\n$x^{2}=\\dfrac{8}{x}$ at $x=2$, so the upper boundary is $y=x^{2}$ on $[1,2]$ and $y=\\dfrac{8}{x}$ on $[2,8]$, where $\\dfrac{8}{x}=1$ at $x=8$.\n\n$\\text{Area}=\\int\\limits _{1}^{2}\\left (x^{2}-1\\right )dx+\\int\\limits _{2}^{8}\\left (\\dfrac{8}{x}-1\\right )dx=\\left [\\dfrac{x^{3}}{3}-x\\right ]_{1}^{2}+[8\\ln x-x]_{2}^{8}$\n\n$=\\left (\\dfrac{2}{3}+\\dfrac{2}{3}\\right )+(8\\ln 4-6)=16\\ln 2-\\dfrac{14}{3}=\\dfrac{2}{3}(24\\log _{e}2-7)$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4on",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $g(x)=3x^{2}+2x-3,f(0)=-3$ and $4g(f(x))=3x^{2}-32x+72$, then $f(g(2))$ is equal to:",
+  "options": [
+   "$\\frac{7}{2}$",
+   "$-\\frac{25}{6}$",
+   "$\\frac{25}{6}$",
+   "$-\\frac{7}{2}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given\n\n$g(x)=3x^{2}+2x-3,f(0)=-3$, and $4g(f(x))=3x^{2}-32x+72$\n\nSince $g(x)$ is a quadratic function (degree 2) and the composite function $4g(f(x))$ is also a quadratic expression $\\left (3x^{2}-32x+72\\right )$, $f(x)$ must be a linear function.\n\nLet $f(x)=ax+b$.\n\nUsing $f(0)=-3:a(0)+b=-3⟹b=-3$.\n\nSo, $f(x)=ax-3$.\n\nFirst, find $g(f(x))$ by substituting $f(x)$ into $g(x)$ :\n\n$g(f(x))=3(f(x))^{2}+2f(x)-3$\n\nSubstitute this into the given equation $4g(f(x))=3x^{2}-32x+72$ :\n\n$4\\left [3(ax-3)^{2}+2(ax-3)-3\\right ]=3x^{2}-32x+72$\n\nSolve for the Coefficient ' $a$ '\n\nExpand the left side of the equation:\n\n$4\\left [3\\left (a^{2}x^{2}-6ax+9\\right )+2ax-6-3\\right ]=3x^{2}-32x+72$\n\n$4\\left [3a^{2}x^{2}-18ax+27+2ax-9\\right ]=3x^{2}-32x+72$\n\n$4\\left [3a^{2}x^{2}-16ax+18\\right ]=3x^{2}-32x+72$\n\n$12a^{2}x^{2}-64ax+72=3x^{2}-32x+72$\n\nCompare the coefficients:\n\nFor $x^{2}:12a^{2}=3⟹a^{2}=\\frac{1}{4}⟹a=\\pm \\frac{1}{2}$\n\nFor $x$ : $-64a=-32⟹a=\\frac{32}{64}=\\frac{1}{2}$ Thus, $f(x)=\\frac{1}{2}x-3$. Calculate $f(g(2))$\n\nFind $g(2)$\n\n$g(2)=3(2)^{2}+2(2)-3=12+4-3=13$\n\nStep B: Find $f(g(2))$ which is $f(13)$\n\n$\\begin{array}{l} f(13)=\\dfrac{1}{2}(13)-3=6.5-3=3.5=\\dfrac{7}{2} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k5sd",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "A bag contains 10 balls out of which $k$ are red and $(10-k)$ are black, where $0\\leq k\\leq 10$. If three balls are drawn at random without replacement and all of them are found to be black, then the probability that the bag contains 1 red and 9 black balls is:",
+  "options": [
+   "$\\frac{7}{110}$",
+   "$\\frac{7}{11}$",
+   "$\\frac{7}{55}$",
+   "$\\frac{14}{55}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given Terms\n\nTotal Balls ( $n$ ) : 10\n\nRed Balls ( $k$ ) : Variable from 0 to 10 .\n\nBlack Balls : $(10-k)$.\n\nSample Drawn ( $r$ ) : 3 balls, without replacement.\n\nObserved Event (A) : All 3 balls drawn are black.\n\nTarget Event : Find the probability that the bag contained exactly $𝟏$ red and $𝟗$ black balls (which means $k=1$ ).\n\nLet $E_{k}$ be the event that the bag contains $k$ red balls. Since $k$ can be any integer from 0 to 10 , there are 11 possible compositions. Assuming they are equally likely:\n\n$P(E_{k})=\\frac{1}{11}$\n\nThe event $A$ is drawing 3 black balls. The probability of this happening depends on how many black balls $(10-k)$ were in the bag :\n\n$P(A|E_{k})=\\frac{{}^{10-k}C_{3}}{{}^{10}C_{3}}$\n\nNote : For this to be possible, there must be at least 3 black balls, so $10-k\\geq 3$, meaning $k\\leq 7$.\n\nUsing Bayes' Theorem\n\nWe need $P(E_{1}|A)$, which is the probability of having 1 red ball given that 3 black balls were drawn :\n\n$P(E_{1}|A)=\\frac{P(E_{1})\\cdot P(A|E_{1})}{\\sum\\limits _{k=0}^{7}P(E_{k})\\cdot P(A|E_{k})}$\n\nSince $P(E_{k})$ is constant $\\left (\\frac{1}{11}\\right )$ for all $k$, it cancels out :\n\n$P(E_{1}|A)=\\frac{{}^{10-1}C_{3}}{{}^{10}C_{3}+{}^{9}C_{3}+\\cdots +{}^{3}C_{3}}$\n\ndenominator ${}^{10}C_{3}+{}^{9}C_{3}+\\cdots +{}^{3}C_{3}$ can be written as ${}^{3}C_{3}+{}^{4}C_{3}+{}^{5}C_{3}\\cdots {}^{10}C_{3}$\n\nusing identity ${}^{k}C_{k}+{}^{k+1}C_{k}+{}^{k+2}C_{k}+\\ldots {}^{n}C_{k}={}^{n+1}C_{k+1}$\n\nso, denominator become $={}^{11}C_{4}=\\frac{11\\times 10\\times 9\\times 8}{4\\times 3\\times 2\\times 1}=330$\n\nNumerator : ${}^{10-1}C_{3}={}^{9}C_{3}=\\frac{9\\times 8\\times 7}{3\\times 2\\times 1}=84$\n\n$P(E_{1}|A)=\\frac{84}{330}=\\frac{14}{55}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k577",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The mean and variance of 10 observations are 9 and 34.2 , respectively. If 8 of these observations are $2,3,5,10,11,13,15,21$, then the mean deviation about the median of all the 10 observations is",
+  "options": [
+   "7",
+   "4",
+   "5",
+   "6"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let the missing observations be $x$ and $y$.\n\n$\\text{Mean}(\\bar{x})=9:\\frac{2+3+5+10+11+13+15+21+x+y}{10}=9$\n\n$80+x+y=90\\Rightarrow 𝐱+𝐲=𝟏 𝟎$\n\n$\\text{Variance}\\left (σ^{2}\\right )=34.2:σ^{2}=\\frac{\\sum x_{i}^{2}}{n}-(\\bar{x})^{2}$\n\n$\\frac{2^{2}+3^{2}+5^{2}+10^{2}+11^{2}+13^{2}+15^{2}+21^{2}+x^{2}+y^{2}}{10}-9^{2}=34.2$\n\n$\\frac{4+9+25+100+121+169+225+441+x^{2}+y^{2}}{10}-81=34.2$\n\n$\\frac{1094+x^{2}+y^{2}}{10}=115.2$\n\n$1094+x^{2}+y^{2}=1152\\Rightarrow 𝐱^{2}+𝐲^{2}=𝟓 𝟖$\n\nSolving $x+y=10$ and $x^{2}+y^{2}=58$\n\nTo solve the system $x+y=10$ and $x^{2}+y^{2}=58$ by finding $x-y$ use the formula $x-y=\\sqrt{2(x^{2}+y^{2})-(x+y)^{2}}$ :\n\n$x-y=\\sqrt{2(x^{2}+y^{2})-(x+y)^{2}}$\n\n$x-y=\\sqrt{2(58)-(10)^{2}}=\\sqrt{116-100}=\\sqrt{16}$\n\n$x-y=4$\n\nNow add these equations $x+y=10&x-y=4$\n\n$2x=14⟹x=7$\n\nPut $x=7$ in $x+y=10$\n\n$7+y=10⟹y=3$\n\nmissing numbers are 3 and 7 .\n\nFind the Median\n\nThe 10 observations in ascending order are: $2,3,3,5,7,10,11,13,15,21$.\n\nSince $n=10$, the median is the average of the 5th and 6th terms : \n\nMedian $=\\frac{7+10}{2}=$ 8.5\n\nCalculate Mean Deviation about Median\n\n$\\begin{array}{l} \\text{M.D.}(\\text{median})=\\dfrac{\\sum |x_{i}-\\text{Median}|}{n} \\\\ =\\dfrac{|2-8.5|+|3-8.5|+|3-8.5|+|5-8.5|+|7-8.5|+|10-8.5|+|11-8.5|+|13-8.5|+|15-8.5|+|21-8.5|}{10} \\\\ =\\dfrac{6.5+5.5+5.5+3.5+1.5+1.5+2.5+4.5+6.5+12.5}{10}=\\dfrac{50}{10}=𝟓 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4x8",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $α,β$, where $α<β$, are the roots of the equation $λx^{2}-(λ+3)x+3=0$ such that $\\frac{1}{α}-\\frac{1}{β}=\\frac{1}{3}$, then the sum of all possible values of $λ$ is",
+  "options": [
+   "2",
+   "6",
+   "8",
+   "4"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The given equation is $λx^{2}-(λ+3)x+3=0$. We can find the roots by factoring:\n\n$λx^{2}-λx-3x+3=0$\n\n$\\Rightarrow$ $λx(x-1)-3(x-1)=0$\n\n$\\Rightarrow$ $(x-1)(λx-3)=0$\n\nThe two roots are : $x=1,x=\\frac{3}{λ}$\n\nWe are given that $α$ and $β$ are the roots such that $α<β$ and the following condition holds:\n\n$\\frac{1}{α}-\\frac{1}{β}=\\frac{1}{3}$\n\nBecause we don't know if 1 is smaller or larger than $\\frac{3}{λ}$, we must consider two distinct cases.\n\nCase A : $α=1$ and $β=\\frac{3}{λ}$\n\nSubstitute these into the condition $\\frac{1}{α}-\\frac{1}{β}=\\frac{1}{3}$ :\n\n$\\begin{array}{l} \\frac{1}{1}-\\frac{1}{3/λ}=\\frac{1}{3} \\\\ 1-\\frac{λ}{3}=\\frac{1}{3} \\\\ 1-\\frac{1}{3}=\\frac{λ}{3} \\\\ \\frac{2}{3}=\\frac{λ}{3}⟹λ=𝟐 \\end{array}$\n\nCheck the constraint $α<β$ : If $λ=2$, then $β=3/2=1.5$. Since $1<1.5$, this value is valid.\n\nCase B : $α=\\frac{3}{λ}$ and $β=1$\n\nSubstitute these into the condition $\\frac{1}{α}-\\frac{1}{β}=\\frac{1}{3}$ :\n\n$\\begin{array}{l} \\dfrac{1}{3/λ}-\\dfrac{1}{1}=\\dfrac{1}{3} \\\\ \\dfrac{λ}{3}-1=\\dfrac{1}{3} \\\\ \\dfrac{λ}{3}=1+\\dfrac{1}{3} \\\\ \\dfrac{λ}{3}=\\dfrac{4}{3}⟹λ=4 \\end{array}$\n\nCheck the constraint $α<β$ : If $λ=4$, then $α=3/4=0.75$. Since $0.75<1$, this value is valid.\n\nThe possible values for $λ$ are 2 and 4 .\n\n$\\text{Sum}=2+4=6$\n\nThe sum of all possible values of $λ$ is 6.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k5c3",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $y=x$ be the equation of a chord of the circle $\\mathrm{C}_{1}$ (in the closed half-plane $x\\geq 0$ ) of diameter 10 passing through the origin. Let $\\mathrm{C}_{2}$ be another circle described on the given chord as its diameter. If the equation of the chord of the circle $\\mathrm{C}_{2}$, which passes through the point $(2,3)$ and is farthest from the center of $\\mathrm{C}_{2}$, is $x+ay+b=0$, then $a-b$ is equal to",
+  "options": [
+   "-6",
+   "10",
+   "6",
+   "-2"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\nTo find the value of $a-b$,\n\nDetermine the equation of circle $C_{1}$\n\nThe circle $C_{1}$ has a diameter of 10 , so its radius is $R=5$. It passes through the origin ( 0,0 ) and is contained in the closed half-plane $x\\geq 0$.\n\nLet the center of $C_{1}$ be $(h,k)$. Since it passes through $(0,0)$, we have $h^{2}+k^{2}=R^{2}=25$.\n\nFor the circle to lie entirely in the region $x\\geq 0$ while passing through $(0,0)$, the distance from the center to the $y$-axis must be equal to the radius, and the center must have a non-negative $x$-coordinate.\n\nThus, $h=R=5$.\n\nSubstituting $h=5$ into $h^{2}+k^{2}=25$ gives $25+k^{2}=25$, which implies $k=0$.\n\nThe equation of $C_{1}$ is:\n\n$(x-5)^{2}+y^{2}=25$\n\nFind the center of circle $C_{2}$\n\nThe line $y=x$ is a chord of $C_{1}$. We find the intersection points of $y=x$ and $C_{1}$ :\n\n$(x-5)^{2}+x^{2}=25$\n\n$\\Rightarrow$ $x^{2}-10x+25+x^{2}=25$\n\n$\\Rightarrow2x^{2}-10x=0$\n\n$\\Rightarrow$ $2x(x-5)=0$\n\nThe intersection points are $(0,0)$ and $(5,5)$. These are the endpoints of the diameter of circle $C_{2}$.\n\nThe center $M$ of $C_{2}$ is the midpoint of the chord:\n\n$M=\\left (\\frac{0+5}{2},\\frac{0+5}{2}\\right )=(2.5,2.5)$\n\nDetermine the equation of the chord of $C_{2}$\n\nWe are looking for the equation of a chord of $C_{2}$ passing through $P(2,3)$ that is farthest from the center $M(2.5,2.5)$.\n\nIn any circle, the chord passing through a point $P$ that is farthest from the center is the one perpendicular to the radius (or segment) $MP$.\n\nThe slope of the segment $MP$ is:\n\n$m_{MP}=\\frac{3-2.5}{2-2.5}=\\frac{0.5}{-0.5}=-1$\n\nThe slope $m$ of the required chord is the negative reciprocal of $m_{MP}$ :\n\n$m=-\\frac{1}{-1}=1$\n\nUsing the point-slope form for the line through $P(2,3)$ with slope $m=1$ :\n\n$y-3=1(x-2)$\n\n$\\Rightarrow$ $y-3=x-2$\n$\\Rightarrow$ $x-y+1=0$\n\nCalculate $a-b$\n\nThe equation is given in the form $x+ay+b=0$. Comparing this to $x-y+1=0$, we identify:\n\n$\\begin{array}{l} a=-1 \\\\ b=1 \\end{array}$\n\nFinally, we calculate the required value:\n\n$a-b=-1-1=-2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-28th-january-morning-shift/ml81k5c3-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 28th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml81k40a",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{S}=\\left \\{x^{3}+ax^{2}+bx+c:a,b,c\\in \\mathrm{N} \\right.$ and $a,b,c\\leq 20\\}$ be a set of polynomials. Then the number of polynomials in S , which are divisible by $x^{2}+2$, is",
+  "options": [
+   "6",
+   "120",
+   "20",
+   "10"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$S=\\left \\{x^{3}+ax^{2}+bx+c:a,b,c\\in \\mathrm{ℕ}\\text{and}a,b,c\\leq 20\\right \\}\\text{so}a,b,c\\in \\{1,2,3,\\ldots 20\\}$\n\n$x^{3}+ax^{2}+bx+c$ is divisible by $x^{2}+2$\n\n$\\therefore$ $x^{3}+ax^{2}+bx+c=\\left (x^{2}+2\\right )L(x)$\n\nLet $L(x)=x+n$ because L.H.S is cubic have leading coefficient 1 .\n\n$\\begin{array}{ll} x^{3}+ax^{2}+bx+c & =\\left (x^{2}+2\\right )(x+n) \\\\ =x^{3}+x^{2}n+2x+2n \\end{array}$\n\nCompare $n=a,b=2,2n=c⟹c=2a$\n\nso, $c=2a$ and $b=2$\n\nFinding the Number of Possible Polynomials\n\nFor $b$ : There is only $𝟏$ choice $(b=2)$, which is within the range $[1,20]$.\n\nFor $a$ and $c$ : Since $c=2a$, we must ensure $c\\leq 20$.\n\nIf $a=1,c=2$\n\nIf $a=2,c=4$\n\n…\n\nIf $a=10,c=20$ \n\nThere are 10 possible values for the pair ( $a,c$ ).\n\nTotal polynomials $=($ Choices for $b)\\times ($ Choices for $a,c$ pairs $)=1\\times 10=𝟏 𝟎$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k5ta",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:matrices-determinants",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $A,B$ and $C$ be three $2\\times 2$ matrices with real entries such that $B=(I+A)^{-1}$ and $\\mathrm{A}+\\mathrm{C}=\\mathrm{I}$. \n\nIf $\\mathrm{BC}=\\left [\\begin{array}{ll} 1 & -5 \\\\ -1 & 2 \\end{array}\\right ]$ and $\\mathrm{CB}\\left [\\begin{array}{l} x_{1} \\\\ x_{2} \\end{array}\\right ]=\\left [\\begin{array}{l} 12 \\\\ -6 \\end{array}\\right ]$, then $x_{1}+x_{2}$ is",
+  "options": [
+   "4",
+   "2",
+   "0",
+   "-2"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "matrices and determinants"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We are given:\n\n$B=(I+A)^{-1}⟹B^{-1}=I+A$\n\n$A+C=I⟹A=I-C$\n\nSubstitute $A$ into the first equation:\n\n$B^{-1}=I+(I-C)$\n\n$B^{-1}=2I-C........\\text{(1)}$\n\npre-multiply $B:B\\cdot B^{-1}=B(2I-C)I=2B-BC⟹BC=2B-I$ ........ (2)\n\npost multiply in eqn (1): $B^{-1}B=(2I-C)\\cdot BI=2B-CB⟹CB=2B-I$ .......(3)\n\nfrom (2) & (3), $BC=CB$\n\nSet up the System of Equations Since $BC=CB$, we use the given matrix for $BC$ :\n\n$CB=\\left [\\begin{array}{ll} 1 & -5 \\\\ -1 & 2 \\end{array}\\right ]$\n\nNow, substitute this into the vector equation :\n\n$\\left [\\begin{array}{ll} 1 & -5 \\\\ -1 & 2 \\end{array}\\right ]\\left [\\begin{array}{l} x_{1} \\\\ x_{2} \\end{array}\\right ]=\\left [\\begin{array}{l} 12 \\\\ -6 \\end{array}\\right ]$\n\nThis results in two linear equations :\n\n$x_{1}-5x_{2}=12$\n\n$-x_{1}+2x_{2}=-6$\n\nSolve for $x_{1}$ and $x_{2}$ \n\nAdding the two equations :\n\n$(x_{1}-x_{1})+(-5x_{2}+2x_{2})=12-6$\n\n$\\Rightarrow$ $x_{2}=-2$\n\nSubstitute $x_{2}=-2$ into the second equation :\n\n$\\begin{array}{l} -x_{1}+2(-2)=-6 \\\\ -x_{1}-4=-6⟹-x_{1}=-2⟹𝐱_{1}=𝟐 \\end{array}$\n\nFinal result $x_{1}+x_{2}=2+(-2)=𝟎$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k5jp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:coordinate-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let ABC be an equilateral triangle with orthocenter at the origin and the side BC on the line $x+2\\sqrt{2}y=4$. If the co-ordinates of the vertex A are $(α,β)$, then the greatest integer less than or equal to $|α+\\sqrt{2}β|$ is",
+  "options": [
+   "5",
+   "4",
+   "2",
+   "3"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "straight lines and pair of straight lines"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\nOrthocenter $(O):(0,0)$. Since it's an equilateral triangle, this is also the Centroid.\n\nSide BC Line : $x+2\\sqrt{2}y=4$.\n\nVertex A : $(α,β)$.\n\nFind the distance from the Centroid to side BC\n\nThe side $BC$ lies on the line $x+2\\sqrt{2}y-4=0$. The distance from the origin $G(0,0)$ to this line is the length of the \"lower\" part of the median ( $r$ ).\n\nUsing the point-to-line distance formula :\n\n$r=\\frac{|0+2\\sqrt{2}(0)-4|}{\\sqrt{1^{2}+(2\\sqrt{2})^{2}}}=\\frac{|-4|}{\\sqrt{1+8}}=\\frac{4}{3}$\n\nFind the coordinates of Vertex $𝐀(α,β)$\n\nThe centroid $G$ divides the segment $AD$ (where $D$ is the foot of the altitude on $BC$ ) in the ratio $2:1$. Therefore, the distance from $A$ to $G$ is $2r$.\n\n$AG=2\\times \\frac{4}{3}=\\frac{8}{3}$\n\nThe line $AG$ is perpendicular to side $BC$. The slope of $BC$ is $m=-\\frac{1}{2\\sqrt{2}}$, so the slope of the line $AG$ (the altitude) is the negative reciprocal:\n\n$m_{⟂}=2\\sqrt{2}$\n\nSince $A$ lies on the line passing through the origin with slope $2\\sqrt{2}$, its coordinates can be written as:\n\n$α=k,β=2\\sqrt{2}k$\n\nBecause $A$ and the side $BC$ are on opposite sides of the origin (the centroid), and the constant term in our line equation is negative, $A$ must satisfy the condition that its position yields an opposite sign. Substituting these into the distance formula $AG=\\frac{8}{3}$ :\n\n$\\sqrt{k^{2}+(2\\sqrt{2}k)^{2}}=\\frac{8}{3}⟹\\sqrt{9k^{2}}=\\frac{8}{3}⟹3|k|=\\frac{8}{3}⟹|k|=\\frac{8}{9}$\n\nCalculate $|α+\\sqrt{2}β|$\n\nSubstitute $α=k$ and $β=2\\sqrt{2}k$ :\n\n$|α+\\sqrt{2}β|=|k+\\sqrt{2}(2\\sqrt{2}k)|$\n\n$=|k+4k|=|5k|$\n\n$=5\\times \\frac{8}{9}=\\frac{40}{9}\\approx 4.44$\n\ngreatest integer less than or equal to $|α+\\sqrt{2}β|=[4.44]=4$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-28th-january-morning-shift/ml81k5jp-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 28th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2026-ml81k5u4",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f$ be a polynomial function such that $f\\left (x^{2}+1\\right )=x^{4}+5x^{2}+2$, for all $x\\in \\mathrm{ℝ}$.\n\nThen $\\int\\limits _{0}^{3}f(x)dx$ is equal to",
+  "options": [
+   "$\\frac{33}{2}$",
+   "$\\frac{5}{3}$",
+   "$\\frac{27}{2}$",
+   "$\\frac{41}{3}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "We are given the functional equation:\n\n$f\\left (x^{2}+1\\right )=x^{4}+5x^{2}+2$\n\nLet $t=x^{2}+1$. This implies that $x^{2}=t-1$. Now, substitute this into the right side of the equation:\n\n$\\begin{array}{l} f(t)=(t-1)^{2}+5(t-1)+2 \\\\ f(t)=\\left (t^{2}-2t+1\\right )+5t-5+2 \\\\ f(t)=t^{2}+3t-2 \\end{array}$\n\nReplacing $t$ back with $x$, the polynomial function is:\n\n$f(x)=x^{2}+3x-2$\n\nNow, we calculate the definite integral from 0 to 3 :\n\n$\\begin{array}{l} \\int\\limits _{0}^{3}f(x)dx=\\int\\limits _{0}^{3}\\left (x^{2}+3x-2\\right )dx \\\\ \\left [\\dfrac{x^{3}}{3}+\\dfrac{3x^{2}}{2}-2x\\right ]_{0}^{3} \\\\ =\\left (\\dfrac{3^{3}}{3}+\\dfrac{3\\left (3^{2}\\right )}{2}-2(3)\\right )-(0) \\\\ =\\left (\\dfrac{27}{3}+\\dfrac{27}{2}-6\\right )=9+\\dfrac{27}{2}-6=3+\\dfrac{27}{2} \\\\ =\\dfrac{6+27}{2}=\\dfrac{33}{2} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4aa",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\int \\left (\\frac{1-5\\cos ^{2}x}{\\sin ^{5}x\\cos ^{2}x}\\right )dx=f(x)+\\mathrm{C}$, where C is the constant of integration, then $f\\left (\\frac{π}{6}\\right )-f\\left (\\frac{π}{4}\\right )$ is equal to",
+  "options": [
+   "$\\frac{1}{\\sqrt{3}}(26-\\sqrt{3})$",
+   "$\\frac{4}{\\sqrt{3}}(8-\\sqrt{6})$",
+   "$\\frac{1}{\\sqrt{3}}(26+\\sqrt{3})$",
+   "$\\frac{2}{\\sqrt{3}}(4+\\sqrt{6})$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "indefinite integrals"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The integrand splits as\n\n$\\dfrac{1-5\\cos ^{2}x}{\\sin ^{5}x\\cos ^{2}x}=\\sec ^{2}x\\mathrm{cosec}^{5}x-5\\mathrm{cosec}^{5}x$\n\nIntegrating the first term by parts, with $\\mathrm{cosec}^{5}x$ as the first function and $\\sec ^{2}x$ as the second, and using $\\dfrac{d}{dx}\\mathrm{cosec}^{5}x=-5\\mathrm{cosec}^{5}x\\cot x$:\n\n$\\int \\sec ^{2}x\\mathrm{cosec}^{5}xdx=\\tan x\\mathrm{cosec}^{5}x+5\\int \\tan x\\cot x\\mathrm{cosec}^{5}xdx=\\tan x\\mathrm{cosec}^{5}x+5\\int \\mathrm{cosec}^{5}xdx$\n\nThe two $\\int \\mathrm{cosec}^{5}xdx$ terms cancel, so\n\n$f(x)=\\tan x\\mathrm{cosec}^{5}x=\\dfrac{1}{\\sin ^{4}x\\cos x}$\n\nand any added constant cancels in the difference.\n\n$f\\left (\\dfrac{π}{6}\\right )=\\dfrac{1}{\\frac{1}{16}\\cdot \\frac{\\sqrt{3}}{2}}=\\dfrac{32}{\\sqrt{3}},f\\left (\\dfrac{π}{4}\\right )=\\dfrac{1}{\\frac{1}{4}\\cdot \\frac{1}{\\sqrt{2}}}=4\\sqrt{2}$\n\n$f\\left (\\dfrac{π}{6}\\right )-f\\left (\\dfrac{π}{4}\\right )=\\dfrac{32}{\\sqrt{3}}-4\\sqrt{2}=\\dfrac{4}{\\sqrt{3}}\\left (8-\\sqrt{2}\\cdot \\sqrt{3}\\right )=\\dfrac{4}{\\sqrt{3}}\\left (8-\\sqrt{6}\\right )$\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4ud",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $z$ be a complex number such that $|z-6|=5$ and $|z+2-6i|=5$. Then the value of $z^{3}+3z^{2}-15z+141$ is equal to :",
+  "options": [
+   "61",
+   "37",
+   "42",
+   "50"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $z=x+iy$\n\n$|z-(α+iβ)|=r$ represents a circle in the complex plane with centre at $(α,β)$ and radius is $r$ unit.\n\nCartesian equation\n\n$(x-α)^{2}+(y-β)^{2}=r^{2}$\n\nThe equations $|z-6|=5$ and $|z-(-2+6i)|=5$ describe two circles with the same radius $(r=5)$.\n\nCircle 1 : Center $C_{1}=(6,0)$\n\nCircle 2 : Center $C_{2}=(-2,6)$\n\nCartesian equation\n\n$(x-6)^{2}+y^{2}=25\\text{and}(x+2)^{2}+(y-6)^{2}=25$\n\nExpanding both:\n\n$x^{2}-12x+36+y^{2}=25⟹𝐱^{2}+𝐲^{2}-12𝐱+𝟏 𝟏=𝟎...(i)$\n\n$x^{2}+4x+4+y^{2}-12y+36=25⟹𝐱^{2}+𝐲^{2}+𝟒𝐱-𝟏 𝟐𝐲+𝟏 𝟓=𝟎...(ii)$\n\nSubtracting the first equation from the second to find the common chord:\n\n$\\begin{array}{l} (4x-(-12x))-12y+(15-11)=0 \\\\ 16x-12y+4=0⟹𝟒-𝟑𝐲+𝟏=𝟎⟹𝐲=\\dfrac{𝟒𝐱+𝟏}{𝟑} \\end{array}$\n\nSubstitute $y$ back into the first circle equation:\n\n$(x-6)^{2}+\\left (\\frac{4x+1}{3}\\right )^{2}=25$\n\nmultiply both sides by 9\n\n$\\begin{array}{l} 9\\left (x^{2}+36-12x\\right )+16x^{2}+8x+1=225 \\\\ 25x^{2}-100x+100=0 \\\\ x^{2}-4x+4=0 \\\\ (x-2)^{2}=0\\Rightarrow x=2 \\end{array}$\n\nput $x=2$ in $y=(4x+1)/3$\n\n$y=(4\\times 2+1)/3=9/3=3$\n\n$\\text{so}z=2+3i$\n\ncalculate $z^{3}+3z^{2}-15z+141$\n\nCompute $z^{3}$\n\n$\\begin{array}{l} z^{3}=z\\cdot z^{2}=(2+3i)(-5+12i) \\\\ =-10+24i-15i+36i^{2} \\\\ =-10+9i-36 \\\\ =-46+9i \\end{array}$\n\nCompute $z^{2}$\n\n$(2+3i)^{2}=4+12i+9i^{2}=4+12i-9=-5+12i$\n\nso\n\n$\\begin{array}{l} z^{3}=-46+9i \\\\ 3z^{2}=-15+36i \\\\ -15z=-30-45i \\end{array}$\n\nAdd everything\n\n$(-46+9i)+(-15+36i)+(-30-45i)+141$\n\nReal parts:\n\n$-46-15-30+141=50$\n\nImaginary parts:\n\n$9i+36i-45i=0$\n\nSo $z^{3}+3z^{2}-15z+141=50$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4v9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of $\\sum\\limits _{k=1}^{\\infty }(-1)^{k+1}\\left (\\frac{k(k+1)}{k!}\\right )$ is",
+  "options": [
+   "e/2",
+   "$\\sqrt{e}$",
+   "2/e",
+   "1/e"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$S=\\sum\\limits _{k=1}^{\\infty }(-1)^{k+1}\\frac{k(k+1)}{k!}$\n\nFirst, let's simplify the expression inside the summation. We can cancel out the $k$ in the numerator with the $k$ in $k!$ :\n\n$\\frac{k(k+1)}{k!}=\\frac{k(k+1)}{k\\cdot (k-1)!}=\\frac{k+1}{(k-1)!}$\n\nNow, we rewrite the numerator $(k+1)$ in terms of $(k-1)$ to further simplify the fraction:\n\n$k+1=(k-1)+2$\n\nSubstituting this back into the expression:\n\n$\\frac{k+1}{(k-1)!}=\\frac{(k-1)+2}{(k-1)!}=\\frac{k-1}{(k-1)!}+\\frac{2}{(k-1)!}$\n\nFor the first part, $\\frac{k-1}{(k-1)!}=\\frac{1}{(k-2)!}$ (valid for $k\\geq 2$ ). So, the general term $a_{k}$ becomes:\n\n$a_{k}=(-1)^{k+1}\\left [\\frac{1}{(k-2)!}+\\frac{2}{(k-1)!}\\right ]$\n\nExpand the Series\n\nLet's apply the summation $\\sum\\limits _{k=1}^{\\infty }$ to both parts. Note that for $k=1$, the term $1/(k-2)!$ is effectively 0 because the factorial of a negative integer is infinite in the denominator.\n\n$S=\\sum\\limits _{k=2}^{\\infty }\\frac{(-1)^{k+1}}{(k-2)!}+\\sum\\limits _{k=1}^{\\infty }\\frac{2(-1)^{k+1}}{(k-1)!}$\n\nUsing exponential expansion(Taylor series expansion for $e^{x}$ :)\n\n$e^{x}=\\sum\\limits _{n=0}^{\\infty }\\frac{x^{n}}{n!}=1+\\frac{x}{1!}+\\frac{x^{2}}{2!}+\\ldots$\n\nfor $x=-1$ :\n\n$e^{-1}=\\frac{1}{e}=\\sum\\limits _{n=0}^{\\infty }\\frac{(-1)^{n}}{n!}=1-\\frac{1}{1!}+\\frac{1}{2!}-\\frac{1}{3!}+\\ldots$\n\nEvaluate the Summations\n\n$\\sum\\limits _{k=2}^{\\infty }\\frac{(-1)^{k+1}}{(k-2)!}$ \n\nLet $n=k-2$. When $k=2,n=0$. When $k\\to \\infty ,n\\to \\infty$. The exponent becomes $k+1=(n+2)+1=n+3$.\n\n= $\\sum\\limits _{n=0}^{\\infty }\\frac{(-1)^{n+3}}{n!}=(-1)^{3}\\sum\\limits _{n=0}^{\\infty }\\frac{(-1)^{n}}{n!}=-1\\cdot \\left (\\frac{1}{e}\\right )=-\\frac{1}{e}$\n\n$\\sum\\limits _{k=1}^{\\infty }\\frac{2(-1)^{k+1}}{(k-1)!}$ \n\nLet $m=k-1$. When $k=1,m=0$. When $k\\to \\infty ,m\\to \\infty$. The exponent becomes $k+1=(m+1)+1=m+2$.\n\n= $2\\sum\\limits _{m=0}^{\\infty }\\frac{(-1)^{m+2}}{m!}=2(-1)^{2}\\sum\\limits _{m=0}^{\\infty }\\frac{(-1)^{m}}{m!}=2\\cdot \\left (\\frac{1}{e}\\right )=\\frac{2}{e}$\n\nRequired S\n\n$S=-\\frac{1}{e}+\\frac{2}{e}=\\frac{1}{e}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4h0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The common difference of the A.P.: $a_{1},a_{2},\\ldots ,a_{\\mathrm{m}}$ is 13 more than the common difference of the A.P.: $b_{1},b_{2},\\ldots ,b_{n}$. If $b_{31}=-277,b_{43}=-385$ and $a_{78}=327$, then $a_{1}$ is equal to",
+  "options": [
+   "21",
+   "19",
+   "24",
+   "16"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Find common difference of second A.P.\n\nIt is given that $b_{31}=-277$, $b_{43}=-385$\n\nLet $d_{b}$ is common difference of second A.P.\n\n$\\begin{array}{l} b_{31}=b_{1}+30d_{b}---(1) \\\\ b_{43}=b_{1}+42d_{b}---(2) \\end{array}$\n\nSubtract (1) from (2)\n\n$\\begin{array}{l} b_{43}-b_{31}=(42-30)d_{b} \\\\ -385-(-277)=12d_{b} \\\\ d_{b}=\\dfrac{-108}{12}=-9 \\end{array}$\n\nFind the common difference ( $d_{a}$ ) of the first A.P.\n\nThe problem states that $d_{a}$ is 13 more than $d_{b}$ :\n\n$\\begin{array}{l} d_{a}=d_{b}+13 \\\\ d_{a}=-9+13=4 \\end{array}$\n\nCalculate $a_{1}$\n\nWe are given $a_{78}=327$. Using the formula $a_{n}=a_{1}+(n-1)d_{a}$ :\n\n$\\begin{array}{l} 327=a_{1}+(78-1)(4) \\\\ 327=a_{1}+(77)(4) \\\\ 327=a_{1}+308 \\\\ a_{1}=327-308=19 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k5d9",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The value of\n\n$\\lim _{x\\to 0}\\frac{\\log _{e}\\left (\\sec (ex)\\cdot \\sec \\left (e^{2}x\\right )\\cdot \\ldots \\cdot \\sec \\left (e^{10}x\\right )\\right )}{e^{2}-e^{2\\cos x}}$\n\nis equal to",
+  "options": [
+   "$\\frac{\\left (e^{10}-1\\right )}{2e^{2}(e^{2}-1)}$",
+   "$\\frac{\\left (e^{20}-1\\right )}{2e^{2}(e^{2}-1)}$",
+   "$\\frac{\\left (e^{10}-1\\right )}{2(e^{2}-1)}$",
+   "$\\frac{\\left (e^{20}-1\\right )}{2(e^{2}-1)}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let $L=\\lim _{x\\to 0}\\frac{\\ln \\left (\\sec (ex)\\cdot \\sec \\left (e^{2}x\\right )\\cdots \\cdots \\sec \\left (e^{10}x\\right )\\right )}{e^{2}-e^{2\\cos x}}$\n\nSimplify : we use $\\ln (abc\\ldots )=\\ln (a)+\\ln (b)+\\ln (c)\\ldots$ and take $e^{2}$ common in denominator\n\n$L=\\lim _{x\\to 0}\\frac{\\ln \\sec (ex)+\\ln \\sec \\left (e^{2}x\\right )+\\cdots +\\ln \\sec \\left (e^{10}x\\right )}{e^{2}[1-e^{2\\cos x-2}]}$ ........(1)\n\nNow understanding dominating term\n\nIf $A\\to 1\\Rightarrow \\ln A\\approx A-1$\n\nas $x\\to 0\\Rightarrow \\sec (ex)\\to 1\\Rightarrow \\ln \\sec (ex)\\approx \\sec (ex)-1$\n\nso generalized $x\\to 0\\Rightarrow \\ln \\sec \\left (e^{k}x\\right )\\approx \\sec \\left (e^{k}x\\right )-1$\n\nIf $A\\to 0\\Rightarrow e^{A}-1\\approx A$\n\nso in denominator as $x\\to 0\\Rightarrow 2(\\cos x-1)=0$\n\nso, $e^{2(\\cos x-1)}-1\\approx 2(\\cos x-1)$\n\nSubstituting this dominating term in equation (1)\n\n$\\begin{array}{ll} L=\\lim _{x\\to 0}\\dfrac{(\\sec (ex)-1)+\\left (\\sec \\left (e^{2}x\\right )-1\\right )+\\cdots +\\left (\\sec \\left (e^{10}x\\right )-1\\right )}{-e^{2}\\cdot 2(\\cos x-1)} \\\\ = & \\lim _{x\\to 0}\\dfrac{\\left (\\frac{1}{\\cos (ex)}-1\\right )+\\left (\\frac{1}{\\cos (e^{2}x)}-1\\right )+\\cdots +\\left (\\frac{1}{\\cos (e^{10}x)}-1\\right )}{2e^{2}(1-\\cos x)}=\\lim _{x\\to 0}\\dfrac{\\frac{1-\\cos (ex)}{\\cos (ex)}+\\frac{1-\\cos \\left (e^{2}x\\right )}{\\cos (e^{2}x)}+\\cdots +\\frac{1-\\cos \\left (e^{10}x\\right )}{\\cos (e^{10}x)}}{2e^{2}(1-\\cos x)} \\\\ = & \\lim _{x\\to 0}\\dfrac{1-\\cos (ex)}{\\cos (ex)\\cdot 2e^{2}(1-\\cos x)}+\\lim _{x\\to 0}\\dfrac{1-\\cos \\left (e^{2}x\\right )}{\\cos (e^{2}x)\\cdot 2e^{2}(1-\\cos x)}+\\cdots +\\dfrac{1-\\cos \\left (e^{10}x\\right )}{\\cos (e^{10}x)\\cdot 2e^{2}(1-\\cos x)}........(2) \\end{array}$\n\nAgain using dominating term\n\nat $x\\to 0,\\cos \\left (e^{k}x\\right )=1,k=\\{1,2,\\ldots ,10\\}$\n\n$\\begin{array}{ll} L & =\\lim _{x\\to 0}\\dfrac{1-\\cos (ex)}{2e^{2}(1-\\cos x)}+\\lim _{x\\to 0}\\dfrac{1-\\cos \\left (e^{2}x\\right )}{2e^{2}(1-\\cos x)}+\\cdots +\\dfrac{1-\\cos \\left (e^{10}x\\right )}{2e^{2}(1-\\cos x)} \\end{array}$\n\nUnderstanding dominating term again\n\nIf $A\\to 0\\Rightarrow 1-\\cos A\\approx \\frac{A^{2}}{2}$ So $1-\\cos \\left (e^{k}x\\right )\\approx \\frac{\\left (e^{k}x\\right )^{2}}{2},k\\in \\{1,2,\\ldots ,10\\}$\n\nSubstitute this value in equation (2) : \n\n$L=\\frac{\\lim _{x\\to 0}\\frac{(ex)2}{2}}{2e^{2}\\cdot \\frac{x2}{2}}+\\frac{\\lim _{x\\to 0}\\frac{\\left (e2x\\right )2}{2}}{2e^{2}\\cdot \\frac{x2}{2}}+\\cdots +\\frac{\\lim _{x\\to 0}\\frac{\\left (e10x\\right )2}{2}}{2e^{2}\\cdot \\frac{x2}{2}}$\n\n$x^{2}$ and $\\frac{1}{2}$ get cancelled so $L$ becomes : \n\n$L=\\frac{e^{2}}{2e^{2}}+\\frac{\\left (e^{2}\\right )^{2}}{2e^{2}}+\\cdots +\\frac{\\left (e^{10}\\right )^{2}}{2e^{2}}$\n\ntake $\\frac{1}{2e^{2}}$ common $L=\\frac{1}{2e^{2}}\\left [e^{2}+e^{4}+e^{6}+\\cdots +e^{20}\\right ]$\n\n$e^{2}+e^{4}+\\cdots +e^{20}$ is a G.P. whose first term is $e^{2}$ common ratio is $e^{2}$ so sum of G.P. is $a\\frac{(r^{n}-1)}{r-1}$ where $a$ is first term and $r$ is common ratio.\n\n$L=\\frac{1}{2e^{2}}\\times e^{2}\\left [\\frac{\\left (e^{2}\\right )^{10}-1}{e^{2}-1}\\right ]L=\\frac{e^{20}-1}{2(e^{2}-1)}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4mg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{S}=\\{1,2,3,4,5,6,7,8,9\\}$. Let $x$ be the number of 9-digit numbers formed using the digits of the set S such that only one digit is repeated and it is repeated exactly twice. Let $y$ be the number of 9 -digit numbers formed using the digits of the set S such that only two digits are repeated and each of these is repeated exactly twice. Then,",
+  "options": [
+   "$56x=9y$",
+   "$21x=4y$",
+   "$45x=7y$",
+   "$29x=5y$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given, $S=\\{1,2,3,4,5,6,7,8,9\\}$\n\nCalculation for x\n\nFor $x$, we have to form a 9-digit number in which exactly one digit is repeated, and it is repeated exactly twice. So, one digit appears twice, and the remaining 7 digits appear once each.\n\nFirst, select the digit that will be repeated: from $S$, this can be done in ${}^{9}C_{1}$ ways.\n\nNow, from the remaining 8 digits, choose 7 digits that will appear once: this can be done in ${}^{8}C_{7}$ ways.\n\nNow we have 9 digits in total, but one digit is repeated twice. So, the number of different arrangements is $=\\frac{9!}{2!}$ ways.\n\n$x={}^{9}C_{1}\\times {}^{8}C_{7}\\times \\frac{9!}{2!}$\n\nCalculation for y\n\nFor $y$, we have to form a 9-digit number in which exactly two digits are repeated, and each of these is repeated exactly twice. So, two digits appear twice each (total 4 places), and the remaining 5 digits appear once each.\n\nFirst, select the 2 digits that will be repeated from $S$: this can be done in ${}^{9}C_{2}$ ways.\n\nNow, from the remaining 7 digits, choose 5 digits that will appear once: this can be done in ${}^{7}C_{5}$ ways.\n\nNow we have 9 digits in total, with two digits repeated twice each. So, the number of different arrangements is $=\\frac{9!}{2!2!}$ ways.\n\n$y={}^{9}C_{2}\\times {}^{7}C_{5}\\times \\frac{9!}{2!2!}$\n\nTo find the relation between $x$ and $y$, divide $x$ by $y$:\n\nTo find the relation, divide x by y :\n\n$\\frac{x}{y}=\\frac{{}^{9}C_{1}\\times {}^{8}C_{7}\\times \\frac{1}{2}}{{}^{9}C_{2}\\times {}^{7}C_{5}\\times \\frac{1}{4}}=\\frac{9\\times 8\\times \\frac{1}{2}}{36\\times 21\\times \\frac{1}{4}}$\n\nSo,\n\n$\\frac{x}{y}=\\frac{36}{189}=\\frac{4}{21}$\n\n$\\Rightarrow 21x=4y$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k584",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $y=y(x)$ be the solution of the differential equation\n\n$x\\frac{dy}{dx}-\\sin 2y=x^{3}\\left (2-x^{3}\\right )\\cos ^{2}y,x\\neq 0.$\n\nIf $y(2)=0$, then $\\tan (y(1))$ is equal to",
+  "options": [
+   "$-\\frac{7}{4}$",
+   "$-\\frac{3}{4}$",
+   "$\\frac{3}{4}$",
+   "$\\frac{7}{4}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given equation is :\n\n$x\\frac{dy}{dx}-\\sin 2y=x^{3}\\left (2-x^{3}\\right )\\cos ^{2}y,x\\neq 0$\n\nDivide by $x\\cos ^{2}y$\n\n$\\sec ^{2}y\\frac{dy}{dx}-\\frac{\\sin 2y}{x\\cos ^{2}y}=x^{2}\\left (2-x^{3}\\right )$\n\n$\\sec ^{2}y\\frac{dy}{dx}-\\frac{2\\tan y}{x}=2x^{2}-x^{5}$\n\nSubstitute $\\tan y=t$ and differentiate w.r.t $x$\n\n$\\sec ^{2}y\\frac{dy}{dx}=\\frac{dt}{dx}$\n\nEquation (1) becomes linear differential equation.\n\n$\\frac{dt}{dx}-\\frac{2}{x}t=2x^{2}-x^{5}$\n\nIntegrating factor $IF=e^{\\int \\left (-\\frac{2}{x}\\right )dx}=e^{-2\\ln x}=e^{\\ln \\left (\\frac{1}{x2}\\right )}=\\frac{1}{x^{2}}$\n\nSolution of linear differential equation :\n\n$t\\cdot IF=\\int (IF)\\left (2x^{2}-x^{5}\\right )dx$\n\n$\\Rightarrow$ $t\\cdot \\frac{1}{x^{2}}=\\int \\frac{1}{x^{2}}\\left (2x^{2}-x^{5}\\right )dx$\n\n$\\Rightarrow$ $\\frac{t}{x^{2}}=\\int \\left (2-x^{3}\\right )dx=2x-\\frac{x^{4}}{4}+C$\n\nput value of $t=\\tan y$\n\n$\\frac{\\tan y}{x^{2}}=2x-\\frac{x^{4}}{4}+C$\n\nusing condition $y(2)=0$ to find $C$.\n\n$\\frac{\\tan (0)}{2^{2}}=2\\times 2-\\frac{2^{4}}{4}+C⟹C=0$\n\nSo, solution of differential equation is\n\n$\\tan y=2x^{3}-\\frac{x^{6}}{4}$\n\nto calculate $\\tan (y(1))$, put $x=1$ in the solution.\n\n$\\tan (y(1))=2(1)^{3}-\\frac{(1)^{6}}{4}$\n\n$=2-\\frac{1}{4}=\\frac{7}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4pi",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $\\frac{\\tan (\\mathrm{A}-\\mathrm{B})}{\\tan \\mathrm{A}}+\\frac{\\sin ^{2}\\mathrm{C}}{\\sin ^{2}\\mathrm{A}}=1,\\mathrm{A},\\mathrm{B},\\mathrm{C}\\in \\left (0,\\frac{π}{2}\\right )$, then",
+  "options": [
+   "$\\tan \\mathrm{A},\\tan \\mathrm{C},\\tan \\mathrm{B}$ are in A.P.",
+   "$\\tan \\mathrm{A},\\tan \\mathrm{C},\\tan \\mathrm{B}$ are in G.P.",
+   "$\\tan A,\\tan B,\\tan C$ are in G.P.",
+   "$\\tan A,\\tan B,\\tan C$ are in A.P."
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "trigonometric ratio and identites"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given :\n\n$\\frac{\\tan (A-B)}{\\tan A}+\\frac{\\sin ^{2}C}{\\sin ^{2}A}=1$\n\n$\\Rightarrow$ $\\frac{\\sin ^{2}C}{\\sin ^{2}A}=1-\\frac{\\tan (A-B)}{\\tan A}$\n\n$\\Rightarrow\\frac{\\sin ^{2}C}{\\sin ^{2}A}=\\frac{\\tan A-\\tan (A-B)}{\\tan A}$ .....(1)\n\nWe know, $\\tan X-\\tan Y=\\frac{\\sin (X-Y)}{\\cos X\\cos Y}$\n\n$\\therefore$ $\\tan A-\\tan (A-B)=\\frac{\\sin (A-(A-B))}{\\cos A\\cos (A-B)}=\\frac{\\sin B}{\\cos A\\cos (A-B)}$\n\nSubstitute back into (1)\n\n$\\frac{\\sin ^{2}C}{\\sin ^{2}A}=\\frac{\\sin B}{\\cos A\\cos (A-B)\\tan A}$\n\n$\\Rightarrow\\frac{\\sin ^{2}C}{\\sin ^{2}A}=\\frac{\\sin B}{\\cos A\\cos (A-B)\\frac{\\sin A}{\\cos A}}=\\frac{\\sin B}{\\sin A\\cos (A-B)}$\n\n$\\Rightarrow$ $\\sin ^{2}C=\\frac{\\sin ^{2}A\\sin B}{\\sin A\\cos (A-B)}=\\frac{\\sin A\\sin B}{\\cos (A-B)}$\n\nDivide by $\\cos A\\cos B$ :\n\n$\\sin ^{2}C=\\frac{\\tan A\\tan B}{\\frac{\\cos A\\cos B+\\sin A\\sin B}{\\cos A\\cos B}}$\n\n$\\Rightarrow$ $\\sin ^{2}C=\\frac{\\tan A\\tan B}{1+\\tan A\\tan B}$\n\n$\\Rightarrow$ $\\sin ^{2}C=\\frac{\\tan ^{2}C}{1+\\tan ^{2}C}$\n\n$\\Rightarrow$ $\\frac{\\tan ^{2}C}{1+\\tan ^{2}C}=\\frac{\\tan A\\tan B}{1+\\tan A\\tan B}$\n\n$\\Rightarrow$ $\\tan ^{2}C+\\tan ^{2}C\\tan A\\tan B=\\tan A\\tan B+\\tan ^{2}C\\tan A\\tan B$\n\n$\\Rightarrow$ $\\tan ^{2}C=\\tan A\\tan B$\n\n$\\therefore$ $\\tan A,\\tan C,\\tan B$ are in G.P.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k58y",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:three-dimensional-geometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If the distances of the point $(1,2,a)$ from the line $\\frac{x-1}{1}=\\frac{y}{2}=\\frac{z-1}{1}$ along the lines $\\mathrm{L}_{1}:\\frac{x-1}{3}=\\frac{y-2}{4}=\\frac{z-a}{b}$ and $\\mathrm{L}_{2}:\\frac{x-1}{1}=\\frac{y-2}{4}=\\frac{z-a}{c}$ are equal, then $a+b+c$ is equal to",
+  "options": [
+   "4",
+   "6",
+   "7",
+   "5"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "3d geometry"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Let line $L:\\frac{x-1}{1}=\\frac{y}{2}=\\frac{z-1}{1}$, point $P(1,2,a)$.\n\n$\\begin{array}{l} L_{1}:\\dfrac{x-1}{3}=\\dfrac{y-2}{4}=\\dfrac{z-a}{b}=λ_{1}, \\\\ L_{2}:\\dfrac{x-1}{1}=\\dfrac{y-2}{4}=\\dfrac{z-a}{c}=λ_{2}. \\end{array}$\n\nAany point $Q$ on $L$ is $(t+1,2t,t+1)$.\n\nLet $Q_{1}(t_{1}+1,2t_{1},t_{1}+1)$ be point on $L$ and $d_{1}$ be the distance measured from $P(1,2,a)$ along $L_{1}$ such that $|PQ_{1}|=d_{1}$.\n\nSo, direction ratio of $PQ_{1}\\leftarrow$ and line $L_{1}$ are proportional.\n\nDirection ratio of $PQ_{1}\\leftarrow$\n\n$\\begin{array}{l} =Q_{1}-P=(t_{1}+1,2t_{1},t_{1}+1)-(1,2,a)=(t_{1},2t_{1}-2,t_{1}+1-a) \\end{array}$\n\nDirection ratio of $L_{1}=(3,4,b)$.\n\nSo,\n\n$\\frac{t_{1}}{3}=\\frac{2t_{1}-2}{4}=\\frac{t_{1}-a+1}{b}$\n\nEquating\n\n$\\frac{t_{1}}{3}=\\frac{2t_{1}-2}{4}\\text{and}\\frac{t_{1}}{3}=\\frac{t_{1}-a+1}{b}$\n\n$4t_{1}=6t_{1}-6$ and put $t_{1}=3$\n\n$t_{1}=3$ and $\\frac{3}{3}=\\frac{3-a+1}{b}\\Rightarrow a+b=4$…….(1)\n\nSimilarly, let $Q_{2}(t_{2}+1,2t_{2},t_{2}+1)$ be point on $L$ and $d_{2}$ be the distance measured from $P(1,2,a)$ along $L_{2}$ such that $|PQ_{2}|=d_{2}$.\n\nso, direction ratio of $PQ_{2}\\leftarrow$ and $d_{2}$ are proportional.\n\ndirection ratio of $PQ\\leftarrow$,\n\n$\\begin{array}{l} =Q_{2}-P=(t_{2}+1,2t_{2},t_{2}+1)-(1,2,a) \\\\  \\\\ =(t_{2},2t_{2}-2,t_{2}+1-a) \\end{array}$\n\nDirection ratio of $L_{2}=(1,4,c)$.\n\n$\\frac{t_{2}}{1}=\\frac{2t_{2}-2}{4}=\\frac{t_{2}+1-a}{c}$\n\nEquating\n\n$\\frac{t_{2}}{1}=\\frac{2t_{2}-2}{4}\\text{and}\\frac{t_{2}}{1}=\\frac{t_{2}+1-a}{c}$\n\n$4t_{2}=2t_{2}-2$ and put $t_{2}=-1$\n\n$2t_{2}=-2$ and $\\frac{-1}{1}=\\frac{-1+1-a}{c}$\n\n$\\Rightarrow$ $-1=\\frac{-a}{c}\\Rightarrow a=c$ ........(2)\n\nNow, calculating\n\n$d_{1}^{2}=|PQ_{1}|^{2}=t_{1}^{2}+(2t_{1}-2)^{2}+(t_{1}+1-a)^{2},\\text{use}t_{1}=3$\n\n$\\Rightarrow$ $d_{1}^{2}=(3)^{2}+(2\\times 3-2)^{2}+(3+1-a)^{2}$\n\n$=9+16+(4-a)^{2}=25+16+a^{2}-8a$\n\n$=a^{2}-8a+41$\n\nSimilarly,\n\n$d_{2}^{2}=|PQ_{2}|^{2}=t_{2}^{2}+(2t_{2}-2)^{2}+(t_{2}+1-a)^{2}$\n\n$\\Rightarrow$ $d_{2}^{2}=(-1)^{2}+(2\\times (-1)-2)^{2}+(-1+1-a)^{2}\\{~$ use $t_{2}=-1\\}$\n\n$\\Rightarrow$ $d_{2}^{2}=1+16+a^{2}=17+a^{2}$\n\nIt is given that $|PQ_{1}|=|PQ_{2}|\\Rightarrow d_{1}^{2}=d_{2}^{2}$\n\n$\\Rightarrow$ $a^{2}-8a+41=17+a^{2}$\n\n$\\Rightarrow -8a+41=17$\n\n$\\Rightarrow$ $8a=41-17=24\\Rightarrow a=3$\n\nfrom (1) & (2)\n\n$b=4-a=4-3=1\\text{and}c=a=3$\n\nSo value of $a+b+c=3+1+3=7$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4bh",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "For three unit vectors $⃗{a},⃗{b},⃗{c}$ satisfying\n\n$|⃗{a}-⃗{b}|^{2}+|⃗{b}-⃗{c}|^{2}+|⃗{c}-⃗{a}|^{2}=9\\text{and}|2⃗{a}+k⃗{b}+k⃗{c}|=3\\text{,}$\n\nthe positive value of k is :",
+  "options": [
+   "4",
+   "5",
+   "6",
+   "3"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 45,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For unit vectors, $|⃗{a}-⃗{b}|^{2}=|⃗{a}|^{2}+|⃗{b}|^{2}-2⃗{a}\\cdot ⃗{b}=2-2⃗{a}\\cdot ⃗{b}$, and similarly for the other two pairs. So\n\n$6-2(⃗{a}\\cdot ⃗{b}+⃗{b}\\cdot ⃗{c}+⃗{c}\\cdot ⃗{a})=9\\Rightarrow ⃗{a}\\cdot ⃗{b}+⃗{b}\\cdot ⃗{c}+⃗{c}\\cdot ⃗{a}=-\\dfrac{3}{2}$\n\nThen\n\n$|⃗{a}+⃗{b}+⃗{c}|^{2}=3+2(⃗{a}\\cdot ⃗{b}+⃗{b}\\cdot ⃗{c}+⃗{c}\\cdot ⃗{a})=3-3=0$\n\nso $⃗{a}+⃗{b}+⃗{c}=⃗{0}$, that is, $⃗{b}+⃗{c}=-⃗{a}$.\n\nHence $2⃗{a}+k⃗{b}+k⃗{c}=2⃗{a}-k⃗{a}=(2-k)⃗{a}$, and\n\n$|2-k||⃗{a}|=3\\Rightarrow |2-k|=3\\Rightarrow k=5\\text{or}k=-1$\n\nThe positive value is $k=5$.\n\nHence, the correct option is (B).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k5dv",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "For some $θ\\in \\left (0,\\frac{π}{2}\\right )$, let the eccentricity and the length of the latus rectum of the hyperbola $x^{2}-y^{2}\\sec ^{2}θ=8$ be $e_{1}$ and $l_{1}$, respectively, and let the eccentricity and the length of the latus rectum of the ellipse $x^{2}\\sec ^{2}θ+y^{2}=6$ be $e_{2}$ and $l_{2}$, respectively. If $e_{1}^{2}=e_{2}^{2}\\left (\\sec ^{2}θ+1\\right )$, then $\\left (\\frac{l_{1}l_{2}}{e_{1}e_{2}}\\right )\\tan ^{2}θ$ is equal to",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 8.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 46,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given hyperbola\n\n$x^{2}-y^{2}\\sec ^{2}θ=8$\n\nConvert it into standard form.\n\n$\\frac{x^{2}}{8}-\\frac{y^{2}}{8\\cos ^{2}θ}=1$\n\nEccentricity: $e_{1}^{2}=1+\\frac{8\\cos ^{2}θ}{8}=1+\\cos ^{2}θ$ latus rectum\n\n$l_{1}=\\frac{2\\times 8\\cos ^{2}θ}{\\sqrt{8}}=4\\sqrt{2}\\cos ^{2}θ$\n\nGiven ellipse\n\n$x^{2}\\sec ^{2}θ+y^{2}=6$\n\nConvert into standard form.\n\n$\\frac{x^{2}}{6\\cos ^{2}θ}+\\frac{y^{2}}{6}=1$\n\nSince $θ\\in (0,π/2)\\Rightarrow \\cos ^{2}θ<1$ so major axis is y -axis. eccentricity:\n\n$e_{2}^{2}=1-\\frac{6\\cos ^{2}θ}{6}=\\sin ^{2}θ$\n\nLatus rectum\n\n$l_{2}=\\frac{2\\times 6\\cos ^{2}θ}{\\sqrt{6}}=2\\sqrt{6}\\cos ^{2}θ$\n\nIt is given that\n\n$e_{1}^{2}=e_{2}^{2}\\left (\\sec ^{2}θ+1\\right )$\n\nSubstituting values of $e_{1}^{2}$ and $e_{2}^{2}$.\n\n$1+\\cos ^{2}θ=\\sin ^{2}θ\\left (\\frac{1}{\\cos ^{2}θ}+1\\right )$\n\n$\\Rightarrow$ $1+\\cos ^{2}θ=\\sin ^{2}θ\\left (\\frac{1+\\cos ^{2}θ}{\\cos ^{2}θ}\\right )$\n\n$\\Rightarrow$ $\\tan ^{2}θ=1\\Rightarrow θ=\\frac{π}{4}$ as $θ\\in (0,π/2)$\n\n$\\Rightarrow$ $\\frac{l_{1}\\cdot l_{2}}{e_{1}\\cdot e_{2}}=\\frac{\\left (4\\sqrt{2}\\cos ^{2}\\frac{π}{4}\\right )\\left (2\\sqrt{6}\\cos ^{2}\\frac{π}{4}\\right )}{\\sqrt{\\left (1+\\cos ^{2}\\frac{π}{4}\\right )}\\left (\\sin \\frac{π}{4}\\right )}$\n\n$\\therefore$ $\\frac{l_{1}\\cdot l_{2}}{e_{1}\\cdot e_{2}}=\\frac{4\\sqrt{2}\\times \\frac{1}{2}\\times 2\\sqrt{6}\\times \\frac{1}{2}}{\\sqrt{\\left (1+\\frac{1}{2}\\right )}\\left (\\frac{1}{\\sqrt{2}}\\right )}=\\frac{4\\sqrt{3}}{\\frac{\\sqrt{3}}{2}}=8$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k45e",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "In a G.P., if the product of the first three terms is 27 and the set of all possible values for the sum of its first three terms is $\\mathrm{ℝ}-(a,b)$, then $a^{2}+b^{2}$ is equal to\n\n$____$ .",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 90.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 47,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Product of first three terms is 27. \n\nLet the terms be $a/r,a,ar$.\n\n$(a/r)(a)(ar)=27\\Rightarrow a^{3}=27\\Rightarrow a=3$\n\nSum $S=\\frac{3}{r}+3+3r=3\\left (r+\\frac{1}{r}+1\\right )$.\n\nFind the range of the sum\n\nThe sum $S=3\\left (\\frac{1}{r}+1+r\\right )$. \n\nUsing the Arithmetic Mean-Geometric Mean (AM-GM) inequality for $r+\\frac{1}{r}$ :\n\nIf $r>0$, then $r+\\frac{1}{r}\\geq 2$, so $S\\geq 3(2+1)=9$.\n\nIf $r<0$, then $r+\\frac{1}{r}\\leq -2$, so $S\\leq 3(-2+1)=-3$.\n\nThe possible values for the sum are $(-\\infty ,-3]\\cup [9,\\infty )$. \n\nThis is expressed as $\\mathrm{ℝ}-(-3,9)$.\n\nThus, $a=-3$ and $b=9$. \n\nThe final value is $a^{2}+b^{2}=(-3)^{2}+9^{2}=9+81=𝟗 𝟎$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k4mw",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If $k=\\tan \\left (\\frac{π}{4}+\\frac{1}{2}\\cos ^{-1}\\left (\\frac{2}{3}\\right )\\right )+\\tan \\left (\\frac{1}{2}\\sin ^{-1}\\left (\\frac{2}{3}\\right )\\right )$, then \n\nthe number of solutions of the equation $\\sin ^{-1}(kx-1)=\\sin ^{-1}x-\\cos ^{-1}x$ is $____$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 1.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 48,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given :\n\n$k=\\tan \\left (\\frac{π}{4}+\\frac{1}{2}\\cos ^{-1}\\left (\\frac{2}{3}\\right )\\right )+\\tan \\left (\\frac{1}{2}\\sin ^{-1}\\left (\\frac{2}{3}\\right )\\right )$\n\nLet $\\cos ^{-1}\\frac{2}{3}=θ$, so $\\sin ^{-1}\\frac{2}{3}=\\frac{π}{2}-θ$\n\n$k=\\tan \\left (\\frac{π}{4}+\\frac{θ}{2}\\right )+\\tan \\left (\\frac{π}{4}-\\frac{θ}{2}\\right )$\n\n$\\Rightarrow$ $k=\\frac{1+\\tan \\frac{θ}{2}}{1-\\tan \\frac{θ}{2}}+\\frac{1-\\tan \\frac{θ}{2}}{1+\\tan \\frac{θ}{2}}$\n\n$\\Rightarrow$ $k=\\frac{\\left (1+\\tan \\frac{θ}{2}\\right )^{2}+\\left (1-\\tan \\frac{θ}{2}\\right )^{2}}{\\left (1-\\tan \\frac{θ}{2}\\right )\\left (1+\\tan \\frac{θ}{2}\\right )}$\n\n$\\Rightarrow$ $k=\\frac{1+\\tan ^{2}\\frac{θ}{2}+2\\tan \\frac{θ}{2}+1+\\tan ^{2}\\frac{θ}{2}-2\\tan \\frac{θ}{2}}{\\left (1-\\tan \\frac{θ}{2}\\right )\\left (1+\\tan \\frac{θ}{2}\\right )}$\n\n$k=\\frac{2\\left (1+\\tan ^{2}\\frac{θ}{2}\\right )}{\\left (1-\\tan ^{2}\\frac{θ}{2}\\right )}$\n\nUsing the identity $\\cos 2x=\\frac{1-\\tan ^{2}x}{1+\\tan ^{2}x}$ : \n\n$k=\\frac{2}{\\cos θ}$\n\n$\\begin{array}{l} \\text{Since}θ=\\cos ^{-1}\\dfrac{2}{3}\\Rightarrow \\cos θ=\\dfrac{2}{3} \\\\ k=\\dfrac{2}{2/3}=3 \\end{array}$\n\nSolving the main equation :\n\n$\\sin ^{-1}(kx-1)=\\sin ^{-1}x-\\cos ^{-1}x$\n\nPut $k=3$ :\n\n$\\sin ^{-1}(3x-1)=\\sin ^{-1}x-\\left (\\frac{π}{2}-\\sin ^{-1}x\\right )$\n\n$\\Rightarrow$ $\\sin ^{-1}(3x-1)=2\\sin ^{-1}x-\\frac{π}{2}$ ......(1)\n\nDomain of $\\sin ^{-1}(3x-1)\\Rightarrow 3x-1\\in [-1,1]\\Rightarrow x\\in \\left [0,\\frac{2}{3}\\right ]$\n\nDomain of $\\sin ^{-1}x\\Rightarrow x\\in [-1,1]$\n\nIntersection domain of Equation 1 is $x\\in \\left [0,\\frac{2}{3}\\right ]$\n\nTake sine of both sides of Equation 1:\n\n$3x-1=\\sin \\left (2\\sin ^{-1}x-\\frac{π}{2}\\right )$\n\n$\\Rightarrow$ $3x-1=-\\cos \\left (2\\sin ^{-1}x\\right )$\n\nUsing $\\cos 2A=1-2\\sin ^{2}A$ :\n\n$3x-1=-\\left (1-2\\left (\\sin \\left (\\sin ^{-1}x\\right )\\right )^{2}\\right )$\n\n$\\Rightarrow$ $3x-1=2x^{2}-1$\n\n$\\Rightarrow$ $3x=2x^{2}\\Rightarrow x(2x-3)=0$\n\n$\\Rightarrow$ $x=0\\text{or}x=\\frac{3}{2}$\n\n$\\frac{3}{2}$ is outside the domain.\n\nSo, $x=0$ is the only solution.\n\nNumber of solutions $=1$.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k5ka",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The value of $\\sum\\limits _{r=1}^{20}\\left (\\left |\\sqrt{π\\left (\\int\\limits _{0}^{r}x|\\sin πx|dx\\right )}\\right |\\right )$ is $____$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 210.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 49,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "With $J_{r}=\\int\\limits _{0}^{r}x|\\sin πx|dx$, the substitution $πx=t$ gives\n\n$J_{r}=\\dfrac{1}{π^{2}}\\int\\limits _{0}^{rπ}t|\\sin t|dt=\\dfrac{1}{π^{2}}\\sum\\limits _{k=1}^{r}\\int\\limits _{(k-1)π}^{kπ}t|\\sin t|dt$\n\nOn $[(k-1)π,kπ]$ put $t=(k-1)π+u$ with $u\\in [0,π]$; then $|\\sin t|=\\sin u$, so\n\n$\\int\\limits _{(k-1)π}^{kπ}t|\\sin t|dt=\\int\\limits _{0}^{π}\\left ((k-1)π+u\\right )\\sin udu=2(k-1)π+π=(2k-1)π$\n\nusing $\\int\\limits _{0}^{π}\\sin udu=2$ and $\\int\\limits _{0}^{π}u\\sin udu=\\left [-u\\cos u+\\sin u\\right ]_{0}^{π}=π$.\n\nSumming the odd numbers, $\\int\\limits _{0}^{rπ}t|\\sin t|dt=π\\sum\\limits _{k=1}^{r}(2k-1)=πr^{2}$, so $J_{r}=\\dfrac{r^{2}}{π}$.\n\nThen $\\left |\\sqrt{πJ_{r}}\\right |=\\sqrt{r^{2}}=r$, and the required value is\n\n$\\sum\\limits _{r=1}^{20}r=\\dfrac{20\\times 21}{2}=210$\n\nHence, the answer is 210.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2026-ml81k5ee",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $PQR$ be a triangle such that $PQ\\leftarrow =-2\\hat{i}-\\hat{j}+2\\hat{k}$ and $\\mathrm{PR}\\leftarrow =a\\hat{\\mathrm{i}}+b\\hat{\\mathrm{j}}-4\\hat{\\mathrm{k}},a,b\\in \\mathrm{Z}$. Let S be the point on QR , which is equidistant from the lines PQ and PR . If $|\\mathrm{PR}\\leftarrow |=9$ and $\\mathrm{PS}\\leftarrow =\\hat{\\mathrm{i}}-7\\hat{\\mathrm{j}}+2\\hat{\\mathrm{k}}$, then the value of $3a-4b$ is $____$",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 37.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2026,
+  "sourceDate": null,
+  "sourceShift": "Shift 1",
+  "sourceQuestionNumber": 50,
+  "sourceReference": "NTA JEE Main JEE Main 2026 (Online) 28th January Morning Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "[IMG]\n\n\nWe are given that $|PR\\leftarrow |=9$ Using the distance formula for the vector $PR=a\\hat{i}+b\\hat{j}-4\\hat{k}$ :\n\n$\\sqrt{a^{2}+b^{2}+(-4)^{2}}=9$\n\n$\\Rightarrow$ $a^{2}+b^{2}+16=81$\n\n$\\Rightarrow$ $a^{2}+b^{2}=65$\n\nThe problem states that point $S$ lies on $QR$ and is equidistant from lines $PQ$ and $PR$. In a triangle, the locus of points equidistant from two sides is the angle bisector. Therefore, $PS\\leftarrow$ is the internal angle bisector of $\\angle QPR$.\n\nFor an angle bisector $PS\\leftarrow$, it must be collinear with the sum of the unit vectors along the adjacent sides :\n\n$PS\\leftarrow =λ\\left (\\frac{PQ\\leftarrow }{|PQ\\leftarrow |}+\\frac{PR\\leftarrow }{|PR\\leftarrow |}\\right )$\n\nwhere $λ$ is a scalar constant.\n\nFirst, calculate $|PQ\\leftarrow |$ :\n\n$|PQ\\leftarrow |=\\sqrt{(-2)^{2}+(-1)^{2}+2^{2}}=\\sqrt{4+1+4}=3$\n\nNow, set up the bisector equation :\n\n$PS\\leftarrow =λ\\left (\\frac{-2\\hat{i}-\\hat{j}+2\\hat{k}}{3}+\\frac{a\\hat{i}+b\\hat{j}-4\\hat{k}}{9}\\right )$\n\nMultiply the first term by $\\frac{3}{3}$ to get a common denominator:\n\n$PS\\leftarrow =\\frac{λ}{9}((-6+a)\\hat{i}+(-3+b)\\hat{j}+(6-4)\\hat{k})$\n\n$\\Rightarrow$ $PS\\leftarrow =\\frac{λ}{9}((a-6)\\hat{i}+(b-3)\\hat{j}+2\\hat{k})$\n\nWe are given\n\n$PS\\leftarrow =\\hat{i}-7\\hat{j}+2\\hat{k}$\n\nComparing the $\\hat{k}$-components:\n\n$\\Rightarrow$ $\\frac{λ}{9}(2)=2\\Rightarrow λ=9$\n\nSubstitute $λ=9$ into other components:\n\nFor $\\hat{i}$ :\n\n$a-6=1\\Rightarrow a=7$\n\nFor $\\hat{j}$ :\n\n$b-3=-7\\Rightarrow b=-4$\n\nCheck against the constraint :\n\n$a^{2}+b^{2}=7^{2}+(-4)^{2}=49+16=65$\n\nThe values are consistent. value of $3a-4b$ :\n\n$3a-4b=3(7)-4(-4)$ $=21+16=𝟑 𝟕$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2026 (Online) 28th January Morning Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2026-online-28th-january-morning-shift/ml81k5ee-0.webp",
+    "altText": "Original exam figure (JEE Main 2026 (Online) 28th January Morning Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ }
+]

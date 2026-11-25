@@ -1,0 +1,895 @@
+[
+ {
+  "publicId": "PYQ-2023-ldo7cuo5",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let  $⃗{a}=\\hat{i}+2\\hat{j}+3\\hat{k},⃗{b}=\\hat{i}-\\hat{j}+2\\hat{k}$ and $⃗{c}=5\\hat{i}-3\\hat{j}+3\\hat{k}$ be three vectors. If $⃗{r}$ is a vector such\n\nthat, $⃗{r}\\times ⃗{b}=⃗{c}\\times ⃗{b}$ and $⃗{r}\\cdot ⃗{a}=0$, then $25|⃗{r}|^{2}$ is equal to :",
+  "options": [
+   "336",
+   "449",
+   "339",
+   "560"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 23,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\vec{\\mathrm{a}}=\\hat{\\mathrm{i}}+2\\hat{\\mathrm{j}}+3\\hat{\\mathrm{k}}$\n\n$\\vec{\\mathrm{b}}=\\hat{\\mathrm{i}}-\\hat{\\mathrm{j}}+2\\hat{\\mathrm{k}}$\n\n$\\vec{\\mathrm{c}}=\\hat{5\\mathrm{i}}-3\\hat{\\mathrm{j}}+3\\hat{\\mathrm{k}}$\n\n$(\\vec{\\mathrm{r}}-\\vec{\\mathrm{c}})\\times ⃗{b}=0,⃗{r}\\cdot ⃗{a}=0$\n\n$\\Rightarrow ⃗{r}-⃗{c}=λ⃗{b}$\n\nAlso, $(⃗{c}+λ⃗{b})\\cdot ⃗{a}=0$\n\n$\\Rightarrow ⃗{a}\\cdot ⃗{c}+λ(⃗{a}\\cdot ⃗{b})=0$\n\n$\\therefore λ=\\frac{⃗{a}\\cdot ⃗{c}}{⃗{a}\\cdot ⃗{b}}=\\frac{-8}{5}$\n\n$\\vec{\\mathrm{r}}=\\frac{5(5\\hat{\\mathrm{i}}-3\\hat{\\mathrm{i}}+3\\hat{\\mathrm{k}})-8(\\hat{\\mathrm{i}}-\\hat{\\mathrm{j}}+2\\hat{\\mathrm{k}})}{5}$\n\n$\\Rightarrow$ $\\vec{\\mathrm{r}}=\\frac{17\\hat{\\mathrm{i}}-7\\hat{\\mathrm{j}}+\\hat{\\mathrm{k}}}{5}$\n\n$\\Rightarrow$ $|\\vec{\\mathrm{r}}|^{2}=\\frac{1}{25}(289+50)$\n\n$\\Rightarrow$ $25|\\vec{\\mathrm{r}}|^{2}=339$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo7i3kx",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $f:\\mathrm{ℝ}-\\{2,6\\}\\to \\mathrm{ℝ}$ be real valued function\n\n defined as $f(x)=\\frac{x^{2}+2x+1}{x^{2}-8x+12}$.\n\nThen range of $f$ is",
+  "options": [
+   "$\\left (-\\infty ,-\\frac{21}{4}\\right ]\\cup [1,\\infty )$",
+   "$\\left (-\\infty ,-\\frac{21}{4}\\right )\\cup (0,\\infty )$",
+   "$\\left (-\\infty ,-\\frac{21}{4}\\right ]\\cup [0,\\infty )$",
+   "$\\left (-\\infty ,-\\frac{21}{4}\\right ]\\cup \\left [\\frac{21}{4},\\infty \\right )$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 24,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$y=\\frac{x^{2}+2x+1}{x^{2}-8x+12}$\n\n$\\Rightarrow (y-1)x^{2}-(8y+2)x+12y-1=0$\n\nLet $y\\neq 1$, then $D\\geq 0$\n\n$4(4y+1)^{2}-4(y-1)(12y-1)\\geq 0$\n\n$\\Rightarrow 16y^{2}+1+8y-\\left (12y^{2}-13y+1\\right )\\geq 0$\n\n$\\Rightarrow 4y^{2}+21y\\geq 0$\n\n$\\Rightarrow y\\in \\left (-\\infty ,-\\frac{21}{4}\\right ]\\cup [0,\\infty )-\\{1\\}$\n\n$\\text{for}y=1\\text{,}$\n\n$\\begin{array}{l} -8x+12=2x+1 \\\\  \\\\ x=\\dfrac{11}{10}\\therefore I\\in R \\end{array}$\n\n$\\therefore$ Range $=\\left (-\\infty ,-\\frac{21}{4}\\right ]\\cup [0,\\infty )$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo7nrak",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The equation $\\mathrm{e}^{4x}+8\\mathrm{e}^{3x}+13\\mathrm{e}^{2x}-8\\mathrm{e}^{x}+1=0,x\\in \\mathrm{ℝ}$ has :",
+  "options": [
+   "two solutions and both are negative",
+   "two solutions and only one of them is negative",
+   "four solutions two of which are negative",
+   "no solution"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 25,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "quadratic equation and inequalities"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$e^{4x}+8e^{3x}+13e^{2x}-8e^{x}+1=0$\n\nLet $\\mathrm{e}^{\\mathrm{x}}=\\mathrm{t}$\n\nNow, $\\mathrm{t}^{4}+8\\mathrm{t}^{3}+13\\mathrm{t}^{2}-8\\mathrm{t}+1=0$\n\nDividing equation by $\\mathrm{t}^{2}$\n\n$\\begin{array}{l} t^{2}+8t+13-\\dfrac{8}{t}+\\dfrac{1}{t^{2}}=0 \\\\  \\\\ t^{2}+\\dfrac{1}{t^{2}}+8\\left (t-\\dfrac{1}{t}\\right )+13=0 \\\\  \\\\ \\left (t-\\dfrac{1}{t}\\right )^{2}+2+8\\left (t-\\dfrac{1}{t}\\right )+13=0 \\end{array}$\n\nLet $\\mathrm{t}-\\frac{1}{\\mathrm{t}}=\\mathrm{z}$\n\n$z^{2}+8z+15=0$\n\n$\\begin{array}{l} (z+3)(z+5)=0 \\end{array}$\n\n$z=-3\\text{or}z=-5$\n\nSo, $\\mathrm{t}-\\frac{1}{\\mathrm{t}}=-3$ or $\\mathrm{t}-\\frac{1}{\\mathrm{t}}=-5$\n\n$t^{2}+3t-1=0$ or $t^{2}+5t-1=0$\n\n$\\mathrm{t}=\\frac{-3\\pm \\sqrt{13}}{2}$ or $\\mathrm{t}=\\frac{-5\\pm \\sqrt{29}}{2}$\n\nas $t=e^{x}$ so $t$ must be positive,\n\n$t=\\frac{\\sqrt{13}-3}{2}\\text{or}\\frac{\\sqrt{29}-5}{2}$\n\nSo, $x=\\ln \\left (\\frac{\\sqrt{13}-3}{2}\\right )$ or $x=\\ln \\left (\\frac{\\sqrt{29}-5}{2}\\right )$\n\nHence two solutions and both are negative.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo7xp9f",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:trigonometry",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let (a, b) $\\subset (0,2π)$ be the largest interval for which $\\sin ^{-1}(\\sin θ)-\\cos ^{-1}(\\sin θ)>0,θ\\in (0,2π)$,\n\nholds. \n\nIf $αx^{2}+βx+\\sin ^{-1}\\left (x^{2}-6x+10\\right )+\\cos ^{-1}\\left (x^{2}-6x+10\\right )=0$ and $α-β=b-a$, then $α$ is equal to :",
+  "options": [
+   "$\\frac{π}{16}$",
+   "$\\frac{π}{48}$",
+   "$\\frac{π}{8}$",
+   "$\\frac{π}{12}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 26,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "inverse trigonometric functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\sin ^{-1}\\sin θ-\\left (\\frac{π}{2}-\\sin ^{-1}\\sin θ\\right )>0$\n\n$\\Rightarrow \\sin ^{-1}\\sin θ>\\frac{π}{4}$\n\n$\\Rightarrow \\sin θ>\\frac{1}{\\sqrt{2}}$\n\nSo, $θ\\in \\left (\\frac{π}{4},\\frac{3π}{4}\\right )$\n\n$θ\\in \\left (\\frac{π}{4},\\frac{3π}{4}\\right )=(\\mathrm{a},\\mathrm{b})$\n\n$b-a=\\frac{π}{2}=α-β$\n\n$\\Rightarrow β=α-\\frac{π}{2}$\n\n$\\Rightarrow αx^{2}+β\\mathrm{x}+\\sin ^{-1}\\left [(\\mathrm{x}-3)^{2}+1\\right ]+\\cos ^{-1}\\left [(\\mathrm{x}-3)^{2}+1\\right ]=0$\n\n$x=3,9α+3β+\\frac{π}{2}+0=0$ \n\n$\\begin{array}{l} \\Rightarrow 9α+3\\left (α-\\dfrac{π}{2}\\right )+\\dfrac{π}{2}=0 \\\\  \\\\ \\Rightarrow 12α-π=0 \\\\  \\\\ α=\\dfrac{π}{12} \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo82cg6",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $α>0$. If $\\int\\limits _{0}^{α}\\frac{x}{\\sqrt{x+α}-\\sqrt{x}}\\mathrm{d}x=\\frac{16+20\\sqrt{2}}{15}$, then $α$ is equal to :",
+  "options": [
+   "4",
+   "2",
+   "$2\\sqrt{2}$",
+   "$\\sqrt{2}$"
+  ],
+  "correctOptions": [
+   1
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 27,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$I=\\int\\limits _{0}^{α}\\frac{x}{\\sqrt{x+α}-\\sqrt{x}}dx,α>0$\n\n$\\begin{array}{l} =\\dfrac{1}{α}\\int\\limits _{0}^{α}x(\\sqrt{x+α}+\\sqrt{x})dx \\end{array}$\n\n$\\begin{array}{ll}  & =\\dfrac{1}{α}\\int\\limits _{0}^{α}\\left (x\\sqrt{x+α}+x\\sqrt{x}\\right )dx \\\\  & =\\dfrac{1}{α}\\int\\limits _{0}^{α}\\left [(x+α-α)\\sqrt{x+α}+x^{\\frac{3}{2}}\\right ]dx \\end{array}$\n\n$\\begin{array}{l} =\\dfrac{1}{α}\\int\\limits _{0}^{α}\\left [(x+α)^{3/2}-α(x+α)^{1/2}+x^{3/2}\\right ]dx \\\\  \\\\ =\\dfrac{1}{α}\\left [\\dfrac{2}{5}(x+α)^{5/2}-α\\dfrac{2}{3}(x+α)^{3/2}+\\dfrac{2}{5}x^{5/2}\\right ]_{0}^{α} \\\\  \\\\ =\\dfrac{1}{α}\\left (\\dfrac{2}{5}(2α)^{5/2}-\\dfrac{2α}{3}(2α)^{3/2}+\\dfrac{2}{5}α^{5/2}-\\dfrac{2}{5}α^{5/2}+\\dfrac{2}{3}α^{5/2}\\right ) \\\\  \\\\ =\\dfrac{1}{α}\\left (\\dfrac{2^{7/2}α^{5/2}}{5}-\\dfrac{2^{5/2}α^{5/2}}{3}+\\dfrac{2}{3}α^{5/2}\\right )=α^{3/2}\\left (\\dfrac{2^{7/2}}{5}-\\dfrac{2^{5/2}}{3}+\\dfrac{2}{3}\\right ) \\\\  \\\\ =\\dfrac{α^{3/2}}{15}(24\\sqrt{2}-20\\sqrt{2}+10)=\\dfrac{α^{3/2}}{15}(4\\sqrt{2}+10) \\end{array}$\n\nNow, $\\frac{α^{3/2}}{15}(4\\sqrt{2}+10)=\\frac{16+20\\sqrt{2}}{15}=\\frac{2\\sqrt{2}(4\\sqrt{2}+10)}{15}$\n\n$\\Rightarrow α^{3/2}=2\\sqrt{2}=2^{3/2}$\n\n$\\Rightarrow α=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo85ulg",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:statistics",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let the mean and standard deviation of marks of class A of 100 students be respectively 40 and $α(>$\n\n0 ), and the mean and standard deviation of marks of class $B$ of $n$ students be respectively 55 and 30\n\n$-α$. If the mean and variance of the marks of the combined class of $100+\\mathrm{n}$ students are\n\nrespectively 50 and 350 , then the sum of variances of classes $A$ and $B$ is :",
+  "options": [
+   "450",
+   "900",
+   "650",
+   "500"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 28,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "statistics"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{lll} 𝐀 & 𝐁 & 𝐀+𝐁 \\\\ \\mathrm{x}–_{1}=40 & \\mathrm{x}–_{2}=55 & \\mathrm{x}–=50 \\\\ σ_{1}=α & σ_{2}=30-α & σ^{2}=350 \\\\ \\mathrm{n}_{1}=100 & \\mathrm{n}_{2}=\\mathrm{n} & 100+\\mathrm{n} \\\\  \\\\ \\mathrm{x}–=\\frac{100\\times 40+55\\mathrm{n}}{100+\\mathrm{n}} &  \\end{array}$\n\n$\\begin{array}{l} 5000+50\\mathrm{n}=4000+55\\mathrm{n} \\\\  \\\\ 1000=5\\mathrm{n} \\\\  \\\\ \\mathrm{n}=200 \\\\  \\\\ σ_{1}^{2}=\\dfrac{\\sum \\mathrm{x}_{\\mathrm{i}}^{2}}{100}-40^{2} \\\\  \\\\ σ_{2}^{2}=\\dfrac{\\sum \\mathrm{x}_{\\mathrm{j}}^{2}}{200}-55^{2} \\\\  \\\\ 350=σ^{2}=\\dfrac{\\sum \\mathrm{x}_{\\mathrm{i}}{}^{2}+\\sum \\mathrm{x}_{\\mathrm{j}}^{2}}{300}-(\\mathrm{x}–)^{2} \\\\  \\\\ 350=\\dfrac{\\left (1600+α^{2}\\right )\\times 100+\\left [(30-α)^{2}+3025\\right ]\\times 200}{300}-(50)^{2} \\\\  \\\\ 2850\\times 3=α^{2}+2(30-α)^{2}+1600+6050 \\\\  \\\\ 8550=α^{2}+2(30-α)^{2}+7650 \\\\  \\\\ α^{2}+2(30-α)^{2}=900 \\\\  \\\\ α^{2}-40α+300=0 \\\\  \\\\ α=10,30 \\\\  \\\\ σ_{1}^{2}+σ_{2}^{2}=10^{2}+20^{2}=500 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo8c1vp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sequences-series",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $a_{1},a_{2},a_{3},\\ldots$ be an A.P. If $a_{7}=3$, the product $a_{1}a_{4}$ is minimum and the sum of its first $n$ terms is zero, then $n!-4a_{n(n+2)}$ is equal to :",
+  "options": [
+   "24",
+   "$\\frac{381}{4}$",
+   "9",
+   "$\\frac{33}{4}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 29,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sequences and series"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$a_{7}=3\\Rightarrow a+6d=3\\Rightarrow a=3-6d$\n\n$\\begin{array}{l} a_{1}\\cdot a_{4}=a(a+3d) \\\\  \\\\ \\Rightarrow (3-6d)(3-6d+3d) \\\\  \\\\ \\Rightarrow 3(1-2d)3(1-d) \\\\  \\\\ \\Rightarrow 9\\left (2d^{2}-3d+1\\right ) \\end{array}$\n\nLet $f(d)=2d^{2}-3d+1$\n\n$f^{'}(d)=4d-3\\Rightarrow d=\\frac{3}{4}$\n\n$\\therefore a=3-6\\cdot \\frac{3}{4}=3-\\frac{9}{2}=-\\frac{3}{2}$\n\n$S_{n}=0$\n\n$\\frac{n}{2}(2a+(n-1)d)=0$\n\n$\\Rightarrow 2\\cdot \\left (-\\frac{3}{2}\\right )+(n-1)\\left (\\frac{3}{4}\\right )=0$\n\n$\\Rightarrow \\quad 3=\\frac{3}{4}(n-1)$\n\n$\\Rightarrow n=5$\n\nNow, $n!-4\\cdot a_{n(n+2)}$\n\n$\\begin{array}{l} =5!-4\\cdot a_{35} \\\\  \\\\ =120-4\\left (-\\dfrac{3}{2}+34\\cdot \\dfrac{3}{4}\\right ) \\\\  \\\\ =120-(-6+102) \\\\  \\\\ =120-(96) \\\\  \\\\ =24 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo8iriz",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:complex-numbers",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The complex number $z=\\frac{i-1}{\\cos \\frac{π}{3}+i\\sin \\frac{π}{3}}$ is equal to :",
+  "options": [
+   "$\\cos \\frac{π}{12}-i\\sin \\frac{π}{12}$",
+   "$\\sqrt{2}\\left (\\cos \\frac{π}{12}+i\\sin \\frac{π}{12}\\right )$",
+   "$\\sqrt{2}i\\left (\\cos \\frac{5π}{12}-i\\sin \\frac{5π}{12}\\right )$",
+   "$\\sqrt{2}\\left (\\cos \\frac{5π}{12}+i\\sin \\frac{5π}{12}\\right )$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 30,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "complex numbers"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\mathrm{Z}=\\frac{\\mathrm{i}-1}{\\cos \\frac{π}{3}+\\mathrm{i}\\sin \\frac{π}{3}}=\\frac{\\mathrm{i}-1}{\\frac{1}{2}+\\frac{\\sqrt{3}}{2}\\mathrm{i}}$\n\n$=\\frac{i-1}{\\frac{1}{2}+\\frac{\\sqrt{3}}{2}\\mathrm{i}}\\times \\frac{\\frac{1}{2}-\\sqrt{\\frac{3}{2}}\\mathrm{i}}{\\frac{1}{2}-\\sqrt{3/2}\\mathrm{i}}=\\frac{\\sqrt{3}-1}{2}+\\frac{\\sqrt{3}+1}{2}\\mathrm{i}$\n\nApply polar form,\n\n$r\\cos θ=\\frac{\\sqrt{3}-1}{2}$\n\n$r\\sin θ=\\frac{\\sqrt{3}+1}{2}$\n\nNow, $\\tan θ=\\frac{\\sqrt{3}+1}{\\sqrt{3}-1}$\n\nSo, $θ=\\frac{5π}{12}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo96adc",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Among the relations\n\n$\\mathrm{S}=\\left \\{(\\mathrm{a},\\mathrm{b}):\\mathrm{a},\\mathrm{b}\\in \\mathrm{ℝ}-\\{0\\},2+\\frac{\\mathrm{a}}{\\mathrm{b}}>0\\right \\}$\n\n and $\\mathrm{T}=\\left \\{(\\mathrm{a},\\mathrm{b}):\\mathrm{a},\\mathrm{b}\\in \\mathrm{ℝ},\\mathrm{a}^{2}-\\mathrm{b}^{2}\\in \\mathrm{ℤ}\\right \\}$,",
+  "options": [
+   "$\\mathrm{S}$ is transitive but $\\mathrm{T}$ is not",
+   "both $\\mathrm{S}$ and $\\mathrm{T}$ are symmetric",
+   "neither $S$ nor $T$ is transitive",
+   "$T$ is symmetric but $S$ is not"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 31,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "sets and relations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For relation $\\mathrm{T}=\\mathrm{a}^{2}-\\mathrm{b}^{2}=-\\mathrm{I}$\n\nThen, $(\\mathrm{b},\\mathrm{a})$ on relation $\\mathrm{R}$\n\n$\\Rightarrow \\mathrm{b}^{2}-\\mathrm{a}^{2}=-\\mathrm{I}$\n\n$\\therefore \\mathrm{T}$ is symmetric\n\n$\\mathrm{S}=\\left \\{(\\mathrm{a},\\mathrm{b}):\\mathrm{a},\\mathrm{b}\\in \\mathrm{R}-\\{0\\},2+\\frac{\\mathrm{a}}{\\mathrm{b}}>0\\right \\}$\n\n$2+\\frac{\\mathrm{a}}{\\mathrm{b}}>0\\Rightarrow \\frac{\\mathrm{a}}{\\mathrm{b}}>-2,\\Rightarrow \\frac{\\mathrm{b}}{\\mathrm{a}}<\\frac{-1}{2}$\n\nIf $(b,a)\\in 𝐒$ then\n\n$2+\\frac{\\mathrm{b}}{\\mathrm{a}}$ not necessarily positive\n\n$\\therefore \\mathrm{S}$ is not symmetric",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo9i6yu",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:sets-relations-functions",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The absolute minimum value, of the function\n\n$f(x)=\\left |x^{2}-x+1\\right |+\\left [x^{2}-x+1\\right ]$, \n\nwhere $[t]$ denotes the greatest integer function, in the interval $[-1,2]$, is :",
+  "options": [
+   "$\\frac{3}{4}$",
+   "$\\frac{3}{2}$",
+   "$\\frac{1}{4}$",
+   "$\\frac{5}{4}$"
+  ],
+  "correctOptions": [
+   0
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 32,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "functions"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\mathrm{f}(\\mathrm{x})=\\left |\\mathrm{x}^{2}-\\mathrm{x}+1\\right |+\\left [\\mathrm{x}^{2}-\\mathrm{x}+1\\right ];\\mathrm{x}\\in [-1,2]$\n\nLet $g(x)=x^{2}-x+1$\n\n$=\\left (x-\\frac{1}{2}\\right )^{2}+\\frac{3}{4}$\n\n$\\because \\left |\\mathrm{x}^{2}-\\mathrm{x}+1\\right |\\text{and}\\left [\\mathrm{x}^{2}-\\mathrm{x}+1\\right ]$\n\nBoth have minimum value at $\\mathrm{x}=1/2$\n\n$\\Rightarrow$ Minimum $\\mathrm{f}(\\mathrm{x})=\\frac{3}{4}+0$\n\n$=\\frac{3}{4}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo9n0jy",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "If $𝜙(x)=\\frac{1}{\\sqrt{x}}\\int\\limits _{\\frac{π}{4}}^{x}\\left (4\\sqrt{2}\\sin t-3𝜙^{'}(t)\\right )dt,x>0$, \n\nthen $𝜙^{'}\\left (\\frac{π}{4}\\right )$ is equal to :",
+  "options": [
+   "$\\frac{4}{6+\\sqrt{π}}$",
+   "$\\frac{4}{6-\\sqrt{π}}$",
+   "$\\frac{8}{\\sqrt{π}}$",
+   "$\\frac{8}{6+\\sqrt{π}}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 33,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "definite integration"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$𝜙(x)=\\frac{1}{\\sqrt{x}}\\int\\limits _{π/4}^{x}\\left (4\\sqrt{2}\\sin t-3𝜙^{'}(t)\\right )dt$\n\n$\\Rightarrow 𝜙^{'}(x)=\\frac{-1}{2x^{3/2}}\\int\\limits _{π/4}^{x}\\left (4\\sqrt{2}\\sin t-3𝜙^{'}(t)\\right )dt$\n\n$+\\frac{1}{\\sqrt{x}}\\left (4\\sqrt{2}\\sin (x)-3𝜙^{'}(x)\\right )$\n\nAt, $x=\\frac{π}{4}$\n\n$𝜙^{'}\\left (\\frac{π}{4}\\right )=\\frac{-1}{2\\left (\\frac{π}{4}\\right )^{3/2}}\\times 0+\\sqrt{\\frac{4}{π}}\\left (4\\sqrt{2}\\times \\frac{1}{\\sqrt{2}}-3𝜙^{'}\\left (\\frac{π}{4}\\right )\\right )$\n\n$\\Rightarrow 𝜙^{'}\\left (\\frac{π}{4}\\right )\\left [1+\\frac{6}{\\sqrt{π}}\\right ]=\\frac{2}{\\sqrt{π}}\\times 4$\n\n$\\Rightarrow 𝜙^{'}\\left (\\frac{π}{4}\\right )=\\frac{8}{6+\\sqrt{π}}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldo9yx82",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:conic-sections",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $\\mathrm{H}$ be the hyperbola, whose foci are $(1\\pm \\sqrt{2},0)$ and eccentricity is $\\sqrt{2}$. Then the length of its latus rectum is :",
+  "options": [
+   "$\\frac{5}{2}$",
+   "3",
+   "2",
+   "$\\frac{3}{2}$"
+  ],
+  "correctOptions": [
+   2
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 34,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "hyperbola"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2\\mathrm{ae}=|(1+\\sqrt{2})-(1-\\sqrt{2})|=2\\sqrt{2}$\n\n$\\Rightarrow$ $\\mathrm{ae}=\\sqrt{2}$\n\n$\\Rightarrow$ $\\mathrm{a}=1$\n\n$\\Rightarrow \\mathrm{b}=1\\because \\mathrm{e}=\\sqrt{2}\\Rightarrow$ Hyperbola is rectangular\n\n$\\Rightarrow \\mathrm{L}.\\mathrm{R}=\\frac{2\\mathrm{b}^{2}}{\\mathrm{a}}=2$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldoa27ax",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:limits-continuity-differentiability",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "$\\lim _{x\\to \\infty }\\frac{(\\sqrt{3x+1}+\\sqrt{3x-1})^{6}+(\\sqrt{3x+1}-\\sqrt{3x-1})^{6}}{\\left (x+\\sqrt{x^{2}-1}\\right )^{6}+\\left (x-\\sqrt{x^{2}-1}\\right )^{6}}x^{3}$",
+  "options": [
+   "is equal to 9",
+   "is equal to $\\frac{27}{2}$",
+   "does not exist",
+   "is equal to 27"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 35,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "limits continuity and differentiability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Taking out the dominant powers of $x$:\n\n$(\\sqrt{3x+1}+\\sqrt{3x-1})^{6}+(\\sqrt{3x+1}-\\sqrt{3x-1})^{6}=x^{3}\\left [\\left (\\sqrt{3+\\frac{1}{x}}+\\sqrt{3-\\frac{1}{x}}\\right )^{6}+\\left (\\sqrt{3+\\frac{1}{x}}-\\sqrt{3-\\frac{1}{x}}\\right )^{6}\\right ]$\n\n$\\left (x+\\sqrt{x^{2}-1}\\right )^{6}+\\left (x-\\sqrt{x^{2}-1}\\right )^{6}=x^{6}\\left [\\left (1+\\sqrt{1-\\frac{1}{x^{2}}}\\right )^{6}+\\left (1-\\sqrt{1-\\frac{1}{x^{2}}}\\right )^{6}\\right ]$\n\nWith the extra factor $x^{3}$, the powers of $x$ cancel: $\\dfrac{x^{3}\\cdot x^{3}}{x^{6}}=1$.\n\nAs $x\\to \\infty$, the first bracket tends to $(2\\sqrt{3})^{6}+0$ and the second to $2^{6}+0$, so the limit is\n\n$\\frac{(2\\sqrt{3})^{6}}{2^{6}}=\\left (\\sqrt{3}\\right )^{6}=27$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldoa5dpt",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:differential-equations",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "Let $y=y(x)$ be the solution of the differential equation \n\n$\\left (3y^{2}-5x^{2}\\right )y\\mathrm{d}x+2x\\left (x^{2}-y^{2}\\right )\\mathrm{d}y=0$ \n\nsuch that $y(1)=1$. Then $\\left |(y(2))^{3}-12y(2)\\right |$ is equal to :",
+  "options": [
+   "64",
+   "$16\\sqrt{2}$",
+   "32",
+   "$32\\sqrt{2}$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 36,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "differential equations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The equation gives\n\n$\\dfrac{dy}{dx}=\\dfrac{y(5x^{2}-3y^{2})}{2x(x^{2}-y^{2})},$\n\nwhich is homogeneous. Put $y=mx$:\n\n$m+x\\dfrac{dm}{dx}=\\dfrac{m(5-3m^{2})}{2(1-m^{2})}\\Rightarrow x\\dfrac{dm}{dx}=\\dfrac{m(3-m^{2})}{2(1-m^{2})}.$\n\nSeparating the variables and using partial fractions,\n\n$\\dfrac{dx}{x}=\\dfrac{2(m^{2}-1)}{m(m^{2}-3)}dm=\\left (\\dfrac{2}{3m}+\\dfrac{4m}{3(m^{2}-3)}\\right )dm.$\n\nIntegrating,\n\n$\\ln |x|=\\dfrac{2}{3}\\ln |m|+\\dfrac{2}{3}\\ln |m^{2}-3|+C\\Rightarrow |m(m^{2}-3)|=k|x|^{3/2}.$\n\nAt $x=1$, $y=1$: $m=1$ and $|1-3|=k$, so $k=2$. With $m=\\dfrac{y}{x}$ and $x>0$:\n\n$\\left |\\dfrac{y(y^{2}-3x^{2})}{x^{3}}\\right |=2x^{3/2}\\Rightarrow \\left |y^{3}-3x^{2}y\\right |=2x^{9/2}.$\n\nAt $x=2$:\n\n$\\left |(y(2))^{3}-12y(2)\\right |=2\\cdot 2^{9/2}=2\\cdot 16\\sqrt{2}=32\\sqrt{2}.$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldoa8b8u",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:circles",
+  "subtopic": null,
+  "type": "mcq_single",
+  "text": "The set of all values of $a^{2}$ for which the line $x+y=0$ bisects two distinct chords drawn from a point $\\mathrm{P}\\left (\\frac{1+a}{2},\\frac{1-a}{2}\\right )$ on the circle $2x^{2}+2y^{2}-(1+a)x-(1-a)y=0$, is equal to :",
+  "options": [
+   "$(0,4]$",
+   "$(4,\\infty )$",
+   "$(2,12]$",
+   "$(8,\\infty )$"
+  ],
+  "correctOptions": [
+   3
+  ],
+  "numericalAnswer": null,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 37,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "circle"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Dividing by $2$, the circle is $x^{2}+y^{2}-2hx-2ky=0$ with $h=\\dfrac{1+a}{4}$, $k=\\dfrac{1-a}{4}$; its centre is $(h,k)$ and $P$ is $(2h,2k)$.\n\nLet a chord through $P$ have its midpoint $M(λ,-λ)$ on $x+y=0$. By $T=S_{1}$, the chord is\n\n$λx-λy-h(x+λ)-k(y-λ)=2λ^{2}-2hλ+2kλ$\n\n$P(2h,2k)$ lies on it:\n\n$2hλ-2kλ-h(2h+λ)-k(2k-λ)=2λ^{2}-2hλ+2kλ$\n\n$\\Rightarrow 2λ^{2}-3(h-k)λ+2\\left (h^{2}+k^{2}\\right )=0$\n\n$P$ is not on $x+y=0$ (its coordinates add to $1$), so each real root gives a genuine chord, and two distinct chords need two distinct real roots:\n\n$9(h-k)^{2}-16\\left (h^{2}+k^{2}\\right )>0$\n\nHere $h-k=\\dfrac{a}{2}$ and $h^{2}+k^{2}=\\dfrac{(1+a)^{2}+(1-a)^{2}}{16}=\\dfrac{1+a^{2}}{8}$, so\n\n$\\dfrac{9a^{2}}{4}-2\\left (1+a^{2}\\right )>0\\Rightarrow a^{2}-8>0\\Rightarrow a^{2}\\in (8,\\infty )$\n\nHence, the correct option is (D).",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldoah9qp",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:integral-calculus",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let the area of the region\n\n$\\left \\{(x,y):|2x-1|\\leq y\\leq \\left |x^{2}-x\\right |,0\\leq x\\leq 1\\right \\}$ be $\\mathrm{A}$.\n\nThen $(6\\mathrm{A}+11)^{2}$ is equal to",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 125.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 38,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "area under the curves"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "For $B$,\n\n$\\begin{array}{l} x-x^{2}=2x-1 \\\\  \\\\ x^{2}+x-1=0 \\\\  \\\\ x=\\dfrac{-1+\\sqrt{5}}{2} \\end{array}$\n\n\n[IMG]\n\n\nArea $=2($ area of $BCE)$\n\n$A=2\\int\\limits _{\\frac{1}{2}}^{\\frac{\\sqrt{5}-1}{2}}\\left (x-x^{2}\\right )-(2x-1)dx$\n\n$=2\\int\\limits _{\\frac{1}{2}}^{\\frac{\\sqrt{5}-1}{2}}(1-x-x^{2})dx=2\\left (x-\\frac{x^{2}}{2}-\\frac{x^{3}}{3}\\right )\\left |_{\\frac{1}{2}}^{]_{5}^{\\dfrac{\\sqrt{5}-1}{2}}} \\right.$ \n\n$\\begin{array}{ll} =2\\left \\{\\left (\\dfrac{\\sqrt{5}-1}{2}-\\dfrac{1}{2}\\right )-\\left \\{\\left (\\dfrac{\\sqrt{5}-1}{2}\\right )^{2} & -\\dfrac{1}{4}\\right \\}\\dfrac{1}{2} \\\\  \\\\ -\\left [\\left (\\dfrac{\\sqrt{5}-1}{2}\\right )^{3}-\\dfrac{1}{8}\\right ]\\dfrac{1}{3}\\right \\} \\end{array}$\n\n$A=\\frac{-11+5\\sqrt{5}}{6}$\n\n$\\Rightarrow (6A+11)^{2}=125$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-31st-january-evening-shift/ldoah9qp-0.webp",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 31st January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-ldoaj02i",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "The coefficient of $x^{-6}$, in the \n\nexpansion of $\\left (\\frac{4x}{5}+\\frac{5}{2x^{2}}\\right )^{9}$, is",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 5040.0,
+  "numericalTolerance": null,
+  "difficulty": "easy",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 39,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Coeff of $x^{-6}$ in $\\left (\\frac{4x}{5}+\\frac{5}{2x^{2}}\\right )^{9}$\n\n$\\begin{array}{ll} T_{r+1} & ={}^{9}C_{r}\\left (\\dfrac{4x}{5}\\right )^{9-r}\\left (\\dfrac{5}{2x^{2}}\\right )^{r} \\\\  \\\\ 9-3r & =-6 \\\\  \\\\ r & =5 \\end{array}$\n\nCoeff of $x^{-6}={}^{9}C_{5}\\left (\\frac{4}{5}\\right )^{4}\\left (\\frac{5}{2}\\right )^{5}$\n\n$=5040$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldoaldz7",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $\\mathrm{A}=[\\mathrm{a}_{ij}],\\mathrm{a}_{ij}\\in \\mathrm{ℤ}\\cap [0,4],1\\leq i,j\\leq 2$.\n\nThe number of matrices A such that the sum of all entries is a prime number $\\mathrm{p}\\in (2,13)$ is $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 204.0,
+  "numericalTolerance": null,
+  "difficulty": "hard",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 40,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "The entries $a_{11},a_{12},a_{21},a_{22}$ are integers from 0 to 4, and their sum must be a prime in $(2,13)$, that is 3, 5, 7 or 11.\n\nFor each sum, list the multisets of four entries. A multiset with all entries different gives $4!=24$ matrices, one with exactly one repeated pair gives $\\dfrac{4!}{2!}=12$, and one with three equal entries gives $\\dfrac{4!}{3!}=4$ (no multiset has two pairs, since each sum is odd).\n\nSum 3: $\\{0,0,0,3\\},\\{0,0,1,2\\},\\{0,1,1,1\\}$, giving $4+12+4=20$.\n\nSum 5: $\\{0,0,1,4\\},\\{0,0,2,3\\},\\{0,1,1,3\\},\\{0,1,2,2\\},\\{1,1,1,2\\}$, giving $12+12+12+12+4=52$.\n\nSum 7: $\\{0,0,3,4\\},\\{0,1,2,4\\},\\{0,1,3,3\\},\\{0,2,2,3\\},\\{1,1,1,4\\},\\{1,1,2,3\\},\\{1,2,2,2\\}$, giving $12+24+12+12+4+12+4=80$.\n\nSum 11: $\\{0,3,4,4\\},\\{1,2,4,4\\},\\{1,3,3,4\\},\\{2,2,3,4\\},\\{2,3,3,3\\}$, giving $12+12+12+12+4=52$ (replacing each entry $a$ by $4-a$ matches these one-to-one with the sum-5 cases).\n\n$\\text{Total}=20+52+80+52=204$\n\nHence, the answer is 204.",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldoan5f0",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:permutations-combinations",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If ${}^{2n+1}\\mathrm{P}_{n-1}:{}^{2n-1}\\mathrm{P}_{n}=11:21$,\n\nthen $n^{2}+n+15$ is equal to :",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 45.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 41,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "permutations and combinations"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\frac{\\frac{(2n+1)!}{(n+2)!}}{\\frac{(2n-1)!}{(n-1)!}}=\\frac{11}{21}$\n\n$\\frac{(2n+1)2n}{(n+2)(n+1)n}=\\frac{11}{21}$\n\n$84n+42=11\\left (n^{2}+3n+2\\right )$\n\n$11n^{2}-51n-20=0$\n\n$(n-5)(11n+4)=0$\n\n$n=5,\\frac{-4}{11}$ (Rejected $)$\n\n$n^{2}+n+15=45$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldoaq5ul",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:vectors",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let $⃗{a},⃗{b},⃗{c}$ be three vectors such that\n\n$|⃗{a}|=\\sqrt{31},4|⃗{b}|=|⃗{c}|=2$ and $2(⃗{a}\\times ⃗{b})=3(⃗{c}\\times ⃗{a})$.\n\nIf the angle between $⃗{b}$ and $⃗{c}$ is $\\frac{2π}{3}$, then $\\left (\\frac{⃗{a}\\times ⃗{c}}{⃗{a}\\cdot ⃗{b}}\\right )^{2}$ is equal to $__________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 3.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 42,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "vector algebra"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$2(⃗{a}\\times ⃗{b})=3(⃗{c}\\times ⃗{a})$\n\n$⃗{a}\\times (2⃗{b}+3⃗{c})=0$\n\n$\\begin{array}{l} ⃗{a}=λ(2⃗{b}+3⃗{c}) \\\\  \\\\ |⃗{a}|^{2}=λ^{2}\\left (4|b|^{2}+9|c|^{2}+12⃗{b}\\cdot ⃗{c}\\right ) \\\\  \\\\ 31=31λ^{2} \\\\  \\\\ λ=\\pm 1 \\\\  \\\\ ⃗{a}=\\pm (2⃗{b}+3⃗{c}) \\\\  \\\\ \\dfrac{|⃗{a}\\times ⃗{c}|}{|⃗{a}\\cdot ⃗{b}|}=\\dfrac{2|⃗{b}\\times ⃗{c}|}{2⃗{b}\\cdot ⃗{b}+3⃗{c}\\cdot ⃗{b}} \\\\  \\\\ |⃗{b}\\times ⃗{c}|^{2}=\\dfrac{1}{4}\\cdot 4-\\left (1-\\dfrac{1}{2}\\right )^{2} \\\\  \\\\ =\\dfrac{3}{4} \\\\  \\\\ \\therefore \\dfrac{|⃗{a}\\times ⃗{c}|}{|⃗{a}\\cdot ⃗{b}|}=\\dfrac{\\sqrt{3}}{2\\cdot \\frac{1}{4}-\\frac{3}{2}}=\\dfrac{\\sqrt{3}}{-1} \\\\  \\\\ \\left (\\dfrac{|⃗{a}\\times ⃗{c}|}{|⃗{a}\\cdot ⃗{b}|}\\right )^{2}=3 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ },
+ {
+  "publicId": "PYQ-2023-ldoatpci",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:probability",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "Let A be the event that the absolute difference between two randomly chosen real numbers in the sample space $[0,60]$ is less than or equal to a . If $\\mathrm{P}(\\mathrm{A})=\\frac{11}{36}$, then $\\mathrm{a}$ is equal to $_______$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 10.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 43,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "probability"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "$\\begin{array}{l} |\\mathrm{x}-\\mathrm{y}|<\\mathrm{a}\\Rightarrow -\\mathrm{a}<\\mathrm{x}-\\mathrm{y}<\\mathrm{a} \\\\  \\\\ \\Rightarrow \\mathrm{x}-\\mathrm{y}<\\mathrm{a}\\text{and}\\mathrm{x}-\\mathrm{y}>-\\mathrm{a} \\end{array}$\n\n\n[IMG]\n\n\n$\\begin{array}{l} \\mathrm{P}(\\mathrm{A})=\\dfrac{\\mathrm{ar}(\\mathrm{OACDEG})}{(\\mathrm{OBDF})} \\\\  \\\\ =\\dfrac{\\mathrm{ar}(\\mathrm{OBDF})-\\mathrm{ar}(\\mathrm{ABC})-\\mathrm{ar}(\\mathrm{EFG})}{\\mathrm{ar}(\\mathrm{OBDF})} \\\\  \\\\ \\Rightarrow \\dfrac{11}{36}=\\dfrac{(60)^{2}-\\frac{1}{2}(60-\\mathrm{a})^{2}-\\frac{1}{2}(60-\\mathrm{a})^{2}}{3600} \\\\  \\\\ \\Rightarrow 1100=3600-(60-\\mathrm{a})^{2} \\\\  \\\\ \\Rightarrow (60-\\mathrm{a})^{2}=2500\\Rightarrow 60-\\mathrm{a}=50 \\\\  \\\\ \\Rightarrow \\mathrm{a}=10 \\end{array}$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": [
+   {
+    "url": "/pyq/jee-main-2023-online-31st-january-evening-shift/ldoatpci-0.webp",
+    "altText": "Original exam figure (JEE Main 2023 (Online) 31st January Evening Shift)",
+    "caption": null,
+    "attribution": "Source: NTA JEE Main original exam figure, via ExamSIDE",
+    "isOriginalExamImage": true,
+    "kind": "question"
+   }
+  ]
+ },
+ {
+  "publicId": "PYQ-2023-ldoavd66",
+  "subjectKey": "mathematics",
+  "chapterKey": "mathematics:binomial-theorem",
+  "subtopic": null,
+  "type": "numerical",
+  "text": "If the constant term in the binomial expansion of $\\left (\\frac{x^{\\dfrac{5}{2}}}{2}-\\frac{4}{x^{l}}\\right )^{9}$ is $-84$ and the coefficient of $x^{-3l}$ is\n\n$2^{α}β$, where $β<0$ is an odd number, then $|αl-β|$ is equal to $________$.",
+  "options": [],
+  "correctOptions": null,
+  "numericalAnswer": 98.0,
+  "numericalTolerance": null,
+  "difficulty": "medium",
+  "sourceExam": "JEE Main",
+  "sourceYear": 2023,
+  "sourceDate": null,
+  "sourceShift": "Shift 2",
+  "sourceQuestionNumber": 44,
+  "sourceReference": "NTA JEE Main JEE Main 2023 (Online) 31st January Evening Shift via ExamSIDE (questions.examside.com)",
+  "tags": [
+   "binomial theorem"
+  ],
+  "solution": {
+   "keyConcept": null,
+   "formulas": [],
+   "body": "Given binomial expansion of $\\left (\\frac{x^{\\dfrac{5}{2}}}{2}-\\frac{4}{x^{l}}\\right )^{9}$\n\n$\\begin{array}{ll} T_{r+1} & ={}^{9}C_{r}\\left (\\dfrac{x^{\\frac{5}{2}}}{2}\\right )^{9-r}\\left (\\dfrac{-4}{x^{l}}\\right )^{r} \\\\ ={}^{9}C_{r}x^{\\frac{45-5r}{2}-lr}\\cdot 2^{r-9}\\cdot 4^{r}\\cdot (-1)^{r} \\end{array}$\n\nFor constant term, power of x is zero.\n\nSo, $\\frac{45-5r}{2}=lr\\Rightarrow 2lr+5r=45$\n\nNow constant term $=-84$\n\nand ${}^{9}C_{r}\\cdot 2^{3r-9}(-1)^{r}=-84$\n\nSo, $r=3$ and $l=5$ \n\nNow for $x^{-15},\\frac{45-5r}{2}-5r=-15$\n\n$\\Rightarrow$ $45-15r=-30$\n\n$\\Rightarrow$ $r=5$\n\n$\\therefore$ Coefficient $=-{}^{9}C_{5}2^{6}=-63.2^{7}$\n\n$\\therefore α=7,β=-63$\n\nand $|αl-β|=|7\\times 5+63|=98$",
+   "commonMistakes": null,
+   "alternativeMethod": null,
+   "verification": null,
+   "sourceReferences": [
+    "ExamSIDE explanation for JEE Main 2023 (Online) 31st January Evening Shift"
+   ],
+   "isAiGenerated": false
+  },
+  "images": []
+ }
+]

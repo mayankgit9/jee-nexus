@@ -44,10 +44,12 @@ jobs:
       - name: Apply migration ${{ github.event.inputs.migration }}
         run: |
           set -o pipefail
-          psql "$DATABASE_URL" -v ON_ERROR_STOP=0 \
+          psql "$DATABASE_URL" -v ON_ERROR_STOP=1 \
             -f "supabase/migrations/${{ github.event.inputs.migration }}" 2>&1 | sed -E 's#postgresql://[^ ]*#postgresql://***#g'
 
-      - name: Verify chat tables exist
+      - name: Verify chat tables exist (fails loudly if missing)
         run: |
-          psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -tAc \
-            "select table_name from information_schema.tables where table_schema='public' and table_name like 'chat_%' order by 1"
+          TABLES=$(psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -tAc \
+            "select string_agg(table_name, ', ' order by table_name) from information_schema.tables where table_schema='public' and table_name like 'chat_%'")
+          echo "chat tables: ${TABLES:-NONE}"
+          if [ -z "$TABLES" ]; then echo "::error::chat_% tables missing — migration did not land"; exit 1; fi

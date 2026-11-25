@@ -162,6 +162,7 @@ CH_MAP = {
     "modulus-function": "mathematics:sets-relations-functions",
     "greatest-integer-function": "mathematics:sets-relations-functions",
     "trigonometric-function": "mathematics:trigonometry",
+    "trigonometric-functions-and-equations": "mathematics:trigonometry",
     "solution-of-triangle": "mathematics:trigonometry",
     "properties-of-triangle": "mathematics:trigonometry",
     "inverse-trigonometric-function": "mathematics:trigonometry",
