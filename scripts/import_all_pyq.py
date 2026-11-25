@@ -82,7 +82,16 @@ first_errors = []
 t0 = time.time()
 for i in range(0, len(questions), BATCH_SIZE):
     chunk = questions[i:i + BATCH_SIZE]
-    status, r = call("POST", "/api/admin/import", {"questions": chunk}, timeout=300)
+    # retry transient 5xx (pooler hiccups / connection storms) so a single
+    # bad moment can't kill a multi-hour run; deterministic failures still
+    # exit after the retries
+    status, r = 502, {}
+    for attempt in range(3):
+        status, r = call("POST", "/api/admin/import", {"questions": chunk}, timeout=300)
+        if status == 200:
+            break
+        print(f"  chunk {i//BATCH_SIZE + 1} attempt {attempt + 1} -> {status}, retrying in 20s...", flush=True)
+        time.sleep(20)
     if status != 200:
         print(f"CHUNK {i//BATCH_SIZE + 1} FAILED: {status}", {k: r.get(k) for k in ("inserted", "skippedDuplicate", "rejected")})
         for e in (r.get("errors") or [])[:5]:
