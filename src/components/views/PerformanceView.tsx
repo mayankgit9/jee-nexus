@@ -1,12 +1,13 @@
 'use client'
 
 // JEE NEXUS — performance dashboard
+import { useEffect, useState } from 'react'
 import { BarChart3, Target, TrendingUp, AlertTriangle, Flame } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
 import { Bar, BarChart, CartesianGrid, Cell, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { useApi, navigate, formatDuration, SUBJECT_COLORS } from '@/lib/client'
+import { useApi, api, navigate, formatDuration, SUBJECT_COLORS } from '@/lib/client'
 import { cn } from '@/lib/utils'
 
 interface StatsData {
@@ -210,30 +211,144 @@ export function PerformanceView({ onRequireAuth }: { onRequireAuth: () => void }
         </Card>
       </div>
 
-      {/* recent history */}
-      <Card className="mt-4">
-        <CardHeader className="pb-2"><CardTitle className="text-sm">Recent attempts</CardTitle></CardHeader>
-        <CardContent>
+      {/* attempt history — full paginated log with filters (was: newest 10 only) */}
+      <HistoryCard />
+    </div>
+  )
+}
+
+// ---------- attempt history ----------
+interface HistoryItem {
+  id: string
+  isCorrect: boolean | null
+  createdAt: string
+  subject: string
+  chapter: string
+  publicId: string
+  source: 'practice' | 'exam'
+}
+
+const HISTORY_FILTERS = [
+  { key: 'all', label: 'All' },
+  { key: 'practice', label: 'Practice' },
+  { key: 'exam', label: 'Mocks' },
+  { key: 'correct', label: 'Correct' },
+  { key: 'incorrect', label: 'Incorrect' },
+  { key: 'skipped', label: 'Ungraded' },
+] as const
+
+function HistoryCard() {
+  const [filter, setFilter] = useState<string>('all')
+  const [items, setItems] = useState<HistoryItem[] | null>(null)
+  const [total, setTotal] = useState(0)
+  const [hasMore, setHasMore] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [loadingMore, setLoadingMore] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    let alive = true
+    setLoading(true)
+    setError(null)
+    api<{ items: HistoryItem[]; total: number; hasMore: boolean }>(`/api/stats/history?filter=${filter}&pageSize=20`)
+      .then((d) => {
+        if (!alive) return
+        setItems(d.items)
+        setTotal(d.total)
+        setHasMore(d.hasMore)
+      })
+      .catch((e) => alive && setError(e.message))
+      .finally(() => alive && setLoading(false))
+    return () => {
+      alive = false
+    }
+  }, [filter])
+
+  const loadMore = async () => {
+    if (loadingMore || !items) return
+    setLoadingMore(true)
+    try {
+      const next = Math.floor(items.length / 20) + 1
+      const d = await api<{ items: HistoryItem[]; hasMore: boolean }>(`/api/stats/history?filter=${filter}&page=${next}&pageSize=20`)
+      setItems((cur) => {
+        const seen = new Set((cur ?? []).map((x) => x.id))
+        return [...(cur ?? []), ...d.items.filter((x) => !seen.has(x.id))]
+      })
+      setHasMore(d.hasMore)
+    } catch (e) {
+      setError((e as Error).message)
+    } finally {
+      setLoadingMore(false)
+    }
+  }
+
+  return (
+    <Card className="mt-4">
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardTitle className="text-sm">Attempt history{total > 0 && <span className="ml-1.5 text-xs font-normal text-muted-foreground">{total.toLocaleString()} record{total === 1 ? '' : 's'}</span>}</CardTitle>
+        <div className="flex flex-wrap items-center justify-end gap-1">
+          {HISTORY_FILTERS.map((f) => (
+            <button
+              key={f.key}
+              type="button"
+              onClick={() => setFilter(f.key)}
+              className={cn(
+                'rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors',
+                filter === f.key ? 'bg-primary/15 font-semibold text-primary' : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+              )}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+      </CardHeader>
+      <CardContent>
+        {loading ? (
           <div className="space-y-1.5">
-            {st.recent.map((a) => (
-              <div key={a.id} className="flex items-center justify-between gap-2 rounded-lg border border-border/60 px-3 py-2 text-sm">
-                <div className="min-w-0">
-                  <span className="font-mono text-xs text-muted-foreground">{a.publicId}</span>
-                  <span className="mx-2">·</span>
-                  <span className="truncate">{a.chapter}</span>
-                </div>
-                <div className="flex shrink-0 items-center gap-2 text-xs text-muted-foreground">
-                  {new Date(a.createdAt).toLocaleDateString()}
-                  <span className={cn('font-semibold',
-                    a.isCorrect === true ? 'text-emerald-400' : a.isCorrect === false ? 'text-rose-400' : 'text-muted-foreground')}>
-                    {a.isCorrect === true ? '✓' : a.isCorrect === false ? '✗' : '—'}
-                  </span>
-                </div>
-              </div>
+            {Array.from({ length: 6 }).map((_, i) => (
+              <Skeleton key={i} className="h-9 w-full" />
             ))}
           </div>
-        </CardContent>
-      </Card>
-    </div>
+        ) : error ? (
+          <p className="py-6 text-center text-sm text-rose-400">{error}</p>
+        ) : items && items.length > 0 ? (
+          <>
+            <div className="space-y-1.5">
+              {items.map((a) => (
+                <div key={a.id} className="flex items-center justify-between gap-2 rounded-lg border border-border/60 px-3 py-2 text-sm">
+                  <div className="min-w-0">
+                    <span className="font-mono text-xs text-muted-foreground">{a.publicId}</span>
+                    <span className="mx-2">·</span>
+                    <span className="truncate">{a.chapter}</span>
+                    <span
+                      className={cn(
+                        'ml-2 rounded px-1 py-0.5 text-[10px] font-medium',
+                        a.source === 'exam' ? 'bg-violet-500/15 text-violet-300' : 'bg-sky-500/15 text-sky-300'
+                      )}
+                    >
+                      {a.source === 'exam' ? 'Mock' : 'Practice'}
+                    </span>
+                  </div>
+                  <div className="flex shrink-0 items-center gap-2 text-xs text-muted-foreground">
+                    {new Date(a.createdAt).toLocaleDateString()}
+                    <span className={cn('font-semibold',
+                      a.isCorrect === true ? 'text-emerald-400' : a.isCorrect === false ? 'text-rose-400' : 'text-muted-foreground')}>
+                      {a.isCorrect === true ? '✓' : a.isCorrect === false ? '✗' : '—'}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {hasMore && (
+              <Button variant="outline" size="sm" className="mt-3 w-full" onClick={loadMore} disabled={loadingMore}>
+                {loadingMore ? 'Loading…' : 'Load older attempts'}
+              </Button>
+            )}
+          </>
+        ) : (
+          <p className="py-6 text-center text-sm text-muted-foreground">Nothing here yet — this filter has no attempts.</p>
+        )}
+      </CardContent>
+    </Card>
   )
 }

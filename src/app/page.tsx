@@ -56,6 +56,7 @@ export default function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
   const [mobileNav, setMobileNav] = useState(false)
   const [paletteOpen, setPaletteOpen] = useState(false)
+  const [chatUnread, setChatUnread] = useState(0)
   const taxonomyApi = useApi<{ subjects: TaxonomySubject[] }>('/api/taxonomy')
 
   useEffect(() => {
@@ -79,6 +80,47 @@ export default function App() {
   useEffect(() => {
     setMobileNav(false)
   }, [route.view])
+
+  // Global chat-unread badge: poll /api/chat/unread every 15s while signed
+  // in (skips hidden tabs; resets on logout). Surfaces pending DMs and group
+  // messages from ANY view — unread state used to live only inside Community.
+  useEffect(() => {
+    if (!user) {
+      setChatUnread(0)
+      return
+    }
+    let alive = true
+    const tick = async () => {
+      if (document.hidden || !alive) return
+      try {
+        const r = await fetch('/api/chat/unread')
+        if (!r.ok) return
+        const d = (await r.json()) as { total?: number }
+        if (alive && typeof d.total === 'number') setChatUnread(d.total)
+      } catch {
+        // transient network errors are fine — next tick retries
+      }
+    }
+    void tick()
+    const t = setInterval(() => void tick(), 15_000)
+    return () => {
+      alive = false
+      clearInterval(t)
+    }
+  }, [user])
+
+  const unreadBadge = (extra: string) =>
+    chatUnread > 0 ? (
+      <span
+        className={cn(
+          'flex h-4 min-w-4 items-center justify-center rounded-full bg-rose-500 px-1 text-[9px] font-bold leading-none text-white shadow-sm',
+          extra
+        )}
+        title={`${chatUnread} unread message${chatUnread === 1 ? '' : 's'}`}
+      >
+        {chatUnread > 99 ? '99+' : chatUnread}
+      </span>
+    ) : null
 
   // Ctrl/Cmd+K toggles the command palette
   useEffect(() => {
@@ -146,6 +188,7 @@ export default function App() {
                 )}
                 <n.icon className="relative h-4 w-4" />
                 <span className="relative hidden whitespace-nowrap lg:inline">{n.label}</span>
+                {n.view === 'community' && unreadBadge('absolute right-0 top-0')}
               </button>
             ))}
             {user?.role === 'admin' && (
@@ -220,6 +263,7 @@ export default function App() {
                   )}
                 >
                   <n.icon className="h-4 w-4" /> {n.label}
+                  {n.view === 'community' && unreadBadge('ml-auto')}
                 </button>
               ))}
               {user?.role === 'admin' && (
@@ -328,6 +372,7 @@ export default function App() {
             >
               <span className="relative">
                 <t.icon className={cn('h-5 w-5 transition-transform', tabActive(t.view) && 'scale-110')} />
+                {t.view === 'community' && unreadBadge('absolute -right-2.5 -top-1.5')}
                 {tabActive(t.view) && (
                   <motion.span
                     layoutId="tab-active-dot"

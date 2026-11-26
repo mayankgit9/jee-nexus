@@ -15,7 +15,7 @@ import sys
 
 REF = "mxfiazcjcgqzqynmsefp"  # preparena
 
-with open("/home/z/my-project/.secrets/tokens.env") as f:
+with open("/home/z/my-project/.secrets/supabase_db.env") as f:
     pat = [l.split("=", 1)[1].strip() for l in f if l.startswith("SB_PAT=")][0]
 
 if len(sys.argv) >= 3 and sys.argv[1] == "-f":
