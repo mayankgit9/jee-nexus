@@ -3,7 +3,7 @@
 // JEE NEXUS — leaderboard view (community practice rankings)
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Trophy, Crown, Timer, Users, Zap, ArrowRight, Target, Flame } from 'lucide-react'
+import { Trophy, Crown, Timer, Users, Zap, ArrowRight, Target, Flame, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Skeleton } from '@/components/ui/skeleton'
@@ -24,10 +24,15 @@ interface Leader {
 
 interface LeaderboardData {
   period: 'week' | 'all'
+  weekOffset?: number
   leaders: Leader[]
   you: { rank: number; attempts: number; correct: number; accuracy: number; timeSeconds: number } | null
   activeStudents: number
 }
+
+const WEEK_OFFSET_MAX = 12
+const weekLabel = (offset: number): string =>
+  offset === 0 ? 'This week' : offset === 1 ? 'Last week' : `${offset} weeks ago`
 
 const PODIUM_STYLES: Record<number, { ring: string; chip: string; label: string }> = {
   1: { ring: 'border-amber-400/50 bg-amber-400/[0.07]', chip: 'border-amber-400/40 bg-amber-400/15 text-amber-400', label: 'Gold' },
@@ -46,7 +51,10 @@ function accuracyBarClass(a: number) {
 
 export function LeaderboardView({ user, onRequireAuth }: { user: SessionUser | null; onRequireAuth: () => void }) {
   const [period, setPeriod] = useState<'week' | 'all'>('week')
-  const { data, loading, error } = useApi<LeaderboardData>(`/api/leaderboard?period=${period}`)
+  const [weekOffset, setWeekOffset] = useState(0)
+  const { data, loading, error } = useApi<LeaderboardData>(
+    period === 'week' ? `/api/leaderboard?period=week&weekOffset=${weekOffset}` : '/api/leaderboard?period=all'
+  )
   const leaders = data?.leaders ?? []
   const podium = leaders.slice(0, 3)
   const rest = leaders.slice(3)
@@ -67,30 +75,61 @@ export function LeaderboardView({ user, onRequireAuth }: { user: SessionUser | n
               : 'All-time practice attempts since day one.'}
           </p>
         </div>
-        {/* period switcher */}
-        <div className="flex rounded-lg border border-border bg-card p-1" role="tablist" aria-label="Leaderboard period">
-          {(['week', 'all'] as const).map((p) => (
-            <button
-              key={p}
-              type="button"
-              role="tab"
-              aria-selected={period === p}
-              onClick={() => setPeriod(p)}
-              className={cn(
-                'rounded-md px-3 py-1.5 text-xs font-medium transition-colors',
-                period === p ? 'bg-primary/15 text-primary' : 'text-muted-foreground hover:text-foreground'
-              )}
-            >
-              {p === 'week' ? 'This week' : 'All time'}
-            </button>
-          ))}
+        {/* period switcher + week navigation (past weeks stay browsable) */}
+        <div className="flex items-center gap-2">
+          {period === 'week' && (
+            <div className="flex items-center rounded-lg border border-border bg-card" role="group" aria-label="Week navigation">
+              <button
+                type="button"
+                onClick={() => setWeekOffset((w) => Math.min(WEEK_OFFSET_MAX, w + 1))}
+                disabled={weekOffset >= WEEK_OFFSET_MAX || loading}
+                className="rounded-lg px-2 py-1.5 text-muted-foreground transition-colors hover:text-foreground disabled:opacity-30"
+                aria-label="Previous week"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              <span className="min-w-[92px] text-center text-xs font-medium" aria-live="polite">
+                {weekLabel(weekOffset)}
+              </span>
+              <button
+                type="button"
+                onClick={() => setWeekOffset((w) => Math.max(0, w - 1))}
+                disabled={weekOffset === 0 || loading}
+                className="rounded-lg px-2 py-1.5 text-muted-foreground transition-colors hover:text-foreground disabled:opacity-30"
+                aria-label="Next week"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          )}
+          <div className="flex rounded-lg border border-border bg-card p-1" role="tablist" aria-label="Leaderboard period">
+            {(['week', 'all'] as const).map((p) => (
+              <button
+                key={p}
+                type="button"
+                role="tab"
+                aria-selected={period === p}
+                onClick={() => {
+                  setPeriod(p)
+                  if (p === 'week') setWeekOffset(0)
+                }}
+                className={cn(
+                  'rounded-md px-3 py-1.5 text-xs font-medium transition-colors',
+                  period === p ? 'bg-primary/15 text-primary' : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                {p === 'week' ? 'This week' : 'All time'}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
       {data && data.activeStudents > 0 && (
         <div className="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground">
           <Users className="h-3.5 w-3.5 text-primary" />
-          {data.activeStudents.toLocaleString('en-IN')} aspirant{data.activeStudents === 1 ? '' : 's'} active {period === 'week' ? 'this week' : 'all time'}
+          {data.activeStudents.toLocaleString('en-IN')} aspirant{data.activeStudents === 1 ? '' : 's'} active{' '}
+          {period === 'week' ? (weekOffset === 0 ? 'this week' : weekOffset === 1 ? 'last week' : `${weekOffset} weeks ago`) : 'all time'}
         </div>
       )}
 

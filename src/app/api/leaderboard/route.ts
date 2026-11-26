@@ -3,7 +3,8 @@ import { dbClient } from '@/lib/db'
 import { getSessionUser, jsonError, rateLimit } from '@/lib/auth'
 
 /**
- * GET /api/leaderboard?period=week|all — community practice leaderboard.
+ * GET /api/leaderboard?period=week|all&weekOffset=0..12 — community practice
+ * leaderboard.
  *
  * Public: anonymous visitors can browse (names only, emails never ship);
  * a signed-in caller additionally gets `you` (rank + stats) and `isYou`
@@ -11,9 +12,17 @@ import { getSessionUser, jsonError, rateLimit } from '@/lib/auth'
  * + submitted/expired CBT answers, same merge as the stats dashboard),
  * ties broken by correct count then least time (most efficient wins).
  *
+ * weekOffset (period=week only) walks BACK through past windows: 0 = the
+ * trailing 7 days (unchanged from the original rolling behavior), 1 = the
+ * 7 days before that, etc. — so archives stay browsable after the week
+ * ends (weekly winners used to vanish into the all-time board).
+ *
  * Portable Prisma groupBy only (works on PG prod + SQLite local dev) —
  * no raw SQL, no date_trunc, so no engine-specific drift.
  */
+const WEEK_MS = 7 * 24 * 60 * 60 * 1000
+const WEEK_OFFSET_MAX = 12
+
 export async function GET(req: NextRequest) {
   try {
     const period = req.nextUrl.searchParams.get('period') === 'all' ? 'all' : 'week'
@@ -24,8 +33,19 @@ export async function GET(req: NextRequest) {
     const ip = req.headers.get('cf-connecting-ip') ?? 'anon'
     await rateLimit(`leaderboard:${user?.id ?? ip}`, 30, 60 * 1000, client)
 
-    const since = period === 'week' ? new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) : undefined
-    const where = since ? { createdAt: { gte: since } } : {}
+    const offsetRaw = Number.parseInt(req.nextUrl.searchParams.get('weekOffset') ?? '0', 10)
+    const weekOffset = period === 'week' && Number.isFinite(offsetRaw) ? Math.min(WEEK_OFFSET_MAX, Math.max(0, offsetRaw)) : 0
+
+    const now = Date.now()
+    // offset 0 keeps the original trailing-7-days window; higher offsets
+    // walk back in 7-day blocks: [now-(k+1)w, now-kw)
+    const since = period === 'week' ? new Date(now - (weekOffset + 1) * WEEK_MS) : undefined
+    const until = period === 'week' && weekOffset > 0 ? new Date(now - weekOffset * WEEK_MS) : undefined
+    const where = since
+      ? until
+        ? { createdAt: { gte: since, lt: until } }
+        : { createdAt: { gte: since } }
+      : {}
 
     const [byUser, byCorrect, examAnswers] = await Promise.all([
       client.attempt.groupBy({ by: ['userId'], where, _count: { _all: true }, _sum: { timeSpentSeconds: true } }),
@@ -57,7 +77,9 @@ export async function GET(req: NextRequest) {
     }
     for (const ea of examAnswers) {
       if (ea.selectedOptions === null && ea.numericalValue === null) continue // unattempted slot
-      if (since && ea.updatedAt.getTime() < since.getTime()) continue
+      const t = ea.updatedAt.getTime()
+      if (since && t < since.getTime()) continue
+      if (until && t >= until.getTime()) continue
       const s = stats.get(ea.examAttempt.userId) ?? { attempts: 0, correct: 0, timeSeconds: 0 }
       s.attempts++
       if (ea.isCorrect === true) s.correct++
@@ -109,7 +131,7 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    return Response.json({ period, leaders, you, activeStudents: ranked.length })
+    return Response.json({ period, weekOffset, leaders, you, activeStudents: ranked.length })
   } catch (err) {
     return jsonError(err)
   }
