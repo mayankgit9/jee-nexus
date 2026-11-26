@@ -5,6 +5,86 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-27 (~05:05 IST) — @MENTION NOTIFICATIONS + toast deep-links
+
+### Session start (8th sandbox recycle)
+- Same recovery: `.secrets/` wiped, git HEAD reset to stale `2764a4e`;
+  verified local mods were only file-mode artifacts, `git reset --hard
+  origin/main` → `e91b0f9` (which carried the previous session's leaderboard
+  subtitle polish — that polish shipped to prod with THIS session's deploy).
+  Rebuilt `.secrets/`, `prisma generate`. Health `/`, `/api/pyq`,
+  `/api/taxonomy` 200; CI green on e91b0f9; `/api/pyq` years 2019–2026 sum
+  to exactly **11,886** — corpus target held. No pending import runs.
+
+### @mention notifications (backlog: group-message mentions)
+- **Schema**: `chat_mentions` (migration `0014`, applied to prod BEFORE the
+  deploy — raw SQL referencing a missing table would 500): composite PK
+  (message_id, user_id), cascade on message/user delete, `(user_id,
+  created_at desc)` index, `read_at` stamps when the mentioned user reads
+  the conversation. Prisma model `ChatMention` + relations on
+  ChatMessage/User.
+- **Parser** (`parseMentions` in `lib/chat.ts`): resolves
+  `@<display name>` against conversation members — case-insensitive, name
+  must end at a word boundary ("@may" ≠ "Mayank"), multi-word names
+  supported ("@Mayank Kumar"). Members matched LONGEST-NAME-FIRST and each
+  matched span is blanked before the next attempt, so "@Riya Sen" does not
+  double-ping a member named "Riya". Sender excluded, dupes collapsed,
+  max 10/message. No username field exists on users — display names are the
+  mention key.
+- **POST /api/chat/messages**: for groups only, fetches member id+name,
+  parses, `createMany` mention rows, returns `mentions: n`. DMs skip
+  mentions (the toast already names the sender there).
+- **GET /api/chat/unread**: `latest` now carries `id`, `conversationId`
+  (deep-link target) and `mentioned` (exists-subquery into chat_mentions).
+- **POST /api/chat/read**: stamps `read_at` on my pending mentions in that
+  conversation (one bounded raw update, failure-tolerant).
+- **Shell toast** (page.tsx): a mention outranks generic new-message noise —
+  title becomes "<sender> mentioned you in <group>"; Open action now
+  navigates to `#/community?c=<conversationId>` instead of the bare view.
+- **CommunityView**: consumes the `c` deep-link param ONCE per mount after
+  the sidebar list loads (ref-guarded) and opens that conversation; composer
+  gained a member autocomplete — trailing `@token` opens a 6-row popup
+  (filtered by substring, sender excluded), ArrowUp/Down navigate, Enter/Tab
+  accept → replaces the token with "@<name> ", Escape closes, click accepts;
+  popup + textarea wrapped in a relative container; group placeholder now
+  hints "(@ to mention)".
+
+### Tests executed
+- Migration verified in prod: columns + both indexes present; new unread
+  SQL and read-stamp SQL dry-ran against the live DB before deploy.
+- API probe (`scripts/mention_probe.py`) 8/8: group mention returns
+  mentions:1; mentioned user's unread latest {mentioned:true,
+  conversationId}; the SHORTER-name member ("Riya") NOT mentioned when the
+  longer name was pinged; "@riyaa" rejected by the word boundary; DM
+  mention skipped; read-stamping visible in DB (exactly ONE row, correct
+  user, read_at set).
+- Browser E2E on live: toast "Prober Alpha mentioned you in Mention Probe
+  <tag>" captured (screenshot), Open auto-click → `#/community?c=<grp>` with
+  the group open and the mention message visible; composer popup renders,
+  Enter-accept produced "@Riya ", sent message pinged "Riya" correctly
+  (unread API confirmed mentioned:true for that user from the UI-sent body).
+  Deep-link screenshot archived.
+- **Probing lesson**: headless background tabs throttle page timers — a
+  200ms in-page watcher can miss a 5s toast window entirely. Fix: reload
+  the tab (fresh activity) and/or let an in-page watcher AUTO-CLICK the
+  button, then read the result state; the poll itself was fine (badge kept
+  updating) while observation raced the 5s radix auto-dismiss.
+- Probe users/conversations/mention rows deleted (first crashed run's
+  orphans included) — 0 leftovers verified by SQL count.
+
+### Deploy state
+- Feature deployed via `scripts/deploy_app_cloudflare.sh` (commit rides the
+  next push); subtitle polish from e91b0f9 shipped with the same deploy.
+- Health re-checked after cleanup: `/`, `/api/pyq`, `/api/taxonomy` 200.
+
+### Next
+- Playwright chat spec (toasts + mentions + deep-link) in CI; per-mock
+  analytics (per-exam breakdown in Performance); weekly winners snapshot
+  (GH Actions cron pinning top-3 per window); @name highlight rendering
+  inside message bubbles; mention badges inside the community sidebar.
+
+---
+
 ## 2026-11-26 (~20:50 IST) — MESSAGE TOASTS + leaderboard week archive
 
 ### Session start (7th sandbox recycle)
