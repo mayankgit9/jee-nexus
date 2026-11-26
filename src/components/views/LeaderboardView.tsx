@@ -71,7 +71,9 @@ export function LeaderboardView({ user, onRequireAuth }: { user: SessionUser | n
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">
             {period === 'week'
-              ? 'Practice attempts over the trailing 7 days — consistency beats cramming.'
+              ? weekOffset === 0
+                ? 'Practice attempts over the trailing 7 days — consistency beats cramming.'
+                : `Practice attempts in the ${weekLabel(weekOffset).toLowerCase()} window — browse the archive with the arrows.`
               : 'All-time practice attempts since day one.'}
           </p>
         </div>

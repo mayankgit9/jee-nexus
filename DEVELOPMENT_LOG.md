@@ -5,6 +5,64 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-26 (~20:50 IST) — MESSAGE TOASTS + leaderboard week archive
+
+### Session start (7th sandbox recycle)
+- Same recovery as last cycle: verified no local-only content via `comm`
+  vs `git ls-tree origin/main`, `git reset --hard origin/main` → `f1cc7c4`,
+  rebuilt `.secrets/`, `prisma generate`. Health `/`, `/api/pyq`,
+  `/api/taxonomy` 200 immediately; CI green on `f1cc7c4`; no import runs
+  pending.
+
+### In-app message notification toasts (new)
+- page.tsx's 15s unread poll now detects count GROWTH between ticks and
+  raises a radix toast (Toaster already mounted in layout): "New message
+  from <sender>" (DMs) / "N new messages · <group> +k more" (groups),
+  body preview as description, "Open" action → navigates to /community.
+- Guardrails: first fetch per session is a baseline (no toast spam on page
+  load); suppressed while already on #/community (sidebar shows state
+  there) and while the tab is hidden. Badge logic unchanged.
+- **Live browser E2E learned a lesson**: first check "missed" the toast —
+  it HAD appeared but radix auto-dismisses after ~5s and I checked ~17s
+  later. Second run used a 500ms DOM watcher → toast captured within one
+  poll. Also auto-clicked "Open" while visible → landed on #/community
+  (`opened:true`). Verified the served chunk actually contained the new
+  code before debugging further (grep across all 8 referenced chunks).
+- Probe users/DMs deleted from live DB afterwards (0 leftovers). Probe
+  script archived as `scripts/toast_probe.py`.
+
+### Leaderboard week archive (backlog: week navigation)
+- **API**: `weekOffset=0..12` on `period=week`. Offset 0 keeps the original
+  trailing-7-days window (backward compatible); higher offsets walk back
+  in 7-day blocks `[now-(k+1)w, now-kw)` for practice attempts AND graded
+  CBT answers (until-bound added to the JS filter). Response echoes
+  `weekOffset`. Weekly winners no longer vanish when the week ends.
+- **View**: chevron week-nav beside the period tabs — This week / Last
+  week / "N weeks ago", aria-live label, both ends disabled appropriately,
+  offset resets when switching periods; "aspirants active" line + subtitle
+  reflect the browsed window; empty state renders for past windows with
+  no activity.
+- Caught in edit review: an extra `}` after the aspirants-line JSX (would
+  have been a build breaker). Verified live: offset 1 → correct empty
+  board, offset 13 clamps to 12, browser nav This↔Last week works, zero
+  page errors (anon + the line hidden when activeStudents=0).
+- Note: first post-deploy curl for offset=1 hit the OLD isolate
+  (deploy-propagation race) and returned stale-shaped JSON — re-curl'd
+  seconds later showed correct new responses. Judge deploys by re-checking,
+  not by a single first response.
+
+### Deploy state
+- Toasts: commit `66001fe` deployed + browser-verified.
+- Week archive: commit `5cf271a` deployed + API/browser-verified; subtitle
+  polish + this log ride the next commit.
+
+### Next
+- Playwright community/toast spec in CI; per-mock analytics (per-exam
+  breakdown in Performance); weekly winners snapshot (cron job could pin
+  the top-3 of each window); group-message mention notifications (@user).
+
+---
+
 ## 2026-11-26 (~12:50 IST) — GLOBAL CHAT-UNREAD BADGE + paginated filtered attempt history
 
 ### Session start (6th sandbox recycle)
