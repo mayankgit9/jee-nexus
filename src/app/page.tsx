@@ -1,7 +1,7 @@
 'use client'
 
 // JEE NEXUS — application shell (hash-routed SPA)
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, Moon, Sun, Menu, X, ClipboardList, ShieldCheck, MessageSquare, MoreHorizontal, Search, Trophy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -18,6 +18,8 @@ import { LeaderboardView } from '@/components/views/LeaderboardView'
 import { CommandPalette } from '@/components/CommandPalette'
 import type { SessionUser, SubjectKey } from '@/lib/types'
 import { useHashRoute, useApi, navigate } from '@/lib/client'
+import { toast } from '@/hooks/use-toast'
+import { ToastAction } from '@/components/ui/toast'
 import { cn } from '@/lib/utils'
 
 interface TaxonomySubject {
@@ -81,12 +83,18 @@ export default function App() {
     setMobileNav(false)
   }, [route.view])
 
-  // Global chat-unread badge: poll /api/chat/unread every 15s while signed
-  // in (skips hidden tabs; resets on logout). Surfaces pending DMs and group
-  // messages from ANY view — unread state used to live only inside Community.
+  // Global chat-unread badge + notification toasts: poll /api/chat/unread
+  // every 15s while signed in (skips hidden tabs; resets on logout). The
+  // badge surfaces pending DMs/group messages from ANY view; when the count
+  // GROWS between polls we also raise a toast with the newest message so
+  // users notice conversations without watching the badge. First fetch is a
+  // baseline (no toast on load); while on the community view the in-app
+  // sidebar already shows unread state, so toasts stay suppressed there.
+  const lastUnreadRef = useRef<number | null>(null)
   useEffect(() => {
     if (!user) {
       setChatUnread(0)
+      lastUnreadRef.current = null
       return
     }
     let alive = true
@@ -95,8 +103,28 @@ export default function App() {
       try {
         const r = await fetch('/api/chat/unread')
         if (!r.ok) return
-        const d = (await r.json()) as { total?: number }
-        if (alive && typeof d.total === 'number') setChatUnread(d.total)
+        const d = (await r.json()) as {
+          total?: number
+          latest?: { body?: string; type?: string; name?: string | null; senderName?: string } | null
+        }
+        if (!alive || typeof d.total !== 'number') return
+        const prev = lastUnreadRef.current
+        lastUnreadRef.current = d.total
+        const onCommunity = window.location.hash.startsWith('#/community')
+        if (prev !== null && d.total > prev && !onCommunity && d.latest) {
+          const fresh = d.total - prev
+          const who = d.latest.type === 'group' ? d.latest.name || d.latest.senderName || 'Student' : d.latest.senderName || 'Student'
+          toast({
+            title: fresh > 1 ? `${fresh} new messages · ${who} +${fresh - 1} more` : `New message from ${who}`,
+            description: d.latest.body || 'Message',
+            action: (
+              <ToastAction altText="Open chat" onClick={() => navigate('/community')}>
+                Open
+              </ToastAction>
+            ),
+          })
+        }
+        setChatUnread(d.total)
       } catch {
         // transient network errors are fine — next tick retries
       }
