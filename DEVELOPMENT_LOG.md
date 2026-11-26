@@ -5,6 +5,88 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-26 (~12:50 IST) — GLOBAL CHAT-UNREAD BADGE + paginated filtered attempt history
+
+### Session start (6th sandbox recycle)
+- `.secrets/` wiped + git HEAD reset to stale `2764a4e` again. Reconciled:
+  verified every untracked file exists in origin/main (`comm` against
+  `git ls-tree`), then `git reset --hard origin/main` → `bf4e451`. Rebuilt
+  `.secrets/` (cloudflare.env / tokens.env / supabase_db.env, chmod 600,
+  gitignored).
+- Health: `/`, `/api/pyq`, `/api/taxonomy` all 200. No new import runs
+  (CI green on bf4e451; last import run 45655388098 already verified).
+  Live `/api/pyq` years 2019–2026 sum to exactly **11,886** — corpus target
+  held.
+- Full endpoint sweep (anon + admin): all healthy, zero bugs. The sweep
+  script's two "failures" were its own artifacts (HTML-parse of `/`, wrong
+  path for random-selection). `/api/questions/random` POST re-verified 200.
+
+### False alarm worth remembering
+- `sed`/`grep` output showed page.tsx line 57 as `const obileNav, ...]` —
+  looked like a committed syntax error. `od -c` proved the real bytes are
+  `const [mobileNav, ...]`: the display pipeline swallows `[m` (ANSI
+  reset-sequence interpretation). Verify suspicious bracket content with
+  `od -c` before "fixing" — trust hexdump over piped display.
+
+### Global chat-unread badge (new)
+- **`GET /api/chat/unread`** — tiny shell-poll summary: total unread (same
+  rule as the sidebar: newer than my lastReadAt, not mine, not deleted) +
+  newest such message preview (80-char body, conversation type/name, sender).
+  One client, two bounded raw queries (subrequest discipline).
+- **page.tsx shell**: polls it every 15s while signed in (skips hidden tabs,
+  resets on logout) and renders a rose count pill (99+ cap, title tooltip) on
+  the Community item in ALL THREE nav surfaces: desktop top nav, mobile
+  sheet, mobile bottom tab. Previously unread state existed only inside
+  CommunityView — pending DMs were invisible from every other view.
+- Review catch: original SQL joined `users` — the table is `app_users`
+  (@@map). Caught pre-deploy by running both statements against the LIVE DB
+  via `scripts/db_query.py` (also fixed: it read SB_PAT from tokens.env,
+  now supabase_db.env).
+
+### Attempt history (backlog: session-history pagination + review filters)
+- **`GET /api/stats/history`** — merged practice + graded-CBT history,
+  `page`/`pageSize≤50` + filters `all|practice|exam|correct|incorrect|
+  skipped` (skipped = recorded but ungraded), bounded takes (5000/5000),
+  deterministic sort, `{items,page,pageSize,total,hasMore}`.
+- **PerformanceView**: static "Recent attempts" (newest 10, no filters)
+  replaced by a full **Attempt history** card — 6 filter chips, total
+  record count, Mock/Practice source pills, "Load older attempts" with
+  dedup-safe append, skeletons/error/empty states.
+- Local Prisma client regenerated after recycle (tsc was failing on chat
+  models — pre-existing sandbox artifact, not code).
+
+### Live verification (deploy commit `8baccb9`)
+- CI green; deploy via script first-try. Post-deploy: `/`, `/api/pyq`,
+  `/api/taxonomy`, `/api/daily` 200; new endpoints 401 anon (correct).
+- **API E2E (`scripts/live_verify_unread_history.py`)**: admin unread 0 →
+  fresh temp user sends DM → admin `{total:1, latest:"loop verification
+  ping <ts>"}` → mark-read → 0. History filters coherent: all=106 =
+  practice 1 + exam 105 = correct 75 + incorrect 31 + skipped 0; page 2
+  disjoint from page 1; hasMore correct.
+- **Browser E2E (agent-browser, live site)**: badge appears in desktop nav
+  AND mobile bottom tab within one 15s poll after the probe DM
+  (screenshot-verified both); opening the DM then clears it after the next
+  poll. History card renders 106 records + 6 chips; Practice chip → 1
+  record (Matches API). Zero page errors.
+- Probe/test users + DMs deleted from live DB afterwards (0 leftovers,
+  both verifications re-run). Scripts archived: `live_verify_unread_history.py`,
+  `live_badge_probe.py`.
+- Note: git push needed the token-in-URL form; the one-shot credential
+  helper got "Invalid username or token" despite the PAT being valid with
+  full scopes (API calls + /user both fine). Use
+  `git push https://mayankgit9:$GH_PAT@github.com/...` if the helper fails.
+
+### Deploy state
+- Commit `8baccb9` pushed + deployed; workers.dev route enabled;
+  DATABASE_URL secret present. All live checks green.
+
+### Next
+- Chat notification toasts (in-app "new message" snackbar using the same
+  /api/chat/unread latest preview), Playwright community spec in CI,
+  leaderboard week navigation, mock-test analytics per exam.
+
+---
+
 ## 2026-11-26 (~04:45 IST) — DAILY CHALLENGE (QOTD) LIVE + smart practice launcher; Δ-repair verified in DB
 
 ### Session start state
