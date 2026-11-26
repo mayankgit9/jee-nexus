@@ -91,6 +91,7 @@ model User {
   chatCreatedChats     ChatConversation[]    @relation("ChatCreator")
   chatTypingStates     ChatTyping[]
   chatReactions        ChatReaction[]
+  chatMentions         ChatMention[]         @relation("ChatMentionee")
 
   @@map("app_users")
 }
@@ -446,9 +447,27 @@ model ChatMessage {
   replies        ChatMessage[]    @relation("ChatReplies")
   deletedAt      DateTime?        @map("deleted_at") @db.Timestamptz(6)
   reactions      ChatReaction[]
+  mentions       ChatMention[]
 
   @@index([conversationId, createdAt])
   @@map("chat_messages")
+}
+
+/// @mention notifications: one row per (message, mentioned member). Written
+/// when a group message body contains "@<display name>" matching a member
+/// (sender excluded); read_at stamps when the mentioned user reads the
+/// conversation. Drives the "X mentioned you" toast + deep link.
+model ChatMention {
+  messageId String      @map("message_id")
+  message   ChatMessage @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  userId    String      @map("user_id")
+  user      User        @relation("ChatMentionee", fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime    @default(now()) @map("created_at") @db.Timestamptz(6)
+  readAt    DateTime?   @map("read_at") @db.Timestamptz(6)
+
+  @@id([messageId, userId])
+  @@index([userId, createdAt])
+  @@map("chat_mentions")
 }
 
 /// Typing indicators: one row per (conversation, user), refreshed every ~3s

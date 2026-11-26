@@ -250,6 +250,10 @@ export function CommunityView({
   // composer
   const [draft, setDraft] = useState('')
   const [sending, setSending] = useState(false)
+  // @mention autocomplete: { start, token } = location of the trailing
+  // "@<token>" in the draft (null = popup closed); mentionIdx = highlighted row
+  const [mention, setMention] = useState<{ start: number; token: string } | null>(null)
+  const [mentionIdx, setMentionIdx] = useState(0)
   const composerRef = useRef<HTMLTextAreaElement | null>(null)
   const listRef = useRef<HTMLDivElement | null>(null)
   const stickToBottom = useRef(true)
@@ -311,6 +315,7 @@ export function CommunityView({
       setReplyTo(null)
       setConfirmDelete(null)
       setEmojiOpen(false)
+      setMention(null)
       initialLoadDone.current = false
       try {
         const r = await api<{ conversation: ConvMeta; messages: ChatMessage[]; hasMore: boolean; typing?: TypingUser[]; reactions?: Record<string, ReactionChip[]> }>(
@@ -333,6 +338,18 @@ export function CommunityView({
     },
     [markRead]
   )
+
+  // deep link: #/community?c=<id> (notification toast "Open" navigates here)
+  // — consumed ONCE per mount, after the sidebar list has loaded, so the
+  // target conversation exists and in-view navigation isn't hijacked later
+  const deepLinkDone = useRef(false)
+  useEffect(() => {
+    if (deepLinkDone.current || convLoading || !conversations) return
+    deepLinkDone.current = true
+    const q = new URLSearchParams(window.location.hash.split('?')[1] ?? '')
+    const c = q.get('c')
+    if (c && conversations.some((x) => x.id === c)) void openConversation(c)
+  }, [conversations, convLoading, openConversation])
 
   const loadEarlier = useCallback(async () => {
     if (!activeId || !messages.length || loadingEarlier) return
@@ -430,8 +447,50 @@ export function CommunityView({
         lastTypingPing.current = now
         void api('/api/chat/typing', { conversationId: activeId }).catch(() => {})
       }
+      // mention popup: a trailing "@token" (start-of-text or after whitespace,
+      // no spaces inside) opens the member picker while ANY member name
+      // contains the token; anything else closes it. Groups only — DMs
+      // already surface the sender's name in the notification.
+      const m = /(^|\s)@([^\s@]{0,30})$/.exec(value)
+      const token = m?.[2]
+      if (m && token !== undefined && meta?.type === 'group') {
+        const lower = token.toLowerCase()
+        const hit = meta.members.some((x) => x.id !== meId && x.name.toLowerCase().includes(lower))
+        if (hit) {
+          setMention({ start: m.index + m[1].length, token })
+          setMentionIdx(0)
+          return
+        }
+      }
+      setMention(null)
     },
-    [activeId]
+    [activeId, meta, meId]
+  )
+
+  // candidates for the mention popup (max 6, sender excluded)
+  const mentionCandidates = useMemo(
+    () =>
+      mention && meta?.type === 'group'
+        ? meta.members
+            .filter((m) => m.id !== meId && m.name.toLowerCase().includes(mention.token.toLowerCase()))
+            .slice(0, 6)
+        : [],
+    [mention, meta, meId]
+  )
+
+  /** complete the highlighted @mention: swap the token for "@<name> " */
+  const acceptMention = useCallback(
+    (name: string) => {
+      if (!mention) return
+      setDraft((prev) => {
+        const before = prev.slice(0, mention.start)
+        const after = prev.slice(mention.start + 1 + mention.token.length)
+        return `${before}@${name} ${after}`
+      })
+      setMention(null)
+      composerRef.current?.focus()
+    },
+    [mention]
   )
 
   /** toggle a reaction; the API returns the fresh aggregate for that message */
@@ -471,6 +530,7 @@ export function CommunityView({
         ...(replyTo ? { replyToId: replyTo.id } : {}),
       })
       setDraft('')
+      setMention(null)
       setReplyTo(null)
       if (composerRef.current) composerRef.current.style.height = 'auto'
       setMessages((prev) => (prev.some((m) => m.id === r.message.id) ? prev : [...prev, r.message]))
@@ -1313,26 +1373,80 @@ export function CommunityView({
                       </div>
                     )}
                   </div>
-                  <textarea
-                    ref={composerRef}
-                    value={draft}
-                    onChange={(e) => onDraftChange(e.target.value)}
-                    onInput={(e) => {
-                      const el = e.target as HTMLTextAreaElement
-                      el.style.height = 'auto'
-                      el.style.height = `${Math.min(el.scrollHeight, 132)}px`
-                    }}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' && !e.shiftKey) {
-                        e.preventDefault()
-                        void sendMessage()
-                      }
-                    }}
-                    rows={1}
-                    maxLength={2000}
-                    placeholder={meta?.type === 'group' ? `Message ${activeTitle}…` : 'Type a message…'}
-                    className="max-h-[132px] min-h-[40px] flex-1 resize-none rounded-xl border-input bg-background px-3.5 py-2.5 text-sm outline-none ring-ring transition-shadow placeholder:text-muted-foreground focus-visible:ring-2 disabled:opacity-50"
-                  />
+                  <div className="relative min-w-0 flex-1">
+                    {mention && mentionCandidates.length > 0 && (
+                      <div
+                        className="absolute bottom-full left-0 z-30 mb-1 w-64 overflow-hidden rounded-xl border bg-popover shadow-lg"
+                        role="listbox"
+                        aria-label="Mention a member"
+                      >
+                        {mentionCandidates.map((m, i) => (
+                          <button
+                            key={m.id}
+                            type="button"
+                            role="option"
+                            aria-selected={i === mentionIdx}
+                            onMouseDown={(e) => {
+                              e.preventDefault() // keep textarea focus
+                              acceptMention(m.name)
+                            }}
+                            onMouseEnter={() => setMentionIdx(i)}
+                            className={cn(
+                              'flex w-full items-center gap-2 px-3 py-2 text-left text-sm transition-colors',
+                              i === mentionIdx ? 'bg-primary/10 text-primary' : 'hover:bg-muted'
+                            )}
+                          >
+                            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 text-[10px] font-bold uppercase text-primary">
+                              {m.name.slice(0, 1)}
+                            </span>
+                            <span className="truncate">{m.name}</span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                    <textarea
+                      ref={composerRef}
+                      value={draft}
+                      onChange={(e) => onDraftChange(e.target.value)}
+                      onInput={(e) => {
+                        const el = e.target as HTMLTextAreaElement
+                        el.style.height = 'auto'
+                        el.style.height = `${Math.min(el.scrollHeight, 132)}px`
+                      }}
+                      onKeyDown={(e) => {
+                        if (mention && mentionCandidates.length > 0) {
+                          if (e.key === 'ArrowDown') {
+                            e.preventDefault()
+                            setMentionIdx((i) => (i + 1) % mentionCandidates.length)
+                            return
+                          }
+                          if (e.key === 'ArrowUp') {
+                            e.preventDefault()
+                            setMentionIdx((i) => (i - 1 + mentionCandidates.length) % mentionCandidates.length)
+                            return
+                          }
+                          if (e.key === 'Escape') {
+                            e.preventDefault()
+                            setMention(null)
+                            return
+                          }
+                          if (e.key === 'Enter' || e.key === 'Tab') {
+                            e.preventDefault()
+                            acceptMention(mentionCandidates[Math.min(mentionIdx, mentionCandidates.length - 1)].name)
+                            return
+                          }
+                        }
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                          e.preventDefault()
+                          void sendMessage()
+                        }
+                      }}
+                      rows={1}
+                      maxLength={2000}
+                      placeholder={meta?.type === 'group' ? `Message ${activeTitle}… (@ to mention)` : 'Type a message…'}
+                      className="max-h-[132px] min-h-[40px] w-full resize-none rounded-xl border-input bg-background px-3.5 py-2.5 text-sm outline-none ring-ring transition-shadow placeholder:text-muted-foreground focus-visible:ring-2 disabled:opacity-50"
+                    />
+                  </div>
                   <Button type="submit" size="icon" disabled={!draft.trim() || sending} className="h-10 w-10 shrink-0 rounded-xl" aria-label="Send message">
                     {sending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
                   </Button>

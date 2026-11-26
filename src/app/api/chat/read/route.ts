@@ -18,6 +18,13 @@ export async function POST(req: NextRequest) {
       where: { conversationId_userId: { conversationId, userId: user.id } },
       data: { lastReadAt: new Date() },
     })
+    // stamp any pending @mentions in this conversation as read — keeps the
+    // mention state coherent with lastReadAt for toasts and future badges
+    await client
+      .$executeRaw`update chat_mentions set read_at = now()
+         where user_id = ${user.id} and read_at is null
+           and message_id in (select id from chat_messages where conversation_id = ${conversationId})`
+      .catch(() => {})
     return Response.json({ ok: true })
   } catch (err) {
     return jsonError(err)

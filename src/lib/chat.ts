@@ -151,3 +151,38 @@ export function sanitizeMessageBody(raw: string): string {
   }
   return text
 }
+
+/** Escape a string for literal use inside a RegExp. */
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+/**
+ * Resolve "@<display name>" mentions in a message body against conversation
+ * members. Case-insensitive; the name must end at a word boundary (so "@may"
+ * does not match member "Mayank"); multi-word names are supported
+ * ("@Mayank Kumar"). Members are matched longest-name-first and each matched
+ * span is blanked before the next attempt, so a member named "Mayank" is not
+ * double-pinged by "@Mayank Kumar". Sender excluded, duplicates collapsed,
+ * at most 10 mentions per message. Returns the mentioned member ids.
+ */
+export function parseMentions(
+  body: string,
+  members: { id: string; name: string | null }[],
+  senderId: string
+): string[] {
+  let work = body
+  const out: string[] = []
+  const candidates = members
+    .filter((m) => m.id !== senderId && m.name && m.name.trim().length >= 2)
+    .sort((a, b) => (b.name as string).trim().length - (a.name as string).trim().length)
+  for (const m of candidates) {
+    if (out.length >= 10) break
+    const name = (m.name as string).trim()
+    const re = new RegExp(`@${escapeRegExp(name.toLowerCase())}(?![a-zA-Z0-9_])`, 'i')
+    if (!re.test(work)) continue
+    work = work.replace(re, (match) => ' '.repeat(match.length))
+    out.push(m.id)
+  }
+  return out
+}

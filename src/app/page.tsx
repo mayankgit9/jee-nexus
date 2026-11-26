@@ -105,7 +105,14 @@ export default function App() {
         if (!r.ok) return
         const d = (await r.json()) as {
           total?: number
-          latest?: { body?: string; type?: string; name?: string | null; senderName?: string } | null
+          latest?: {
+            body?: string
+            type?: string
+            name?: string | null
+            senderName?: string
+            conversationId?: string
+            mentioned?: boolean
+          } | null
         }
         if (!alive || typeof d.total !== 'number') return
         const prev = lastUnreadRef.current
@@ -113,12 +120,25 @@ export default function App() {
         const onCommunity = window.location.hash.startsWith('#/community')
         if (prev !== null && d.total > prev && !onCommunity && d.latest) {
           const fresh = d.total - prev
-          const who = d.latest.type === 'group' ? d.latest.name || d.latest.senderName || 'Student' : d.latest.senderName || 'Student'
+          const l = d.latest
+          const sender = l.senderName || 'Student'
+          // a mention always leads the toast title — being @named outranks
+          // generic new-message noise; Open deep-links straight to the convo
+          const title = l.mentioned
+            ? l.type === 'group'
+              ? `${sender} mentioned you in ${l.name || 'a group'}`
+              : `${sender} mentioned you`
+            : fresh > 1
+              ? `${fresh} new messages · ${l.type === 'group' ? l.name || sender : sender} +${fresh - 1} more`
+              : `New message from ${l.type === 'group' ? l.name || sender : sender}`
+          const target = l.conversationId
+            ? `/community?c=${encodeURIComponent(l.conversationId)}`
+            : '/community'
           toast({
-            title: fresh > 1 ? `${fresh} new messages · ${who} +${fresh - 1} more` : `New message from ${who}`,
-            description: d.latest.body || 'Message',
+            title,
+            description: l.body || 'Message',
             action: (
-              <ToastAction altText="Open chat" onClick={() => navigate('/community')}>
+              <ToastAction altText="Open chat" onClick={() => navigate(target)}>
                 Open
               </ToastAction>
             ),

@@ -3,7 +3,7 @@ import { dbClient } from '@/lib/db'
 import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
 import {
   CHAT_LIMITS, requireMembership, sanitizeMessageBody, toClientMember, toClientMessage,
-  hydrateReplies, attachReplies,
+  hydrateReplies, attachReplies, parseMentions,
 } from '@/lib/chat'
 
 /** grouped reaction chips: [{ emoji, count, mine }] per message id */
@@ -191,7 +191,7 @@ export async function POST(req: NextRequest) {
     const conversationId = String(payload.conversationId ?? '')
     if (!conversationId) throw new HttpError(400, 'conversationId is required')
 
-    await requireMembership(client, conversationId, user.id)
+    const { conversation } = await requireMembership(client, conversationId, user.id)
     const body = sanitizeMessageBody(String(payload.body ?? ''))
 
     // optional reply target: must exist AND belong to the same conversation
@@ -221,10 +221,33 @@ export async function POST(req: NextRequest) {
       data: { lastReadAt: new Date() },
     })
 
+    // @mentions: resolve "@<display name>" against the group's members and
+    // store one notification row per mentioned member (sender never mentions
+    // themselves; parseMentions caps at 10). DMs don't mention — the toast
+    // already names the sender there.
+    let mentionCount = 0
+    if (conversation.type === 'group') {
+      const rows = await client.chatMember.findMany({
+        where: { conversationId },
+        select: { userId: true, user: { select: { name: true } } },
+      })
+      const ids = parseMentions(
+        body,
+        rows.map((r) => ({ id: r.userId, name: r.user.name })),
+        user.id
+      )
+      if (ids.length > 0) {
+        await client.chatMention.createMany({
+          data: ids.map((userId) => ({ messageId: message.id, userId })),
+        })
+        mentionCount = ids.length
+      }
+    }
+
     // hydrate the reply context so the sender's optimistic append renders the quote
     const replyMap = await hydrateReplies(client, [message])
     const mapped = attachReplies([toClientMessage(message)], replyMap)
-    return Response.json({ message: mapped[0] })
+    return Response.json({ message: mapped[0], mentions: mentionCount })
   } catch (err) {
     return jsonError(err)
   }

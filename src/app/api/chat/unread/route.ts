@@ -35,8 +35,13 @@ export async function GET() {
     )) as { total: number }[]
 
     const latest = (await client.$queryRawUnsafe(
-      `select m.body, m.created_at as "createdAt", c.type, c.name,
-              s.name as "senderName"
+      `select m.id, m.conversation_id as "conversationId", m.body,
+              m.created_at as "createdAt", c.type, c.name,
+              s.name as "senderName",
+              exists (
+                select 1 from chat_mentions mm
+                 where mm.message_id = m.id and mm.user_id = $1
+              ) as mentioned
          from chat_messages m
          join chat_members cm
            on cm.conversation_id = m.conversation_id and cm.user_id = $1
@@ -49,11 +54,14 @@ export async function GET() {
         limit 1`,
       user.id
     )) as {
+      id: string
+      conversationId: string
       body: string
       createdAt: Date
       type: string
       name: string | null
       senderName: string | null
+      mentioned: boolean
     }[]
 
     const l = latest[0] ?? null
@@ -61,11 +69,14 @@ export async function GET() {
       total: rows[0]?.total ?? 0,
       latest: l
         ? {
+            id: l.id,
+            conversationId: l.conversationId,
             body: l.body.length > 80 ? `${l.body.slice(0, 80)}…` : l.body,
             createdAt: new Date(l.createdAt).toISOString(),
             type: l.type,
             name: l.type === 'group' ? l.name : l.senderName,
             senderName: l.senderName ?? 'Student',
+            mentioned: Boolean(l.mentioned),
           }
         : null,
     })
