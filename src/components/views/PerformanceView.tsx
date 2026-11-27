@@ -2,7 +2,7 @@
 
 // JEE NEXUS — performance dashboard
 import { useEffect, useState } from 'react'
-import { BarChart3, Target, TrendingUp, AlertTriangle, Flame } from 'lucide-react'
+import { BarChart3, Target, TrendingUp, AlertTriangle, Flame, ClipboardList } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
@@ -15,6 +15,12 @@ interface StatsData {
     totalAttempts: number; correct: number; accuracy: number; totalTimeSeconds: number
     answeredCount: number; distinctQuestions: number; bookmarkCount: number
     examAttempts?: number
+    mocks?: {
+      id: string; title: string; kind: string; year: number | null
+      startedAt: string; status: string
+      totalQuestions: number; answered: number; correct: number; accuracy: number
+      score: number | null; maxMarks: number | null; timeSpentSeconds: number
+    }[]
     subjects: { key: string; name: string; attempted: number; correct: number; accuracy: number }[]
     chapters: { key: string; name: string; subject: string; attempted: number; correct: number; accuracy: number }[]
     daily: { date: string; count: number }[]
@@ -210,6 +216,60 @@ export function PerformanceView({ onRequireAuth }: { onRequireAuth: () => void }
           </CardContent>
         </Card>
       </div>
+
+      {/* per-mock breakdown — one row per finished CBT attempt */}
+      {(st.mocks?.length ?? 0) > 0 && (
+        <Card className="mt-4">
+          <CardHeader className="pb-2">
+            <CardTitle className="flex items-center gap-2 text-sm">
+              <ClipboardList className="h-4 w-4 text-primary" /> Recent mocks
+              <span className="ml-auto text-xs font-normal text-muted-foreground">{st.mocks!.length} finished</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2.5">
+              {st.mocks!.slice(0, 8).map((m) => {
+                const acc = m.accuracy
+                const barColor = acc >= 70 ? 'var(--primary)' : acc >= 50 ? '#f59e0b' : '#ef4444'
+                const kindLabel = m.kind === 'custom'
+                  ? 'Custom'
+                  : m.kind === 'pyq_year'
+                    ? `PYQ${m.year ? ` ${m.year}` : ''}`
+                    : m.kind === 'full_length'
+                      ? 'Full length'
+                      : m.kind === 'subject'
+                        ? 'Subject test'
+                        : 'Chapter test'
+                return (
+                  <li key={m.id} className="rounded-xl border border-border/60 px-3 py-2.5">
+                    <div className="flex items-center gap-2">
+                      <span className="min-w-0 flex-1 truncate text-sm font-medium">{m.title}</span>
+                      <span className="shrink-0 rounded bg-muted px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground">{kindLabel}</span>
+                      {m.status === 'expired' && (
+                        <span className="shrink-0 rounded bg-amber-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-amber-400">Timed out</span>
+                      )}
+                    </div>
+                    <div className="mt-2 flex items-center gap-3">
+                      {/* accuracy bar */}
+                      <div className="h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-muted">
+                        <div className="h-full rounded-full" style={{ width: `${acc}%`, background: barColor }} />
+                      </div>
+                      <span className="shrink-0 text-xs font-semibold" style={{ color: barColor }}>{acc}%</span>
+                    </div>
+                    <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-muted-foreground">
+                      <span>{m.correct}/{m.answered} correct</span>
+                      {m.totalQuestions > 0 && <span>{m.answered}/{m.totalQuestions} attempted</span>}
+                      {(m.score !== null && m.maxMarks !== null) && <span>Score {Math.round(m.score)}/{Math.round(m.maxMarks)}</span>}
+                      {m.timeSpentSeconds > 0 && <span>{formatDuration(m.timeSpentSeconds)}</span>}
+                      <span>{new Date(m.startedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}</span>
+                    </div>
+                  </li>
+                )
+              })}
+            </ul>
+          </CardContent>
+        </Card>
+      )}
 
       {/* attempt history — full paginated log with filters (was: newest 10 only) */}
       <HistoryCard />

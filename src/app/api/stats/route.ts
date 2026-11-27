@@ -10,7 +10,7 @@ export async function GET() {
     // per access; this route makes 8+ queries)
     const prisma = dbClient()
 
-    const [total, correct, bySubjectRaw, recent, bookmarkCount, examAnswers, examAttemptsRaw] = await Promise.all([
+    const [total, correct, bySubjectRaw, recent, bookmarkCount, examAnswers, examAttemptsRaw, finishedAttempts, examQuestionTotals] = await Promise.all([
       prisma.attempt.count({ where: { userId: user.id } }),
       prisma.attempt.count({ where: { userId: user.id, isCorrect: true } }),
       prisma.attempt.groupBy({
@@ -43,6 +43,7 @@ export async function GET() {
           isCorrect: true,
           timeSpentSeconds: true,
           updatedAt: true,
+          examAttemptId: true,
           examQuestion: {
             select: {
               question: {
@@ -59,6 +60,31 @@ export async function GET() {
         take: 5000,
       }),
       prisma.examAttempt.count({ where: { userId: user.id, status: { in: ['submitted', 'expired'] } } }),
+      // per-mock breakdown (backlog ②): the 20 most recent finished CBT
+      // attempts with their exam metadata; answered/correct per attempt are
+      // derived in JS from examAnswers below (same rows, no extra queries,
+      // and JSON-null filtering stays in JS per the comment above)
+      prisma.examAttempt.findMany({
+        where: { userId: user.id, status: { in: ['submitted', 'expired'] } },
+        orderBy: { startedAt: 'desc' },
+        take: 20,
+        select: {
+          id: true,
+          examId: true,
+          startedAt: true,
+          status: true,
+          totalMarks: true,
+          maxMarks: true,
+          timeSpentSeconds: true,
+          exam: { select: { title: true, kind: true, year: true } },
+        },
+      }),
+      // total questions per exam (for an attempt-level completion ratio)
+      prisma.examQuestion.groupBy({
+        by: ['examId'],
+        where: { exam: { attempts: { some: { userId: user.id, status: { in: ['submitted', 'expired'] } } } } },
+        _count: { _all: true },
+      }),
     ])
 
     // Subject-wise breakdown via question joins
@@ -134,6 +160,36 @@ export async function GET() {
         source: 'exam',
       })
     }
+
+    // per-mock breakdown: answered/correct/marks per finished attempt (from
+    // the same examAnswers rows — unanswered rows skipped), totals per exam
+    const answeredByAttempt = new Map<string, number>()
+    const correctByAttempt = new Map<string, number>()
+    for (const ea of examAnswers) {
+      if (ea.selectedOptions === null && ea.numericalValue === null) continue // unattempted
+      answeredByAttempt.set(ea.examAttemptId, (answeredByAttempt.get(ea.examAttemptId) ?? 0) + 1)
+      if (ea.isCorrect === true) correctByAttempt.set(ea.examAttemptId, (correctByAttempt.get(ea.examAttemptId) ?? 0) + 1)
+    }
+    const questionsByExam = new Map(examQuestionTotals.map((q) => [q.examId, (q._count as { _all: number })._all]))
+    const mocks = finishedAttempts.map((a) => {
+      const answered = answeredByAttempt.get(a.id) ?? 0
+      const correctN = correctByAttempt.get(a.id) ?? 0
+      return {
+        id: a.id,
+        title: a.exam.title,
+        kind: a.exam.kind,
+        year: a.exam.year,
+        startedAt: a.startedAt.toISOString(),
+        status: a.status,
+        totalQuestions: questionsByExam.get(a.examId) ?? 0,
+        answered,
+        correct: correctN,
+        accuracy: answered > 0 ? Math.round((correctN / answered) * 100) : 0,
+        score: a.totalMarks,
+        maxMarks: a.maxMarks,
+        timeSpentSeconds: a.timeSpentSeconds ?? 0,
+      }
+    })
 
     const subjectStats = [...subjects.entries()].map(([key, v]) => ({
       key,
@@ -242,6 +298,7 @@ export async function GET() {
         daily,
         streak,
         examAttempts: examAttemptsRaw,
+        mocks,
         recent: recentMerged.map((a) => ({
           ...a,
           createdAt: a.createdAt.toISOString(),

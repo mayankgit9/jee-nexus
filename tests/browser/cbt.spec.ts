@@ -88,6 +88,14 @@ test('CBT: full exam lifecycle in the browser', async ({ page }) => {
   await expect(page.getByText(/^Q1 /).first()).toBeVisible()
   // per-section breakdown appears for the physics section
   await expect(page.getByText(/physics/i).first()).toBeVisible()
+
+  // ---- per-mock analytics: the finished attempt lands on Performance ----
+  await page.goto('/#/performance')
+  await expect(page.getByText('Recent mocks')).toBeVisible({ timeout: 20_000 })
+  await expect(page.getByText('PW Test — physics 2q').first()).toBeVisible()
+  // row metadata: correct-count, attempt ratio or score line, all present
+  await expect(page.getByText(/\d+\/\d+ correct/).first()).toBeVisible()
+  await expect(page.getByText(/Score \d+\/\d+|\d+\/\d+ attempted/).first()).toBeVisible()
 }, )
 
 test('CBT: resume keeps saved answers', async ({ page }) => {
