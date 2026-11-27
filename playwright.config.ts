@@ -17,6 +17,9 @@ export default defineConfig({
     baseURL: process.env.BASE_URL ?? 'http://localhost:3000',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
+    // stuck clicks/fills fail in 15s instead of burning the whole test timeout
+    actionTimeout: 15_000,
+    navigationTimeout: 30_000,
   },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'] } },

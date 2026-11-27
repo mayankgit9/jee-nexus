@@ -82,6 +82,15 @@ function createClient(): PrismaClient {
       // the driver-adapter-utils types; the interfaces are structurally identical.
       adapter: new PrismaPg({
         connectionString: connectionString ?? UNCONFIGURED_URL,
+        // POOL GUARDRAILS (prod lesson 2026-11-27): the client is now a
+        // per-isolate singleton, so the pg pool must recycle connections
+        // aggressively to keep the "fresh connection per burst" property the
+        // old fresh-client-per-access design provided: idle sockets close
+        // after 1s (poll gaps are 3-15s, so each poll burst reconnects),
+        // connects bail out at 8s instead of hanging, pool stays tiny.
+        max: 2,
+        idleTimeoutMillis: 1_000,
+        connectionTimeoutMillis: 8_000,
         // TLS WALL (prod lesson 2026-11-25, proven by scripts/pgworker_probe.mjs):
         // from inside a Worker EVERY TLS route to the Supabase pooler fails —
         // workerd's node:tls does not implement rejectUnauthorized and ignores
@@ -105,11 +114,19 @@ function createClient(): PrismaClient {
 }
 
 /**
- * EXPERIMENT (M23): on Workers the Prisma WASM engine's connection state
- * breaks after its first completed query — every second request hung
- * ("canceled... would never generate a response", perfect 200/500
- * alternation). Testing fresh-client-per-access to confirm the engine is
- * the stateful culprit. Node runtime keeps the classic singleton.
+ * EXPERIMENT (M23, SUPERSEDED 2026-11-27): fresh-client-per-access was a
+ * workaround for the OLD @prisma/client WASM engine's connection state
+ * breaking after its first completed query (every second request hung).
+ * Production now runs the query-compiler worker client + @prisma/adapter-pg
+ * (no WASM engine) — and the fresh-per-access design turned into the
+ * problem: every db.* access instantiated a NEW query compiler + pg pool,
+ * and under concurrent chat polling (10s sidebar × users) workerd started
+ * killing requests with "Worker exceeded CPU time limit" / WASM
+ * "RuntimeError: unreachable" in loadEngine (cf_logs 2026-11-27 12:43-12:46,
+ * exceededResources rows in cf_cpu_stats.py). The Workers path now uses a
+ * per-isolate singleton — the same shape as the node path — with the pool
+ * guardrails above keeping connections fresh. If the old hang ever
+ * reappears, the fallback is restoring fresh-per-access in the Proxy below.
  */
 function isWorkersRuntime(): boolean {
   // Detection must NOT be "does the package resolve" — it is installed in
@@ -135,6 +152,72 @@ function isWorkersRuntime(): boolean {
 }
 const WORKERS = isWorkersRuntime()
 
+// Per-request client registry on Workers. Keyed by the OpenNext request
+// context object (identity-stable within one request via AsyncLocalStorage).
+// Fallback: burst-TTL client when no context is detectable.
+const globalForWorkersPrisma = globalThis as unknown as {
+  workersReqClients?: WeakMap<object, PrismaClient>
+  workersPrisma: PrismaClient | undefined
+  workersPrismaAt: number
+}
+globalForWorkersPrisma.workersReqClients = new WeakMap()
+
+/**
+ * CLIENT LIFECYCLE (prod lessons 2026-11-27, cf_logs_msgs.py):
+ *
+ * - fresh-client-per-access (M23): correct liveness, but a query-compiler +
+ *   pg pool instantiation PER db.* access → "Worker exceeded CPU time limit"
+ *   under concurrent chat polling (12:43-12:46 burst).
+ * - per-isolate singleton (1st attempt): HANGS — lazy env access forces pool
+ *   creation inside a request, and on workerd a node:net socket opened under
+ *   request 1's execution context can never settle under request 2:
+ *   "This promise was created by a request that has since ended, so it can
+ *   never settle" + "timeout exceeded when trying to connect" + workerd
+ *   "code had hung and would never generate a response" (13:08-13:10 burst).
+ *   Cross-request socket reuse is fundamentally broken on this stack.
+ *
+ * Final design: ONE client PER REQUEST, keyed by the OpenNext request
+ * context object. Each request gets its own pool/socket (no cross-request
+ * reuse → no hangs) while the per-request cost drops from ~3-4 client
+ * constructions (M23) to exactly 1. The WeakMap entry dies with the request
+ * context, so nothing accumulates on the isolate.
+ */
+const WORKERS_CLIENT_TTL_MS = 1_200
+
+function getWorkersClient(): PrismaClient {
+  // Preferred: per-request memoization via the OpenNext context object.
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { getCloudflareContext } = require('@opennextjs/cloudflare') as {
+      getCloudflareContext(opts: { async: false }): unknown
+    }
+    const ctxObj = getCloudflareContext({ async: false })
+    if (ctxObj && typeof ctxObj === 'object') {
+      const registry = globalForWorkersPrisma.workersReqClients!
+      let client = registry.get(ctxObj)
+      if (!client) {
+        client = createClient()
+        registry.set(ctxObj, client)
+      }
+      return client
+    }
+  } catch {
+    // not on workers or no async context — fall through to TTL fallback
+  }
+  // Fallback: burst-TTL client (no context object available). Rare path.
+  const now = Date.now()
+  const cur = globalForWorkersPrisma.workersPrisma
+  if (!cur || now - globalForWorkersPrisma.workersPrismaAt > WORKERS_CLIENT_TTL_MS) {
+    if (cur) {
+      void (cur as unknown as { $disconnect?: () => Promise<unknown> })
+        .$disconnect?.().catch(() => {})
+    }
+    globalForWorkersPrisma.workersPrisma = createClient()
+    globalForWorkersPrisma.workersPrismaAt = now
+  }
+  return globalForWorkersPrisma.workersPrisma as PrismaClient
+}
+
 export const db: PrismaClient = new Proxy({} as PrismaClient, {
   get(_target, prop, _receiver) {
     if (!WORKERS) {
@@ -143,9 +226,9 @@ export const db: PrismaClient = new Proxy({} as PrismaClient, {
       const value = client[prop]
       return typeof value === 'function' ? (value as (...a: unknown[]) => unknown).bind(globalForPrisma.prisma) : value
     }
-    // Workers: fresh client per property access (WASM module stays cached by
-    // the runtime; only engine state + adapter pool are recreated).
-    const client = createClient() as unknown as Record<string | symbol, unknown>
+    // Workers: per-isolate singleton (see the M23 supersession note above).
+    // One query compiler + one pg pool per isolate instead of one per access.
+    const client = getWorkersClient() as unknown as Record<string | symbol, unknown>
     const value = client[prop]
     return typeof value === 'function' ? (value as (...a: unknown[]) => unknown).bind(client) : value
   },
@@ -160,28 +243,33 @@ export const db: PrismaClient = new Proxy({} as PrismaClient, {
  * operations (or one $transaction) through it.
  */
 export function dbClient(): PrismaClient {
+  // Node runtime (dev/CI): reuse the singleton — createClient() here leaks a
+  // fresh pg Pool (default max 10) PER REQUEST, exhausting local Postgres
+  // max_connections (100) after ~30 chat requests with FATAL "sorry, too
+  // many clients already". The singleton shares one healthy pool instead.
+  // Workers: same singleton (see the M23 supersession note in db.ts).
   if (!WORKERS) {
-    // Node runtime (dev/CI): reuse the singleton — createClient() here leaks a
-    // fresh pg Pool (default max 10) PER REQUEST, exhausting local Postgres
-    // max_connections (100) after ~30 chat requests with FATAL "sorry, too
-    // many clients already". The singleton shares one healthy pool instead.
-    // (Workers keeps fresh-per-call: see the M23 note above.)
     if (!globalForPrisma.prisma) globalForPrisma.prisma = createClient()
     return globalForPrisma.prisma
   }
-  return createClient()
+  return getWorkersClient()
 }
 
 /**
- * Release a dbClient()'s resources — WORKERS ONLY. On Workers every
- * dbClient() call instantiates a fresh Prisma engine + pg pool; without an
- * explicit $disconnect the pool lingers on the isolate. With continuous
- * traffic (import runner, 2026-11-25 incident) every generation of warm
- * isolates accumulated engines/pools and crossed the 128MB limit → error
- * 1102 on ~40% of requests. On Node this is a NO-OP: dbClient() returns the
- * shared singleton, which must never be disconnected.
+ * Release a dbClient()'s resources — LEGACY NO-OP (2026-11-27).
+ *
+ * History: on Workers every dbClient() call used to instantiate a fresh
+ * engine + pg pool; without an explicit $disconnect pools lingered on the
+ * isolate and, under continuous traffic (import runner, 2026-11-25
+ * incident), warm isolates crossed the 128MB limit → error 1102 on ~40% of
+ * requests. disconnectClient() existed so routes could drain them.
+ *
+ * Since the per-isolate singleton (see the M23 supersession note) there is
+ * exactly ONE query compiler + ONE pool per isolate with 1s idle recycling
+ * — draining the singleton would break every subsequent request. The
+ * function stays as a compatibility no-op; the pool guardrails in
+ * createClient() do the memory work instead.
  */
-export async function disconnectClient(client: PrismaClient): Promise<void> {
-  if (!WORKERS) return
-  await client.$disconnect().catch(() => {})
+export async function disconnectClient(_client: PrismaClient): Promise<void> {
+  // no-op: the shared singleton must never be disconnected mid-isolate
 }

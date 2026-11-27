@@ -5,6 +5,82 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-27 (~13:30 IST) — CHAT E2E IN BROWSER + WORKER DB-CLIENT LIFECYCLE FIX (CPU kills & hangs)
+
+### Session start (10th sandbox recycle)
+- Same recovery: `.secrets/` rebuilt, `git reset --hard origin/main` → `fb59519`
+  (origin had moved past the summary's `c3e5cda` — a post-summary session had
+  already shipped mention highlights `2a8fdcb` + docs `fb59519`). Health
+  3×200; CI green on fb59519; PYQ 11,886 (2019–2026) held; no import runs.
+
+### Chat browser spec (backlog ①) — tests/browser/chat.spec.ts
+- One full-lifecycle Playwright test, two browser contexts (A sender, B
+  receiver), pw-* signup through the API (page.request shares the context
+  cookie jar): group creation via the New chat dialog → @mention
+  autocomplete (unknown token closes the popup; "@Riy" resolves to the full
+  display name; Enter inserts "@<name> ") → mention toast on B's home
+  (suppressed on /#/community by design) → Open deep-links
+  `#/community?c=<id>` → accent mention chip in the bubble → fresh mount
+  back to the list → second mention raises the rose unread pill + "@ you"
+  chip in the sidebar (10s poll) → opening the conversation clears both →
+  DM flow never shows the mention popup.
+- Spec-hardening lessons baked in: chat user search MASKS emails
+  (p•••••@…), so result rows match by name; probe names must be unique per
+  run (search is name-substring and old runs leave same-named users behind
+  → strict-mode violations); message bodies must carry the FULL display
+  name or parseMentions misses (autocomplete-accepted text must not be
+  overwritten with a shortened handle); message-text assertions are
+  bubble-scoped (`div.whitespace-pre-wrap`) because the sidebar preview
+  repeats the text; signup retries once after 61s (5/min/IP limit) so the
+  spec works against the live site too; config gains actionTimeout 15s +
+  navigationTimeout 30s so stuck clicks fail fast instead of burning the
+  5-minute test timeout.
+- Verified LIVE (53.6s pass) after the DB fix below; probe users +
+  conversations deleted — 0 leftovers.
+
+### Worker DB-client lifecycle — the real find of this session
+- Chat E2E load exposed what single-request health checks never could:
+  worker observability logs showed `Worker exceeded CPU time limit` +
+  Prisma WASM `RuntimeError: unreachable` in loadEngine on
+  /api/chat/conversations and /api/chat/unread — every concurrent poll
+  burst killed requests (exceededResources rows in cf_cpu_stats.py).
+- Root cause: M23's fresh-client-per-ACCESS built a query compiler + pg
+  pool for EVERY db.* property access (~3-4 per request).
+- Fix attempts told the full story (new scripts/cf_logs_msgs.py prints
+  full exception messages): a per-isolate SINGLETON hung instead — lazy
+  env access forces pool creation inside a request, and workerd binds
+  node:net sockets to the request context: reuse under another request
+  fails with "This promise was created by a request that has since
+  ended, so it can never settle" / "code had hung and would never
+  generate a response" (reproduced 13:08-13:10). Cross-request socket
+  reuse is fundamentally broken on this stack.
+- FINAL DESIGN: one client PER REQUEST, keyed by the OpenNext request
+  context object (AsyncLocalStorage-stable identity) via WeakMap — each
+  request gets its own pool/socket (no reuse → no hangs) at exactly ONE
+  construction per request (vs ~3-4). WeakMap entries die with the
+  request context (no isolate accumulation). Burst-TTL fallback if no
+  context is detectable. Pool guardrails: max 2, idleTimeoutMillis 1s,
+  connectionTimeoutMillis 8s. disconnectClient() is now a documented
+  no-op (draining the shared-per-request client is never wanted).
+- Validation: mixed-endpoint probe 20/20 (3s gaps), all three health
+  endpoints 5/5, chat E2E 47+34 requests in the window with ZERO
+  errors/hangs/exceededResources (cf_cpu_stats.py: only success rows +
+  2 benign clientDisconnected at context close).
+
+### Deploy state
+- Three deploys this session (bugfix iterations); live at the final
+  lifecycle design. Next session should re-run the full browser suite in
+  CI to confirm the chat spec is green on ephemeral Postgres.
+
+### Next
+- per-mock analytics (per-exam breakdown in Performance); weekly winners
+  snapshot (GH Actions cron pinning top-3 per window); DM-wide mention
+  support if wanted later; per-user "mentions" filter in community
+  sidebar; keep an eye on /api/taxonomy SSR CPU (p99 ~330ms — heaviest
+  route) if more users arrive.
+
+---
+
 ## 2026-11-27 (~12:35 IST) — MENTION HIGHLIGHTS in bubbles + sidebar mention markers
 
 ### Session start (9th sandbox recycle)
