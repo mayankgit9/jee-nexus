@@ -7,7 +7,7 @@
 //   active chat  GET /api/chat/messages?after= every 3s (dedup by id)
 // Both pause when the tab is hidden. All sends/reads are explicit REST calls.
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import {
   ArrowLeft, ArrowDown, Ban, Check, CheckCheck, Copy, CornerUpLeft, Hash, Loader2, MessageSquare, MessageSquarePlus,
@@ -161,6 +161,39 @@ function previewOf(c: Conversation, meId: string): string {
   const prefix = c.lastMessage.senderId === meId ? 'You: ' : c.type === 'group' ? `${c.lastMessage.senderName.split(' ')[0]}: ` : ''
   const body = c.lastMessage.body.replace(/\s+/g, ' ')
   return `${prefix}${body.length > 60 ? body.slice(0, 60) + '…' : body}`
+}
+
+/** Escape a string for literal use inside a RegExp. */
+function escapeRe(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+/**
+ * Member-name mention matcher (word-bounded, case-insensitive, longest
+ * names first so "@Riya Sen" is consumed before a member named "Riya").
+ * Returns true if any matched token names the given user. Mirrors the
+ * server-side parseMentions rules in lib/chat.ts without importing it
+ * (lib/auth is server-only).
+ */
+function memberMentionTokens(body: string | undefined, members: ChatUser[]): string[] {
+  if (!body) return []
+  const names = members
+    .filter((m) => m.name && m.name.trim().length >= 2)
+    .map((m) => (m.name as string).trim())
+  if (!names.length) return []
+  const re = new RegExp(
+    `@(?:${[...names].sort((a, b) => b.length - a.length).map(escapeRe).join('|')})(?![a-zA-Z0-9_])`,
+    'gi'
+  )
+  const tokens: string[] = []
+  let mt: RegExpExecArray | null
+  while ((mt = re.exec(body)) !== null) tokens.push(mt[0].slice(1).toLowerCase())
+  return tokens
+}
+
+function mentionsMe(body: string | undefined, members: ChatUser[], myName: string): boolean {
+  const myLower = myName.trim().toLowerCase()
+  return Boolean(myLower) && memberMentionTokens(body, members).includes(myLower)
 }
 
 /** "online" = seen by the server within the last 5 minutes */
@@ -491,6 +524,70 @@ export function CommunityView({
       composerRef.current?.focus()
     },
     [mention]
+  )
+
+  // conversations whose latest unread message mentions me (sidebar markers)
+  const mentionedConvIds = useMemo(
+    () =>
+      new Set(
+        (conversations ?? [])
+          .filter(
+            (c) =>
+              c.unread > 0 && c.lastMessage && mentionsMe(c.lastMessage.body, c.members, user?.name ?? '')
+          )
+          .map((c) => c.id)
+      ),
+    [conversations, user]
+  )
+
+  /**
+   * Highlight "@<member name>" tokens inside message bodies and quoted
+   * snippets. Longest names consume first (matching the server parser);
+   * mentions of ME get the accent treatment, mentions of others stay quiet.
+   * own = the containing bubble was sent by me (styles must survive the
+   * mint/white bubble palette); snippet = quoted-reply context (no chips).
+   */
+  const renderMentionText = useCallback(
+    (body: string, own: boolean, snippet: boolean): ReactNode[] => {
+      if (!body) return [body]
+      const tokens = meta?.type === 'group' ? memberMentionTokens(body, meta.members) : []
+      if (!tokens.length) return [body]
+      const myLower = (user?.name ?? '').trim().toLowerCase()
+      const re = new RegExp(
+        `@(?:${meta!.members
+          .filter((m) => m.name && m.name.trim().length >= 2)
+          .map((m) => escapeRe((m.name as string).trim()))
+          .sort((a, b) => b.length - a.length)
+          .join('|')})(?![a-zA-Z0-9_])`,
+        'gi'
+      )
+      const nodes: ReactNode[] = []
+      let last = 0
+      let k = 0
+      let mt: RegExpExecArray | null
+      while ((mt = re.exec(body)) !== null) {
+        if (mt.index > last) nodes.push(body.slice(last, mt.index))
+        const token = mt[0]
+        const isMe = myLower !== '' && token.slice(1).toLowerCase() === myLower
+        let cls: string
+        if (snippet) {
+          cls = isMe && !own ? 'font-semibold text-primary' : 'font-semibold'
+        } else if (own) {
+          cls = 'rounded bg-white/20 px-0.5 font-semibold'
+        } else {
+          cls = isMe ? 'rounded bg-primary/15 px-1 font-semibold text-primary' : 'font-semibold text-foreground'
+        }
+        nodes.push(
+          <span key={k++} className={cls}>
+            {token}
+          </span>
+        )
+        last = mt.index + token.length
+      }
+      if (last < body.length) nodes.push(body.slice(last))
+      return nodes
+    },
+    [meta, user]
   )
 
   /** toggle a reaction; the API returns the fresh aggregate for that message */
@@ -888,7 +985,12 @@ export function CommunityView({
                         >
                           {c.type === 'group' ? <Hash className="h-4 w-4" /> : initialsOf(title)}
                           {c.unread > 0 && (
-                            <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-bold text-primary-foreground ring-2 ring-card">
+                            <span
+                              className={cn(
+                                'absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[10px] font-bold text-primary-foreground ring-2 ring-card',
+                                mentionedConvIds.has(c.id) ? 'bg-rose-500' : 'bg-primary'
+                              )}
+                            >
                               {c.unread > 9 ? '9+' : c.unread}
                             </span>
                           )}
@@ -908,8 +1010,16 @@ export function CommunityView({
                               {c.lastMessage ? timeLabel(c.lastMessage.createdAt) : ''}
                             </span>
                           </span>
-                          <span className={cn('mt-0.5 block truncate text-xs', c.unread > 0 ? 'text-foreground/80' : 'text-muted-foreground')}>
-                            {previewOf(c, meId)}
+                          <span className={cn('mt-0.5 flex min-w-0 items-center gap-1.5 text-xs', c.unread > 0 ? 'text-foreground/80' : 'text-muted-foreground')}>
+                            {mentionedConvIds.has(c.id) && (
+                              <span
+                                className="shrink-0 rounded bg-rose-500/15 px-1 py-px text-[10px] font-bold text-rose-500"
+                                title="You were mentioned in the latest message"
+                              >
+                                @ you
+                              </span>
+                            )}
+                            <span className="min-w-0 truncate">{previewOf(c, meId)}</span>
                           </span>
                         </span>
                       </button>
@@ -1135,12 +1245,16 @@ export function CommunityView({
                                           {m.replyTo.senderName}
                                         </span>
                                         <span className={cn('block truncate text-xs', own ? 'text-primary-foreground/70' : 'text-muted-foreground')}>
-                                          {m.replyTo.deleted ? 'Message deleted' : m.replyTo.body || '(no text)'}
+                                          {m.replyTo.deleted ? (
+                                            'Message deleted'
+                                          ) : (
+                                            renderMentionText(m.replyTo.body || '(no text)', own, true)
+                                          )}
                                         </span>
                                       </span>
                                     </button>
                                   )}
-                                  {m.body}
+                                  {renderMentionText(m.body, own, false)}
                                 </div>
                               )}
                               {pickerFor === m.id && (
