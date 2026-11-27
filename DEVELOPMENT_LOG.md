@@ -5,6 +5,64 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-28 (~02:15 IST) — WEEKLY WINNERS SNAPSHOT: pinned hall of fame (backlog ③)
+
+### Session start (11th sandbox recycle)
+- Same recovery: `.secrets/` rebuilt, `git reset --hard origin/main` → `0f23d37`
+  (origin had moved past the summary's `64cdae6` — two post-summary sessions had
+  already shipped mention highlights, chat E2E in CI, per-request Prisma client
+  and per-mock analytics). Health 3×200; CI green on 0f23d37; PYQ 11,886
+  (2019–2026) held; no import runs; worker logs error-clean.
+
+### Implemented — the full pin pipeline
+- **Migration 0015 `weekly_winners`**: pinned top-3 of each CLOSED week.
+  unique (window_start, window_end, rank) makes any re-run a no-op;
+  `user_id` ON DELETE SET NULL + `user_name` snapshot copy keep the hall of
+  fame intact after account deletion. Applied to prod BEFORE code deploy
+  (migration-order rule), structure verified via information_schema.
+- **Ranking core extracted** `src/lib/leaderboard.ts` (`computeRankedBoard`):
+  the exact attempt-groupBy + graded-CBT-answers merge GET /api/leaderboard
+  used to inline. The board and the snapshot can no longer drift — one
+  source of truth for the metric.
+- **POST /api/leaderboard/snapshot** (cron-only): bearer `SNAPSHOT_TOKEN`
+  (worker secret; env read via getCloudflareContext → process.env fallback).
+  Hard validation before any DB write: window must be EXACTLY 7 days, fully
+  closed (end ≤ now), no older than 13 weeks; 401/400/503 paths covered live.
+  Pins top-3 via createMany(skipDuplicates) → returns inserted count + winners.
+- **GET /api/leaderboard/winners**: public hall of fame — rows grouped per
+  window in JS, newest first (rate-limited 30/min, emails never ship).
+- **LeaderboardView hall of fame**: crown header + medal-chip grid
+  (gold/silver/bronze reusing podium styles), IST date ranges from stored
+  window bounds, attempts · accuracy per winner; hidden entirely while no
+  week is pinned (no empty-state clutter).
+- **GH Actions `weekly-winners.yml`**: cron Monday 00:05 UTC (05:35 IST —
+  right at the trailing-7d flip) + workflow_dispatch for backfills.
+  `scripts/weekly_snapshot.py` derives the window from the RUN date (most
+  recent Monday 00:00 UTC minus 7d) — deterministic regardless of runner
+  delay — and POSTs it; token never printed. SNAPSHOT_TOKEN set as BOTH a
+  worker secret (wrangler secret put) and a repo secret (pynacl sealed box
+  via the Actions secrets API).
+
+### Verified live
+- Endpoint matrix: 401 wrong token, 401 missing auth, 400 future window,
+  400 wrong length, 200 real pin, 200 idempotent re-run. First 401s were a
+  red herring: wrangler secret propagation lag (~1 min), not a value mismatch.
+- [Nov 16→23 UTC) pinned `inserted: 0` — CORRECT: the app's real usage starts
+  after that window closed; the first populated pin lands Mon Dec 1 00:05 UTC
+  covering [Nov 23→30).
+- UI: probe window rows → API → hall-of-fame card renders with medal chips
+  (screenshot) → probe rows deleted, count 0, `windows: []` again.
+- Cron path: workflow dispatched → run success, log "HTTP 200: pinned 0
+  winners for 2026-11-16 .. 2026-11-23". CI green on 0af276b.
+
+### Next
+- DM-wide mention support; per-user "mentions" filter in community sidebar;
+  watch /api/taxonomy SSR CPU (p99 ~330ms) under growth; hall-of-fame share
+  cards (og:image render of the podium); consider pinning a top-10 runner-up
+  strip once multiple weeks accumulate.
+
+---
+
 ## 2026-11-27 (~14:00 IST) — PER-MOCK ANALYTICS in Performance (backlog ②)
 
 - **/api/stats `mocks[]`**: the 20 most recent finished CBT attempts
