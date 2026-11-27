@@ -30,6 +30,20 @@ interface LeaderboardData {
   activeStudents: number
 }
 
+interface WinnerRow {
+  rank: number
+  userName: string
+  userId: string | null
+  attempts: number
+  correct: number
+  accuracy: number
+  timeSeconds: number
+}
+
+interface WinnersData {
+  windows: Array<{ windowStart: string; windowEnd: string; winners: WinnerRow[] }>
+}
+
 const WEEK_OFFSET_MAX = 12
 const weekLabel = (offset: number): string =>
   offset === 0 ? 'This week' : offset === 1 ? 'Last week' : `${offset} weeks ago`
@@ -43,6 +57,12 @@ const PODIUM_STYLES: Record<number, { ring: string; chip: string; label: string 
 const initials = (name: string) =>
   name.split(/\s+/).slice(0, 2).map((w) => w[0] ?? '').join('').toUpperCase() || '?'
 
+// Hall of fame window label — window boundaries stored UTC-aligned; rendered
+// in the app's home timezone. windowEnd is EXCLUSIVE (snapshot definition).
+const fmtDay = (iso: string) =>
+  new Intl.DateTimeFormat('en-IN', { day: 'numeric', month: 'short', timeZone: 'Asia/Kolkata' }).format(new Date(iso))
+const fmtRange = (s: string, e: string) => `${fmtDay(s)} – ${fmtDay(e)}`
+
 function accuracyBarClass(a: number) {
   if (a >= 70) return 'bg-emerald-400'
   if (a >= 40) return 'bg-amber-400'
@@ -55,6 +75,10 @@ export function LeaderboardView({ user, onRequireAuth }: { user: SessionUser | n
   const { data, loading, error } = useApi<LeaderboardData>(
     period === 'week' ? `/api/leaderboard?period=week&weekOffset=${weekOffset}` : '/api/leaderboard?period=all'
   )
+  // pinned champions of closed weeks (weekly cron snapshot) — independent of
+  // the selected period, fetched once
+  const { data: winnersData } = useApi<WinnersData>('/api/leaderboard/winners')
+  const hall = winnersData?.windows ?? []
   const leaders = data?.leaders ?? []
   const podium = leaders.slice(0, 3)
   const rest = leaders.slice(3)
@@ -234,6 +258,52 @@ export function LeaderboardView({ user, onRequireAuth }: { user: SessionUser | n
               </div>
             </motion.div>
           ))}
+        </div>
+      )}
+
+      {/* hall of fame — pinned champions of every closed week */}
+      {!loading && !error && hall.length > 0 && (
+        <div className="mt-8">
+          <div className="flex items-center gap-2">
+            <Crown className="h-4 w-4 text-amber-400" aria-hidden="true" />
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Hall of fame</h2>
+            <span className="text-xs text-muted-foreground">· pinned weekly champions</span>
+          </div>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+            {hall.map((w) => (
+              <motion.div
+                key={w.windowEnd}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="rounded-2xl border border-border bg-card p-4"
+              >
+                <div className="text-xs font-medium text-muted-foreground">{fmtRange(w.windowStart, w.windowEnd)}</div>
+                <div className="mt-2.5 space-y-2">
+                  {w.winners.map((r) => {
+                    const style = PODIUM_STYLES[r.rank] ?? PODIUM_STYLES[3]
+                    return (
+                      <div key={r.rank} className="flex items-center gap-2.5">
+                        <span
+                          className={cn(
+                            'flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-[10px] font-bold',
+                            style.chip
+                          )}
+                          aria-label={style.label}
+                        >
+                          {r.rank}
+                        </span>
+                        <span className="min-w-0 flex-1 truncate text-sm font-medium">{r.userName}</span>
+                        <span className="shrink-0 text-xs text-muted-foreground">
+                          {r.attempts.toLocaleString('en-IN')} · {r.accuracy}%
+                        </span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       )}
 

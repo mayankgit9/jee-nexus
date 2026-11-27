@@ -92,6 +92,7 @@ model User {
   chatTypingStates     ChatTyping[]
   chatReactions        ChatReaction[]
   chatMentions         ChatMention[]         @relation("ChatMentionee")
+  weeklyWinners        WeeklyWinner[]        @relation("WeeklyWinnerUser")
 
   @@map("app_users")
 }
@@ -513,4 +514,29 @@ model RateLimitCounter {
   limitMax      Int      @map("limit_max")
 
   @@map("rate_limit_counters")
+}
+
+/// Pinned top-3 of each CLOSED leaderboard week (migration 0015). Written by
+/// POST /api/leaderboard/snapshot (bearer-token gated, called by the weekly
+/// GitHub Actions cron) using the same ranking logic as GET /api/leaderboard.
+/// unique(windowStart, windowEnd, rank) makes snapshot re-runs idempotent.
+/// userName is the display name at pin time; userId is SET NULL on deletion
+/// so the hall of fame survives account cleanup.
+model WeeklyWinner {
+  id          String   @id @default(cuid())
+  windowStart DateTime @map("window_start") @db.Timestamptz(6)
+  windowEnd   DateTime @map("window_end") @db.Timestamptz(6)
+  rank        Int
+  userId      String?  @map("user_id")
+  user        User?    @relation("WeeklyWinnerUser", fields: [userId], references: [id], onDelete: SetNull)
+  userName    String   @map("user_name")
+  attempts    Int
+  correct     Int
+  accuracy    Int
+  timeSeconds Int      @default(0) @map("time_seconds")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([windowStart, windowEnd, rank])
+  @@index([windowEnd(sort: Desc), rank])
+  @@map("weekly_winners")
 }

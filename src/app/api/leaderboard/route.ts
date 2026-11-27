@@ -1,6 +1,7 @@
 import { NextRequest } from 'next/server'
 import { dbClient } from '@/lib/db'
 import { getSessionUser, jsonError, rateLimit } from '@/lib/auth'
+import { computeRankedBoard, WEEK_MS, WEEK_OFFSET_MAX_BOUND } from '@/lib/leaderboard'
 
 /**
  * GET /api/leaderboard?period=week|all&weekOffset=0..12 — community practice
@@ -17,12 +18,9 @@ import { getSessionUser, jsonError, rateLimit } from '@/lib/auth'
  * 7 days before that, etc. — so archives stay browsable after the week
  * ends (weekly winners used to vanish into the all-time board).
  *
- * Portable Prisma groupBy only (works on PG prod + SQLite local dev) —
- * no raw SQL, no date_trunc, so no engine-specific drift.
+ * Ranking merge lives in src/lib/leaderboard.ts so the weekly winners
+ * snapshot ranks with the exact same logic.
  */
-const WEEK_MS = 7 * 24 * 60 * 60 * 1000
-const WEEK_OFFSET_MAX = 12
-
 export async function GET(req: NextRequest) {
   try {
     const period = req.nextUrl.searchParams.get('period') === 'all' ? 'all' : 'week'
@@ -34,62 +32,17 @@ export async function GET(req: NextRequest) {
     await rateLimit(`leaderboard:${user?.id ?? ip}`, 30, 60 * 1000, client)
 
     const offsetRaw = Number.parseInt(req.nextUrl.searchParams.get('weekOffset') ?? '0', 10)
-    const weekOffset = period === 'week' && Number.isFinite(offsetRaw) ? Math.min(WEEK_OFFSET_MAX, Math.max(0, offsetRaw)) : 0
+    const weekOffset = period === 'week' && Number.isFinite(offsetRaw)
+      ? Math.min(WEEK_OFFSET_MAX_BOUND, Math.max(0, offsetRaw))
+      : 0
 
     const now = Date.now()
     // offset 0 keeps the original trailing-7-days window; higher offsets
     // walk back in 7-day blocks: [now-(k+1)w, now-kw)
     const since = period === 'week' ? new Date(now - (weekOffset + 1) * WEEK_MS) : undefined
     const until = period === 'week' && weekOffset > 0 ? new Date(now - weekOffset * WEEK_MS) : undefined
-    const where = since
-      ? until
-        ? { createdAt: { gte: since, lt: until } }
-        : { createdAt: { gte: since } }
-      : {}
 
-    const [byUser, byCorrect, examAnswers] = await Promise.all([
-      client.attempt.groupBy({ by: ['userId'], where, _count: { _all: true }, _sum: { timeSpentSeconds: true } }),
-      client.attempt.groupBy({ by: ['userId'], where: { ...where, isCorrect: true }, _count: { _all: true } }),
-      // graded CBT/mock answers count toward the board too — mirrors the
-      // stats dashboard (a mock-only student must not be invisible here).
-      // Json-null filtering is skipped in JS on purpose (DbNull subtleties).
-      client.examAttemptAnswer.findMany({
-        where: { examAttempt: { status: { in: ['submitted', 'expired'] } } },
-        select: {
-          selectedOptions: true,
-          numericalValue: true,
-          isCorrect: true,
-          timeSpentSeconds: true,
-          updatedAt: true,
-          examAttempt: { select: { userId: true } },
-        },
-        take: 20000,
-      }),
-    ])
-
-    const stats = new Map<string, { attempts: number; correct: number; timeSeconds: number }>()
-    for (const r of byUser) {
-      stats.set(r.userId, { attempts: r._count._all, correct: 0, timeSeconds: r._sum.timeSpentSeconds ?? 0 })
-    }
-    for (const r of byCorrect) {
-      const s = stats.get(r.userId)
-      if (s) s.correct = r._count._all
-    }
-    for (const ea of examAnswers) {
-      if (ea.selectedOptions === null && ea.numericalValue === null) continue // unattempted slot
-      const t = ea.updatedAt.getTime()
-      if (since && t < since.getTime()) continue
-      if (until && t >= until.getTime()) continue
-      const s = stats.get(ea.examAttempt.userId) ?? { attempts: 0, correct: 0, timeSeconds: 0 }
-      s.attempts++
-      if (ea.isCorrect === true) s.correct++
-      s.timeSeconds += ea.timeSpentSeconds
-      stats.set(ea.examAttempt.userId, s)
-    }
-
-    const ranked = [...stats.entries()]
-      .map(([userId, v]) => ({ userId, ...v, accuracy: v.attempts > 0 ? v.correct / v.attempts : 0 }))
-      .sort((a, b) => b.attempts - a.attempts || b.correct - a.correct || a.timeSeconds - b.timeSeconds)
+    const ranked = await computeRankedBoard(client, { since, until })
 
     // names for the top 50 + the caller (rank lookups need the caller only)
     const top = ranked.slice(0, 50)
