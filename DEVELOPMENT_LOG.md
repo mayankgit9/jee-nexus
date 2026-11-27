@@ -5,6 +5,38 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-27 (~14:00 IST) — PER-MOCK ANALYTICS in Performance (backlog ②)
+
+- **/api/stats `mocks[]`**: the 20 most recent finished CBT attempts
+  (submitted/expired) with exam metadata (title, kind, PYQ year), per-attempt
+  answered/correct/accuracy derived in JS from the existing examAnswers fetch
+  (JSON-null filtering stays JS-side per the route's own lesson — a groupBy
+  can't split "selectedOptions OR numericalValue" reliably), score/maxMarks
+  (negative marking visible), time spent, and total questions per exam via
+  one grouped examQuestion query for the completion ratio. No new row
+  fetches — same 5000-row cap as the merged stats.
+- **PerformanceView "Recent mocks" card**: kind chip (Custom / Full length /
+  Subject / Chapter / PYQ <year>), amber "Timed out" badge for expired
+  attempts, color-coded accuracy bar (mint ≥70 / amber ≥50 / red below),
+  metadata line: N/M correct · answered/total attempted · Score X/Y ·
+  duration · date. Hidden entirely when no finished attempts exist (no
+  empty-state clutter). First 8 rows shown.
+- **Tests**: `tests/browser/cbt.spec.ts` now asserts after its full-lifecycle
+  submit that Performance shows "Recent mocks" with the exam title, the
+  correct-count line and the score/attempt-ratio line. New
+  `scripts/mock_stats_probe.py` live probe: signup → custom 2q exam → start →
+  answer → submit → asserts stats.mocks[0] math — passed with score **-1/8**
+  (negative marking verified), 2/2 answered, 0% accuracy, cleanup 0 rows.
+- Deployed; CBT browser spec 2/2 live (27.1s + 23.3s). Probe users/exams
+  deleted — 0 leftovers.
+
+### Next
+- weekly winners snapshot (GH Actions cron pinning top-3 per window);
+  DM-wide mention support; per-user "mentions" filter in community sidebar;
+  watch /api/taxonomy SSR CPU (p99 ~330ms) under growth.
+
+---
+
 ## 2026-11-27 (~13:30 IST) — CHAT E2E IN BROWSER + WORKER DB-CLIENT LIFECYCLE FIX (CPU kills & hangs)
 
 ### Session start (10th sandbox recycle)
