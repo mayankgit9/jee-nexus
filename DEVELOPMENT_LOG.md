@@ -5,6 +5,53 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-27 (~12:35 IST) — MENTION HIGHLIGHTS in bubbles + sidebar mention markers
+
+### Session start (9th sandbox recycle)
+- Same recovery: `.secrets/` rebuilt, git HEAD reset to stale `2764a4e`
+  (local mods were file-mode artifacts only), `git reset --hard origin/main`
+  → `c3e5cda`, `prisma generate`. Health 3×200; CI green on c3e5cda; PYQ
+  11,886 across 2019–2026 held; no import runs. Endpoint sweep healthy
+  (its two "failures" remain script artifacts: `/` is HTML, random-selection
+  is POST-only — re-verified POST 200 live).
+
+### Mention-aware rendering (completes the mention feature visually)
+- **Bubble bodies + quoted snippets** now highlight `@<member name>` tokens:
+  mentions of ME get the accent chip (mint `bg-primary/15 text-primary`
+  in others' bubbles; subtle `bg-white/20` inside my own mint bubble);
+  mentions of others render quietly bold. Client-side matcher mirrors the
+  server parser (word-bounded, case-insensitive, LONGEST name consumes the
+  span first — so "@Riya Sen" is not re-highlighted as "@Riya"), built from
+  the open conversation's member list; lives in CommunityView because
+  lib/chat.ts pulls server-only lib/auth.
+- **Sidebar mention markers**: conversations whose latest unread message
+  mentions me get a ROSE unread pill (was mint) plus a red "@ you" chip in
+  the preview row; both disappear once the conversation is read. Detection
+  reuses the same matcher over `lastMessage.body` + members.
+
+### Tests executed
+- lint clean; tsc clean in src/ (remaining errors are pre-existing
+  scripts/examples artifacts).
+- Deployed, then browser E2E on live with a 3-user probe group
+  (`scripts/mhl_setup.py`, tag-prefixed mhl-% users):
+  - As B ("Riya Sen"): rose pill present; **no** "@ you" chip — latest
+    message "@Riya solo ping" names the OTHER "Riya" (longest-first
+    verified in UI); bubble spans confirmed by className: "@Riya Sen" →
+    accent style, "@Riya" → quiet style; screenshot archived.
+  - As C ("Riya"): "@ you" chip + rose pill visible (screenshot).
+  - Probe users/conversations deleted — 0 leftovers verified.
+
+### Deploy state
+- Deployed via `scripts/deploy_app_cloudflare.sh`; commit rides the next push.
+
+### Next
+- Playwright chat spec (toasts + mentions + deep-link) in CI; per-mock
+  analytics (per-exam breakdown in Performance); weekly winners snapshot
+  (GH Actions cron pinning top-3 per window); DM-wide mention support if
+  wanted later; per-user "mentions" filter in community sidebar.
+
+---
+
 ## 2026-11-27 (~05:05 IST) — @MENTION NOTIFICATIONS + toast deep-links
 
 ### Session start (8th sandbox recycle)
