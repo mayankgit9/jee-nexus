@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   CheckCircle2, XCircle, Bookmark, BookmarkCheck, Flag, ChevronRight, ZoomIn, ShieldQuestion, Sparkles, Loader2,
+  Lightbulb, Share2, NotebookPen, ImageOff, Send, Maximize2,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -23,6 +24,7 @@ import { MathText } from '@/components/MathText'
 import type { PublicQuestion, QuestionSolution, SubmittedResult } from '@/lib/types'
 import { DIFFICULTY_META, TYPE_META, SUBJECT_META } from '@/lib/types'
 import { api, SUBJECT_COLORS } from '@/lib/client'
+import { offlineAttempt, isOffline, newClientKey } from '@/lib/offline'
 import { cn } from '@/lib/utils'
 import { toast } from '@/hooks/use-toast'
 
@@ -55,20 +57,38 @@ export function SourceBadges({ q }: { q: PublicQuestion }) {
 
 function ZoomableImage({ src, alt, caption, attribution }: { src: string; alt: string; caption?: string; attribution?: string }) {
   const [zoom, setZoom] = useState(false)
+  const [failed, setFailed] = useState(false)
+  const [loaded, setLoaded] = useState(false)
   return (
     <figure className="my-4">
-      <button
-        type="button"
-        onClick={() => setZoom(true)}
-        className="group relative block w-full overflow-hidden rounded-lg border border-border bg-black/20"
-        aria-label={`Zoom image: ${alt}`}
-      >
-        { }
-        <img src={src} alt={alt} className="mx-auto max-h-[420px] w-auto max-w-full p-2" loading="lazy" />
-        <span className="absolute right-2 top-2 rounded-md bg-black/60 p-1.5 opacity-0 transition-opacity group-hover:opacity-100">
-          <ZoomIn className="h-4 w-4 text-white" />
-        </span>
-      </button>
+      {failed ? (
+        // PART B: honest placeholder when an image fails to load — never a silent blank box
+        <div className="flex flex-col items-center gap-2 rounded-lg border border-dashed border-border bg-muted/30 px-4 py-6 text-center">
+          <ImageOff className="h-6 w-6 text-muted-foreground" />
+          <p className="text-sm text-muted-foreground">Diagram unavailable (broken link)</p>
+          <p className="text-xs text-muted-foreground/70">You can report it — “Missing diagram”.</p>
+        </div>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setZoom(true)}
+          className="group relative block w-full overflow-hidden rounded-lg border border-border bg-black/20"
+          aria-label={`Zoom image: ${alt}`}
+        >
+          {!loaded && <div className="absolute inset-0 animate-pulse bg-muted/40" />}
+          {/* aspect ratio preserved via natural sizing (w-auto/h-auto + object-contain) */}
+          <img
+            src={src} alt={alt}
+            className="mx-auto max-h-[420px] w-auto max-w-full object-contain p-2"
+            loading="lazy" decoding="async"
+            onLoad={() => setLoaded(true)}
+            onError={() => setFailed(true)}
+          />
+          <span className="absolute right-2 top-2 rounded-md bg-black/60 p-1.5 opacity-0 transition-opacity group-hover:opacity-100">
+            <ZoomIn className="h-4 w-4 text-white" />
+          </span>
+        </button>
+      )}
       {caption && <figcaption className="mt-1.5 text-center text-xs text-muted-foreground">{caption}</figcaption>}
       {attribution && (
         <figcaption className="text-center text-[11px] text-muted-foreground/70">
@@ -79,8 +99,12 @@ function ZoomableImage({ src, alt, caption, attribution }: { src: string; alt: s
       )}
       <Dialog open={zoom} onOpenChange={setZoom}>
         <DialogContent className="max-w-4xl">
-          { }
-          <img src={src} alt={alt} className="mx-auto max-h-[75vh] w-auto max-w-full" />
+          <div className="flex items-center justify-between">
+            <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              <Maximize2 className="h-3.5 w-3.5" /> Tap or pinch to zoom in your browser
+            </span>
+          </div>
+          <img src={src} alt={alt} className="mx-auto max-h-[75vh] w-auto max-w-full object-contain" />
           <DialogDescription>{caption ?? alt}</DialogDescription>
         </DialogContent>
       </Dialog>
@@ -136,11 +160,23 @@ export function SolutionView({ solution, result, questionId, loggedIn, onRequire
           Detailed Solution
         </h4>
         <div className="flex flex-wrap items-center gap-2">
-          {current.isAiGenerated && (
+          {current.reviewStatus === 'expert_verified' ? (
+            <Badge variant="outline" className="border-emerald-500/30 bg-emerald-500/10 text-[11px] text-emerald-400">
+              Expert verified
+            </Badge>
+          ) : current.reviewStatus === 'independently_checked' ? (
+            <Badge variant="outline" className="border-emerald-500/25 bg-emerald-500/[0.06] text-[11px] text-emerald-400/90">
+              Independently checked
+            </Badge>
+          ) : current.reviewStatus === 'reported_for_correction' ? (
+            <Badge variant="outline" className="border-rose-500/30 bg-rose-500/10 text-[11px] text-rose-400">
+              Reported for correction — under review
+            </Badge>
+          ) : current.isAiGenerated ? (
             <Badge variant="outline" className="border-amber-500/30 bg-amber-500/10 text-[11px] text-amber-400">
               AI-generated · pending expert verification
             </Badge>
-          )}
+          ) : null}
           {isThin && questionId && (
             <Button
               size="sm"
@@ -272,6 +308,11 @@ interface QuestionCardProps {
   readOnly?: boolean
   /** show a secondary "Just show solution" button (library/bookmark browsing) */
   allowReveal?: boolean
+  /** practice flow mode (0019): practice | revision | notebook_retry — drives
+   *  spaced-repetition grading + mistake-notebook bookkeeping on the server */
+  mode?: 'practice' | 'revision' | 'notebook_retry'
+  /** progressive hints (Part K) shown while unanswered */
+  enableHints?: boolean
   onSubmit?: (result: SubmittedResult, timeSpentSeconds: number) => void
   loggedIn: boolean
   onRequireAuth?: () => void
@@ -280,7 +321,7 @@ interface QuestionCardProps {
 }
 
 export function QuestionCard({
-  question, initialResult, readOnly, allowReveal, onSubmit, loggedIn, onRequireAuth, index, total,
+  question, initialResult, readOnly, allowReveal, mode = 'practice', enableHints = true, onSubmit, loggedIn, onRequireAuth, index, total,
 }: QuestionCardProps) {
   const [selected, setSelected] = useState<number[]>([])
   const [numerical, setNumerical] = useState('')
@@ -290,7 +331,17 @@ export function QuestionCard({
   const [reportOpen, setReportOpen] = useState(false)
   const [reportReason, setReportReason] = useState('')
   const [reportDetails, setReportDetails] = useState('')
+  // progressive hints (Part K)
+  const [hintLevel, setHintLevel] = useState(0) // 0 = none, 1..3 revealed
+  const [hints, setHints] = useState<{ hint1: string | null; hint2: string | null; hint3: string | null } | null>(null)
+  const [hintsAvailable, setHintsAvailable] = useState<boolean | null>(null)
+  // share-to-chat (Part L)
+  const [shareOpen, setShareOpen] = useState(false)
+  const [shareText, setShareText] = useState('')
+  const [shareSending, setShareSending] = useState(false)
+  const [savedOffline, setSavedOffline] = useState(false)
   const startedAt = useRef(Date.now())
+  const hintsUsedRef = useRef(0)
 
   useEffect(() => {
     // reset state when question changes
@@ -299,6 +350,11 @@ export function QuestionCard({
     setResult(initialResult ?? null)
     setBookmarked(!!question.bookmarked)
     startedAt.current = Date.now()
+    setHintLevel(0)
+    setHints(null)
+    setHintsAvailable(null)
+    hintsUsedRef.current = 0
+    setSavedOffline(false)
   }, [question.id, initialResult, question.bookmarked])
 
   const isMcq = question.type === 'mcq_single' || question.type === 'mcq_multi'
@@ -309,8 +365,29 @@ export function QuestionCard({
     setSubmitting(true)
     try {
       const timeSpentSeconds = Math.round((Date.now() - startedAt.current) / 1000)
-      const body = isMcq ? { questionId: question.id, selectedOptions: selected, timeSpentSeconds }
-        : { questionId: question.id, numericalValue: numerical, timeSpentSeconds }
+      const clientKey = newClientKey()
+      // OFFLINE (Part H): with no connection the answer is queued locally and
+      // graded/synced server-side on reconnect — never lost, never duplicated.
+      if (isOffline()) {
+        offlineAttempt({
+          clientKey,
+          questionId: question.id,
+          ...(isMcq ? { selectedOptions: selected } : { numericalValue: numerical }),
+          timeSpentSeconds,
+          hintsUsed: hintsUsedRef.current,
+          mode,
+        })
+        setSavedOffline(true)
+        toast({
+          title: 'Saved offline',
+          description: 'It will sync with your account when you are back online.',
+        })
+        onSubmit?.({ isCorrect: null, solution: null } as SubmittedResult, timeSpentSeconds)
+        return
+      }
+      const body = isMcq
+        ? { questionId: question.id, selectedOptions: selected, timeSpentSeconds, mode, hintsUsed: hintsUsedRef.current, clientKey }
+        : { questionId: question.id, numericalValue: numerical, timeSpentSeconds, mode, hintsUsed: hintsUsedRef.current, clientKey }
       const r = await api<{ result: SubmittedResult }>('/api/questions/submit', body)
       setResult(r.result)
       onSubmit?.(r.result, timeSpentSeconds)
@@ -393,6 +470,84 @@ export function QuestionCard({
     }
   }
 
+  // ---- progressive hints (Part K): each level fetched on demand so hints
+  // never ship to the client before the student asks for them ----
+  const revealHint = async () => {
+    const next = hintLevel + 1
+    if (next > 3) return
+    if (next === 1 || !hints) {
+      try {
+        const r = await api<{ available: boolean; hints: { hint1: string | null; hint2: string | null; hint3: string | null } }>(
+          `/api/hints?questionId=${encodeURIComponent(question.id)}&level=${next}`
+        )
+        setHints(r.hints)
+        setHintsAvailable(r.available)
+        if (!r.available) return
+      } catch {
+        setHintsAvailable(false)
+        return
+      }
+    }
+    setHintLevel(next)
+    hintsUsedRef.current = next
+  }
+
+  // ---- share-to-chat (Part L) ----
+  const [shareTargets, setShareTargets] = useState<{ id: string; name: string; type: string }[]>([])
+  const openShare = async () => {
+    if (!loggedIn) {
+      onRequireAuth?.()
+      return
+    }
+    setShareOpen(true)
+    try {
+      const r = await api<{ conversations: { id: string; name: string | null; type: string; members: { name: string | null }[] }[] }>(
+        '/api/chat/conversations'
+      )
+      setShareTargets(
+        r.conversations.map((c) => ({
+          id: c.id,
+          name: c.type === 'dm' ? c.members[0]?.name ?? 'Direct chat' : c.name ?? 'Group',
+          type: c.type,
+        }))
+      )
+    } catch {
+      setShareTargets([])
+    }
+  }
+  const shareTo = async (conversationId: string) => {
+    if (shareSending) return
+    setShareSending(true)
+    try {
+      await api('/api/chat/messages', {
+        conversationId,
+        body: shareText.trim() || `Check out this question — ${question.publicId}`,
+        attachment: { type: 'question', publicId: question.publicId },
+      })
+      toast({ title: 'Shared to chat' })
+      setShareOpen(false)
+      setShareText('')
+    } catch (e) {
+      toast({ title: 'Share failed', description: (e as Error).message, variant: 'destructive' })
+    } finally {
+      setShareSending(false)
+    }
+  }
+
+  // ---- add to Mistake Notebook (Part C: manual add) ----
+  const addToNotebook = async () => {
+    if (!loggedIn) {
+      onRequireAuth?.()
+      return
+    }
+    try {
+      await api('/api/mistakes', { questionId: question.id })
+      toast({ title: 'Saved to Mistake Notebook', description: 'Find it under the Notebook tab with your notes.' })
+    } catch (e) {
+      toast({ title: 'Failed', description: (e as Error).message, variant: 'destructive' })
+    }
+  }
+
   return (
     <div className="rounded-2xl border border-border bg-card shadow-lg shadow-black/20">
       {/* header */}
@@ -414,6 +569,14 @@ export function QuestionCard({
             className="h-8 w-8 text-muted-foreground hover:text-primary">
             {bookmarked ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
           </Button>
+          <Button variant="ghost" size="icon" onClick={addToNotebook} aria-label="Add to mistake notebook"
+            title="Add to Mistake Notebook" className="h-8 w-8 text-muted-foreground hover:text-primary">
+            <NotebookPen className="h-4 w-4" />
+          </Button>
+          <Button variant="ghost" size="icon" onClick={openShare} aria-label="Share to chat"
+            title="Share to a chat" className="h-8 w-8 text-muted-foreground hover:text-primary">
+            <Share2 className="h-4 w-4" />
+          </Button>
           <Button variant="ghost" size="icon" onClick={() => (loggedIn ? setReportOpen(true) : onRequireAuth?.())}
             aria-label="Report question" className="h-8 w-8 text-muted-foreground hover:text-rose-400">
             <Flag className="h-4 w-4" />
@@ -431,6 +594,58 @@ export function QuestionCard({
         {question.images.map((img, i) => (
           <ZoomableImage key={i} src={img.url} alt={img.altText} caption={img.caption} attribution={img.attribution} />
         ))}
+
+        {/* progressive hints (Part K) — before answering, never revealing the answer */}
+        {enableHints && !result && !readOnly && (
+          <div className="mt-4">
+            {hintsAvailable === false ? (
+              // honest absence: no hints until the solution is enriched
+              <p className="inline-flex items-center gap-1.5 rounded-lg border border-dashed border-border px-3 py-1.5 text-xs text-muted-foreground">
+                <Lightbulb className="h-3.5 w-3.5" /> No hints for this question yet — they appear once its solution is enriched.
+              </p>
+            ) : hintLevel === 0 ? (
+              <button
+                type="button"
+                onClick={revealHint}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-amber-500/30 bg-amber-500/[0.06] px-3 py-1.5 text-xs font-medium text-amber-400 transition-colors hover:bg-amber-500/15"
+              >
+                <Lightbulb className="h-3.5 w-3.5" />
+                Need a hint?
+              </button>
+            ) : (
+              <div className="rounded-lg border border-amber-500/25 bg-amber-500/[0.05] p-3.5">
+                <div className="mb-2 flex items-center justify-between gap-2">
+                  <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-amber-300/90">
+                    <Lightbulb className="h-3.5 w-3.5" /> Hint {hintLevel} of 3
+                  </span>
+                  {hintLevel < 3 && (
+                    <button
+                      type="button"
+                      onClick={revealHint}
+                      className="text-xs font-medium text-amber-400 hover:underline"
+                    >
+                      Another hint
+                    </button>
+                  )}
+                </div>
+                <div className="space-y-2 text-sm leading-relaxed">
+                  {hintLevel >= 1 && hints?.hint1 && (
+                    <p className="rounded-md bg-card/60 p-2.5"><MathText text={hints.hint1} /></p>
+                  )}
+                  {hintLevel >= 2 && hints?.hint2 && (
+                    <p className="rounded-md bg-card/60 p-2.5"><MathText text={hints.hint2} /></p>
+                  )}
+                  {hintLevel >= 3 && hints?.hint3 && (
+                    <p className="rounded-md bg-card/60 p-2.5"><MathText text={hints.hint3} /></p>
+                  )}
+                </div>
+                {hintLevel >= 3 && (
+                  <p className="mt-2 text-[11px] text-muted-foreground">Still stuck? Submit an answer or reveal the full solution below — hints used are saved to your analytics.</p>
+                )}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* answer area */}
         {question.type === 'mcq_single' && (
@@ -544,6 +759,11 @@ export function QuestionCard({
                 Just show solution
               </Button>
             )}
+            {savedOffline && (
+              <Badge variant="outline" className="border-amber-500/30 bg-amber-500/10 text-amber-400">
+                Saved offline — syncs on reconnect
+              </Badge>
+            )}
             {isMcq && (
               <span className="hidden text-[11px] text-muted-foreground sm:inline">
                 keys: <kbd className="rounded border border-border px-1">1</kbd>–<kbd className="rounded border border-border px-1">4</kbd> select · <kbd className="rounded border border-border px-1">Enter</kbd> submit
@@ -608,6 +828,43 @@ export function QuestionCard({
             <Button variant="ghost" onClick={() => setReportOpen(false)}>Cancel</Button>
             <Button onClick={sendReport} disabled={!reportReason}>Submit report</Button>
           </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* share-to-chat dialog (Part L) */}
+      <Dialog open={shareOpen} onOpenChange={setShareOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Share this question</DialogTitle>
+            <DialogDescription>
+              {question.publicId} — sends a rich card with a link into any of your chats.
+            </DialogDescription>
+          </DialogHeader>
+          <Textarea
+            placeholder="Add a message (optional)"
+            value={shareText}
+            onChange={(e) => setShareText(e.target.value)}
+            rows={2}
+          />
+          <div className="max-h-56 space-y-1.5 overflow-y-auto pr-1">
+            {shareTargets.length === 0 && (
+              <p className="rounded-lg border border-dashed border-border p-3 text-center text-sm text-muted-foreground">
+                No conversations yet — open Community to start one.
+              </p>
+            )}
+            {shareTargets.map((c) => (
+              <button
+                key={c.id}
+                type="button"
+                disabled={shareSending}
+                onClick={() => shareTo(c.id)}
+                className="flex w-full items-center justify-between gap-2 rounded-lg border border-border px-3 py-2.5 text-left text-sm transition-colors hover:border-primary/50 hover:bg-primary/[0.04] disabled:opacity-50"
+              >
+                <span className="min-w-0 truncate">{c.type === 'dm' ? 'DM' : c.type === 'group' ? 'Group' : 'Lobby'} · {c.name}</span>
+                <Send className="h-3.5 w-3.5 shrink-0 text-primary" />
+              </button>
+            ))}
+          </div>
         </DialogContent>
       </Dialog>
     </div>

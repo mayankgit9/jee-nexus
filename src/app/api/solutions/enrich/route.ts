@@ -69,14 +69,14 @@ export async function GET() {
   try {
     await requireAdmin()
     const total = await db.solution.count()
+    // PG runtime (SQLite syntax '?1' died on Postgres — prod fix 2026-11-29)
     const candidates = (await db.$queryRawUnsafe(
       `select id, formulas from solutions
         where key_concept is not null
           and common_mistakes is not null
-          and length(body) >= ?1`,
-      400
+          and length(body) >= 400`
     )) as { id: string; formulas: unknown }[]
-    // SQLite stores Json as TEXT — parse defensively
+    // jsonb arrives parsed; legacy text shape parsed defensively
     const detailed = candidates.filter((c) => {
       const f = typeof c.formulas === 'string' ? JSON.parse(c.formulas) : c.formulas
       return Array.isArray(f) && f.length > 0

@@ -1,11 +1,83 @@
 import { NextRequest } from 'next/server'
 import { dbClient } from '@/lib/db'
 import { getSessionUser, requireUser, jsonError, HttpError, rateLimit, clientIp } from '@/lib/auth'
+import { db } from '@/lib/db'
 import {
   CHAT_LIMITS, LOBBY_CONVERSATION_ID, ensureLobbyMembership, requireMembership, sanitizeMessageBody,
   sanitizeGuestName, toClientMember, toClientMessage,
   hydrateReplies, attachReplies, parseMentions,
 } from '@/lib/chat'
+import type { Prisma } from '@prisma/client'
+
+/**
+ * Structured share attachments (Part L, migration 0019) — the ONLY shapes
+ * accepted, each field validated server-side and hydrated from the database
+ * so clients can't craft fake payloads:
+ *   question: { type, publicId }                     — PYQ share
+ *   result:   { type, attemptId }                     — mock result share
+ *   revision: { type, count }                          — revision collection
+ * Attachments are optional; the message body still carries the text.
+ */
+async function validateAttachment(raw: unknown): Promise<Prisma.InputJsonValue | undefined> {
+  if (raw === null || raw === undefined) return undefined
+  if (typeof raw !== 'object') return undefined
+  const a = raw as Record<string, unknown>
+  const type = String(a.type ?? '')
+
+  if (type === 'question') {
+    const publicId = String(a.publicId ?? '').slice(0, 40)
+    const q = await db.question.findUnique({
+      where: { publicId },
+      select: {
+        publicId: true, type: true, sourceYear: true, sourceShift: true,
+        subject: { select: { key: true } }, chapter: { select: { name: true } },
+        solution: { select: { reviewStatus: true } },
+      },
+    })
+    if (!q) return undefined // never fabricate shares for unknown questions
+    return {
+      type: 'question',
+      publicId: q.publicId,
+      subject: q.subject.key,
+      chapter: q.chapter.name,
+      year: q.sourceYear,
+      shift: q.sourceShift,
+      questionType: q.type,
+      solutionStatus: q.solution?.reviewStatus,
+    } as unknown as Prisma.InputJsonValue
+  }
+
+  if (type === 'result') {
+    const attemptId = String(a.attemptId ?? '').slice(0, 40)
+    const at = await db.examAttempt.findUnique({
+      where: { id: attemptId },
+      include: { exam: { select: { title: true } } },
+    })
+    if (!at || at.status === 'in_progress') return undefined
+    // only the attempt's owner may share it — ownership check, server-side
+    if (at.userId !== (await getSessionUser())?.id) return undefined
+    return {
+      type: 'result',
+      attemptId: at.id,
+      examTitle: at.exam.title,
+      score: at.totalMarks,
+      maxMarks: at.maxMarks,
+      percentage: at.maxMarks && at.maxMarks > 0 ? Math.round((100 * (at.totalMarks ?? 0)) / at.maxMarks) : null,
+    } as unknown as Prisma.InputJsonValue
+  }
+
+  if (type === 'revision') {
+    const count = Math.min(Math.max(Number(a.count ?? 0) || 0, 0), 999)
+    const due = Number(a.due ?? 0)
+    return {
+      type: 'revision',
+      count,
+      due: Math.min(Math.max(due, 0), 999),
+    } as unknown as Prisma.InputJsonValue
+  }
+
+  return undefined
+}
 
 /** grouped reaction chips: [{ emoji, count, mine }] per message id */
 function aggregateReactions(
@@ -40,6 +112,7 @@ type MsgRow = {
   senderName: string | null
   replyToId: string | null
   deletedAt: Date | null
+  attachment: Prisma.JsonValue | null
   sender: { id: string; name: string | null } | null
 }
 
@@ -224,10 +297,12 @@ export async function POST(req: NextRequest) {
       body?: string
       replyToId?: string
       guestName?: string
+      attachment?: unknown
     }
     const conversationId = String(payload.conversationId ?? '')
     if (!conversationId) throw new HttpError(400, 'conversationId is required')
     const body = sanitizeMessageBody(String(payload.body ?? ''))
+    const attachment = await validateAttachment(payload.attachment)
 
     // ---------- guest path (lobby only) ----------
     if (!user) {
@@ -241,7 +316,7 @@ export async function POST(req: NextRequest) {
       await rateLimit(`chat-lobby:${ip}`, 5, 60_000, client)
       const guestName = sanitizeGuestName(String(payload.guestName ?? 'Guest'))
       const message = await client.chatMessage.create({
-        data: { conversationId, senderId: null, senderName: guestName, body },
+        data: { conversationId, senderId: null, senderName: guestName, body, ...(attachment ? { attachment } : {}) },
         include: { sender: { select: { id: true, name: true } } },
       })
       await client.chatConversation.update({
@@ -281,6 +356,7 @@ export async function POST(req: NextRequest) {
         senderName: user.name ?? user.username,
         body,
         replyToId,
+        ...(attachment ? { attachment } : {}),
       },
       include: { sender: { select: { id: true, name: true } } },
     })

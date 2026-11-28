@@ -94,6 +94,7 @@ export function toClientMessage(msg: {
   deletedAt?: Date | null
   replyToId?: string | null
   sender?: { id: string; name: string | null } | null
+  attachment?: unknown
 }) {
   const deleted = Boolean(msg.deletedAt)
   return {
@@ -107,6 +108,7 @@ export function toClientMessage(msg: {
     isGuest: msg.senderId === null,
     replyToId: msg.replyToId ?? null,
     replyTo: null as ReplyContext | null, // filled by hydrateReplies()
+    attachment: !deleted && msg.attachment ? (msg.attachment as Record<string, unknown>) : null,
   }
 }
 

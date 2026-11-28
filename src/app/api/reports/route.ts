@@ -60,6 +60,18 @@ export async function POST(req: NextRequest) {
     if (dup) return Response.json({ ok: true, message: 'You already have an open report for this question' })
 
     await db.report.create({ data: { userId: user.id, questionId, reason, details } })
+
+    // Solution-verification workflow link (0019, Part A): a student-reported
+    // incorrect solution moves the solution into reported_for_correction so
+    // the admin review queue surfaces it with the report attached. The
+    // solution itself stays visible (with its status badge) until reviewed.
+    if (reason === 'incorrect_solution') {
+      await db.solution.updateMany({
+        where: { questionId, reviewStatus: { not: 'expert_verified' } },
+        data: { reviewStatus: 'reported_for_correction' },
+      }).catch(() => {})
+    }
+
     return Response.json({ ok: true })
   } catch (err) {
     return jsonError(err)

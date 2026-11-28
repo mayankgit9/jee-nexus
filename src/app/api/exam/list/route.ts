@@ -58,7 +58,44 @@ export async function POST(req: Request) {
     const questionsPerSubject = body.questionsPerSubject ? Math.min(Math.max(Number(body.questionsPerSubject), 1), 25) : undefined
     const durationMinutes = body.durationMinutes ? Math.min(Math.max(Number(body.durationMinutes), 5), 240) : undefined
 
-    const r = await generateExam({ title, kind, subjectKey, chapterKey, year, questionsPerSubject, durationMinutes })
+    // ---- Custom Test Builder filters (0019, Part F) ----
+    const f = (body.filters ?? {}) as Record<string, unknown>
+    const subjectKeys = Array.isArray(f.subjectKeys)
+      ? f.subjectKeys.filter((s) => ['physics', 'chemistry', 'mathematics'].includes(String(s)))
+      : undefined
+    const chapterKeys = Array.isArray(f.chapterKeys) ? f.chapterKeys.map(String).slice(0, 30) : undefined
+    const topics = Array.isArray(f.topics) ? f.topics.map(String).slice(0, 30) : undefined
+    const difficulties = Array.isArray(f.difficulties) ? f.difficulties.filter((d) => ['easy', 'medium', 'hard'].includes(String(d))) : undefined
+    const types = Array.isArray(f.types) ? f.types.filter((t) => ['mcq_single', 'mcq_multi', 'numerical'].includes(String(t))) : undefined
+    const shift = typeof f.shift === 'string' && f.shift.trim() ? f.shift.trim() : undefined
+    const attemptState = ['all', 'unattempted', 'incorrect', 'bookmarked'].includes(String(f.attemptState))
+      ? (f.attemptState as 'all' | 'unattempted' | 'incorrect' | 'bookmarked')
+      : undefined
+    const filters = {
+      ...(subjectKeys ? { subjectKeys } : {}),
+      ...(chapterKeys ? { chapterKeys } : {}),
+      ...(topics ? { topics } : {}),
+      ...(difficulties ? { difficulties } : {}),
+      ...(types ? { types } : {}),
+      ...(shift ? { shift } : {}),
+      ...(attemptState ? { attemptState } : {}),
+      ...(f.year ? { year: Number(f.year) } : {}),
+    }
+    const hasBuilderFilters = Object.keys(filters).length > 0
+    const totalQuestions = body.totalQuestions ? Math.min(Math.max(Number(body.totalQuestions), 1), 90) : undefined
+
+    const r = await generateExam({
+      title,
+      kind,
+      subjectKey,
+      chapterKey,
+      year,
+      questionsPerSubject,
+      durationMinutes,
+      ...(hasBuilderFilters ? { filters } : {}),
+      ...(totalQuestions ? { totalQuestions } : {}),
+      userId: user.id,
+    })
     return Response.json(r)
   } catch (err) {
     return jsonError(err)

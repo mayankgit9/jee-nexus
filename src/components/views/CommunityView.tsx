@@ -16,8 +16,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import {
-  ArrowLeft, ArrowDown, Ban, Check, CheckCheck, Copy, CornerUpLeft, Globe2, Hash, Loader2, MessagesSquare, MessageSquare, MessageSquarePlus,
-  Pencil, Search, Send, Smile, Trash2, Users, X, LogIn, UserPlus, ArrowDownToLine,
+  ArrowDown, ArrowDownToLine, ArrowLeft, ArrowUpRight, Atom, Ban, Check, CheckCheck, Copy, CornerUpLeft, FileText, FlaskConical, Globe2,
+  Hash, Loader2, LogIn, MessageSquare, MessageSquarePlus, MessagesSquare, Pencil, RefreshCw, Search, Send, Share2, Sigma, Smile,
+  Trash2, Trophy, UserPlus, Users, X, type LucideIcon,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -25,7 +26,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { useToast } from '@/hooks/use-toast'
 import type { SessionUser } from '@/lib/types'
-import { api, navigate } from '@/lib/client'
+import { api, navigate, SUBJECT_COLORS } from '@/lib/client'
 import { cn } from '@/lib/utils'
 
 // ---------------------------------------------------------------- types
@@ -60,6 +61,8 @@ interface ChatMessage {
   isGuest?: boolean
   replyToId?: string | null
   replyTo?: { id: string; senderName: string; body: string; deleted: boolean } | null
+  /** structured share (question / result / revision) — null when absent */
+  attachment?: Record<string, unknown> | null
 }
 
 interface ConvMeta {
@@ -246,6 +249,198 @@ function snippetOf(body: string, q: string): string {
   return (start > 0 ? '…' : '') + clean.slice(start, end) + (end < clean.length ? '…' : '')
 }
 
+// ---------------------------------------------------------------- attachments
+
+/** subject icon for question-share cards — mirrors the app-wide palette */
+const ATTACHMENT_SUBJECT_ICONS: Record<string, LucideIcon> = {
+  physics: Atom,
+  chemistry: FlaskConical,
+  mathematics: Sigma,
+}
+
+/**
+ * Rich attachment card rendered UNDER the message body inside the same
+ * bubble. Shapes are server-validated on POST (see /api/chat/messages):
+ *   question — PYQ share, subject-tinted, opens the PYQ library
+ *   result   — finished mock attempt, opens mock analytics
+ *   revision — revision collection summary, opens the revision queue
+ * own = the containing bubble was sent by me, so the card sits on the mint
+ * primary palette and must use ink-on-mint styling instead of the muted
+ * bubble's foreground/muted-foreground pair.
+ */
+function AttachmentCard({ att, own }: { att: Record<string, unknown>; own: boolean }) {
+  const type = typeof att.type === 'string' ? att.type : ''
+
+  /** shared card chrome: rounded-xl border + a subtle 10% tint wash */
+  const cardClass = cn('mt-2 rounded-xl border p-2.5', own ? 'border-primary-foreground/25' : 'border-border')
+  const titleClass = cn('truncate text-xs font-semibold', own ? 'text-primary-foreground' : 'text-foreground')
+  const subClass = cn('mt-px truncate text-[11px]', own ? 'text-primary-foreground/75' : 'text-muted-foreground')
+
+  // ---------- question share: subject-tinted PYQ card ----------
+  if (type === 'question') {
+    const subject = typeof att.subject === 'string' ? att.subject : ''
+    const chapter = typeof att.chapter === 'string' ? att.chapter : ''
+    const year = typeof att.year === 'number' ? att.year : null
+    const solutionStatus = typeof att.solutionStatus === 'string' ? att.solutionStatus : ''
+    const Icon = ATTACHMENT_SUBJECT_ICONS[subject] ?? FileText
+    const tint = SUBJECT_COLORS[subject] ?? 'var(--primary)'
+    const statusChip =
+      solutionStatus === 'ai_generated'
+        ? 'AI solution'
+        : solutionStatus === 'expert_verified'
+          ? 'Verified solution'
+          : ''
+    return (
+      <div className={cardClass} style={{ background: `color-mix(in oklab, ${tint} 10%, transparent)` }}>
+        <div className="flex items-start gap-2.5">
+          <span
+            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
+            style={
+              own
+                ? { background: 'rgba(0, 0, 0, 0.22)', color: 'var(--primary-foreground)' }
+                : { color: tint, background: `color-mix(in oklab, ${tint} 15%, transparent)` }
+            }
+          >
+            <Icon className="h-3.5 w-3.5" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className={titleClass}>{year ? `JEE Main ${year} question` : 'JEE Main question'}</p>
+            {chapter && <p className={subClass}>{chapter}</p>}
+            <div className="mt-1 flex flex-wrap items-center gap-1">
+              <span
+                className="rounded-md px-1.5 py-px text-[10px] font-medium capitalize"
+                style={
+                  own
+                    ? { background: 'rgba(255, 255, 255, 0.22)', color: 'var(--primary-foreground)' }
+                    : { color: tint, background: `color-mix(in oklab, ${tint} 12%, transparent)` }
+                }
+              >
+                {subject || 'question'}
+              </span>
+              {statusChip && (
+                <span
+                  className={cn(
+                    'rounded-md px-1.5 py-px text-[10px] font-medium',
+                    solutionStatus === 'expert_verified'
+                      ? own
+                        ? 'bg-emerald-950/50 text-emerald-200'
+                        : 'bg-emerald-500/10 text-emerald-400'
+                      : own
+                        ? 'bg-amber-950/50 text-amber-200'
+                        : 'bg-amber-500/10 text-amber-500'
+                  )}
+                >
+                  {statusChip}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          onClick={() => navigate('/pyq')}
+          className="mt-2 h-7 gap-1 rounded-lg px-2.5 text-[11px]"
+        >
+          Open question
+          <ArrowUpRight className="size-3" />
+        </Button>
+      </div>
+    )
+  }
+
+  // ---------- result share: finished mock attempt card ----------
+  if (type === 'result') {
+    const examTitle = typeof att.examTitle === 'string' ? att.examTitle : 'Mock test'
+    const score = typeof att.score === 'number' ? att.score : null
+    const maxMarks = typeof att.maxMarks === 'number' ? att.maxMarks : null
+    const percentage = typeof att.percentage === 'number' ? att.percentage : null
+    const scoreLine = [
+      maxMarks !== null ? `score ${score ?? 0} / ${maxMarks}` : score !== null ? `score ${score}` : 'score pending',
+      percentage !== null ? `${percentage}%` : null,
+    ]
+      .filter(Boolean)
+      .join(' · ')
+    return (
+      <div
+        className={cn('mt-2 rounded-xl border p-2.5', own ? 'border-primary-foreground/25' : 'border-amber-500/25')}
+        style={{ background: 'color-mix(in oklab, var(--chart-2) 10%, transparent)' }}
+      >
+        <div className="flex items-start gap-2.5">
+          <span
+            className={cn(
+              'flex h-7 w-7 shrink-0 items-center justify-center rounded-lg',
+              own ? 'bg-amber-950/45 text-amber-200' : 'bg-amber-500/15 text-amber-500'
+            )}
+          >
+            <Trophy className="h-3.5 w-3.5" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className={titleClass}>{examTitle}</p>
+            <p className={subClass}>{scoreLine}</p>
+          </div>
+        </div>
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          onClick={() => navigate('/mock')}
+          className="mt-2 h-7 gap-1 rounded-lg px-2.5 text-[11px]"
+        >
+          View analytics
+          <ArrowUpRight className="size-3" />
+        </Button>
+      </div>
+    )
+  }
+
+  // ---------- revision share: revision collection card ----------
+  if (type === 'revision') {
+    const count = typeof att.count === 'number' ? att.count : 0
+    const due = typeof att.due === 'number' ? att.due : 0
+    return (
+      <div
+        className={cn('mt-2 rounded-xl border p-2.5', own ? 'border-primary-foreground/25' : 'border-primary/25')}
+        style={
+          own
+            ? { background: 'rgba(0, 0, 0, 0.15)' }
+            : { background: 'color-mix(in oklab, var(--primary) 10%, transparent)' }
+        }
+      >
+        <div className="flex items-start gap-2.5">
+          <span
+            className={cn(
+              'flex h-7 w-7 shrink-0 items-center justify-center rounded-lg',
+              own ? 'bg-black/22 text-primary-foreground' : 'bg-primary/15 text-primary'
+            )}
+          >
+            <RefreshCw className="h-3.5 w-3.5" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className={titleClass}>Revision collection</p>
+            <p className={subClass}>
+              {count} question{count === 1 ? '' : 's'} · {due} due
+            </p>
+          </div>
+        </div>
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          onClick={() => navigate('/revision')}
+          className="mt-2 h-7 gap-1 rounded-lg px-2.5 text-[11px]"
+        >
+          Open revision
+          <ArrowUpRight className="size-3" />
+        </Button>
+      </div>
+    )
+  }
+
+  return null
+}
+
 // ---------------------------------------------------------------- main view
 
 export function CommunityView({
@@ -305,6 +500,8 @@ export function CommunityView({
   // composer
   const [draft, setDraft] = useState('')
   const [sending, setSending] = useState(false)
+  // structured share menu (mock results / revision queue)
+  const [shareOpen, setShareOpen] = useState(false)
   // @mention autocomplete: { start, token } = location of the trailing
   // "@<token>" in the draft (null = popup closed); mentionIdx = highlighted row
   const [mention, setMention] = useState<{ start: number; token: string } | null>(null)
@@ -327,6 +524,8 @@ export function CommunityView({
   const groupLike = meta?.type === 'group' || isLobbyChat
   /** mention autocomplete: groups for everyone, lobby for signed-in members only */
   const canMention = meta?.type === 'group' || (isLobbyChat && loggedIn)
+  /** structured shares (mock result / revision queue) — DMs and groups only */
+  const canShare = meta?.type === 'dm' || meta?.type === 'group'
 
   const refreshConversations = useCallback(async () => {
     try {
@@ -692,6 +891,67 @@ export function CommunityView({
     [reacting, toast]
   )
 
+  /**
+   * Member-path POST shared by the composer's regular send flow and the
+   * structured share actions: POSTs /api/chat/messages and folds the echo
+   * into local state (message list, stick-to-bottom, sidebar preview).
+   * The attachment (when sharing) just rides along on the POST body.
+   * Returns false + toasts on failure so callers can keep their state.
+   */
+  const postChatMessage = useCallback(
+    async (body: string, opts?: { replyToId?: string; attachment?: Record<string, unknown> }): Promise<boolean> => {
+      if (!activeId) return false
+      try {
+        const r = await api<{ message: ChatMessage }>('/api/chat/messages', {
+          conversationId: activeId,
+          body,
+          ...(opts?.replyToId ? { replyToId: opts.replyToId } : {}),
+          ...(opts?.attachment ? { attachment: opts.attachment } : {}),
+        })
+        setMessages((prev) => (prev.some((m) => m.id === r.message.id) ? prev : [...prev, r.message]))
+        stickToBottom.current = true
+        setConversations((prev) =>
+          prev
+            ? prev.map((c) =>
+                c.id === activeId
+                  ? { ...c, updatedAt: new Date().toISOString(), lastMessage: { body, createdAt: r.message.createdAt, senderId: meId, senderName: 'You' } }
+                  : c
+              )
+            : prev
+        )
+        return true
+      } catch (e) {
+        toast({ title: 'Message not sent', description: (e as Error).message })
+        return false
+      }
+    },
+    [activeId, meId, toast]
+  )
+
+  /** structured share action (mock result / revision queue): attachment rides along on the POST */
+  const shareMessage = useCallback(
+    async (body: string, attachment: Record<string, unknown>): Promise<boolean> => {
+      if (!activeId || sending) return false
+      setSending(true)
+      try {
+        return await postChatMessage(body, { attachment })
+      } finally {
+        setSending(false)
+      }
+    },
+    [activeId, sending, postChatMessage]
+  )
+
+  /** share-menu submit: POST the structured message, close the menu on success */
+  const shareToChat = useCallback(
+    async (body: string, attachment: Record<string, unknown>): Promise<boolean> => {
+      const ok = await shareMessage(body, attachment)
+      if (ok) setShareOpen(false)
+      return ok
+    },
+    [shareMessage]
+  )
+
   const sendMessage = useCallback(async () => {
     const body = draft.trim()
     if (!body || !activeId || sending) return
@@ -736,32 +996,17 @@ export function CommunityView({
     // ---------- member path (signed in) ----------
     setSending(true)
     try {
-      const r = await api<{ message: ChatMessage }>('/api/chat/messages', {
-        conversationId: activeId,
-        body,
-        ...(replyTo ? { replyToId: replyTo.id } : {}),
-      })
-      setDraft('')
-      setMention(null)
-      setReplyTo(null)
-      if (composerRef.current) composerRef.current.style.height = 'auto'
-      setMessages((prev) => (prev.some((m) => m.id === r.message.id) ? prev : [...prev, r.message]))
-      stickToBottom.current = true
-      setConversations((prev) =>
-        prev
-          ? prev.map((c) =>
-              c.id === activeId
-                ? { ...c, updatedAt: new Date().toISOString(), lastMessage: { body, createdAt: r.message.createdAt, senderId: meId, senderName: 'You' } }
-                : c
-            )
-          : prev
-      )
-    } catch (e) {
-      toast({ title: 'Message not sent', description: (e as Error).message })
+      const ok = await postChatMessage(body, { replyToId: replyTo?.id })
+      if (ok) {
+        setDraft('')
+        setMention(null)
+        setReplyTo(null)
+        if (composerRef.current) composerRef.current.style.height = 'auto'
+      }
     } finally {
       setSending(false)
     }
-  }, [draft, activeId, sending, meId, replyTo, toast, loggedIn, guestName])
+  }, [draft, activeId, sending, meId, replyTo, toast, loggedIn, guestName, postChatMessage])
 
   /** save the edited guest name (2-24 chars) to state + localStorage */
   const saveGuestName = useCallback(() => {
@@ -1505,6 +1750,7 @@ export function CommunityView({
                                     </button>
                                   )}
                                   {renderMentionText(m.body, own, false)}
+                                  {m.attachment && <AttachmentCard att={m.attachment} own={own} />}
                                 </div>
                               )}
                               {pickerFor === m.id && (
@@ -1852,6 +2098,19 @@ export function CommunityView({
                       </div>
                     )}
                   </div>
+                  {canShare && (
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => setShareOpen(true)}
+                      aria-label="Share a mock result or your revision queue"
+                      title="Share a mock result or your revision queue"
+                      className="h-10 w-9 shrink-0 rounded-xl text-muted-foreground hover:text-foreground"
+                    >
+                      <Share2 className="h-[18px] w-[18px]" />
+                    </Button>
+                  )}
                   <div className="relative min-w-0 flex-1">
                     {mention && mentionCandidates.length > 0 && (
                       <div
@@ -2031,6 +2290,9 @@ export function CommunityView({
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* share menu: mock results + revision queue (DMs and groups only) */}
+      {canShare && <ShareToChatDialog open={shareOpen} onOpenChange={setShareOpen} busy={sending} onShare={shareToChat} />}
     </div>
   )
 }
@@ -2337,6 +2599,169 @@ function AddMembersDialog({
           Add {selected.length > 0 && `${selected.length} `}
           {selected.length === 1 ? 'member' : 'members'}
         </Button>
+      </DialogContent>
+    </Dialog>
+  )
+}
+
+// ---------------------------------------------------------------- share to chat dialog
+
+/** finished mock attempt as listed by GET /api/exam/result */
+interface FinishedAttempt {
+  id: string
+  examTitle: string
+  kind: string
+  status: string
+  totalMarks: number | null
+  maxMarks: number | null
+  timeSpentSeconds: number | null
+  startedAt: string
+  submittedAt: string | null
+}
+
+/**
+ * Share menu for DMs and groups: pick one of the newest finished mock
+ * attempts, or share a revision-queue summary. Both send through the normal
+ * chat POST — the chosen attachment just rides along on the message body.
+ */
+function ShareToChatDialog({
+  open,
+  onOpenChange,
+  onShare,
+  busy,
+}: {
+  open: boolean
+  onOpenChange: (v: boolean) => void
+  onShare: (body: string, attachment: Record<string, unknown>) => Promise<boolean>
+  busy: boolean
+}) {
+  const [attempts, setAttempts] = useState<FinishedAttempt[] | null>(null)
+  const [attemptsFailed, setAttemptsFailed] = useState(false)
+  const [revision, setRevision] = useState<{ scheduled: number; due: number } | null>(null)
+  const [revisionFailed, setRevisionFailed] = useState(false)
+
+  // fetch both sources each time the menu opens (the newest attempts and
+  // current revision counts can change between opens). The previous open's
+  // data stays visible while a fresh fetch is in flight.
+  useEffect(() => {
+    if (!open) return
+    let alive = true
+    void api<{ attempts: FinishedAttempt[] }>('/api/exam/result')
+      .then((r) => {
+        if (alive) setAttempts(r.attempts.filter((a) => a.status !== 'in_progress').slice(0, 8))
+      })
+      .catch(() => {
+        if (alive) {
+          setAttempts([])
+          setAttemptsFailed(true)
+        }
+      })
+    void api<{ dueToday: number; overdue: number; scheduled: number }>('/api/revision')
+      .then((r) => {
+        if (alive) setRevision({ scheduled: r.scheduled ?? 0, due: (r.dueToday ?? 0) + (r.overdue ?? 0) })
+      })
+      .catch(() => {
+        if (alive) setRevisionFailed(true)
+      })
+    return () => {
+      alive = false
+    }
+  }, [open])
+
+  const revisionDisabled = busy || revisionFailed || !revision || revision.scheduled === 0
+  const revisionHint = revisionFailed
+    ? 'Could not load your revision queue — try again in a moment'
+    : revision
+      ? revision.scheduled > 0
+        ? `${revision.scheduled} question${revision.scheduled === 1 ? '' : 's'} scheduled · ${revision.due} due today`
+        : 'Nothing scheduled yet — add questions from practice or bookmarks'
+      : 'Loading your revision queue…'
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="max-w-sm">
+        <DialogHeader>
+          <DialogTitle>Share to chat</DialogTitle>
+        </DialogHeader>
+
+        {/* quick action: revision queue summary */}
+        <button
+          type="button"
+          disabled={revisionDisabled}
+          onClick={() => {
+            if (!revision) return
+            void onShare(
+              `My revision queue — ${revision.scheduled} questions scheduled, ${revision.due} due today`,
+              { type: 'revision', count: revision.scheduled, due: revision.due }
+            )
+          }}
+          className={cn(
+            'flex w-full items-center gap-3 rounded-xl border px-3 py-2.5 text-left transition-colors',
+            revisionDisabled
+              ? 'cursor-not-allowed border-border opacity-60'
+              : 'border-primary/25 bg-primary/[0.06] hover:border-primary/50'
+          )}
+        >
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+            <RefreshCw className="h-4 w-4" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-medium">Share revision queue</span>
+            <span className="block text-xs text-muted-foreground">{revisionHint}</span>
+          </span>
+        </button>
+
+        <div className="flex items-center gap-2.5" aria-hidden>
+          <span className="h-px flex-1 bg-border" />
+          <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Mock results</span>
+          <span className="h-px flex-1 bg-border" />
+        </div>
+
+        <div className="max-h-64 space-y-0.5 overflow-y-auto">
+          {attempts === null && !attemptsFailed ? (
+            <div className="space-y-2 p-1">
+              {[0, 1, 2].map((i) => (
+                <Skeleton key={i} className="h-12 w-full rounded-xl" />
+              ))}
+            </div>
+          ) : attemptsFailed ? (
+            <p className="py-5 text-center text-xs text-muted-foreground">Could not load your mock attempts.</p>
+          ) : (attempts?.length ?? 0) === 0 ? (
+            <div className="flex flex-col items-center gap-1.5 py-5 text-center">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-muted">
+                <Trophy className="h-4 w-4 text-muted-foreground" />
+              </span>
+              <p className="text-sm font-medium">No finished attempts yet</p>
+              <p className="text-xs text-muted-foreground">Finish a mock test and share its result here.</p>
+            </div>
+          ) : (
+            (attempts ?? []).map((a) => (
+              <button
+                key={a.id}
+                type="button"
+                disabled={busy}
+                onClick={() => {
+                  void onShare(
+                    `Check out my mock result — ${a.examTitle} (${a.totalMarks ?? 0}/${a.maxMarks ?? 0})`,
+                    { type: 'result', attemptId: a.id }
+                  )
+                }}
+                className="flex w-full items-center gap-3 rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-muted disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-500/15 text-amber-500">
+                  <Trophy className="h-4 w-4" />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate text-sm font-medium">{a.examTitle}</span>
+                  <span className="block truncate text-xs text-muted-foreground">
+                    {a.totalMarks ?? 0}/{a.maxMarks ?? 0} marks{a.submittedAt ? ` · ${timeLabel(a.submittedAt)}` : ''}
+                  </span>
+                </span>
+                <Send className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+              </button>
+            ))
+          )}
+        </div>
       </DialogContent>
     </Dialog>
   )

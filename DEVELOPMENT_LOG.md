@@ -5,6 +5,210 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-29 (~02:15 IST) — PERSONALIZATION MEGA-RELEASE (13th session)
+
+### Session start (13th sandbox recycle — full restore again)
+- Sandbox source was wiped once more; recovered everything from GitHub
+  `mayankgit9/jee-nexus` (last commit 825a10a), prod Supabase (preparena /
+  mxfiazcjcgqzqynmsefp) intact, worker `jee-nexus-app` still live.
+- `jee_dev` DB role password RESET via the management SQL endpoint; .env
+  rewritten with the transaction-pooler URL.
+- **Sandbox env fix (recurring pain)**: the platform injects a stale
+  `DATABASE_URL=file:…custom.db` into EVERY process env, which OVERRIDES
+  .env in Next.js precedence → every db call failed with "URL must start
+  with postgresql://". db.ts now resolves the node-runtime URL itself
+  (process.env → postgres check → .env.local/.env fallback), immune to how
+  the server was launched. This also fixes the keeper-cron restarts.
+- Dev server OOM-killed twice (4GB box + Turbopack dev + Chromium): the
+  keeper + manual restarts covered it; build/deploy done with dev stopped.
+
+### Migration 0019 (applied to prod BEFORE code deploy, house RLS pattern)
+11 new tables + 5 altered columns, all granted to jee_app with "app full
+access" RLS policies: solution_revisions, solution_gen_log, mistake_entries,
+revision_schedule, revision_attempts, saved_test_configs, formula_cards,
+formula_progress, question_hints, chapter_progress, daily_targets; +
+solutions.review_status/reviewed_by/reviewed_at/review_note,
+question_images.status/last_checked_at/content_hash/replaced_from_url/
+reconstructed, attempts.hints_used/client_key (unique partial index),
+chat_messages.attachment. Prisma schema mirrored exactly; both clients
+(node + worker) regenerated.
+
+### Part A — solution verification workflow
+- solutions.review_status: ai_generated | independently_checked |
+  expert_verified | reported_for_correction — NEVER auto-set to verified.
+- Report route link: reason=incorrect_solution flips the solution to
+  reported_for_correction (admin queue surfaces it).
+- Admin review API: queue with filters/counts/telemetry, edit (auto-snapshots
+  the previous version into solution_revisions), approve_independent,
+  approve_expert, reject, reset — reviewer + timestamp stored on each.
+- Enrichment pipeline upgraded: 3 attempts with 429 backoff, notation
+  validation (balanced $/\ce{}), **answer-consistency check** (body must
+  state the recorded answer), pre-enrichment revision snapshots, hints
+  derivation on success, per-run telemetry into solution_gen_log
+  (ok/failed, attempts, tokens, est. cost).
+- AdminView "Solutions review" tab: filter chips with counts, telemetry
+  strip, detail dialog w/ MathText + revision history, bounded batch
+  generation (1-10/run, priority by reports → wrong attempts → usage).
+- **Prod bug fixed**: GET /api/solutions/enrich used SQLite `?1` syntax on
+  Postgres (500 since the PG migration) — thin-count stats were dead.
+
+### Part B — image management
+- AdminView "Image manager" tab: audit runner (verifies every non-hidden URL
+  resolves in public/, computes sha1 content hashes → duplicate detection),
+  summary cards, status filters, thumbnail rows, inline altText edit,
+  hide/show, multipart replace (original URL preserved in replaced_from_url,
+  optional reconstructed flag), bounded audits (max 2000/run).
+- QuestionCard ZoomableImage: honest placeholder on load failure + report
+  hint, lazy/async decoding, aspect-ratio-preserving object-contain, zoom
+  dialog.
+
+### Part C — Mistake Notebook (auto-collect + retry)
+- Wrong practice answers auto-save into mistake_entries (7 categories,
+  editable; upsert increments mistake_count, stores last answer snapshot).
+- Manual add button on every QuestionCard. NotebookView: totals, subject/
+  chapter/category breakdowns, filters (subject/chapter/category/search/
+  dates/sort recent|most_repeated|least_revised), pagination, inline note +
+  category editors, expandable solution, Retry → /practice?retry=<id>.
+- Retry flow: question loads WITHOUT previous/correct answer; after submit
+  shows "Your attempts, side by side" (previous vs new). Correct answers set
+  corrected_at but NEVER delete the entry. Every wrong answer also auto-
+  schedules the question into the revision queue (due +1 day).
+
+### Part D — Today's Revision (spaced repetition)
+- Interval ladder 1→3→7→14→30 days: correct+easy +2 rungs, correct +1, wrong
+  → 1; self-rating easy/medium/difficult per review; revision_attempts
+  history; unique(user,question) prevents dupes; manual reschedule/remove/
+  pause (PATCH/DELETE /api/revision).
+- RevisionView: dashboard (due today, overdue, scheduled, revised this week,
+  accuracy, per-subject progress, 7-day upcoming), session sources (due /
+  notebook / bookmarks / chapter / subject), session runner on QuestionCard
+  with mode=revision, difficulty rating after each answer, session summary.
+- Verified live end-to-end: wrong answer → scheduled +1d; correct retry →
+  ladder moved to +3d, accuracy 100%.
+
+### Part E — advanced mock analytics
+- src/lib/analysis.ts: score (total/subject marks, correct/incorrect/
+  unattempted, negative, accuracy, %), time (per-question, avg, per-subject,
+  slowest), chapter analysis (strongest/weakest/most-negative/needs-
+  revision), **question-selection observations** from the student's OWN
+  historical per-type averages (2.5× threshold, real numbers only).
+- GET /api/exam/analytics?attemptId → deep report; no param → cross-mock
+  timeline + chapterTrends for comparisons.
+- ResultScreen: new Analytics area with Time / Chapters / Selection
+  insights / Compare tabs (recharts accuracy trend, mock-vs-mock deltas).
+
+### Part F — Custom Test Builder
+- generateExam extended: mixed subjects, multi-chapter, topics (subtopic),
+  difficulties, types, year, shift, attemptState (unattempted/incorrect/
+  bookmarked — server-side user scoping), totalQuestions split across
+  subjects, per-test duplicate guard.
+- saved_test_configs CRUD + MockView builder UI (subject chips, chapter
+  multi-select, difficulty/type chips, year/shift, attempt-state, count,
+  duration, save/load/delete presets, honest empty-pool warnings).
+
+### Part G — Formula Cards
+- 159 curated cards authored (Physics 51 · Chemistry 55 · Mathematics 53,
+  63 real taxonomy chapters, KaTeX+mhchem render-validated 0 failures),
+  seeded to prod as published; needs_review would never auto-publish.
+- FormulasView: search, subject chips, chapter filter, favorites, unlearned-
+  only, learned/notes/quiz progress (POST /api/formulas), quick-revision
+  hide-and-reveal mode, 10-card quiz mode with self-grading.
+
+### Part H — PWA / offline
+- manifest.json existed; added public/sw.js (bounded, trimmed caches:
+  shell pre-cache, cache-first statics, stale-while-revalidate for PUBLIC
+  endpoints only — taxonomy/questions detail/pyq/formulas; never POSTs,
+  never private endpoints) + public/offline.html + registration in page.tsx.
+- Offline attempt queue: answers taken offline land in localStorage with a
+  client key; POST /api/attempts/sync flushes on reconnect (server-side
+  RE-GRADES every item; unique client_key index makes replays idempotent —
+  verified: replay returns "duplicate"). QuestionCard shows "Saved offline —
+  syncs on reconnect" badge.
+- Verified in a real browser with the network OFF: SW activated, shell +
+  taxonomy + formulas served from cache, app fully renders offline.
+
+### Part I — adaptive daily challenge
+- Signed-in users get a PERSONALIZED deterministic pick per (user, day):
+  weak chapters (30-day accuracy <60% with ≥3 graded attempts, from
+  practice + mocks), notebook/revision-due chapters, difficulty balanced by
+  7-day accuracy, preferring never-attempted questions. Guests keep the
+  global deterministic pick. Leaderboard/scoring logic UNTOUCHED (graded via
+  the same submit path as before).
+- Personal context payload: streak, weekly progress, 30-day subject
+  breakdown, this-chapter attempt history.
+
+### Part J — syllabus tracker + study calendar
+- chapter_progress (not_started/learning/completed/revision_required/
+  strong) + daily_targets (5-200, editable). StudyView: today's chip vs
+  target, 84-day IST activity heatmap (real graded submissions only — no
+  page-visit counting), weekly bar chart + stats, per-subject syllabus tabs
+  with 5-way segmented status control, mock history with honest empty state.
+
+### Part K — progressive hints
+- Hints DERIVED from the question's own structured solution (concept →
+  approach direction → key formula) — never fabricated, never the answer.
+- GET /api/hints?questionId&level=1|2|3 (lazy per level), QuestionCard
+  "Need a hint?" → Hint N of 3 with individual reveal; honest absence for
+  thin solutions; hints_used recorded with the attempt into analytics.
+
+### Part L — community integration (existing chat EXTENDED, not replaced)
+- chat_messages.attachment (JSONB) — three server-validated shapes
+  (question publicId / result attemptId w/ ownership check / revision
+  counts); fake payloads silently dropped.
+- CommunityView: attachment cards in bubbles (question/result/revision with
+  open actions), composer share menu (finished-mock picker + revision-
+  queue share) for DM/group chats. DMs/groups/lobby/replies/reactions/
+  mentions all untouched.
+
+### Part M — security
+- Every new query is session-scoped server-side; cross-user tests: B
+  cannot read/patch/delete A's notebook, reschedule A's queue, see A's
+  configs (404s, verified). Admin routes 403 for students (verified).
+- Rate limits on all new mutations; inputs bounded and validated.
+
+### Part N — home focus
+- New "Today's focus" row: Continue practicing · Start a test · Today's
+  Revision (live due count) · Mistake Notebook (live count) · Recent
+  performance. Nav gains Revise/Notebook/Formulas/Study icons; existing
+  home sections kept.
+
+### Tests executed
+- **tests/e2e_v2_suite.py — 64/64 PASS (268s)**: auth+guards, taxonomy,
+  selection, submit+grade, notebook auto-save, revision auto-schedule,
+  offline sync + replay dedup, hints, notebook CRUD, revision scheduling/
+  sessions, formulas list/favorite/quiz, study dashboard/patches, builder
+  mixed test + analytics + history + configs, daily personalization,
+  attachments (+fake drop), ownership security, regression (bookmarks,
+  stats, pyq, leaderboard).
+- **tests/admin_flow.py — 10/10 PASS**: admin queues, telemetry, approve/
+  reset workflow, image audit + patch.
+- `bunx tsc --noEmit` clean for src/; `bun run lint` 0 errors (7 pre-existing
+  warnings in generated worker client).
+- Browser-verified in the sandbox AND on the live worker: home focus row,
+  hints (available + honest-absence), wrong answer → notebook entry → retry
+  flow with side-by-side comparison, revision ladder 1d→3d, formulas +
+  quiz, study calendar + chapter status, community attachment cards,
+  admin tabs, mobile 390px layout, offline shell + cached data, 0 page
+  errors.
+
+### Deployment
+- Migration 0019 applied via management SQL BEFORE deploy; OpenNext build
+  (with Hyperdrive local-connection env for the deploy proxy) + wrangler
+  deploy — LIVE at https://jee-nexus-app.jee-nexus.workers.dev with all
+  endpoints 200 (formulas 159 cards serving). Sandbox dev server restored +
+  keeper cron re-created (job 554088).
+
+### Honest remaining work
+- 11,831/11,886 solutions still thin (enrichment quota-bound; bounded admin
+  batches + priority queue are live and tested — resume when quota allows).
+- question_images audit ran as a spot check (60+25 rows ok); full 7.5k audit
+  + heavy-watermark AI remake pipeline remains quota-blocked from prior
+  sessions (originals preserved; hidden rows stay hidden).
+- Playwright browser suite (tests/browser/) still to be re-authored after
+  the sandbox wipe (previous suite was lost with the filesystem).
+
+---
+
 ## 2026-11-28 (~16:00 IST) — AUTH REWORK + PUBLIC LOBBY + UI REMAKE + IMAGE TRIAGE (12th session)
 
 ### Session start (app-recovery after deletion)

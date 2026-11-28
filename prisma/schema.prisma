@@ -13,10 +13,10 @@ generator client {
 // pg-worker driver adapter through Hyperdrive. Local dev and CI keep using
 // the node client above — same schema, two runtimes.
 generator clientWorker {
-  provider             = "prisma-client"
-  output               = "../src/generated/worker"
-  runtime              = "cloudflare"
-  moduleFormat         = "esm"
+  provider               = "prisma-client"
+  output                 = "../src/generated/worker"
+  runtime                = "cloudflare"
+  moduleFormat           = "esm"
   generatedFileExtension = "ts"
 }
 
@@ -70,34 +70,41 @@ enum ConversationType {
 // ----------------------------- Users & auth -----------------------------
 
 model User {
-  id           String   @id @default(cuid())
+  id           String    @id @default(cuid())
   /// Login identity (2026-11-28 auth rework: username + password sign-in).
   /// Backfilled 2026-11-28 from email prefixes for pre-rework accounts.
-  username     String   @unique
+  username     String    @unique
   /// OPTIONAL — captured only for self-recovery (forgot username/password).
-  email        String?  @unique
-  passwordHash String   @map("password_hash")
+  email        String?   @unique
+  passwordHash String    @map("password_hash")
   name         String?
-  role         AppRole  @default(student)
+  role         AppRole   @default(student)
   preferences  Json?
-  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt    DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+  createdAt    DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt    DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
   /// Presence: touched (≤1 write/45s) by requireUser(); "online" = < 5 min
   lastSeenAt   DateTime? @map("last_seen_at") @db.Timestamptz(6)
 
-  sessions       Session[]
-  attempts       Attempt[]
-  bookmarks      Bookmark[]
-  reports        Report[]
-  examAttempts   ExamAttempt[]
-  passwordResets PasswordReset[]
-  chatMemberships      ChatMember[]
-  chatSentMessages     ChatMessage[]         @relation("ChatSender")
-  chatCreatedChats     ChatConversation[]    @relation("ChatCreator")
-  chatTypingStates     ChatTyping[]
-  chatReactions        ChatReaction[]
-  chatMentions         ChatMention[]         @relation("ChatMentionee")
-  weeklyWinners        WeeklyWinner[]        @relation("WeeklyWinnerUser")
+  sessions          Session[]
+  attempts          Attempt[]
+  bookmarks         Bookmark[]
+  reports           Report[]
+  examAttempts      ExamAttempt[]
+  passwordResets    PasswordReset[]
+  chatMemberships   ChatMember[]
+  chatSentMessages  ChatMessage[]      @relation("ChatSender")
+  chatCreatedChats  ChatConversation[] @relation("ChatCreator")
+  chatTypingStates  ChatTyping[]
+  chatReactions     ChatReaction[]
+  chatMentions      ChatMention[]      @relation("ChatMentionee")
+  weeklyWinners     WeeklyWinner[]     @relation("WeeklyWinnerUser")
+  mistakeEntries    MistakeEntry[]
+  revisionSchedules RevisionSchedule[]
+  revisionAttempts  RevisionAttempt[]
+  savedTestConfigs  SavedTestConfig[]
+  formulaProgress   FormulaProgress[]
+  chapterProgress   ChapterProgress[]
+  dailyTarget       DailyTarget?
 
   @@map("app_users")
 }
@@ -151,7 +158,8 @@ model Chapter {
   unit      String? // Mechanics | Organic Chemistry ...
   order     Int     @default(0) @map("sort_order")
 
-  questions Question[]
+  questions       Question[]
+  chapterProgress ChapterProgress[]
 
   @@index([subjectId])
   @@map("chapters")
@@ -160,38 +168,42 @@ model Chapter {
 // ----------------------------- Questions -----------------------------
 
 model Question {
-  id                   String            @id @default(cuid())
-  publicId             String            @unique @map("public_id") // JEM-2023-PHY-004 style slug
-  subjectId            String            @map("subject_id")
-  subject              Subject           @relation(fields: [subjectId], references: [id])
-  chapterId            String            @map("chapter_id")
-  chapter              Chapter           @relation(fields: [chapterId], references: [id])
+  id                   String             @id @default(cuid())
+  publicId             String             @unique @map("public_id") // JEM-2023-PHY-004 style slug
+  subjectId            String             @map("subject_id")
+  subject              Subject            @relation(fields: [subjectId], references: [id])
+  chapterId            String             @map("chapter_id")
+  chapter              Chapter            @relation(fields: [chapterId], references: [id])
   subtopic             String?
   type                 QuestionType
   text                 String // LaTeX via $...$ / $$...$$
-  correctOptions       Json?             @map("correct_options") // [0,2]
-  numericalAnswer      Float?            @map("numerical_answer") @db.DoublePrecision
-  numericalTolerance   Float?            @map("numerical_tolerance") @db.DoublePrecision
-  difficulty           Difficulty        @default(medium)
-  sourceExam           String            @default("JEE Main") @map("source_exam")
-  sourceYear           Int?              @map("source_year")
-  sourceDate           String?           @map("source_date") // examination date if known
-  sourceShift          String?           @map("source_shift") // e.g. "Shift 1"
-  sourceQuestionNumber Int?              @map("source_question_number")
-  sourceReference      String?           @map("source_reference") // citation for the sourced question
+  correctOptions       Json?              @map("correct_options") // [0,2]
+  numericalAnswer      Float?             @map("numerical_answer") @db.DoublePrecision
+  numericalTolerance   Float?             @map("numerical_tolerance") @db.DoublePrecision
+  difficulty           Difficulty         @default(medium)
+  sourceExam           String             @default("JEE Main") @map("source_exam")
+  sourceYear           Int?               @map("source_year")
+  sourceDate           String?            @map("source_date") // examination date if known
+  sourceShift          String?            @map("source_shift") // e.g. "Shift 1"
+  sourceQuestionNumber Int?               @map("source_question_number")
+  sourceReference      String?            @map("source_reference") // citation for the sourced question
   verificationStatus   VerificationStatus @default(imported) @map("verification_status")
-  tags                 Json              @default("[]")
-  contentHash          String            @unique @map("content_hash") // normalized duplicate detection
-  createdAt            DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt            DateTime          @updatedAt @map("updated_at") @db.Timestamptz(6)
+  tags                 Json               @default("[]")
+  contentHash          String             @unique @map("content_hash") // normalized duplicate detection
+  createdAt            DateTime           @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime           @updatedAt @map("updated_at") @db.Timestamptz(6)
 
-  options          QuestionOption[]
-  images           QuestionImage[]
-  solution         Solution?
-  practiceAttempts Attempt[]
-  bookmarks        Bookmark[]
-  reports          Report[]
-  examQuestions    ExamQuestion[]
+  options           QuestionOption[]
+  images            QuestionImage[]
+  solution          Solution?
+  practiceAttempts  Attempt[]
+  bookmarks         Bookmark[]
+  reports           Report[]
+  examQuestions     ExamQuestion[]
+  hints             QuestionHint?
+  mistakeEntries    MistakeEntry[]
+  revisionSchedules RevisionSchedule[]
+  revisionAttempts  RevisionAttempt[]
 
   @@index([subjectId, chapterId])
   @@index([sourceYear, subjectId])
@@ -213,20 +225,29 @@ model QuestionOption {
 }
 
 model QuestionImage {
-  id                  String   @id @default(cuid())
-  questionId          String   @map("question_id")
-  question            Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  kind                String   @default("question") // question | solution
+  id                  String    @id @default(cuid())
+  questionId          String    @map("question_id")
+  question            Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  kind                String    @default("question") // question | solution
   url                 String // e.g. /diagrams/planet-density.svg
-  altText             String   @map("alt_text")
+  altText             String    @map("alt_text")
   caption             String?
   attribution         String? // provenance line displayed under the image
   /// true = figure unusable (watermark destroyed the content); hidden from
   /// every read path until an AI remake replaces the file (migration 0018)
-  hidden              Boolean  @default(false) @map("hidden")
-  isOriginalExamImage Boolean  @default(false) @map("is_original_exam_image")
-  order               Int      @default(0) @map("sort_order")
+  hidden              Boolean   @default(false) @map("hidden")
+  isOriginalExamImage Boolean   @default(false) @map("is_original_exam_image")
+  order               Int       @default(0) @map("sort_order")
+  /// Image audit (migration 0019): ok | missing | broken | low_res | duplicate | unverified
+  status              String    @default("ok")
+  lastCheckedAt       DateTime? @map("last_checked_at") @db.Timestamptz(6)
+  contentHash         String?   @map("content_hash") // byte hash — duplicate detection
+  /// Original URL preserved when an admin replaces the file (never lose provenance)
+  replacedFromUrl     String?   @map("replaced_from_url")
+  /// true = AI-reconstructed diagram (original kept separately, labeled in UI)
+  reconstructed       Boolean   @default(false)
 
+  @@index([status])
   @@map("question_images")
 }
 
@@ -243,21 +264,64 @@ model Solution {
   isAiGenerated     Boolean   @default(true) @map("is_ai_generated") // shown to users until expert-verified
   verifiedAt        DateTime? @map("verified_at") @db.Timestamptz(6)
   sourceReferences  Json      @default("[]") @map("source_references") // array of source citations
+  /// Verification workflow (migration 0019): ai_generated | independently_checked |
+  /// expert_verified | reported_for_correction. NEVER auto-set to a verified state.
+  reviewStatus      String    @default("ai_generated") @map("review_status")
+  reviewedBy        String?   @map("reviewed_by")
+  reviewedAt        DateTime? @map("reviewed_at") @db.Timestamptz(6)
+  reviewNote        String?   @map("review_note")
   version           Int       @default(1)
   createdAt         DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
   updatedAt         DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
 
+  revisions SolutionRevision[]
+
   @@map("solutions")
+}
+
+/// Full snapshot of a solution at each edit/approval — admin revision history.
+model SolutionRevision {
+  id         String   @id @default(cuid())
+  solutionId String   @map("solution_id")
+  solution   Solution @relation(fields: [solutionId], references: [id], onDelete: Cascade)
+  questionId String   @map("question_id")
+  version    Int
+  snapshot   Json
+  editedBy   String?  @map("edited_by")
+  note       String?
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([solutionId, createdAt])
+  @@map("solution_revisions")
+}
+
+/// AI solution-generation telemetry: one row per enrichment run (ok or failed).
+model SolutionGenLog {
+  id               String   @id @default(cuid())
+  questionId       String   @map("question_id")
+  status           String // ok | failed
+  attempts         Int      @default(1)
+  source           String? // web+ai | ai
+  model            String?
+  promptTokens     Int?     @map("prompt_tokens")
+  completionTokens Int?     @map("completion_tokens")
+  costUsd          Float?   @map("cost_usd") @db.DoublePrecision
+  error            String?
+  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([createdAt])
+  @@index([status, createdAt])
+  @@map("solution_gen_log")
 }
 
 // ----------------------------- Exams / CBT -----------------------------
 
 model ExamPattern {
-  id              String @id @default(cuid())
-  key             String @unique // jee-main-2025 | jee-main-2023 | custom
+  id              String  @id @default(cuid())
+  key             String  @unique // jee-main-2025 | jee-main-2023 | custom
   name            String
   description     String?
-  durationMinutes Int    @map("duration_minutes")
+  durationMinutes Int     @map("duration_minutes")
   config          Json // sections[] + marking scheme
 
   exams Exam[]
@@ -287,14 +351,14 @@ model Exam {
 }
 
 model ExamQuestion {
-  id           String   @id @default(cuid())
-  examId       String   @map("exam_id")
-  exam         Exam     @relation(fields: [examId], references: [id], onDelete: Cascade)
-  questionId   String   @map("question_id")
-  question     Question @relation(fields: [questionId], references: [id])
-  order        Int      @map("sort_order")
+  id           String              @id @default(cuid())
+  examId       String              @map("exam_id")
+  exam         Exam                @relation(fields: [examId], references: [id], onDelete: Cascade)
+  questionId   String              @map("question_id")
+  question     Question            @relation(fields: [questionId], references: [id])
+  order        Int                 @map("sort_order")
   section      String // physics | chemistry | mathematics
-  sectionOrder Int      @map("section_order")
+  sectionOrder Int                 @map("section_order")
   answers      ExamAttemptAnswer[]
 
   @@unique([examId, order])
@@ -303,19 +367,19 @@ model ExamQuestion {
 }
 
 model ExamAttempt {
-  id               String          @id @default(cuid())
-  userId           String          @map("user_id")
-  user             User            @relation(fields: [userId], references: [id], onDelete: Cascade)
-  examId           String          @map("exam_id")
-  exam             Exam            @relation(fields: [examId], references: [id], onDelete: Cascade)
-  startedAt        DateTime        @default(now()) @map("started_at") @db.Timestamptz(6)
-  endsAt           DateTime        @map("ends_at") @db.Timestamptz(6) // server-authoritative deadline
-  submittedAt      DateTime?       @map("submitted_at") @db.Timestamptz(6)
-  status           String          @default("in_progress") // in_progress | submitted | expired
-  totalMarks       Float?          @map("total_marks") @db.DoublePrecision
-  maxMarks         Float?          @map("max_marks") @db.DoublePrecision
-  timeSpentSeconds Int?            @map("time_spent_seconds")
-  createdAt        DateTime        @default(now()) @map("created_at") @db.Timestamptz(6)
+  id               String    @id @default(cuid())
+  userId           String    @map("user_id")
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examId           String    @map("exam_id")
+  exam             Exam      @relation(fields: [examId], references: [id], onDelete: Cascade)
+  startedAt        DateTime  @default(now()) @map("started_at") @db.Timestamptz(6)
+  endsAt           DateTime  @map("ends_at") @db.Timestamptz(6) // server-authoritative deadline
+  submittedAt      DateTime? @map("submitted_at") @db.Timestamptz(6)
+  status           String    @default("in_progress") // in_progress | submitted | expired
+  totalMarks       Float?    @map("total_marks") @db.DoublePrecision
+  maxMarks         Float?    @map("max_marks") @db.DoublePrecision
+  timeSpentSeconds Int?      @map("time_spent_seconds")
+  createdAt        DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
 
   answers ExamAttemptAnswer[]
 
@@ -324,19 +388,19 @@ model ExamAttempt {
 }
 
 model ExamAttemptAnswer {
-  id              String      @id @default(cuid())
-  examAttemptId   String      @map("exam_attempt_id")
-  examAttempt     ExamAttempt @relation(fields: [examAttemptId], references: [id], onDelete: Cascade)
-  examQuestionId  String      @map("exam_question_id")
-  examQuestion    ExamQuestion @relation(fields: [examQuestionId], references: [id], onDelete: Cascade)
-  selectedOptions Json?       @map("selected_options") // array of indices
-  numericalValue  String?     @map("numerical_value")
-  isCorrect       Boolean?    @map("is_correct")
-  marksAwarded    Float?      @map("marks_awarded") @db.DoublePrecision
-  visited         Boolean     @default(false)
-  markedForReview Boolean     @default(false) @map("marked_for_review")
-  timeSpentSeconds Int        @default(0) @map("time_spent_seconds")
-  updatedAt       DateTime    @updatedAt @map("updated_at") @db.Timestamptz(6)
+  id               String       @id @default(cuid())
+  examAttemptId    String       @map("exam_attempt_id")
+  examAttempt      ExamAttempt  @relation(fields: [examAttemptId], references: [id], onDelete: Cascade)
+  examQuestionId   String       @map("exam_question_id")
+  examQuestion     ExamQuestion @relation(fields: [examQuestionId], references: [id], onDelete: Cascade)
+  selectedOptions  Json?        @map("selected_options") // array of indices
+  numericalValue   String?      @map("numerical_value")
+  isCorrect        Boolean?     @map("is_correct")
+  marksAwarded     Float?       @map("marks_awarded") @db.DoublePrecision
+  visited          Boolean      @default(false)
+  markedForReview  Boolean      @default(false) @map("marked_for_review")
+  timeSpentSeconds Int          @default(0) @map("time_spent_seconds")
+  updatedAt        DateTime     @updatedAt @map("updated_at") @db.Timestamptz(6)
 
   @@unique([examAttemptId, examQuestionId])
   @@map("exam_attempt_answers")
@@ -345,16 +409,19 @@ model ExamAttemptAnswer {
 // ----------------------------- Practice & engagement -----------------------------
 
 model Attempt {
-  id               String    @id @default(cuid())
-  userId           String    @map("user_id")
-  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  questionId       String    @map("question_id")
-  question         Question  @relation(fields: [questionId], references: [id])
-  selectedOptions  Json?     @map("selected_options") // array of indices
-  numericalValue   String?   @map("numerical_value")
-  isCorrect        Boolean?  @map("is_correct")
-  timeSpentSeconds Int       @default(0) @map("time_spent_seconds")
-  createdAt        DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  id               String   @id @default(cuid())
+  userId           String   @map("user_id")
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId       String   @map("question_id")
+  question         Question @relation(fields: [questionId], references: [id])
+  selectedOptions  Json?    @map("selected_options") // array of indices
+  numericalValue   String?  @map("numerical_value")
+  isCorrect        Boolean? @map("is_correct")
+  timeSpentSeconds Int      @default(0) @map("time_spent_seconds")
+  hintsUsed        Int      @default(0) @map("hints_used")
+  /// Offline-sync idempotency key (client-generated UUID); unique when present
+  clientKey        String?  @map("client_key")
+  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
   @@index([userId, createdAt])
   @@index([userId, questionId])
@@ -371,6 +438,170 @@ model Bookmark {
 
   @@unique([userId, questionId])
   @@map("bookmarks")
+}
+
+// ----------------------------- Mistake Notebook (0019) -----------------------------
+
+model MistakeEntry {
+  id            String    @id @default(cuid())
+  userId        String    @map("user_id")
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId    String    @map("question_id")
+  question      Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  category      String    @default("conceptual") // conceptual|calculation|formula_forgotten|misread|time_management|incorrect_guess|other
+  personalNote  String?   @map("personal_note")
+  mistakeCount  Int       @default(1) @map("mistake_count")
+  lastAnswer    Json?     @map("last_answer") // previous attempt snapshot
+  lastMistakeAt DateTime  @default(now()) @map("last_mistake_at") @db.Timestamptz(6)
+  correctedAt   DateTime? @map("corrected_at") @db.Timestamptz(6)
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@unique([userId, questionId])
+  @@index([userId, lastMistakeAt(sort: Desc)])
+  @@map("mistake_entries")
+}
+
+// ----------------------------- Spaced repetition (0019) -----------------------------
+
+model RevisionSchedule {
+  id                 String    @id @default(cuid())
+  userId             String    @map("user_id")
+  user               User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId         String    @map("question_id")
+  question           Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  source             String    @default("manual") // mistake|bookmark|chapter|subject|manual|custom|exam
+  dueAt              DateTime  @map("due_at") @db.Timestamptz(6)
+  intervalDays       Int       @default(1) @map("interval_days")
+  consecutiveCorrect Int       @default(0) @map("consecutive_correct")
+  consecutiveWrong   Int       @default(0) @map("consecutive_wrong")
+  selfRating         String?   @map("self_rating") // easy|medium|difficult
+  lastResult         Boolean?  @map("last_result")
+  lastReviewedAt     DateTime? @map("last_reviewed_at") @db.Timestamptz(6)
+  active             Boolean   @default(true)
+  createdAt          DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt          DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  attempts RevisionAttempt[]
+
+  @@unique([userId, questionId])
+  @@index([userId, dueAt])
+  @@map("revision_schedule")
+}
+
+model RevisionAttempt {
+  id               String            @id @default(cuid())
+  userId           String            @map("user_id")
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId       String            @map("question_id")
+  question         Question          @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  scheduleId       String?           @map("schedule_id")
+  schedule         RevisionSchedule? @relation(fields: [scheduleId], references: [id], onDelete: SetNull)
+  wasCorrect       Boolean?          @map("was_correct")
+  hintsUsed        Int               @default(0) @map("hints_used")
+  timeSpentSeconds Int               @default(0) @map("time_spent_seconds")
+  selfRating       String?           @map("self_rating")
+  reviewedAt       DateTime          @default(now()) @map("reviewed_at") @db.Timestamptz(6)
+
+  @@index([userId, reviewedAt(sort: Desc)])
+  @@map("revision_attempts")
+}
+
+// ----------------------------- Saved custom test configs (0019) -----------------------------
+
+model SavedTestConfig {
+  id         String    @id @default(cuid())
+  userId     String    @map("user_id")
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name       String
+  config     Json
+  lastUsedAt DateTime? @map("last_used_at") @db.Timestamptz(6)
+  createdAt  DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt  DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@index([userId, updatedAt(sort: Desc)])
+  @@map("saved_test_configs")
+}
+
+// ----------------------------- Formula cards (0019) -----------------------------
+
+model FormulaCard {
+  id          String   @id @default(cuid())
+  subjectKey  String   @map("subject_key")
+  chapterKey  String   @map("chapter_key")
+  topic       String?
+  title       String
+  formula     String
+  explanation String?
+  conditions  String?
+  units       String?
+  tags        Json     @default("[]")
+  source      String?
+  status      String   @default("needs_review") // published|needs_review|rejected
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  progress FormulaProgress[]
+
+  @@index([subjectKey, chapterKey])
+  @@index([status])
+  @@map("formula_cards")
+}
+
+model FormulaProgress {
+  userId       String      @map("user_id")
+  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  cardId       String      @map("card_id")
+  card         FormulaCard @relation(fields: [cardId], references: [id], onDelete: Cascade)
+  favorite     Boolean     @default(false)
+  learned      Boolean     @default(false)
+  personalNote String?     @map("personal_note")
+  quizSeen     Int         @default(0) @map("quiz_seen")
+  quizCorrect  Int         @default(0) @map("quiz_correct")
+  lastSeenAt   DateTime?   @map("last_seen_at") @db.Timestamptz(6)
+  updatedAt    DateTime    @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@id([userId, cardId])
+  @@map("formula_progress")
+}
+
+// ----------------------------- Progressive hints (0019) -----------------------------
+
+model QuestionHint {
+  questionId String   @id @map("question_id")
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  hint1      String
+  hint2      String?
+  hint3      String?
+  source     String   @default("derived") // derived|ai|admin
+  status     String   @default("ai_generated") // ai_generated|independently_checked|expert_verified|needs_review
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt  DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@map("question_hints")
+}
+
+// ----------------------------- Syllabus tracker (0019) -----------------------------
+
+model ChapterProgress {
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chapterId String   @map("chapter_id")
+  chapter   Chapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  status    String   @default("not_started") // not_started|learning|completed|revision_required|strong
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@id([userId, chapterId])
+  @@map("chapter_progress")
+}
+
+model DailyTarget {
+  userId          String   @id @map("user_id")
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  targetQuestions Int      @default(20) @map("target_questions")
+  updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@map("daily_targets")
 }
 
 model Report {
@@ -392,17 +623,17 @@ model Report {
 }
 
 model ImportJob {
-  id              String   @id @default(cuid())
-  adminId         String   @map("admin_id")
-  fileName        String   @map("file_name")
-  sourceFormat    String   @map("source_format") // json | csv
-  totalRows       Int      @default(0) @map("total_rows")
-  inserted        Int      @default(0)
-  skippedDuplicate Int     @default(0) @map("skipped_duplicate")
-  rejected        Int      @default(0)
-  errors          Json? // array of row-level errors
-  status          String   @default("completed") // running | completed | failed
-  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  id               String   @id @default(cuid())
+  adminId          String   @map("admin_id")
+  fileName         String   @map("file_name")
+  sourceFormat     String   @map("source_format") // json | csv
+  totalRows        Int      @default(0) @map("total_rows")
+  inserted         Int      @default(0)
+  skippedDuplicate Int      @default(0) @map("skipped_duplicate")
+  rejected         Int      @default(0)
+  errors           Json? // array of row-level errors
+  status           String   @default("completed") // running | completed | failed
+  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
   @@index([createdAt])
   @@map("import_jobs")
@@ -419,8 +650,8 @@ model ChatConversation {
   createdAt   DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
   updatedAt   DateTime         @updatedAt @map("updated_at") @db.Timestamptz(6) // bumped on new message — sidebar sort key
 
-  members  ChatMember[]
-  messages ChatMessage[]
+  members     ChatMember[]
+  messages    ChatMessage[]
   typingState ChatTyping[]
   // reactions hang off messages; no direct list needed on the conversation
 
@@ -454,6 +685,8 @@ model ChatMessage {
   /// that should survive account deletion
   senderName     String?          @map("sender_name")
   body           String // 1-2000 chars, enforced in the API
+  /// Rich shares (0019): { type: 'question'|'result'|'revision'|'collection', … }
+  attachment     Json?
   createdAt      DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
   replyToId      String?          @map("reply_to_id")
   replyTo        ChatMessage?     @relation("ChatReplies", fields: [replyToId], references: [id], onDelete: SetNull)
@@ -501,12 +734,12 @@ model ChatTyping {
 /// Message reactions: one row per (message, user, emoji) — several different
 /// emojis per user allowed, never the same one twice (composite key).
 model ChatReaction {
-  messageId String   @map("message_id")
+  messageId String      @map("message_id")
   message   ChatMessage @relation(fields: [messageId], references: [id], onDelete: Cascade)
-  userId    String   @map("user_id")
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String      @map("user_id")
+  user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   emoji     String
-  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  createdAt DateTime    @default(now()) @map("created_at") @db.Timestamptz(6)
 
   @@id([messageId, userId, emoji])
   @@index([messageId])

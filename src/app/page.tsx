@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import {
   Home, Dice5, Library, BarChart3, BookMarked, User, LogIn, LogOut, Moon, Sun, Menu, X,
   ClipboardList, ShieldCheck, MessageSquare, MoreHorizontal, Search, Trophy, ChevronDown,
+  RefreshCw, NotebookPen, Sigma, CalendarCheck,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -26,9 +27,14 @@ import { MockView } from '@/components/views/MockView'
 import { AdminView } from '@/components/views/AdminView'
 import { CommunityView } from '@/components/views/CommunityView'
 import { LeaderboardView } from '@/components/views/LeaderboardView'
+import { NotebookView } from '@/components/views/NotebookView'
+import { RevisionView } from '@/components/views/RevisionView'
+import { FormulasView } from '@/components/views/FormulasView'
+import { StudyView } from '@/components/views/StudyView'
 import { CommandPalette } from '@/components/CommandPalette'
 import type { SessionUser, SubjectKey } from '@/lib/types'
 import { useHashRoute, useApi, navigate, api } from '@/lib/client'
+import { installOfflineSync } from '@/lib/offline'
 import { toast } from '@/hooks/use-toast'
 import { ToastAction } from '@/components/ui/toast'
 import { cn } from '@/lib/utils'
@@ -46,9 +52,13 @@ const NAV = [
   { view: 'practice', label: 'Practice', icon: Dice5 },
   { view: 'pyq', label: 'PYQ Library', icon: Library },
   { view: 'mock', label: 'Mock Tests', icon: ClipboardList },
+  { view: 'revision', label: "Today's Revision", icon: RefreshCw },
+  { view: 'notebook', label: 'Mistake Notebook', icon: NotebookPen },
+  { view: 'formulas', label: 'Formula Cards', icon: Sigma },
   { view: 'community', label: 'Community', icon: MessageSquare },
   { view: 'leaderboard', label: 'Leaderboard', icon: Trophy },
   { view: 'performance', label: 'Performance', icon: BarChart3 },
+  { view: 'study', label: 'Study Planner', icon: CalendarCheck },
   { view: 'bookmarks', label: 'Bookmarks', icon: BookMarked },
 ] as const
 
@@ -89,6 +99,16 @@ export default function App() {
   useEffect(() => {
     document.documentElement.className = theme
   }, [theme])
+
+  // PWA (Part H): service worker + offline attempt sync (idempotent)
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {})
+    }
+    installOfflineSync((n) => {
+      toast({ title: 'Offline answers synced', description: `${n} attempt${n === 1 ? '' : 's'} saved to your account.` })
+    })
+  }, [])
 
   useEffect(() => {
     setMobileNav(false)
@@ -446,6 +466,7 @@ export default function App() {
                   route.params.chapters ? route.params.chapters.split(',').filter(Boolean) : undefined
                 }
                 dailyParam={route.params.daily}
+                retryParam={route.params.retry}
               />
             )}
             {view === 'pyq' && (
@@ -460,12 +481,16 @@ export default function App() {
             )}
             {view === 'performance' && <PerformanceView onRequireAuth={() => navigate('/login')} />}
             {view === 'bookmarks' && <BookmarksView loggedIn={!!user} onRequireAuth={() => navigate('/login')} />}
+            {view === 'notebook' && <NotebookView />}
+            {view === 'revision' && <RevisionView />}
+            {view === 'formulas' && <FormulasView taxonomy={taxonomy} />}
+            {view === 'study' && <StudyView />}
             {(view === 'login' || view === 'profile') && <ProfileView user={user} onUserChange={setUser} />}
             {view === 'mock' && <MockView loggedIn={!!user} onRequireAuth={() => navigate('/login')} />}
             {view === 'community' && <CommunityView user={user} loggedIn={!!user} onRequireAuth={() => navigate('/login')} />}
             {view === 'leaderboard' && <LeaderboardView user={user} onRequireAuth={() => navigate('/login')} />}
             {view === 'admin' && <AdminView isAdmin={user?.role === 'admin'} />}
-            {view !== 'home' && view !== 'practice' && view !== 'pyq' && view !== 'mock' && view !== 'performance' && view !== 'bookmarks' && view !== 'login' && view !== 'profile' && view !== 'admin' && view !== 'community' && view !== 'leaderboard' && (
+            {view !== 'home' && view !== 'practice' && view !== 'pyq' && view !== 'mock' && view !== 'performance' && view !== 'bookmarks' && view !== 'login' && view !== 'profile' && view !== 'admin' && view !== 'community' && view !== 'leaderboard' && view !== 'notebook' && view !== 'revision' && view !== 'formulas' && view !== 'study' && (
               <div className="mx-auto max-w-lg rounded-2xl border border-dashed border-border p-10 text-center">
                 <h2 className="text-lg font-semibold">Page not found</h2>
                 <Button variant="outline" className="mt-4" onClick={() => navigate('/home')}>Go home</Button>

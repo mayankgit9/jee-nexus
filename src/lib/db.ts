@@ -110,7 +110,37 @@ function createClient(): PrismaClient {
   }
 
   // node runtime (local dev, CI, sandbox preview)
-  return new PrismaClient()
+  const url = resolveNodeDatabaseUrl()
+  return url ? new PrismaClient({ datasources: { db: { url } } }) : new PrismaClient()
+}
+
+/**
+ * Sandbox platform guard (2026-11-29): the dev-server supervisor (and its
+ * cron keeper) inherit a platform-injected `DATABASE_URL=file:…custom.db`
+ * (stale SQLite pointer for the stock scaffold) which OVERRIDES .env files
+ * in Next.js env precedence. When the process env does not point at a real
+ * Postgres, read the URL straight from .env.local / .env so the app still
+ * reaches production Supabase regardless of how the server was launched.
+ */
+function resolveNodeDatabaseUrl(): string | undefined {
+  const env = process.env.DATABASE_URL
+  if (env && /^postgres(ql)?:\/\//.test(env)) return env
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const fs = require('node:fs') as typeof import('node:fs')
+    for (const f of ['.env.local', '.env']) {
+      try {
+        const txt = fs.readFileSync(`${process.cwd()}/${f}`, 'utf8')
+        const m = txt.match(/^DATABASE_URL=(\S+)$/m)
+        if (m && /^postgres(ql)?:\/\//.test(m[1])) return m[1]
+      } catch {
+        /* file absent — try next */
+      }
+    }
+  } catch {
+    /* fs unavailable — fall through */
+  }
+  return undefined
 }
 
 /**

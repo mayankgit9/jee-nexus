@@ -6,6 +6,7 @@ import ZAI from 'z-ai-web-dev-sdk'
 import { db } from '@/lib/db'
 import type { Prisma } from '@prisma/client'
 import { cleanDisplayText } from '@/lib/questions'
+import { deriveAndSaveHints } from '@/lib/hints'
 
 export const THIN_SOLUTION_CHARS = 400
 
@@ -14,6 +15,8 @@ export interface EnrichResult {
   questionId: string
   source: 'web+ai' | 'ai' | 'skipped' | 'failed'
   error?: string
+  validation?: string[]
+  tokens?: { prompt: number; completion: number }
 }
 
 const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F']
@@ -146,6 +149,42 @@ interface GeneratedSolution {
   sourceReferences?: string[]
 }
 
+/** Notation + consistency validation (Part A quality control).
+ *  Returns a list of problems — empty means the solution passes. */
+export function validateGeneratedSolution(
+  gen: GeneratedSolution,
+  input: { type: string; correctLetters: string; numericalAnswer: number | null }
+): string[] {
+  const problems: string[] = []
+  const body = gen.body ?? ''
+  // 1. Math delimiters must be balanced ($$ pairs and $ pairs), and \ce{} braces
+  const dollars = (body.match(/\$/g) ?? []).length
+  if (dollars % 2 !== 0) problems.push('unbalanced $ delimiters in body')
+  const ceOpens = (body.match(/\\ce\{/g) ?? []).length
+  const ceCloses = (body.match(/\}/g) ?? []).length
+  if (ceOpens > 0 && ceCloses < ceOpens) problems.push('unbalanced \\ce{} braces')
+  // 2. Step structure expected for a full derivation
+  if (!/\*\*Step\s+\d+/i.test(body)) problems.push('body has no **Step N** structure')
+  // 3. Answer-consistency: the final answer statement must reference the
+  //    recorded correct answer (option letters or the numerical value).
+  const tail = body.slice(-900)
+  if (input.type === 'numerical') {
+    if (input.numericalAnswer !== null && !tail.includes(String(input.numericalAnswer))) {
+      // allow equivalent decimal forms (3.50 vs 3.5, integers with .00, etc.)
+      const norm = Number(input.numericalAnswer.toFixed(4)).toString()
+      const re = new RegExp(`(^|[^0-9])${norm.replace('.', '\\.')}([^0-9]|$)`, '')
+      if (!re.test(body)) problems.push(`body never states the recorded answer ${input.numericalAnswer}`)
+    }
+  } else if (input.correctLetters && !tail.includes(input.correctLetters.split(',')[0].trim())) {
+    problems.push(`body never states the correct option (${input.correctLetters})`)
+  }
+  // 4. Formulas must be strings and LaTeX-plausible
+  if (gen.formulas && gen.formulas.some((f) => typeof f !== 'string' || f.length < 3)) {
+    problems.push('formulas contains a non-string/too-short entry')
+  }
+  return problems
+}
+
 function parseGenerated(raw: string): GeneratedSolution | null {
   let text = raw.trim()
   const fence = text.match(/```(?:json)?\s*([\s\S]*?)```/)
@@ -235,8 +274,13 @@ export async function enrichSolution(
 
   let generated: GeneratedSolution | null = null
   let lastErr = ''
-  for (let attempt = 0; attempt < 2 && !generated; attempt++) {
+  let promptTokens = 0
+  let completionTokens = 0
+  let model = ''
+  let attemptsMade = 0
+  for (let attempt = 0; attempt < 3 && !generated; attempt++) {
     try {
+      attemptsMade++
       const zai = await ZAI.create()
       const completion = await zai.chat.completions.create({
         messages: [
@@ -246,14 +290,38 @@ export async function enrichSolution(
         thinking: { type: 'disabled' },
       })
       const raw = completion?.choices?.[0]?.message?.content ?? ''
+      const usage = (completion as { usage?: { prompt_tokens?: number; completion_tokens?: number } })?.usage
+      promptTokens += usage?.prompt_tokens ?? 0
+      completionTokens += usage?.completion_tokens ?? 0
+      model = String((completion as { model?: string })?.model ?? '')
       generated = parseGenerated(String(raw))
       if (!generated) lastErr = 'unparseable JSON from model'
     } catch (e) {
-      lastErr = String((e as Error)?.message ?? e)
+      const msg = String((e as Error)?.message ?? e)
+      lastErr = msg
+      // RATE-LIMIT HANDLING: 429 gets a progressive backoff (the platform LLM
+      // pool is shared); other errors fail fast to the next attempt.
+      if (msg.includes('429')) {
+        await new Promise((r) => setTimeout(r, 2_500 * (attempt + 1)))
+      } else {
+        await new Promise((r) => setTimeout(r, 400))
+      }
     }
   }
   if (!generated || typeof generated.body !== 'string' || generated.body.length < 200) {
+    await logGeneration({ questionId, ok: false, attempts: attemptsMade, error: lastErr || 'model output too short', promptTokens, completionTokens, model })
     return { ok: false, questionId, source: 'failed', error: lastErr || 'model output too short' }
+  }
+
+  // QUALITY CONTROL (Part A): notation + answer-consistency validation.
+  const validationProblems = validateGeneratedSolution(generated, {
+    type: question.type,
+    correctLetters,
+    numericalAnswer: question.numericalAnswer,
+  })
+  if (validationProblems.length > 0) {
+    await logGeneration({ questionId, ok: false, attempts: attemptsMade, error: `validation failed: ${validationProblems.join('; ')}`, promptTokens, completionTokens, model })
+    return { ok: false, questionId, source: 'failed', error: `validation failed: ${validationProblems.join('; ')}`, validation: validationProblems }
   }
 
   const now = new Date()
@@ -273,9 +341,69 @@ export async function enrichSolution(
   }
 
   if (sol) {
+    // Revision history: snapshot the PREVIOUS version before overwriting (Part A).
+    await db.solutionRevision.create({
+      data: {
+        solutionId: sol.id,
+        questionId,
+        version: sol.version,
+        snapshot: {
+          keyConcept: sol.keyConcept,
+          formulas: sol.formulas,
+          body: sol.body,
+          commonMistakes: sol.commonMistakes,
+          alternativeMethod: sol.alternativeMethod,
+          verification: sol.verification,
+          sourceReferences: sol.sourceReferences,
+          reviewStatus: sol.reviewStatus,
+        } as unknown as Prisma.InputJsonValue,
+        note: 'pre-enrichment snapshot',
+      },
+    })
     await db.solution.update({ where: { questionId: sol.questionId }, data })
   } else {
     await db.solution.create({ data: { ...data, questionId } })
   }
-  return { ok: true, questionId, source: hits.length > 0 ? 'web+ai' : 'ai' }
+
+  // Progressive hints derived from the fresh structured solution (Part K).
+  await deriveAndSaveHints(questionId).catch(() => {})
+
+  await logGeneration({ questionId, ok: true, attempts: attemptsMade, source: hits.length > 0 ? 'web+ai' : 'ai', promptTokens, completionTokens, model })
+  return { ok: true, questionId, source: hits.length > 0 ? 'web+ai' : 'ai', tokens: { prompt: promptTokens, completion: completionTokens } }
+}
+
+/** Telemetry: one solution_gen_log row per run — failed-generation tracking,
+ *  cost/token accounting, retry visibility (Part A). */
+async function logGeneration(info: {
+  questionId: string
+  ok: boolean
+  attempts: number
+  source?: string
+  error?: string
+  promptTokens?: number
+  completionTokens?: number
+  model?: string
+}): Promise<void> {
+  try {
+    // Rough cost model (glm flashes are cheap tier): $0.5 / 1M in, $1.5 / 1M out.
+    const costUsd =
+      info.ok && (info.promptTokens || info.completionTokens)
+        ? ((info.promptTokens ?? 0) / 1_000_000) * 0.5 + ((info.completionTokens ?? 0) / 1_000_000) * 1.5
+        : undefined
+    await db.solutionGenLog.create({
+      data: {
+        questionId: info.questionId,
+        status: info.ok ? 'ok' : 'failed',
+        attempts: info.attempts,
+        ...(info.source ? { source: info.source } : {}),
+        ...(info.model ? { model: info.model } : {}),
+        promptTokens: info.promptTokens || null,
+        completionTokens: info.completionTokens || null,
+        ...(costUsd !== undefined ? { costUsd } : {}),
+        ...(info.error ? { error: info.error.slice(0, 500) } : {}),
+      },
+    })
+  } catch {
+    // telemetry must never break generation
+  }
 }

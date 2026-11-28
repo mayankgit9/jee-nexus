@@ -40,6 +40,8 @@ export interface QuestionSolution {
   alternativeMethod?: string
   verification?: string
   isAiGenerated: boolean
+  /** Verification workflow (0019): ai_generated | independently_checked | expert_verified | reported_for_correction */
+  reviewStatus?: string
   sourceReferences?: string[]
   solutionImages: { url: string; altText: string; caption?: string }[]
 }

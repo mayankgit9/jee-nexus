@@ -35,8 +35,16 @@ type QuestionWithRelations = Prisma.QuestionGetPayload<{
   }
 }>
 
-export function toPublicQuestion(q: QuestionWithRelations): PublicQuestion {
-  const bookmarked = q.bookmarks ? q.bookmarks.length > 0 : false
+/** Loose input shape: any superset of these fields is accepted (extra
+ *  includes like solution/revisionSchedules ride along harmlessly; bookmark
+ *  rows may be partial since call sites select id-only). */
+export type PublicQuestionInput = Omit<QuestionWithRelations, 'bookmarks'> & {
+  bookmarks?: unknown
+  [k: string]: unknown
+}
+
+export function toPublicQuestion(q: PublicQuestionInput): PublicQuestion {
+  const bookmarked = Array.isArray(q.bookmarks) ? q.bookmarks.length > 0 : false
   return {
     id: q.id,
     publicId: q.publicId,
@@ -84,6 +92,7 @@ export function toPublicSolution(s: SolutionWithImages): QuestionSolution {
     alternativeMethod: s.alternativeMethod ? cleanDisplayText(s.alternativeMethod) : undefined,
     verification: s.verification ? cleanDisplayText(s.verification) : undefined,
     isAiGenerated: s.isAiGenerated,
+    reviewStatus: s.reviewStatus,
     sourceReferences: asStringArray(s.sourceReferences),
     solutionImages: s.question.images
       .filter((i) => i.kind === 'solution')

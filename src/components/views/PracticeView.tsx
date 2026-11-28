@@ -3,7 +3,7 @@
 // JEE NEXUS — random practice engine view (+ daily challenge mode)
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Dice5, Filter, Layers, RefreshCw, ArrowRight, Trophy, Target, Clock, CalendarCheck, CheckCircle2, XCircle, Home } from 'lucide-react'
+import { Dice5, Filter, Layers, RefreshCw, ArrowRight, Trophy, Target, Clock, CalendarCheck, CheckCircle2, XCircle, Home, NotebookPen } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -46,9 +46,11 @@ interface Props {
   initialChapters?: string[]
   /** '1' → today's Daily Challenge session */
   dailyParam?: string
+  /** <questionId> → Mistake-Notebook retry flow (Part C) */
+  retryParam?: string
 }
 
-export function PracticeView({ taxonomy, loggedIn, onRequireAuth, initialSubject, initialChapters, dailyParam }: Props) {
+export function PracticeView({ taxonomy, loggedIn, onRequireAuth, initialSubject, initialChapters, dailyParam, retryParam }: Props) {
   // Only offer years that actually have imported questions (the PYQ overview
   // is the source of truth; hardcoded chips offered empty years like 2026).
   const pyqYears = useApi<{ years: { year: number }[] }>('/api/pyq')
@@ -102,6 +104,34 @@ export function PracticeView({ taxonomy, loggedIn, onRequireAuth, initialSubject
   const [types, setTypes] = useState<string[]>([])
   const [count, setCount] = useState(10)
   const [includeAttempted, setIncludeAttempted] = useState(false)
+
+  // ---------- mistake-notebook retry mode (Part C) ----------
+  // The question loads WITHOUT the previous answer or correct answer; after
+  // submission the new attempt is shown side-by-side with the previous one.
+  const [retry, setRetry] = useState<{ question: PublicQuestion; previous: { selectedOptions?: number[]; numericalValue?: string; at: string; wasCorrect: boolean | null } | null } | null>(null)
+  const [retryError, setRetryError] = useState(false)
+  const [retryResult, setRetryResult] = useState<SubmittedResult | null>(null)
+  const retryInit = useRef(false)
+  useEffect(() => {
+    if (!retryParam || retryInit.current) return
+    retryInit.current = true
+    Promise.all([
+      api<{ question: PublicQuestion }>(`/api/questions/detail?id=${encodeURIComponent(retryParam)}`),
+      api<{ entry: { lastAnswer: { selectedOptions?: number[]; numericalValue?: string; at: string } | null; mistakeCount: number } | null }>(
+        `/api/mistakes?questionId=${encodeURIComponent(retryParam)}`
+      ).catch(() => ({ entry: null })),
+    ])
+      .then(([{ question }, { entry }]) => {
+        setRetry({
+          question,
+          previous: entry?.lastAnswer
+            ? { ...entry.lastAnswer, wasCorrect: false }
+            : null,
+        })
+        setShowFilters(false)
+      })
+      .catch(() => setRetryError(true))
+  }, [retryParam])
 
   const [session, setSession] = useState<PublicQuestion[] | null>(null)
   const [qIndex, setQIndex] = useState(0)
@@ -277,6 +307,88 @@ export function PracticeView({ taxonomy, loggedIn, onRequireAuth, initialSubject
         >
           Retry
         </Button>
+      </div>
+    )
+  }
+
+  // ---------- retry: failure states ----------
+  if (retryParam && retryError) {
+    return (
+      <div className="mx-auto max-w-lg rounded-2xl border border-dashed border-border p-10 text-center">
+        <NotebookPen className="mx-auto h-10 w-10 text-muted-foreground" />
+        <h2 className="mt-4 text-lg font-semibold">Could not load this question</h2>
+        <p className="mt-2 text-sm text-muted-foreground">It may have been removed. Check your connection and try again.</p>
+        <div className="mt-5 flex justify-center gap-3">
+          <Button variant="outline" onClick={() => navigate('/notebook')}>Back to notebook</Button>
+        </div>
+      </div>
+    )
+  }
+
+  // ---------- retry: loading ----------
+  if (retryParam && !retry) {
+    return (
+      <div className="mx-auto max-w-2xl space-y-4">
+        <Skeleton className="h-8 w-1/3" />
+        <Skeleton className="h-40 w-full" />
+        <Skeleton className="h-10 w-full" />
+        <Skeleton className="h-10 w-5/6" />
+      </div>
+    )
+  }
+
+  // ---------- retry: active ----------
+  if (retry) {
+    const OPTION_LABELS = ['A', 'B', 'C', 'D', 'E', 'F']
+    const prevAnswer = retry.previous
+      ? retry.previous.selectedOptions?.length
+        ? retry.previous.selectedOptions.map((i) => OPTION_LABELS[i]).join(', ')
+        : retry.previous.numericalValue ?? '—'
+      : null
+    return (
+      <div className="mx-auto max-w-3xl">
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-sm font-medium text-primary">
+            <NotebookPen className="h-4 w-4" />
+            <span>Mistake retry — attempt it cleanly, no peeking</span>
+          </div>
+          <Button variant="ghost" size="sm" onClick={() => navigate('/notebook')}>
+            Back to notebook
+          </Button>
+        </div>
+
+        <QuestionCard
+          key={retry.question.id}
+          question={retry.question}
+          mode="notebook_retry"
+          onSubmit={(r) => setRetryResult(r)}
+          loggedIn={loggedIn}
+          onRequireAuth={onRequireAuth}
+        />
+
+        {/* previous vs new comparison — appears only AFTER the new attempt */}
+        {retryResult && retry.previous && (
+          <div className="mt-5 rounded-xl border border-border bg-card p-4">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Your attempts, side by side
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div className="rounded-lg border border-rose-400/25 bg-rose-400/[0.06] p-3">
+                <p className="text-xs text-rose-300/90">Previous attempt (incorrect)</p>
+                <p className="mt-1 font-mono text-sm">{prevAnswer ?? 'No answer'}</p>
+                <p className="mt-1 text-[11px] text-muted-foreground">
+                  {retry.previous.at ? new Date(retry.previous.at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : ''}
+                </p>
+              </div>
+              <div className="rounded-lg border border-primary/25 bg-primary/[0.06] p-3">
+                <p className="text-xs text-primary">This attempt</p>
+                <p className="mt-1 text-sm font-semibold">
+                  {retryResult.isCorrect === true ? 'Correct — mistake corrected!' : retryResult.isCorrect === false ? 'Still incorrect — it stays in your notebook.' : 'Recorded'}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     )
   }

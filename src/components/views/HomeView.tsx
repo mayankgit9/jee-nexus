@@ -8,7 +8,7 @@ import type { Variants } from 'framer-motion'
 import {
   Atom, ArrowRight, BarChart3, BookOpen, CheckCircle2, ChevronRight, ClipboardList,
   Dice5, FlaskConical, Flame, Library, LogIn, MessageSquare, Sigma, Sparkles, Target,
-  Trophy, XCircle, Activity, CalendarRange,
+  Trophy, XCircle, Activity, CalendarRange, CalendarCheck, NotebookPen,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -112,6 +112,9 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
   const stats = useApi<StatsData>(user ? '/api/stats' : null)
   const pyq = useApi<PyqOverview>('/api/pyq')
   const daily = useApi<DailyOverview>('/api/daily')
+  // Part N focus areas: today's revision + mistake notebook summaries (signed-in only)
+  const revisionDash = useApi<{ dueToday: number; overdue: number }>(user ? '/api/revision' : null)
+  const notebook = useApi<{ total: number }>(user ? '/api/mistakes' : null)
   const reduceMotion = useReducedMotion()
   const st = stats.data?.stats ?? null
   const dq = daily.data?.question ?? null
@@ -182,6 +185,78 @@ export function HomeView({ user, taxonomy }: { user: SessionUser | null; taxonom
             <span className="flex items-center gap-1.5"><MessageSquare className="h-3.5 w-3.5 text-primary" /> Community &amp; study groups</span>
             <span className="flex items-center gap-1.5"><ClipboardList className="h-3.5 w-3.5 text-primary" /> True NTA-style CBT</span>
           </div>
+        </div>
+      </motion.section>
+
+      {/* ---------- today's focus (Part N: the five most important actions) ---------- */}
+      <motion.section variants={item} aria-label="Today's focus" className="mt-6">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-5">
+          <button
+            type="button"
+            onClick={() => navigate('/practice')}
+            className="surface surface-hover group flex flex-col items-start gap-2 rounded-xl p-4 text-left"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15">
+              <Dice5 className="h-4.5 w-4.5 text-primary" />
+            </span>
+            <span className="text-sm font-semibold">Continue practicing</span>
+            <span className="text-xs text-muted-foreground">Pick up your session</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate('/mock')}
+            className="surface surface-hover group flex flex-col items-start gap-2 rounded-xl p-4 text-left"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15">
+              <ClipboardList className="h-4.5 w-4.5 text-primary" />
+            </span>
+            <span className="text-sm font-semibold">Start a test</span>
+            <span className="text-xs text-muted-foreground">NTA-style CBT mock</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate('/revision')}
+            className="surface surface-hover group flex flex-col items-start gap-2 rounded-xl p-4 text-left"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15">
+              <CalendarCheck className="h-4.5 w-4.5 text-primary" />
+            </span>
+            <span className="text-sm font-semibold">Today&apos;s Revision</span>
+            <span className="text-xs text-muted-foreground">
+              {user
+                ? revisionDash.data
+                  ? `${revisionDash.data.dueToday + revisionDash.data.overdue} due now`
+                  : 'Loading…'
+                : 'Spaced repetition'
+              }
+            </span>
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate('/notebook')}
+            className="surface surface-hover group flex flex-col items-start gap-2 rounded-xl p-4 text-left"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15">
+              <NotebookPen className="h-4.5 w-4.5 text-primary" />
+            </span>
+            <span className="text-sm font-semibold">Mistake Notebook</span>
+            <span className="text-xs text-muted-foreground">
+              {user ? (notebook.data ? `${notebook.data.total} saved mistake${notebook.data.total === 1 ? '' : 's'}` : 'Loading…') : 'Your error log'}
+            </span>
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate(user ? '/performance' : '/profile')}
+            className="surface surface-hover group flex col-span-2 flex-col items-start gap-2 rounded-xl p-4 text-left md:col-span-1"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15">
+              <BarChart3 className="h-4.5 w-4.5 text-primary" />
+            </span>
+            <span className="text-sm font-semibold">Recent performance</span>
+            <span className="text-xs text-muted-foreground">
+              {user ? (st ? `${st.accuracy}% accuracy · ${st.totalAttempts} attempts` : 'Loading…') : 'Sign in to see trends'}
+            </span>
+          </button>
         </div>
       </motion.section>
 
