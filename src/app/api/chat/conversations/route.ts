@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server'
 import { dbClient } from '@/lib/db'
 import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
-import { CHAT_LIMITS, toClientMember, requireMembership } from '@/lib/chat'
+import { CHAT_LIMITS, toClientMember, requireMembership, ensureLobbyMembership } from '@/lib/chat'
 
 /**
  * GET /api/chat/conversations — the caller's conversation list.
@@ -12,6 +12,10 @@ export async function GET() {
   try {
     const user = await requireUser()
     const client = dbClient()
+
+    // The public lobby rides in the sidebar via an invisible membership row
+    // (no join button anywhere) — this also drives its unread badge.
+    await ensureLobbyMembership(client, user.id)
 
     const memberships = await client.chatMember.findMany({
       where: { userId: user.id },

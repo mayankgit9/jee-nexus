@@ -80,3 +80,17 @@ db/pgdata/
 
 # transient agent tool outputs
 tool-results/
+
+# 2026-11-28: local runtime secrets & artifacts (NEVER commit)
+.env
+.env.local
+.secrets*/
+*.secret*
+pyq_originals/
+db/
+*.db
+dev.log
+dev-supervised.log
+server.log
+tool-results/
+.zscripts/dev.pid

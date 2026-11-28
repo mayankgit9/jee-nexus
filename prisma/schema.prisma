@@ -62,6 +62,7 @@ enum AppRole {
 enum ConversationType {
   dm
   group
+  lobby
 
   @@map("conversation_type")
 }
@@ -70,7 +71,11 @@ enum ConversationType {
 
 model User {
   id           String   @id @default(cuid())
-  email        String   @unique
+  /// Login identity (2026-11-28 auth rework: username + password sign-in).
+  /// Backfilled 2026-11-28 from email prefixes for pre-rework accounts.
+  username     String   @unique
+  /// OPTIONAL — captured only for self-recovery (forgot username/password).
+  email        String?  @unique
   passwordHash String   @map("password_hash")
   name         String?
   role         AppRole  @default(student)
@@ -216,6 +221,9 @@ model QuestionImage {
   altText             String   @map("alt_text")
   caption             String?
   attribution         String? // provenance line displayed under the image
+  /// true = figure unusable (watermark destroyed the content); hidden from
+  /// every read path until an AI remake replaces the file (migration 0018)
+  hidden              Boolean  @default(false) @map("hidden")
   isOriginalExamImage Boolean  @default(false) @map("is_original_exam_image")
   order               Int      @default(0) @map("sort_order")
 
@@ -439,8 +447,12 @@ model ChatMessage {
   id             String           @id @default(cuid())
   conversationId String           @map("conversation_id")
   conversation   ChatConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
-  senderId       String           @map("sender_id")
-  sender         User             @relation("ChatSender", fields: [senderId], references: [id], onDelete: Cascade)
+  /// NULL for lobby guest posts (no account) — display name lives in senderName
+  senderId       String?          @map("sender_id")
+  sender         User?            @relation("ChatSender", fields: [senderId], references: [id], onDelete: Cascade)
+  /// Display-name snapshot: guest name for lobby posts, sender name for rows
+  /// that should survive account deletion
+  senderName     String?          @map("sender_name")
   body           String // 1-2000 chars, enforced in the API
   createdAt      DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
   replyToId      String?          @map("reply_to_id")

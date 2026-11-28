@@ -1,8 +1,9 @@
 import { NextRequest } from 'next/server'
 import { dbClient } from '@/lib/db'
-import { requireUser, jsonError, HttpError, rateLimit } from '@/lib/auth'
+import { getSessionUser, requireUser, jsonError, HttpError, rateLimit, clientIp } from '@/lib/auth'
 import {
-  CHAT_LIMITS, requireMembership, sanitizeMessageBody, toClientMember, toClientMessage,
+  CHAT_LIMITS, LOBBY_CONVERSATION_ID, ensureLobbyMembership, requireMembership, sanitizeMessageBody,
+  sanitizeGuestName, toClientMember, toClientMessage,
   hydrateReplies, attachReplies, parseMentions,
 } from '@/lib/chat'
 
@@ -30,6 +31,18 @@ function aggregateReactions(
   return out
 }
 
+/** message row as fetched for the client — sender optional (guest posts) */
+type MsgRow = {
+  id: string
+  body: string
+  createdAt: Date
+  senderId: string | null
+  senderName: string | null
+  replyToId: string | null
+  deletedAt: Date | null
+  sender: { id: string; name: string | null } | null
+}
+
 /**
  * GET /api/chat/messages?conversationId=...[&after=ISO][&before=ISO][&limit=n]
  *   no cursor    → latest page (asc order, hasMore)
@@ -40,12 +53,37 @@ function aggregateReactions(
  */
 export async function GET(req: NextRequest) {
   try {
-    const user = await requireUser()
+    // Lobby is readable by EVERYONE (even without an account); every other
+    // conversation still requires a signed-in member.
+    const user = await getSessionUser()
     const client = dbClient()
     const conversationId = req.nextUrl.searchParams.get('conversationId') ?? ''
     if (!conversationId) throw new HttpError(400, 'conversationId is required')
 
-    const { conversation, membership } = await requireMembership(client, conversationId, user.id)
+    let conversation
+    let membership: { role: string; lastReadAt: Date | null } | null = null
+    if (user) {
+      const m = await requireMembership(client, conversationId, user.id)
+      conversation = m.conversation
+      membership = { role: String(m.membership.role), lastReadAt: m.membership.lastReadAt ?? null }
+    } else {
+      conversation = await client.chatConversation.findUnique({
+        where: { id: conversationId },
+        include: {
+          members: {
+            select: {
+              userId: true,
+              role: true,
+              lastReadAt: true,
+              user: { select: { id: true, name: true, email: true, lastSeenAt: true } },
+            },
+            orderBy: { joinedAt: 'asc' },
+          },
+        },
+      })
+      if (!conversation) throw new HttpError(404, 'Conversation not found')
+      if (conversation.type !== 'lobby') throw new HttpError(401, 'Not authenticated')
+    }
 
     const parseIso = (v: string | null): Date | null => {
       if (!v) return null
@@ -61,15 +99,7 @@ export async function GET(req: NextRequest) {
         : CHAT_LIMITS.messagesTake
 
     const fetchMessages = async (): Promise<{
-      messages: {
-        id: string
-        body: string
-        createdAt: Date
-        senderId: string
-        replyToId: string | null
-        deletedAt: Date | null
-        sender: { id: string; name: string | null } | null
-      }[]
+      messages: MsgRow[]
       hasMore: boolean
     }> => {
       if (after) {
@@ -80,7 +110,7 @@ export async function GET(req: NextRequest) {
           include: { sender: { select: { id: true, name: true } } },
         })
         const more = rows.length > limit
-        return { messages: more ? rows.slice(0, limit) : rows, hasMore: more }
+        return { messages: (more ? rows.slice(0, limit) : rows) as MsgRow[], hasMore: more }
       }
       if (before) {
         const page = await client.chatMessage.findMany({
@@ -90,7 +120,7 @@ export async function GET(req: NextRequest) {
           include: { sender: { select: { id: true, name: true } } },
         })
         const more = page.length > limit
-        return { messages: (more ? page.slice(0, limit) : page).reverse(), hasMore: more }
+        return { messages: ((more ? page.slice(0, limit) : page).reverse()) as MsgRow[], hasMore: more }
       }
       const page = await client.chatMessage.findMany({
         where: { conversationId },
@@ -99,22 +129,25 @@ export async function GET(req: NextRequest) {
         include: { sender: { select: { id: true, name: true } } },
       })
       const more = page.length > limit
-      return { messages: (more ? page.slice(0, limit) : page).reverse(), hasMore: more }
+      return { messages: ((more ? page.slice(0, limit) : page).reverse()) as MsgRow[], hasMore: more }
     }
 
     // typing + presence ride along on every poll (one batched round trip
-    // with the message query keeps the 3s poll at two subrequests total)
+    // with the message query keeps the 3s poll at two subrequests total).
+    // Guests have no typing state (composer identity is ephemeral).
     const typingCutoff = new Date(Date.now() - 6_000)
     const [page, typingRows] = await Promise.all([
       fetchMessages(),
-      client.chatTyping.findMany({
-        where: {
-          conversationId,
-          userId: { not: user.id },
-          updatedAt: { gt: typingCutoff },
-        },
-        include: { user: { select: { name: true } } },
-      }),
+      user
+        ? client.chatTyping.findMany({
+            where: {
+              conversationId,
+              userId: { not: user.id },
+              updatedAt: { gt: typingCutoff },
+            },
+            include: { user: { select: { name: true } } },
+          })
+        : Promise.resolve([]),
     ])
     if (Math.random() < 0.02) {
       await client
@@ -133,7 +166,7 @@ export async function GET(req: NextRequest) {
       )) as { message_id: string; emoji: string; user_id: string }[]
       reactions = aggregateReactions(
         rows.map((r) => ({ messageId: r.message_id, emoji: r.emoji, userId: r.user_id })),
-        user.id
+        user?.id ?? ''
       )
     }
 
@@ -158,7 +191,7 @@ export async function GET(req: NextRequest) {
         id: conversation.id,
         type: conversation.type,
         name: conversation.name,
-        myRole: membership.role,
+        myRole: membership?.role ?? 'guest',
         members: conversation.members.map(toClientMember),
       },
       messages: attachReplies(messages.map(toClientMessage), replyMap),
@@ -173,26 +206,59 @@ export async function GET(req: NextRequest) {
 }
 
 /**
- * POST /api/chat/messages { conversationId, body, replyToId? } — send a message,
- * optionally as a quoted reply to another message in the same conversation.
- * Bumps the conversation's updatedAt (sidebar ordering) and the sender's
- * lastReadAt (you have obviously read what you sent).
+ * POST /api/chat/messages { conversationId, body, replyToId?, guestName? } —
+ * send a message, optionally as a quoted reply.
+ *
+ * LOBBY + GUESTS (2026-11-28): the lobby is open to everyone. Signed-out
+ * visitors post with an ephemeral display name (guestName, 2-24 chars) —
+ * sender_id NULL, name snapshot in sender_name, IP rate-limited (5/min).
+ * Signed-in members keep the full experience: receipts, reactions, mentions,
+ * replies, 30/min limit. Other conversation types still require membership.
  */
 export async function POST(req: NextRequest) {
   try {
-    const user = await requireUser()
     const client = dbClient()
-    await rateLimit(`chat-msg:${user.id}`, 30, 60 * 1000, client)
+    const user = await getSessionUser()
     const payload = (await req.json().catch(() => ({}))) as {
       conversationId?: string
       body?: string
       replyToId?: string
+      guestName?: string
     }
     const conversationId = String(payload.conversationId ?? '')
     if (!conversationId) throw new HttpError(400, 'conversationId is required')
-
-    const { conversation } = await requireMembership(client, conversationId, user.id)
     const body = sanitizeMessageBody(String(payload.body ?? ''))
+
+    // ---------- guest path (lobby only) ----------
+    if (!user) {
+      const conversation = await client.chatConversation.findUnique({
+        where: { id: conversationId },
+        select: { id: true, type: true },
+      })
+      if (!conversation) throw new HttpError(404, 'Conversation not found')
+      if (conversation.type !== 'lobby') throw new HttpError(401, 'Sign in to post outside the lobby')
+      const ip = clientIp(req)
+      await rateLimit(`chat-lobby:${ip}`, 5, 60_000, client)
+      const guestName = sanitizeGuestName(String(payload.guestName ?? 'Guest'))
+      const message = await client.chatMessage.create({
+        data: { conversationId, senderId: null, senderName: guestName, body },
+        include: { sender: { select: { id: true, name: true } } },
+      })
+      await client.chatConversation.update({
+        where: { id: conversationId },
+        data: { updatedAt: new Date() },
+      })
+      const mapped = attachReplies([toClientMessage(message)], new Map())
+      return Response.json({ message: mapped[0], mentions: 0 })
+    }
+
+    // ---------- member path ----------
+    await rateLimit(`chat-msg:${user.id}`, 30, 60 * 1000, client)
+    if (conversationId === LOBBY_CONVERSATION_ID) {
+      // invisible auto-join: lobby needs no "Join" button
+      await ensureLobbyMembership(client, user.id)
+    }
+    const { conversation } = await requireMembership(client, conversationId, user.id)
 
     // optional reply target: must exist AND belong to the same conversation
     let replyToId: string | null = null
@@ -209,24 +275,30 @@ export async function POST(req: NextRequest) {
     }
 
     const message = await client.chatMessage.create({
-      data: { conversationId, senderId: user.id, body, replyToId },
+      data: {
+        conversationId,
+        senderId: user.id,
+        senderName: user.name ?? user.username,
+        body,
+        replyToId,
+      },
       include: { sender: { select: { id: true, name: true } } },
     })
     await client.chatConversation.update({
       where: { id: conversationId },
       data: { updatedAt: new Date() },
     })
-    await client.chatMember.update({
-      where: { conversationId_userId: { conversationId, userId: user.id } },
+    await client.chatMember.updateMany({
+      where: { conversationId, userId: user.id },
       data: { lastReadAt: new Date() },
     })
 
-    // @mentions: resolve "@<display name>" against the group's members and
-    // store one notification row per mentioned member (sender never mentions
-    // themselves; parseMentions caps at 10). DMs don't mention — the toast
-    // already names the sender there.
+    // @mentions: resolve "@<display name>" against the conversation's members
+    // and store one notification row per mentioned member (sender never
+    // mentions themselves; parseMentions caps at 10). DMs don't mention —
+    // the toast already names the sender there.
     let mentionCount = 0
-    if (conversation.type === 'group') {
+    if (conversation.type === 'group' || conversation.type === 'lobby') {
       const rows = await client.chatMember.findMany({
         where: { conversationId },
         select: { userId: true, user: { select: { name: true } } },

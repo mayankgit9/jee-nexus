@@ -376,13 +376,13 @@ function HistoryCard() {
             <div className="space-y-1.5">
               {items.map((a) => (
                 <div key={a.id} className="flex items-center justify-between gap-2 rounded-lg border border-border/60 px-3 py-2 text-sm">
-                  <div className="min-w-0">
+                  <div className="flex min-w-0 items-center">
                     <span className="font-mono text-xs text-muted-foreground">{a.publicId}</span>
-                    <span className="mx-2">·</span>
-                    <span className="truncate">{a.chapter}</span>
+                    <span className="mx-2 shrink-0">·</span>
+                    <span className="min-w-0 truncate">{a.chapter}</span>
                     <span
                       className={cn(
-                        'ml-2 rounded px-1 py-0.5 text-[10px] font-medium',
+                        'ml-2 shrink-0 rounded px-1 py-0.5 text-[10px] font-medium',
                         a.source === 'exam' ? 'bg-violet-500/15 text-violet-300' : 'bg-sky-500/15 text-sky-300'
                       )}
                     >

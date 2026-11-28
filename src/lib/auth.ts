@@ -63,6 +63,7 @@ export async function getSessionUser(): Promise<SessionUser | null> {
   }
   return {
     id: session.user.id,
+    username: session.user.username,
     email: session.user.email,
     name: session.user.name,
     role: session.user.role === 'admin' ? 'admin' : 'student',

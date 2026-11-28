@@ -1,0 +1,902 @@
+     1→   111→
+     2→   112→function gradientFor(seed: string): string {
+     3→   113→  let h = 0
+     4→   114→  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0
+     5→   115→  return AVATAR_GRADIENTS[h % AVATAR_GRADIENTS.length]
+     6→   116→}
+     7→   117→
+     8→   118→function initialsOf(name: string): string {
+     9→   119→  const parts = name.trim().split(/\s+/)
+    10→   120→  return ((parts[0]?.[0] ?? '?') + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase()
+    11→   121→}
+    12→   122→
+    13→   123→function conversationTitle(c: Conversation, meId: string): string {
+    14→   124→  if (c.type === 'group') return c.name ?? 'Study group'
+    15→   125→  const other = c.members.find((m) => m.id !== meId)
+    16→   126→  return other?.name ?? 'Direct message'
+    17→   127→}
+    18→   128→
+    19→   129→function timeLabel(iso: string): string {
+    20→   130→  const d = new Date(iso)
+    21→   131→  const now = new Date()
+    22→   132→  const sameDay = d.toDateString() === now.toDateString()
+    23→   133→  if (sameDay) {
+    24→   134→    return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    25→   135→  }
+    26→   136→  const yesterday = new Date(now)
+    27→   137→  yesterday.setDate(now.getDate() - 1)
+    28→   138→  if (d.toDateString() === yesterday.toDateString()) return 'Yesterday'
+    29→   139→  if (now.getTime() - d.getTime() < 6 * 24 * 3600 * 1000) {
+    30→   140→    return d.toLocaleDateString([], { weekday: 'short' })
+    31→   141→  }
+    32→   142→  return d.toLocaleDateString([], { day: 'numeric', month: 'short' })
+    33→   143→}
+    34→   144→
+    35→   145→function dayLabel(iso: string): string {
+    36→   146→  const d = new Date(iso)
+    37→   147→  const now = new Date()
+    38→   148→  if (d.toDateString() === now.toDateString()) return 'Today'
+    39→   149→  const yesterday = new Date(now)
+    40→   150→  yesterday.setDate(now.getDate() - 1)
+    41→   151→  if (d.toDateString() === yesterday.toDateString()) return 'Yesterday'
+    42→   152→  return d.toLocaleDateString([], { weekday: 'long', day: 'numeric', month: 'short' })
+    43→   153→}
+    44→   154→
+    45→   155→function clockLabel(iso: string): string {
+    46→   156→  return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    47→   157→}
+    48→   158→
+    49→   159→function previewOf(c: Conversation, meId: string): string {
+    50→   160→  if (!c.lastMessage) return c.type === 'group' ? 'Group created' : 'Say hello'
+    51→   161→  const prefix = c.lastMessage.senderId === meId ? 'You: ' : c.type === 'group' ? `${c.lastMessage.senderName.split(' ')[0]}: ` : ''
+    52→   162→  const body = c.lastMessage.body.replace(/\s+/g, ' ')
+    53→   163→  return `${prefix}${body.length > 60 ? body.slice(0, 60) + '…' : body}`
+    54→   164→}
+    55→   165→
+    56→   166→/** Escape a string for literal use inside a RegExp. */
+    57→   167→function escapeRe(s: string): string {
+    58→   168→  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    59→   169→}
+    60→   170→
+    61→   171→/**
+    62→   172→ * Member-name mention matcher (word-bounded, case-insensitive, longest
+    63→   173→ * names first so "@Riya Sen" is consumed before a member named "Riya").
+    64→   174→ * Returns true if any matched token names the given user. Mirrors the
+    65→   175→ * server-side parseMentions rules in lib/chat.ts without importing it
+    66→   176→ * (lib/auth is server-only).
+    67→   177→ */
+    68→   178→function memberMentionTokens(body: string | undefined, members: ChatUser[]): string[] {
+    69→   179→  if (!body) return []
+    70→   180→  const names = members
+    71→   181→    .filter((m) => m.name && m.name.trim().length >= 2)
+    72→   182→    .map((m) => (m.name as string).trim())
+    73→   183→  if (!names.length) return []
+    74→   184→  const re = new RegExp(
+    75→   185→    `@(?:${[...names].sort((a, b) => b.length - a.length).map(escapeRe).join('|')})(?![a-zA-Z0-9_])`,
+    76→   186→    'gi'
+    77→   187→  )
+    78→   188→  const tokens: string[] = []
+    79→   189→  let mt: RegExpExecArray | null
+    80→   190→  while ((mt = re.exec(body)) !== null) tokens.push(mt[0].slice(1).toLowerCase())
+    81→   191→  return tokens
+    82→   192→}
+    83→   193→
+    84→   194→function mentionsMe(body: string | undefined, members: ChatUser[], myName: string): boolean {
+    85→   195→  const myLower = myName.trim().toLowerCase()
+    86→   196→  return Boolean(myLower) && memberMentionTokens(body, members).includes(myLower)
+    87→   197→}
+    88→   198→
+    89→   199→/** "online" = seen by the server within the last 5 minutes */
+    90→   200→const ONLINE_WINDOW_MS = 5 * 60 * 1000
+    91→   201→
+    92→   202→function isOnline(lastSeenAt?: string | null): boolean {
+    93→   203→  if (!lastSeenAt) return false
+    94→   204→  return Date.now() - new Date(lastSeenAt).getTime() < ONLINE_WINDOW_MS
+    95→   205→}
+    96→   206→
+    97→   207→function lastSeenLabel(lastSeenAt?: string | null): string {
+    98→   208→  if (!lastSeenAt) return 'offline'
+    99→   209→  const delta = Date.now() - new Date(lastSeenAt).getTime()
+   100→   210→  if (delta < 60_000) return 'last seen just now'
+   101→   211→  if (delta < 3_600_000) return `last seen ${Math.floor(delta / 60_000)}m ago`
+   102→   212→  if (delta < 24 * 3_600_000) return `last seen ${Math.floor(delta / 3_600_000)}h ago`
+   103→   213→  if (delta < 48 * 3_600_000) return 'last seen yesterday'
+   104→   214→  return `last seen ${new Date(lastSeenAt).toLocaleDateString([], { day: 'numeric', month: 'short' })}`
+   105→   215→}
+   106→   216→
+   107→   217→/** window the body around the first case-insensitive match so the hit is visible */
+   108→   218→function snippetOf(body: string, q: string): string {
+   109→   219→  const clean = body.replace(/\s+/g, ' ')
+   110→   220→  const idx = clean.toLowerCase().indexOf(q.toLowerCase())
+   111→   221→  if (idx < 0) return clean.length > 120 ? clean.slice(0, 120) + '…' : clean
+   112→   222→  const start = Math.max(0, idx - 40)
+   113→   223→  const end = Math.min(clean.length, idx + q.length + 70)
+   114→   224→  return (start > 0 ? '…' : '') + clean.slice(start, end) + (end < clean.length ? '…' : '')
+   115→   225→}
+   116→   226→
+   117→   227→// ---------------------------------------------------------------- main view
+   118→   228→
+   119→   229→export function CommunityView({
+   120→   230→  user,
+   121→   231→  loggedIn,
+   122→   232→  onRequireAuth,
+   123→   233→}: {
+   124→   234→  user: SessionUser | null
+   125→   235→  loggedIn: boolean
+   126→   236→  onRequireAuth: () => void
+   127→   237→}) {
+   128→   238→  const { toast } = useToast()
+   129→   239→  const meId = user?.id ?? ''
+   130→   240→
+   131→   241→  // sidebar state
+   132→   242→  const [conversations, setConversations] = useState<Conversation[] | null>(null)
+   133→   243→  const [convError, setConvError] = useState<string | null>(null)
+   134→   244→  const [convLoading, setConvLoading] = useState(true)
+   135→   245→  const [filter, setFilter] = useState<Filter>('all')
+   136→   246→  const [newChatOpen, setNewChatOpen] = useState(false)
+   137→   247→
+   138→   248→  // message search (sidebar)
+   139→   249→  const [searchQ, setSearchQ] = useState('')
+   140→   250→  const [searchResults, setSearchResults] = useState<SearchResult[] | null>(null)
+   141→   251→  const [searching, setSearching] = useState(false)
+   142→   252→  const searchSeq = useRef(0)
+   143→   253→
+   144→   254→  // active conversation state
+   145→   255→  const [activeId, setActiveId] = useState<string | null>(null)
+   146→   256→  const [meta, setMeta] = useState<ConvMeta | null>(null)
+   147→   257→  const [messages, setMessages] = useState<ChatMessage[]>([])
+   148→   258→  const [messagesLoading, setMessagesLoading] = useState(false)
+   149→   259→  const [messagesError, setMessagesError] = useState<string | null>(null)
+   150→   260→  const [hasMore, setHasMore] = useState(false)
+   151→   261→  const [loadingEarlier, setLoadingEarlier] = useState(false)
+   152→   262→  const [addMembersOpen, setAddMembersOpen] = useState(false)
+   153→   263→  const [confirmLeave, setConfirmLeave] = useState(false)
+   154→   264→  const [leaving, setLeaving] = useState(false)
+   155→   265→  // typing + presence + scroll UX
+   156→   266→  const [typing, setTyping] = useState<TypingUser[]>([])
+   157→   267→  const [showJump, setShowJump] = useState(false)
+   158→   268→  const [reactions, setReactions] = useState<Record<string, ReactionChip[]>>({})
+   159→   269→  const [pickerFor, setPickerFor] = useState<string | null>(null)
+   160→   270→  const [reacting, setReacting] = useState(false)
+   161→   271→  const lastTypingPing = useRef(0)
+   162→   272→
+   163→   273→  // replies + deletes + emoji + rename
+   164→   274→  const [replyTo, setReplyTo] = useState<ChatMessage | null>(null)
+   165→   275→  const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
+   166→   276→  const [deleting, setDeleting] = useState(false)
+   167→   277→  const [emojiOpen, setEmojiOpen] = useState(false)
+   168→   278→  const [highlightId, setHighlightId] = useState<string | null>(null)
+   169→   279→  const [renameOpen, setRenameOpen] = useState(false)
+   170→   280→  const [renameValue, setRenameValue] = useState('')
+   171→   281→  const [renaming, setRenaming] = useState(false)
+   172→   282→
+   173→   283→  // composer
+   174→   284→  const [draft, setDraft] = useState('')
+   175→   285→  const [sending, setSending] = useState(false)
+   176→   286→  // @mention autocomplete: { start, token } = location of the trailing
+   177→   287→  // "@<token>" in the draft (null = popup closed); mentionIdx = highlighted row
+   178→   288→  const [mention, setMention] = useState<{ start: number; token: string } | null>(null)
+   179→   289→  const [mentionIdx, setMentionIdx] = useState(0)
+   180→   290→  const composerRef = useRef<HTMLTextAreaElement | null>(null)
+   181→   291→  const listRef = useRef<HTMLDivElement | null>(null)
+   182→   292→  const stickToBottom = useRef(true)
+   183→   293→  const initialLoadDone = useRef(false)
+   184→   294→
+   185→   295→  const refreshConversations = useCallback(async () => {
+   186→   296→    try {
+   187→   297→      const r = await api<{ conversations: Conversation[] }>('/api/chat/conversations')
+   188→   298→      setConversations(r.conversations)
+   189→   299→      setConvError(null)
+   190→   300→    } catch (e) {
+   191→   301→      setConvError((e as Error).message)
+   192→   302→    } finally {
+   193→   303→      setConvLoading(false)
+   194→   304→    }
+   195→   305→  }, [])
+   196→   306→
+   197→   307→  // debounced message search — fires when the sidebar query reaches 2 chars
+   198→   308→  useEffect(() => {
+   199→   309→    const q = searchQ.trim()
+   200→   310→    if (q.length < 2) {
+   201→   311→      setSearchResults(null)
+   202→   312→      setSearching(false)
+   203→   313→      return
+   204→   314→    }
+   205→   315→    const seq = ++searchSeq.current
+   206→   316→    setSearching(true)
+   207→   317→    const t = setTimeout(async () => {
+   208→   318→      try {
+   209→   319→        const r = await api<{ results: SearchResult[] }>(
+   210→   320→          `/api/chat/search?q=${encodeURIComponent(q)}`
+   211→   321→        )
+   212→   322→        if (seq === searchSeq.current) setSearchResults(r.results)
+   213→   323→      } catch {
+   214→   324→        if (seq === searchSeq.current) setSearchResults([])
+   215→   325→      } finally {
+   216→   326→        if (seq === searchSeq.current) setSearching(false)
+   217→   327→      }
+   218→   328→    }, 350)
+   219→   329→    return () => clearTimeout(t)
+   220→   330→  }, [searchQ])
+   221→   331→
+   222→   332→  const markRead = useCallback(async (conversationId: string) => {
+   223→   333→    await api('/api/chat/read', { conversationId }).catch(() => {})
+   224→   334→    setConversations((prev) =>
+   225→   335→      prev ? prev.map((c) => (c.id === conversationId ? { ...c, unread: 0 } : c)) : prev
+   226→   336→    )
+   227→   337→  }, [])
+   228→   338→
+   229→   339→  /** open a conversation: load latest page + mark read */
+   230→   340→  const openConversation = useCallback(
+   231→   341→    async (id: string) => {
+   232→   342→      setActiveId(id)
+   233→   343→      setMessagesLoading(true)
+   234→   344→      setMessagesError(null)
+   235→   345→      setMessages([])
+   236→   346→      setMeta(null)
+   237→   347→      setTyping([])
+   238→   348→      setReplyTo(null)
+   239→   349→      setConfirmDelete(null)
+   240→   350→      setEmojiOpen(false)
+   241→   351→      setMention(null)
+   242→   352→      initialLoadDone.current = false
+   243→   353→      try {
+   244→   354→        const r = await api<{ conversation: ConvMeta; messages: ChatMessage[]; hasMore: boolean; typing?: TypingUser[]; reactions?: Record<string, ReactionChip[]> }>(
+   245→   355→          `/api/chat/messages?conversationId=${encodeURIComponent(id)}`
+   246→   356→        )
+   247→   357→        setMeta(r.conversation)
+   248→   358→        setMessages(r.messages)
+   249→   359→        setHasMore(r.hasMore)
+   250→   360→        setTyping(r.typing ?? [])
+   251→   361→        setReactions(r.reactions ?? {})
+   252→   362→        setPickerFor(null)
+   253→   363→        stickToBottom.current = true
+   254→   364→        setShowJump(false)
+   255→   365→        void markRead(id)
+   256→   366→      } catch (e) {
+   257→   367→        setMessagesError((e as Error).message)
+   258→   368→      } finally {
+   259→   369→        setMessagesLoading(false)
+   260→   370→      }
+   261→   371→    },
+   262→   372→    [markRead]
+   263→   373→  )
+   264→   374→
+   265→   375→  // deep link: #/community?c=<id> (notification toast "Open" navigates here)
+   266→   376→  // — consumed ONCE per mount, after the sidebar list has loaded, so the
+   267→   377→  // target conversation exists and in-view navigation isn't hijacked later
+   268→   378→  const deepLinkDone = useRef(false)
+   269→   379→  useEffect(() => {
+   270→   380→    if (deepLinkDone.current || convLoading || !conversations) return
+   271→   381→    deepLinkDone.current = true
+   272→   382→    const q = new URLSearchParams(window.location.hash.split('?')[1] ?? '')
+   273→   383→    const c = q.get('c')
+   274→   384→    if (c && conversations.some((x) => x.id === c)) void openConversation(c)
+   275→   385→  }, [conversations, convLoading, openConversation])
+   276→   386→
+   277→   387→  const loadEarlier = useCallback(async () => {
+   278→   388→    if (!activeId || !messages.length || loadingEarlier) return
+   279→   389→    setLoadingEarlier(true)
+   280→   390→    const list = listRef.current
+   281→   391→    const prevHeight = list?.scrollHeight ?? 0
+   282→   392→    try {
+   283→   393→      const oldest = messages[0]
+   284→   394→      const r = await api<{ messages: ChatMessage[]; hasMore: boolean }>(
+   285→   395→        `/api/chat/messages?conversationId=${encodeURIComponent(activeId)}&before=${encodeURIComponent(oldest.createdAt)}`
+   286→   396→      )
+   287→   397→      setMessages((prev) => {
+   288→   398→        const seen = new Set(prev.map((m) => m.id))
+   289→   399→        return [...r.messages.filter((m) => !seen.has(m.id)), ...prev]
+   290→   400→      })
+   291→   401→      setHasMore(r.hasMore)
+   292→   402→      // keep the viewport anchored where it was
+   293→   403→      requestAnimationFrame(() => {
+   294→   404→        const el = listRef.current
+   295→   405→        if (el) el.scrollTop = el.scrollHeight - prevHeight + el.scrollTop
+   296→   406→      })
+   297→   407→    } catch (e) {
+   298→   408→      toast({ title: 'Could not load earlier messages', description: (e as Error).message })
+   299→   409→    } finally {
+   300→   410→      setLoadingEarlier(false)
+   301→   411→    }
+   302→   412→  }, [activeId, messages, loadingEarlier, toast])
+   303→   413→
+   304→   414→  /** incremental poll for the open conversation — messages + typing + presence + tombstones */
+   305→   415→  const pollNew = useCallback(async () => {
+   306→   416→    if (!activeId || !messages.length) return
+   307→   417→    const last = messages[messages.length - 1]
+   308→   418→    try {
+   309→   419→      const r = await api<{
+   310→   420→        messages: ChatMessage[]
+   311→   421→        conversation: ConvMeta
+   312→   422→        typing?: TypingUser[]
+   313→   423→        reactions?: Record<string, ReactionChip[]>
+   314→   424→        deletedIds?: string[]
+   315→   425→      }>(
+   316→   426→        `/api/chat/messages?conversationId=${encodeURIComponent(activeId)}&after=${encodeURIComponent(last.createdAt)}`
+   317→   427→      )
+   318→   428→      setTyping(r.typing ?? [])
+   319→   429→      setMeta((prev) => (prev ? { ...prev, members: r.conversation.members } : prev))
+   320→   430→      if (r.reactions && Object.keys(r.reactions).length > 0) {
+   321→   431→        setReactions((prev) => ({ ...prev, ...r.reactions }))
+   322→   432→      }
+   323→   433→      // live tombstones: mark any loaded message the sender has deleted,
+   324→   434→      // and blank the quoted context of loaded replies to it
+   325→   435→      if (r.deletedIds && r.deletedIds.length > 0) {
+   326→   436→        const gone = new Set(r.deletedIds)
+   327→   437→        setMessages((prev) =>
+   328→   438→          prev.some((m) => (gone.has(m.id) && !m.deleted) || (m.replyToId && gone.has(m.replyToId) && m.replyTo && !m.replyTo.deleted))
+   329→   439→            ? prev.map((m) => {
+   330→   440→                if (gone.has(m.id)) return { ...m, deleted: true, body: '' }
+   331→   441→                if (m.replyToId && gone.has(m.replyToId)) {
+   332→   442→                  return { ...m, replyTo: m.replyTo ? { ...m.replyTo, deleted: true, body: '' } : m.replyTo }
+   333→   443→                }
+   334→   444→                return m
+   335→   445→              })
+   336→   446→            : prev
+   337→   447→        )
+   338→   448→        setReactions((prev) => {
+   339→   449→          const next = { ...prev }
+   340→   450→          let touched = false
+   341→   451→          for (const id of gone) {
+   342→   452→            if (next[id]) {
+   343→   453→              delete next[id]
+   344→   454→              touched = true
+   345→   455→            }
+   346→   456→          }
+   347→   457→          return touched ? next : prev
+   348→   458→        })
+   349→   459→      }
+   350→   460→      if (r.messages.length === 0) return
+   351→   461→      setMessages((prev) => {
+   352→   462→        const seen = new Set(prev.map((m) => m.id))
+   353→   463→        const fresh = r.messages.filter((m) => !seen.has(m.id))
+   354→   464→        if (!fresh.length) return prev
+   355→   465→        const fromOthers = fresh.some((m) => m.senderId !== meId)
+   356→   466→        if (fromOthers) void markRead(activeId)
+   357→   467→        return [...prev, ...fresh]
+   358→   468→      })
+   359→   469→    } catch {
+   360→   470→      /* transient — next tick retries */
+   361→   471→    }
+   362→   472→  }, [activeId, messages, meId, markRead])
+   363→   473→
+   364→   474→  const onDraftChange = useCallback(
+   365→   475→    (value: string) => {
+   366→   476→      setDraft(value)
+   367→   477→      // typing heartbeat: only while there is text, at most every 2.5s
+   368→   478→      const now = Date.now()
+   369→   479→      if (value.trim() && activeId && now - lastTypingPing.current > 2_500) {
+   370→   480→        lastTypingPing.current = now
+   371→   481→        void api('/api/chat/typing', { conversationId: activeId }).catch(() => {})
+   372→   482→      }
+   373→   483→      // mention popup: a trailing "@token" (start-of-text or after whitespace,
+   374→   484→      // no spaces inside) opens the member picker while ANY member name
+   375→   485→      // contains the token; anything else closes it. Groups only — DMs
+   376→   486→      // already surface the sender's name in the notification.
+   377→   487→      const m = /(^|\s)@([^\s@]{0,30})$/.exec(value)
+   378→   488→      const token = m?.[2]
+   379→   489→      if (m && token !== undefined && meta?.type === 'group') {
+   380→   490→        const lower = token.toLowerCase()
+   381→   491→        const hit = meta.members.some((x) => x.id !== meId && x.name.toLowerCase().includes(lower))
+   382→   492→        if (hit) {
+   383→   493→          setMention({ start: m.index + m[1].length, token })
+   384→   494→          setMentionIdx(0)
+   385→   495→          return
+   386→   496→        }
+   387→   497→      }
+   388→   498→      setMention(null)
+   389→   499→    },
+   390→   500→    [activeId, meta, meId]
+   391→   501→  )
+   392→   502→
+   393→   503→  // candidates for the mention popup (max 6, sender excluded)
+   394→   504→  const mentionCandidates = useMemo(
+   395→   505→    () =>
+   396→   506→      mention && meta?.type === 'group'
+   397→   507→        ? meta.members
+   398→   508→            .filter((m) => m.id !== meId && m.name.toLowerCase().includes(mention.token.toLowerCase()))
+   399→   509→            .slice(0, 6)
+   400→   510→        : [],
+   401→   511→    [mention, meta, meId]
+   402→   512→  )
+   403→   513→
+   404→   514→  /** complete the highlighted @mention: swap the token for "@<name> " */
+   405→   515→  const acceptMention = useCallback(
+   406→   516→    (name: string) => {
+   407→   517→      if (!mention) return
+   408→   518→      setDraft((prev) => {
+   409→   519→        const before = prev.slice(0, mention.start)
+   410→   520→        const after = prev.slice(mention.start + 1 + mention.token.length)
+   411→   521→        return `${before}@${name} ${after}`
+   412→   522→      })
+   413→   523→      setMention(null)
+   414→   524→      composerRef.current?.focus()
+   415→   525→    },
+   416→   526→    [mention]
+   417→   527→  )
+   418→   528→
+   419→   529→  // conversations whose latest unread message mentions me (sidebar markers)
+   420→   530→  const mentionedConvIds = useMemo(
+   421→   531→    () =>
+   422→   532→      new Set(
+   423→   533→        (conversations ?? [])
+   424→   534→          .filter(
+   425→   535→            (c) =>
+   426→   536→              c.unread > 0 && c.lastMessage && mentionsMe(c.lastMessage.body, c.members, user?.name ?? '')
+   427→   537→          )
+   428→   538→          .map((c) => c.id)
+   429→   539→      ),
+   430→   540→    [conversations, user]
+   431→   541→  )
+   432→   542→
+   433→   543→  /**
+   434→   544→   * Highlight "@<member name>" tokens inside message bodies and quoted
+   435→   545→   * snippets. Longest names consume first (matching the server parser);
+   436→   546→   * mentions of ME get the accent treatment, mentions of others stay quiet.
+   437→   547→   * own = the containing bubble was sent by me (styles must survive the
+   438→   548→   * mint/white bubble palette); snippet = quoted-reply context (no chips).
+   439→   549→   */
+   440→   550→  const renderMentionText = useCallback(
+   441→   551→    (body: string, own: boolean, snippet: boolean): ReactNode[] => {
+   442→   552→      if (!body) return [body]
+   443→   553→      const tokens = meta?.type === 'group' ? memberMentionTokens(body, meta.members) : []
+   444→   554→      if (!tokens.length) return [body]
+   445→   555→      const myLower = (user?.name ?? '').trim().toLowerCase()
+   446→   556→      const re = new RegExp(
+   447→   557→        `@(?:${meta!.members
+   448→   558→          .filter((m) => m.name && m.name.trim().length >= 2)
+   449→   559→          .map((m) => escapeRe((m.name as string).trim()))
+   450→   560→          .sort((a, b) => b.length - a.length)
+   451→   561→          .join('|')})(?![a-zA-Z0-9_])`,
+   452→   562→        'gi'
+   453→   563→      )
+   454→   564→      const nodes: ReactNode[] = []
+   455→   565→      let last = 0
+   456→   566→      let k = 0
+   457→   567→      let mt: RegExpExecArray | null
+   458→   568→      while ((mt = re.exec(body)) !== null) {
+   459→   569→        if (mt.index > last) nodes.push(body.slice(last, mt.index))
+   460→   570→        const token = mt[0]
+   461→   571→        const isMe = myLower !== '' && token.slice(1).toLowerCase() === myLower
+   462→   572→        let cls: string
+   463→   573→        if (snippet) {
+   464→   574→          cls = isMe && !own ? 'font-semibold text-primary' : 'font-semibold'
+   465→   575→        } else if (own) {
+   466→   576→          cls = 'rounded bg-white/20 px-0.5 font-semibold'
+   467→   577→        } else {
+   468→   578→          cls = isMe ? 'rounded bg-primary/15 px-1 font-semibold text-primary' : 'font-semibold text-foreground'
+   469→   579→        }
+   470→   580→        nodes.push(
+   471→   581→          <span key={k++} className={cls}>
+   472→   582→            {token}
+   473→   583→          </span>
+   474→   584→        )
+   475→   585→        last = mt.index + token.length
+   476→   586→      }
+   477→   587→      if (last < body.length) nodes.push(body.slice(last))
+   478→   588→      return nodes
+   479→   589→    },
+   480→   590→    [meta, user]
+   481→   591→  )
+   482→   592→
+   483→   593→  /** toggle a reaction; the API returns the fresh aggregate for that message */
+   484→   594→  const toggleReaction = useCallback(
+   485→   595→    async (messageId: string, emoji: string) => {
+   486→   596→      if (reacting) return
+   487→   597→      setReacting(true)
+   488→   598→      setPickerFor(null)
+   489→   599→      try {
+   490→   600→        const r = await api<{ reacted: boolean; reactions: ReactionChip[] }>('/api/chat/reactions', {
+   491→   601→          messageId,
+   492→   602→          emoji,
+   493→   603→        })
+   494→   604→        setReactions((prev) => {
+   495→   605→          const next = { ...prev }
+   496→   606→          if (r.reactions.length > 0) next[messageId] = r.reactions
+   497→   607→          else delete next[messageId]
+   498→   608→          return next
+   499→   609→        })
+   500→   610→      } catch (e) {
+   501→   611→        toast({ title: 'Could not react', description: (e as Error).message })
+   502→   612→      } finally {
+   503→   613→        setReacting(false)
+   504→   614→      }
+   505→   615→    },
+   506→   616→    [reacting, toast]
+   507→   617→  )
+   508→   618→
+   509→   619→  const sendMessage = useCallback(async () => {
+   510→   620→    const body = draft.trim()
+   511→   621→    if (!body || !activeId || sending) return
+   512→   622→    setSending(true)
+   513→   623→    try {
+   514→   624→      const r = await api<{ message: ChatMessage }>('/api/chat/messages', {
+   515→   625→        conversationId: activeId,
+   516→   626→        body,
+   517→   627→        ...(replyTo ? { replyToId: replyTo.id } : {}),
+   518→   628→      })
+   519→   629→      setDraft('')
+   520→   630→      setMention(null)
+   521→   631→      setReplyTo(null)
+   522→   632→      if (composerRef.current) composerRef.current.style.height = 'auto'
+   523→   633→      setMessages((prev) => (prev.some((m) => m.id === r.message.id) ? prev : [...prev, r.message]))
+   524→   634→      stickToBottom.current = true
+   525→   635→      setConversations((prev) =>
+   526→   636→        prev
+   527→   637→          ? prev.map((c) =>
+   528→   638→              c.id === activeId
+   529→   639→                ? { ...c, updatedAt: new Date().toISOString(), lastMessage: { body, createdAt: r.message.createdAt, senderId: meId, senderName: 'You' } }
+   530→   640→                : c
+   531→   641→            )
+   532→   642→          : prev
+   533→   643→      )
+   534→   644→    } catch (e) {
+   535→   645→      toast({ title: 'Message not sent', description: (e as Error).message })
+   536→   646→    } finally {
+   537→   647→      setSending(false)
+   538→   648→    }
+   539→   649→  }, [draft, activeId, sending, meId, replyTo, toast])
+   540→   650→
+   541→   651→  /** soft-delete the caller's own message and swap the bubble for a tombstone */
+   542→   652→  const deleteMessage = useCallback(async () => {
+   543→   653→    if (!confirmDelete || deleting) return
+   544→   654→    setDeleting(true)
+   545→   655→    const target = confirmDelete
+   546→   656→    try {
+   547→   657→      await api('/api/chat/messages', { messageId: target }, 'DELETE')
+   548→   658→      setMessages((prev) =>
+   549→   659→        prev.map((m) => {
+   550→   660→          if (m.id === target) return { ...m, deleted: true, body: '' }
+   551→   661→          // replies quoting the deleted message lose their snippet too
+   552→   662→          if (m.replyToId === target && m.replyTo) {
+   553→   663→            return { ...m, replyTo: { ...m.replyTo, deleted: true, body: '' } }
+   554→   664→          }
+   555→   665→          return m
+   556→   666→        })
+   557→   667→      )
+   558→   668→      setReactions((prev) => {
+   559→   669→        const next = { ...prev }
+   560→   670→        delete next[target]
+   561→   671→        return next
+   562→   672→      })
+   563→   673→      setConversations((prev) =>
+   564→   674→        prev
+   565→   675→          ? prev.map((c) =>
+   566→   676→              c.id === activeId && c.lastMessage
+   567→   677→                ? { ...c, lastMessage: { ...c.lastMessage, body: 'Message deleted' } }
+   568→   678→                : c
+   569→   679→            )
+   570→   680→          : prev
+   571→   681→      )
+   572→   682→    } catch (e) {
+   573→   683→      toast({ title: 'Could not delete message', description: (e as Error).message })
+   574→   684→    } finally {
+   575→   685→      setDeleting(false)
+   576→   686→      setConfirmDelete(null)
+   577→   687→    }
+   578→   688→  }, [confirmDelete, deleting, activeId, toast])
+   579→   689→
+   580→   690→  /** admins rename the study group; local state updates everywhere at once */
+   581→   691→  const renameGroup = useCallback(async () => {
+   582→   692→    const name = renameValue.trim()
+   583→   693→    if (!meta || !name || renaming || name === meta.name) {
+   584→   694→      setRenameOpen(false)
+   585→   695→      return
+   586→   696→    }
+   587→   697→    setRenaming(true)
+   588→   698→    try {
+   589→   699→      await api('/api/chat/conversations', { conversationId: meta.id, name }, 'PATCH')
+   590→   700→      setMeta((prev) => (prev ? { ...prev, name } : prev))
+   591→   701→      setConversations((prev) =>
+   592→   702→        prev ? prev.map((c) => (c.id === meta.id ? { ...c, name } : c)) : prev
+   593→   703→      )
+   594→   704→      toast({ title: 'Group renamed', description: name })
+   595→   705→      setRenameOpen(false)
+   596→   706→    } catch (e) {
+   597→   707→      toast({ title: 'Could not rename group', description: (e as Error).message })
+   598→   708→    } finally {
+   599→   709→      setRenaming(false)
+   600→   710→    }
+   601→   711→  }, [meta, renameValue, renaming, toast])
+   602→   712→
+   603→   713→  /** jump to a quoted/replied message and flash it */
+   604→   714→  const scrollToMessage = useCallback((id: string) => {
+   605→   715→    const el = listRef.current?.querySelector(`[data-mid="${id}"]`) as HTMLElement | null
+   606→   716→    if (!el) {
+   607→   717→      toast({ title: 'Original message is not loaded', description: 'Scroll up and load earlier messages to see it.' })
+   608→   718→      return
+   609→   719→    }
+   610→   720→    el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+   611→   721→    setHighlightId(id)
+   612→   722→    window.setTimeout(() => setHighlightId((cur) => (cur === id ? null : cur)), 1600)
+   613→   723→  }, [toast])
+   614→   724→
+   615→   725→  const leaveConversation = useCallback(async () => {
+   616→   726→    if (!activeId) return
+   617→   727→    setLeaving(true)
+   618→   728→    try {
+   619→   729→      await api('/api/chat/leave', { conversationId: activeId })
+   620→   730→      toast({
+   621→   731→        title: meta?.type === 'dm' ? 'Chat deleted' : 'Left the group',
+   622→   732→        description: meta?.type === 'dm' ? 'The conversation was removed for both members.' : undefined,
+   623→   733→      })
+   624→   734→      setActiveId(null)
+   625→   735→      setMeta(null)
+   626→   736→      setMessages([])
+   627→   737→      await refreshConversations()
+   628→   738→    } catch (e) {
+   629→   739→      toast({ title: 'Could not leave chat', description: (e as Error).message })
+   630→   740→    } finally {
+   631→   741→      setLeaving(false)
+   632→   742→      setConfirmLeave(false)
+   633→   743→    }
+   634→   744→  }, [activeId, meta, refreshConversations, toast])
+   635→   745→
+   636→   746→  // ---------- effects: data loading + polling ----------
+   637→   747→
+   638→   748→  useEffect(() => {
+   639→   749→    if (!loggedIn) return
+   640→   750→    void refreshConversations()
+   641→   751→  }, [loggedIn, refreshConversations])
+   642→   752→
+   643→   753→  useEffect(() => {
+   644→   754→    if (!loggedIn) return
+   645→   755→    const t = setInterval(() => {
+   646→   756→      if (!document.hidden) void refreshConversations()
+   647→   757→    }, 10_000)
+   648→   758→    return () => clearInterval(t)
+   649→   759→  }, [loggedIn, refreshConversations])
+   650→   760→
+   651→   761→  useEffect(() => {
+   652→   762→    if (!activeId) return
+   653→   763→    const t = setInterval(() => {
+   654→   764→      if (!document.hidden) void pollNew()
+   655→   765→    }, 3_000)
+   656→   766→    return () => clearInterval(t)
+   657→   767→  }, [activeId, pollNew])
+   658→   768→
+   659→   769→  // auto-scroll on new messages (only if pinned to bottom)
+   660→   770→  useEffect(() => {
+   661→   771→    const el = listRef.current
+   662→   772→    if (!el) return
+   663→   773→    if (stickToBottom.current) {
+   664→   774→      el.scrollTop = el.scrollHeight
+   665→   775→    }
+   666→   776→    initialLoadDone.current = true
+   667→   777→  }, [messages])
+   668→   778→
+   669→   779→  const onScroll = useCallback(() => {
+   670→   780→    const el = listRef.current
+   671→   781→    if (!el) return
+   672→   782→    const pinned = el.scrollHeight - el.scrollTop - el.clientHeight < 140
+   673→   783→    stickToBottom.current = pinned
+   674→   784→    setShowJump((prev) => (prev === !pinned ? prev : !pinned))
+   675→   785→  }, [])
+   676→   786→
+   677→   787→  // ---------- derived ----------
+   678→   788→
+   679→   789→  const filtered = useMemo(() => {
+   680→   790→    if (!conversations) return null
+   681→   791→    if (filter === 'all') return conversations
+   682→   792→    return conversations.filter((c) => c.type === filter)
+   683→   793→  }, [conversations, filter])
+   684→   794→
+   685→   795→  const totalUnread = useMemo(
+   686→   796→    () => (conversations ?? []).reduce((n, c) => n + c.unread, 0),
+   687→   797→    [conversations]
+   688→   798→  )
+   689→   799→
+   690→   800→  // unread count in the browser tab while the user is elsewhere
+   691→   801→  useEffect(() => {
+   692→   802→    const base = document.title.replace(/^\(\d+\)\s+/, '')
+   693→   803→    document.title = totalUnread > 0 ? `(${totalUnread}) ${base}` : base
+   694→   804→    return () => {
+   695→   805→      document.title = document.title.replace(/^\(\d+\)\s+/, '')
+   696→   806→    }
+   697→   807→  }, [totalUnread])
+   698→   808→
+   699→   809→  const activeTitle = meta ? (meta.type === 'group' ? meta.name ?? 'Study group' : meta.members.find((m) => m.id !== meId)?.name ?? 'Direct message') : ''
+   700→   810→  const rollingOut = (convError ?? messagesError ?? '').includes('not active on the live database')
+   701→   811→
+   702→   812→  // ---------------------------------------------------------------- render
+   703→   813→
+   704→   814→  if (!loggedIn) {
+   705→   815→    return (
+   706→   816→      <div className="mx-auto max-w-lg rounded-2xl border border-dashed border-border p-10 text-center">
+   707→   817→        <MessageSquare className="mx-auto h-10 w-10 text-muted-foreground" />
+   708→   818→        <h2 className="mt-4 text-lg font-semibold">Community needs an account</h2>
+   709→   819→        <p className="mt-2 text-sm text-muted-foreground">
+   710→   820→          Sign in free to message other aspirants and join study groups — doubt solving is faster together.
+   711→   821→        </p>
+   712→   822→        <Button className="mt-5" onClick={onRequireAuth}>
+   713→   823→          <LogIn className="mr-2 h-4 w-4" /> Sign in / Create account
+   714→   824→        </Button>
+   715→   825→      </div>
+   716→   826→    )
+   717→   827→  }
+   718→   828→
+   719→   829→  return (
+   720→   830→    <div className="mx-auto max-w-6xl">
+   721→   831→      {/* page heading */}
+   722→   832→      <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+   723→   833→        <div>
+   724→   834→          <h1 className="text-2xl font-bold tracking-tight">Community</h1>
+   725→   835→          <p className="mt-1 text-sm text-muted-foreground">
+   726→   836→            Direct messages and study groups {totalUnread > 0 && <span className="font-medium text-primary">· {totalUnread} unread</span>}
+   727→   837→          </p>
+   728→   838→        </div>
+   729→   839→        <Button onClick={() => setNewChatOpen(true)} className="gap-1.5">
+   730→   840→          <MessageSquarePlus className="h-4 w-4" /> New chat
+   731→   841→        </Button>
+   732→   842→      </div>
+   733→   843→
+   734→   844→      {rollingOut && (
+   735→   845→        <div className="mb-4 rounded-xl border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-sm text-amber-500 dark:text-amber-300">
+   736→   846→          Community chat is rolling out to the live database — the tables are being migrated. Everything else keeps working; check back shortly.
+   737→   847→        </div>
+   738→   848→      )}
+   739→   849→
+   740→   850→      <div className="grid h-[calc(100dvh-18rem)] overflow-hidden rounded-2xl border bg-card shadow-lg md:h-[calc(100dvh-12.5rem)] md:grid-cols-[300px_1fr]">
+   741→   851→        {/* ------------------------------------------------ sidebar */}
+   742→   852→        <aside className={cn('min-h-0 flex-col border-r md:flex', activeId ? 'hidden' : 'flex')}>
+   743→   853→          <div className="space-y-3 border-b p-3">
+   744→   854→            <div className="relative">
+   745→   855→              <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+   746→   856→              <input
+   747→   857→                value={searchQ}
+   748→   858→                onChange={(e) => setSearchQ(e.target.value)}
+   749→   859→                placeholder="Search messages…"
+   750→   860→                className="h-8 w-full rounded-lg border border-border bg-background pl-8 pr-7 text-xs outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-primary/50"
+   751→   861→              />
+   752→   862→              {searchQ && (
+   753→   863→                <button
+   754→   864→                  type="button"
+   755→   865→                  onClick={() => setSearchQ('')}
+   756→   866→                  className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded p-0.5 text-muted-foreground hover:text-foreground"
+   757→   867→                  aria-label="Clear search"
+   758→   868→                >
+   759→   869→                  <X className="h-3.5 w-3.5" />
+   760→   870→                </button>
+   761→   871→              )}
+   762→   872→            </div>
+   763→   873→            <div className={cn('flex gap-1.5', searchQ.trim().length >= 2 && 'hidden')}>
+   764→   874→              {(['all', 'dm', 'group'] as Filter[]).map((f) => (
+   765→   875→                <button
+   766→   876→                  key={f}
+   767→   877→                  type="button"
+   768→   878→                  onClick={() => setFilter(f)}
+   769→   879→                  className={cn(
+   770→   880→                    'flex-1 rounded-lg px-2 py-1.5 text-xs font-medium transition-colors',
+   771→   881→                    filter === f ? 'bg-primary/15 text-primary' : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+   772→   882→                  )}
+   773→   883→                >
+   774→   884→                  {f === 'all' ? 'All' : f === 'dm' ? 'Direct' : 'Groups'}
+   775→   885→                </button>
+   776→   886→              ))}
+   777→   887→            </div>
+   778→   888→          </div>
+   779→   889→
+   780→   890→          <div className="min-h-0 flex-1 overflow-y-auto p-2">
+   781→   891→            {searchQ.trim().length >= 2 ? (
+   782→   892→              /* ------------------------- message search results */
+   783→   893→              searching ? (
+   784→   894→                <div className="space-y-2 p-1">
+   785→   895→                  {[0, 1, 2].map((i) => (
+   786→   896→                    <Skeleton key={i} className="h-14 w-full rounded-xl" />
+   787→   897→                  ))}
+   788→   898→                </div>
+   789→   899→              ) : !searchResults || searchResults.length === 0 ? (
+   790→   900→                <div className="p-6 text-center text-xs text-muted-foreground">
+   791→   901→                  No messages matching “{searchQ.trim()}”
+   792→   902→                </div>
+   793→   903→              ) : (
+   794→   904→                <ul className="space-y-0.5">
+   795→   905→                  {searchResults.map((r) => {
+   796→   906→                    const label = r.conversation.type === 'group'
+   797→   907→                      ? r.conversation.name ?? 'Study group'
+   798→   908→                      : r.conversation.otherName ?? 'Direct message'
+   799→   909→                    return (
+   800→   910→                      <li key={r.id}>
+   801→   911→                        <button
+   802→   912→                          type="button"
+   803→   913→                          onClick={() => {
+   804→   914→                            setSearchQ('')
+   805→   915→                            void openConversation(r.conversation.id)
+   806→   916→                          }}
+   807→   917→                          className="w-full rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-muted"
+   808→   918→                        >
+   809→   919→                          <div className="flex items-center justify-between gap-2">
+   810→   920→                            <span className="truncate text-xs font-semibold text-foreground">
+   811→   921→                              {r.conversation.type === 'group' && <Hash className="mr-0.5 inline h-3 w-3 text-muted-foreground" />}
+   812→   922→                              {label}
+   813→   923→                            </span>
+   814→   924→                            <span className="shrink-0 text-[10px] text-muted-foreground">{timeLabel(r.createdAt)}</span>
+   815→   925→                          </div>
+   816→   926→                          <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+   817→   927→                            <span className="font-medium text-foreground/80">{r.senderName}: </span>
+   818→   928→                            {snippetOf(r.body, searchQ.trim())}
+   819→   929→                          </p>
+   820→   930→                        </button>
+   821→   931→                      </li>
+   822→   932→                    )
+   823→   933→                  })}
+   824→   934→                </ul>
+   825→   935→              )
+   826→   936→            ) : convLoading && !conversations ? (
+   827→   937→              <div className="space-y-2 p-1">
+   828→   938→                {[0, 1, 2, 3].map((i) => (
+   829→   939→                  <div key={i} className="flex items-center gap-3">
+   830→   940→                    <Skeleton className="h-10 w-10 rounded-full" />
+   831→   941→                    <div className="flex-1 space-y-1.5">
+   832→   942→                      <Skeleton className="h-3.5 w-2/3" />
+   833→   943→                      <Skeleton className="h-3 w-full" />
+   834→   944→                    </div>
+   835→   945→                  </div>
+   836→   946→                ))}
+   837→   947→              </div>
+   838→   948→            ) : convError && !conversations ? (
+   839→   949→              <div className="p-4 text-center text-sm text-muted-foreground">{convError}</div>
+   840→   950→            ) : !filtered || filtered.length === 0 ? (
+   841→   951→              <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center">
+   842→   952→                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+   843→   953→                  <MessageSquare className="h-6 w-6 text-primary" />
+   844→   954→                </div>
+   845→   955→                <div>
+   846→   956→                  <p className="text-sm font-medium">{filter === 'all' ? 'No chats yet' : `No ${filter === 'dm' ? 'direct messages' : 'groups'} yet`}</p>
+   847→   957→                  <p className="mt-1 text-xs text-muted-foreground">Start a DM or create a study group.</p>
+   848→   958→                </div>
+   849→   959→                <Button size="sm" variant="outline" onClick={() => setNewChatOpen(true)} className="gap-1.5">
+   850→   960→                  <MessageSquarePlus className="h-3.5 w-3.5" /> New chat
+   851→   961→                </Button>
+   852→   962→              </div>
+   853→   963→            ) : (
+   854→   964→              <ul className="space-y-0.5">
+   855→   965→                {filtered.map((c) => {
+   856→   966→                  const title = conversationTitle(c, meId)
+   857→   967→                  const isActive = c.id === activeId
+   858→   968→                  const dmOther = c.type === 'dm' ? c.members.find((m) => m.id !== meId) : null
+   859→   969→                  const dmOnline = dmOther ? isOnline(dmOther.lastSeenAt) : false
+   860→   970→                  return (
+   861→   971→                    <li key={c.id}>
+   862→   972→                      <button
+   863→   973→                        type="button"
+   864→   974→                        onClick={() => void openConversation(c.id)}
+   865→   975→                        className={cn(
+   866→   976→                          'flex w-full items-center gap-3 rounded-xl px-2.5 py-2.5 text-left transition-colors',
+   867→   977→                          isActive ? 'bg-primary/12' : 'hover:bg-muted'
+   868→   978→                        )}
+   869→   979→                      >
+   870→   980→                        <span
+   871→   981→                          className={cn(
+   872→   982→                            'relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br text-xs font-bold text-white',
+   873→   983→                            gradientFor(c.id)
+   874→   984→                          )}
+   875→   985→                        >
+   876→   986→                          {c.type === 'group' ? <Hash className="h-4 w-4" /> : initialsOf(title)}
+   877→   987→                          {c.unread > 0 && (
+   878→   988→                            <span
+   879→   989→                              className={cn(
+   880→   990→                                'absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[10px] font-bold text-primary-foreground ring-2 ring-card',
+   881→   991→                                mentionedConvIds.has(c.id) ? 'bg-rose-500' : 'bg-primary'
+   882→   992→                              )}
+   883→   993→                            >
+   884→   994→                              {c.unread > 9 ? '9+' : c.unread}
+   885→   995→                            </span>
+   886→   996→                          )}
+   887→   997→                        </span>
+   888→   998→                        <span className="min-w-0 flex-1">
+   889→   999→                          <span className="flex items-baseline justify-between gap-2">
+   890→  1000→                            <span className={cn('flex min-w-0 items-center gap-1.5 text-sm', c.unread > 0 ? 'font-semibold' : 'font-medium')}>
+   891→  1001→                              <span className="truncate">{title}</span>
+   892→  1002→                              {dmOnline && (
+   893→  1003→                                <span
+   894→  1004→                                  className="h-2 w-2 shrink-0 rounded-full bg-emerald-500 shadow-[0_0_0_2px_var(--card)]"
+   895→  1005→                                  title="Online"
+   896→  1006→                                />
+   897→  1007→                              )}
+   898→  1008→                            </span>
+   899→  1009→                            <span className="shrink-0 text-[10px] text-muted-foreground">
+   900→  1010→                              {c.lastMessage ? timeLabel(c.lastMessage.createdAt) : ''}
+   901→
+   902→[showing lines 111-1010 of 1978; use offset=1011 with limit to continue reading]

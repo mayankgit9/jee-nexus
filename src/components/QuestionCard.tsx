@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  CheckCircle2, XCircle, Bookmark, BookmarkCheck, Flag, ChevronRight, ZoomIn, ShieldQuestion,
+  CheckCircle2, XCircle, Bookmark, BookmarkCheck, Flag, ChevronRight, ZoomIn, ShieldQuestion, Sparkles, Loader2,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -71,7 +71,11 @@ function ZoomableImage({ src, alt, caption, attribution }: { src: string; alt: s
       </button>
       {caption && <figcaption className="mt-1.5 text-center text-xs text-muted-foreground">{caption}</figcaption>}
       {attribution && (
-        <figcaption className="text-center text-[11px] text-muted-foreground/70">Source: {attribution}</figcaption>
+        <figcaption className="text-center text-[11px] text-muted-foreground/70">
+          {attribution.replace(/^Source:\s*/i, '') ? (
+            <>Source: {attribution.replace(/^Source:\s*/i, '')}</>
+          ) : null}
+        </figcaption>
       )}
       <Dialog open={zoom} onOpenChange={setZoom}>
         <DialogContent className="max-w-4xl">
@@ -84,8 +88,43 @@ function ZoomableImage({ src, alt, caption, attribution }: { src: string; alt: s
   )
 }
 
-export function SolutionView({ solution, result }: { solution: QuestionSolution; result?: SubmittedResult | null }) {
+export function SolutionView({ solution, result, questionId, loggedIn, onRequireAuth }: { solution: QuestionSolution; result?: SubmittedResult | null; questionId?: string; loggedIn?: boolean; onRequireAuth?: () => void }) {
   const [showAlt, setShowAlt] = useState(false)
+  const [current, setCurrent] = useState(solution)
+  const [enriching, setEnriching] = useState(false)
+  const [enrichFailed, setEnrichFailed] = useState(false)
+
+  // keep local state in sync when the parent injects a new solution
+  useEffect(() => {
+    setCurrent(solution)
+    setEnrichFailed(false)
+  }, [solution])
+
+  const isThin = !(current.keyConcept && (current.formulas?.length ?? 0) > 0 && current.commonMistakes)
+
+  const generateDetailed = async () => {
+    if (!questionId || enriching) return
+    if (!loggedIn) {
+      onRequireAuth?.()
+      return
+    }
+    setEnriching(true)
+    setEnrichFailed(false)
+    try {
+      const r = await api<{ ok: boolean; skipped?: boolean; solution: QuestionSolution | null }>(
+        '/api/solutions/enrich',
+        { questionId }
+      )
+      if (r.solution) setCurrent(r.solution)
+      toast({ title: r.skipped ? 'Solution already detailed' : 'Detailed solution generated' })
+    } catch (e) {
+      setEnrichFailed(true)
+      toast({ title: 'Could not generate solution', description: (e as Error).message, variant: 'destructive' })
+    } finally {
+      setEnriching(false)
+    }
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 8 }}
@@ -96,11 +135,37 @@ export function SolutionView({ solution, result }: { solution: QuestionSolution;
         <h4 className="flex items-center gap-2 text-sm font-semibold tracking-wide text-primary">
           Detailed Solution
         </h4>
-        {solution.isAiGenerated && (
-          <Badge variant="outline" className="border-amber-500/30 bg-amber-500/10 text-[11px] text-amber-400">
-            AI-generated · pending expert verification
-          </Badge>
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          {current.isAiGenerated && (
+            <Badge variant="outline" className="border-amber-500/30 bg-amber-500/10 text-[11px] text-amber-400">
+              AI-generated · pending expert verification
+            </Badge>
+          )}
+          {isThin && questionId && (
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={generateDetailed}
+              disabled={enriching}
+              className="h-7 gap-1.5 border-primary/40 text-xs text-primary hover:bg-primary/10"
+            >
+              {enriching ? (
+                <>
+                  <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                  Researching & writing…
+                </>
+              ) : (
+                <>
+                  <Sparkles className="h-3.5 w-3.5" />
+                  Generate detailed solution
+                </>
+              )}
+            </Button>
+          )}
+          {isThin && !questionId && enrichFailed && (
+            <span className="text-[11px] text-rose-400">Generation failed — try again later</span>
+          )}
+        </div>
       </div>
 
       {result?.isCorrect !== undefined && result.correctOptions && (
@@ -121,19 +186,19 @@ export function SolutionView({ solution, result }: { solution: QuestionSolution;
         </p>
       )}
 
-      {solution.keyConcept && (
-        <div className="mb-4 rounded-lg border border-border bg-card/60 p-3.5">
+      {current.keyConcept && (
+        <div className="mb-4 min-w-0 rounded-lg border border-border bg-card/60 p-3.5">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Concept</p>
-          <div className="text-sm leading-relaxed"><MathText text={solution.keyConcept} /></div>
+          <div className="text-sm leading-relaxed"><MathText text={current.keyConcept} /></div>
         </div>
       )}
 
-      {(solution.formulas ?? []).length > 0 && (
+      {(current.formulas ?? []).length > 0 && (
         <div className="mb-4 rounded-lg border border-violet-400/20 bg-violet-400/[0.06] p-3.5">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-violet-300/90">Formulas used</p>
           <ul className="space-y-1.5">
-            {(solution.formulas ?? []).map((f, i) => (
-              <li key={i} className="border-l-2 border-violet-400/40 pl-3 text-sm">
+            {(current.formulas ?? []).map((f, i) => (
+              <li key={i} className="min-w-0 border-l-2 border-violet-400/40 break-words pl-3 text-sm">
                 <MathText text={`$${f}$`} />
               </li>
             ))}
@@ -142,21 +207,21 @@ export function SolutionView({ solution, result }: { solution: QuestionSolution;
       )}
 
       <div className="sol-body text-sm leading-relaxed">
-        <MathText text={solution.body} />
+        <MathText text={current.body} />
       </div>
 
-      {solution.solutionImages.map((img, i) => (
+      {current.solutionImages.map((img, i) => (
         <ZoomableImage key={i} src={img.url} alt={img.altText} caption={img.caption} />
       ))}
 
-      {solution.commonMistakes && (
+      {current.commonMistakes && (
         <div className="mt-4 rounded-lg border border-rose-400/20 bg-rose-400/[0.06] p-3.5">
           <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-rose-300/90">Common mistakes</p>
-          <div className="text-sm leading-relaxed"><MathText text={solution.commonMistakes} /></div>
+          <div className="text-sm leading-relaxed"><MathText text={current.commonMistakes} /></div>
         </div>
       )}
 
-      {solution.alternativeMethod && (
+      {current.alternativeMethod && (
         <div className="mt-3">
           <button
             type="button"
@@ -175,7 +240,7 @@ export function SolutionView({ solution, result }: { solution: QuestionSolution;
                 className="overflow-hidden"
               >
                 <div className="sol-body mt-2 rounded-lg border border-border bg-card/60 p-3.5 text-sm">
-                  <MathText text={solution.alternativeMethod} />
+                  <MathText text={current.alternativeMethod} />
                 </div>
               </motion.div>
             )}
@@ -183,16 +248,16 @@ export function SolutionView({ solution, result }: { solution: QuestionSolution;
         </div>
       )}
 
-      {solution.verification && (
+      {current.verification && (
         <div className="mt-4 rounded-lg border border-emerald-400/20 bg-emerald-400/[0.06] p-3.5">
           <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-300/90">Final verification</p>
-          <div className="text-sm leading-relaxed"><MathText text={solution.verification} /></div>
+          <div className="text-sm leading-relaxed"><MathText text={current.verification} /></div>
         </div>
       )}
 
-      {(solution.sourceReferences ?? []).length > 0 && (
+      {(current.sourceReferences ?? []).length > 0 && (
         <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground/70">
-          References: {(solution.sourceReferences ?? []).join(' · ')}
+          References: {(current.sourceReferences ?? []).join(' · ')}
         </p>
       )}
     </motion.div>
@@ -357,9 +422,9 @@ export function QuestionCard({
       </div>
 
       {/* body */}
-      <div className="px-5 py-5">
+      <div className="min-w-0 px-5 py-5">
         <SourceBadges q={question} />
-        <div className="mt-3.5 text-[15px] leading-relaxed">
+        <div className="mt-3.5 break-words text-[15px] leading-relaxed">
           <MathText text={question.text} />
         </div>
 
@@ -393,7 +458,7 @@ export function QuestionCard({
                   <RadioGroupItem value={String(opt.idx)} id={`${question.id}-opt-${opt.idx}`}
                     className={cn('mt-0.5', result && isCorrectOpt && 'border-emerald-400 text-emerald-400')} />
                   <span className="font-semibold text-muted-foreground">{OPTION_LABELS[opt.idx]}.</span>
-                  <span className="flex-1 leading-relaxed"><MathText text={opt.text} /></span>
+                  <span className="min-w-0 flex-1 leading-relaxed"><MathText text={opt.text} /></span>
                   {result && isCorrectOpt && <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />}
                   {result && isSelected && !isCorrectOpt && <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-400" />}
                 </label>
@@ -428,7 +493,7 @@ export function QuestionCard({
                     disabled={!!result}
                   />
                   <span className="font-semibold text-muted-foreground">{OPTION_LABELS[opt.idx]}.</span>
-                  <span className="flex-1 leading-relaxed"><MathText text={opt.text} /></span>
+                  <span className="min-w-0 flex-1 leading-relaxed"><MathText text={opt.text} /></span>
                   {result && isCorrectOpt && <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />}
                   {result && isSelected && !isCorrectOpt && <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-400" />}
                 </label>
@@ -502,7 +567,15 @@ export function QuestionCard({
         )}
 
         {/* solution */}
-        {result?.solution && <SolutionView solution={result.solution} result={result} />}
+        {result?.solution && (
+          <SolutionView
+            solution={result.solution}
+            result={result}
+            questionId={question.id}
+            loggedIn={loggedIn}
+            onRequireAuth={onRequireAuth}
+          />
+        )}
       </div>
 
       {/* report dialog */}

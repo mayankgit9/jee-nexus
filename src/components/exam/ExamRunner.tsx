@@ -210,7 +210,7 @@ export function ExamRunner({ data, onFinish }: { data: StartResponse; onFinish: 
               <span className="font-medium text-foreground">Question {currentIndex + 1} of {questions.length}</span>
               <span className="capitalize">{q.sourceShift ?? ''} {q.sourceYear ? `· ${q.sourceYear}` : ''} · {q.chapterName}</span>
             </div>
-            <div className="text-[15px] leading-relaxed"><MathText text={q.text} /></div>
+            <div className="min-w-0 break-words text-[15px] leading-relaxed"><MathText text={q.text} /></div>
             {q.images.map((img, i) => (
                
               <img key={i} src={img.url} alt={img.altText} className="mx-auto my-4 max-h-[380px] rounded-lg border border-border p-2" loading="lazy" />
@@ -231,7 +231,7 @@ export function ExamRunner({ data, onFinish }: { data: StartResponse; onFinish: 
                         className="mt-1 accent-[var(--primary)]"
                       />
                       <span className="font-semibold text-muted-foreground">{OPTION_LABELS[opt.idx]}.</span>
-                      <span className="flex-1 leading-relaxed"><MathText text={opt.text} /></span>
+                      <span className="min-w-0 flex-1 leading-relaxed"><MathText text={opt.text} /></span>
                     </label>
                   )
                 })}
@@ -256,7 +256,7 @@ export function ExamRunner({ data, onFinish }: { data: StartResponse; onFinish: 
                         className="mt-1 accent-[var(--primary)]"
                       />
                       <span className="font-semibold text-muted-foreground">{OPTION_LABELS[opt.idx]}.</span>
-                      <span className="flex-1 leading-relaxed"><MathText text={opt.text} /></span>
+                      <span className="min-w-0 flex-1 leading-relaxed"><MathText text={opt.text} /></span>
                     </label>
                   )
                 })}

@@ -1,6 +1,12 @@
 'use client'
 
-// JEE NEXUS — Community view: direct messages + study group chats.
+// JEE NEXUS — Community view: the public lobby + DMs + study group chats.
+//
+// LOBBY-FIRST (2026-11-28): opening Community always lands in the permanent
+// public lobby (id 'lobby', type 'lobby'). Guests — signed-out visitors — can
+// read it and post under an editable ephemeral name (localStorage
+// jee_lobby_guest_name); DMs, groups, mentions, reactions and typing stay
+// account-only.
 //
 // Polling architecture (no websockets on Workers/OpenNext):
 //   sidebar      GET /api/chat/conversations   every 10s
@@ -10,7 +16,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import {
-  ArrowLeft, ArrowDown, Ban, Check, CheckCheck, Copy, CornerUpLeft, Hash, Loader2, MessageSquare, MessageSquarePlus,
+  ArrowLeft, ArrowDown, Ban, Check, CheckCheck, Copy, CornerUpLeft, Globe2, Hash, Loader2, MessagesSquare, MessageSquare, MessageSquarePlus,
   Pencil, Search, Send, Smile, Trash2, Users, X, LogIn, UserPlus, ArrowDownToLine,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -19,7 +25,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { useToast } from '@/hooks/use-toast'
 import type { SessionUser } from '@/lib/types'
-import { api } from '@/lib/client'
+import { api, navigate } from '@/lib/client'
 import { cn } from '@/lib/utils'
 
 // ---------------------------------------------------------------- types
@@ -35,12 +41,12 @@ interface ChatUser {
 
 interface Conversation {
   id: string
-  type: 'dm' | 'group'
+  type: 'dm' | 'group' | 'lobby'
   name: string | null
   updatedAt: string
   myRole: string
   members: ChatUser[]
-  lastMessage: { body: string; createdAt: string; senderId: string; senderName: string } | null
+  lastMessage: { body: string; createdAt: string; senderId: string | null; senderName: string } | null
   unread: number
 }
 
@@ -49,15 +55,16 @@ interface ChatMessage {
   body: string
   deleted?: boolean
   createdAt: string
-  senderId: string
+  senderId: string | null // guest posts have no account behind them
   senderName: string
+  isGuest?: boolean
   replyToId?: string | null
   replyTo?: { id: string; senderName: string; body: string; deleted: boolean } | null
 }
 
 interface ConvMeta {
   id: string
-  type: 'dm' | 'group'
+  type: 'dm' | 'group' | 'lobby'
   name: string | null
   myRole: string
   members: ChatUser[]
@@ -69,7 +76,7 @@ interface SearchResult {
   createdAt: string
   senderId: string
   senderName: string
-  conversation: { id: string; type: 'dm' | 'group'; name: string | null; otherName: string | null }
+  conversation: { id: string; type: 'dm' | 'group' | 'lobby'; name: string | null; otherName: string | null }
 }
 
 interface TypingUser {
@@ -96,6 +103,20 @@ const COMPOSER_EMOJIS = [
 
 type Filter = 'all' | 'dm' | 'group'
 
+// ---------------------------------------------------------------- lobby
+
+/** the permanent public lobby — readable and postable by EVERYONE */
+const LOBBY_ID = 'lobby'
+/** identity line shown in the lobby header + pinned sidebar card */
+const LOBBY_TAGLINE = 'General Chat — open to everyone'
+/** localStorage key for the guest display name in the lobby */
+const GUEST_NAME_KEY = 'jee_lobby_guest_name'
+
+/** random fun default guest name, e.g. "Guest-4213" */
+function randomGuestName(): string {
+  return `Guest-${Math.floor(1000 + Math.random() * 9000)}`
+}
+
 // ---------------------------------------------------------------- helpers
 
 const AVATAR_GRADIENTS = [
@@ -121,6 +142,7 @@ function initialsOf(name: string): string {
 }
 
 function conversationTitle(c: Conversation, meId: string): string {
+  if (c.type === 'lobby') return 'Lobby'
   if (c.type === 'group') return c.name ?? 'Study group'
   const other = c.members.find((m) => m.id !== meId)
   return other?.name ?? 'Direct message'
@@ -229,11 +251,11 @@ function snippetOf(body: string, q: string): string {
 export function CommunityView({
   user,
   loggedIn,
-  onRequireAuth,
 }: {
   user: SessionUser | null
   loggedIn: boolean
-  onRequireAuth: () => void
+  /** kept for API compatibility — guests are prompted to sign in via /profile */
+  onRequireAuth?: () => void
 }) {
   const { toast } = useToast()
   const meId = user?.id ?? ''
@@ -292,6 +314,20 @@ export function CommunityView({
   const stickToBottom = useRef(true)
   const initialLoadDone = useRef(false)
 
+  // guest lobby state (signed-out visitors): display name + inline editor
+  const [guestName, setGuestName] = useState('')
+  const [guestEditing, setGuestEditing] = useState(false)
+  const [guestDraft, setGuestDraft] = useState('')
+
+  // ---------- lobby / mode derived ----------
+  const guestView = !loggedIn
+  const lobbyConv = useMemo(() => (conversations ?? []).find((c) => c.id === LOBBY_ID) ?? null, [conversations])
+  const isLobbyChat = meta?.type === 'lobby'
+  /** the lobby shares the group message layout (sender names, mention highlights) */
+  const groupLike = meta?.type === 'group' || isLobbyChat
+  /** mention autocomplete: groups for everyone, lobby for signed-in members only */
+  const canMention = meta?.type === 'group' || (isLobbyChat && loggedIn)
+
   const refreshConversations = useCallback(async () => {
     try {
       const r = await api<{ conversations: Conversation[] }>('/api/chat/conversations')
@@ -329,12 +365,16 @@ export function CommunityView({
     return () => clearTimeout(t)
   }, [searchQ])
 
-  const markRead = useCallback(async (conversationId: string) => {
-    await api('/api/chat/read', { conversationId }).catch(() => {})
-    setConversations((prev) =>
-      prev ? prev.map((c) => (c.id === conversationId ? { ...c, unread: 0 } : c)) : prev
-    )
-  }, [])
+  const markRead = useCallback(
+    async (conversationId: string) => {
+      if (!loggedIn) return // guests have no read receipts
+      await api('/api/chat/read', { conversationId }).catch(() => {})
+      setConversations((prev) =>
+        prev ? prev.map((c) => (c.id === conversationId ? { ...c, unread: 0 } : c)) : prev
+      )
+    },
+    [loggedIn]
+  )
 
   /** open a conversation: load latest page + mark read */
   const openConversation = useCallback(
@@ -381,8 +421,42 @@ export function CommunityView({
     deepLinkDone.current = true
     const q = new URLSearchParams(window.location.hash.split('?')[1] ?? '')
     const c = q.get('c')
-    if (c && conversations.some((x) => x.id === c)) void openConversation(c)
+    if (c && conversations.some((x) => x.id === c)) {
+      void openConversation(c)
+      return
+    }
+    // lobby-first: with no ?c= target, the public lobby opens by default
+    void openConversation(LOBBY_ID)
   }, [conversations, convLoading, openConversation])
+
+  // guests can only see the lobby — open it immediately on mount
+  const guestOpenDone = useRef(false)
+  useEffect(() => {
+    if (guestOpenDone.current || loggedIn) return
+    guestOpenDone.current = true
+    void openConversation(LOBBY_ID)
+  }, [loggedIn, openConversation])
+
+  // guest display name: persisted in localStorage, prefilled with a random
+  // fun name ("Guest-1234") the first time so the composer is never unnamed
+  useEffect(() => {
+    let name = ''
+    try {
+      const saved = window.localStorage.getItem(GUEST_NAME_KEY)
+      name = saved ? saved.trim().slice(0, 24) : ''
+    } catch {
+      name = ''
+    }
+    if (name.length < 2) {
+      name = randomGuestName()
+      try {
+        window.localStorage.setItem(GUEST_NAME_KEY, name)
+      } catch {
+        /* private mode — the name just won't persist */
+      }
+    }
+    setGuestName(name)
+  }, [])
 
   const loadEarlier = useCallback(async () => {
     if (!activeId || !messages.length || loadingEarlier) return
@@ -475,20 +549,22 @@ export function CommunityView({
     (value: string) => {
       setDraft(value)
       // typing heartbeat: only while there is text, at most every 2.5s
+      // (guests have no typing state — the endpoint is account-only)
       const now = Date.now()
-      if (value.trim() && activeId && now - lastTypingPing.current > 2_500) {
+      if (value.trim() && activeId && loggedIn && now - lastTypingPing.current > 2_500) {
         lastTypingPing.current = now
         void api('/api/chat/typing', { conversationId: activeId }).catch(() => {})
       }
       // mention popup: a trailing "@token" (start-of-text or after whitespace,
       // no spaces inside) opens the member picker while ANY member name
-      // contains the token; anything else closes it. Groups only — DMs
-      // already surface the sender's name in the notification.
+      // contains the token; anything else closes it. Groups — and the lobby
+      // for signed-in members. DMs already surface the sender's name in the
+      // notification toast.
       const m = /(^|\s)@([^\s@]{0,30})$/.exec(value)
       const token = m?.[2]
-      if (m && token !== undefined && meta?.type === 'group') {
+      if (m && token !== undefined && canMention) {
         const lower = token.toLowerCase()
-        const hit = meta.members.some((x) => x.id !== meId && x.name.toLowerCase().includes(lower))
+        const hit = meta!.members.some((x) => x.id !== meId && x.name.toLowerCase().includes(lower))
         if (hit) {
           setMention({ start: m.index + m[1].length, token })
           setMentionIdx(0)
@@ -497,18 +573,18 @@ export function CommunityView({
       }
       setMention(null)
     },
-    [activeId, meta, meId]
+    [activeId, meta, meId, loggedIn, canMention]
   )
 
   // candidates for the mention popup (max 6, sender excluded)
   const mentionCandidates = useMemo(
     () =>
-      mention && meta?.type === 'group'
-        ? meta.members
+      mention && canMention
+        ? meta!.members
             .filter((m) => m.id !== meId && m.name.toLowerCase().includes(mention.token.toLowerCase()))
             .slice(0, 6)
         : [],
-    [mention, meta, meId]
+    [mention, canMention, meta, meId]
   )
 
   /** complete the highlighted @mention: swap the token for "@<name> " */
@@ -550,7 +626,7 @@ export function CommunityView({
   const renderMentionText = useCallback(
     (body: string, own: boolean, snippet: boolean): ReactNode[] => {
       if (!body) return [body]
-      const tokens = meta?.type === 'group' ? memberMentionTokens(body, meta.members) : []
+      const tokens = groupLike && meta ? memberMentionTokens(body, meta.members) : []
       if (!tokens.length) return [body]
       const myLower = (user?.name ?? '').trim().toLowerCase()
       const re = new RegExp(
@@ -587,7 +663,7 @@ export function CommunityView({
       if (last < body.length) nodes.push(body.slice(last))
       return nodes
     },
-    [meta, user]
+    [meta, user, groupLike]
   )
 
   /** toggle a reaction; the API returns the fresh aggregate for that message */
@@ -619,6 +695,45 @@ export function CommunityView({
   const sendMessage = useCallback(async () => {
     const body = draft.trim()
     if (!body || !activeId || sending) return
+
+    // ---------- guest path: lobby only, ephemeral display name ----------
+    if (!loggedIn) {
+      const name = guestName.trim()
+      if (name.length < 2 || name.length > 24) {
+        setGuestDraft(guestName)
+        setGuestEditing(true)
+        toast({ title: 'Add a display name', description: 'Your guest name must be 2-24 characters.' })
+        return
+      }
+      setSending(true)
+      try {
+        const r = await api<{ message: ChatMessage }>('/api/chat/messages', {
+          conversationId: activeId,
+          body,
+          guestName: name,
+        })
+        setDraft('')
+        if (composerRef.current) composerRef.current.style.height = 'auto'
+        setMessages((prev) => (prev.some((m) => m.id === r.message.id) ? prev : [...prev, r.message]))
+        stickToBottom.current = true
+        setConversations((prev) =>
+          prev
+            ? prev.map((c) =>
+                c.id === activeId
+                  ? { ...c, updatedAt: new Date().toISOString(), lastMessage: { body, createdAt: r.message.createdAt, senderId: null, senderName: name } }
+                  : c
+              )
+            : prev
+        )
+      } catch (e) {
+        toast({ title: 'Message not sent', description: (e as Error).message })
+      } finally {
+        setSending(false)
+      }
+      return
+    }
+
+    // ---------- member path (signed in) ----------
     setSending(true)
     try {
       const r = await api<{ message: ChatMessage }>('/api/chat/messages', {
@@ -646,7 +761,24 @@ export function CommunityView({
     } finally {
       setSending(false)
     }
-  }, [draft, activeId, sending, meId, replyTo, toast])
+  }, [draft, activeId, sending, meId, replyTo, toast, loggedIn, guestName])
+
+  /** save the edited guest name (2-24 chars) to state + localStorage */
+  const saveGuestName = useCallback(() => {
+    const name = guestDraft.replace(/\s+/g, ' ').trim().slice(0, 24)
+    if (name.length < 2) {
+      toast({ title: 'Name too short', description: 'Your guest name needs 2-24 characters.' })
+      return
+    }
+    setGuestName(name)
+    try {
+      window.localStorage.setItem(GUEST_NAME_KEY, name)
+    } catch {
+      /* private mode — the name just won't persist */
+    }
+    setGuestEditing(false)
+    composerRef.current?.focus()
+  }, [guestDraft, toast])
 
   /** soft-delete the caller's own message and swap the bubble for a tombstone */
   const deleteMessage = useCallback(async () => {
@@ -788,8 +920,9 @@ export function CommunityView({
 
   const filtered = useMemo(() => {
     if (!conversations) return null
-    if (filter === 'all') return conversations
-    return conversations.filter((c) => c.type === filter)
+    const list = conversations.filter((c) => c.id !== LOBBY_ID) // lobby lives in its pinned slot
+    if (filter === 'all') return list
+    return list.filter((c) => c.type === filter)
   }, [conversations, filter])
 
   const totalUnread = useMemo(
@@ -806,25 +939,16 @@ export function CommunityView({
     }
   }, [totalUnread])
 
-  const activeTitle = meta ? (meta.type === 'group' ? meta.name ?? 'Study group' : meta.members.find((m) => m.id !== meId)?.name ?? 'Direct message') : ''
+  const activeTitle = meta
+    ? meta.type === 'lobby'
+      ? 'Lobby'
+      : meta.type === 'group'
+        ? meta.name ?? 'Study group'
+        : meta.members.find((m) => m.id !== meId)?.name ?? 'Direct message'
+    : ''
   const rollingOut = (convError ?? messagesError ?? '').includes('not active on the live database')
 
   // ---------------------------------------------------------------- render
-
-  if (!loggedIn) {
-    return (
-      <div className="mx-auto max-w-lg rounded-2xl border border-dashed border-border p-10 text-center">
-        <MessageSquare className="mx-auto h-10 w-10 text-muted-foreground" />
-        <h2 className="mt-4 text-lg font-semibold">Community needs an account</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Sign in free to message other aspirants and join study groups — doubt solving is faster together.
-        </p>
-        <Button className="mt-5" onClick={onRequireAuth}>
-          <LogIn className="mr-2 h-4 w-4" /> Sign in / Create account
-        </Button>
-      </div>
-    )
-  }
 
   return (
     <div className="mx-auto max-w-6xl">
@@ -833,12 +957,15 @@ export function CommunityView({
         <div>
           <h1 className="text-2xl font-bold tracking-tight">Community</h1>
           <p className="mt-1 text-sm text-muted-foreground">
-            Direct messages and study groups {totalUnread > 0 && <span className="font-medium text-primary">· {totalUnread} unread</span>}
+            The open lobby, direct messages and study groups{' '}
+            {totalUnread > 0 && <span className="font-medium text-primary">· {totalUnread} unread</span>}
           </p>
         </div>
-        <Button onClick={() => setNewChatOpen(true)} className="gap-1.5">
-          <MessageSquarePlus className="h-4 w-4" /> New chat
-        </Button>
+        {loggedIn && (
+          <Button onClick={() => setNewChatOpen(true)} className="gap-1.5">
+            <MessageSquarePlus className="h-4 w-4" /> New chat
+          </Button>
+        )}
       </div>
 
       {rollingOut && (
@@ -847,9 +974,11 @@ export function CommunityView({
         </div>
       )}
 
-      <div className="grid h-[calc(100dvh-18rem)] overflow-hidden rounded-2xl border bg-card shadow-lg md:h-[calc(100dvh-12.5rem)] md:grid-cols-[300px_1fr]">
+      {/* extra mobile headroom (19rem) keeps the composer clear of the fixed bottom tab bar */}
+      <div className="grid h-[calc(100dvh-19rem)] overflow-hidden rounded-2xl border bg-card shadow-lg md:h-[calc(100dvh-12.5rem)] md:grid-cols-[300px_1fr]">
         {/* ------------------------------------------------ sidebar */}
         <aside className={cn('min-h-0 flex-col border-r md:flex', activeId ? 'hidden' : 'flex')}>
+          {loggedIn ? (
           <div className="space-y-3 border-b p-3">
             <div className="relative">
               <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
@@ -886,9 +1015,74 @@ export function CommunityView({
               ))}
             </div>
           </div>
+          ) : (
+            <div className="border-b px-3.5 py-3">
+              <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                <MessagesSquare className="h-3.5 w-3.5" /> Community chat
+              </p>
+            </div>
+          )}
 
           <div className="min-h-0 flex-1 overflow-y-auto p-2">
-            {searchQ.trim().length >= 2 ? (
+            {/* ------------- pinned public lobby (always on top) ------------- */}
+            <motion.button
+              type="button"
+              initial={{ opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => void openConversation(LOBBY_ID)}
+              className={cn(
+                'mb-2 flex w-full items-center gap-3 rounded-xl border px-2.5 py-2.5 text-left transition-all hover:-translate-y-px',
+                activeId === LOBBY_ID
+                  ? 'border-primary/50 bg-primary/10 shadow-[0_0_20px_-8px_var(--primary)]'
+                  : 'border-emerald-400/25 bg-emerald-400/[0.06] hover:border-emerald-400/50'
+              )}
+              aria-label="Open the public lobby"
+            >
+              <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400/90 to-teal-500/90 text-white">
+                <Globe2 className="h-[18px] w-[18px]" />
+                {lobbyConv && lobbyConv.unread > 0 && (
+                  <span
+                    className={cn(
+                      'absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[10px] font-bold text-primary-foreground ring-2 ring-card',
+                      mentionedConvIds.has(LOBBY_ID) ? 'bg-rose-500' : 'bg-primary'
+                    )}
+                  >
+                    {lobbyConv.unread > 9 ? '9+' : lobbyConv.unread}
+                  </span>
+                )}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="flex items-baseline justify-between gap-2">
+                  <span className="flex min-w-0 items-center gap-1.5 text-sm font-semibold">
+                    <span className="truncate">Lobby</span>
+                    <span
+                      className="h-2 w-2 shrink-0 rounded-full bg-emerald-500 shadow-[0_0_0_2px_var(--card)]"
+                      title="Live — open to everyone"
+                      aria-label="Live"
+                    />
+                  </span>
+                  <span className="shrink-0 text-[10px] text-muted-foreground">
+                    {lobbyConv?.lastMessage ? timeLabel(lobbyConv.lastMessage.createdAt) : 'always on'}
+                  </span>
+                </span>
+                <span className="mt-0.5 flex min-w-0 items-center gap-1.5 text-xs">
+                  {mentionedConvIds.has(LOBBY_ID) && (
+                    <span
+                      className="shrink-0 rounded bg-rose-500/15 px-1 py-px text-[10px] font-bold text-rose-500"
+                      title="You were mentioned in the latest lobby message"
+                    >
+                      @ you
+                    </span>
+                  )}
+                  <span className="min-w-0 truncate text-emerald-500/90">{LOBBY_TAGLINE}</span>
+                </span>
+              </span>
+            </motion.button>
+
+            {loggedIn ? (
+              searchQ.trim().length >= 2 ? (
               /* ------------------------- message search results */
               searching ? (
                 <div className="space-y-2 p-1">
@@ -903,9 +1097,11 @@ export function CommunityView({
               ) : (
                 <ul className="space-y-0.5">
                   {searchResults.map((r) => {
-                    const label = r.conversation.type === 'group'
-                      ? r.conversation.name ?? 'Study group'
-                      : r.conversation.otherName ?? 'Direct message'
+                    const label = r.conversation.type === 'lobby'
+                      ? 'Lobby'
+                      : r.conversation.type === 'group'
+                        ? r.conversation.name ?? 'Study group'
+                        : r.conversation.otherName ?? 'Direct message'
                     return (
                       <li key={r.id}>
                         <button
@@ -917,7 +1113,7 @@ export function CommunityView({
                           className="w-full rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-muted"
                         >
                           <div className="flex items-center justify-between gap-2">
-                            <span className="truncate text-xs font-semibold text-foreground">
+                            <span className="min-w-0 flex-1 truncate text-xs font-semibold text-foreground">
                               {r.conversation.type === 'group' && <Hash className="mr-0.5 inline h-3 w-3 text-muted-foreground" />}
                               {label}
                             </span>
@@ -954,7 +1150,7 @@ export function CommunityView({
                 </div>
                 <div>
                   <p className="text-sm font-medium">{filter === 'all' ? 'No chats yet' : `No ${filter === 'dm' ? 'direct messages' : 'groups'} yet`}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">Start a DM or create a study group.</p>
+                  <p className="mt-1 text-xs text-muted-foreground">The Lobby above is always open — start a DM or create a study group.</p>
                 </div>
                 <Button size="sm" variant="outline" onClick={() => setNewChatOpen(true)} className="gap-1.5">
                   <MessageSquarePlus className="h-3.5 w-3.5" /> New chat
@@ -998,7 +1194,7 @@ export function CommunityView({
                         <span className="min-w-0 flex-1">
                           <span className="flex items-baseline justify-between gap-2">
                             <span className={cn('flex min-w-0 items-center gap-1.5 text-sm', c.unread > 0 ? 'font-semibold' : 'font-medium')}>
-                              <span className="truncate">{title}</span>
+                              <span className="min-w-0 flex-1 truncate">{title}</span>
                               {dmOnline && (
                                 <span
                                   className="h-2 w-2 shrink-0 rounded-full bg-emerald-500 shadow-[0_0_0_2px_var(--card)]"
@@ -1027,6 +1223,27 @@ export function CommunityView({
                   )
                 })}
               </ul>
+            )
+            ) : (
+              <div className="px-1">
+                <motion.div
+                  initial={{ opacity: 0, y: 4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="rounded-xl border border-primary/25 bg-primary/[0.06] p-3"
+                >
+                  <p className="text-xs font-semibold text-foreground">Sign in to unlock DMs, groups &amp; mentions</p>
+                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
+                    The lobby above is open to everyone. A free account adds reactions, typing indicators, @mentions and private chats.
+                  </p>
+                  <Button size="sm" className="mt-2.5 w-full gap-1.5" onClick={() => navigate('/profile')}>
+                    <LogIn className="h-3.5 w-3.5" /> Sign in / Create account
+                  </Button>
+                </motion.div>
+                <p className="mt-3 px-1 text-[11px] leading-relaxed text-muted-foreground">
+                  Guest posting is rate-limited to a few messages a minute — keep it friendly.
+                </p>
+              </div>
             )}
           </div>
         </aside>
@@ -1060,16 +1277,32 @@ export function CommunityView({
                 <span
                   className={cn(
                     'relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br text-xs font-bold text-white',
-                    gradientFor(activeId)
+                    isLobbyChat ? 'from-emerald-400/90 to-teal-500/90' : gradientFor(activeId)
                   )}
                 >
-                  {meta?.type === 'group' ? <Hash className="h-4 w-4" /> : meta ? initialsOf(activeTitle) : '…'}
-                  {meta?.type === 'dm' && (() => {
-                    const other = meta.members.find((m) => m.id !== meId)
-                    return isOnline(other?.lastSeenAt) ? (
-                      <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-card" />
-                    ) : null
-                  })()}
+                  {isLobbyChat ? (
+                    <Globe2 className="h-4 w-4" />
+                  ) : meta?.type === 'group' ? (
+                    <Hash className="h-4 w-4" />
+                  ) : meta ? (
+                    initialsOf(activeTitle)
+                  ) : (
+                    '…'
+                  )}
+                  {isLobbyChat ? (
+                    <span
+                      className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-card"
+                      title="Live — open to everyone"
+                    />
+                  ) : (
+                    meta?.type === 'dm' &&
+                    (() => {
+                      const other = meta.members.find((m) => m.id !== meId)
+                      return isOnline(other?.lastSeenAt) ? (
+                        <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-card" />
+                      ) : null
+                    })()
+                  )}
                 </span>
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-semibold">{messagesLoading && !meta ? 'Loading…' : activeTitle}</p>
@@ -1090,14 +1323,16 @@ export function CommunityView({
                     </p>
                   ) : (
                     <p className="truncate text-xs text-muted-foreground">
-                      {meta?.type === 'group'
-                        ? `${meta.members.length} member${meta.members.length === 1 ? '' : 's'} · ${meta.members.slice(0, 3).map((m) => m.name.split(' ')[0]).join(', ')}${meta.members.length > 3 ? ` +${meta.members.length - 3}` : ''}`
-                        : meta
-                          ? (() => {
-                              const other = meta.members.find((m) => m.id !== meId)
-                              return isOnline(other?.lastSeenAt) ? 'online' : lastSeenLabel(other?.lastSeenAt)
-                            })()
-                          : ''}
+                      {isLobbyChat
+                        ? `${LOBBY_TAGLINE}${loggedIn && meta ? ` · ${meta.members.length} member${meta.members.length === 1 ? '' : 's'}` : ''}`
+                        : meta?.type === 'group'
+                          ? `${meta.members.length} member${meta.members.length === 1 ? '' : 's'} · ${meta.members.slice(0, 3).map((m) => m.name.split(' ')[0]).join(', ')}${meta.members.length > 3 ? ` +${meta.members.length - 3}` : ''}`
+                          : meta
+                            ? (() => {
+                                const other = meta.members.find((m) => m.id !== meId)
+                                return isOnline(other?.lastSeenAt) ? 'online' : lastSeenLabel(other?.lastSeenAt)
+                              })()
+                            : ''}
                     </p>
                   )}
                 </div>
@@ -1120,10 +1355,12 @@ export function CommunityView({
                     <Pencil className="h-4 w-4" />
                   </Button>
                 )}
-                <Button variant="ghost" size="sm" onClick={() => setConfirmLeave(true)} className="text-muted-foreground hover:text-destructive">
-                  {meta?.type === 'dm' ? <X className="h-4 w-4" /> : <ArrowLeft className="h-4 w-4" />}
-                  <span className="hidden sm:inline">{meta?.type === 'dm' ? 'Delete' : 'Leave'}</span>
-                </Button>
+                {meta && meta.type !== 'lobby' && (
+                  <Button variant="ghost" size="sm" onClick={() => setConfirmLeave(true)} className="text-muted-foreground hover:text-destructive">
+                    {meta?.type === 'dm' ? <X className="h-4 w-4" /> : <ArrowLeft className="h-4 w-4" />}
+                    <span className="hidden sm:inline">{meta?.type === 'dm' ? 'Delete' : 'Leave'}</span>
+                  </Button>
+                )}
               </header>
 
               {/* messages */}
@@ -1159,11 +1396,14 @@ export function CommunityView({
                     )}
                     {messages.map((m, i) => {
                       const prev = messages[i - 1]
-                      const own = m.senderId === meId
+                      // guests "own" messages matching their ephemeral name;
+                      // signed-in users own by account id
+                      const own = loggedIn ? m.senderId === meId : Boolean(m.isGuest && m.senderName === guestName)
                       const deleted = Boolean(m.deleted)
                       const newDay = !prev || new Date(prev.createdAt).toDateString() !== new Date(m.createdAt).toDateString()
-                      const senderChanged = !prev || prev.senderId !== m.senderId || newDay
-                      const showName = !own && meta?.type === 'group' && senderChanged
+                      const senderChanged = !prev || prev.senderId !== m.senderId || prev.senderName !== m.senderName || newDay
+                      const showName = !own && groupLike && senderChanged
+                      const senderSeed = m.senderId ?? m.senderName // guests have no id
                       // "Seen" receipt: my last message in a DM, once the other
                       // member's lastReadAt reaches its createdAt
                       const dmOther = meta?.type === 'dm' ? meta.members.find((mem) => mem.id !== meId) : null
@@ -1193,7 +1433,7 @@ export function CommunityView({
                               <span
                                 className={cn(
                                   'hidden h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br text-[10px] font-bold text-white sm:flex',
-                                  gradientFor(m.senderId),
+                                  gradientFor(senderSeed),
                                   senderChanged ? 'opacity-100' : 'opacity-0'
                                 )}
                                 aria-hidden={!senderChanged}
@@ -1203,8 +1443,18 @@ export function CommunityView({
                             )}
                             <div className={cn('relative max-w-[78%] sm:max-w-[68%]', own ? 'items-end' : 'items-start')}>
                               {showName && (
-                                <p className="mb-0.5 pl-1 text-[11px] font-semibold" style={{ color: `var(--chart-${(m.senderId.charCodeAt(0) % 5) + 1})` }}>
-                                  {m.senderName}
+                                <p className="mb-0.5 flex items-center gap-1.5 pl-1">
+                                  <span className="text-[11px] font-semibold" style={{ color: `var(--chart-${(senderSeed.charCodeAt(0) % 5) + 1})` }}>
+                                    {m.senderName}
+                                  </span>
+                                  {m.isGuest && (
+                                    <span
+                                      className="rounded bg-muted-foreground/15 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-muted-foreground"
+                                      title="Posted without an account"
+                                    >
+                                      Guest
+                                    </span>
+                                  )}
                                 </p>
                               )}
                               {deleted ? (
@@ -1282,47 +1532,64 @@ export function CommunityView({
                               )}
                               {!deleted && reactions[m.id]?.length > 0 && (
                                 <div className={cn('mt-1 flex flex-wrap gap-1', own ? 'justify-end' : 'justify-start')}>
-                                  {reactions[m.id].map((chip) => (
-                                    <button
-                                      key={chip.emoji}
-                                      type="button"
-                                      onClick={() => void toggleReaction(m.id, chip.emoji)}
-                                      className={cn(
-                                        'flex items-center gap-0.5 rounded-full border px-1.5 py-0.5 text-[11px] leading-none transition-colors',
-                                        chip.mine
-                                          ? 'border-primary/60 bg-primary/10 text-foreground'
-                                          : 'border-border bg-background text-muted-foreground hover:border-primary/40'
-                                      )}
-                                      aria-label={`${chip.emoji} ${chip.count} — ${chip.mine ? 'remove your reaction' : 'react too'}`}
-                                    >
-                                      <span className="text-xs leading-none">{chip.emoji}</span>
-                                      <span className={cn('font-medium', chip.mine && 'text-primary')}>{chip.count}</span>
-                                    </button>
-                                  ))}
+                                  {reactions[m.id].map((chip) =>
+                                    guestView ? (
+                                      /* guests see reactions read-only — reacting needs an account */
+                                      <span
+                                        key={chip.emoji}
+                                        className="flex items-center gap-0.5 rounded-full border border-border bg-background px-1.5 py-0.5 text-[11px] leading-none text-muted-foreground"
+                                        aria-label={`${chip.emoji} ${chip.count} reactions`}
+                                        title="Sign in to react"
+                                      >
+                                        <span className="text-xs leading-none">{chip.emoji}</span>
+                                        <span className="font-medium">{chip.count}</span>
+                                      </span>
+                                    ) : (
+                                      <button
+                                        key={chip.emoji}
+                                        type="button"
+                                        onClick={() => void toggleReaction(m.id, chip.emoji)}
+                                        className={cn(
+                                          'flex items-center gap-0.5 rounded-full border px-1.5 py-0.5 text-[11px] leading-none transition-colors',
+                                          chip.mine
+                                            ? 'border-primary/60 bg-primary/10 text-foreground'
+                                            : 'border-border bg-background text-muted-foreground hover:border-primary/40'
+                                        )}
+                                        aria-label={`${chip.emoji} ${chip.count} — ${chip.mine ? 'remove your reaction' : 'react too'}`}
+                                      >
+                                        <span className="text-xs leading-none">{chip.emoji}</span>
+                                        <span className={cn('font-medium', chip.mine && 'text-primary')}>{chip.count}</span>
+                                      </button>
+                                    )
+                                  )}
                                 </div>
                               )}
                               {!deleted && (
                                 <div className={cn('mt-0.5 flex items-center gap-1.5 px-1', own ? 'justify-end' : 'justify-start')}>
-                                  <button
-                                    type="button"
-                                    onClick={() => {
-                                      setReplyTo(m)
-                                      setEmojiOpen(false)
-                                      composerRef.current?.focus()
-                                    }}
-                                    className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
-                                    aria-label={`Reply to ${m.senderName}`}
-                                  >
-                                    <CornerUpLeft className="h-3 w-3" />
-                                  </button>
-                                  <button
-                                    type="button"
-                                    onClick={() => setPickerFor((p) => (p === m.id ? null : m.id))}
-                                    className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
-                                    aria-label="Add reaction"
-                                  >
-                                    <Smile className="h-3 w-3" />
-                                  </button>
+                                  {!guestView && (
+                                    <button
+                                      type="button"
+                                      onClick={() => {
+                                        setReplyTo(m)
+                                        setEmojiOpen(false)
+                                        composerRef.current?.focus()
+                                      }}
+                                      className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
+                                      aria-label={`Reply to ${m.senderName}`}
+                                    >
+                                      <CornerUpLeft className="h-3 w-3" />
+                                    </button>
+                                  )}
+                                  {!guestView && (
+                                    <button
+                                      type="button"
+                                      onClick={() => setPickerFor((p) => (p === m.id ? null : m.id))}
+                                      className="rounded p-0.5 text-muted-foreground opacity-0 transition-opacity hover:text-foreground focus-visible:opacity-100 group-hover/msg:opacity-100"
+                                      aria-label="Add reaction"
+                                    >
+                                      <Smile className="h-3 w-3" />
+                                    </button>
+                                  )}
                                   <button
                                     type="button"
                                     onClick={() => {
@@ -1334,7 +1601,9 @@ export function CommunityView({
                                   >
                                     <Copy className="h-3 w-3" />
                                   </button>
-                                  {own && (
+                                  {/* guest messages cannot be deleted after send
+                                      (DELETE requires an account) — hide the affordance */}
+                                  {own && loggedIn && (
                                     <button
                                       type="button"
                                       onClick={() => setConfirmDelete(m.id)}
@@ -1344,7 +1613,7 @@ export function CommunityView({
                                       <Trash2 className="h-3 w-3" />
                                     </button>
                                   )}
-                                  <p className="text-[10px] text-muted-foreground">{clockLabel(m.createdAt)}</p>
+                                  <p className="text-[11px] text-muted-foreground">{clockLabel(m.createdAt)}</p>
                                   {seen && (
                                     <span className="flex items-center gap-0.5 text-[10px] font-medium text-primary">
                                       <CheckCheck className="h-3 w-3" /> Seen
@@ -1353,7 +1622,7 @@ export function CommunityView({
                                 </div>
                               )}
                               {deleted && (
-                                <p className={cn('mt-0.5 px-1 text-[10px] text-muted-foreground/60', own ? 'text-right' : 'text-left')}>
+                                <p className={cn('mt-0.5 px-1 text-[11px] text-muted-foreground/60', own ? 'text-right' : 'text-left')}>
                                   {clockLabel(m.createdAt)}
                                 </p>
                               )}
@@ -1410,6 +1679,41 @@ export function CommunityView({
 
               {/* composer */}
               <div className="border-t p-2.5 sm:p-3">
+                {guestView && guestEditing && (
+                  /* ---------------- guest name editor ---------------- */
+                  <div className="mb-2 flex items-center gap-2">
+                    <Input
+                      value={guestDraft}
+                      onChange={(e) => setGuestDraft(e.target.value)}
+                      maxLength={24}
+                      placeholder="Your display name (2-24 characters)"
+                      aria-label="Your guest display name"
+                      autoFocus
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault()
+                          saveGuestName()
+                        }
+                        if (e.key === 'Escape') setGuestEditing(false)
+                      }}
+                      className="h-10 min-h-[44px] flex-1"
+                    />
+                    <span className="shrink-0 text-[10px] text-muted-foreground">{guestDraft.trim().length}/24</span>
+                    <Button type="button" variant="outline" size="icon" onClick={() => setGuestEditing(false)} aria-label="Cancel name edit" className="h-10 w-10 shrink-0">
+                      <X className="h-4 w-4" />
+                    </Button>
+                    <Button
+                      type="button"
+                      size="icon"
+                      onClick={saveGuestName}
+                      disabled={guestDraft.trim().length < 2}
+                      aria-label="Save guest name"
+                      className="h-10 w-10 shrink-0"
+                    >
+                      <Check className="h-4 w-4" />
+                    </Button>
+                  </div>
+                )}
                 {replyTo && (
                   <div className="mb-2 flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-2.5 py-1.5">
                     <CornerUpLeft className="h-3.5 w-3.5 shrink-0 text-primary" />
@@ -1436,6 +1740,67 @@ export function CommunityView({
                     </button>
                   </div>
                 )}
+                {guestView ? (
+                  /* --------- guest composer: name chip + textarea + send --------- */
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault()
+                      void sendMessage()
+                    }}
+                    className="flex items-end gap-2"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setGuestDraft(guestName)
+                        setGuestEditing(true)
+                      }}
+                      className="flex min-h-[44px] shrink-0 items-center gap-1.5 rounded-xl border border-border bg-background px-2.5 text-xs font-medium text-foreground transition-colors hover:border-primary/50"
+                      title="Edit your guest name"
+                      aria-label="Edit your guest name"
+                    >
+                      <span
+                        className={cn(
+                          'flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br text-[9px] font-bold text-white',
+                          gradientFor(guestName || 'Guest')
+                        )}
+                      >
+                        {initialsOf(guestName || 'Guest')}
+                      </span>
+                      <span className="max-w-[88px] truncate sm:max-w-[140px]">{guestName || 'Guest'}</span>
+                      <Pencil className="h-3 w-3 shrink-0 text-muted-foreground" />
+                    </button>
+                    <textarea
+                      ref={composerRef}
+                      value={draft}
+                      onChange={(e) => setDraft(e.target.value)}
+                      onInput={(e) => {
+                        const el = e.target as HTMLTextAreaElement
+                        el.style.height = 'auto'
+                        el.style.height = `${Math.min(el.scrollHeight, 132)}px`
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                          e.preventDefault()
+                          void sendMessage()
+                        }
+                      }}
+                      rows={1}
+                      maxLength={2000}
+                      placeholder={`Say hi as ${guestName || 'Guest'}…`}
+                      aria-label="Message the lobby as a guest"
+                      className="max-h-[132px] min-h-[44px] w-full resize-none rounded-xl border-input bg-background px-3.5 py-2.5 text-sm outline-none ring-ring transition-shadow placeholder:text-muted-foreground focus-visible:ring-2 disabled:opacity-50"
+                    />
+                    <Button
+                      type="submit"
+                      disabled={!draft.trim() || sending}
+                      className="h-11 min-h-[44px] w-11 shrink-0 rounded-xl"
+                      aria-label="Send message"
+                    >
+                      {sending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+                    </Button>
+                  </form>
+                ) : (
                 <form
                   onSubmit={(e) => {
                     e.preventDefault()
@@ -1557,7 +1922,7 @@ export function CommunityView({
                       }}
                       rows={1}
                       maxLength={2000}
-                      placeholder={meta?.type === 'group' ? `Message ${activeTitle}… (@ to mention)` : 'Type a message…'}
+                      placeholder={canMention ? `Message ${activeTitle}… (@ to mention)` : 'Type a message…'}
                       className="max-h-[132px] min-h-[40px] w-full resize-none rounded-xl border-input bg-background px-3.5 py-2.5 text-sm outline-none ring-ring transition-shadow placeholder:text-muted-foreground focus-visible:ring-2 disabled:opacity-50"
                     />
                   </div>
@@ -1565,6 +1930,7 @@ export function CommunityView({
                     {sending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
                   </Button>
                 </form>
+                )}
                 {draft.length > 1800 && (
                   <p className="mt-1 text-right text-[10px] text-muted-foreground">{draft.length}/2000</p>
                 )}

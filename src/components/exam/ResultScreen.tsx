@@ -128,7 +128,7 @@ export function ResultScreen({ data, onBack }: { data: ResultView; onBack: () =>
                     {r.yourAnswer.marksAwarded > 0 ? '+' : ''}{r.yourAnswer.marksAwarded} marks
                   </span>
                 </div>
-                <div className="mt-2 text-sm leading-relaxed"><MathText text={r.question.text} /></div>
+                <div className="mt-2 min-w-0 break-words text-sm leading-relaxed"><MathText text={r.question.text} /></div>
                 {r.question.type !== 'numerical' && (
                   <div className="mt-3 space-y-1.5">
                     {r.question.options.map((opt) => {
@@ -139,7 +139,7 @@ export function ResultScreen({ data, onBack }: { data: ResultView; onBack: () =>
                           chosen && !opt.isCorrect && 'border-rose-400/50 bg-rose-400/[0.08]',
                           !chosen && !opt.isCorrect && 'border-border/50 opacity-60')}>
                           <span className="font-semibold text-muted-foreground">{OPTION_LABELS[opt.idx]}.</span>
-                          <span className="flex-1"><MathText text={opt.text} /></span>
+                          <span className="min-w-0 flex-1"><MathText text={opt.text} /></span>
                           {opt.isCorrect && <span className="text-[11px] font-semibold text-emerald-400">correct</span>}
                           {chosen && !opt.isCorrect && <span className="text-[11px] font-semibold text-rose-400">your answer</span>}
                         </div>

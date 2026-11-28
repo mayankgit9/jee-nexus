@@ -24,9 +24,37 @@ export function maskEmail(email: string): string {
   return `${head}${'•'.repeat(Math.max(2, Math.min(5, local.length - 1)))}@${domain}`
 }
 
+/** The one public lobby conversation — readable/postable by EVERYONE.
+ *  Created by migration 0017 with this fixed id. */
+export const LOBBY_CONVERSATION_ID = 'lobby'
+
+/** Lazy auto-join: the lobby is not a "membership" from the user's POV
+ *  (no join button, no invite) — but a membership row reuses all the
+ *  existing machinery (unread receipts, sidebar, mentions, typing).
+ *  Idempotent and safe to call on every lobby interaction. */
+export async function ensureLobbyMembership(client: PrismaClient, userId: string): Promise<void> {
+  await client.chatMember
+    .upsert({
+      where: { conversationId_userId: { conversationId: LOBBY_CONVERSATION_ID, userId } },
+      create: { conversationId: LOBBY_CONVERSATION_ID, userId, role: 'member' },
+      update: {},
+    })
+    .catch(() => {}) // lobby row always exists via migration; never block UX
+}
+
+/** Guest display names for lobby posts: 2-24 chars, no control chars. */
+export function sanitizeGuestName(raw: string): string {
+  const name = raw.replace(/[\x00-\x1F\x7F]/g, '').trim().slice(0, 24)
+  if (name.length < 2) throw new HttpError(400, 'Guest name must be 2-24 characters')
+  return name
+}
+
 /** Membership guard — 404s unknown conversations so ids can't be probed.
  *  Also carries the presence/read fields the client needs for receipts:
- *  member lastReadAt ("Seen") and user lastSeenAt (online dots). */
+ *  member lastReadAt ("Seen") and user lastSeenAt (online dots).
+ *  LOBBY BYPASS: the lobby is open to everyone — signed-in non-members get
+ *  a viewer context without a membership row (auto-join happens lazily on
+ *  interaction, not on read). */
 export async function requireMembership(
   client: PrismaClient,
   conversationId: string,
@@ -48,7 +76,12 @@ export async function requireMembership(
   })
   if (!conversation) throw new HttpError(404, 'Conversation not found')
   const mine = conversation.members.find((m) => m.userId === userId)
-  if (!mine) throw new HttpError(403, 'You are not a member of this conversation')
+  if (!mine) {
+    if (conversation.type === 'lobby') {
+      return { conversation, membership: { role: 'guest', lastReadAt: null } }
+    }
+    throw new HttpError(403, 'You are not a member of this conversation')
+  }
   return { conversation, membership: mine }
 }
 
@@ -56,7 +89,8 @@ export function toClientMessage(msg: {
   id: string
   body: string
   createdAt: Date
-  senderId: string
+  senderId: string | null
+  senderName?: string | null
   deletedAt?: Date | null
   replyToId?: string | null
   sender?: { id: string; name: string | null } | null
@@ -68,7 +102,9 @@ export function toClientMessage(msg: {
     deleted,
     createdAt: msg.createdAt,
     senderId: msg.senderId,
-    senderName: msg.sender?.name ?? 'Student',
+    // guest posts carry a senderName snapshot; account posts prefer the live name
+    senderName: msg.sender?.name ?? msg.senderName ?? 'Guest',
+    isGuest: msg.senderId === null,
     replyToId: msg.replyToId ?? null,
     replyTo: null as ReplyContext | null, // filled by hydrateReplies()
   }
@@ -130,12 +166,12 @@ export function toClientMember(m: {
   userId: string
   role: string
   lastReadAt?: Date | null
-  user: { id: string; name: string | null; email: string; lastSeenAt?: Date | null }
+  user: { id: string; name: string | null; email: string | null; lastSeenAt?: Date | null }
 }) {
   return {
     id: m.user.id,
     name: m.user.name ?? 'Student',
-    email: maskEmail(m.user.email),
+    email: m.user.email ? maskEmail(m.user.email) : null,
     role: m.role,
     lastReadAt: m.lastReadAt ?? null,
     lastSeenAt: m.user.lastSeenAt ?? null,

@@ -46,10 +46,10 @@ export async function GET(req: NextRequest) {
                 question: {
                   include: {
                     options: true,
-                    images: true,
+                    images: { where: { hidden: false } },
                     subject: true,
                     chapter: true,
-                    solution: { include: { question: { include: { images: true } } } },
+                    solution: { include: { question: { include: { images: { where: { hidden: false } } } } } },
                   },
                 },
               },

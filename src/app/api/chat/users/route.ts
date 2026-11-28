@@ -32,10 +32,10 @@ export async function GET(req: NextRequest) {
       user.id,
       `%${q}%`,
       `${q.toLowerCase()}%`
-    )) as { id: string; name: string | null; email: string }[]
+    )) as { id: string; name: string | null; email: string | null }[]
 
     return Response.json({
-      users: rows.map((u) => ({ id: u.id, name: u.name ?? 'Student', email: maskEmail(u.email) })),
+      users: rows.map((u) => ({ id: u.id, name: u.name ?? 'Student', email: u.email ? maskEmail(u.email) : null })),
     })
   } catch (err) {
     return jsonError(err)

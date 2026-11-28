@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     const user = await getSessionUser()
     const question = await db.question.findUnique({
       where: { id: questionId },
-      include: { solution: { include: { question: { include: { images: true } } } } },
+      include: { solution: { include: { question: { include: { images: { where: { hidden: false } } } } } } },
     })
     if (!question) throw new HttpError(404, 'Question not found')
 

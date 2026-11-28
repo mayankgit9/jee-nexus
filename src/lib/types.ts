@@ -54,7 +54,10 @@ export interface SubmittedResult {
 
 export interface SessionUser {
   id: string
-  email: string
+  /** Login identity (username+password auth, 2026-11-28 rework) */
+  username: string
+  /** Optional — captured only for self-recovery; never shown to other users */
+  email: string | null
   name: string | null
   role: 'student' | 'admin'
 }

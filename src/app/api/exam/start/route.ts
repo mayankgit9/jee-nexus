@@ -52,7 +52,7 @@ async function loadExam(id: string) {
       pattern: true,
       examQuestions: {
         orderBy: { order: 'asc' },
-        include: { question: { include: { options: true, images: true, subject: true, chapter: true } } },
+        include: { question: { include: { options: true, images: { where: { hidden: false } }, subject: true, chapter: true } } },
       },
     },
   })

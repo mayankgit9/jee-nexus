@@ -1,0 +1,702 @@
+    50→  deleted?: boolean
+    51→  createdAt: string
+    52→  senderId: string
+    53→  senderName: string
+    54→  replyToId?: string | null
+    55→  replyTo?: { id: string; senderName: string; body: string; deleted: boolean } | null
+    56→}
+    57→
+    58→interface ConvMeta {
+    59→  id: string
+    60→  type: 'dm' | 'group'
+    61→  name: string | null
+    62→  myRole: string
+    63→  members: ChatUser[]
+    64→}
+    65→
+    66→interface SearchResult {
+    67→  id: string
+    68→  body: string
+    69→  createdAt: string
+    70→  senderId: string
+    71→  senderName: string
+    72→  conversation: { id: string; type: 'dm' | 'group'; name: string | null; otherName: string | null }
+    73→}
+    74→
+    75→interface TypingUser {
+    76→  userId: string
+    77→  name: string
+    78→}
+    79→
+    80→interface ReactionChip {
+    81→  emoji: string
+    82→  count: number
+    83→  mine: boolean
+    84→}
+    85→
+    86→/** compact picker set — covers the common study-group responses */
+    87→const REACTION_EMOJIS = ['👍', '🔥', '❤️', '😂', '🎉', '🤔', '😮', '👏', '🙏', '💪']
+    88→
+    89→/** composer quick-insert set — study-chat staples */
+    90→const COMPOSER_EMOJIS = [
+    91→  '😀', '😂', '🙂', '😅', '😍', '🤔', '😎', '😴',
+    92→  '👍', '👎', '👏', '🙏', '💪', '🤝', '✌️', '🫡',
+    93→  '🔥', '✨', '🎉', '🎯', '📚', '✏️', '🧠', '☕',
+    94→  '❤️', '💯', '⚡', '🚀', '😢', '😮', '🤯', '😱',
+    95→]
+    96→
+    97→type Filter = 'all' | 'dm' | 'group'
+    98→
+    99→// ---------------------------------------------------------------- helpers
+   100→
+   101→const AVATAR_GRADIENTS = [
+   102→  'from-emerald-400/80 to-teal-500/80',
+   103→  'from-amber-300/80 to-orange-400/80',
+   104→  'from-violet-400/80 to-purple-500/80',
+   105→  'from-sky-400/80 to-blue-500/80',
+   106→  'from-rose-400/80 to-pink-500/80',
+   107→  'from-lime-400/80 to-green-500/80',
+   108→  'from-cyan-400/80 to-sky-500/80',
+   109→  'from-fuchsia-400/80 to-violet-500/80',
+   110→]
+   111→
+   112→function gradientFor(seed: string): string {
+   113→  let h = 0
+   114→  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0
+   115→  return AVATAR_GRADIENTS[h % AVATAR_GRADIENTS.length]
+   116→}
+   117→
+   118→function initialsOf(name: string): string {
+   119→  const parts = name.trim().split(/\s+/)
+   120→  return ((parts[0]?.[0] ?? '?') + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase()
+   121→}
+   122→
+   123→function conversationTitle(c: Conversation, meId: string): string {
+   124→  if (c.type === 'group') return c.name ?? 'Study group'
+   125→  const other = c.members.find((m) => m.id !== meId)
+   126→  return other?.name ?? 'Direct message'
+   127→}
+   128→
+   129→function timeLabel(iso: string): string {
+   130→  const d = new Date(iso)
+   131→  const now = new Date()
+   132→  const sameDay = d.toDateString() === now.toDateString()
+   133→  if (sameDay) {
+   134→    return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+   135→  }
+   136→  const yesterday = new Date(now)
+   137→  yesterday.setDate(now.getDate() - 1)
+   138→  if (d.toDateString() === yesterday.toDateString()) return 'Yesterday'
+   139→  if (now.getTime() - d.getTime() < 6 * 24 * 3600 * 1000) {
+   140→    return d.toLocaleDateString([], { weekday: 'short' })
+   141→  }
+   142→  return d.toLocaleDateString([], { day: 'numeric', month: 'short' })
+   143→}
+   144→
+   145→function dayLabel(iso: string): string {
+   146→  const d = new Date(iso)
+   147→  const now = new Date()
+   148→  if (d.toDateString() === now.toDateString()) return 'Today'
+   149→  const yesterday = new Date(now)
+   150→  yesterday.setDate(now.getDate() - 1)
+   151→  if (d.toDateString() === yesterday.toDateString()) return 'Yesterday'
+   152→  return d.toLocaleDateString([], { weekday: 'long', day: 'numeric', month: 'short' })
+   153→}
+   154→
+   155→function clockLabel(iso: string): string {
+   156→  return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+   157→}
+   158→
+   159→function previewOf(c: Conversation, meId: string): string {
+   160→  if (!c.lastMessage) return c.type === 'group' ? 'Group created' : 'Say hello'
+   161→  const prefix = c.lastMessage.senderId === meId ? 'You: ' : c.type === 'group' ? `${c.lastMessage.senderName.split(' ')[0]}: ` : ''
+   162→  const body = c.lastMessage.body.replace(/\s+/g, ' ')
+   163→  return `${prefix}${body.length > 60 ? body.slice(0, 60) + '…' : body}`
+   164→}
+   165→
+   166→/** Escape a string for literal use inside a RegExp. */
+   167→function escapeRe(s: string): string {
+   168→  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+   169→}
+   170→
+   171→/**
+   172→ * Member-name mention matcher (word-bounded, case-insensitive, longest
+   173→ * names first so "@Riya Sen" is consumed before a member named "Riya").
+   174→ * Returns true if any matched token names the given user. Mirrors the
+   175→ * server-side parseMentions rules in lib/chat.ts without importing it
+   176→ * (lib/auth is server-only).
+   177→ */
+   178→function memberMentionTokens(body: string | undefined, members: ChatUser[]): string[] {
+   179→  if (!body) return []
+   180→  const names = members
+   181→    .filter((m) => m.name && m.name.trim().length >= 2)
+   182→    .map((m) => (m.name as string).trim())
+   183→  if (!names.length) return []
+   184→  const re = new RegExp(
+   185→    `@(?:${[...names].sort((a, b) => b.length - a.length).map(escapeRe).join('|')})(?![a-zA-Z0-9_])`,
+   186→    'gi'
+   187→  )
+   188→  const tokens: string[] = []
+   189→  let mt: RegExpExecArray | null
+   190→  while ((mt = re.exec(body)) !== null) tokens.push(mt[0].slice(1).toLowerCase())
+   191→  return tokens
+   192→}
+   193→
+   194→function mentionsMe(body: string | undefined, members: ChatUser[], myName: string): boolean {
+   195→  const myLower = myName.trim().toLowerCase()
+   196→  return Boolean(myLower) && memberMentionTokens(body, members).includes(myLower)
+   197→}
+   198→
+   199→/** "online" = seen by the server within the last 5 minutes */
+   200→const ONLINE_WINDOW_MS = 5 * 60 * 1000
+   201→
+   202→function isOnline(lastSeenAt?: string | null): boolean {
+   203→  if (!lastSeenAt) return false
+   204→  return Date.now() - new Date(lastSeenAt).getTime() < ONLINE_WINDOW_MS
+   205→}
+   206→
+   207→function lastSeenLabel(lastSeenAt?: string | null): string {
+   208→  if (!lastSeenAt) return 'offline'
+   209→  const delta = Date.now() - new Date(lastSeenAt).getTime()
+   210→  if (delta < 60_000) return 'last seen just now'
+   211→  if (delta < 3_600_000) return `last seen ${Math.floor(delta / 60_000)}m ago`
+   212→  if (delta < 24 * 3_600_000) return `last seen ${Math.floor(delta / 3_600_000)}h ago`
+   213→  if (delta < 48 * 3_600_000) return 'last seen yesterday'
+   214→  return `last seen ${new Date(lastSeenAt).toLocaleDateString([], { day: 'numeric', month: 'short' })}`
+   215→}
+   216→
+   217→/** window the body around the first case-insensitive match so the hit is visible */
+   218→function snippetOf(body: string, q: string): string {
+   219→  const clean = body.replace(/\s+/g, ' ')
+   220→  const idx = clean.toLowerCase().indexOf(q.toLowerCase())
+   221→  if (idx < 0) return clean.length > 120 ? clean.slice(0, 120) + '…' : clean
+   222→  const start = Math.max(0, idx - 40)
+   223→  const end = Math.min(clean.length, idx + q.length + 70)
+   224→  return (start > 0 ? '…' : '') + clean.slice(start, end) + (end < clean.length ? '…' : '')
+   225→}
+   226→
+   227→// ---------------------------------------------------------------- main view
+   228→
+   229→export function CommunityView({
+   230→  user,
+   231→  loggedIn,
+   232→  onRequireAuth,
+   233→}: {
+   234→  user: SessionUser | null
+   235→  loggedIn: boolean
+   236→  onRequireAuth: () => void
+   237→}) {
+   238→  const { toast } = useToast()
+   239→  const meId = user?.id ?? ''
+   240→
+   241→  // sidebar state
+   242→  const [conversations, setConversations] = useState<Conversation[] | null>(null)
+   243→  const [convError, setConvError] = useState<string | null>(null)
+   244→  const [convLoading, setConvLoading] = useState(true)
+   245→  const [filter, setFilter] = useState<Filter>('all')
+   246→  const [newChatOpen, setNewChatOpen] = useState(false)
+   247→
+   248→  // message search (sidebar)
+   249→  const [searchQ, setSearchQ] = useState('')
+   250→  const [searchResults, setSearchResults] = useState<SearchResult[] | null>(null)
+   251→  const [searching, setSearching] = useState(false)
+   252→  const searchSeq = useRef(0)
+   253→
+   254→  // active conversation state
+   255→  const [activeId, setActiveId] = useState<string | null>(null)
+   256→  const [meta, setMeta] = useState<ConvMeta | null>(null)
+   257→  const [messages, setMessages] = useState<ChatMessage[]>([])
+   258→  const [messagesLoading, setMessagesLoading] = useState(false)
+   259→  const [messagesError, setMessagesError] = useState<string | null>(null)
+   260→  const [hasMore, setHasMore] = useState(false)
+   261→  const [loadingEarlier, setLoadingEarlier] = useState(false)
+   262→  const [addMembersOpen, setAddMembersOpen] = useState(false)
+   263→  const [confirmLeave, setConfirmLeave] = useState(false)
+   264→  const [leaving, setLeaving] = useState(false)
+   265→  // typing + presence + scroll UX
+   266→  const [typing, setTyping] = useState<TypingUser[]>([])
+   267→  const [showJump, setShowJump] = useState(false)
+   268→  const [reactions, setReactions] = useState<Record<string, ReactionChip[]>>({})
+   269→  const [pickerFor, setPickerFor] = useState<string | null>(null)
+   270→  const [reacting, setReacting] = useState(false)
+   271→  const lastTypingPing = useRef(0)
+   272→
+   273→  // replies + deletes + emoji + rename
+   274→  const [replyTo, setReplyTo] = useState<ChatMessage | null>(null)
+   275→  const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
+   276→  const [deleting, setDeleting] = useState(false)
+   277→  const [emojiOpen, setEmojiOpen] = useState(false)
+   278→  const [highlightId, setHighlightId] = useState<string | null>(null)
+   279→  const [renameOpen, setRenameOpen] = useState(false)
+   280→  const [renameValue, setRenameValue] = useState('')
+   281→  const [renaming, setRenaming] = useState(false)
+   282→
+   283→  // composer
+   284→  const [draft, setDraft] = useState('')
+   285→  const [sending, setSending] = useState(false)
+   286→  // @mention autocomplete: { start, token } = location of the trailing
+   287→  // "@<token>" in the draft (null = popup closed); mentionIdx = highlighted row
+   288→  const [mention, setMention] = useState<{ start: number; token: string } | null>(null)
+   289→  const [mentionIdx, setMentionIdx] = useState(0)
+   290→  const composerRef = useRef<HTMLTextAreaElement | null>(null)
+   291→  const listRef = useRef<HTMLDivElement | null>(null)
+   292→  const stickToBottom = useRef(true)
+   293→  const initialLoadDone = useRef(false)
+   294→
+   295→  const refreshConversations = useCallback(async () => {
+   296→    try {
+   297→      const r = await api<{ conversations: Conversation[] }>('/api/chat/conversations')
+   298→      setConversations(r.conversations)
+   299→      setConvError(null)
+   300→    } catch (e) {
+   301→      setConvError((e as Error).message)
+   302→    } finally {
+   303→      setConvLoading(false)
+   304→    }
+   305→  }, [])
+   306→
+   307→  // debounced message search — fires when the sidebar query reaches 2 chars
+   308→  useEffect(() => {
+   309→    const q = searchQ.trim()
+   310→    if (q.length < 2) {
+   311→      setSearchResults(null)
+   312→      setSearching(false)
+   313→      return
+   314→    }
+   315→    const seq = ++searchSeq.current
+   316→    setSearching(true)
+   317→    const t = setTimeout(async () => {
+   318→      try {
+   319→        const r = await api<{ results: SearchResult[] }>(
+   320→          `/api/chat/search?q=${encodeURIComponent(q)}`
+   321→        )
+   322→        if (seq === searchSeq.current) setSearchResults(r.results)
+   323→      } catch {
+   324→        if (seq === searchSeq.current) setSearchResults([])
+   325→      } finally {
+   326→        if (seq === searchSeq.current) setSearching(false)
+   327→      }
+   328→    }, 350)
+   329→    return () => clearTimeout(t)
+   330→  }, [searchQ])
+   331→
+   332→  const markRead = useCallback(async (conversationId: string) => {
+   333→    await api('/api/chat/read', { conversationId }).catch(() => {})
+   334→    setConversations((prev) =>
+   335→      prev ? prev.map((c) => (c.id === conversationId ? { ...c, unread: 0 } : c)) : prev
+   336→    )
+   337→  }, [])
+   338→
+   339→  /** open a conversation: load latest page + mark read */
+   340→  const openConversation = useCallback(
+   341→    async (id: string) => {
+   342→      setActiveId(id)
+   343→      setMessagesLoading(true)
+   344→      setMessagesError(null)
+   345→      setMessages([])
+   346→      setMeta(null)
+   347→      setTyping([])
+   348→      setReplyTo(null)
+   349→      setConfirmDelete(null)
+   350→      setEmojiOpen(false)
+   351→      setMention(null)
+   352→      initialLoadDone.current = false
+   353→      try {
+   354→        const r = await api<{ conversation: ConvMeta; messages: ChatMessage[]; hasMore: boolean; typing?: TypingUser[]; reactions?: Record<string, ReactionChip[]> }>(
+   355→          `/api/chat/messages?conversationId=${encodeURIComponent(id)}`
+   356→        )
+   357→        setMeta(r.conversation)
+   358→        setMessages(r.messages)
+   359→        setHasMore(r.hasMore)
+   360→        setTyping(r.typing ?? [])
+   361→        setReactions(r.reactions ?? {})
+   362→        setPickerFor(null)
+   363→        stickToBottom.current = true
+   364→        setShowJump(false)
+   365→        void markRead(id)
+   366→      } catch (e) {
+   367→        setMessagesError((e as Error).message)
+   368→      } finally {
+   369→        setMessagesLoading(false)
+   370→      }
+   371→    },
+   372→    [markRead]
+   373→  )
+   374→
+   375→  // deep link: #/community?c=<id> (notification toast "Open" navigates here)
+   376→  // — consumed ONCE per mount, after the sidebar list has loaded, so the
+   377→  // target conversation exists and in-view navigation isn't hijacked later
+   378→  const deepLinkDone = useRef(false)
+   379→  useEffect(() => {
+   380→    if (deepLinkDone.current || convLoading || !conversations) return
+   381→    deepLinkDone.current = true
+   382→    const q = new URLSearchParams(window.location.hash.split('?')[1] ?? '')
+   383→    const c = q.get('c')
+   384→    if (c && conversations.some((x) => x.id === c)) void openConversation(c)
+   385→  }, [conversations, convLoading, openConversation])
+   386→
+   387→  const loadEarlier = useCallback(async () => {
+   388→    if (!activeId || !messages.length || loadingEarlier) return
+   389→    setLoadingEarlier(true)
+   390→    const list = listRef.current
+   391→    const prevHeight = list?.scrollHeight ?? 0
+   392→    try {
+   393→      const oldest = messages[0]
+   394→      const r = await api<{ messages: ChatMessage[]; hasMore: boolean }>(
+   395→        `/api/chat/messages?conversationId=${encodeURIComponent(activeId)}&before=${encodeURIComponent(oldest.createdAt)}`
+   396→      )
+   397→      setMessages((prev) => {
+   398→        const seen = new Set(prev.map((m) => m.id))
+   399→        return [...r.messages.filter((m) => !seen.has(m.id)), ...prev]
+   400→      })
+   401→      setHasMore(r.hasMore)
+   402→      // keep the viewport anchored where it was
+   403→      requestAnimationFrame(() => {
+   404→        const el = listRef.current
+   405→        if (el) el.scrollTop = el.scrollHeight - prevHeight + el.scrollTop
+   406→      })
+   407→    } catch (e) {
+   408→      toast({ title: 'Could not load earlier messages', description: (e as Error).message })
+   409→    } finally {
+   410→      setLoadingEarlier(false)
+   411→    }
+   412→  }, [activeId, messages, loadingEarlier, toast])
+   413→
+   414→  /** incremental poll for the open conversation — messages + typing + presence + tombstones */
+   415→  const pollNew = useCallback(async () => {
+   416→    if (!activeId || !messages.length) return
+   417→    const last = messages[messages.length - 1]
+   418→    try {
+   419→      const r = await api<{
+   420→        messages: ChatMessage[]
+   421→        conversation: ConvMeta
+   422→        typing?: TypingUser[]
+   423→        reactions?: Record<string, ReactionChip[]>
+   424→        deletedIds?: string[]
+   425→      }>(
+   426→        `/api/chat/messages?conversationId=${encodeURIComponent(activeId)}&after=${encodeURIComponent(last.createdAt)}`
+   427→      )
+   428→      setTyping(r.typing ?? [])
+   429→      setMeta((prev) => (prev ? { ...prev, members: r.conversation.members } : prev))
+   430→      if (r.reactions && Object.keys(r.reactions).length > 0) {
+   431→        setReactions((prev) => ({ ...prev, ...r.reactions }))
+   432→      }
+   433→      // live tombstones: mark any loaded message the sender has deleted,
+   434→      // and blank the quoted context of loaded replies to it
+   435→      if (r.deletedIds && r.deletedIds.length > 0) {
+   436→        const gone = new Set(r.deletedIds)
+   437→        setMessages((prev) =>
+   438→          prev.some((m) => (gone.has(m.id) && !m.deleted) || (m.replyToId && gone.has(m.replyToId) && m.replyTo && !m.replyTo.deleted))
+   439→            ? prev.map((m) => {
+   440→                if (gone.has(m.id)) return { ...m, deleted: true, body: '' }
+   441→                if (m.replyToId && gone.has(m.replyToId)) {
+   442→                  return { ...m, replyTo: m.replyTo ? { ...m.replyTo, deleted: true, body: '' } : m.replyTo }
+   443→                }
+   444→                return m
+   445→              })
+   446→            : prev
+   447→        )
+   448→        setReactions((prev) => {
+   449→          const next = { ...prev }
+   450→          let touched = false
+   451→          for (const id of gone) {
+   452→            if (next[id]) {
+   453→              delete next[id]
+   454→              touched = true
+   455→            }
+   456→          }
+   457→          return touched ? next : prev
+   458→        })
+   459→      }
+   460→      if (r.messages.length === 0) return
+   461→      setMessages((prev) => {
+   462→        const seen = new Set(prev.map((m) => m.id))
+   463→        const fresh = r.messages.filter((m) => !seen.has(m.id))
+   464→        if (!fresh.length) return prev
+   465→        const fromOthers = fresh.some((m) => m.senderId !== meId)
+   466→        if (fromOthers) void markRead(activeId)
+   467→        return [...prev, ...fresh]
+   468→      })
+   469→    } catch {
+   470→      /* transient — next tick retries */
+   471→    }
+   472→  }, [activeId, messages, meId, markRead])
+   473→
+   474→  const onDraftChange = useCallback(
+   475→    (value: string) => {
+   476→      setDraft(value)
+   477→      // typing heartbeat: only while there is text, at most every 2.5s
+   478→      const now = Date.now()
+   479→      if (value.trim() && activeId && now - lastTypingPing.current > 2_500) {
+   480→        lastTypingPing.current = now
+   481→        void api('/api/chat/typing', { conversationId: activeId }).catch(() => {})
+   482→      }
+   483→      // mention popup: a trailing "@token" (start-of-text or after whitespace,
+   484→      // no spaces inside) opens the member picker while ANY member name
+   485→      // contains the token; anything else closes it. Groups only — DMs
+   486→      // already surface the sender's name in the notification.
+   487→      const m = /(^|\s)@([^\s@]{0,30})$/.exec(value)
+   488→      const token = m?.[2]
+   489→      if (m && token !== undefined && meta?.type === 'group') {
+   490→        const lower = token.toLowerCase()
+   491→        const hit = meta.members.some((x) => x.id !== meId && x.name.toLowerCase().includes(lower))
+   492→        if (hit) {
+   493→          setMention({ start: m.index + m[1].length, token })
+   494→          setMentionIdx(0)
+   495→          return
+   496→        }
+   497→      }
+   498→      setMention(null)
+   499→    },
+   500→    [activeId, meta, meId]
+   501→  )
+   502→
+   503→  // candidates for the mention popup (max 6, sender excluded)
+   504→  const mentionCandidates = useMemo(
+   505→    () =>
+   506→      mention && meta?.type === 'group'
+   507→        ? meta.members
+   508→            .filter((m) => m.id !== meId && m.name.toLowerCase().includes(mention.token.toLowerCase()))
+   509→            .slice(0, 6)
+   510→        : [],
+   511→    [mention, meta, meId]
+   512→  )
+   513→
+   514→  /** complete the highlighted @mention: swap the token for "@<name> " */
+   515→  const acceptMention = useCallback(
+   516→    (name: string) => {
+   517→      if (!mention) return
+   518→      setDraft((prev) => {
+   519→        const before = prev.slice(0, mention.start)
+   520→        const after = prev.slice(mention.start + 1 + mention.token.length)
+   521→        return `${before}@${name} ${after}`
+   522→      })
+   523→      setMention(null)
+   524→      composerRef.current?.focus()
+   525→    },
+   526→    [mention]
+   527→  )
+   528→
+   529→  // conversations whose latest unread message mentions me (sidebar markers)
+   530→  const mentionedConvIds = useMemo(
+   531→    () =>
+   532→      new Set(
+   533→        (conversations ?? [])
+   534→          .filter(
+   535→            (c) =>
+   536→              c.unread > 0 && c.lastMessage && mentionsMe(c.lastMessage.body, c.members, user?.name ?? '')
+   537→          )
+   538→          .map((c) => c.id)
+   539→      ),
+   540→    [conversations, user]
+   541→  )
+   542→
+   543→  /**
+   544→   * Highlight "@<member name>" tokens inside message bodies and quoted
+   545→   * snippets. Longest names consume first (matching the server parser);
+   546→   * mentions of ME get the accent treatment, mentions of others stay quiet.
+   547→   * own = the containing bubble was sent by me (styles must survive the
+   548→   * mint/white bubble palette); snippet = quoted-reply context (no chips).
+   549→   */
+   550→  const renderMentionText = useCallback(
+   551→    (body: string, own: boolean, snippet: boolean): ReactNode[] => {
+   552→      if (!body) return [body]
+   553→      const tokens = meta?.type === 'group' ? memberMentionTokens(body, meta.members) : []
+   554→      if (!tokens.length) return [body]
+   555→      const myLower = (user?.name ?? '').trim().toLowerCase()
+   556→      const re = new RegExp(
+   557→        `@(?:${meta!.members
+   558→          .filter((m) => m.name && m.name.trim().length >= 2)
+   559→          .map((m) => escapeRe((m.name as string).trim()))
+   560→          .sort((a, b) => b.length - a.length)
+   561→          .join('|')})(?![a-zA-Z0-9_])`,
+   562→        'gi'
+   563→      )
+   564→      const nodes: ReactNode[] = []
+   565→      let last = 0
+   566→      let k = 0
+   567→      let mt: RegExpExecArray | null
+   568→      while ((mt = re.exec(body)) !== null) {
+   569→        if (mt.index > last) nodes.push(body.slice(last, mt.index))
+   570→        const token = mt[0]
+   571→        const isMe = myLower !== '' && token.slice(1).toLowerCase() === myLower
+   572→        let cls: string
+   573→        if (snippet) {
+   574→          cls = isMe && !own ? 'font-semibold text-primary' : 'font-semibold'
+   575→        } else if (own) {
+   576→          cls = 'rounded bg-white/20 px-0.5 font-semibold'
+   577→        } else {
+   578→          cls = isMe ? 'rounded bg-primary/15 px-1 font-semibold text-primary' : 'font-semibold text-foreground'
+   579→        }
+   580→        nodes.push(
+   581→          <span key={k++} className={cls}>
+   582→            {token}
+   583→          </span>
+   584→        )
+   585→        last = mt.index + token.length
+   586→      }
+   587→      if (last < body.length) nodes.push(body.slice(last))
+   588→      return nodes
+   589→    },
+   590→    [meta, user]
+   591→  )
+   592→
+   593→  /** toggle a reaction; the API returns the fresh aggregate for that message */
+   594→  const toggleReaction = useCallback(
+   595→    async (messageId: string, emoji: string) => {
+   596→      if (reacting) return
+   597→      setReacting(true)
+   598→      setPickerFor(null)
+   599→      try {
+   600→        const r = await api<{ reacted: boolean; reactions: ReactionChip[] }>('/api/chat/reactions', {
+   601→          messageId,
+   602→          emoji,
+   603→        })
+   604→        setReactions((prev) => {
+   605→          const next = { ...prev }
+   606→          if (r.reactions.length > 0) next[messageId] = r.reactions
+   607→          else delete next[messageId]
+   608→          return next
+   609→        })
+   610→      } catch (e) {
+   611→        toast({ title: 'Could not react', description: (e as Error).message })
+   612→      } finally {
+   613→        setReacting(false)
+   614→      }
+   615→    },
+   616→    [reacting, toast]
+   617→  )
+   618→
+   619→  const sendMessage = useCallback(async () => {
+   620→    const body = draft.trim()
+   621→    if (!body || !activeId || sending) return
+   622→    setSending(true)
+   623→    try {
+   624→      const r = await api<{ message: ChatMessage }>('/api/chat/messages', {
+   625→        conversationId: activeId,
+   626→        body,
+   627→        ...(replyTo ? { replyToId: replyTo.id } : {}),
+   628→      })
+   629→      setDraft('')
+   630→      setMention(null)
+   631→      setReplyTo(null)
+   632→      if (composerRef.current) composerRef.current.style.height = 'auto'
+   633→      setMessages((prev) => (prev.some((m) => m.id === r.message.id) ? prev : [...prev, r.message]))
+   634→      stickToBottom.current = true
+   635→      setConversations((prev) =>
+   636→        prev
+   637→          ? prev.map((c) =>
+   638→              c.id === activeId
+   639→                ? { ...c, updatedAt: new Date().toISOString(), lastMessage: { body, createdAt: r.message.createdAt, senderId: meId, senderName: 'You' } }
+   640→                : c
+   641→            )
+   642→          : prev
+   643→      )
+   644→    } catch (e) {
+   645→      toast({ title: 'Message not sent', description: (e as Error).message })
+   646→    } finally {
+   647→      setSending(false)
+   648→    }
+   649→  }, [draft, activeId, sending, meId, replyTo, toast])
+   650→
+   651→  /** soft-delete the caller's own message and swap the bubble for a tombstone */
+   652→  const deleteMessage = useCallback(async () => {
+   653→    if (!confirmDelete || deleting) return
+   654→    setDeleting(true)
+   655→    const target = confirmDelete
+   656→    try {
+   657→      await api('/api/chat/messages', { messageId: target }, 'DELETE')
+   658→      setMessages((prev) =>
+   659→        prev.map((m) => {
+   660→          if (m.id === target) return { ...m, deleted: true, body: '' }
+   661→          // replies quoting the deleted message lose their snippet too
+   662→          if (m.replyToId === target && m.replyTo) {
+   663→            return { ...m, replyTo: { ...m.replyTo, deleted: true, body: '' } }
+   664→          }
+   665→          return m
+   666→        })
+   667→      )
+   668→      setReactions((prev) => {
+   669→        const next = { ...prev }
+   670→        delete next[target]
+   671→        return next
+   672→      })
+   673→      setConversations((prev) =>
+   674→        prev
+   675→          ? prev.map((c) =>
+   676→              c.id === activeId && c.lastMessage
+   677→                ? { ...c, lastMessage: { ...c.lastMessage, body: 'Message deleted' } }
+   678→                : c
+   679→            )
+   680→          : prev
+   681→      )
+   682→    } catch (e) {
+   683→      toast({ title: 'Could not delete message', description: (e as Error).message })
+   684→    } finally {
+   685→      setDeleting(false)
+   686→      setConfirmDelete(null)
+   687→    }
+   688→  }, [confirmDelete, deleting, activeId, toast])
+   689→
+   690→  /** admins rename the study group; local state updates everywhere at once */
+   691→  const renameGroup = useCallback(async () => {
+   692→    const name = renameValue.trim()
+   693→    if (!meta || !name || renaming || name === meta.name) {
+   694→      setRenameOpen(false)
+   695→      return
+   696→    }
+   697→    setRenaming(true)
+   698→    try {
+   699→      await api('/api/chat/conversations', { conversationId: meta.id, name }, 'PATCH')
+   700→      setMeta((prev) => (prev ? { ...prev, name } : prev))
+   701→      setConversations((prev) =>
+   702→        prev ? prev.map((c) => (c.id === meta.id ? { ...c, name } : c)) : prev
+   703→      )
+   704→      toast({ title: 'Group renamed', description: name })
+   705→      setRenameOpen(false)
+   706→    } catch (e) {
+   707→      toast({ title: 'Could not rename group', description: (e as Error).message })
+   708→    } finally {
+   709→      setRenaming(false)
+   710→    }
+   711→  }, [meta, renameValue, renaming, toast])
+   712→
+   713→  /** jump to a quoted/replied message and flash it */
+   714→  const scrollToMessage = useCallback((id: string) => {
+   715→    const el = listRef.current?.querySelector(`[data-mid="${id}"]`) as HTMLElement | null
+   716→    if (!el) {
+   717→      toast({ title: 'Original message is not loaded', description: 'Scroll up and load earlier messages to see it.' })
+   718→      return
+   719→    }
+   720→    el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+   721→    setHighlightId(id)
+   722→    window.setTimeout(() => setHighlightId((cur) => (cur === id ? null : cur)), 1600)
+   723→  }, [toast])
+   724→
+   725→  const leaveConversation = useCallback(async () => {
+   726→    if (!activeId) return
+   727→    setLeaving(true)
+   728→    try {
+   729→      await api('/api/chat/leave', { conversationId: activeId })
+   730→      toast({
+   731→        title: meta?.type === 'dm' ? 'Chat deleted' : 'Left the group',
+   732→        description: meta?.type === 'dm' ? 'The conversation was removed for both members.' : undefined,
+   733→      })
+   734→      setActiveId(null)
+   735→      setMeta(null)
+   736→      setMessages([])
+   737→      await refreshConversations()
+   738→    } catch (e) {
+   739→      toast({ title: 'Could not leave chat', description: (e as Error).message })
+   740→    } finally {
+   741→      setLeaving(false)
+   742→      setConfirmLeave(false)
+   743→    }
+   744→  }, [activeId, meta, refreshConversations, toast])
+   745→
+   746→  // ---------- effects: data loading + polling ----------
+   747→
+   748→  useEffect(() => {
+   749→    if (!loggedIn) return
+
+[showing lines 50-749 of 1978; use offset=750 with limit to continue reading]

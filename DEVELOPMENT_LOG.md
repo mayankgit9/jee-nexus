@@ -5,6 +5,86 @@ Legend: ✅ done · 🔄 in progress · ⏳ not started · 🚫 blocked
 
 ---
 
+## 2026-11-28 (~16:00 IST) — AUTH REWORK + PUBLIC LOBBY + UI REMAKE + IMAGE TRIAGE (12th session)
+
+### Session start (app-recovery after deletion)
+- Recovered the full project: GitHub repo cloned, prod Supabase (preparena /
+  mxfiazcjcgqzqynmsefp) intact, worker `jee-nexus-app` still deployed.
+- Sandbox-side state restored from the repo; SQLite port files replaced with the
+  prod-ready Postgres runtime (schema.prisma, db.ts, auth.ts, api routes).
+- New DB role `jee_dev` (IN ROLE jee_app) for sandbox dev via the transaction
+  pooler — Hyperdrive's jee_app credentials untouched.
+- NOTE: sandbox tooling eats "[m" in command output — three phantom "syntax
+  errors" (`const [mode,` …) were display artifacts, the code was never broken.
+
+### Username auth (migration 0016)
+- `app_users.username` (unique, normalized) backfilled for all 48 accounts from
+  email prefixes; `email` now OPTIONAL and recovery-only.
+- signup: username+password+optional email; login: username (case-insensitive);
+  recover: "forgot username" (email → usernames) and "forgot password"
+  (username+email match → inline single-use 30-min token → /api/auth/reset).
+  No SMTP on this deployment — identity = username+email pair, rate-limited
+  3/h per pair + 10/h per IP.
+
+### Public lobby (migration 0017)
+- Permanent `lobby` conversation (type 'lobby'). READ: no auth required.
+- POST: guests allowed — sender_id NULL, display-name snapshot in sender_name
+  (2-24 chars), IP rate limit 5/min; members keep receipts/reactions/mentions
+  (30/min) and auto-join the lobby invisibly (no join button anywhere).
+- chat_messages.sender_id now nullable; sender_name snapshot added.
+
+### UI/UX remake (DESIGN_BRIEF.md drives the system)
+- Shell: glassy header, animated nav pill (layoutId), AnimatePresence view
+  transitions, aurora background layer, surface/glow elevation system,
+  focus-visible rings, palette contrast bump.
+- Home: IST greeting, gradient hero, count-up stat strip (practice/accuracy/
+  streak/best mock), daily-challenge card, subject cards with animated share
+  bars, weak-chapter launcher, PYQ spotlight.
+- Community: lobby-first (guests read+post immediately, guest name chip in
+  localStorage, "Sign in to unlock DMs" banner), pinned lobby card, guest
+  badge on messages, delete hidden for guests (API requires an account).
+- ProfileView rebuilt around username auth (login/signup/recover tabs, strength
+  meters, shake on 401, masked recovery-email row).
+- canvas-confetti on correct answers wired into the practice flow.
+
+### Inline-math layout bug fixed (the "text override" class)
+- MathText TextChunk: single-line text segments now render INLINE; multi-line
+  segments keep block rows. Previously every segment was a block → sentences
+  with $inline$ math visually split onto their own lines ("The addition of
+  dilute NaOH to | Cr^3+ | salt solution…").
+
+### Question-image triage (migrations 0018 + watermark pipeline)
+- Watermark census (7,789 figures): clean 2,794 · light 1,141 (programmatically
+  cleaned) · heavy 3,854 (ExamGOAL re-render stamps). Structural cleaner
+  (tile-vote + template-match + inpaint) processed ~2,400/3,854 so far:
+  ok 926 · giant 1,454 (stamp remnants) · ai 19 · and still running.
+- `question_images.hidden` (0018): 3,783 heavy-class rows hidden from every
+  read path — the destroyed figures (stamp replaced the content) are worse
+  than no figure; the source scrape itself is broken for those.
+- AI remake worker upgraded: sources the pristine original (pyq_originals →
+  git HEAD fallback) so the edit model sees full content, and un-hides the
+  rows it successfully remakes. Queued behind the structural pass; rate-limit
+  quota (LLM/image APIs) was exhausted during this session — remake resumes
+  when quota resets (worker + checkpoint state all in scripts/).
+
+### Solutions
+- 11,885/11,886 solutions are thin (ExamSIDE reference lines). Enrichment
+  pipeline (web-research + LLM → keyConcept/formulas/steps/mistakes/verification)
+  exists (src/lib/enrich.ts + /api/solutions/enrich per-question button +
+  scripts/enrich_runner.mjs concurrent runner with checkpoint). ~117 enriched;
+  the rest blocked on the platform LLM quota (429 for the whole session).
+  Retry plan: run `bun scripts/enrich_runner.mjs 600 4` slices when quota
+  resets; newest exams first.
+
+### Deployed
+- Two production deploys today via OpenNext + wrangler (Hyperdrive binding):
+  9282608c (auth+lobby+UI) and 8cf70d29 (+MathText fix, hidden images).
+- Verified LIVE with a real browser: home (11,886 · 67 chapters · 8 years),
+  guest lobby read+post, username signup, practice question with exam figure,
+  leaderboard podium, mobile 390px layout.
+
+---
+
 ## 2026-11-28 (~02:15 IST) — WEEKLY WINNERS SNAPSHOT: pinned hall of fame (backlog ③)
 
 ### Session start (11th sandbox recycle)

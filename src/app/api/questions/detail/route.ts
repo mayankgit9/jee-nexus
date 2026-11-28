@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
         subject: true,
         chapter: true,
         options: true,
-        images: true,
+        images: { where: { hidden: false } },
         ...(user ? { bookmarks: { where: { userId: user.id }, select: { id: true } } } : {}),
       },
     })

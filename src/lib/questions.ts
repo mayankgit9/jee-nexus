@@ -9,12 +9,28 @@ function asStringArray(v: Prisma.JsonValue | null | undefined): string[] {
   return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
 }
 
+/**
+ * Presentation cleanup applied at the serialization boundary so EVERY view
+ * (practice, PYQ, exam runner, review, bookmarks) gets the same fixed text:
+ * - strip literal [IMG] markers — images are rendered separately from the
+ *   images relation; the raw placeholder leaking into rendered text was the
+ *   single most visible "text override/overlap" artifact on the live site
+ * - collapse 3+ blank lines to one blank line (import corpus has noisy \n runs)
+ */
+export function cleanDisplayText(raw: string): string {
+  return raw
+    .replace(/\[IMG\]/gi, '')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+}
+
 type QuestionWithRelations = Prisma.QuestionGetPayload<{
   include: {
     subject: true
     chapter: true
     options: true
-    images: true
+    images: { where: { hidden: false } }
     bookmarks?: boolean
   }
 }>
@@ -28,11 +44,11 @@ export function toPublicQuestion(q: QuestionWithRelations): PublicQuestion {
     chapter: { key: q.chapter.key, name: q.chapter.name, unit: q.chapter.unit ?? undefined },
     subtopic: q.subtopic ?? undefined,
     type: q.type as PublicQuestion['type'],
-    text: q.text,
+    text: cleanDisplayText(q.text),
     // Options WITHOUT isCorrect — the answer never ships to the client
     options: [...q.options]
       .sort((a, b) => a.idx - b.idx)
-      .map((o) => ({ idx: o.idx, text: o.text })),
+      .map((o) => ({ idx: o.idx, text: cleanDisplayText(o.text) })),
     difficulty: q.difficulty as PublicQuestion['difficulty'],
     sourceExam: q.sourceExam,
     sourceYear: q.sourceYear ?? undefined,
@@ -56,17 +72,17 @@ export function toPublicQuestion(q: QuestionWithRelations): PublicQuestion {
 }
 
 type SolutionWithImages = Prisma.SolutionGetPayload<{
-  include: { question: { include: { images: true } } }
+  include: { question: { include: { images: { where: { hidden: false } } } } }
 }>
 
 export function toPublicSolution(s: SolutionWithImages): QuestionSolution {
   return {
-    keyConcept: s.keyConcept ?? undefined,
+    keyConcept: s.keyConcept ? cleanDisplayText(s.keyConcept) : undefined,
     formulas: asStringArray(s.formulas),
-    body: s.body,
-    commonMistakes: s.commonMistakes ?? undefined,
-    alternativeMethod: s.alternativeMethod ?? undefined,
-    verification: s.verification ?? undefined,
+    body: cleanDisplayText(s.body),
+    commonMistakes: s.commonMistakes ? cleanDisplayText(s.commonMistakes) : undefined,
+    alternativeMethod: s.alternativeMethod ? cleanDisplayText(s.alternativeMethod) : undefined,
+    verification: s.verification ? cleanDisplayText(s.verification) : undefined,
     isAiGenerated: s.isAiGenerated,
     sourceReferences: asStringArray(s.sourceReferences),
     solutionImages: s.question.images
@@ -177,7 +193,7 @@ export async function selectRandomQuestions(f: RandomFilters): Promise<PublicQue
       subject: true,
       chapter: true,
       options: true,
-      images: true,
+      images: { where: { hidden: false } },
       ...(f.userId ? { bookmarks: { where: { userId: f.userId }, select: { id: true } } } : {}),
     },
   })

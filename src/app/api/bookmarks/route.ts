@@ -12,7 +12,7 @@ export async function GET() {
       orderBy: { createdAt: 'desc' },
       include: {
         question: {
-          include: { subject: true, chapter: true, options: true, images: true },
+          include: { subject: true, chapter: true, options: true, images: { where: { hidden: false } } },
         },
       },
       take: 200,

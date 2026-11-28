@@ -96,6 +96,7 @@ export function AdminView({ isAdmin }: { isAdmin: boolean }) {
 
 function OverviewTab() {
   const { data, loading, error } = useApi<AdminStats>('/api/admin/stats')
+  const sol = useApi<{ total: number; thin: number; detailed: number }>('/api/solutions/enrich')
   if (loading) return <div className="space-y-3"><Skeleton className="h-24" /><Skeleton className="h-40" /></div>
   if (error) return <p className="text-sm text-rose-400">{error}</p>
   if (!data) return null
@@ -119,6 +120,23 @@ function OverviewTab() {
           </CardContent></Card>
         ))}
       </div>
+
+      <Card>
+        <CardHeader className="pb-2"><CardTitle className="text-sm">Solution quality (web-grounded enrichment)</CardTitle></CardHeader>
+        <CardContent>
+          <div className="flex flex-wrap items-center gap-3 text-sm">
+            <span className="rounded-lg border border-emerald-400/30 bg-emerald-400/10 px-3 py-1.5 text-emerald-300">
+              Detailed: <b>{sol.data?.detailed ?? '…'}</b>
+            </span>
+            <span className="rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-1.5 text-amber-300">
+              Thin (batch/JIT pending): <b>{sol.data?.thin ?? '…'}</b>
+            </span>
+            <span className="text-xs text-muted-foreground">
+              Students can also tap “Generate detailed solution” on any question — enrichment runs live from web research.
+            </span>
+          </div>
+        </CardContent>
+      </Card>
 
       <Card>
         <CardHeader className="pb-2"><CardTitle className="text-sm">Verification pipeline</CardTitle></CardHeader>
